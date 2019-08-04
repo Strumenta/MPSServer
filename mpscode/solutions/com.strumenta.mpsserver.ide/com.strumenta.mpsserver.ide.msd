@@ -8,7 +8,8 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">019b622b-0aef-4dd3-86d0-4eef01f3f6bb(jetbrains.mps.ide)</dependency>
-    <dependency reexport="false">bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)</dependency>
+    <dependency reexport="true">bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)</dependency>
+    <dependency reexport="true">48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="8" />
@@ -29,6 +30,7 @@
     <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
+    <module reference="48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)" version="0" />
     <module reference="e5e015cc-d614-4900-9223-63bde6969324(com.strumenta.mpsserver.ide)" version="0" />
     <module reference="bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)" version="0" />
     <module reference="019b622b-0aef-4dd3-86d0-4eef01f3f6bb(jetbrains.mps.ide)" version="0" />

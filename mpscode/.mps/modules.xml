@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="" />
     </projectModules>

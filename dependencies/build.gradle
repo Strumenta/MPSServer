@@ -1,0 +1,53 @@
+buildscript {
+   repositories {
+     mavenCentral()
+     maven {
+        name 'JFrog OSS snapshot repo'
+        url  'https://oss.jfrog.org/oss-snapshot-local/'
+     }
+     jcenter()
+   }
+
+   dependencies {
+      classpath "com.github.jengelman.gradle.plugins:shadow:5.0.0"
+   }
+}
+
+group = 'com.strumenta.mpsserver.dependencies'
+version = '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  //compile 'io.javalin:javalin:3.3.0'
+  compile 'com.sparkjava:spark-core:2.9.1'
+}
+
+// shadowJar {
+//    relocate 'org.slf4j', 'shadow.org.slf4j'
+// }
+
+// import com.github.jengelman.gradle.plugins.shadow.tasks.ConfigureShadowRelocation
+
+// task relocateShadowJar(type: ConfigureShadowRelocation) {
+//     target = tasks.shadowJar
+//     prefix = "shadow" // Default value is "shadow"
+
+// }
+
+// tasks.shadowJar.dependsOn tasks.relocateShadowJar
+
+// jar {
+ 
+//     from {
+//         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//     }
+// }

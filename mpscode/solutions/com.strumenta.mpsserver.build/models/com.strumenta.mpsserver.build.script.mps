@@ -115,9 +115,11 @@
         <property id="4297162197621031140" name="inplace" index="1wOHq$" />
         <property id="6535001758416941941" name="createStaticRefs" index="3Ej$Sc" />
       </concept>
+      <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
+        <child id="4278635856200826394" name="path" index="1BurEY" />
+      </concept>
       <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
       <concept id="322010710375871467" name="jetbrains.mps.build.mps.structure.BuildMps_AbstractModule" flags="ng" index="3LEN3z">
-        <property id="8369506495128725901" name="compact" index="BnDLt" />
         <property id="322010710375892619" name="uuid" index="3LESm3" />
         <child id="322010710375956261" name="path" index="3LF7KH" />
       </concept>
@@ -207,10 +209,22 @@
         <ref role="m$_yA" node="4ZsvGZupODn" resolve="com.strumenta.mpsserver.server" />
       </node>
     </node>
+    <node concept="1E1JtA" id="5yOqbw5UOeO" role="3989C9">
+      <node concept="55IIr" id="5yOqbw5UOeQ" role="3LF7KH">
+        <node concept="2Ry0Ak" id="5yOqbw5UOfr" role="iGT6I">
+          <property role="2Ry0Am" value="solutions" />
+          <node concept="2Ry0Ak" id="5yOqbw5UOfw" role="2Ry0An">
+            <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+            <node concept="2Ry0Ak" id="5yOqbw5UOf_" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.mpsserver.deps.msd" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1E1JtA" id="4ZsvGZupODn" role="3989C9">
       <property role="TrG5h" value="com.strumenta.mpsserver.server" />
       <property role="3LESm3" value="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" />
-      <property role="BnDLt" value="true" />
       <node concept="55IIr" id="4ZsvGZupODp" role="3LF7KH">
         <node concept="2Ry0Ak" id="4ZsvGZupOFA" role="iGT6I">
           <property role="2Ry0Am" value="solutions" />
@@ -260,6 +274,47 @@
     </node>
     <node concept="_awnq" id="4ZsvGZupGg_" role="1hWBAP">
       <ref role="30Vec$" node="4ZsvGZupODn" resolve="com.strumenta.mpsserver.server" />
+    </node>
+  </node>
+  <node concept="1l3spW" id="5yOqbw5UOfB">
+    <property role="2DA0ip" value="../.." />
+    <property role="TrG5h" value="MpsServer-server" />
+    <node concept="10PD9b" id="5yOqbw5UOgE" role="10PD9s" />
+    <node concept="3b7kt6" id="5yOqbw5UOgF" role="10PD9s" />
+    <node concept="55IIr" id="5yOqbw5UOfC" role="auvoZ" />
+    <node concept="1l3spV" id="5yOqbw5UOfD" role="1l3spN" />
+    <node concept="1E1JtA" id="5yOqbw5UOgK" role="3989C9">
+      <property role="TrG5h" value="com.strumenta.mpsserver.deps" />
+      <property role="3LESm3" value="48e3d84c-0510-4776-ac01-301d43fa8646" />
+      <node concept="55IIr" id="5yOqbw5UOgL" role="3LF7KH">
+        <node concept="2Ry0Ak" id="5yOqbw5UOgR" role="iGT6I">
+          <property role="2Ry0Am" value="solutions" />
+          <node concept="2Ry0Ak" id="5yOqbw5UOgW" role="2Ry0An">
+            <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+            <node concept="2Ry0Ak" id="5yOqbw5UOh1" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.mpsserver.deps.msd" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1SiIV0" id="5yOqbw5UOhb" role="3bR37C">
+        <node concept="1BurEX" id="5yOqbw5UOhc" role="1SiIV1">
+          <node concept="55IIr" id="5yOqbw5UOh6" role="1BurEY">
+            <node concept="2Ry0Ak" id="5yOqbw5UOh7" role="iGT6I">
+              <property role="2Ry0Am" value="solutions" />
+              <node concept="2Ry0Ak" id="5yOqbw5UOh8" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                <node concept="2Ry0Ak" id="5yOqbw5UOh9" role="2Ry0An">
+                  <property role="2Ry0Am" value="libs" />
+                  <node concept="2Ry0Ak" id="5yOqbw5UOha" role="2Ry0An">
+                    <property role="2Ry0Am" value="mpsserver-dependencies-0.1-SNAPSHOT.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

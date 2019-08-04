@@ -11,3 +11,4 @@ build
 .DS_Store
 
 TEST-*.xml
+artifacts

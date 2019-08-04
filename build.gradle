@@ -1,0 +1,105 @@
+import de.itemis.mps.gradle.BuildLanguages
+import de.itemis.mps.gradle.TestLanguages
+import de.itemis.mps.gradle.GenerateLibrariesXml
+import de.itemis.mps.gradle.RunAntScript
+
+buildscript {
+    repositories {
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.0.85.03fbeda'
+        classpath 'com.bmuschko:gradle-izpack-plugin:3.0'
+    }
+}
+
+group "com.strumenta.mpsserver"
+description = "MpsServer"
+
+configurations {
+	mps
+	mpsArtifacts
+	jdk
+	ant_lib
+	libs
+	distribution
+}
+
+ext.mpsVersion = '2019.1.4'
+
+dependencies {
+	ant_lib "org.apache.ant:ant-junit:1.10.1"
+	mps "com.jetbrains:mps:$mpsVersion"
+}
+
+repositories {	
+	mavenCentral()
+	maven {
+		url 'https://projects.itemis.de/nexus/content/groups/OS/'
+	}
+}
+
+if (!hasProperty("jdk_home")) {
+	def java_home = System.properties['java.home']
+	def jdk_home = java_home
+	if (!file("$jdk_home/lib/tools.jar").isFile()) {
+		jdk_home = jdk_home + "/.."
+	}
+	if (!file("$jdk_home/lib/tools.jar").isFile()) {
+		throw new GradleException("Not finding the JDK...")
+	}
+	ext.jdk_home = jdk_home
+}
+
+ext.artifactsDir = new File(rootDir, 'artifacts')
+ext.mpsDir = project.hasProperty('mpsPath') ? new File("${mpsPath}") : new File(artifactsDir, 'mps')
+ext.distributionDependenciesDir = new File(buildDir, 'distribution-dependencies')
+ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
+	true
+}) + project.files("$project.jdk_home/lib/tools.jar")
+ext.antScriptArgs =  [
+	"-Dmps.home=${mpsDir.getAbsolutePath()}",
+	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}"
+]
+	
+task resolveMps(type: Copy) {
+	if (!project.hasProperty('mpsPath')) {
+		println "Downloading MPS in ${mpsDir.getAbsolutePath()}"
+		from {
+			configurations.mps.resolve().collect { zipTree(it) }
+		}
+		into mpsDir
+	} else {
+		println "MPS already installed in ${mpsDir.getAbsolutePath()}"
+	}
+}
+
+task resolveMpsArtifacts(type: Copy) {
+	from {
+		configurations.mpsArtifacts.resolve().collect { zipTree(it) }
+	}
+	into artifactsDir
+}
+
+task setuplocal {
+	dependsOn resolveMps, resolveMpsArtifacts
+}
+
+// Alias setuplocal as setup
+task setup(dependsOn: setuplocal)
+
+task generateBuildAntScripts(type: BuildLanguages, dependsOn: [resolveMps, resolveMpsArtifacts]) {
+	scriptArgs = antScriptArgs
+	scriptClasspath = buildScriptClasspath
+	script new File('mpscode/build-meta.xml')
+}
+
+task buildServer(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
+	scriptArgs = antScriptArgs
+	scriptClasspath = buildScriptClasspath
+	script new File('mpscode/build-server.xml')
+}
+
