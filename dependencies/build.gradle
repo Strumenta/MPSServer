@@ -29,11 +29,13 @@ repositories {
 dependencies {
   //compile 'io.javalin:javalin:3.3.0'
   compile 'com.sparkjava:spark-core:2.9.1'
+  compile 'com.google.code.gson:gson:2.8.5'
+  //compile 'org.slf4j:slf4j-simple:1.7.21'
 }
 
-// shadowJar {
-//    relocate 'org.slf4j', 'shadow.org.slf4j'
-// }
+shadowJar {
+   relocate 'org.slf4j', 'shadow.org.slf4j'
+}
 
 // import com.github.jengelman.gradle.plugins.shadow.tasks.ConfigureShadowRelocation
 
