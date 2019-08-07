@@ -2,11 +2,13 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="main" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="main" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.launcher/com.strumenta.mpsserver.launcher.msd" folder="main" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.server.tests/com.strumenta.mpsserver.server.tests.msd" folder="tests" />
+      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="main" />
     </projectModules>
   </component>
 </project>
