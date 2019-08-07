@@ -290,6 +290,11 @@
             <ref role="3bR37D" node="2p2ql82MkU0" resolve="com.strumenta.mpsserver.deps" />
           </node>
         </node>
+        <node concept="1SiIV0" id="4XQ2p$waMew" role="3bR37C">
+          <node concept="3bR9La" id="4XQ2p$waMex" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
