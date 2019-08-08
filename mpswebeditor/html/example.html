@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../css/baseLanguage_stylepack.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/jquery.caret.min.js"></script>
+    <script src="../js/editor_model.js"></script>
     <script src="../js/projectional_editor.js"></script>
 </head>
 <body>
@@ -11,43 +12,17 @@
 
 </div>
 <script>
-    function getCaretPosition(editableDiv) {
-        let caretPos = 0,
-            sel, range;
-        if (window.getSelection) {
-            sel = window.getSelection();
-            if (sel.rangeCount) {
-                console.log("A1");
-                range = sel.getRangeAt(0);
-                if (range.commonAncestorContainer.parentNode === editableDiv) {
-                    console.log("A2 " +sel.rangeCount + " "+ range.endOffset);
-                    caretPos = range.endOffset;
-                }
-            }
-        } else if (document.selection && document.selection.createRange) {
-            range = document.selection.createRange();
-            if (range.parentElement() === editableDiv) {
-                const tempEl = document.createElement("span");
-                editableDiv.insertBefore(tempEl, editableDiv.firstChild);
-                const tempRange = range.duplicate();
-                tempRange.moveToElementText(tempEl);
-                tempRange.setEndPoint("EndToEnd", range);
-                caretPos = tempRange.text.length;
-            }
-        }
-        return caretPos;
-    }
 
     function insertCharInString(s, c, i) {
         return s.substring(0, i) + c + s.substring(i, s.length);
     }
 
     function makeConceptAbstract() {
-        $("#cell_2").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
+        $("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
     }
 
     function makeConceptFinal() {
-        $("#cell_2").prepend("<div class=\"constant keyword\" contenteditable>final</div>");
+        $("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>final</div>");
     }
 
     function removeEditing() {
@@ -65,7 +40,7 @@
         }
     }
 
-    $(".constant").bind("keypress",function(e){
+    var keypressReactor = function(e){
         let pos = $(this).caret('pos');
         let hasEditingSpan = $('.constant').children().length !== 0;
         let c = String.fromCharCode(e.which)
@@ -86,141 +61,13 @@
         }
         checkEditing($('.constant').children());
         e.preventDefault();
-    });
+    };
 
     window.onload = function() {
+        window.editorModelAPI = editorModelAPI();
         window.editorAPI = editorAPI($("#mainEditor"));
-        window.editorAPI.updateEditorModel({
-            type: "editor",
-            root: {
-                type: "vertical_list",
-                path: "/0",
-                children: [
-                    {
-                        type: "horizontal_list",
-                        path: "/0/0",
-                        children: [
-                            {
-                                type: "constant",
-                                content: "concept",
-                                path: "/0/0/2",
-                                style: "keyword"
-                            },
-                            {
-                                type: "string_property",
-                                content: "EqualTo",
-                                path: "/0/0/3"
-                            },
-                            {
-                                type: "vertical_list",
-                                path: "/0/0/4",
-                                children: [
-                                    {
-                                        type: "constant",
-                                        content: "extends",
-                                        path: "/0/0/4/0",
-                                        style: "keyword"
-                                    },
-                                    {
-                                        type: "constant",
-                                        content: "implements",
-                                        path: "/0/0/4/1",
-                                        style: "keyword"
-                                    },
-                                ]
-                            },
-                            {
-                                type: "vertical_list",
-                                path: "/0/0/5",
-                                children: [
-                                    {
-                                        type: "string_property",
-                                        content: "Constraint",
-                                        path: "/0/0/5/0"
-                                    },
-                                    {
-                                        type: "placeholder",
-                                        content: "none",
-                                        path: "/0/0/5/1"
-                                    },
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        type: "constant",
-                        content: "",
-                        path: "/0/1"
-                    },
-                    {
-                        type: "horizontal_list",
-                        path: "/0/2",
-                        children: [
-                            {
-                                type: "spacer",
-                                content: "none",
-                                path: "/0/2/0"
-                            },
-                            {
-                                type: "vertical_list",
-                                path: "/0/2/1",
-                                children: [
-                                    {
-                                        type: "horizontal_list",
-                                        path: "/0/2/1/0",
-                                        children: [
-                                            {
-                                                type: "constant",
-                                                content: "instance can be root:",
-                                                path: "/0/2/1/0/0"
-                                            },
-                                            {
-                                                type: "string_property",
-                                                content: "false",
-                                                path: "/0/2/1/0/1"
-                                            },
-                                        ]
-                                    },
-                                    {
-                                        type: "horizontal_list",
-                                        path: "/0/2/1/1",
-                                        children: [
-                                            {
-                                                type: "constant",
-                                                content: "alias:",
-                                                path: "/0/2/1/1/0"
-                                            },
-                                            {
-                                                type: "string_property",
-                                                content: "=",
-                                                path: "/0/2/1/1/1"
-                                            },
-                                        ]
-                                    },
-                                    {
-                                        type: "horizontal_list",
-                                        path: "/0/2/1/2",
-                                        children: [
-                                            {
-                                                type: "constant",
-                                                content: "short description:",
-                                                path: "/0/2/1/2/0"
-                                            },
-                                            {
-                                                type: "placeholder",
-                                                content: "&lt;no short description&gt;",
-                                                path: "/0/2/1/2/1"
-                                            },
-                                        ]
-                                    }
-                                ]
-                            },
-
-                        ]
-                    }
-                ]
-            }
-        });
+        window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
+        $(".constant").bind("keypress", keypressReactor);
     }
 </script>
 </body>

@@ -9,7 +9,7 @@ function editorAPI(editorHtmlElement) {
     console.log("editorAPI " + editorHtmlElement);
 
     function pathToCellID(path) {
-        return "cell" + path.replace("/", "_")
+        return "cell" + path.replace(new RegExp("/", 'g'), "_")
     }
 
     function renderEditor(editorModel) {
