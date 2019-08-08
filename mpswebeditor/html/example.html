@@ -123,6 +123,10 @@
         $("#cell_2").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
     }
 
+    function makeConceptFinal() {
+        $("#cell_2").prepend("<div class=\"constant keyword\" contenteditable>final</div>");
+    }
+
     function removeEditing() {
         $(".editing").remove();
     }
@@ -131,6 +135,10 @@
         if (element.text() === "abstract") {
             removeEditing();
             makeConceptAbstract();
+        }
+        if (element.text() === "final") {
+            removeEditing();
+            makeConceptFinal();
         }
     }
 
