@@ -4,88 +4,11 @@
     <link rel="stylesheet" href="../css/baseLanguage_stylepack.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/jquery.caret.min.js"></script>
-    <!--<link rel="stylesheet" href="../css/raster.css">-->
+    <script src="../js/projectional_editor.js"></script>
 </head>
 <body>
-<div class="editor">
-    <div class="vertical_list" id="cell_1">
-        <div class="horizontal_list" id="cell_2">
-            <!-- space in the constant cause mess with the caret -->
-            <div class="constant keyword" contenteditable>concept</div>
-            <div class="string_property" contenteditable>
-                EqualTo
-            </div>
-            <div class="vertical_list">
-                <div class="constant keyword">extends
-                </div>
-                <div class="constant keyword">
-                    implements
-                </div>
-            </div>
-            <div class="vertical_list">
-                <div class="string_property" contenteditable>
-                    Constraint
-                </div>
-                <div class="placeholder">
-                    none
-                </div>
-            </div>
-        </div>
-        <!-- empty line --> <div class="constant"> </div>
-        <div class="horizontal_list">
-            <div class="spacer">
+<div class="editor" id="mainEditor">
 
-            </div>
-            <div class="vertical_list">
-                <div class="horizontal_list">
-                    <div class="constant">
-                    instance can be root:
-                    </div>
-                    <div class="string_property" contenteditable>
-                        false
-                    </div>
-                </div>
-                <div class="horizontal_list">
-                    <div class="constant">
-                        alias:
-                    </div>
-                    <div class="string_property" contenteditable>
-                        =
-                    </div>
-                </div>
-                <div class="horizontal_list">
-                    <div class="constant">
-                        short description:
-                    </div>
-                    <div class="placeholder">
-                        &lt;no short description&gt;
-                    </div>
-                </div>
-                <!-- empty line --> <div class="constant"> </div>
-                <div class="constant">
-                    properties:
-                </div>
-                <div class="placeholder">
-                    &lt;&lt; ... &gt;&gt;
-                </div>
-                <!-- empty line --> <div class="constant"> </div>
-                <div class="constant">
-                    children:
-                </div>
-                <div class="placeholder">
-                    &lt;&lt; ... &gt;&gt;
-                </div>
-                <!-- empty line --> <div class="constant"> </div>
-                <div class="constant">
-                    references:
-                </div>
-                <div class="placeholder">
-                    &lt;&lt; ... &gt;&gt;
-                </div>
-                <!-- empty line --> <div class="constant"> </div>
-            </div>
-        </div>
-    </div>
 </div>
 <script>
     function getCaretPosition(editableDiv) {
@@ -164,6 +87,141 @@
         checkEditing($('.constant').children());
         e.preventDefault();
     });
+
+    window.onload = function() {
+        window.editorAPI = editorAPI($("#mainEditor"));
+        window.editorAPI.updateEditorModel({
+            type: "editor",
+            root: {
+                type: "vertical_list",
+                path: "/0",
+                children: [
+                    {
+                        type: "horizontal_list",
+                        path: "/0/0",
+                        children: [
+                            {
+                                type: "constant",
+                                content: "concept",
+                                path: "/0/0/2",
+                                style: "keyword"
+                            },
+                            {
+                                type: "string_property",
+                                content: "EqualTo",
+                                path: "/0/0/3"
+                            },
+                            {
+                                type: "vertical_list",
+                                path: "/0/0/4",
+                                children: [
+                                    {
+                                        type: "constant",
+                                        content: "extends",
+                                        path: "/0/0/4/0",
+                                        style: "keyword"
+                                    },
+                                    {
+                                        type: "constant",
+                                        content: "implements",
+                                        path: "/0/0/4/1",
+                                        style: "keyword"
+                                    },
+                                ]
+                            },
+                            {
+                                type: "vertical_list",
+                                path: "/0/0/5",
+                                children: [
+                                    {
+                                        type: "string_property",
+                                        content: "Constraint",
+                                        path: "/0/0/5/0"
+                                    },
+                                    {
+                                        type: "placeholder",
+                                        content: "none",
+                                        path: "/0/0/5/1"
+                                    },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        type: "constant",
+                        content: "",
+                        path: "/0/1"
+                    },
+                    {
+                        type: "horizontal_list",
+                        path: "/0/2",
+                        children: [
+                            {
+                                type: "spacer",
+                                content: "none",
+                                path: "/0/2/0"
+                            },
+                            {
+                                type: "vertical_list",
+                                path: "/0/2/1",
+                                children: [
+                                    {
+                                        type: "horizontal_list",
+                                        path: "/0/2/1/0",
+                                        children: [
+                                            {
+                                                type: "constant",
+                                                content: "instance can be root:",
+                                                path: "/0/2/1/0/0"
+                                            },
+                                            {
+                                                type: "string_property",
+                                                content: "false",
+                                                path: "/0/2/1/0/1"
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: "horizontal_list",
+                                        path: "/0/2/1/1",
+                                        children: [
+                                            {
+                                                type: "constant",
+                                                content: "alias:",
+                                                path: "/0/2/1/1/0"
+                                            },
+                                            {
+                                                type: "string_property",
+                                                content: "=",
+                                                path: "/0/2/1/1/1"
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        type: "horizontal_list",
+                                        path: "/0/2/1/2",
+                                        children: [
+                                            {
+                                                type: "constant",
+                                                content: "short description:",
+                                                path: "/0/2/1/2/0"
+                                            },
+                                            {
+                                                type: "placeholder",
+                                                content: "&lt;no short description&gt;",
+                                                path: "/0/2/1/2/1"
+                                            },
+                                        ]
+                                    }
+                                ]
+                            },
+
+                        ]
+                    }
+                ]
+            }
+        });
+    }
 </script>
 </body>
 </html>
