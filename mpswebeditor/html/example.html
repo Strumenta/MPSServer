@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="editor">
-    <div class="vertical_list">
-        <div class="horizontal_list">
+    <div class="vertical_list" id="cell_1">
+        <div class="horizontal_list" id="cell_2">
             <!-- space in the constant cause mess with the caret -->
             <div class="constant keyword" contenteditable>concept</div>
             <div class="string_property" contenteditable>
@@ -119,6 +119,21 @@
         return s.substring(0, i) + c + s.substring(i, s.length);
     }
 
+    function makeConceptAbstract() {
+        $("#cell_2").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
+    }
+
+    function removeEditing() {
+        $(".editing").remove();
+    }
+
+    function checkEditing(element) {
+        if (element.text() === "abstract") {
+            removeEditing();
+            makeConceptAbstract();
+        }
+    }
+
     $(".constant").bind("keypress",function(e){
         let pos = $(this).caret('pos');
         let hasEditingSpan = $('.constant').children().length !== 0;
@@ -138,7 +153,7 @@
                 $(this).prepend("<span class='editing' contenteditable>" + c + "</span>");
             }
         }
-
+        checkEditing($('.constant').children());
         e.preventDefault();
     });
 </script>
