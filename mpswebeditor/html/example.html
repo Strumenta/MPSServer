@@ -2,30 +2,33 @@
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/baseLanguage_stylepack.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.caret.min.js"></script>
     <!--<link rel="stylesheet" href="../css/raster.css">-->
 </head>
 <body>
 <div class="editor">
     <div class="vertical_list">
         <div class="horizontal_list">
-            <div class="constant keyword" contenteditable>
-                concept
-            </div>
+            <!-- space in the constant cause mess with the caret -->
+            <div class="constant keyword" contenteditable>concept</div>
             <div class="string_property" contenteditable>
                 EqualTo
             </div>
-            <div>
-                <div>
-                    <div class="constant keyword">
-                        extends
-                    </div>
-                    <div class="constant keyword">
-                        implements
-                    </div>
+            <div class="vertical_list">
+                <div class="constant keyword">extends
+                </div>
+                <div class="constant keyword">
+                    implements
                 </div>
             </div>
-            <div class="string_property" contenteditable>
-                Constraint
+            <div class="vertical_list">
+                <div class="string_property" contenteditable>
+                    Constraint
+                </div>
+                <div class="placeholder">
+                    none
+                </div>
             </div>
         </div>
         <!-- empty line --> <div class="constant"> </div>
@@ -85,7 +88,59 @@
     </div>
 </div>
 <script>
+    function getCaretPosition(editableDiv) {
+        let caretPos = 0,
+            sel, range;
+        if (window.getSelection) {
+            sel = window.getSelection();
+            if (sel.rangeCount) {
+                console.log("A1");
+                range = sel.getRangeAt(0);
+                if (range.commonAncestorContainer.parentNode === editableDiv) {
+                    console.log("A2 " +sel.rangeCount + " "+ range.endOffset);
+                    caretPos = range.endOffset;
+                }
+            }
+        } else if (document.selection && document.selection.createRange) {
+            range = document.selection.createRange();
+            if (range.parentElement() === editableDiv) {
+                const tempEl = document.createElement("span");
+                editableDiv.insertBefore(tempEl, editableDiv.firstChild);
+                const tempRange = range.duplicate();
+                tempRange.moveToElementText(tempEl);
+                tempRange.setEndPoint("EndToEnd", range);
+                caretPos = tempRange.text.length;
+            }
+        }
+        return caretPos;
+    }
 
+    function insertCharInString(s, c, i) {
+        return s.substring(0, i) + c + s.substring(i, s.length);
+    }
+
+    $(".constant").bind("keypress",function(e){
+        let pos = $(this).caret('pos');
+        let hasEditingSpan = $('.constant').children().length !== 0;
+        let c = String.fromCharCode(e.which)
+        //console.log("on constant " + pos + ", has span? " + hasEditingSpan);
+        if (hasEditingSpan) {
+            let spanLength = $('.constant').children().text().length
+            //console.log("span length " + spanLength);
+            if (pos < spanLength) {
+                $('.constant').children().text(insertCharInString($('.constant').children().text(), c, pos));
+                $(this).caret('pos', pos + 1);
+            } else if (pos == spanLength) {
+                $('.constant').children().text($('.constant').children().text() + c);
+            }
+        } else {
+            if (pos === 0) {
+                $(this).prepend("<span class='editing' contenteditable>" + c + "</span>");
+            }
+        }
+
+        e.preventDefault();
+    });
 </script>
 </body>
 </html>
