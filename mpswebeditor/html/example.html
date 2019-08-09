@@ -18,7 +18,9 @@
     }
 
     function makeConceptAbstract() {
-        $("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
+        //$("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
+        window.editorModelAPI.makeConceptAbstract();
+        window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
     }
 
     function makeConceptFinal() {
@@ -30,17 +32,21 @@
     }
 
     function checkEditing(element) {
-        if (element.text() === "abstract") {
-            removeEditing();
-            makeConceptAbstract();
-        }
-        if (element.text() === "final") {
-            removeEditing();
-            makeConceptFinal();
-        }
+        // if (element.text() === "abstract") {
+        //     removeEditing();
+        //     makeConceptAbstract();
+        // }
+        // if (element.text() === "final") {
+        //     removeEditing();
+        //     makeConceptFinal();
+        // }
+        console.log("Check editing " + element);
+
+        let cellID = window.editorAPI.cellIdToPath(element.parent()[0].id)
+        var completions = window.editorModelAPI.completionsFor(cellID);
     }
 
-    var keypressReactor = function(e){
+    let keypressReactor = function (e) {
         let pos = $(this).caret('pos');
         let hasEditingSpan = $('.constant').children().length !== 0;
         let c = String.fromCharCode(e.which)

@@ -12,6 +12,10 @@ function editorAPI(editorHtmlElement) {
         return "cell" + path.replace(new RegExp("/", 'g'), "_")
     }
 
+    function cellIdToPath(cellId) {
+        return cellId.substring("cell".length, cellId.length).replace(new RegExp("_", 'g'), "/");
+    }
+
     function renderEditor(editorModel) {
         if (editorModel.type === "vertical_list") {
             let html = $("<div class=\"vertical_list\" id=\"" + pathToCellID(editorModel.path) + "\"></div>");
@@ -28,7 +32,7 @@ function editorAPI(editorHtmlElement) {
             });
             return html
         } else if (editorModel.type === "constant") {
-            let html = $("<div class=\"constant " + editorModel.style + "\" contenteditable>" + editorModel.content + "</div>");
+            let html = $("<div class=\"constant " + editorModel.style + "\" contenteditable id='"+ pathToCellID(editorModel.path) + "'>" + editorModel.content + "</div>");
             return html
         } else if (editorModel.type === "string_property") {
             let html = $("<div class=\"string_property\" contenteditable>" + editorModel.content + "</div>");
@@ -50,20 +54,35 @@ function editorAPI(editorHtmlElement) {
         });
     }
 
+    function reconcileRenderedEditorChild(prevModel, newModel, htmlElement, childIndex) {
+        if (prevModel == newModel) {
+            return
+        }
+        if (prevModel === null) {
+            var childHtml = renderEditor(newModel);
+            htmlElement.append(childHtml);
+        } else {
+            reconcileRenderedEditor(newModel, prevModel, htmlElement.children()[childIndex]);
+        }
+    }
+
     function reconcileRenderedEditor(prevModel, newModel, htmlElement) {
         console.log("[updateEditorRendering] on " + htmlElement);
+        if (prevModel == newModel) {
+            return
+        }
         if (prevModel.type === newModel.type) {
             if (newModel.type === "editor") {
-                if (prevModel.root !== newModel.root) {
-                    if (prevModel.root === null) {
-                        if (newModel.root !== null) {
-                            let newHtmlElement = renderEditor(newModel.root);
-                            htmlElement.append(newHtmlElement);
-                        }
-                    } else {
-                        throw Error("Unsupported");
-                    }
-                }
+                reconcileRenderedEditorChild(prevModel.root, newModel.root, htmlElement, 0)
+                    // if (prevModel.root === null) {
+                    //     if (newModel.root !== null) {
+                    //         let newHtmlElement = renderEditor(newModel.root);
+                    //         htmlElement.append(newHtmlElement);
+                    //     }
+                    // } else {
+                    //     throw Error("Unsupported");
+                    // }
+
             } else {
                 throw Error("Unsupported");
             }
@@ -78,6 +97,7 @@ function editorAPI(editorHtmlElement) {
     }
 
     return {
-        "updateEditorModel" : updateEditorModel
+        "updateEditorModel" : updateEditorModel,
+        "cellIdToPath": cellIdToPath
     };
 }
