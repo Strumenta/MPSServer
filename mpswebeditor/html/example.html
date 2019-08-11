@@ -42,8 +42,17 @@
         // }
         console.log("Check editing " + element);
 
-        let cellID = window.editorAPI.cellIdToPath(element.parent()[0].id)
-        var completions = window.editorModelAPI.completionsFor(cellID);
+        let cellID = window.editorAPI.cellIdToPath(element.parent()[0].id);
+        let completions = window.editorModelAPI.completionsFor(cellID);
+        let text = element.text();
+        let found = false;
+        $.each(completions, function (key, value) {
+            if (value.text === text && !found) {
+                window.editorModelAPI.triggerAction(value.action);
+                found = true;
+                removeEditing();
+            }
+        });
     }
 
     let keypressReactor = function (e) {

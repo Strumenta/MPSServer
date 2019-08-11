@@ -1,6 +1,6 @@
 function editorModelAPI() {
 
-    var currentModel = {
+    let currentModel = {
         type: "editor",
         root: {
             type: "vertical_list",
@@ -283,15 +283,11 @@ function editorModelAPI() {
             return [
                 {
                     "text": "abstract",
-                    "action": {
-                        // TODO
-                    }
+                    "action": "/0/0/2:myaction:abstract"
                 },
                 {
-                    "text": "final"
-                    "action": {
-                        // TODO
-                    }
+                    "text": "final",
+                    "action": "/0/0/2:myaction:final"
                 },
             ]
         } else {
@@ -299,9 +295,14 @@ function editorModelAPI() {
         }
     }
 
+    function triggerAction(actionID) {
+        console.log("Executing action ID -> " + actionID);
+    }
+
     return {
         getCurrentModel: getCurrentModel,
         makeConceptAbstract: makeConceptAbstract,
-        completionsFor: completionsFor
+        completionsFor: completionsFor,
+        triggerAction: triggerAction
     }
 }
