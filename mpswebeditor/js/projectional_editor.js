@@ -8,6 +8,15 @@ function editorAPI(editorHtmlElement) {
 
     console.log("editorAPI " + editorHtmlElement);
 
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     function pathToCellID(path) {
         return "cell" + path.replace(new RegExp("/", 'g'), "_")
     }
@@ -35,10 +44,10 @@ function editorAPI(editorHtmlElement) {
             let html = $("<div class=\"constant " + editorModel.style + "\" contenteditable id='"+ pathToCellID(editorModel.path) + "'>" + editorModel.content + "</div>");
             return html
         } else if (editorModel.type === "string_property") {
-            let html = $("<div class=\"string_property\" contenteditable>" + editorModel.content + "</div>");
+            let html = $("<div class=\"string_property\" contenteditable>" + escapeHtml(editorModel.content) + "</div>");
             return html;
         } else if (editorModel.type === "placeholder") {
-            let html = $("<div class=\"placeholder\" contenteditable>" + editorModel.content + "</div>");
+            let html = $("<div class=\"placeholder\" contenteditable>" + escapeHtml(editorModel.content) + "</div>");
             return html;
         } else if (editorModel.type === "spacer") {
             let html = $("<div class=\"spacer\" contenteditable></div>");
