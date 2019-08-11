@@ -4,6 +4,7 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import io.ktor.websocket.WebSockets
 
 fun main(args: Array<String>) {
     val server = embeddedServer(Netty, port = 8080) {
@@ -16,5 +17,6 @@ fun main(args: Array<String>) {
             }
         }
     }
+    server.application.install(WebSockets)
     server.start(wait = true)
 }
