@@ -81,8 +81,13 @@
     window.onload = function() {
         window.editorModelAPI = editorModelAPI();
         window.editorAPI = editorAPI($("#mainEditor"));
-        window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
+        //window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
         $(".constant").bind("keypress", keypressReactor);
+        //window.editorModelAPI.registerForUpdates();
+        window.editorModelAPI.setModelUpdateHandler(function(model){
+            window.editorAPI.updateEditorModel(model);
+        });
+        window.editorModelAPI.start();
     }
 </script>
 </body>

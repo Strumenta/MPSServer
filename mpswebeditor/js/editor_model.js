@@ -1,5 +1,7 @@
 function editorModelAPI() {
 
+    var socket = null;
+    var modelUpdateHandler = null;
     let currentModel = {
         type: "editor",
         root: {
@@ -299,10 +301,58 @@ function editorModelAPI() {
         console.log("Executing action ID -> " + actionID);
     }
 
+    function registerForUpdates() {
+        socket = new WebSocket("ws://localhost:8080/editorModel");
+
+        socket.onopen = function(e) {
+            socket.send("requestModelUpdate")
+            //alert("[open] Connection established");
+            //alert("Sending to server");
+            //socket.send("My name is John");
+        };
+
+        socket.onmessage = function(event) {
+            var dataRaw = event.data
+            var data = JSON.parse(dataRaw)
+            console.log("received " + dataRaw);
+            if (data.type == "modelUpdate") {
+                modelUpdateHandler(data.content);
+            } else {
+                console.log("unknown message type " + data.type);
+            }
+            //alert(`[message] Data received from server: ${event.data}`);
+        };
+
+        socket.onclose = function(event) {
+            if (event.wasClean) {
+                //alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+            } else {
+                // e.g. server process killed or network down
+                // event.code is usually 1006 in this case
+                //alert('[close] Connection died');
+            }
+        };
+
+        socket.onerror = function(error) {
+            //alert(`[error] ${error.message}`);
+        };
+    }
+
+    function start() {
+        registerForUpdates();
+    }
+
+    function setModelUpdateHandler(handler) {
+        modelUpdateHandler = handler;
+    }
+
     return {
         getCurrentModel: getCurrentModel,
         makeConceptAbstract: makeConceptAbstract,
         completionsFor: completionsFor,
-        triggerAction: triggerAction
+        triggerAction: triggerAction,
+        setModelUpdateHandler: setModelUpdateHandler,
+        start: start/*,
+        registerForUpdates: registerForUpdates*/
     }
 }
