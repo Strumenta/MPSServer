@@ -67,6 +67,7 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT" />
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -930,6 +931,38 @@
               </node>
             </node>
           </node>
+        </node>
+        <node concept="3vlDli" id="MykNjmbfP_" role="3cqZAp">
+          <node concept="3clFbT" id="4B7it6KUG2j" role="3tpDZB" />
+          <node concept="3EllGN" id="MykNjmbfPB" role="3tpDZA">
+            <node concept="Xl_RD" id="MykNjmbfPC" role="3ElVtu">
+              <property role="Xl_RC" value="abstract" />
+            </node>
+            <node concept="2OqwBi" id="MykNjmbfPD" role="3ElQJh">
+              <node concept="37vLTw" id="MykNjmbfPE" role="2Oq$k0">
+                <ref role="3cqZAo" node="4XQ2p$w8X_d" resolve="integerConstant" />
+              </node>
+              <node concept="2OwXpG" id="MykNjmbfPF" role="2OqNvi">
+                <ref role="2Oxat5" to="30ym:4XQ2p$w8MlU" resolve="properties" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="MykNjmbg8r" role="3cqZAp">
+          <node concept="3EllGN" id="MykNjmbg8t" role="3tpDZA">
+            <node concept="Xl_RD" id="MykNjmbg8u" role="3ElVtu">
+              <property role="Xl_RC" value="final" />
+            </node>
+            <node concept="2OqwBi" id="MykNjmbg8v" role="3ElQJh">
+              <node concept="37vLTw" id="MykNjmbg8w" role="2Oq$k0">
+                <ref role="3cqZAo" node="4XQ2p$w8X_d" resolve="integerConstant" />
+              </node>
+              <node concept="2OwXpG" id="MykNjmbg8x" role="2OqNvi">
+                <ref role="2Oxat5" to="30ym:4XQ2p$w8MlU" resolve="properties" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbT" id="4B7it6KUGm0" role="3tpDZB" />
         </node>
         <node concept="3vlDli" id="4XQ2p$w9Fg4" role="3cqZAp">
           <node concept="Xl_RD" id="4XQ2p$w9I6T" role="3tpDZB">

@@ -18,13 +18,13 @@
     }
 
     function makeConceptAbstract() {
-        //$("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>abstract</div>");
+        //$("#cell_0_0").prepend("<div class=\"com.strumenta.mpswebeditor.constant keyword\" contenteditable>abstract</div>");
         window.editorModelAPI.makeConceptAbstract();
         window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
     }
 
     function makeConceptFinal() {
-        $("#cell_0_0").prepend("<div class=\"constant keyword\" contenteditable>final</div>");
+        $("#cell_0_0").prepend("<div class=\"com.strumenta.mpswebeditor.constant keyword\" contenteditable>final</div>");
     }
 
     function removeEditing() {
@@ -57,24 +57,24 @@
 
     let keypressReactor = function (e) {
         let pos = $(this).caret('pos');
-        let hasEditingSpan = $('.constant').children().length !== 0;
+        let hasEditingSpan = $('.com.strumenta.mpswebeditor.constant').children().length !== 0;
         let c = String.fromCharCode(e.which)
-        //console.log("on constant " + pos + ", has span? " + hasEditingSpan);
+        //console.log("on com.strumenta.mpswebeditor.constant " + pos + ", has span? " + hasEditingSpan);
         if (hasEditingSpan) {
-            let spanLength = $('.constant').children().text().length
+            let spanLength = $('.com.strumenta.mpswebeditor.constant').children().text().length
             //console.log("span length " + spanLength);
             if (pos < spanLength) {
-                $('.constant').children().text(insertCharInString($('.constant').children().text(), c, pos));
+                $('.com.strumenta.mpswebeditor.constant').children().text(insertCharInString($('.com.strumenta.mpswebeditor.constant').children().text(), c, pos));
                 $(this).caret('pos', pos + 1);
             } else if (pos == spanLength) {
-                $('.constant').children().text($('.constant').children().text() + c);
+                $('.com.strumenta.mpswebeditor.constant').children().text($('.com.strumenta.mpswebeditor.constant').children().text() + c);
             }
         } else {
             if (pos === 0) {
                 $(this).prepend("<span class='editing' contenteditable>" + c + "</span>");
             }
         }
-        checkEditing($('.constant').children());
+        checkEditing($('.com.strumenta.mpswebeditor.constant').children());
         e.preventDefault();
     };
 
@@ -82,7 +82,7 @@
         window.editorModelAPI = editorModelAPI();
         window.editorAPI = editorAPI($("#mainEditor"));
         //window.editorAPI.updateEditorModel(window.editorModelAPI.getCurrentModel());
-        $(".constant").bind("keypress", keypressReactor);
+        $(".com.strumenta.mpswebeditor.constant").bind("keypress", keypressReactor);
         //window.editorModelAPI.registerForUpdates();
         window.editorModelAPI.setModelUpdateHandler(function(model){
             window.editorAPI.updateEditorModel(model);
