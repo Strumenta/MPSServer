@@ -96,7 +96,7 @@ function editorAPI(editorHtmlElement) {
                 throw Error("Unsupported");
             }
         } else {
-            throw Error("Prev model had type " + prevModel.type + " new model has type " + newModel.type);
+            throw Error("Prev nodemodel had type " + prevModel.type + " new nodemodel has type " + newModel.type);
         }
     }
 

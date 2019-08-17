@@ -1,0 +1,288 @@
+{
+  "children": [
+    {
+      "containingLink": "implements",
+      "children": [],
+      "properties": {},
+      "refs": {
+        "intfc": "3734116213129792499"
+      },
+      "regularId": 5185847984243943891
+    },
+    {
+      "containingLink": "propertyDeclaration",
+      "children": [
+        {
+          "containingLink": "smodelAttribute",
+          "children": [],
+          "properties": {},
+          "refs": {},
+          "regularId": 3376587159404422118
+        }
+      ],
+      "properties": {
+        "name": "label",
+        "propertyId": "1201381395355"
+      },
+      "refs": {
+        "dataType": "1082983041843"
+      },
+      "regularId": 1201381395355,
+      "name": "label"
+    },
+    {
+      "containingLink": "linkDeclaration",
+      "children": [],
+      "properties": {
+        "unordered": false,
+        "role": "expression",
+        "linkId": "1163670766145",
+        "metaClass": {
+          "myDescriptor": {
+            "myName": "aggregation",
+            "myPresentation": "aggregation",
+            "myIdentifier": "aggregation",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084199179705
+              }
+            }
+          }
+        },
+        "sourceCardinality": {
+          "myDescriptor": {
+            "myName": "1",
+            "myPresentation": "1",
+            "myIdentifier": "1",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084197782724
+              }
+            }
+          }
+        },
+        "name": "expression"
+      },
+      "refs": {
+        "target": "1068431790191"
+      },
+      "regularId": 1163670766145,
+      "name": "expression"
+    },
+    {
+      "containingLink": "linkDeclaration",
+      "children": [],
+      "properties": {
+        "unordered": false,
+        "role": "case",
+        "linkId": "1163670772911",
+        "metaClass": {
+          "myDescriptor": {
+            "myName": "aggregation",
+            "myPresentation": "aggregation",
+            "myIdentifier": "aggregation",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084199179705
+              }
+            }
+          }
+        },
+        "sourceCardinality": {
+          "myDescriptor": {
+            "myName": "0..n",
+            "myPresentation": "0..n",
+            "myIdentifier": "0..n",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084197782725
+              }
+            }
+          }
+        },
+        "name": "case"
+      },
+      "refs": {
+        "target": "1163670641947"
+      },
+      "regularId": 1163670772911,
+      "name": "case"
+    },
+    {
+      "containingLink": "linkDeclaration",
+      "children": [],
+      "properties": {
+        "unordered": false,
+        "role": "defaultBlock",
+        "linkId": "1163670592366",
+        "metaClass": {
+          "myDescriptor": {
+            "myName": "aggregation",
+            "myPresentation": "aggregation",
+            "myIdentifier": "aggregation",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084199179705
+              }
+            }
+          }
+        },
+        "sourceCardinality": {
+          "myDescriptor": {
+            "myName": "0..1",
+            "myPresentation": "0..1",
+            "myIdentifier": "0..1",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084197782723
+              }
+            }
+          }
+        },
+        "name": "defaultBlock"
+      },
+      "refs": {
+        "target": "1068580123136"
+      },
+      "regularId": 1163670592366,
+      "name": "defaultBlock"
+    },
+    {
+      "containingLink": "linkDeclaration",
+      "children": [],
+      "properties": {
+        "unordered": false,
+        "role": "switchLabel",
+        "linkId": "4652593672361747214",
+        "metaClass": {
+          "myDescriptor": {
+            "myName": "aggregation",
+            "myPresentation": "aggregation",
+            "myIdentifier": "aggregation",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084199179705
+              }
+            }
+          }
+        },
+        "sourceCardinality": {
+          "myDescriptor": {
+            "myName": "0..1",
+            "myPresentation": "0..1",
+            "myIdentifier": "0..1",
+            "mySourceNode": {
+              "myModelReference": {
+                "myModelId": {
+                  "myId": "00000000-0000-4000-0000-011c89590292"
+                },
+                "myModelName": {
+                  "myValue": "jetbrains.mps.lang.structure.structure"
+                }
+              },
+              "myNodeId": {
+                "myId": 1084197782723
+              }
+            }
+          }
+        },
+        "name": "switchLabel"
+      },
+      "refs": {
+        "target": "363746191845175146"
+      },
+      "regularId": 4652593672361747214,
+      "name": "switchLabel"
+    }
+  ],
+  "properties": {
+    "conceptAlias": "switch",
+    "abstract": false,
+    "virtualPackage": "control_flow.if_switch",
+    "rootable": false,
+    "final": false,
+    "name": "SwitchStatement",
+    "conceptId": "1163670490218",
+    "staticScope": {
+      "myDescriptor": {
+        "myName": "none",
+        "myPresentation": "none",
+        "myIdentifier": "none",
+        "mySourceNode": {
+          "myModelReference": {
+            "myModelId": {
+              "myId": "00000000-0000-4000-0000-011c89590292"
+            },
+            "myModelName": {
+              "myValue": "jetbrains.mps.lang.structure.structure"
+            }
+          },
+          "myNodeId": {
+            "myId": 5404671619616246764
+          }
+        }
+      }
+    }
+  },
+  "refs": {
+    "extends": "1068580123157"
+  },
+  "regularId": 1163670490218,
+  "name": "SwitchStatement"
+}
