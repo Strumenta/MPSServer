@@ -1,6 +1,6 @@
-package com.strumenta.mpswebeditor.editordescription
+package com.strumenta.mpswebeditor.editormodel
 
-// Description of the editor. From this description we generate the JSON description that the
+// Model of the editor. From this model we generate the projection model that the
 // client can interpret to render the editor
 
 interface CellDescription
@@ -21,7 +21,6 @@ class PropertyFlag(val text: String, val propertyName: String) : CellDescription
 
 class Constant(val text: String) : CellDescription
 
-
 class PropertyCell(val propertyName: String) : CellDescription
 
 // By default we show the name of the reference
@@ -33,6 +32,4 @@ fun emptyLine() = Constant("")
 
 class Spacer : CellDescription
 
-
-
-class EditorDescription(val root: CellDescription)
+class EditorModel(val root: CellDescription)

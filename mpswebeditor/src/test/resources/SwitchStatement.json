@@ -5,9 +5,20 @@
       "children": [],
       "properties": {},
       "refs": {
-        "intfc": "3734116213129792499"
+        "intfc": {
+          "id": {
+            "regularId": 3734116213129792499
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.lang.core.structure",
+            "uuid": "00000000-0000-4000-0000-011c89590288"
+          }
+        }
       },
-      "regularId": 5185847984243943891
+      "id": {
+        "regularId": 5185847984243943891
+      },
+      "concept": "jetbrains.mps.lang.structure.InterfaceConceptReference"
     },
     {
       "containingLink": "propertyDeclaration",
@@ -17,7 +28,10 @@
           "children": [],
           "properties": {},
           "refs": {},
-          "regularId": 3376587159404422118
+          "id": {
+            "regularId": 3376587159404422118
+          },
+          "concept": "jetbrains.mps.lang.structure.DeprecatedNodeAnnotation"
         }
       ],
       "properties": {
@@ -25,10 +39,21 @@
         "propertyId": "1201381395355"
       },
       "refs": {
-        "dataType": "1082983041843"
+        "dataType": {
+          "id": {
+            "regularId": 1082983041843
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.lang.core.structure",
+            "uuid": "00000000-0000-4000-0000-011c89590288"
+          }
+        }
       },
-      "regularId": 1201381395355,
-      "name": "label"
+      "id": {
+        "regularId": 1201381395355
+      },
+      "name": "label",
+      "concept": "jetbrains.mps.lang.structure.PropertyDeclaration"
     },
     {
       "containingLink": "linkDeclaration",
@@ -80,10 +105,21 @@
         "name": "expression"
       },
       "refs": {
-        "target": "1068431790191"
+        "target": {
+          "id": {
+            "regularId": 1068431790191
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.baseLanguage.structure",
+            "uuid": "00000000-0000-4000-0000-011c895902ca"
+          }
+        }
       },
-      "regularId": 1163670766145,
-      "name": "expression"
+      "id": {
+        "regularId": 1163670766145
+      },
+      "name": "expression",
+      "concept": "jetbrains.mps.lang.structure.LinkDeclaration"
     },
     {
       "containingLink": "linkDeclaration",
@@ -135,10 +171,21 @@
         "name": "case"
       },
       "refs": {
-        "target": "1163670641947"
+        "target": {
+          "id": {
+            "regularId": 1163670641947
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.baseLanguage.structure",
+            "uuid": "00000000-0000-4000-0000-011c895902ca"
+          }
+        }
       },
-      "regularId": 1163670772911,
-      "name": "case"
+      "id": {
+        "regularId": 1163670772911
+      },
+      "name": "case",
+      "concept": "jetbrains.mps.lang.structure.LinkDeclaration"
     },
     {
       "containingLink": "linkDeclaration",
@@ -190,10 +237,21 @@
         "name": "defaultBlock"
       },
       "refs": {
-        "target": "1068580123136"
+        "target": {
+          "id": {
+            "regularId": 1068580123136
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.baseLanguage.structure",
+            "uuid": "00000000-0000-4000-0000-011c895902ca"
+          }
+        }
       },
-      "regularId": 1163670592366,
-      "name": "defaultBlock"
+      "id": {
+        "regularId": 1163670592366
+      },
+      "name": "defaultBlock",
+      "concept": "jetbrains.mps.lang.structure.LinkDeclaration"
     },
     {
       "containingLink": "linkDeclaration",
@@ -245,10 +303,21 @@
         "name": "switchLabel"
       },
       "refs": {
-        "target": "363746191845175146"
+        "target": {
+          "id": {
+            "regularId": 363746191845175146
+          },
+          "model": {
+            "qualifiedName": "jetbrains.mps.baseLanguage.structure",
+            "uuid": "00000000-0000-4000-0000-011c895902ca"
+          }
+        }
       },
-      "regularId": 4652593672361747214,
-      "name": "switchLabel"
+      "id": {
+        "regularId": 4652593672361747214
+      },
+      "name": "switchLabel",
+      "concept": "jetbrains.mps.lang.structure.LinkDeclaration"
     }
   ],
   "properties": {
@@ -281,8 +350,19 @@
     }
   },
   "refs": {
-    "extends": "1068580123157"
+    "extends": {
+      "id": {
+        "regularId": 1068580123157
+      },
+      "model": {
+        "qualifiedName": "jetbrains.mps.baseLanguage.structure",
+        "uuid": "00000000-0000-4000-0000-011c895902ca"
+      }
+    }
   },
-  "regularId": 1163670490218,
-  "name": "SwitchStatement"
+  "id": {
+    "regularId": 1163670490218
+  },
+  "name": "SwitchStatement",
+  "concept": "jetbrains.mps.lang.structure.ConceptDeclaration"
 }

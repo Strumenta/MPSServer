@@ -1,11 +1,12 @@
-package com.strumenta.mpswebeditor.jsonrepr
+package com.strumenta.mpswebeditor.projectionmodel
 
 import com.google.gson.JsonElement
-import com.strumenta.mpswebeditor.editordescription.*
+import com.strumenta.mpswebeditor.editormodel.*
+import com.strumenta.mpswebeditor.nodemodel.loadNodeModel
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-fun produceExampleEditorModel() : JsonElement {
+fun produceExampleProjectionModel() : JsonElement {
     return editor(
             verticalList("/0", listOf(
                     horizontalList("/0/0", listOf(
@@ -36,8 +37,8 @@ fun produceExampleEditorModel() : JsonElement {
                     ))))
 }
 
-fun editorDescriptionExample() : EditorDescription{
-    return EditorDescription(
+fun editorModelExample() : EditorModel{
+    return EditorModel(
             ListCellDescription.vertical(listOf(
                     ListCellDescription.horizontal(listOf(
                             PropertyFlag("abstract", "abstract"),
@@ -76,10 +77,18 @@ fun editorDescriptionExample() : EditorDescription{
     )
 }
 
-class EditorDescriptionToJsonTest {
+class ProjectionGeneratorTest {
 
     @Test
     fun convertExample() {
-        assertEquals(produceExampleEditorModel(), editorDescriptionExample().toJsonDescription())
+        val inputStream = ProjectionGeneratorTest::class.java.getResourceAsStream("/SwitchStatement.json")
+        //val json = JsonParser().parse(InputStreamReader(inputStream))
+        val nodeModel = loadNodeModel(inputStream.reader(Charsets.UTF_8).readText())
+        requireNotNull(nodeModel.concept)
+        val projector = Projector()
+        projector.register("jetbrains.mps.lang.structure.ConceptDeclaration", editorModelExample())
+        projector.register("jetbrains.mps.lang.structure.InterfaceConceptReference", editorModelExample())
+        assertEquals(produceExampleProjectionModel(), projector.project(nodeModel))
     }
+
 }

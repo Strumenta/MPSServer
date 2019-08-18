@@ -1,7 +1,7 @@
 package com.strumenta.mpswebeditor
 
 import com.google.gson.*
-import com.strumenta.mpswebeditor.jsonrepr.*
+import com.strumenta.mpswebeditor.projectionmodel.*
 import io.ktor.application.install
 import io.ktor.http.cio.websocket.Frame
 import io.ktor.http.cio.websocket.readText

@@ -1,4 +1,4 @@
-package com.strumenta.mpswebeditor.jsonrepr
+package com.strumenta.mpswebeditor.projectionmodel
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement
