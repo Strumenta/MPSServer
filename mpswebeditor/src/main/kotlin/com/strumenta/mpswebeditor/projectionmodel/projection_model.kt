@@ -6,7 +6,7 @@ import com.google.gson.JsonObject
 
 fun editor(root: JsonObject) : JsonObject {
     val jo = JsonObject()
-    jo.addProperty("type", "com.strumenta.mpswebeditor.editor")
+    jo.addProperty("type", "editor")
     jo.add("root", root)
     return jo
 }
@@ -31,12 +31,25 @@ fun horizontalList(path: String, children: List<JsonElement>) : JsonObject {
     return jo
 }
 
-fun constant(path:String, content: String, style: String = "") : JsonObject {
+fun constant(path:String, content: String, style: String? = null) : JsonObject {
     val jo = JsonObject()
-    jo.addProperty("type", "com.strumenta.mpswebeditor.constant")
+    jo.addProperty("type", "constant")
     jo.addProperty("content", content)
     jo.addProperty("path", path)
-    jo.addProperty("style", style)
+    if (style != null) {
+        jo.addProperty("style", style)
+    }
+    return jo
+}
+
+fun reference(path:String, content: String, style: String? = null) : JsonObject {
+    val jo = JsonObject()
+    jo.addProperty("type", "reference")
+    jo.addProperty("content", content)
+    jo.addProperty("path", path)
+    if (style != null) {
+        jo.addProperty("style", style)
+    }
     return jo
 }
 
@@ -51,7 +64,7 @@ fun stringProperty(path:String, content: String, style: String = "") : JsonObjec
 
 fun placeholder(path:String, content: String, style: String = "") : JsonObject {
     val jo = JsonObject()
-    jo.addProperty("type", "com.strumenta.mpswebeditor.placeholder")
+    jo.addProperty("type", "placeholder")
     jo.addProperty("content", content)
     jo.addProperty("path", path)
     jo.addProperty("style", style)
@@ -60,7 +73,7 @@ fun placeholder(path:String, content: String, style: String = "") : JsonObject {
 
 fun spacer(path:String) : JsonObject {
     val jo = JsonObject()
-    jo.addProperty("type", "com.strumenta.mpswebeditor.spacer")
+    jo.addProperty("type", "spacer")
     jo.addProperty("path", path)
     return jo
 }

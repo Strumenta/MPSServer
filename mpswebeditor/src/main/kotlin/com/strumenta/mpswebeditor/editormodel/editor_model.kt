@@ -19,12 +19,14 @@ class ListCellDescription(val orientation: ListOrientation, val elements: List<C
 
 class PropertyFlag(val text: String, val propertyName: String) : CellDescription
 
-class Constant(val text: String) : CellDescription
+class Constant(val text: String, val style: String? = null) : CellDescription
+
+fun keyword(text: String) = Constant(text, "keyword")
 
 class PropertyCell(val propertyName: String) : CellDescription
 
 // By default we show the name of the reference
-class Reference(val referenceName: String) : CellDescription
+class ReferenceCell(val referenceName: String) : CellDescription
 
 class ChildrenList(val linkName: String) : CellDescription
 

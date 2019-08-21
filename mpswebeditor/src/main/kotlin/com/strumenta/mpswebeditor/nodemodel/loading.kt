@@ -86,12 +86,16 @@ data class RegularNodeID(val regularId: Long) : NodeID()
 class Model {
     var qualifiedName: String? = null
     var uuid: UUID? = null
+
+    override fun toString() = "Model[$uuid]($qualifiedName)"
 }
 
 @Serializable
 class Reference {
     var id: NodeID? = null
     var model: Model? = null
+
+    override fun toString() = "Reference($model::$id)"
 }
 
 @Serializable
@@ -103,9 +107,13 @@ class NodeModel {
             @Serializable(with = AnySerializer::class)
             @ContextualSerialization Any> = HashMap()
     val refs : MutableMap<String, Reference> = HashMap()
-    val regularId: Long? = null
-    val name: String? = null
+    var regularId: Long? = null
+    var name: String? = null
     var id: NodeID? = null
+
+    override fun toString(): String {
+        return "node $name ($concept)"
+    }
 }
 
 fun loadNodeModel(json: String) : NodeModel {

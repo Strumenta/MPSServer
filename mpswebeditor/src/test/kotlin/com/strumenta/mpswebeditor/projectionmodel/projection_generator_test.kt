@@ -2,7 +2,11 @@ package com.strumenta.mpswebeditor.projectionmodel
 
 import com.google.gson.JsonElement
 import com.strumenta.mpswebeditor.editormodel.*
+import com.strumenta.mpswebeditor.nodemodel.NodeModel
+import com.strumenta.mpswebeditor.nodemodel.Reference
+import com.strumenta.mpswebeditor.nodemodel.RegularNodeID
 import com.strumenta.mpswebeditor.nodemodel.loadNodeModel
+import java.util.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -11,16 +15,17 @@ fun produceExampleProjectionModel() : JsonElement {
             verticalList("/0", listOf(
                     horizontalList("/0/0", listOf(
                             constant("/0/0/2", "concept", "keyword"),
-                            stringProperty("/0/0/3", "EqualTo"),
+                            stringProperty("/0/0/3", "SwitchStatement"),
                             verticalList("/0/0/4", listOf(
-                                    constant("/0/0/4/0", "extends", "keyword"),
-                                    constant("/0/0/4/1", "implements", "keyword")
-                            )),
-                            verticalList("/0/0/5", listOf(
-                                    stringProperty("/0/0/5/0", "Constraint"),
-                                    placeholder("/0/0/5/1", "none")
-                            ))
-                    )),
+                                    horizontalList("/0/0/4/0", listOf(
+                                            constant("/0/0/4/0/0", "extends", "keyword"),
+                                            reference("/0/0/4/0/1", "MyInterface")
+                                    )),
+                                    horizontalList("/0/0/4/1", listOf(
+                                            constant("/0/0/4/1/0", "implements", "keyword"),
+                                            placeholder("/0/0/4/1/1", "none")
+                                    ))
+                    )))),
                     constant("/0/1", ""),
                     horizontalList("/0/2", listOf(
                             spacer("/0/2/0"),
@@ -37,20 +42,26 @@ fun produceExampleProjectionModel() : JsonElement {
                     ))))
 }
 
-fun editorModelExample() : EditorModel{
+fun editorModelForInterfaceConceptReference() : EditorModel{
+    return EditorModel(
+            ReferenceCell("intfc")
+    )
+}
+
+fun editorModelForConceptDeclaration() : EditorModel{
     return EditorModel(
             ListCellDescription.vertical(listOf(
                     ListCellDescription.horizontal(listOf(
                             PropertyFlag("abstract", "abstract"),
                             PropertyFlag("final", "final"),
-                            Constant("concept"),
+                            keyword("concept"),
                             PropertyCell("name"),
                             ListCellDescription.vertical(listOf(
                                     ListCellDescription.horizontal(listOf(
-                                            Constant("extends"),
-                                            Reference("extends"))),
+                                            keyword("extends"),
+                                            ReferenceCell("extends"))),
                                     ListCellDescription.horizontal(listOf(
-                                            Constant("implements"),
+                                            keyword("implements"),
                                             ChildrenList("implements")))
                             ))
                     )),
@@ -77,6 +88,18 @@ fun editorModelExample() : EditorModel{
     )
 }
 
+fun myInterface() : NodeModel {
+    val nodeModel = NodeModel()
+    nodeModel.name = "MyInterface"
+    return nodeModel
+}
+
+fun dummyRef() : NodeModel {
+    val nodeModel = NodeModel()
+    nodeModel.name = "DUMMY"
+    return nodeModel
+}
+
 class ProjectionGeneratorTest {
 
     @Test
@@ -85,9 +108,23 @@ class ProjectionGeneratorTest {
         //val json = JsonParser().parse(InputStreamReader(inputStream))
         val nodeModel = loadNodeModel(inputStream.reader(Charsets.UTF_8).readText())
         requireNotNull(nodeModel.concept)
-        val projector = Projector()
-        projector.register("jetbrains.mps.lang.structure.ConceptDeclaration", editorModelExample())
-        projector.register("jetbrains.mps.lang.structure.InterfaceConceptReference", editorModelExample())
+        val myInterface : NodeModel = myInterface()
+        val myNodeFinder = object : NodeFinder {
+            override fun resolve(reference: Reference): NodeModel {
+                return when (reference.model!!.uuid) {
+                    UUID.fromString("00000000-0000-4000-0000-011c895902ca") -> {
+                        when ((reference.id as RegularNodeID).regularId) {
+                            1068580123157L -> myInterface
+                            else -> dummyRef()
+                        }
+                    }
+                    else -> dummyRef()
+                }
+            }
+        }
+        val projector = Projector(myNodeFinder)
+        projector.register("jetbrains.mps.lang.structure.ConceptDeclaration", editorModelForConceptDeclaration())
+        projector.register("jetbrains.mps.lang.structure.InterfaceConceptReference", editorModelForInterfaceConceptReference())
         assertEquals(produceExampleProjectionModel(), projector.project(nodeModel))
     }
 

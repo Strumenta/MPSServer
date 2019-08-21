@@ -5,10 +5,11 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.strumenta.mpswebeditor.editormodel.*
 import com.strumenta.mpswebeditor.nodemodel.NodeModel
+import com.strumenta.mpswebeditor.nodemodel.Reference
 import java.lang.IllegalArgumentException
 import java.lang.IllegalStateException
 
-class Projector {
+class Projector(val nodeFinder: NodeFinder) {
 
     private val editorModels = HashMap<String, EditorModel>()
     
@@ -33,7 +34,11 @@ class Projector {
 fun EditorModel.toProjectionModel(nodeModel: NodeModel, projector: Projector) : JsonObject
         = editor(this.root.toProjectionModel("/0", nodeModel, projector) as JsonObject)
 
-private fun CellDescription.toProjectionModel(path: String, nodeModel: NodeModel, projector: Projector) 
+interface NodeFinder {
+    fun resolve(reference: Reference) : NodeModel
+}
+
+private fun CellDescription.toProjectionModel(path: String, nodeModel: NodeModel, projector: Projector)
         : JsonElement? {
     return when (this) {
         is ListCellDescription -> {
@@ -46,21 +51,27 @@ private fun CellDescription.toProjectionModel(path: String, nodeModel: NodeModel
             }
         }
         is PropertyFlag -> {
-            val value = nodeModel.properties[this.propertyName] as Boolean
+            val value = (nodeModel.properties[this.propertyName]
+                    ?: throw IllegalArgumentException("No property ${this.propertyName} found in node $nodeModel"))as Boolean
             if (value) {
-                constant("$path/0", this.text)
+                constant("$path", this.text)
             } else {
                 null
             }
         }
         is PropertyCell -> {
             val value = nodeModel.properties[this.propertyName]
-            stringProperty("$path/0", value.toString())
+            stringProperty("$path", value.toString())
         }
-        is Constant -> constant("$path/0", this.text)
-        is Reference -> {
-            val value = nodeModel.refs[this.referenceName]
-            stringProperty("$path/0", value.toString())
+        is Constant -> constant("$path", this.text, this.style)
+        is ReferenceCell -> {
+            val ref = nodeModel.refs[this.referenceName]
+            if (ref == null) {
+                placeholder("$path", "none")
+            } else {
+                val referredNode = projector.nodeFinder.resolve(ref)
+                reference("$path", referredNode.name!!)
+            }
         }
         is ChildrenList -> {
             val jsonArray = JsonArray()
@@ -69,6 +80,9 @@ private fun CellDescription.toProjectionModel(path: String, nodeModel: NodeModel
                 jsonArray.add(projector.projectContent("$path/$index", nodeModel))
             }
             jsonArray
+        }
+        is Spacer -> {
+            spacer("$path")
         }
         else -> TODO(this.javaClass.canonicalName)
     }
