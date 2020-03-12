@@ -28,7 +28,7 @@ configurations {
 	distribution
 }
 
-ext.mpsVersion = '2019.1.4'
+ext.mpsVersion = '2019.3.1'
 
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
@@ -45,12 +45,18 @@ repositories {
 if (!hasProperty("jdk_home")) {
 	def java_home = System.properties['java.home']
 	def jdk_home = java_home
-	if (!file("$jdk_home/lib/tools.jar").isFile()) {
-		jdk_home = jdk_home + "/.."
-	}
-	if (!file("$jdk_home/lib/tools.jar").isFile()) {
-		throw new GradleException("Not finding the JDK...")
-	}
+
+	// In JDK >=11 we look for javac
+	if (!file("$jdk_home/bin/javac").isFile() && !file("$jdk_home/bin/javac.exe").isFile()) {
+		// In JDK <11 we look for the tools.jar
+		if (!file("$jdk_home/lib/tools.jar").isFile()) {
+			jdk_home = jdk_home + "/.."
+		}
+		if (!file("$jdk_home/lib/tools.jar").isFile()) {
+			throw new GradleException("Not finding the JDK...")
+		}		
+	} 
+	
 	ext.jdk_home = jdk_home
 }
 
