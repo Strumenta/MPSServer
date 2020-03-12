@@ -25,6 +25,8 @@
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="cttk" ref="r:5ff047e0-2953-4750-806a-bdc16824aa89(jetbrains.mps.smodel)" />
     <import index="zce0" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.smodel.action(MPS.Editor/)" />
+    <import index="c9jv" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson.stream(com.strumenta.mpsserver.deps/)" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
   </imports>
   <registry>
@@ -4110,14 +4112,106 @@
         <node concept="3clFbF" id="4XQ2p$w2wmI" role="3cqZAp">
           <node concept="37vLTI" id="4XQ2p$w2wpt" role="3clFbG">
             <node concept="2OqwBi" id="4XQ2p$w2yVU" role="37vLTx">
-              <node concept="2OqwBi" id="4XQ2p$w2yOM" role="2Oq$k0">
-                <node concept="2ShNRf" id="4XQ2p$w2wtt" role="2Oq$k0">
-                  <node concept="1pGfFk" id="4XQ2p$w2yMi" role="2ShVmc">
-                    <ref role="37wK5l" to="wy2b:~GsonBuilder.&lt;init&gt;()" resolve="GsonBuilder" />
+              <node concept="2OqwBi" id="2ig$0l9PK98" role="2Oq$k0">
+                <node concept="2OqwBi" id="4XQ2p$w2yOM" role="2Oq$k0">
+                  <node concept="2ShNRf" id="4XQ2p$w2wtt" role="2Oq$k0">
+                    <node concept="1pGfFk" id="4XQ2p$w2yMi" role="2ShVmc">
+                      <ref role="37wK5l" to="wy2b:~GsonBuilder.&lt;init&gt;()" resolve="GsonBuilder" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="4XQ2p$w2yTc" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~GsonBuilder.setPrettyPrinting()" resolve="setPrettyPrinting" />
                   </node>
                 </node>
-                <node concept="liA8E" id="4XQ2p$w2yTc" role="2OqNvi">
-                  <ref role="37wK5l" to="wy2b:~GsonBuilder.setPrettyPrinting()" resolve="setPrettyPrinting" />
+                <node concept="liA8E" id="2ig$0l9PKeG" role="2OqNvi">
+                  <ref role="37wK5l" to="wy2b:~GsonBuilder.registerTypeAdapter(java.lang.reflect.Type,java.lang.Object)" resolve="registerTypeAdapter" />
+                  <node concept="3VsKOn" id="2ig$0l9PKJe" role="37wK5m">
+                    <ref role="3VsUkX" to="wyt6:~Long" resolve="Long" />
+                  </node>
+                  <node concept="2ShNRf" id="2ig$0l9PKVH" role="37wK5m">
+                    <node concept="YeOm9" id="2ig$0l9PLpj" role="2ShVmc">
+                      <node concept="1Y3b0j" id="2ig$0l9PLpm" role="YeSDq">
+                        <property role="2bfB8j" value="true" />
+                        <ref role="1Y3XeK" to="wy2b:~TypeAdapter" resolve="TypeAdapter" />
+                        <ref role="37wK5l" to="wy2b:~TypeAdapter.&lt;init&gt;()" resolve="TypeAdapter" />
+                        <node concept="3Tm1VV" id="2ig$0l9PLpn" role="1B3o_S" />
+                        <node concept="3clFb_" id="2ig$0l9PLpu" role="jymVt">
+                          <property role="TrG5h" value="write" />
+                          <node concept="3Tm1VV" id="2ig$0l9PLpv" role="1B3o_S" />
+                          <node concept="3cqZAl" id="2ig$0l9PLpx" role="3clF45" />
+                          <node concept="37vLTG" id="2ig$0l9PLpy" role="3clF46">
+                            <property role="TrG5h" value="w" />
+                            <node concept="3uibUv" id="2ig$0l9PLpz" role="1tU5fm">
+                              <ref role="3uigEE" to="c9jv:~JsonWriter" resolve="JsonWriter" />
+                            </node>
+                          </node>
+                          <node concept="37vLTG" id="2ig$0l9PLp$" role="3clF46">
+                            <property role="TrG5h" value="value" />
+                            <node concept="3uibUv" id="2ig$0l9PM2T" role="1tU5fm">
+                              <ref role="3uigEE" to="wyt6:~Long" resolve="Long" />
+                            </node>
+                          </node>
+                          <node concept="3uibUv" id="2ig$0l9PLpA" role="Sfmx6">
+                            <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
+                          </node>
+                          <node concept="3clFbS" id="2ig$0l9PLpB" role="3clF47">
+                            <node concept="3clFbF" id="2ig$0l9PNCy" role="3cqZAp">
+                              <node concept="2OqwBi" id="2ig$0l9PNLg" role="3clFbG">
+                                <node concept="37vLTw" id="2ig$0l9PNCx" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="2ig$0l9PLpy" resolve="w" />
+                                </node>
+                                <node concept="liA8E" id="2ig$0l9PNUM" role="2OqNvi">
+                                  <ref role="37wK5l" to="c9jv:~JsonWriter.value(java.lang.String)" resolve="value" />
+                                  <node concept="2YIFZM" id="2ig$0l9PO6I" role="37wK5m">
+                                    <ref role="37wK5l" to="wyt6:~Long.toString(long)" resolve="toString" />
+                                    <ref role="1Pybhc" to="wyt6:~Long" resolve="Long" />
+                                    <node concept="37vLTw" id="2ig$0l9POmL" role="37wK5m">
+                                      <ref role="3cqZAo" node="2ig$0l9PLp$" resolve="value" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2AHcQZ" id="2ig$0l9PLpD" role="2AJF6D">
+                            <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                          </node>
+                        </node>
+                        <node concept="2tJIrI" id="2ig$0l9PLpE" role="jymVt" />
+                        <node concept="3clFb_" id="2ig$0l9PLpF" role="jymVt">
+                          <property role="TrG5h" value="read" />
+                          <node concept="3Tm1VV" id="2ig$0l9PLpG" role="1B3o_S" />
+                          <node concept="3uibUv" id="2ig$0l9PM7A" role="3clF45">
+                            <ref role="3uigEE" to="wyt6:~Long" resolve="Long" />
+                          </node>
+                          <node concept="37vLTG" id="2ig$0l9PLpJ" role="3clF46">
+                            <property role="TrG5h" value="r" />
+                            <node concept="3uibUv" id="2ig$0l9PLpK" role="1tU5fm">
+                              <ref role="3uigEE" to="c9jv:~JsonReader" resolve="JsonReader" />
+                            </node>
+                          </node>
+                          <node concept="3uibUv" id="2ig$0l9PLpL" role="Sfmx6">
+                            <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
+                          </node>
+                          <node concept="3clFbS" id="2ig$0l9PLpM" role="3clF47">
+                            <node concept="YS8fn" id="2ig$0l9PMjS" role="3cqZAp">
+                              <node concept="2ShNRf" id="2ig$0l9PMlO" role="YScLw">
+                                <node concept="1pGfFk" id="2ig$0l9PMJ5" role="2ShVmc">
+                                  <ref role="37wK5l" to="wyt6:~UnsupportedOperationException.&lt;init&gt;()" resolve="UnsupportedOperationException" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2AHcQZ" id="2ig$0l9PLpO" role="2AJF6D">
+                            <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                          </node>
+                        </node>
+                        <node concept="3uibUv" id="2ig$0l9PLW3" role="2Ghqu4">
+                          <ref role="3uigEE" to="wyt6:~Long" resolve="Long" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
               <node concept="liA8E" id="4XQ2p$w2z17" role="2OqNvi">
