@@ -2,16 +2,18 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="main" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="main" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.launcher/com.strumenta.mpsserver.launcher.msd" folder="main" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.server.tests/com.strumenta.mpsserver.server.tests.msd" folder="tests" />
-      <modulePath path="${mpsserver.home}/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="main" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats.test/Formats.test.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats/Formats.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/solutions/Formats.evaluation/Formats.evaluation.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.strumenta.financialcalc/com.strumenta.financialcalc.mpl" folder="financialcalc" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.financialcalc.sandbox/com.strumenta.financialcalc.sandbox.msd" folder="financialcalc" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="main" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="main" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.launcher/com.strumenta.mpsserver.launcher.msd" folder="main" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server.tests/com.strumenta.mpsserver.server.tests.msd" folder="tests" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="main" />
+      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats.test/Formats.test.mpl" folder="formats" />
+      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats/Formats.mpl" folder="formats" />
+      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/solutions/Formats.evaluation/Formats.evaluation.msd" folder="formats" />
     </projectModules>
   </component>
 </project>
