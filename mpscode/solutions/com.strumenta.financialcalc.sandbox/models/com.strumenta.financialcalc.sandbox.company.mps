@@ -22,7 +22,7 @@
     </language>
   </registry>
   <node concept="25wndB" id="i07tI10nfs">
-    <property role="TrG5h" value="My calculations" />
+    <property role="TrG5h" value="My calculation" />
     <node concept="25wnd$" id="i07tI10pyu" role="25wmB8">
       <property role="TrG5h" value="foo" />
       <node concept="25wncu" id="i07tI10pyy" role="25wncp" />
