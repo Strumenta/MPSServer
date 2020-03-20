@@ -8,6 +8,7 @@
   <registry>
     <language id="a50bd8d8-42c1-4879-9850-5fb2cea64ad0" name="com.strumenta.financialcalc">
       <concept id="324292001770073797" name="com.strumenta.financialcalc.structure.StringType" flags="ng" index="25wncu" />
+      <concept id="324292001770073796" name="com.strumenta.financialcalc.structure.Type" flags="ng" index="25wncv" />
       <concept id="324292001770073791" name="com.strumenta.financialcalc.structure.Input" flags="ng" index="25wnd$">
         <child id="324292001770073794" name="type" index="25wncp" />
       </concept>
@@ -22,10 +23,36 @@
     </language>
   </registry>
   <node concept="25wndB" id="i07tI10nfs">
-    <property role="TrG5h" value="My calculation" />
-    <node concept="25wnd$" id="i07tI10pyu" role="25wmB8">
-      <property role="TrG5h" value="foo" />
-      <node concept="25wncu" id="i07tI10pyy" role="25wncp" />
+    <property role="TrG5h" value="My calculations" />
+    <node concept="25wnd$" id="63MO6pUTCIN" role="25wmB8">
+      <property role="TrG5h" value="a" />
+      <node concept="25wncu" id="63MO6pUTCJ5" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUTCIR" role="25wmB8">
+      <property role="TrG5h" value="b" />
+      <node concept="25wncu" id="63MO6pUTCJ8" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUTCIX" role="25wmB8">
+      <property role="TrG5h" value="c" />
+      <node concept="25wncu" id="63MO6pUTCJb" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXpZ_" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXpZA" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXpZL" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXpZM" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXpZZ" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXq00" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXq0f" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXq0g" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXq0x" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXq0y" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="63MO6pUXpZr" role="25wmB8">
+      <node concept="25wncv" id="63MO6pUXpZs" role="25wncp" />
     </node>
   </node>
 </model>
