@@ -96,5 +96,11 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="2yBD7rQgqAT">
+    <ref role="1XX52x" to="va66:2yBD7rQcfRD" resolve="BooleanType" />
+    <node concept="PMmxH" id="2yBD7rQgqAV" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
 </model>
 

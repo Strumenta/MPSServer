@@ -81,5 +81,11 @@
     <property role="34LRSv" value="string" />
     <ref role="1TJDcQ" node="i07tI10mV4" resolve="Type" />
   </node>
+  <node concept="1TIwiD" id="2yBD7rQcfRD">
+    <property role="EcuMT" value="2929490913471299049" />
+    <property role="TrG5h" value="BooleanType" />
+    <property role="34LRSv" value="boolean" />
+    <ref role="1TJDcQ" node="i07tI10mV4" resolve="Type" />
+  </node>
 </model>
 

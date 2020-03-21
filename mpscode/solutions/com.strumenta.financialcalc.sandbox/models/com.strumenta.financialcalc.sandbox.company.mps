@@ -8,13 +8,13 @@
   <registry>
     <language id="a50bd8d8-42c1-4879-9850-5fb2cea64ad0" name="com.strumenta.financialcalc">
       <concept id="324292001770073797" name="com.strumenta.financialcalc.structure.StringType" flags="ng" index="25wncu" />
-      <concept id="324292001770073796" name="com.strumenta.financialcalc.structure.Type" flags="ng" index="25wncv" />
       <concept id="324292001770073791" name="com.strumenta.financialcalc.structure.Input" flags="ng" index="25wnd$">
         <child id="324292001770073794" name="type" index="25wncp" />
       </concept>
       <concept id="324292001770073788" name="com.strumenta.financialcalc.structure.FinancialCalcSheet" flags="ng" index="25wndB">
         <child id="324292001770075155" name="inputs" index="25wmB8" />
       </concept>
+      <concept id="2929490913471299049" name="com.strumenta.financialcalc.structure.BooleanType" flags="ng" index="3u_PAv" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -36,23 +36,9 @@
       <property role="TrG5h" value="c" />
       <node concept="25wncu" id="63MO6pUTCJb" role="25wncp" />
     </node>
-    <node concept="25wnd$" id="63MO6pUXpZ_" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXpZA" role="25wncp" />
-    </node>
-    <node concept="25wnd$" id="63MO6pUXpZL" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXpZM" role="25wncp" />
-    </node>
-    <node concept="25wnd$" id="63MO6pUXpZZ" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXq00" role="25wncp" />
-    </node>
-    <node concept="25wnd$" id="63MO6pUXq0f" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXq0g" role="25wncp" />
-    </node>
-    <node concept="25wnd$" id="63MO6pUXq0x" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXq0y" role="25wncp" />
-    </node>
-    <node concept="25wnd$" id="63MO6pUXpZr" role="25wmB8">
-      <node concept="25wncv" id="63MO6pUXpZs" role="25wncp" />
+    <node concept="25wnd$" id="2yBD7rQbCqL" role="25wmB8">
+      <property role="TrG5h" value="my name" />
+      <node concept="3u_PAv" id="2yBD7rQgqAJ" role="25wncp" />
     </node>
   </node>
 </model>
