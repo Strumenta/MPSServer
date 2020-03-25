@@ -11,9 +11,6 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.launcher/com.strumenta.mpsserver.launcher.msd" folder="main" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server.tests/com.strumenta.mpsserver.server.tests.msd" folder="tests" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="main" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats.test/Formats.test.mpl" folder="formats" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/languages/Formats/Formats.mpl" folder="formats" />
-      <modulePath path="$PROJECT_DIR$/../../FormatsDSL/solutions/Formats.evaluation/Formats.evaluation.msd" folder="formats" />
     </projectModules>
   </component>
 </project>
