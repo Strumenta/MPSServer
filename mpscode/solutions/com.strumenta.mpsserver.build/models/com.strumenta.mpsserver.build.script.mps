@@ -8,7 +8,6 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
-    <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
   </imports>
   <registry>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
@@ -405,7 +404,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="6YQKyF7OO$s" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:6WtY9M1bDN0" resolve="mpsJavaWorkbench" />
+      <ref role="1l3spb" to="ffeo:6WtY9M1bDN0" resolve="mpsJava" />
       <node concept="398BVA" id="6YQKyF7OOA2" role="2JcizS">
         <ref role="398BVh" node="2p2ql82LUxI" resolve="mps.home" />
       </node>
@@ -569,7 +568,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="2p2ql82MlAs" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:6WtY9M1bDN0" resolve="mpsJavaWorkbench" />
+      <ref role="1l3spb" to="ffeo:6WtY9M1bDN0" resolve="mpsJava" />
       <node concept="398BVA" id="2p2ql82MlAt" role="2JcizS">
         <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
       </node>
