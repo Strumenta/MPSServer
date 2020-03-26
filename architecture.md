@@ -7,3 +7,9 @@ The reconcilation could be performed in two ways:
 
 1. Directly against what is currently displayed
 2. Against the last version of the editor model received
+
+See
+SNodeFactoryOperations.java
+SNodeEditorUtil
+SNodeUtil
+NodeFactoryManager
