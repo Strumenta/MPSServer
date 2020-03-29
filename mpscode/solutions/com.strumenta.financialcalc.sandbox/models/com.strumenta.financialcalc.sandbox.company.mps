@@ -23,9 +23,9 @@
   </registry>
   <node concept="25wndB" id="i07tI10nfs">
     <property role="TrG5h" value="My calculations" />
-    <node concept="25wnd$" id="4SXjM9bbzLR" role="25wmB8">
-      <property role="TrG5h" value="ciao" />
-      <node concept="25wncv" id="4SXjM9bbzLS" role="25wncp" />
+    <node concept="25wnd$" id="1AAGtz6BOC8" role="25wmB8">
+      <property role="TrG5h" value="" />
+      <node concept="25wncv" id="1AAGtz6BOC9" role="25wncp" />
     </node>
   </node>
 </model>
