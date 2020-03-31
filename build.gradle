@@ -109,6 +109,12 @@ task buildServer(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	script new File('mpscode/build-server.xml')
 }
 
+task buildExample(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
+	scriptArgs = antScriptArgs
+	scriptClasspath = buildScriptClasspath
+	script new File('mpscode/build-example.xml')
+}
+
 task buildLauncher(type: BuildLanguages, dependsOn: [buildServer]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
