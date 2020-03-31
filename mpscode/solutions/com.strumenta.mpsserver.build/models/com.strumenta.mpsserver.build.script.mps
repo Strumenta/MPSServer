@@ -456,6 +456,9 @@
       <node concept="m$_yC" id="2p2ql82MlH4" role="m$_yJ">
         <ref role="m$_y1" node="1Y19Fp43fxb" resolve="MPSServer" />
       </node>
+      <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
+        <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="FinancialCalc" />
+      </node>
       <node concept="3_J27D" id="2p2ql82Ml_0" role="m$_yQ">
         <node concept="3Mxwew" id="2p2ql82Ml_1" role="3MwsjC">
           <property role="3MwjfP" value="MPSServer" />
@@ -599,6 +602,9 @@
     </node>
     <node concept="2sgV4H" id="2p2ql82MlGw" role="1l3spa">
       <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-server" />
+    </node>
+    <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-example" />
     </node>
   </node>
   <node concept="1l3spW" id="1yyBh0vFuTG">
