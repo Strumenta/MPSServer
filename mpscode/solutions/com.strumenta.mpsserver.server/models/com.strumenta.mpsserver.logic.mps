@@ -253,6 +253,7 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="1208623485264" name="jetbrains.mps.baseLanguage.structure.AbstractOperation" flags="nn" index="1B$H19" />
       <concept id="1144226303539" name="jetbrains.mps.baseLanguage.structure.ForeachStatement" flags="nn" index="1DcWWT">
         <child id="1144226360166" name="iterable" index="1DdaDG" />
       </concept>
@@ -9727,14 +9728,6 @@
                             <node concept="1QHqEO" id="5p1VBoMcCg9" role="3cqZAp">
                               <node concept="1QHqEC" id="5p1VBoMcCga" role="1QHqEI">
                                 <node concept="3clFbS" id="5p1VBoMcCgb" role="1bW5cS">
-                                  <node concept="abc8K" id="4oS9ViOkmMr" role="3cqZAp">
-                                    <node concept="Xl_RD" id="4oS9ViOkn8i" role="abp_N">
-                                      <property role="Xl_RC" value="ServerController.addChild index=" />
-                                    </node>
-                                    <node concept="37vLTw" id="4oS9ViOkovN" role="abp_N">
-                                      <ref role="3cqZAo" node="4oS9ViOjrnN" resolve="index" />
-                                    </node>
-                                  </node>
                                   <node concept="3cpWs8" id="5p1VBoMcCgc" role="3cqZAp">
                                     <node concept="3cpWsn" id="5p1VBoMcCgd" role="3cpWs9">
                                       <property role="TrG5h" value="newNode" />
@@ -10612,6 +10605,22 @@
                                       <node concept="10Nm6u" id="4SXjM9bbgpn" role="33vP2m" />
                                     </node>
                                   </node>
+                                  <node concept="3clFbF" id="42qbbo6T5A5" role="3cqZAp">
+                                    <node concept="2OqwBi" id="42qbbo6T7K_" role="3clFbG">
+                                      <node concept="2OqwBi" id="42qbbo6T6Vf" role="2Oq$k0">
+                                        <node concept="2OqwBi" id="42qbbo6T69h" role="2Oq$k0">
+                                          <node concept="37vLTw" id="42qbbo6T5A3" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="4SXjM9baAVN" resolve="container" />
+                                          </node>
+                                          <node concept="2yIwOk" id="42qbbo6T6AQ" role="2OqNvi" />
+                                        </node>
+                                        <node concept="liA8E" id="42qbbo6T7o$" role="2OqNvi">
+                                          <ref role="37wK5l" to="c17a:~SAbstractConcept.getDeclarationNode()" resolve="getDeclarationNode" />
+                                        </node>
+                                      </node>
+                                      <node concept="1B$H19" id="42qbbo6T7KM" role="2OqNvi" />
+                                    </node>
+                                  </node>
                                   <node concept="2Gpval" id="4SXjM9bbgpo" role="3cqZAp">
                                     <node concept="2GrKxI" id="4SXjM9bbgpp" role="2Gsz3X">
                                       <property role="TrG5h" value="cl" />
@@ -10663,12 +10672,30 @@
                                         <node concept="2ShNRf" id="4SXjM9bbgpI" role="YScLw">
                                           <node concept="1pGfFk" id="4SXjM9bbgpJ" role="2ShVmc">
                                             <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
-                                            <node concept="3cpWs3" id="4SXjM9bbgpK" role="37wK5m">
-                                              <node concept="37vLTw" id="4SXjM9bbjGB" role="3uHU7w">
-                                                <ref role="3cqZAo" node="4SXjM9baHBg" resolve="containmentLinkName" />
+                                            <node concept="3cpWs3" id="1Mltnxtkjfc" role="37wK5m">
+                                              <node concept="2OqwBi" id="1MltnxtklO$" role="3uHU7w">
+                                                <node concept="2OqwBi" id="1Mltnxtkl1B" role="2Oq$k0">
+                                                  <node concept="37vLTw" id="1MltnxtkkuQ" role="2Oq$k0">
+                                                    <ref role="3cqZAo" node="4SXjM9baAVN" resolve="container" />
+                                                  </node>
+                                                  <node concept="2yIwOk" id="1Mltnxtklo5" role="2OqNvi" />
+                                                </node>
+                                                <node concept="liA8E" id="1Mltnxtkmhn" role="2OqNvi">
+                                                  <ref role="37wK5l" to="c17a:~SAbstractConcept.getQualifiedName()" resolve="getQualifiedName" />
+                                                </node>
                                               </node>
-                                              <node concept="Xl_RD" id="4SXjM9bbgpM" role="3uHU7B">
-                                                <property role="Xl_RC" value="Unknown containment link " />
+                                              <node concept="3cpWs3" id="1MltnxtkhsC" role="3uHU7B">
+                                                <node concept="3cpWs3" id="4SXjM9bbgpK" role="3uHU7B">
+                                                  <node concept="Xl_RD" id="4SXjM9bbgpM" role="3uHU7B">
+                                                    <property role="Xl_RC" value="Unknown containment link " />
+                                                  </node>
+                                                  <node concept="37vLTw" id="4SXjM9bbjGB" role="3uHU7w">
+                                                    <ref role="3cqZAo" node="4SXjM9baHBg" resolve="containmentLinkName" />
+                                                  </node>
+                                                </node>
+                                                <node concept="Xl_RD" id="1Mltnxtkipj" role="3uHU7w">
+                                                  <property role="Xl_RC" value=". Concept is " />
+                                                </node>
                                               </node>
                                             </node>
                                           </node>
