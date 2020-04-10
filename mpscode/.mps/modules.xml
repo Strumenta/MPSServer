@@ -2,7 +2,9 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/com.strumenta.businessorg/com.strumenta.businessorg.mpl" folder="business" />
       <modulePath path="$PROJECT_DIR$/languages/com.strumenta.financialcalc/com.strumenta.financialcalc.mpl" folder="financialcalc" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.businessorg.sandbox/com.strumenta.businessorg.sandbox.msd" folder="business" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.financialcalc.sandbox/com.strumenta.financialcalc.sandbox.msd" folder="financialcalc" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
