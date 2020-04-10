@@ -6776,14 +6776,21 @@
               </node>
             </node>
           </node>
-          <node concept="2OqwBi" id="4$zH10l_z9z" role="3clFbw">
-            <node concept="37vLTw" id="6Y14zWtOOxz" role="2Oq$k0">
-              <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
+          <node concept="17R0WA" id="4$zH10lAqKq" role="3clFbw">
+            <node concept="2OqwBi" id="4$zH10l_z9z" role="3uHU7B">
+              <node concept="37vLTw" id="6Y14zWtOOxz" role="2Oq$k0">
+                <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
+              </node>
+              <node concept="liA8E" id="4$zH10l_ztp" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+              </node>
             </node>
-            <node concept="liA8E" id="4$zH10l_ztp" role="2OqNvi">
-              <ref role="37wK5l" to="wyt6:~String.compareToIgnoreCase(java.lang.String)" resolve="compareToIgnoreCase" />
-              <node concept="Xl_RD" id="6Y14zWtONHB" role="37wK5m">
+            <node concept="2OqwBi" id="4$zH10lArQz" role="3uHU7w">
+              <node concept="Xl_RD" id="6Y14zWtONHB" role="2Oq$k0">
                 <property role="Xl_RC" value="PropertyChange" />
+              </node>
+              <node concept="liA8E" id="4$zH10lAs9W" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
               </node>
             </node>
           </node>
@@ -13200,8 +13207,8 @@
     <node concept="312cEg" id="3ESggWmImO_" role="jymVt">
       <property role="TrG5h" value="node" />
       <node concept="3Tm1VV" id="3ESggWmImOA" role="1B3o_S" />
-      <node concept="3uibUv" id="3ESggWmJb33" role="1tU5fm">
-        <ref role="3uigEE" node="3ESggWmJ488" resolve="NodeIDInModel" />
+      <node concept="3uibUv" id="4$zH10lApHW" role="1tU5fm">
+        <ref role="3uigEE" node="4$zH10l_k3t" resolve="NodeIDInModel" />
       </node>
     </node>
     <node concept="312cEg" id="3ESggWmImOF" role="jymVt">
@@ -13212,8 +13219,8 @@
     <node concept="312cEg" id="3ESggWmImOI" role="jymVt">
       <property role="TrG5h" value="referenceValue" />
       <node concept="3Tm1VV" id="3ESggWmImOJ" role="1B3o_S" />
-      <node concept="3uibUv" id="3ESggWmJbSt" role="1tU5fm">
-        <ref role="3uigEE" node="3ESggWmJ488" resolve="NodeIDInModel" />
+      <node concept="3uibUv" id="4$zH10lApGz" role="1tU5fm">
+        <ref role="3uigEE" node="4$zH10l_k3t" resolve="NodeIDInModel" />
       </node>
     </node>
     <node concept="3Tm1VV" id="4$zH10lz0I8" role="1B3o_S" />
