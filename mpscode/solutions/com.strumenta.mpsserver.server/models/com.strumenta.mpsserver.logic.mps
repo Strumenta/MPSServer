@@ -13193,7 +13193,7 @@
     <node concept="3Tm1VV" id="6_QtqtnpNcn" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="6_QtqtnqaQp">
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.roots" />
     <property role="TrG5h" value="CreateRoot" />
     <node concept="312cEg" id="6_QtqtnqBoo" role="jymVt">
       <property role="TrG5h" value="modelName" />
@@ -13223,7 +13223,7 @@
   <node concept="312cEu" id="4$zH10lyZIz">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="PropertyChange" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.properties" />
     <node concept="312cEg" id="4$zH10lyZI$" role="jymVt">
       <property role="TrG5h" value="type" />
       <node concept="3Tm1VV" id="4$zH10lyZI_" role="1B3o_S" />
@@ -13256,7 +13256,7 @@
   <node concept="312cEu" id="3ESggWmImOx">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ReferenceChange" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEg" id="3ESggWmImO_" role="jymVt">
       <property role="TrG5h" value="node" />
       <node concept="3Tm1VV" id="3ESggWmImOA" role="1B3o_S" />
@@ -13284,7 +13284,7 @@
   <node concept="312cEu" id="5p1VBoMcmd6">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="AddChild" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="5p1VBoMcmda" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="5p1VBoMcmdb" role="1B3o_S" />
@@ -13321,7 +13321,7 @@
   <node concept="312cEu" id="68SGi$iUB9_">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="SetChild" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="68SGi$iUB9D" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="68SGi$iUB9E" role="1B3o_S" />
@@ -13350,7 +13350,7 @@
   <node concept="312cEu" id="68SGi$iVIeu">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="DeleteNode" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="68SGi$iVIey" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="68SGi$iVIez" role="1B3o_S" />
@@ -13369,7 +13369,7 @@
   <node concept="312cEu" id="5p1VBoMdcBG">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="AskAlternatives" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="5p1VBoMdebR" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="5p1VBoMdebS" role="1B3o_S" />
@@ -13393,7 +13393,7 @@
   <node concept="312cEu" id="4SXjM9ba2_S">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="DefaultInsertion" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="4SXjM9ba2_W" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="4SXjM9ba2_X" role="1B3o_S" />
@@ -13417,7 +13417,7 @@
   <node concept="312cEu" id="1AAGtz6zUzp">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="AnswerDefaultInsertion" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="1AAGtz6zUzw" role="jymVt">
       <property role="TrG5h" value="addedNodeID" />
       <node concept="3Tm1VV" id="1AAGtz6zUzx" role="1B3o_S" />
@@ -13433,7 +13433,7 @@
   <node concept="312cEu" id="4SXjM9bcoJK">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="InsertNextSibling" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEg" id="4SXjM9bcoJO" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="4SXjM9bcoJP" role="1B3o_S" />
@@ -13451,7 +13451,7 @@
   </node>
   <node concept="312cEu" id="5p1VBoMgTEc">
     <property role="TrG5h" value="AnswerAlternatives" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.containments" />
     <node concept="312cEu" id="5p1VBoMgVW4" role="jymVt">
       <property role="TrG5h" value="AnswerAlternativesItem" />
       <node concept="3clFbW" id="5p1VBoMhc_O" role="jymVt">
@@ -13550,7 +13550,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwMSQO">
     <property role="TrG5h" value="SetRef" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEg" id="3h0CTvwMYAH" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="3h0CTvwMYAI" role="1B3o_S" />
@@ -13580,7 +13580,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwLhwq">
     <property role="TrG5h" value="RequestForDirectReferences" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEg" id="3h0CTvwLhwr" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="3h0CTvwLhws" role="1B3o_S" />
@@ -13603,7 +13603,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwLnOZ">
     <property role="TrG5h" value="AnswerForDirectReferences" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEu" id="3h0CTvwLnP0" role="jymVt">
       <property role="TrG5h" value="DirAlternative" />
       <node concept="3clFbW" id="3h0CTvwLnP1" role="jymVt">
@@ -13727,7 +13727,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwI6Y4">
     <property role="TrG5h" value="RequestForWrappingReferences" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEg" id="3h0CTvwIkck" role="jymVt">
       <property role="TrG5h" value="modelName" />
       <node concept="3Tm1VV" id="3h0CTvwIkcl" role="1B3o_S" />
@@ -13750,7 +13750,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwItZA">
     <property role="TrG5h" value="AnswerForWrappingReferences" />
-    <property role="3GE5qa" value="messages" />
+    <property role="3GE5qa" value="messages.references" />
     <node concept="312cEu" id="3h0CTvwIwn5" role="jymVt">
       <property role="TrG5h" value="WraAlternative" />
       <node concept="3clFbW" id="3h0CTvwIwn6" role="jymVt">
