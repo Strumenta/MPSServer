@@ -3,34 +3,22 @@
   <persistence version="9" />
   <languages>
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
-    <use id="fdcdc48f-bfd8-4831-aa76-5abac2ffa010" name="jetbrains.mps.baseLanguage.jdk8" version="0" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
-    <use id="fc8d557e-5de6-4dd8-b749-aab2fb23aefc" name="jetbrains.mps.baseLanguage.overloadedOperators" version="0" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="1" />
-    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
-    <use id="a247e09e-2435-45ba-b8d2-07e93feba96a" name="jetbrains.mps.baseLanguage.tuples" version="0" />
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
-    <use id="d8f591ec-4d86-4af2-9f92-a9e93c803ffa" name="jetbrains.mps.lang.scopes" version="0" />
-    <use id="1a8554c4-eb84-43ba-8c34-6f0d90c6e75a" name="jetbrains.mps.lang.smodel.query" version="3" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
   </languages>
   <imports>
-    <import index="wyuk" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.components(MPS.Core/)" />
-    <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" />
     <import index="9xi5" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:spark(com.strumenta.mpsserver.deps/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
     <import index="wy2b" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson(com.strumenta.mpsserver.deps/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
-    <import index="3t2s" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.module(MPS.IDEA/)" />
-    <import index="hypd" ref="r:aa31e43e-9240-4f4d-b6db-5c1c9a86c59e(jetbrains.mps.lang.project.structure)" />
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
-    <import index="cttk" ref="r:5ff047e0-2953-4750-806a-bdc16824aa89(jetbrains.mps.smodel)" />
     <import index="zce0" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.smodel.action(MPS.Editor/)" />
     <import index="c9jv" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson.stream(com.strumenta.mpsserver.deps/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
@@ -38,17 +26,9 @@
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" />
     <import index="xx25" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.adapter.structure.types(MPS.Core/)" />
     <import index="fz1u" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.websocket.api(com.strumenta.mpsserver.deps/)" />
-    <import index="67a5" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.websocket.servlet(com.strumenta.mpsserver.deps/)" />
-    <import index="m2xw" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.server(com.strumenta.mpsserver.deps/)" />
-    <import index="6sky" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.util.component(com.strumenta.mpsserver.deps/)" />
-    <import index="cgcg" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.server.handler(com.strumenta.mpsserver.deps/)" />
-    <import index="ky10" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.servlet(com.strumenta.mpsserver.deps/)" />
     <import index="jrzc" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jetty.websocket.api.annotations(com.strumenta.mpsserver.deps/)" />
-    <import index="zfbc" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio(JDK/)" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" />
     <import index="cmfw" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.event(MPS.OpenAPI/)" />
-    <import index="31cb" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.extapi.module(MPS.Core/)" />
-    <import index="dush" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.persistence(MPS.OpenAPI/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -6117,19 +6097,6 @@
                                               </node>
                                             </node>
                                           </node>
-                                          <node concept="3cpWs8" id="6Y14zWtRXve" role="3cqZAp">
-                                            <node concept="3cpWsn" id="6Y14zWtRXvf" role="3cpWs9">
-                                              <property role="TrG5h" value="gson" />
-                                              <node concept="3uibUv" id="6Y14zWtRXvg" role="1tU5fm">
-                                                <ref role="3uigEE" to="wy2b:~Gson" resolve="Gson" />
-                                              </node>
-                                              <node concept="2ShNRf" id="6Y14zWtRY2t" role="33vP2m">
-                                                <node concept="1pGfFk" id="6Y14zWtRXU6" role="2ShVmc">
-                                                  <ref role="37wK5l" to="wy2b:~Gson.&lt;init&gt;()" resolve="Gson" />
-                                                </node>
-                                              </node>
-                                            </node>
-                                          </node>
                                           <node concept="3clFbF" id="63MO6pUWRqi" role="3cqZAp">
                                             <node concept="2OqwBi" id="63MO6pUWRVY" role="3clFbG">
                                               <node concept="37vLTw" id="63MO6pUWRqg" role="2Oq$k0">
@@ -6482,50 +6449,6 @@
                                     <node concept="3clFbS" id="6Y14zWtQoZb" role="3clF47">
                                       <node concept="3clFbJ" id="63MO6pUV4yA" role="3cqZAp">
                                         <node concept="3clFbS" id="63MO6pUV4yC" role="3clFbx">
-                                          <node concept="abc8K" id="6Y14zWtQqY$" role="3cqZAp">
-                                            <node concept="Xl_RD" id="6Y14zWtQr7c" role="abp_N">
-                                              <property role="Xl_RC" value="NODE ADDED" />
-                                            </node>
-                                          </node>
-                                          <node concept="abc8K" id="63MO6pUUq3T" role="3cqZAp">
-                                            <node concept="Xl_RD" id="63MO6pUUqfy" role="abp_N">
-                                              <property role="Xl_RC" value="  parent: " />
-                                            </node>
-                                            <node concept="2OqwBi" id="63MO6pUUquX" role="abp_N">
-                                              <node concept="37vLTw" id="63MO6pUUquM" role="2Oq$k0">
-                                                <ref role="3cqZAo" node="6Y14zWtQoZ8" resolve="nae" />
-                                              </node>
-                                              <node concept="liA8E" id="63MO6pUUqIz" role="2OqNvi">
-                                                <ref role="37wK5l" to="cmfw:~SNodeAddEvent.getParent()" resolve="getParent" />
-                                              </node>
-                                            </node>
-                                          </node>
-                                          <node concept="abc8K" id="63MO6pUUqMv" role="3cqZAp">
-                                            <node concept="Xl_RD" id="63MO6pUUqMw" role="abp_N">
-                                              <property role="Xl_RC" value="  child: " />
-                                            </node>
-                                            <node concept="2OqwBi" id="63MO6pUUqMx" role="abp_N">
-                                              <node concept="37vLTw" id="63MO6pUUqMy" role="2Oq$k0">
-                                                <ref role="3cqZAo" node="6Y14zWtQoZ8" resolve="nae" />
-                                              </node>
-                                              <node concept="liA8E" id="63MO6pUUqO7" role="2OqNvi">
-                                                <ref role="37wK5l" to="cmfw:~SNodeAddEvent.getChild()" resolve="getChild" />
-                                              </node>
-                                            </node>
-                                          </node>
-                                          <node concept="abc8K" id="63MO6pUUqX0" role="3cqZAp">
-                                            <node concept="Xl_RD" id="63MO6pUUqX1" role="abp_N">
-                                              <property role="Xl_RC" value="  relation: " />
-                                            </node>
-                                            <node concept="2OqwBi" id="63MO6pUUqX2" role="abp_N">
-                                              <node concept="37vLTw" id="63MO6pUUqX3" role="2Oq$k0">
-                                                <ref role="3cqZAo" node="6Y14zWtQoZ8" resolve="nae" />
-                                              </node>
-                                              <node concept="liA8E" id="63MO6pUUrb6" role="2OqNvi">
-                                                <ref role="37wK5l" to="cmfw:~SNodeAddEvent.getAggregationLink()" resolve="getAggregationLink" />
-                                              </node>
-                                            </node>
-                                          </node>
                                           <node concept="3cpWs8" id="63MO6pUVlyw" role="3cqZAp">
                                             <node concept="3cpWsn" id="63MO6pUVlyz" role="3cpWs9">
                                               <property role="TrG5h" value="child" />
@@ -6538,17 +6461,6 @@
                                                   <ref role="37wK5l" to="cmfw:~SNodeAddEvent.getChild()" resolve="getChild" />
                                                 </node>
                                               </node>
-                                            </node>
-                                          </node>
-                                          <node concept="abc8K" id="63MO6pUVicQ" role="3cqZAp">
-                                            <node concept="Xl_RD" id="63MO6pUViu4" role="abp_N">
-                                              <property role="Xl_RC" value="  index: " />
-                                            </node>
-                                            <node concept="2OqwBi" id="63MO6pUVjpA" role="abp_N">
-                                              <node concept="37vLTw" id="63MO6pUVm6r" role="2Oq$k0">
-                                                <ref role="3cqZAo" node="63MO6pUVlyz" resolve="child" />
-                                              </node>
-                                              <node concept="2bSWHS" id="63MO6pUVmmr" role="2OqNvi" />
                                             </node>
                                           </node>
                                           <node concept="3cpWs8" id="63MO6pUVxqw" role="3cqZAp">
@@ -6628,19 +6540,6 @@
                                                       <ref role="37wK5l" to="cmfw:~SNodeAddEvent.getChild()" resolve="getChild" />
                                                     </node>
                                                   </node>
-                                                </node>
-                                              </node>
-                                            </node>
-                                          </node>
-                                          <node concept="3cpWs8" id="63MO6pUVxqL" role="3cqZAp">
-                                            <node concept="3cpWsn" id="63MO6pUVxqM" role="3cpWs9">
-                                              <property role="TrG5h" value="gson" />
-                                              <node concept="3uibUv" id="63MO6pUVxqN" role="1tU5fm">
-                                                <ref role="3uigEE" to="wy2b:~Gson" resolve="Gson" />
-                                              </node>
-                                              <node concept="2ShNRf" id="63MO6pUVxqO" role="33vP2m">
-                                                <node concept="1pGfFk" id="63MO6pUVxqP" role="2ShVmc">
-                                                  <ref role="37wK5l" to="wy2b:~Gson.&lt;init&gt;()" resolve="Gson" />
                                                 </node>
                                               </node>
                                             </node>
@@ -7087,19 +6986,6 @@
                                                           <ref role="37wK5l" to="cmfw:~SNodeRemoveEvent.getChild()" resolve="getChild" />
                                                         </node>
                                                       </node>
-                                                    </node>
-                                                  </node>
-                                                </node>
-                                              </node>
-                                              <node concept="3cpWs8" id="2yBD7rQgsbh" role="3cqZAp">
-                                                <node concept="3cpWsn" id="2yBD7rQgsbi" role="3cpWs9">
-                                                  <property role="TrG5h" value="gson" />
-                                                  <node concept="3uibUv" id="2yBD7rQgsbj" role="1tU5fm">
-                                                    <ref role="3uigEE" to="wy2b:~Gson" resolve="Gson" />
-                                                  </node>
-                                                  <node concept="2ShNRf" id="2yBD7rQgsbk" role="33vP2m">
-                                                    <node concept="1pGfFk" id="2yBD7rQgsbl" role="2ShVmc">
-                                                      <ref role="37wK5l" to="wy2b:~Gson.&lt;init&gt;()" resolve="Gson" />
                                                     </node>
                                                   </node>
                                                 </node>

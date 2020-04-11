@@ -1198,7 +1198,7 @@
     </node>
   </node>
   <node concept="2XOHcx" id="4XQ2p$w2dgE">
-    <property role="2XOHcw" value="${mpsserver.home}" />
+    <property role="2XOHcw" value="${mpsserver.homer}" />
   </node>
   <node concept="1lH9Xt" id="Fhwl$azNhY">
     <property role="TrG5h" value="DataExposerWithCustomRepoTest" />
