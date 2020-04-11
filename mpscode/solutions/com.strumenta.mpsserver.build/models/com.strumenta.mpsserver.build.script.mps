@@ -341,6 +341,12 @@
       <property role="TrG5h" value="project.home" />
       <node concept="55IIr" id="2p2ql82LUxE" role="398pKh" />
     </node>
+    <node concept="398rNT" id="5jTJHMumiWk" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.home" />
+      <node concept="398BVA" id="5jTJHMumiYR" role="398pKh">
+        <ref role="398BVh" node="2p2ql82LUxD" resolve="project.home" />
+      </node>
+    </node>
     <node concept="398rNT" id="2p2ql82LUxF" role="1l3spd">
       <property role="TrG5h" value="artifacts.root" />
       <node concept="55IIr" id="2p2ql82LUxG" role="398pKh">
@@ -872,6 +878,12 @@
     <node concept="398rNT" id="5jTJHMulWJa" role="1l3spd">
       <property role="TrG5h" value="project.home" />
       <node concept="55IIr" id="5jTJHMulWJb" role="398pKh" />
+    </node>
+    <node concept="398rNT" id="5jTJHMumiZ8" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.home" />
+      <node concept="398BVA" id="5jTJHMumiZ9" role="398pKh">
+        <ref role="398BVh" node="5jTJHMulWJa" resolve="project.home" />
+      </node>
     </node>
     <node concept="1wNqPr" id="7GBq2$enM0S" role="3989C9">
       <property role="1wNuhe" value="true" />

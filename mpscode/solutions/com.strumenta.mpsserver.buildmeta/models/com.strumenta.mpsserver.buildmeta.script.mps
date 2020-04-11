@@ -97,6 +97,12 @@
       <property role="TrG5h" value="project.home" />
       <node concept="55IIr" id="7GBq2$enLPJ" role="398pKh" />
     </node>
+    <node concept="398rNT" id="5jTJHMumiWk" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.home" />
+      <node concept="398BVA" id="5jTJHMumiYR" role="398pKh">
+        <ref role="398BVh" node="1Y19Fp43fwJ" resolve="project.home" />
+      </node>
+    </node>
     <node concept="398rNT" id="1Y19Fp43kP9" role="1l3spd">
       <property role="TrG5h" value="artifacts.root" />
       <node concept="55IIr" id="1Y19Fp43mID" role="398pKh">

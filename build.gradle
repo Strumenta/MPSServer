@@ -61,6 +61,7 @@ if (!hasProperty("jdk_home")) {
 }
 
 ext.artifactsDir = new File(rootDir, 'artifacts')
+ext.mpscode = new File(rootDir, 'mpscode')
 ext.mpsDir = project.hasProperty('mpsPath') ? new File("${mpsPath}") : new File(artifactsDir, 'mps')
 ext.distributionDependenciesDir = new File(buildDir, 'distribution-dependencies')
 ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
@@ -68,6 +69,8 @@ ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
 }) + project.files("$project.jdk_home/lib/tools.jar")
 ext.antScriptArgs =  [
 	"-Dmps.home=${mpsDir.getAbsolutePath()}",
+	"-Dproject.home=${mpscode.getAbsolutePath()}",
+	"-Dmpsserver.home=${mpscode.getAbsolutePath()}",
 	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}"
 ]
 	

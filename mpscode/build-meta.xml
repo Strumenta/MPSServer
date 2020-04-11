@@ -4,6 +4,7 @@
   <property name="build.tmp" location="${build.dir}/tmp/MpsServer-meta" />
   <property name="build.layout" location="${build.dir}/artifacts/MpsServer-meta" />
   <property name="project.home" location="${basedir}" />
+  <property name="mpsserver.home" location="${project.home}" />
   <property name="artifacts.root" location="${basedir}/artifacts" />
   <property name="mps.home" location="" />
   <property name="artifacts.mps" location="${mps.home}" />
@@ -150,6 +151,7 @@
         <arg value="-Xmx8192m" />
       </jvmargs>
       <macro name="project.home" path="${project.home}" />
+      <macro name="mpsserver.home" path="${mpsserver.home}" />
       <macro name="artifacts.root" path="${artifacts.root}" />
       <macro name="mps.home" path="${mps.home}" />
     </generate>
