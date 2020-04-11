@@ -109,6 +109,12 @@ task buildServer(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	script new File('mpscode/build-server.xml')
 }
 
+task runLanguageTests(type: TestLanguages, dependsOn: [/*buildServer*/]) {
+	scriptArgs = antScriptArgs
+	scriptClasspath = buildScriptClasspath
+	script new File('mpscode/build-tests.xml')
+}
+
 task buildExample(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
@@ -126,4 +132,55 @@ task runLauncher(type: RunAntScript, dependsOn: [/*buildLauncher*/]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-launcher.xml')
+}
+
+def examineTestFile(file) {
+	def testsResult = new XmlParser().parse(file)
+	def errors = testsResult.attributes()["errors"] as Integer
+	def failures = testsResult.attributes()["failures"] as Integer
+	def tests = testsResult.attributes()["tests"] as Integer
+	def skipped = testsResult.attributes()["skipped"] as Integer
+	def successes = tests - skipped - failures - errors
+
+	testsResult.get("testcase").each { tc ->
+		if (tc.get("failure").size() > 0) {
+			println("[FAILED TEST]")
+			println("  classname: " + tc.attributes()["classname"])
+			println("  name:      " + tc.attributes()["name"])
+			println("  message:   " + tc.get("failure").get(0).attributes()["message"])
+			println()
+		} else if (tc.get("error").size() > 0) {
+			println("[FAILED TEST]")
+			println("  classname: " + tc.attributes()["classname"])
+			println("  name:      " + tc.attributes()["name"])
+			println("  message:   " + tc.get("error").get(0).attributes()["message"])
+			println()
+		}
+	}
+	
+	println("Tests     : $tests")
+	println("Skipped   : $skipped")
+	println("Failures  : $failures")
+	println("Successes : $successes")
+	println("Errors    : $errors")
+	
+	println()
+	if (failures > 0 || errors > 0) {
+		println("Check tests: FAILURE")
+		throw new GradleException("Not all tests were run successfully")
+	} else {		
+		println("Check tests: SUCCESS")
+	}	
+}
+
+task justCheckLanguageTests() {
+	doLast {
+		examineTestFile("mpscode/TEST-jetbrains.mps.testbench.junit.suites.AntModuleTestSuite0-mpsserver.tests.xml")
+	}	 
+}
+
+task checkLanguageTests() {
+	dependsOn 'runLanguageTests'
+	dependsOn 'justCheckLanguageTests'
+	tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
 }
