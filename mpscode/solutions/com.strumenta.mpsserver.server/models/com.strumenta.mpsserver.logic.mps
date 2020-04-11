@@ -12833,7 +12833,7 @@
   </node>
   <node concept="312cEu" id="4$zH10l_k3t">
     <property role="TrG5h" value="NodeIDInModel" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="312cEg" id="4$zH10l_k3u" role="jymVt">
       <property role="TrG5h" value="model" />
       <node concept="3Tm1VV" id="4$zH10l_k3v" role="1B3o_S" />
@@ -12850,7 +12850,7 @@
   </node>
   <node concept="312cEu" id="4$zH10l_kv0">
     <property role="TrG5h" value="ReferenceValue" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.references" />
     <node concept="312cEg" id="4$zH10l_kv1" role="jymVt">
       <property role="TrG5h" value="model" />
       <node concept="3Tm1VV" id="4$zH10l_kv2" role="1B3o_S" />
@@ -12866,7 +12866,7 @@
   <node concept="312cEu" id="Fhwl$atgqq">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ModuleInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.modules" />
     <node concept="3clFbW" id="5jTJHMuiZ8S" role="jymVt">
       <node concept="3cqZAl" id="5jTJHMuiZ8U" role="3clF45" />
       <node concept="3Tm1VV" id="5jTJHMuiZ8V" role="1B3o_S" />
@@ -13113,7 +13113,7 @@
   <node concept="312cEu" id="5I6f3mSOFS1">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="SolutionInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.modules" />
     <node concept="312cEg" id="1MltnxtadVg" role="jymVt">
       <property role="TrG5h" value="usedLanguages" />
       <node concept="3Tm1VV" id="1MltnxtacH$" role="1B3o_S" />
@@ -13197,7 +13197,7 @@
   <node concept="312cEu" id="4XQ2p$w39Qr">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ModuleInfoDetailed" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.modules" />
     <node concept="312cEg" id="4XQ2p$w3aPG" role="jymVt">
       <property role="TrG5h" value="models" />
       <node concept="3Tm1VV" id="4XQ2p$w3aOK" role="1B3o_S" />
@@ -13222,7 +13222,7 @@
   </node>
   <node concept="312cEu" id="4XQ2p$w3822">
     <property role="TrG5h" value="ModelInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.models" />
     <node concept="312cEg" id="4XQ2p$w38wd" role="jymVt">
       <property role="TrG5h" value="qualifiedName" />
       <node concept="3Tm1VV" id="4XQ2p$w38we" role="1B3o_S" />
@@ -13583,12 +13583,12 @@
   <node concept="312cEu" id="6PjeABAwcfD">
     <property role="TrG5h" value="NodeIDInfo" />
     <property role="1sVAO0" value="true" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="3Tm1VV" id="6PjeABAwaWr" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="6PjeABAyCg9">
     <property role="TrG5h" value="RegularNodeIDInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="3clFbW" id="6PjeABA_xpj" role="jymVt">
       <node concept="3cqZAl" id="6PjeABA_xpl" role="3clF45" />
       <node concept="3Tm1VV" id="6PjeABA_xpm" role="1B3o_S" />
@@ -13721,7 +13721,7 @@
   <node concept="312cEu" id="6PjeABAyHdV">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ForeignNodeIDInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="312cEg" id="6PjeABAyMes" role="jymVt">
       <property role="TrG5h" value="foreignId" />
       <node concept="17QB3L" id="6PjeABAyMet" role="1tU5fm" />
@@ -13734,7 +13734,7 @@
   </node>
   <node concept="312cEu" id="4XQ2p$w5krw">
     <property role="TrG5h" value="NodeInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="312cEg" id="6PjeABAwivK" role="jymVt">
       <property role="TrG5h" value="id" />
       <node concept="3Tm1VV" id="6PjeABAwh4P" role="1B3o_S" />
@@ -13762,7 +13762,7 @@
   <node concept="312cEu" id="6PjeABAvyOM">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ReferenceInfo" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.references" />
     <node concept="312cEg" id="6PjeABAwjQh" role="jymVt">
       <property role="TrG5h" value="id" />
       <node concept="3Tm1VV" id="6PjeABAwjQi" role="1B3o_S" />
@@ -13782,7 +13782,7 @@
   <node concept="312cEu" id="4XQ2p$w7GMr">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="NodeInfoDetailed" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.nodes" />
     <node concept="312cEg" id="4XQ2p$w9Mqq" role="jymVt">
       <property role="TrG5h" value="containingLink" />
       <node concept="3Tm1VV" id="4XQ2p$w9L4I" role="1B3o_S" />
@@ -13848,7 +13848,7 @@
   <node concept="312cEu" id="4XQ2p$w5e$X">
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="ModelInfoDetailed" />
-    <property role="3GE5qa" value="data" />
+    <property role="3GE5qa" value="data.models" />
     <node concept="312cEg" id="4XQ2p$w5n8H" role="jymVt">
       <property role="TrG5h" value="roots" />
       <node concept="3Tm1VV" id="4XQ2p$w5moW" role="1B3o_S" />
