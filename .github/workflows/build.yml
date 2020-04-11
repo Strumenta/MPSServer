@@ -15,4 +15,4 @@ jobs:
         java-version: 11
     - name: Build languages
       run: |
-        ./gradlew buildLanguages
+        ./gradlew buildServer
