@@ -275,9 +275,6 @@
         <reference id="1116615189566" name="classifier" index="3VsUkX" />
       </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
-      <concept id="1200397529627" name="jetbrains.mps.baseLanguage.structure.CharConstant" flags="nn" index="1Xhbcc">
-        <property id="1200397540847" name="charConstant" index="1XhdNS" />
-      </concept>
       <concept id="1170345865475" name="jetbrains.mps.baseLanguage.structure.AnonymousClass" flags="ig" index="1Y3b0j">
         <reference id="1170346070688" name="classifier" index="1Y3XeK" />
         <child id="1201186121363" name="typeParameter" index="2Ghqu4" />
@@ -416,6 +413,7 @@
   </registry>
   <node concept="312cEu" id="5SYYrGBzPK3">
     <property role="TrG5h" value="Server" />
+    <property role="3GE5qa" value="server" />
     <node concept="2tJIrI" id="SXzjmhrJyz" role="jymVt" />
     <node concept="3HP615" id="i07tI0JCFB" role="jymVt">
       <property role="TrG5h" value="Action" />
@@ -2876,6 +2874,7 @@
   </node>
   <node concept="312cEu" id="4XQ2p$w1IaY">
     <property role="TrG5h" value="DataExposer" />
+    <property role="3GE5qa" value="mpsmodel" />
     <node concept="2tJIrI" id="4XQ2p$w1OAs" role="jymVt" />
     <node concept="312cEg" id="4XQ2p$w1OTM" role="jymVt">
       <property role="TrG5h" value="repo" />
@@ -3282,43 +3281,6 @@
     <node concept="3clFb_" id="4XQ2p$w7Rzn" role="jymVt">
       <property role="TrG5h" value="findModelByName" />
       <node concept="3clFbS" id="4XQ2p$w7Rzq" role="3clF47">
-        <node concept="3cpWs8" id="4XQ2p$w7TXP" role="3cqZAp">
-          <node concept="3cpWsn" id="4XQ2p$w7TXQ" role="3cpWs9">
-            <property role="TrG5h" value="lastDot" />
-            <node concept="10Oyi0" id="4XQ2p$w7TXR" role="1tU5fm" />
-            <node concept="2OqwBi" id="4XQ2p$w7TXS" role="33vP2m">
-              <node concept="37vLTw" id="4XQ2p$w7UH8" role="2Oq$k0">
-                <ref role="3cqZAo" node="4XQ2p$w7SPv" resolve="modelName" />
-              </node>
-              <node concept="liA8E" id="4XQ2p$w7TXU" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.lastIndexOf(int)" resolve="lastIndexOf" />
-                <node concept="1Xhbcc" id="4XQ2p$w7TXV" role="37wK5m">
-                  <property role="1XhdNS" value="." />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs8" id="4XQ2p$w7TXW" role="3cqZAp">
-          <node concept="3cpWsn" id="4XQ2p$w7TXX" role="3cpWs9">
-            <property role="TrG5h" value="moduleName" />
-            <node concept="17QB3L" id="4XQ2p$w7TXY" role="1tU5fm" />
-            <node concept="2OqwBi" id="4XQ2p$w7TXZ" role="33vP2m">
-              <node concept="37vLTw" id="4XQ2p$w7URB" role="2Oq$k0">
-                <ref role="3cqZAo" node="4XQ2p$w7SPv" resolve="modelName" />
-              </node>
-              <node concept="liA8E" id="4XQ2p$w7TY1" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.substring(int,int)" resolve="substring" />
-                <node concept="3cmrfG" id="4XQ2p$w7TY2" role="37wK5m">
-                  <property role="3cmrfH" value="0" />
-                </node>
-                <node concept="37vLTw" id="4XQ2p$w7TY3" role="37wK5m">
-                  <ref role="3cqZAo" node="4XQ2p$w7TXQ" resolve="lastDot" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="1DcWWT" id="4XQ2p$w7TY4" role="3cqZAp">
           <node concept="3clFbS" id="4XQ2p$w7TY5" role="2LFqv$">
             <node concept="2Gpval" id="4XQ2p$w7TY8" role="3cqZAp">
@@ -4282,7 +4244,6 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="Fhwl$axavG" role="jymVt" />
     <node concept="2tJIrI" id="Fhwl$awSPq" role="jymVt" />
     <node concept="3clFb_" id="6PjeABAwJxq" role="jymVt">
       <property role="TrG5h" value="createModelInfo" />
@@ -5335,6 +5296,7 @@
   </node>
   <node concept="312cEu" id="4XQ2p$w3qf4">
     <property role="TrG5h" value="NotFoundException" />
+    <property role="3GE5qa" value="server" />
     <node concept="2RhdJD" id="2ig$0l9SDo6" role="jymVt">
       <property role="2RkwnN" value="description" />
       <node concept="3Tm1VV" id="2ig$0l9SDo7" role="1B3o_S" />
@@ -5682,6 +5644,7 @@
   </node>
   <node concept="312cEu" id="6Y14zWtL0rJ">
     <property role="TrG5h" value="WebSocketHandler" />
+    <property role="3GE5qa" value="server" />
     <node concept="2tJIrI" id="6Y14zWtOvCx" role="jymVt" />
     <node concept="Wx3nA" id="6Y14zWtOZZA" role="jymVt">
       <property role="TrG5h" value="serverController" />
@@ -9776,6 +9739,7 @@
   </node>
   <node concept="312cEu" id="2yBD7rQkc7J">
     <property role="TrG5h" value="ServerController" />
+    <property role="3GE5qa" value="server" />
     <node concept="312cEg" id="2yBD7rQki8C" role="jymVt">
       <property role="TrG5h" value="data" />
       <node concept="3Tm6S6" id="2yBD7rQki8D" role="1B3o_S" />
@@ -12045,7 +12009,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwKqUm">
     <property role="TrG5h" value="ConceptUtils" />
-    <property role="3GE5qa" value="model" />
+    <property role="3GE5qa" value="mpsmodel" />
     <node concept="2YIFZL" id="3h0CTvwKqYQ" role="jymVt">
       <property role="TrG5h" value="findContainmentOnNodeByName" />
       <node concept="3clFbS" id="3h0CTvwKqYT" role="3clF47">
@@ -12290,7 +12254,7 @@
   </node>
   <node concept="312cEu" id="3h0CTvwL6ZK">
     <property role="TrG5h" value="NodeUtils" />
-    <property role="3GE5qa" value="model" />
+    <property role="3GE5qa" value="mpsmodel" />
     <node concept="2YIFZL" id="3h0CTvwL6ZL" role="jymVt">
       <property role="TrG5h" value="defaultLabel" />
       <node concept="3clFbS" id="3h0CTvwL6ZM" role="3clF47">
