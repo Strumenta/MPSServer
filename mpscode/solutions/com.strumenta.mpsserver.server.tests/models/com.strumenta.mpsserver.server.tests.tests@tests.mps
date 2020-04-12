@@ -1849,7 +1849,7 @@
               <ref role="37wK5l" to="4qw:Fhwl$azTJa" resolve="addModule" />
               <node concept="2ShNRf" id="Fhwl$a$asO" role="37wK5m">
                 <node concept="1pGfFk" id="Fhwl$a$zLh" role="2ShVmc">
-                  <ref role="37wK5l" to="4qw:5jTJHMuit3B" resolve="MyModule" />
+                  <ref role="37wK5l" to="4qw:Fhwl$a$vfa" resolve="MyModule" />
                   <node concept="2YIFZM" id="Fhwl$a$zTM" role="37wK5m">
                     <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
                     <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
@@ -1874,7 +1874,7 @@
               <ref role="37wK5l" to="4qw:Fhwl$azTJa" resolve="addModule" />
               <node concept="2ShNRf" id="Fhwl$a$$8g" role="37wK5m">
                 <node concept="1pGfFk" id="Fhwl$a$$8h" role="2ShVmc">
-                  <ref role="37wK5l" to="4qw:5jTJHMuit3B" resolve="MyModule" />
+                  <ref role="37wK5l" to="4qw:Fhwl$a$vfa" resolve="MyModule" />
                   <node concept="2YIFZM" id="Fhwl$a$$8i" role="37wK5m">
                     <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
                     <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
@@ -2019,7 +2019,7 @@
               <ref role="37wK5l" to="4qw:Fhwl$azTJa" resolve="addModule" />
               <node concept="2ShNRf" id="5jTJHMujYdc" role="37wK5m">
                 <node concept="1pGfFk" id="5jTJHMujYdd" role="2ShVmc">
-                  <ref role="37wK5l" to="4qw:5jTJHMuit3B" resolve="MyModule" />
+                  <ref role="37wK5l" to="4qw:Fhwl$a$vfa" resolve="MyModule" />
                   <node concept="2YIFZM" id="5jTJHMujYde" role="37wK5m">
                     <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
                     <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
@@ -2044,7 +2044,7 @@
               <ref role="37wK5l" to="4qw:Fhwl$azTJa" resolve="addModule" />
               <node concept="2ShNRf" id="5jTJHMujYdl" role="37wK5m">
                 <node concept="1pGfFk" id="5jTJHMujYdm" role="2ShVmc">
-                  <ref role="37wK5l" to="4qw:5jTJHMuit3B" resolve="MyModule" />
+                  <ref role="37wK5l" to="4qw:Fhwl$a$vfa" resolve="MyModule" />
                   <node concept="2YIFZM" id="5jTJHMujYdn" role="37wK5m">
                     <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
                     <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
@@ -2200,7 +2200,7 @@
               <ref role="37wK5l" to="4qw:Fhwl$azTJa" resolve="addModule" />
               <node concept="2ShNRf" id="5jTJHMuk5g2" role="37wK5m">
                 <node concept="1pGfFk" id="5jTJHMuk5g3" role="2ShVmc">
-                  <ref role="37wK5l" to="4qw:5jTJHMuit3B" resolve="MyModule" />
+                  <ref role="37wK5l" to="4qw:Fhwl$a$vfa" resolve="MyModule" />
                   <node concept="2YIFZM" id="5jTJHMuk5g4" role="37wK5m">
                     <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
                     <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
