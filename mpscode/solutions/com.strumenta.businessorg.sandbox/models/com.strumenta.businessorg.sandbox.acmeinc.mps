@@ -54,7 +54,7 @@
     </node>
     <node concept="1sDjYa" id="4$zH10ly4yc" role="1sD6yP">
       <property role="TrG5h" value="John" />
-      <node concept="1sEVIl" id="4$zH10lyb1F" role="1sEVIZ">
+      <node concept="1sEVIl" id="2j5iOBR8OAC" role="1sEVIZ">
         <ref role="1sEVIm" node="4$zH10ly0XR" resolve="CEO" />
       </node>
       <node concept="1sEVIl" id="4$zH10lyb1K" role="1sEVIZ">
