@@ -253,11 +253,33 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
+        <node concept="1BupzO" id="3XsdshnRvU0" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3XsdshnRvU1" role="1HemKq">
+            <node concept="398BVA" id="3XsdshnRvTO" role="3LXTmr">
+              <ref role="398BVh" node="2p2ql82LUxD" resolve="project.home" />
+              <node concept="2Ry0Ak" id="3XsdshnRvTP" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="3XsdshnRvTQ" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="3XsdshnRvTR" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3XsdshnRvU2" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="2p2ql82MleI" role="2G$12L">
-        <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.server" />
         <property role="3LESm3" value="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" />
+        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="2p2ql82MleJ" role="3LF7KH">
           <node concept="2Ry0Ak" id="2p2ql82MleK" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
@@ -323,6 +345,33 @@
         <node concept="1SiIV0" id="4XQ2p$waMew" role="3bR37C">
           <node concept="3bR9La" id="4XQ2p$waMex" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3XsdshnRvU3" role="3bR37C">
+          <node concept="3bR9La" id="3XsdshnRvU4" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6Lh7" resolve="jetbrains.mps.typesystemEngine" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="3XsdshnRvUh" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3XsdshnRvUi" role="1HemKq">
+            <node concept="398BVA" id="3XsdshnRvU5" role="3LXTmr">
+              <ref role="398BVh" node="2p2ql82LUxD" resolve="project.home" />
+              <node concept="2Ry0Ak" id="3XsdshnRvU6" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="3XsdshnRvU7" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.server" />
+                  <node concept="2Ry0Ak" id="3XsdshnRvU8" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3XsdshnRvUj" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
           </node>
         </node>
       </node>
@@ -476,7 +525,7 @@
         <ref role="m$_y1" node="1Y19Fp43fxb" resolve="MPSServer" />
       </node>
       <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
-        <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="FinancialCalc" />
+        <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_0" role="m$_yQ">
         <node concept="3Mxwew" id="2p2ql82Ml_1" role="3MwsjC">
@@ -623,13 +672,13 @@
       <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-server" />
     </node>
     <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-example" />
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
     </node>
   </node>
   <node concept="1l3spW" id="1yyBh0vFuTG">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-example" />
-    <property role="turDy" value="build-example.xml" />
+    <property role="TrG5h" value="MpsServer-examples" />
+    <property role="turDy" value="build-examples.xml" />
     <node concept="1wNqPr" id="1yyBh0vFuTH" role="3989C9">
       <property role="1wNuhe" value="true" />
       <property role="1wNuhh" value="8" />
@@ -640,11 +689,38 @@
       <property role="2_Ic$$" value="true" />
       <property role="TZNOO" value="1.8" />
     </node>
-    <node concept="m$_wf" id="1yyBh0vFuTJ" role="3989C9">
+    <node concept="m$_wf" id="3XsdshnRvVz" role="3989C9">
       <property role="m$_wk" value="FinancialCalc" />
+      <node concept="3_J27D" id="3XsdshnRvV$" role="m$_yQ">
+        <node concept="3Mxwew" id="3XsdshnRvV_" role="3MwsjC">
+          <property role="3MwjfP" value="FinancialCalc" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="3XsdshnRvVA" role="m$_w8">
+        <node concept="3Mxwey" id="3XsdshnRvVB" role="3MwsjC">
+          <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+        </node>
+      </node>
+      <node concept="m$f5U" id="3XsdshnRvVC" role="m$_yh">
+        <ref role="m$f5T" node="1yyBh0vFuTT" resolve="FinancialCalc" />
+      </node>
+      <node concept="m$_yC" id="3XsdshnRvVD" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+      <node concept="3_J27D" id="3XsdshnRvVE" role="m_cZH">
+        <node concept="3Mxwew" id="3XsdshnRvVF" role="3MwsjC">
+          <property role="3MwjfP" value="FinancialCalc" />
+        </node>
+      </node>
+      <node concept="m$_yC" id="3XsdshnRvVG" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
+      </node>
+    </node>
+    <node concept="m$_wf" id="1yyBh0vFuTJ" role="3989C9">
+      <property role="m$_wk" value="BusinessOrg" />
       <node concept="3_J27D" id="1yyBh0vFuTK" role="m$_yQ">
         <node concept="3Mxwew" id="1yyBh0vFuTL" role="3MwsjC">
-          <property role="3MwjfP" value="FinancialCalc" />
+          <property role="3MwjfP" value="BusinessOrg" />
         </node>
       </node>
       <node concept="3_J27D" id="1yyBh0vFuTM" role="m$_w8">
@@ -652,19 +728,19 @@
           <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
         </node>
       </node>
-      <node concept="m$f5U" id="1yyBh0vFuTO" role="m$_yh">
-        <ref role="m$f5T" node="1yyBh0vFuTT" resolve="FinancialCalc" />
-      </node>
       <node concept="m$_yC" id="1yyBh0vFuTP" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="1yyBh0vFuTQ" role="m_cZH">
-        <node concept="3Mxwew" id="1yyBh0vFuTR" role="3MwsjC">
-          <property role="3MwjfP" value="FinancialCalc" />
+        <node concept="3Mxwew" id="3XsdshnRvYH" role="3MwsjC">
+          <property role="3MwjfP" value="BusinessOrg" />
         </node>
       </node>
       <node concept="m$_yC" id="1yyBh0vFuTS" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
+      </node>
+      <node concept="m$f5U" id="3XsdshnRw0$" role="m$_yh">
+        <ref role="m$f5T" node="3XsdshnRvZD" resolve="BusinessOrg" />
       </node>
     </node>
     <node concept="2G$12M" id="1yyBh0vFuTT" role="3989C9">
@@ -775,6 +851,114 @@
         </node>
       </node>
     </node>
+    <node concept="2G$12M" id="3XsdshnRvZD" role="3989C9">
+      <property role="TrG5h" value="BusinessOrg" />
+      <node concept="1E1JtD" id="3XsdshnRw0A" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.strumenta.businessorg" />
+        <property role="3LESm3" value="96ad5b8f-04fe-4e16-a7d6-0e014b8726e4" />
+        <node concept="55IIr" id="3XsdshnRw0B" role="3LF7KH">
+          <node concept="2Ry0Ak" id="3XsdshnRw0H" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="3XsdshnRw0M" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.businessorg" />
+              <node concept="2Ry0Ak" id="3XsdshnRw0R" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.businessorg.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="3XsdshnRw1r" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3XsdshnRw1s" role="1HemKq">
+            <node concept="398BVA" id="3XsdshnRw1j" role="3LXTmr">
+              <ref role="398BVh" node="1yyBh0vFuUB" resolve="project.home" />
+              <node concept="2Ry0Ak" id="3XsdshnRw1k" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="3XsdshnRw1l" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.businessorg" />
+                  <node concept="2Ry0Ak" id="3XsdshnRw1m" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3XsdshnRw1t" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1yeLz9" id="3XsdshnRw1u" role="1TViLv">
+          <property role="TrG5h" value="com.strumenta.businessorg#01" />
+          <property role="3LESm3" value="8d430c2c-f10a-40fa-bf47-45f8222aaa07" />
+          <node concept="1BupzO" id="3XsdshnRw1D" role="3bR31x">
+            <property role="3ZfqAx" value="generator/templates" />
+            <property role="1Hdu6h" value="true" />
+            <property role="1HemKv" value="true" />
+            <node concept="3LXTmp" id="3XsdshnRw1E" role="1HemKq">
+              <node concept="398BVA" id="3XsdshnRw1v" role="3LXTmr">
+                <ref role="398BVh" node="1yyBh0vFuUB" resolve="project.home" />
+                <node concept="2Ry0Ak" id="3XsdshnRw1w" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="3XsdshnRw1x" role="2Ry0An">
+                    <property role="2Ry0Am" value="com.strumenta.businessorg" />
+                    <node concept="2Ry0Ak" id="3XsdshnRw1y" role="2Ry0An">
+                      <property role="2Ry0Am" value="generator" />
+                      <node concept="2Ry0Ak" id="3XsdshnRw1z" role="2Ry0An">
+                        <property role="2Ry0Am" value="templates" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="3XsdshnRw1F" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="3XsdshnRw2P" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.strumenta.businessorg.sandbox" />
+        <property role="3LESm3" value="304d28bd-2c3c-4fbd-b987-dbce2813a938" />
+        <node concept="55IIr" id="3XsdshnRw2S" role="3LF7KH">
+          <node concept="2Ry0Ak" id="3XsdshnRw3j" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="3XsdshnRw3o" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.businessorg.sandbox" />
+              <node concept="2Ry0Ak" id="3XsdshnRw3t" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.businessorg.sandbox.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="3XsdshnRw4j" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3XsdshnRw4k" role="1HemKq">
+            <node concept="398BVA" id="3XsdshnRw4b" role="3LXTmr">
+              <ref role="398BVh" node="1yyBh0vFuUB" resolve="project.home" />
+              <node concept="2Ry0Ak" id="3XsdshnRw4c" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="3XsdshnRw4d" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.businessorg.sandbox" />
+                  <node concept="2Ry0Ak" id="3XsdshnRw4e" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3XsdshnRw4l" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2kB4xC" id="1yyBh0vFuUz" role="1l3spd">
       <property role="TrG5h" value="MPSServerVersion" />
       <node concept="aVJcg" id="1yyBh0vFuU$" role="aVJcv">
@@ -817,8 +1001,25 @@
           </node>
         </node>
         <node concept="m$_wl" id="1yyBh0vFuUQ" role="39821P">
-          <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="FinancialCalc" />
+          <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
           <node concept="pUk6x" id="1yyBh0vFuV0" role="pUk7w" />
+        </node>
+      </node>
+      <node concept="3981dG" id="3XsdshnRw4L" role="39821P">
+        <node concept="3_J27D" id="3XsdshnRw4N" role="Nbhlr">
+          <node concept="3Mxwew" id="3XsdshnRw4Y" role="3MwsjC">
+            <property role="3MwjfP" value="BusinessOrg-" />
+          </node>
+          <node concept="3Mxwey" id="3XsdshnRw50" role="3MwsjC">
+            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+          </node>
+          <node concept="3Mxwew" id="3XsdshnRw54" role="3MwsjC">
+            <property role="3MwjfP" value=".zip" />
+          </node>
+        </node>
+        <node concept="m$_wl" id="3XsdshnRw58" role="39821P">
+          <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
+          <node concept="pUk6x" id="3XsdshnRw5c" role="pUk7w" />
         </node>
       </node>
     </node>
