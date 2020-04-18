@@ -4,7 +4,7 @@
   <property name="build.tmp" location="${build.dir}/tmp/MpsServer-meta" />
   <property name="build.layout" location="${build.dir}/artifacts/MpsServer-meta" />
   <property name="project.home" location="${basedir}" />
-  <property name="mpsserver.home" location="${project.home}" />
+  <property name="mpsserver.home" location="${basedir}" />
   <property name="artifacts.root" location="${basedir}/artifacts" />
   <property name="mps.home" location="" />
   <property name="artifacts.mps" location="${mps.home}" />

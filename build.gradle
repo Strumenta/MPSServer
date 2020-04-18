@@ -71,7 +71,8 @@ ext.antScriptArgs =  [
 	"-Dmps.home=${mpsDir.getAbsolutePath()}",
 	"-Dproject.home=${mpscode.getAbsolutePath()}",
 	"-Dmpsserver.home=${mpscode.getAbsolutePath()}",
-	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}"
+	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
+	"-Djava.awt.headless=true"
 ]
 	
 task resolveMps(type: Copy) {
