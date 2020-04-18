@@ -1098,10 +1098,10 @@
       <property role="2_Ic$B" value="true" />
     </node>
     <node concept="1E1JtA" id="5jTJHMulWCp" role="3989C9">
-      <property role="BnDLt" value="true" />
       <property role="TrG5h" value="com.strumenta.mpsserver.server.tests" />
       <property role="3LESm3" value="1011bef6-c10c-40e6-b138-c6d0026fac59" />
       <property role="aoJFB" value="eYcmk9QOlj/sources_and_tests" />
+      <property role="BnDLt" value="true" />
       <node concept="55IIr" id="5jTJHMulWCr" role="3LF7KH">
         <node concept="2Ry0Ak" id="5jTJHMulWCE" role="iGT6I">
           <property role="2Ry0Am" value="solutions" />
@@ -1161,6 +1161,26 @@
           </node>
         </node>
       </node>
+      <node concept="1SiIV0" id="3XsdshnRwbd" role="3bR37C">
+        <node concept="3bR9La" id="3XsdshnRwbe" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:7Kfy9QB6Lh7" resolve="jetbrains.mps.typesystemEngine" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3XsdshnRwbf" role="3bR37C">
+        <node concept="3bR9La" id="3XsdshnRwbg" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3XsdshnRwbl" role="3bR37C">
+        <node concept="3bR9La" id="3XsdshnRwbm" role="1SiIV1">
+          <ref role="3bR37D" to="ffeo:7Kfy9QB6Lg8" resolve="jetbrains.mps.runtime" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="3XsdshnRxND" role="3bR37C">
+        <node concept="3bR9La" id="3XsdshnRxNE" role="1SiIV1">
+          <ref role="3bR37D" node="3XsdshnRw0A" resolve="com.strumenta.businessorg" />
+        </node>
+      </node>
     </node>
     <node concept="398rNT" id="7GBq2$enLZf" role="1l3spd">
       <property role="TrG5h" value="mps.home" />
@@ -1182,6 +1202,9 @@
     </node>
     <node concept="2sgV4H" id="5jTJHMulSwU" role="1l3spa">
       <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-server" />
+    </node>
+    <node concept="2sgV4H" id="3XsdshnRxNz" role="1l3spa">
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
     </node>
     <node concept="22LTRH" id="5jTJHMulWD7" role="1hWBAP">
       <property role="TrG5h" value="mpsserver.tests" />
