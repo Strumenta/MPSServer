@@ -118,10 +118,10 @@ task runLanguageTests(type: TestLanguages, dependsOn: [/*buildServer*/]) {
 	script new File('mpscode/build-tests.xml')
 }
 
-task buildExample(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
+task buildExamples(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
-	script new File('mpscode/build-example.xml')
+	script new File('mpscode/build-examples.xml')
 }
 
 task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExample]) {
