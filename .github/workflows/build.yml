@@ -29,7 +29,7 @@ jobs:
         java-version: 11
     - name: Run languages tests
       run: |
-        ./gradlew runLanguageTests        
+        ./gradlew checkLanguageTests        
 
   buildLauncher:
 
