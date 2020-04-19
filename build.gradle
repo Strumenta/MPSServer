@@ -219,20 +219,21 @@ publishing {
             groupId 'com.strumenta.mpsserver'
             artifactId 'mpsserver-core'
             artifact packageServer
+            version '1.0.0'
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
                 configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('version',  '1.0.0')
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                 }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('version',  '1.0.0')
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                     dependencyNode.appendNode('scope', 'provided')
                 }
