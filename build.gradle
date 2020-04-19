@@ -16,6 +16,12 @@ buildscript {
     }
 }
 
+plugins {
+    id 'base'
+    id 'maven-publish'
+    id 'co.riiid.gradle' version '0.4.2'
+}
+
 group "com.strumenta.mpsserver"
 description = "MpsServer"
 
@@ -187,4 +193,50 @@ task checkLanguageTests() {
 	dependsOn 'runLanguageTests'
 	dependsOn 'justCheckLanguageTests'
 	tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
+}
+
+task packageServer(type: Zip, dependsOn: buildServer) {
+    archiveBaseName = 'com.strumenta.mpsserver'
+    from artifactsDir
+    include 'MpsServer-server/**'
+}
+
+publishing {
+    // repositories {
+    // 	mavenLocal
+    //     // maven {
+    //     //     url project.publishingRepository
+    //     //     if (project.hasProperty('nexusUsername')) {
+    //     //         credentials {
+    //     //             username project.nexusUsername
+    //     //             password project.nexusPassword
+    //     //         }
+    //     //     }
+    //     // }
+    // }
+    publications {
+        mpsServerCore(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-core'
+            artifact packageServer
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }
+    }
 }
