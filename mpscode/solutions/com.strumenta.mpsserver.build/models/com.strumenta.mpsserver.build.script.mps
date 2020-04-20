@@ -1189,6 +1189,12 @@
     <node concept="398rNT" id="7GBq2$enLZf" role="1l3spd">
       <property role="TrG5h" value="mps.home" />
     </node>
+    <node concept="398rNT" id="$h4DkLj_JY" role="1l3spd">
+      <property role="TrG5h" value="mps.macro.mpsserver.home" />
+      <node concept="398BVA" id="$h4DkLj_K6" role="398pKh">
+        <ref role="398BVh" node="5jTJHMumiZ8" resolve="mpsserver.home" />
+      </node>
+    </node>
     <node concept="2sgV4H" id="7GBq2$enM0Q" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="7GBq2$enM0R" role="2JcizS">

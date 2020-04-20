@@ -77,6 +77,7 @@ ext.antScriptArgs =  [
 	"-Dmps.home=${mpsDir.getAbsolutePath()}",
 	"-Dproject.home=${mpscode.getAbsolutePath()}",
 	"-Dmpsserver.home=${mpscode.getAbsolutePath()}",
+	"-Dmps.macro.mpsserver.home=${mpscode.getAbsolutePath()}",
 	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
 	"-Djava.awt.headless=true"
 ]
@@ -214,6 +215,15 @@ publishing {
     //     //     }
     //     // }
     // }
+    repositories {
+    	maven {
+    		url 'https://oss.sonatype.org/content/repositories/snapshots'
+    		credentials {
+    			username ''
+    			password ''
+    		}
+    	}
+    }
     publications {
         mpsServerCore(MavenPublication) {
             groupId 'com.strumenta.mpsserver'
