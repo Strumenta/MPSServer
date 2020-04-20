@@ -132,8 +132,8 @@ task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExample
         antTestScriptFile.text = antTestScriptFile.text.replace("-Xmx1024m", "-Xmx2048m")
 
         antTestScriptFile.text = antTestScriptFile.text
-                .replace('<junit showoutput="true" fork="true" haltonfailure="false" dir="${basedir}">',
-                        '<junit showoutput="true" fork="true" haltonfailure="false" dir="${basedir}"><jvmarg value="-Djava.awt.headless=true" />')
+                .replace('<jvmarg value="-ea" />',
+                        '<jvmarg value="-ea" /><jvmarg value="-Djava.awt.headless=true" />')
     }
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
