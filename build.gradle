@@ -127,6 +127,14 @@ task buildExamples(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 }
 
 task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExamples]) {
+	doFirst {
+        def antTestScriptFile = file(it['script'])
+        antTestScriptFile.text = antTestScriptFile.text.replace("-Xmx1024m", "-Xmx2048m")
+
+        antTestScriptFile.text = antTestScriptFile.text
+                .replace('<junit showoutput="true" fork="true" haltonfailure="false" dir="${basedir}">',
+                        '<junit showoutput="true" fork="true" haltonfailure="false" dir="${basedir}"><jvmarg value="-Djava.awt.headless=true" />')
+    }
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-tests.xml')
