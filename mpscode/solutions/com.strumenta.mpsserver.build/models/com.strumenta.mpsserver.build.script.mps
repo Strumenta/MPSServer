@@ -374,6 +374,11 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="565tb0CXAbA" role="3bR37C">
+          <node concept="3bR9La" id="565tb0CXAbB" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:ymnOULAU1u" resolve="jetbrains.mps.lang.test.runtime" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
