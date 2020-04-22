@@ -43,4 +43,4 @@ jobs:
         java-version: 11
     - name: Build launcher
       run: |
-        export DISPLAY=:0 && ./gradlew buildLauncher
+        ./gradlew buildLauncher
