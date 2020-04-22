@@ -27,9 +27,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Run languages tests
-      run: |
-        unset DISPLAY && ./gradlew checkLanguageTests        
+    - run: sudo apt-get install xvfb
+    - run: xvfb-run --auto-servernum ./gradlew checkLanguageTests        
 
   buildLauncher:
 
