@@ -19,7 +19,6 @@
     <import index="71xd" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.tools(MPS.Platform/)" />
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" />
     <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
-    <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -343,10 +342,10 @@
                           <node concept="3cpWsn" id="5SYYrGB_wqH" role="3cpWs9">
                             <property role="TrG5h" value="sc" />
                             <node concept="3uibUv" id="5SYYrGB_wqI" role="1tU5fm">
-                              <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="ServerController" />
+                              <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
                             </node>
                             <node concept="2YIFZM" id="5SYYrGB_vn2" role="33vP2m">
-                              <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="ServerController" />
+                              <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
                               <ref role="37wK5l" to="30ym:5SYYrGB_ohV" resolve="launch" />
                               <node concept="2OqwBi" id="5SYYrGB_xce" role="37wK5m">
                                 <node concept="2OqwBi" id="5SYYrGB_wMC" role="2Oq$k0">

@@ -210,6 +210,9 @@
       <node concept="m$_yC" id="7C6tnXfWyCZ" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
       </node>
+      <node concept="m$_yC" id="565tb0CY2Lt" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
+      </node>
     </node>
     <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
       <property role="TrG5h" value="MPSServer" />
@@ -301,34 +304,9 @@
             <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
           </node>
         </node>
-        <node concept="1SiIV0" id="2p2ql82MlgF" role="3bR37C">
-          <node concept="3bR9La" id="2p2ql82MlgG" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2p2ql82MlgH" role="3bR37C">
-          <node concept="3bR9La" id="2p2ql82MlgI" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:3zjMY$95UAa" resolve="jetbrains.mps.core.tool.environment" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2p2ql82MlgJ" role="3bR37C">
-          <node concept="3bR9La" id="2p2ql82MlgK" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="2p2ql82MlgN" role="3bR37C">
           <node concept="3bR9La" id="2p2ql82MlgO" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2p2ql82MlgP" role="3bR37C">
-          <node concept="3bR9La" id="2p2ql82MlgQ" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="2p2ql82MlgR" role="3bR37C">
-          <node concept="3bR9La" id="2p2ql82MlgS" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L8Y" resolve="jetbrains.mps.lang.project" />
           </node>
         </node>
         <node concept="1SiIV0" id="2p2ql82MlgT" role="3bR37C">

@@ -14,7 +14,6 @@
   <dependencies>
     <dependency reexport="false">019b622b-0aef-4dd3-86d0-4eef01f3f6bb(jetbrains.mps.ide)</dependency>
     <dependency reexport="true">bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)</dependency>
-    <dependency reexport="true">48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="9" />
