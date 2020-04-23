@@ -19,11 +19,12 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id 'co.riiid.gradle' version '0.4.2'
+    id "com.github.breadmoirai.github-release" version "2.2.12"
 }
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
+version = '1.0.0'
 
 configurations {
 	mps
@@ -258,4 +259,29 @@ publishing {
             }
         }
     }
+}
+
+task foo {
+	doLast {
+		println rootProject.findProperty('github.publication.token')
+		println project.version
+	}
+
+}
+
+
+githubRelease {
+    owner = 'Strumenta'
+    repo = 'MPSServer'
+    token = rootProject.findProperty('github.publication.token') ?: 'empty'
+    tagName = project.version
+    targetCommitish = "master"
+    releaseName = 'Version ' + project.version + ' exp_1'
+    //body = releaseNotes
+    prerelease = true
+    releaseAssets = packageServer.outputs.files
+    dryRun = true
+    overwrite = true
+    draft = true
+    body = "Experiment"
 }

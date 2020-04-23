@@ -12,3 +12,4 @@ build
 
 TEST-*.xml
 artifacts
+release.sh
