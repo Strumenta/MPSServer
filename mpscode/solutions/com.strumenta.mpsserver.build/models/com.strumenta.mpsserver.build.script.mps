@@ -362,11 +362,7 @@
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
       <property role="TrG5h" value="mpsserver.version" />
       <node concept="aVJcg" id="2E6SLKT_DJF" role="aVJcv">
-        <node concept="NbPM2" id="2E6SLKT_DJE" role="aVJcq">
-          <node concept="3Mxwew" id="2E6SLKT_DJD" role="3MwsjC">
-            <property role="3MwjfP" value="1.0.0" />
-          </node>
-        </node>
+        <node concept="NbPM2" id="2E6SLKT_DJE" role="aVJcq" />
       </node>
     </node>
     <node concept="398rNT" id="2p2ql82LUxD" role="1l3spd">
