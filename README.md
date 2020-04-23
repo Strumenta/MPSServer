@@ -1,6 +1,8 @@
 # MPSServer
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FStrumenta%2FMPSServer%2Fbadge&style=flat)](https://actions-badge.atrox.dev/Strumenta/MPSServer/goto)
+[ ![Download](https://api.bintray.com/packages/strumenta/strumenta-oss-maven/MPSServer/images/download.svg) ](https://bintray.com/strumenta/strumenta-oss-maven/MPSServer/_latestVersion)
+
 
 This is a solution that starts a server to read and modify MPS models through HTTP and WebSocket.
 

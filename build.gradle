@@ -25,7 +25,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '1.0.0'
+version = '1.0.1-alpha1'
 
 configurations {
 	mps
@@ -80,6 +80,7 @@ ext.antScriptArgs =  [
 	"-Dproject.home=${mpscode.getAbsolutePath()}",
 	"-Dmpsserver.home=${mpscode.getAbsolutePath()}",
 	"-Dmps.macro.mpsserver.home=${mpscode.getAbsolutePath()}",
+	"-Dmps.macro.mpsserver.version=${project.version}",
 	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
 	"-Djava.awt.headless=true"
 ]
@@ -239,21 +240,22 @@ publishing {
             groupId 'com.strumenta.mpsserver'
             artifactId 'mpsserver-core'
             artifact packageServer
-            version '1.0.0'
+            version project.version
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
                 configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  '1.0.0')
+                    dependencyNode.appendNode('version',  project.version)
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                 }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  '1.0.0')
+                    dependencyNode.appendNode('version',  it.moduleVersion)
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                     dependencyNode.appendNode('scope', 'provided')
                 }
@@ -281,17 +283,20 @@ bintray {
     	licenses = ['Apache-2.0']
     	vcsUrl = 'https://github.com/Strumenta/MPSServer.git'
     	version {
-	    	name = 'Version_' + project.version + '_exp_1'
+	    	name = 'v' + project.version
+	    	desc = 'Version ' + project.version
 	    	released = new Date()
+	    	vcsTag = 'v'+project.version
 	    }
     }
-    version {
-    	name = 'Version_' + project.version + '_exp_1'
-    	released = new Date()
-    }
+    // version {
+    // 	name = 'Version_' + project.version + '_exp_1'
+    // 	released = new Date()
+    // }
     publications = ['mpsServerCore'] 
     dryRun = false
-    publish = false
+    publish = true
+    override = true
 }
 
 
@@ -301,7 +306,7 @@ githubRelease {
     token = rootProject.findProperty('github.publication.token') ?: 'empty'
     tagName = project.version
     targetCommitish = "master"
-    releaseName = 'Version ' + project.version + ' exp_1'
+    releaseName = 'Version ' + project.version
     //body = releaseNotes
     prerelease = true
     releaseAssets = packageServer.outputs.files

@@ -193,7 +193,7 @@
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxe" role="m$_w8">
         <node concept="3Mxwey" id="2E6SLKT_DKn" role="3MwsjC">
-          <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="MPSServerVersion" />
+          <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
         </node>
       </node>
       <node concept="m$f5U" id="2p2ql82Ml4i" role="m$_yh">
@@ -360,7 +360,7 @@
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
-      <property role="TrG5h" value="MPSServerVersion" />
+      <property role="TrG5h" value="mpsserver.version" />
       <node concept="aVJcg" id="2E6SLKT_DJF" role="aVJcv">
         <node concept="NbPM2" id="2E6SLKT_DJE" role="aVJcq">
           <node concept="3Mxwew" id="2E6SLKT_DJD" role="3MwsjC">
@@ -398,7 +398,7 @@
             <property role="3MwjfP" value="MpsServer-" />
           </node>
           <node concept="3Mxwey" id="2E6SLKT_D__" role="3MwsjC">
-            <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="MPSServerVersion" />
+            <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
           </node>
           <node concept="3Mxwew" id="2E6SLKTAjGF" role="3MwsjC">
             <property role="3MwjfP" value=".zip" />
