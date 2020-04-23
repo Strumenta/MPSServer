@@ -14,6 +14,7 @@
       <concept id="7321017245476976379" name="jetbrains.mps.build.structure.BuildRelativePath" flags="ng" index="iG8Mu">
         <child id="7321017245477039051" name="compositePart" index="iGT6I" />
       </concept>
+      <concept id="3767587139141066978" name="jetbrains.mps.build.structure.BuildVariableMacro" flags="ng" index="2kB4xC" />
       <concept id="4993211115183325728" name="jetbrains.mps.build.structure.BuildProjectDependency" flags="ng" index="2sgV4H">
         <reference id="5617550519002745380" name="script" index="1l3spb" />
         <child id="4129895186893471026" name="artifacts" index="2JcizS" />
@@ -84,6 +85,9 @@
     <property role="2DA0ip" value="../.." />
     <property role="TrG5h" value="MpsServer-meta" />
     <property role="turDy" value="build-meta.xml" />
+    <node concept="2kB4xC" id="4IusG9vM7RW" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.version" />
+    </node>
     <node concept="2igEWh" id="7GBq2$enF7I" role="1hWBAP">
       <property role="3UIfUI" value="8192" />
     </node>
