@@ -80,7 +80,6 @@ ext.antScriptArgs =  [
 	"-Dproject.home=${mpscode.getAbsolutePath()}",
 	"-Dmpsserver.home=${mpscode.getAbsolutePath()}",
 	"-Dmps.macro.mpsserver.home=${mpscode.getAbsolutePath()}",
-	"-Dmps.macro.mpsserver.version=${project.version}",
 	"-Dmpsserver.version=${project.version}",
 	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
 	"-Djava.awt.headless=true"
