@@ -511,7 +511,7 @@
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_2" role="m$_w8">
         <node concept="3Mxwey" id="2p2ql82Ml_3" role="3MwsjC">
-          <ref role="3Mxwex" node="2p2ql82Ml_L" resolve="MPSServerVersion" />
+          <ref role="3Mxwex" node="2p2ql82Ml_L" resolve="mpsserver.version" />
         </node>
       </node>
       <node concept="m$f5U" id="2p2ql82Ml_4" role="m$_yh">
@@ -564,13 +564,9 @@
       </node>
     </node>
     <node concept="2kB4xC" id="2p2ql82Ml_L" role="1l3spd">
-      <property role="TrG5h" value="MPSServerVersion" />
+      <property role="TrG5h" value="mpsserver.version" />
       <node concept="aVJcg" id="2p2ql82Ml_M" role="aVJcv">
-        <node concept="NbPM2" id="2p2ql82Ml_N" role="aVJcq">
-          <node concept="3Mxwew" id="2p2ql82Ml_O" role="3MwsjC">
-            <property role="3MwjfP" value="1.0.0" />
-          </node>
-        </node>
+        <node concept="NbPM2" id="2p2ql82Ml_N" role="aVJcq" />
       </node>
     </node>
     <node concept="398rNT" id="2p2ql82Ml_P" role="1l3spd">
@@ -679,7 +675,7 @@
       </node>
       <node concept="3_J27D" id="3XsdshnRvVA" role="m$_w8">
         <node concept="3Mxwey" id="3XsdshnRvVB" role="3MwsjC">
-          <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+          <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
         </node>
       </node>
       <node concept="m$f5U" id="3XsdshnRvVC" role="m$_yh">
@@ -706,7 +702,7 @@
       </node>
       <node concept="3_J27D" id="1yyBh0vFuTM" role="m$_w8">
         <node concept="3Mxwey" id="1yyBh0vFuTN" role="3MwsjC">
-          <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+          <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
         </node>
       </node>
       <node concept="m$_yC" id="1yyBh0vFuTP" role="m$_yJ">
@@ -941,13 +937,9 @@
       </node>
     </node>
     <node concept="2kB4xC" id="1yyBh0vFuUz" role="1l3spd">
-      <property role="TrG5h" value="MPSServerVersion" />
+      <property role="TrG5h" value="mpsserver.version" />
       <node concept="aVJcg" id="1yyBh0vFuU$" role="aVJcv">
-        <node concept="NbPM2" id="1yyBh0vFuU_" role="aVJcq">
-          <node concept="3Mxwew" id="1yyBh0vFuUA" role="3MwsjC">
-            <property role="3MwjfP" value="1.0.0" />
-          </node>
-        </node>
+        <node concept="NbPM2" id="1yyBh0vFuU_" role="aVJcq" />
       </node>
     </node>
     <node concept="398rNT" id="1yyBh0vFuUB" role="1l3spd">
@@ -979,7 +971,7 @@
             <property role="3MwjfP" value="FinancialCalc-" />
           </node>
           <node concept="3Mxwey" id="1yyBh0vFuUO" role="3MwsjC">
-            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
           </node>
           <node concept="3Mxwew" id="1yyBh0vFuUP" role="3MwsjC">
             <property role="3MwjfP" value=".zip" />
@@ -996,7 +988,7 @@
             <property role="3MwjfP" value="BusinessOrg-" />
           </node>
           <node concept="3Mxwey" id="3XsdshnRw50" role="3MwsjC">
-            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="MPSServerVersion" />
+            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
           </node>
           <node concept="3Mxwew" id="3XsdshnRw54" role="3MwsjC">
             <property role="3MwjfP" value=".zip" />
