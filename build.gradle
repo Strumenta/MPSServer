@@ -25,7 +25,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '1.0.1-alpha1'
+version = '1.0.1-alpha2'
 
 configurations {
 	mps
@@ -211,30 +211,10 @@ task packageServer(type: Zip, dependsOn: [buildServer]) {
     archiveBaseName = 'com.strumenta.mpsserver'
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'MpsServer-server/**'
+    exclude 'MpsServer-server/*.zip'
 }
 
 publishing {
-    // repositories {
-    // 	mavenLocal
-    //     // maven {
-    //     //     url project.publishingRepository
-    //     //     if (project.hasProperty('nexusUsername')) {
-    //     //         credentials {
-    //     //             username project.nexusUsername
-    //     //             password project.nexusPassword
-    //     //         }
-    //     //     }
-    //     // }
-    // }
-    repositories {
-    	maven {
-    		url 'https://oss.sonatype.org/content/repositories/snapshots'
-    		credentials {
-    			username ''
-    			password ''
-    		}
-    	}
-    }
     publications {
         mpsServerCore(MavenPublication) {
             groupId 'com.strumenta.mpsserver'

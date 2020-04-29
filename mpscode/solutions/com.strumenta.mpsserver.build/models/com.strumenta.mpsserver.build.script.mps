@@ -419,10 +419,7 @@
         </node>
         <node concept="3_J27D" id="BHWycb_1Rv" role="Nbhlr">
           <node concept="3Mxwew" id="BHWycb_1S2" role="3MwsjC">
-            <property role="3MwjfP" value="MpsServer-" />
-          </node>
-          <node concept="3Mxwey" id="BHWycb_1S4" role="3MwsjC">
-            <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
+            <property role="3MwjfP" value="MpsServer" />
           </node>
         </node>
       </node>
