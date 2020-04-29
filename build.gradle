@@ -207,9 +207,9 @@ task checkLanguageTests() {
 	tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
 }
 
-task packageServer(type: Zip, dependsOn: buildServer) {
+task packageServer(type: Zip, dependsOn: [buildServer]) {
     archiveBaseName = 'com.strumenta.mpsserver'
-    from artifactsDir
+    from new File(rootDir, 'mpscode/build/artifacts')
     include 'MpsServer-server/**'
 }
 
