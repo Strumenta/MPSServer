@@ -67,8 +67,11 @@
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
-      <concept id="763829979718664966" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleResources" flags="ng" index="3rtmxn">
-        <child id="763829979718664967" name="files" index="3rtmxm" />
+      <concept id="4278635856200817744" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleModelRoot" flags="ng" index="1BupzO">
+        <property id="8137134783396907368" name="convert2binary" index="1Hdu6h" />
+        <property id="8137134783396676838" name="extracted" index="1HemKv" />
+        <property id="2889113830911481881" name="deployFolderName" index="3ZfqAx" />
+        <child id="8137134783396676835" name="location" index="1HemKq" />
       </concept>
       <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
       <concept id="322010710375871467" name="jetbrains.mps.build.mps.structure.BuildMps_AbstractModule" flags="ng" index="3LEN3z">
@@ -97,10 +100,6 @@
         <ref role="398BVh" node="1Y19Fp43fwE" resolve="mps.home" />
       </node>
     </node>
-    <node concept="398rNT" id="1Y19Fp43fwJ" role="1l3spd">
-      <property role="TrG5h" value="project.home" />
-      <node concept="55IIr" id="7GBq2$enLPJ" role="398pKh" />
-    </node>
     <node concept="398rNT" id="5jTJHMumiWk" role="1l3spd">
       <property role="TrG5h" value="mpsserver.home" />
       <node concept="55IIr" id="3XsdshnRWFX" role="398pKh" />
@@ -125,7 +124,7 @@
       <property role="TrG5h" value="com.strumenta.mpsserver.build" />
       <property role="3LESm3" value="e68faa49-32eb-4c70-9104-82b94b07f043" />
       <node concept="398BVA" id="7GBq2$eodiI" role="3LF7KH">
-        <ref role="398BVh" node="1Y19Fp43fwJ" resolve="project.home" />
+        <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
         <node concept="2Ry0Ak" id="7GBq2$eodiO" role="iGT6I">
           <property role="2Ry0Am" value="solutions" />
           <node concept="2Ry0Ak" id="7GBq2$eodiT" role="2Ry0An">
@@ -136,25 +135,31 @@
           </node>
         </node>
       </node>
-      <node concept="3rtmxn" id="4aufXyr8CBx" role="3bR31x">
-        <node concept="3LXTmp" id="4aufXyr8CBy" role="3rtmxm">
-          <node concept="3qWCbU" id="4aufXyr8CBz" role="3LXTna">
-            <property role="3qWCbO" value="icons/**, resources/**" />
-          </node>
-          <node concept="398BVA" id="4aufXyr8CB$" role="3LXTmr">
-            <ref role="398BVh" node="1Y19Fp43fwJ" resolve="project.home" />
-            <node concept="2Ry0Ak" id="4aufXyr8CB_" role="iGT6I">
-              <property role="2Ry0Am" value="solutions" />
-              <node concept="2Ry0Ak" id="4aufXyr8CBA" role="2Ry0An">
-                <property role="2Ry0Am" value="gescomplus.build" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
       <node concept="1SiIV0" id="5SYYrGBzAJI" role="3bR37C">
         <node concept="3bR9La" id="5SYYrGBzAJJ" role="1SiIV1">
           <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
+        </node>
+      </node>
+      <node concept="1BupzO" id="3Q_qRdUyV6U" role="3bR31x">
+        <property role="3ZfqAx" value="models" />
+        <property role="1Hdu6h" value="true" />
+        <property role="1HemKv" value="true" />
+        <node concept="3LXTmp" id="3Q_qRdUyWmj" role="1HemKq">
+          <node concept="398BVA" id="3Q_qRdUyWmb" role="3LXTmr">
+            <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
+            <node concept="2Ry0Ak" id="3Q_qRdUyWmc" role="iGT6I">
+              <property role="2Ry0Am" value="solutions" />
+              <node concept="2Ry0Ak" id="3Q_qRdUyWmd" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.mpsserver.build" />
+                <node concept="2Ry0Ak" id="3Q_qRdUyWme" role="2Ry0An">
+                  <property role="2Ry0Am" value="models" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3qWCbU" id="3Q_qRdUyWmk" role="3LXTna">
+            <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+          </node>
         </node>
       </node>
     </node>
