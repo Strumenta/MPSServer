@@ -99,8 +99,18 @@
       <concept id="4173297143638832582" name="jetbrains.mps.build.mps.runner.structure.BuildSolutionRunnerPlugin" flags="ng" index="_l39y" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps">
@@ -172,7 +182,7 @@
   </registry>
   <node concept="1l3spW" id="5yOqbw5UOfB">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-server" />
+    <property role="TrG5h" value="MpsServer-core" />
     <property role="turDy" value="build-server.xml" />
     <node concept="1wNqPr" id="1Y19Fp4b5CU" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -197,7 +207,7 @@
         </node>
       </node>
       <node concept="m$f5U" id="2p2ql82Ml4i" role="m$_yh">
-        <ref role="m$f5T" node="2p2ql82MkSi" resolve="MPSServer" />
+        <ref role="m$f5T" node="2p2ql82MkSi" resolve="MPSServer.core" />
       </node>
       <node concept="m$_yC" id="1Y19Fp43fxh" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
@@ -214,38 +224,49 @@
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
     </node>
-    <node concept="m$_wf" id="lEUZLtjCnN" role="3989C9">
-      <property role="m$_wk" value="MPSServer.build" />
-      <node concept="3_J27D" id="lEUZLtjCnO" role="m$_yQ">
-        <node concept="3Mxwew" id="lEUZLtjCnP" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.build" />
+    <node concept="1X3_iC" id="26HagJ0gblc" role="lGtFl">
+      <property role="3V$3am" value="parts" />
+      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/7389400916848080626" />
+      <node concept="m$_wf" id="lEUZLtjCnN" role="8Wnug">
+        <property role="m$_wk" value="MPSServer.build" />
+        <node concept="3_J27D" id="lEUZLtjCnO" role="m$_yQ">
+          <node concept="3Mxwew" id="lEUZLtjCnP" role="3MwsjC">
+            <property role="3MwjfP" value="MPSServer.build" />
+          </node>
         </node>
-      </node>
-      <node concept="3_J27D" id="lEUZLtjCnQ" role="m$_w8">
-        <node concept="3Mxwey" id="lEUZLtjCnR" role="3MwsjC">
-          <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
+        <node concept="3_J27D" id="lEUZLtjCnQ" role="m$_w8">
+          <node concept="3Mxwey" id="lEUZLtjCnR" role="3MwsjC">
+            <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
+          </node>
         </node>
-      </node>
-      <node concept="m$f5U" id="lEUZLtjCrf" role="m$_yh">
-        <ref role="m$f5T" node="lEUZLtjCeb" resolve="MPSServer.build" />
-      </node>
-      <node concept="m$_yC" id="lEUZLtjCnT" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
-      </node>
-      <node concept="3_J27D" id="lEUZLtjCnU" role="m_cZH">
-        <node concept="3Mxwew" id="lEUZLtjCnV" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.build" />
+        <node concept="m$f5U" id="lEUZLtjCrf" role="m$_yh">
+          <ref role="m$f5T" node="lEUZLtjCeb" resolve="MPSServer.build" />
         </node>
-      </node>
-      <node concept="m$_yC" id="lEUZLtjCnW" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
-      </node>
-      <node concept="m$_yC" id="lEUZLtjCnX" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
+        <node concept="m$_yC" id="lEUZLtjCnT" role="m$_yJ">
+          <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+        </node>
+        <node concept="3_J27D" id="lEUZLtjCnU" role="m_cZH">
+          <node concept="3Mxwew" id="lEUZLtjCnV" role="3MwsjC">
+            <property role="3MwjfP" value="MPSServer.build" />
+          </node>
+        </node>
+        <node concept="m$_yC" id="lEUZLtjCnW" role="m$_yJ">
+          <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
+        </node>
+        <node concept="m$_yC" id="lEUZLtjCnX" role="m$_yJ">
+          <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
+        </node>
       </node>
     </node>
-    <node concept="2G$12M" id="lEUZLtjCeb" role="3989C9">
-      <property role="TrG5h" value="MPSServer.build" />
+    <node concept="1X3_iC" id="26HagJ0gbja" role="lGtFl">
+      <property role="3V$3am" value="parts" />
+      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/7389400916848080626" />
+      <node concept="2G$12M" id="lEUZLtjCeb" role="8Wnug">
+        <property role="TrG5h" value="MPSServer.build" />
+      </node>
+    </node>
+    <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
+      <property role="TrG5h" value="MPSServer.core" />
       <node concept="1E1JtA" id="lEUZLtjCiX" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.build" />
@@ -306,9 +327,6 @@
           </node>
         </node>
       </node>
-    </node>
-    <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
-      <property role="TrG5h" value="MPSServer" />
       <node concept="1E1JtA" id="2p2ql82MkU0" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.deps" />
@@ -511,9 +529,13 @@
     <node concept="3b7kt6" id="5yOqbw5UOgF" role="10PD9s" />
     <node concept="55IIr" id="5yOqbw5UOfC" role="auvoZ" />
     <node concept="1l3spV" id="5yOqbw5UOfD" role="1l3spN">
-      <node concept="m$_wl" id="lEUZLtjCt4" role="39821P">
-        <ref role="m_rDy" node="lEUZLtjCnN" resolve="MPSServer.build" />
-        <node concept="pUk6x" id="lEUZLtjCu2" role="pUk7w" />
+      <node concept="1X3_iC" id="26HagJ0gbnf" role="lGtFl">
+        <property role="3V$3am" value="children" />
+        <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/4701820937132344003/7389400916848037006" />
+        <node concept="m$_wl" id="lEUZLtjCt4" role="8Wnug">
+          <ref role="m_rDy" node="lEUZLtjCnN" resolve="MPSServer.build" />
+          <node concept="pUk6x" id="lEUZLtjCu2" role="pUk7w" />
+        </node>
       </node>
       <node concept="m$_wl" id="BHWycb_1UD" role="39821P">
         <ref role="m_rDy" node="1Y19Fp43fxb" resolve="MPSServer" />
@@ -760,7 +782,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="2p2ql82MlGw" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-server" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
     </node>
     <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
       <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
@@ -1296,7 +1318,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="5jTJHMulSwU" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-server" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
     </node>
     <node concept="2sgV4H" id="3XsdshnRxNz" role="1l3spa">
       <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
