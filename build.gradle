@@ -210,8 +210,8 @@ task checkLanguageTests() {
 task packageServer(type: Zip, dependsOn: [buildServer]) {
     archiveBaseName = 'com.strumenta.mpsserver'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-server/**'
-    exclude 'MpsServer-server/*.zip'
+    include 'MpsServer-core/**'
+    exclude 'MpsServer-core/*.zip'
 }
 
 publishing {
@@ -244,14 +244,6 @@ publishing {
     }
 }
 
-task foo {
-	doLast {
-		println rootProject.findProperty('github.publication.token')
-		println rootProject.findProperty('bintray_user')
-		println rootProject.findProperty('bintray_api_key')
-	}
-
-}
 
 bintray {
     user = rootProject.findProperty('bintray_user')
@@ -269,29 +261,9 @@ bintray {
 	    	vcsTag = 'v'+project.version
 	    }
     }
-    // version {
-    // 	name = 'Version_' + project.version + '_exp_1'
-    // 	released = new Date()
-    // }
+
     publications = ['mpsServerCore'] 
     dryRun = false
     publish = true
     override = true
-}
-
-
-githubRelease {
-    owner = 'Strumenta'
-    repo = 'MPSServer'
-    token = rootProject.findProperty('github.publication.token') ?: 'empty'
-    tagName = project.version
-    targetCommitish = "master"
-    releaseName = 'Version ' + project.version
-    //body = releaseNotes
-    prerelease = true
-    releaseAssets = packageServer.outputs.files
-    //dryRun = true
-    overwrite = true
-    draft = true
-    body = "Experiment"
 }
