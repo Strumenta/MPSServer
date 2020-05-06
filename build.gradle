@@ -149,7 +149,7 @@ task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExamples]
 	script new File('mpscode/build-launcher.xml')
 }
 
-task justRunLauncher(type: RunAntScript, dependsOn: [buildLauncher]) {
+task justRunLauncher(type: RunAntScript, dependsOn: []) {
 	targets = ['run.com.strumenta.mpsserver.launcher']
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
@@ -157,7 +157,7 @@ task justRunLauncher(type: RunAntScript, dependsOn: [buildLauncher]) {
 }
 
 task runLauncher(dependsOn: [buildLauncher, justRunLauncher]) {
-	
+
 }
 
 def examineTestFile(file) {
