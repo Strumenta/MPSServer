@@ -25,7 +25,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '1.0.1-alpha9'
+version = '1.0.1-alpha10'
 
 configurations {
 	mps
@@ -218,6 +218,20 @@ task packageServer(type: Zip, dependsOn: [buildServer]) {
     exclude 'MpsServer-core/*.zip'
 }
 
+task packageExamples(type: Zip, dependsOn: [buildServer]) {
+    archiveBaseName = 'com.strumenta.mpsserver.examples'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'MpsServer-examples/**'
+    exclude 'MpsServer-examples/*.zip'
+}
+
+task packageLauncher(type: Zip, dependsOn: [buildServer]) {
+    archiveBaseName = 'com.strumenta.mpsserver.launcher'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'MpsServer-launcher/**'
+    exclude 'MpsServer-launcher/*.zip'
+}
+
 publishing {
     publications {
         mpsServerCore(MavenPublication) {
@@ -245,6 +259,56 @@ publishing {
                 }
             }
         }
+		mpsServerExamples(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-examples'
+            artifact packageExamples
+            version project.version
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }    
+		mpsServerLauncher(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-launcher'
+            artifact packageLauncher
+            version project.version
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }             
     }
 }
 
@@ -266,7 +330,7 @@ bintray {
 	    }
     }
 
-    publications = ['mpsServerCore'] 
+    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher'] 
     dryRun = false
     publish = true
     override = true
