@@ -218,14 +218,14 @@ task packageServer(type: Zip, dependsOn: [buildServer]) {
     exclude 'MpsServer-core/*.zip'
 }
 
-task packageExamples(type: Zip, dependsOn: [buildServer]) {
+task packageExamples(type: Zip, dependsOn: [buildExamples]) {
     archiveBaseName = 'com.strumenta.mpsserver.examples'
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'MpsServer-examples/**'
     exclude 'MpsServer-examples/*.zip'
 }
 
-task packageLauncher(type: Zip, dependsOn: [buildServer]) {
+task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
     archiveBaseName = 'com.strumenta.mpsserver.launcher'
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'MpsServer-launcher/**'
