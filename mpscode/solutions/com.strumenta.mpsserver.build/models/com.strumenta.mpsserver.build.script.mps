@@ -51,7 +51,6 @@
         <child id="8618885170173601778" name="tail" index="2Ry0An" />
       </concept>
       <concept id="6647099934206700647" name="jetbrains.mps.build.structure.BuildJavaPlugin" flags="ng" index="10PD9b" />
-      <concept id="7389400916848050071" name="jetbrains.mps.build.structure.BuildLayout_Zip" flags="ng" index="3981dG" />
       <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
@@ -1097,39 +1096,13 @@
     <node concept="3b7kt6" id="1yyBh0vFuUI" role="10PD9s" />
     <node concept="55IIr" id="1yyBh0vFuUJ" role="auvoZ" />
     <node concept="1l3spV" id="1yyBh0vFuUK" role="1l3spN">
-      <node concept="3981dG" id="1yyBh0vFuUL" role="39821P">
-        <node concept="3_J27D" id="1yyBh0vFuUM" role="Nbhlr">
-          <node concept="3Mxwew" id="1yyBh0vFuUN" role="3MwsjC">
-            <property role="3MwjfP" value="FinancialCalc-" />
-          </node>
-          <node concept="3Mxwey" id="1yyBh0vFuUO" role="3MwsjC">
-            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
-          </node>
-          <node concept="3Mxwew" id="1yyBh0vFuUP" role="3MwsjC">
-            <property role="3MwjfP" value=".zip" />
-          </node>
-        </node>
-        <node concept="m$_wl" id="1yyBh0vFuUQ" role="39821P">
-          <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
-          <node concept="pUk6x" id="1yyBh0vFuV0" role="pUk7w" />
-        </node>
+      <node concept="m$_wl" id="1yyBh0vFuUQ" role="39821P">
+        <ref role="m_rDy" node="3XsdshnRvVz" resolve="FinancialCalc" />
+        <node concept="pUk6x" id="1yyBh0vFuV0" role="pUk7w" />
       </node>
-      <node concept="3981dG" id="3XsdshnRw4L" role="39821P">
-        <node concept="3_J27D" id="3XsdshnRw4N" role="Nbhlr">
-          <node concept="3Mxwew" id="3XsdshnRw4Y" role="3MwsjC">
-            <property role="3MwjfP" value="BusinessOrg-" />
-          </node>
-          <node concept="3Mxwey" id="3XsdshnRw50" role="3MwsjC">
-            <ref role="3Mxwex" node="1yyBh0vFuUz" resolve="mpsserver.version" />
-          </node>
-          <node concept="3Mxwew" id="3XsdshnRw54" role="3MwsjC">
-            <property role="3MwjfP" value=".zip" />
-          </node>
-        </node>
-        <node concept="m$_wl" id="3XsdshnRw58" role="39821P">
-          <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
-          <node concept="pUk6x" id="3XsdshnRw5c" role="pUk7w" />
-        </node>
+      <node concept="m$_wl" id="3XsdshnRw58" role="39821P">
+        <ref role="m_rDy" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
+        <node concept="pUk6x" id="3XsdshnRw5c" role="pUk7w" />
       </node>
     </node>
     <node concept="2sgV4H" id="1yyBh0vFuV1" role="1l3spa">
