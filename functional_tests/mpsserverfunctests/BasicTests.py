@@ -37,7 +37,9 @@ class MyTestCase(unittest.TestCase):
     def test_modules(self):
         r = requests.get('http://localhost:2904/modules')
         self.assertEqual(200, r.status_code)
-        print(r.json())
+        financial_sandboxes = [m for m in r.json() if m["name"] == "com.strumenta.financialcalc.sandbox"]
+        self.assertEqual(1, len(financial_sandboxes))
+        self.assertEqual("f56d08a3-65f8-447b-bdb0-6e1a85c1e08d", financial_sandboxes[0]["uuid"])
 
 
 if __name__ == '__main__':
