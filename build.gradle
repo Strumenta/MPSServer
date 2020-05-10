@@ -153,7 +153,7 @@ task justRunLauncher(type: RunAntScript, dependsOn: []) {
 	targets = ['run.com.strumenta.mpsserver.launcher']
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
-	script new File('mpscode/build-launcher-mod.xml')
+	script new File('mpscode/build-launcher.xml')
 }
 
 task runLauncher(dependsOn: [buildLauncher, justRunLauncher]) {
