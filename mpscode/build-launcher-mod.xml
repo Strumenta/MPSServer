@@ -43,48 +43,10 @@
     <pathelement location="${artifacts.mps}/lib/log4j.jar" />
   </path>
   
-<!--   <target name="assemble" depends="declare-mps-tasks">
-  </target> -->
-<!--   
-  <target name="buildDependents">
-  </target>
-  
-  <target name="fetchDependencies" /> -->
-  
-  <!-- <target name="build" depends="assemble, run-mps-code" /> -->
-  
-  <target name="clean">
-    <!-- <delete dir="${build.mps.config.path}" />
-    <delete dir="${build.mps.system.path}" />
-    <delete dir="${build.tmp}" />
-    <delete dir="${build.layout}" /> -->
-  </target>
-  
-<!--   <target name="compileJava" depends="java.compile.com.strumenta.mpsserver.launcher" />
-  
-  <target name="processResources" />
-  
-  <target name="classes" depends="compileJava, processResources" />
-  
-  <target name="test" depends="classes" />
-  
-  <target name="check" depends="test" />
- -->  
-  <!-- <target name="generate" depends="declare-mps-tasks, fetchDependencies">
-  </target>
-   -->
   <target name="declare-mps-tasks">
     <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
   </target>
-  
-  <target name="makeDependents">
-  </target>
-  
-  <!-- <target name="run-mps-code" depends="assemble, run.com.strumenta.mpsserver.launcher" /> -->
-  
-  <!-- <target name="java.compile.com.strumenta.mpsserver.launcher" depends="fetchDependencies">
-  </target> -->
-  
+    
   <target name="run.com.strumenta.mpsserver.launcher" depends="declare-mps-tasks">
     <echo message="Running code from com.strumenta.mpsserver.launcher solution in MPS" />
 
