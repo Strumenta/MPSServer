@@ -4,7 +4,8 @@ import time
 
 class MyTestCase(unittest.TestCase):
 
-    def try_to_connect(self, attempts_left = 10):
+    @classmethod
+    def try_to_connect(cls, attempts_left = 100):
         try:
             print ("  attemps left: %d" % attempts_left)
             r = requests.get('http://localhost:2904')
@@ -18,13 +19,14 @@ class MyTestCase(unittest.TestCase):
             #print("failed: %s" % str(e))
             if attempts_left > 0:
                 time.sleep(5)
-                self.try_to_connect(attempts_left - 1)
+                return cls.try_to_connect(attempts_left - 1)
             else:
                 raise Exception("Too many attempts, giving up")
 
-    def setUp(self):
+    @classmethod
+    def setUpClass(cls):
         print("Waiting for server to be up...")
-        if not self.try_to_connect():
+        if not cls.try_to_connect():
             raise Exception("Initialization failed")
 
 
