@@ -9,6 +9,11 @@ class MyTestCase(unittest.TestCase):
             print ("  attemps left: %d" % attempts_left)
             r = requests.get('http://localhost:2904')
             print(r.status_code)
+            if r.status_code == 200:
+                return True
+            else:
+                print("status code: %d" % r.status_code)
+                return False
         except Exception as e:
             #print("failed: %s" % str(e))
             if attempts_left > 0:
@@ -19,11 +24,20 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self):
         print("Waiting for server to be up...")
-        self.try_to_connect()
+        if not self.try_to_connect():
+            raise Exception("Initialization failed")
 
 
-    def test_something(self):
-        self.assertEqual(True, False)
+    def test_healthcheck(self):
+        r = requests.get('http://localhost:2904')
+        self.assertEqual(200, r.status_code)
+        self.assertEqual("MPS Server up and running.", r.text)
+
+
+    def test_modules(self):
+        r = requests.get('http://localhost:2904/modules')
+        self.assertEqual(200, r.status_code)
+        print(r.json())
 
 
 if __name__ == '__main__':
