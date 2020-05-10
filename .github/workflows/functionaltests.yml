@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11      
-      - run: cd functional_tests
-      - run: pip install -r requirements.txt
-      - run: sh execute_functional_tests.sh
-    
+      - run: |
+          cd functional_tests
+          pip install -r requirements.txt
+          sh execute_functional_tests.sh
