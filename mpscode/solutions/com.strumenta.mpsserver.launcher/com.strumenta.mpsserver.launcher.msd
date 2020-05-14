@@ -30,6 +30,7 @@
     <module reference="48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)" version="0" />
     <module reference="3228605e-7b74-4057-911c-041cdcc16947(com.strumenta.mpsserver.launcher)" version="0" />
     <module reference="bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)" version="0" />
+    <module reference="f4ec9ada-945a-4f6f-91d0-2173a5a724f1(gescomplus.dsl.mpsserver.cmdlinelauncher)" version="0" />
     <module reference="fdaaf35f-8ee3-4c37-b09d-9efaeaaa7a41(jetbrains.mps.core.tool.environment)" version="0" />
     <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
   </dependencyVersions>
