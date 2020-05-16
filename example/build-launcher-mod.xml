@@ -1,8 +1,8 @@
 <project name="MpsServer-launcher" default="run.com.strumenta.mpsserver.launcher">
 
-  <property name="build.dir" location="build" />
+<!--   <property name="build.dir" location="build" />
   <property name="build.mps.config.path" location="${build.dir}/config" />
-  <property name="build.mps.system.path" location="${build.dir}/system" />
+  <property name="build.mps.system.path" location="${build.dir}/system" /> -->
 
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
@@ -15,6 +15,7 @@
   </target>
     
   <target name="run.com.strumenta.mpsserver.launcher" depends="declare-mps-tasks">
+    <echo message="${toString:classpath}" />
     <echo message="Running code from com.strumenta.mpsserver.launcher solution in MPS" />
     <runMPS solution="3228605e-7b74-4057-911c-041cdcc16947(com.strumenta.mpsserver.launcher)" startClass="com.strumenta.mpsserver.launcher.MainClass" startMethod="mpsMain">
       <plugin path="${artifacts.MpsServer-core}/MPSServer.core.plugin" id="MPSServer.core.plugin" />
@@ -137,12 +138,12 @@
       <macro name="artifacts.root" path="${artifacts.root}" />
       <macro name="mps.home" path="${mps.home}" /> -->
       
-      <jvmargs>
+<!--       <jvmargs>
         <arg value="-Didea.config.path=${build.mps.config.path}" />
         <arg value="-Didea.system.path=${build.mps.system.path}" />
         <arg value="-ea" />
         <arg value="-Xmx512m" />
-      </jvmargs>
+      </jvmargs> -->
       
     </runMPS>
   </target>
