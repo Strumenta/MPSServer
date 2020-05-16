@@ -132,10 +132,10 @@
       <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.devkit.aspect.vcs.jar" />
       <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.vcs.mergehints.jar" />
 
-      <macro name="project.home" path="${project.home}" />
+<!--       <macro name="project.home" path="${project.home}" />
       <macro name="mpsserver.home" path="${mpsserver.home}" />
       <macro name="artifacts.root" path="${artifacts.root}" />
-      <macro name="mps.home" path="${mps.home}" />
+      <macro name="mps.home" path="${mps.home}" /> -->
       
       <jvmargs>
         <arg value="-Didea.config.path=${build.mps.config.path}" />
