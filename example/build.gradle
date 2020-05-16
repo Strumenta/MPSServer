@@ -1,0 +1,101 @@
+import de.itemis.mps.gradle.BuildLanguages
+import de.itemis.mps.gradle.TestLanguages
+import de.itemis.mps.gradle.GenerateLibrariesXml
+import de.itemis.mps.gradle.RunAntScript
+import groovy.json.JsonSlurper
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    }
+
+    dependencies {
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.0.85.03fbeda'
+    }
+}
+
+configurations {
+	mps
+	mpsArtifacts
+	ant_lib
+	libs
+	distribution
+}
+
+ext.mpsVersion = '2019.3.1'
+ext.mpsserverVersion = '1.1.0-rc1'
+
+dependencies {
+	ant_lib "org.apache.ant:ant-junit:1.10.1"
+	mps "com.jetbrains:mps:$mpsVersion"
+	mpsArtifacts "com.strumenta.mpsserver:mpsserver-core:$mpsserverVersion"
+	mpsArtifacts "com.strumenta.mpsserver:mpsserver-launcher:$mpsserverVersion"
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'https://dl.bintray.com/strumenta/strumenta-oss-maven'
+	}
+	maven {
+		url 'https://projects.itemis.de/nexus/content/groups/OS/'
+	}
+}
+
+if (!hasProperty("jdk_home")) {
+	def java_home = System.properties['java.home']
+	def jdk_home = java_home
+
+	// In JDK >=11 we look for javac
+	if (!file("$jdk_home/bin/javac").isFile() && !file("$jdk_home/bin/javac.exe").isFile()) {
+		// In JDK <11 we look for the tools.jar
+		if (!file("$jdk_home/lib/tools.jar").isFile()) {
+			jdk_home = jdk_home + "/.."
+		}
+		if (!file("$jdk_home/lib/tools.jar").isFile()) {
+			throw new GradleException("Not finding the JDK...")
+		}		
+	} 
+	
+	ext.jdk_home = jdk_home
+}
+
+ext.artifactsDir = new File(rootDir, 'mpsserver/artifacts')
+ext.mpsDir = new File(artifactsDir, 'mps')
+ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
+	true
+}) + project.files("$project.jdk_home/lib/tools.jar")
+ext.antScriptArgs =  [
+	"-Dartifacts.MpsServer-core=${artifactsDir.getAbsolutePath()}/MpsServer-core",
+	"-Dartifacts.MpsServer-launcher=${artifactsDir.getAbsolutePath()}/MpsServer-launcher",
+	"-Dartifacts.mps=${artifactsDir.getAbsolutePath()}/mps",
+	"-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
+]
+
+task resolveMps(type: Copy) {
+	if (!project.hasProperty('mpsPath')) {
+		println "Downloading MPS in ${mpsDir.getAbsolutePath()}"
+		from {
+			configurations.mps.resolve().collect { zipTree(it) }
+		}
+		into mpsDir
+	} else {
+		println "MPS already installed in ${mpsDir.getAbsolutePath()}"
+	}
+}
+
+task resolveMpsArtifacts(type: Copy) {
+	from {
+		configurations.mpsArtifacts.resolve().collect { zipTree(it) }
+	}
+	into artifactsDir
+}
+
+task launchMpsServer(type: RunAntScript, dependsOn: [resolveMps, resolveMpsArtifacts]) {
+    targets = ['run.com.strumenta.mpsserver.launcher']
+    scriptArgs = antScriptArgs
+    scriptClasspath = buildScriptClasspath
+    script new File('build-launcher-mod.xml')	
+}
