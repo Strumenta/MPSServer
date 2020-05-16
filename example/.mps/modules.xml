@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/com.strumenta.todos/com.strumenta.todos.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.strumenta.todos/sandbox/com.strumenta.todos.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
