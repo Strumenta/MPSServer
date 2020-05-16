@@ -3,10 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.mps.config.path" location="${build.dir}/config" />
   <property name="build.mps.system.path" location="${build.dir}/system" />
-  <property name="build.tmp" location="${build.dir}/tmp/MpsServer-launcher" />
-  <property name="build.layout" location="${build.dir}/artifacts/MpsServer-launcher" />
   <property name="mpsserver.version" value="" />
-  <property name="project.home" location="${basedir}" />
   <property name="mpsserver.home" location="${basedir}" />
   <property name="artifacts.root" location="${basedir}/artifacts" />
   <property name="mps.home" location="" />
@@ -20,10 +17,8 @@
   <property name="artifacts.mpsDistribution" location="${mps.home}" />
   <property name="artifacts.MpsServer-core" location="${build.dir}/artifacts/MpsServer-core" />
   <property name="artifacts.MpsServer-launcher" location="${build.dir}/artifacts/MpsServer-launcher" />
-  <property name="artifacts.MpsServer-examples" location="${build.dir}/artifacts/MpsServer-examples" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property file="${artifacts.MpsServer-core}/build.properties" prefix="import.MpsServer-core" />
-  <property file="${artifacts.MpsServer-examples}/build.properties" prefix="import.MpsServer-examples" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
   <property name="mps.date" value="${import.mps.mps.date}" />
   <property name="mps.build.vcs.number" value="${import.mps.mps.build.vcs.number}" />
@@ -32,11 +27,9 @@
   <property name="mps.mps.build.counter" value="${import.mps.mps.mps.build.counter}" />
   <property name="mpsBootstrapCore.version" value="${import.mps.mpsBootstrapCore.version}" />
   <property name="MpsServer-core.mpsserver.version" value="${import.MpsServer-core.MpsServer-core.mpsserver.version}" />
-  <property name="MpsServer-examples.mpsserver.version" value="${import.MpsServer-examples.MpsServer-examples.mpsserver.version}" />
   <property name="environment" value="env" />
   <property name="env.JAVA_HOME" value="${java.home}/.." />
   <property name="jdk.home" value="${env.JAVA_HOME}" />
-  <property name="mps.generator.skipUnmodifiedModels" value="false" />
   
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
@@ -52,7 +45,6 @@
     <echo message="Running code from com.strumenta.mpsserver.launcher solution in MPS" />
     <runMPS solution="3228605e-7b74-4057-911c-041cdcc16947(com.strumenta.mpsserver.launcher)" startClass="com.strumenta.mpsserver.launcher.MainClass" startMethod="mpsMain">
       <plugin path="${artifacts.MpsServer-core}/MPSServer.core.plugin" id="MPSServer.core.plugin" />
-<!--       <plugin path="${artifacts.MpsServer-examples}/BusinessOrg" id="BusinessOrg" /> -->
       <plugin path="${artifacts.mps}/plugins/mps-build" id="jetbrains.mps.build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" id="jetbrains.mps.core" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" id="jetbrains.mps.testing" />
@@ -188,7 +180,4 @@
     </runMPS>
   </target>
   
-  <target name="cleanSources">
-    <delete dir="${project.home}/solutions/com.strumenta.mpsserver.launcher/source_gen" />
-  </target>
 </project>
