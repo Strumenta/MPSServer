@@ -1,12 +1,9 @@
-import groovy.xml.*
-
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
         mavenLocal()
     }
-
 }
 
 plugins {
@@ -15,22 +12,6 @@ plugins {
 
 // must build this project!
 
-configurations {
-	//mps
-	mpsArtifacts
-	//ant_lib
-}
-
-//ext.mpsVersion = '2019.3.1'
-ext.mpsserverVersion = '1.1.0-rc1'
-
-dependencies {
-	//ant_lib "org.apache.ant:ant-junit:1.10.1"
-	//mps "com.jetbrains:mps:$mpsVersion"
-	mpsArtifacts "com.strumenta.mpsserver:mpsserver-core:$mpsserverVersion"
-	mpsArtifacts "com.strumenta.mpsserver:mpsserver-launcher:$mpsserverVersion"
-}
-
 repositories {
 	mavenCentral()
 	maven {
@@ -38,11 +19,5 @@ repositories {
 	}
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
-	}
-}
-
-task foo() {
-	doLast{
-		println("FOO")
 	}
 }
