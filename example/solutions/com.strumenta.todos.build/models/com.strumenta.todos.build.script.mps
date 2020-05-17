@@ -157,7 +157,7 @@
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxc" role="m$_yQ">
         <node concept="3Mxwew" id="1Y19Fp43fxd" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.core.plugin" />
+          <property role="3MwjfP" value="Todos.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxe" role="m$_w8">
@@ -170,7 +170,7 @@
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxi" role="m_cZH">
         <node concept="3Mxwew" id="1Y19Fp43fxj" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.core.plugin" />
+          <property role="3MwjfP" value="Todos.plugin" />
         </node>
       </node>
     </node>

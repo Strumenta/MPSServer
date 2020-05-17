@@ -28,12 +28,12 @@
   </path>
   
   <target name="assemble" depends="classes, declare-mps-tasks">
-    <mkdir dir="${build.layout}/MPSServer.core.plugin" />
-    <mkdir dir="${build.layout}/MPSServer.core.plugin/META-INF" />
-    <echoxml file="${build.layout}/MPSServer.core.plugin/META-INF/plugin.xml">
+    <mkdir dir="${build.layout}/Todos.plugin" />
+    <mkdir dir="${build.layout}/Todos.plugin/META-INF" />
+    <echoxml file="${build.layout}/Todos.plugin/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>Todos.plugin</id>
-        <name>MPSServer.core.plugin</name>
+        <name>Todos.plugin</name>
         <version>${version}</version>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
@@ -43,8 +43,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.layout}/MPSServer.core.plugin/languages" />
-    <mkdir dir="${build.layout}/MPSServer.core.plugin/languages/Todos.group" />
+    <mkdir dir="${build.layout}/Todos.plugin/languages" />
+    <mkdir dir="${build.layout}/Todos.plugin/languages/Todos.group" />
     <mkdir dir="${build.tmp}/default/com.strumenta.todos.jar" />
     <mkdir dir="${build.tmp}/default/com.strumenta.todos.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.strumenta.todos.jar/META-INF/module.xml">
@@ -123,7 +123,7 @@
         <sources jar="com.strumenta.todos-src.jar" descriptor="com.strumenta.todos.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/MPSServer.core.plugin/languages/Todos.group/com.strumenta.todos.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Todos.plugin/languages/Todos.group/com.strumenta.todos.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.strumenta.todos" />
       <fileset dir="${project.home}/languages/com.strumenta.todos/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.strumenta.todos.jar" />
@@ -167,7 +167,7 @@
         <sources jar="com.strumenta.todos-src.jar" descriptor="com.strumenta.todos.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/MPSServer.core.plugin/languages/Todos.group/com.strumenta.todos-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Todos.plugin/languages/Todos.group/com.strumenta.todos-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.strumenta.todos#01" />
       <fileset dir="${project.home}/languages/com.strumenta.todos/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.strumenta.todos-generator.jar" />
@@ -178,7 +178,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-com.strumenta.todos-generator-templates">
       <fileset dir="${project.home}/languages/com.strumenta.todos/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/MPSServer.core.plugin/languages/Todos.group/com.strumenta.todos-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Todos.plugin/languages/Todos.group/com.strumenta.todos-src.jar" duplicate="preserve">
       <fileset dir="${project.home}/languages/com.strumenta.todos/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
