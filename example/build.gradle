@@ -4,13 +4,17 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
-        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        //maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
     }
 
-    dependencies {
-        classpath 'de.itemis.mps:mps-gradle-plugin:1.4.221.f67e0e9'
-    }
+    // dependencies {
+    //     classpath 'de.itemis.mps:mps-gradle-plugin:1.4.221.f67e0e9'
+    // }
 }
+
+// plugins {
+//     id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
+// }
 
 configurations {
 	mps
