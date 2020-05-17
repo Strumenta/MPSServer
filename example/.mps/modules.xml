@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/com.strumenta.todos/com.strumenta.todos.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.strumenta.todos/sandbox/com.strumenta.todos.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.todos.build/com.strumenta.todos.build.msd" folder="" />
     </projectModules>
   </component>
 </project>

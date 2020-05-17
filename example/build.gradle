@@ -16,6 +16,8 @@ buildscript {
 //     id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
 // }
 
+// must build this project!
+
 configurations {
 	mps
 	mpsArtifacts
@@ -96,6 +98,9 @@ task resolveMpsArtifacts(type: Copy) {
 
 task generateAntBuildForMpsServer {
 	doLast { 
+	    if (!project.buildDir.exists()){
+	        project.buildDir.mkdir();
+	    }
 		file(mpsServerAntBuildScript).withWriter { writer ->
 			def xml = new MarkupBuilder(new IndentPrinter(writer, "    ", true))
 			xml.doubleQuotes = true
