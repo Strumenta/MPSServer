@@ -16,8 +16,6 @@ configurations {
 	mps
 	mpsArtifacts
 	ant_lib
-	libs
-	distribution
 }
 
 ext.mpsVersion = '2019.3.1'
