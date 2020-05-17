@@ -130,7 +130,7 @@
   <node concept="1l3spW" id="5yOqbw5UOfB">
     <property role="2DA0ip" value="../.." />
     <property role="TrG5h" value="Todos" />
-    <property role="turDy" value="build-server.xml" />
+    <property role="turDy" value="build-todos.xml" />
     <node concept="2sgV4H" id="1Y19Fp43fwF" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="1Y19Fp43fwG" role="2JcizS">
