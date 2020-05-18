@@ -43,7 +43,7 @@ dependencies {
 generate {
     projectLocation = new File(".")
     mpsConfig = configurations.mps
-    debug = true
+    //debug = true
 }
 
 // void processLanguage(languageDir) {
