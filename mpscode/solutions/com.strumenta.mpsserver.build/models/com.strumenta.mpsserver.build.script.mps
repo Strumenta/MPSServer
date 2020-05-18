@@ -219,6 +219,9 @@
       <node concept="m$_yC" id="7C6tnXfWyCZ" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
       </node>
+      <node concept="m$_yC" id="3mLHDKYZM8U" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:6EN03E8oSte" resolve="jetbrains.mps.ide.make" />
+      </node>
       <node concept="m$_yC" id="565tb0CY2Lt" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
@@ -499,6 +502,31 @@
         <node concept="1SiIV0" id="565tb0CXAbA" role="3bR37C">
           <node concept="3bR9La" id="565tb0CXAbB" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:ymnOULAU1u" resolve="jetbrains.mps.lang.test.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mLHDKYZLKY" role="3bR37C">
+          <node concept="3bR9La" id="3mLHDKYZLKZ" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:71aLKqdKvPp" resolve="jetbrains.mps.ide.make" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mLHDKYZLL0" role="3bR37C">
+          <node concept="3bR9La" id="3mLHDKYZLL1" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6L0C" resolve="collections.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mLHDKYZLL2" role="3bR37C">
+          <node concept="3bR9La" id="3mLHDKYZLL3" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6Lg2" resolve="jetbrains.mps.smodel.resources" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mLHDKYZLL4" role="3bR37C">
+          <node concept="3bR9La" id="3mLHDKYZLL5" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6LgV" resolve="jetbrains.mps.make.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mLHDKYZLL6" role="3bR37C">
+          <node concept="3bR9La" id="3mLHDKYZLL7" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
           </node>
         </node>
       </node>
@@ -813,6 +841,9 @@
     <node concept="1l3spV" id="2p2ql82Ml_Z" role="1l3spN">
       <node concept="L2wRC" id="2p2ql82MlH$" role="39821P">
         <ref role="L2wRA" node="2p2ql82Ml_o" resolve="com.strumenta.mpsserver.launcher" />
+      </node>
+      <node concept="L2wRC" id="3mLHDKYZOzr" role="39821P">
+        <ref role="L2wRA" node="3mLHDKYZ7WC" resolve="com.strumenta.mpsserver.operations" />
       </node>
     </node>
     <node concept="2sgV4H" id="2p2ql82MlAg" role="1l3spa">
