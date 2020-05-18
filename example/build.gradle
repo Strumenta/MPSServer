@@ -3,12 +3,18 @@ buildscript {
         mavenCentral()
         jcenter()
         mavenLocal()
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    }
+    dependencies {
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.2.+'
     }
 }
 
-plugins {
+/*plugins {
     id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
-}
+}*/
+
+apply plugin: 'generate-models'
 
 // must build this project!
 
@@ -21,3 +27,89 @@ repositories {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
 }
+
+import groovy.xml.*
+
+configurations {
+    mps
+}
+
+ext.mpsVersion = '2019.3.1'
+
+dependencies {
+    mps "com.jetbrains:mps:$mpsVersion"
+}
+
+generate {
+    projectLocation = new File(".")
+    mpsConfig = configurations.mps
+}
+
+// void processLanguage(languageDir) {
+// 	println("processing language dir: ${languageDir}")
+// 	def mplFile = new File("${languageDir}/${languageDir.name}.mpl")
+// 	def mpl = new XmlSlurper().parse(mplFile)
+// 	String uuid = mpl.attributes()['uuid']
+// 	String namespace = mpl.attributes()['namespace']
+// 	println("  uuid: ${uuid}")
+// 	println("  namespace: ${namespace}")
+// 	mpl.dependencyVersions.module.each {
+// 		println(it.attributes()['reference'])
+// 	}
+// }
+
+// task processLanguages {
+// 	println("${mpsserver.mpsProjectPath(project)}")
+// 	def languagesDir = new File("${mpsserver.mpsProjectPath(project)}/languages").eachFile {
+// 		processLanguage(it)		
+// 	}
+// }
+
+// task generateBuild {
+// 	println("Generating build")
+// 	new File("${project.buildDir}/generated-build.xml").withWriter { writer ->
+// 		def mpsDir = project.mpsserver.mpsDir(project)
+
+// 		def xml = new MarkupBuilder(new IndentPrinter(writer, "    ", true))
+// 		def name = project.name
+// 		def qname = "com.strumenta.${project.name.toLowerCase()}"
+// 		xml.doubleQuotes = true
+// 		xml.project(name:name, default:"build") {
+
+// 			property(name:"build.dir", location:"build")
+//   			property(name:"build.tmp", location: "\${build.dir}/tmp/${name}")
+//   			property(name:"build.layout", location:"\${build.dir}/artifacts/${name}")
+
+// 			path(id:'path.mps.ant.path') {
+// 	  			pathelement(location:"${mpsDir.getAbsolutePath()}/lib/ant/lib/ant-mps.jar")
+// 	  			pathelement(location:"${mpsDir.getAbsolutePath()}/lib/jdom.jar")
+// 	  			pathelement(location:"${mpsDir.getAbsolutePath()}/lib/log4j.jar")
+// 			}
+
+// 			 target(name:"assemble", depends:"classes, declare-mps-tasks") {			
+// 			    xml.mkdir(dir:"\${build.layout}/${name}.plugin")
+// 			    xml.mkdir(dir:"\${build.layout}/${name}.plugin/META-INF")			  
+// 			    echoxml(file:"\${build.layout}/${name}.plugin/META-INF/plugin.xml"){			    	
+// 			    	//xml.createNode('idea-plugin', ["xmlns:xi":"http://www.w3.org/2001/XInclude"]) {
+// 			    //     <id>Todos.plugin</id>
+// 			    //     <name>Todos.plugin</name>
+// 			    //     <version>${version}</version>
+// 			    //     <depends>jetbrains.mps.core</depends>
+// 			    //     <depends>jetbrains.mps.build</depends>
+			        
+// 			    //     <extensions defaultExtensionNs="com.intellij">
+// 			    //       <mps.LanguageLibrary dir="/languages" />
+// 			    //     </extensions>
+// 			    //	}
+// 			    }
+// 			    xml.mkdir(dir:"\${build.layout}/${name}.plugin/languages")
+//     			xml.mkdir(dir:"\${build.layout}/${name}.plugin/languages/${name}.group")
+//     			xml.mkdir(dir:"\${build.tmp}/default/${qname}.jar")
+//     			xml.mkdir(dir:"\${build.tmp}/default/${qname}.jar/META-INF")
+//     			echoxml(file:"\${build.tmp}/default/${qname}.jar/META-INF/module.xml") {
+
+//     			}
+// 			}
+// 		}
+// 	}
+// }
