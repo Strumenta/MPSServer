@@ -10,11 +10,11 @@ buildscript {
     }
 }
 
-/*plugins {
+plugins {
     id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
-}*/
+}
 
-apply plugin: 'generate-models'
+//apply plugin: 'generate-models'
 
 // must build this project!
 
@@ -26,6 +26,7 @@ repositories {
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
+	mavenLocal()
 }
 
 import groovy.xml.*
@@ -34,16 +35,20 @@ configurations {
     mps
 }
 
-ext.mpsVersion = '2019.3.1'
+// ext.mpsVersion = '2019.3.1'
 
-dependencies {
-    mps "com.jetbrains:mps:$mpsVersion"
-}
+// dependencies {
+//     mps "com.jetbrains:mps:$mpsVersion"
+// }
 
-generate {
-    projectLocation = new File(".")
-    mpsConfig = configurations.mps
-    //debug = true
+// generate {
+//     projectLocation = new File(".")
+//     mpsConfig = configurations.mps
+//     //debug = true
+// }
+
+mpsserver {
+	mpsServerVersion = '1.1.0-rc2'
 }
 
 // void processLanguage(languageDir) {
