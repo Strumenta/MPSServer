@@ -11,3 +11,44 @@ The server can be started from MPS running normally or in headless mode.
 There is also a framework to define web editors interoperable with MPSServer. This framework is called [WebEditKit](https://github.com/Strumenta/webeditkit) and it is open-source.
 
 You can find some basic instructions and an example here: https://github.com/Strumenta/calc-webeditkit-example
+
+## The simplest way to use MPSServer
+
+Simply look in the `example` directory.
+
+Basically you need a simple build.gradle file in your project and that is it.
+
+1. Create this build.gradle file
+
+```
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    }
+}
+
+plugins {
+    id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'https://dl.bintray.com/strumenta/strumenta-oss-maven'
+	}
+	maven {
+		url 'https://projects.itemis.de/nexus/content/groups/OS/'
+	}
+}
+
+mpsserver {
+	mpsServerVersion = '1.1.0-rc1'
+}
+```
+
+2. Launch `./gradlew launchMpsServer`
+
+And you are good to go!
+
+At that point simply visit `http://localhost:2904/models/<my model>/<my node id>` to see the data of your model.
