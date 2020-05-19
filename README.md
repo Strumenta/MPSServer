@@ -52,3 +52,9 @@ mpsserver {
 And you are good to go!
 
 At that point simply visit `http://localhost:2904/models/<my model>/<my node id>` to see the data of your model.
+
+You can find the Node ID in the inspector:
+![](images/nodeid.png)
+
+And this is how you can use the simplest API call:
+![](images/api.png)
