@@ -995,8 +995,9 @@
               <node concept="2YIFZM" id="2p2ql82MtCE" role="3clFbG">
                 <ref role="37wK5l" to="wyt6:~Thread.sleep(long)" resolve="sleep" />
                 <ref role="1Pybhc" to="wyt6:~Thread" resolve="Thread" />
-                <node concept="3cmrfG" id="2p2ql82MtJb" role="37wK5m">
-                  <property role="3cmrfH" value="999999" />
+                <node concept="10M0yZ" id="1P$YlGOKSSu" role="37wK5m">
+                  <ref role="3cqZAo" to="wyt6:~Long.MAX_VALUE" resolve="MAX_VALUE" />
+                  <ref role="1PxDUh" to="wyt6:~Long" resolve="Long" />
                 </node>
               </node>
             </node>
