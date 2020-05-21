@@ -42,9 +42,8 @@
     <import index="vcd6" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.utils(com.strumenta.mpsserver.deps/)" />
     <import index="mqaq" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem(com.strumenta.mpsserver.deps/)" />
     <import index="w9qs" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem.commands(com.strumenta.mpsserver.deps/)" />
-    <import index="vdxs" ref="54b310e5-0d19-4e47-9f02-4c533207d8d5/java:org.eclipse.jgit.lib(gescomplus.deps/)" />
     <import index="v5yd" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.api(com.strumenta.mpsserver.deps/)" />
-    <import index="vdxt" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.lib(com.strumenta.mpsserver.deps/)" />
+    <import index="vdxs" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.lib(com.strumenta.mpsserver.deps/)" />
     <import index="r5tj" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.revwalk(com.strumenta.mpsserver.deps/)" />
     <import index="fnh0" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.api.errors(com.strumenta.mpsserver.deps/)" />
     <import index="gmno" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.transport(com.strumenta.mpsserver.deps/)" />
@@ -18634,7 +18633,7 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="3bFL3i$5ut3" role="2OqNvi">
-                  <ref role="37wK5l" to="vdxt:~Repository.getBranch()" resolve="getBranch" />
+                  <ref role="37wK5l" to="vdxs:~Repository.getBranch()" resolve="getBranch" />
                 </node>
               </node>
             </node>
