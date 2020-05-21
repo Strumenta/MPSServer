@@ -374,8 +374,8 @@
                   <node concept="3clFbF" id="4enSzNUH4bX" role="3cqZAp">
                     <node concept="37vLTI" id="4enSzNUH4j$" role="3clFbG">
                       <node concept="2OqwBi" id="4enSzNUH4rK" role="37vLTx">
-                        <node concept="37vLTw" id="4enSzNUH4nP" role="2Oq$k0">
-                          <ref role="3cqZAo" node="4enSzNUGUsN" resolve="gitDir" />
+                        <node concept="37vLTw" id="2d7idLjVZX" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1P$YlGOZ6B2" resolve="gitRoot" />
                         </node>
                         <node concept="liA8E" id="4enSzNUH4BS" role="2OqNvi">
                           <ref role="37wK5l" to="guwi:~File.getParentFile()" resolve="getParentFile" />
@@ -523,7 +523,7 @@
                             </node>
                             <node concept="2YIFZM" id="5SYYrGB_vn2" role="33vP2m">
                               <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                              <ref role="37wK5l" to="30ym:80AXrSevja" resolve="launch" />
+                              <ref role="37wK5l" to="30ym:5SYYrGB_ohV" resolve="launch" />
                               <node concept="2OqwBi" id="5SYYrGB_xce" role="37wK5m">
                                 <node concept="2OqwBi" id="5SYYrGB_wMC" role="2Oq$k0">
                                   <node concept="2WthIp" id="5SYYrGB_v$T" role="2Oq$k0">

@@ -18033,27 +18033,115 @@
     <node concept="3clFb_" id="1P$YlGOU8wX" role="jymVt">
       <property role="TrG5h" value="addAllFiles" />
       <node concept="3clFbS" id="1P$YlGOU8x0" role="3clF47">
-        <node concept="3clFbF" id="1P$YlGOYo2N" role="3cqZAp">
-          <node concept="1rXfSq" id="1P$YlGOYo2L" role="3clFbG">
-            <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingChangedAndNotAdded" />
+        <node concept="3clFbJ" id="3bFL3i$4bmn" role="3cqZAp">
+          <node concept="3clFbS" id="3bFL3i$4bmp" role="3clFbx">
+            <node concept="3cpWs8" id="3bFL3i$4ku7" role="3cqZAp">
+              <node concept="3cpWsn" id="3bFL3i$4ku8" role="3cpWs9">
+                <property role="TrG5h" value="addCommand" />
+                <node concept="3uibUv" id="3bFL3i$4ku9" role="1tU5fm">
+                  <ref role="3uigEE" to="v5yd:~AddCommand" resolve="AddCommand" />
+                </node>
+                <node concept="2OqwBi" id="3bFL3i$4ljt" role="33vP2m">
+                  <node concept="37vLTw" id="3bFL3i$4l9$" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                  </node>
+                  <node concept="liA8E" id="3bFL3i$4lwD" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~Git.add()" resolve="add" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="SfApY" id="3bFL3i$4cYp" role="3cqZAp">
+              <node concept="3clFbS" id="3bFL3i$4cYq" role="SfCbr">
+                <node concept="3cpWs8" id="3bFL3i$4cYr" role="3cqZAp">
+                  <node concept="3cpWsn" id="3bFL3i$4cYs" role="3cpWs9">
+                    <property role="TrG5h" value="status" />
+                    <node concept="3uibUv" id="3bFL3i$4cYt" role="1tU5fm">
+                      <ref role="3uigEE" to="v5yd:~Status" resolve="Status" />
+                    </node>
+                    <node concept="2OqwBi" id="3bFL3i$4cYu" role="33vP2m">
+                      <node concept="2OqwBi" id="3bFL3i$4cYv" role="2Oq$k0">
+                        <node concept="37vLTw" id="3bFL3i$4cYw" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                        </node>
+                        <node concept="liA8E" id="3bFL3i$4cYx" role="2OqNvi">
+                          <ref role="37wK5l" to="v5yd:~Git.status()" resolve="status" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="3bFL3i$4cYy" role="2OqNvi">
+                        <ref role="37wK5l" to="v5yd:~StatusCommand.call()" resolve="call" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="2Gpval" id="3bFL3i$4eFo" role="3cqZAp">
+                  <node concept="2GrKxI" id="3bFL3i$4eFq" role="2Gsz3X">
+                    <property role="TrG5h" value="f" />
+                  </node>
+                  <node concept="2OqwBi" id="3bFL3i$4fm6" role="2GsD0m">
+                    <node concept="37vLTw" id="3bFL3i$4fdG" role="2Oq$k0">
+                      <ref role="3cqZAo" node="3bFL3i$4cYs" resolve="status" />
+                    </node>
+                    <node concept="liA8E" id="3bFL3i$4fsD" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~Status.getModified()" resolve="getModified" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="3bFL3i$4eFu" role="2LFqv$">
+                    <node concept="3clFbF" id="3bFL3i$4lTi" role="3cqZAp">
+                      <node concept="37vLTI" id="3bFL3i$4mfS" role="3clFbG">
+                        <node concept="37vLTw" id="3bFL3i$4lTg" role="37vLTJ">
+                          <ref role="3cqZAo" node="3bFL3i$4ku8" resolve="addCommand" />
+                        </node>
+                        <node concept="2OqwBi" id="1P$YlGOWFe7" role="37vLTx">
+                          <node concept="37vLTw" id="3bFL3i$4lGs" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3bFL3i$4ku8" resolve="addCommand" />
+                          </node>
+                          <node concept="liA8E" id="3bFL3i$4gOa" role="2OqNvi">
+                            <ref role="37wK5l" to="v5yd:~AddCommand.addFilepattern(java.lang.String)" resolve="addFilepattern" />
+                            <node concept="2GrUjf" id="3bFL3i$4gSQ" role="37wK5m">
+                              <ref role="2Gs0qQ" node="3bFL3i$4eFq" resolve="f" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="3bFL3i$4nPS" role="3cqZAp">
+                  <node concept="2OqwBi" id="3bFL3i$4ok_" role="3clFbG">
+                    <node concept="37vLTw" id="3bFL3i$4nPQ" role="2Oq$k0">
+                      <ref role="3cqZAo" node="3bFL3i$4ku8" resolve="addCommand" />
+                    </node>
+                    <node concept="liA8E" id="3bFL3i$4oDD" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~AddCommand.call()" resolve="call" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="TDmWw" id="3bFL3i$4cZh" role="TEbGg">
+                <node concept="3cpWsn" id="3bFL3i$4cZi" role="TDEfY">
+                  <property role="TrG5h" value="e" />
+                  <node concept="3uibUv" id="3bFL3i$4cZj" role="1tU5fm">
+                    <ref role="3uigEE" to="fnh0:~GitAPIException" resolve="GitAPIException" />
+                  </node>
+                </node>
+                <node concept="3clFbS" id="3bFL3i$4cZk" role="TDEfX">
+                  <node concept="YS8fn" id="3bFL3i$4cZl" role="3cqZAp">
+                    <node concept="2ShNRf" id="3bFL3i$4cZm" role="YScLw">
+                      <node concept="1pGfFk" id="3bFL3i$4cZn" role="2ShVmc">
+                        <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                        <node concept="37vLTw" id="3bFL3i$4cZo" role="37wK5m">
+                          <ref role="3cqZAo" node="3bFL3i$4cZi" resolve="e" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
-        </node>
-        <node concept="3clFbF" id="1P$YlGOWEbG" role="3cqZAp">
-          <node concept="2OqwBi" id="1P$YlGOWFe7" role="3clFbG">
-            <node concept="2OqwBi" id="1P$YlGOWElw" role="2Oq$k0">
-              <node concept="37vLTw" id="1P$YlGOWEbF" role="2Oq$k0">
-                <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
-              </node>
-              <node concept="liA8E" id="1P$YlGOWEyd" role="2OqNvi">
-                <ref role="37wK5l" to="v5yd:~Git.add()" resolve="add" />
-              </node>
-            </node>
-            <node concept="liA8E" id="1P$YlGOWFB7" role="2OqNvi">
-              <ref role="37wK5l" to="v5yd:~AddCommand.addFilepattern(java.lang.String)" resolve="addFilepattern" />
-              <node concept="Xl_RD" id="1P$YlGOWFHz" role="37wK5m">
-                <property role="Xl_RC" value="*" />
-              </node>
-            </node>
+          <node concept="1rXfSq" id="1P$YlGOYo2L" role="3clFbw">
+            <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingToBeAdded" />
           </node>
         </node>
       </node>
@@ -18062,7 +18150,7 @@
     </node>
     <node concept="2tJIrI" id="1P$YlGOYgi7" role="jymVt" />
     <node concept="3clFb_" id="1P$YlGOYgKT" role="jymVt">
-      <property role="TrG5h" value="isSomethingChangedAndNotAdded" />
+      <property role="TrG5h" value="isSomethingToBeAdded" />
       <node concept="3clFbS" id="1P$YlGOYgKW" role="3clF47">
         <node concept="SfApY" id="1P$YlGOYgWK" role="3cqZAp">
           <node concept="3clFbS" id="1P$YlGOYgWL" role="SfCbr">
@@ -18084,6 +18172,37 @@
                   <node concept="liA8E" id="1P$YlGOYiL4" role="2OqNvi">
                     <ref role="37wK5l" to="v5yd:~StatusCommand.call()" resolve="call" />
                   </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3SKdUt" id="3bFL3i$46gM" role="3cqZAp">
+              <node concept="1PaTwC" id="3bFL3i$46gN" role="3ndbpf">
+                <node concept="3oM_SD" id="3bFL3i$46gP" role="1PaTwD">
+                  <property role="3oM_SC" value="modified" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46$I" role="1PaTwD">
+                  <property role="3oM_SC" value="are" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46$L" role="1PaTwD">
+                  <property role="3oM_SC" value="files" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46At" role="1PaTwD">
+                  <property role="3oM_SC" value="which" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46Bm" role="1PaTwD">
+                  <property role="3oM_SC" value="are" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46Bs" role="1PaTwD">
+                  <property role="3oM_SC" value="not" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46Bz" role="1PaTwD">
+                  <property role="3oM_SC" value="been" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46Dj" role="1PaTwD">
+                  <property role="3oM_SC" value="&quot;git" />
+                </node>
+                <node concept="3oM_SD" id="3bFL3i$46Hw" role="1PaTwD">
+                  <property role="3oM_SC" value="added&quot;" />
                 </node>
               </node>
             </node>
@@ -18160,8 +18279,20 @@
               </node>
             </node>
             <node concept="3cpWs6" id="1P$YlGOYnaj" role="3cqZAp">
-              <node concept="3clFbT" id="1P$YlGOYnuR" role="3cqZAk">
-                <property role="3clFbU" value="true" />
+              <node concept="3fqX7Q" id="3bFL3i$4aUM" role="3cqZAk">
+                <node concept="2OqwBi" id="3bFL3i$4aUO" role="3fr31v">
+                  <node concept="2OqwBi" id="3bFL3i$4aUP" role="2Oq$k0">
+                    <node concept="37vLTw" id="3bFL3i$4aUQ" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1P$YlGOYirL" resolve="status" />
+                    </node>
+                    <node concept="liA8E" id="3bFL3i$4aUR" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~Status.getModified()" resolve="getModified" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="3bFL3i$4aUS" role="2OqNvi">
+                    <ref role="37wK5l" to="33ny:~Set.isEmpty()" resolve="isEmpty" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -18198,7 +18329,7 @@
           <node concept="3clFbS" id="1P$YlGOW8DC" role="SfCbr">
             <node concept="3clFbF" id="1P$YlGOYodh" role="3cqZAp">
               <node concept="1rXfSq" id="1P$YlGOYodi" role="3clFbG">
-                <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingChangedAndNotAdded" />
+                <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingToBeAdded" />
               </node>
             </node>
             <node concept="3clFbH" id="1P$YlGOYocK" role="3cqZAp" />

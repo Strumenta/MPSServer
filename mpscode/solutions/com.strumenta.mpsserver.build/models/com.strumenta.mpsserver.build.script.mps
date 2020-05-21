@@ -552,22 +552,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsLG" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsLH" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsL$" role="1BurEY">
-              <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsL_" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsLA" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsLB" role="2Ry0An">
-                    <property role="2Ry0Am" value="slf4j-api.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
       </node>
       <node concept="1E1JtA" id="2p2ql82MleI" role="2G$12L">
         <property role="TrG5h" value="com.strumenta.mpsserver.server" />
@@ -842,20 +826,6 @@
                   <property role="2Ry0Am" value="libs" />
                   <node concept="2Ry0Ak" id="1P$YlGOVsrf" role="2Ry0An">
                     <property role="2Ry0Am" value="parallelgit-filesystem.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="28jJK3" id="1P$YlGOVrUZ" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrV0" role="28jJRO">
-              <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrV1" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrV2" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsyM" role="2Ry0An">
-                    <property role="2Ry0Am" value="slf4j-api.jar" />
                   </node>
                 </node>
               </node>

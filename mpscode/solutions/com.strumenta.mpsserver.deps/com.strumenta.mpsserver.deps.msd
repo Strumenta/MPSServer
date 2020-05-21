@@ -34,9 +34,9 @@
     <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
       <sourceRoot location="parallelgit-filesystem.jar" />
     </modelRoot>
-    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+    <!-- <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
       <sourceRoot location="slf4j-api.jar" />
-    </modelRoot>    
+    </modelRoot>  -->   
   </models>
   <facets>
     <facet type="java">
@@ -54,7 +54,7 @@
     <stubModelEntry path="${mpsserver.home}/build/libs/httpclient.jar" />
     <stubModelEntry path="${mpsserver.home}/build/libs/jsch.jar" />
     <stubModelEntry path="${mpsserver.home}/build/libs/parallelgit-filesystem.jar" />
-    <stubModelEntry path="${mpsserver.home}/build/libs/slf4j-api.jar" />
+    <!-- <stubModelEntry path="${mpsserver.home}/build/libs/slf4j-api.jar" /> -->
   </stubModelEntries>
   <sourcePath />
   <dependencies>
