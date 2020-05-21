@@ -39,6 +39,14 @@
     <import index="tp6m" ref="r:00000000-0000-4000-0000-011c895903a2(jetbrains.mps.lang.test.runtime)" />
     <import index="g3l6" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.extapi.model(MPS.Core/)" />
     <import index="vndm" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.language(MPS.Core/)" />
+    <import index="vcd6" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.utils(com.strumenta.mpsserver.deps/)" />
+    <import index="mqaq" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem(com.strumenta.mpsserver.deps/)" />
+    <import index="w9qs" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem.commands(com.strumenta.mpsserver.deps/)" />
+    <import index="vdxs" ref="54b310e5-0d19-4e47-9f02-4c533207d8d5/java:org.eclipse.jgit.lib(gescomplus.deps/)" />
+    <import index="v5yd" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.api(com.strumenta.mpsserver.deps/)" />
+    <import index="vdxt" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.lib(com.strumenta.mpsserver.deps/)" />
+    <import index="r5tj" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.revwalk(com.strumenta.mpsserver.deps/)" />
+    <import index="fnh0" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.api.errors(com.strumenta.mpsserver.deps/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -543,6 +551,13 @@
       <node concept="3Tm6S6" id="80AXrSegLk" role="1B3o_S" />
       <node concept="10Oyi0" id="80AXrSeiiK" role="1tU5fm" />
     </node>
+    <node concept="312cEg" id="1P$YlGOXs0B" role="jymVt">
+      <property role="TrG5h" value="gitRoot" />
+      <node concept="3Tm6S6" id="1P$YlGOXmSE" role="1B3o_S" />
+      <node concept="3uibUv" id="1P$YlGOXreF" role="1tU5fm">
+        <ref role="3uigEE" to="guwi:~File" resolve="File" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="5SYYrGB_nJr" role="jymVt" />
     <node concept="Wx3nA" id="5SYYrGB_nXY" role="jymVt">
       <property role="TrG5h" value="INSTANCE" />
@@ -672,6 +687,12 @@
           <ref role="3uigEE" to="lui2:~SRepository" resolve="SRepository" />
         </node>
       </node>
+      <node concept="37vLTG" id="1P$YlGOXwpj" role="3clF46">
+        <property role="TrG5h" value="gitRoot" />
+        <node concept="3uibUv" id="1P$YlGOXwpl" role="1tU5fm">
+          <ref role="3uigEE" to="guwi:~File" resolve="File" />
+        </node>
+      </node>
       <node concept="3cqZAl" id="80AXrSepRF" role="3clF45" />
       <node concept="3Tm6S6" id="80AXrSer__" role="1B3o_S" />
       <node concept="3clFbS" id="80AXrSepRH" role="3clF47">
@@ -682,6 +703,9 @@
           </node>
           <node concept="37vLTw" id="80AXrSes4G" role="37wK5m">
             <ref role="3cqZAo" node="5SYYrGBDhag" resolve="DEFAULT_PORT" />
+          </node>
+          <node concept="37vLTw" id="1P$YlGOX$xU" role="37wK5m">
+            <ref role="3cqZAo" node="1P$YlGOXwpj" resolve="gitRoot" />
           </node>
         </node>
       </node>
@@ -698,6 +722,12 @@
       <node concept="37vLTG" id="80AXrSelnS" role="3clF46">
         <property role="TrG5h" value="port" />
         <node concept="10Oyi0" id="80AXrSelyw" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="1P$YlGOXxfG" role="3clF46">
+        <property role="TrG5h" value="gitRoot" />
+        <node concept="3uibUv" id="1P$YlGOXxfI" role="1tU5fm">
+          <ref role="3uigEE" to="guwi:~File" resolve="File" />
+        </node>
       </node>
       <node concept="3cqZAl" id="5SYYrGBzPMp" role="3clF45" />
       <node concept="3Tm6S6" id="5SYYrGB_o3b" role="1B3o_S" />
@@ -773,6 +803,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="1P$YlGOX_hb" role="3cqZAp">
+          <node concept="37vLTI" id="1P$YlGOXCL1" role="3clFbG">
+            <node concept="37vLTw" id="1P$YlGOXDG_" role="37vLTx">
+              <ref role="3cqZAo" node="1P$YlGOXxfG" resolve="gitRoot" />
+            </node>
+            <node concept="2OqwBi" id="1P$YlGOX_uq" role="37vLTJ">
+              <node concept="Xjq3P" id="1P$YlGOX_h9" role="2Oq$k0" />
+              <node concept="2OwXpG" id="1P$YlGOXAg2" role="2OqNvi">
+                <ref role="2Oxat5" node="1P$YlGOXs0B" resolve="gitRoot" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="1dR4j3lTtv8" role="jymVt" />
@@ -825,6 +868,12 @@
         <property role="TrG5h" value="port" />
         <node concept="10Oyi0" id="80AXrSex_j" role="1tU5fm" />
       </node>
+      <node concept="37vLTG" id="1P$YlGOXEsU" role="3clF46">
+        <property role="TrG5h" value="gitRoot" />
+        <node concept="3uibUv" id="1P$YlGOXEsW" role="1tU5fm">
+          <ref role="3uigEE" to="guwi:~File" resolve="File" />
+        </node>
+      </node>
       <node concept="3clFbS" id="80AXrSevjd" role="3clF47">
         <node concept="3cpWs8" id="80AXrSevje" role="3cqZAp">
           <node concept="3cpWsn" id="80AXrSevjf" role="3cpWs9">
@@ -859,6 +908,9 @@
                     </node>
                     <node concept="37vLTw" id="80AXrSeBWo" role="37wK5m">
                       <ref role="3cqZAo" node="80AXrSexrn" resolve="port" />
+                    </node>
+                    <node concept="37vLTw" id="1P$YlGOXHHx" role="37wK5m">
+                      <ref role="3cqZAo" node="1P$YlGOXEsU" resolve="gitRoot" />
                     </node>
                   </node>
                 </node>
@@ -967,6 +1019,12 @@
           <ref role="3uigEE" to="lui2:~SRepository" resolve="SRepository" />
         </node>
       </node>
+      <node concept="37vLTG" id="1P$YlGOXIy4" role="3clF46">
+        <property role="TrG5h" value="gitRoot" />
+        <node concept="3uibUv" id="1P$YlGOXIy6" role="1tU5fm">
+          <ref role="3uigEE" to="guwi:~File" resolve="File" />
+        </node>
+      </node>
       <node concept="3clFbS" id="5SYYrGB_ohY" role="3clF47">
         <node concept="3cpWs6" id="80AXrSeyRD" role="3cqZAp">
           <node concept="1rXfSq" id="80AXrSez20" role="3cqZAk">
@@ -976,6 +1034,9 @@
             </node>
             <node concept="37vLTw" id="80AXrSeBFy" role="37wK5m">
               <ref role="3cqZAo" node="5SYYrGBDhag" resolve="DEFAULT_PORT" />
+            </node>
+            <node concept="37vLTw" id="1P$YlGOXKgh" role="37wK5m">
+              <ref role="3cqZAo" node="1P$YlGOXIy4" resolve="gitRoot" />
             </node>
           </node>
         </node>
@@ -3241,7 +3302,171 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="1P$YlGONNqq" role="3cqZAp" />
+        <node concept="3clFbF" id="1P$YlGOU0uG" role="3cqZAp">
+          <node concept="2YIFZM" id="1P$YlGOU0uI" role="3clFbG">
+            <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
+            <ref role="37wK5l" to="9xi5:~Spark.post(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="post" />
+            <node concept="Xl_RD" id="1P$YlGOU0uJ" role="37wK5m">
+              <property role="Xl_RC" value="/commit" />
+            </node>
+            <node concept="2ShNRf" id="1P$YlGOU0uK" role="37wK5m">
+              <node concept="YeOm9" id="1P$YlGOU0uL" role="2ShVmc">
+                <node concept="1Y3b0j" id="1P$YlGOU0uM" role="YeSDq">
+                  <property role="2bfB8j" value="true" />
+                  <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                  <ref role="1Y3XeK" to="9xi5:~Route" resolve="Route" />
+                  <node concept="3Tm1VV" id="1P$YlGOU0uN" role="1B3o_S" />
+                  <node concept="3clFb_" id="1P$YlGOU0uO" role="jymVt">
+                    <property role="TrG5h" value="handle" />
+                    <node concept="3Tm1VV" id="1P$YlGOU0uP" role="1B3o_S" />
+                    <node concept="3uibUv" id="1P$YlGOU0uQ" role="3clF45">
+                      <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                    </node>
+                    <node concept="37vLTG" id="1P$YlGOU0uR" role="3clF46">
+                      <property role="TrG5h" value="req" />
+                      <node concept="3uibUv" id="1P$YlGOU0uS" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Request" resolve="Request" />
+                      </node>
+                    </node>
+                    <node concept="37vLTG" id="1P$YlGOU0uT" role="3clF46">
+                      <property role="TrG5h" value="res" />
+                      <node concept="3uibUv" id="1P$YlGOU0uU" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Response" resolve="Response" />
+                      </node>
+                    </node>
+                    <node concept="3uibUv" id="1P$YlGOU0uV" role="Sfmx6">
+                      <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
+                    </node>
+                    <node concept="3clFbS" id="1P$YlGOU0uW" role="3clF47">
+                      <node concept="SfApY" id="1P$YlGOU0uX" role="3cqZAp">
+                        <node concept="3clFbS" id="1P$YlGOU0uY" role="SfCbr">
+                          <node concept="3cpWs8" id="1P$YlGOU9y6" role="3cqZAp">
+                            <node concept="3cpWsn" id="1P$YlGOU9y7" role="3cpWs9">
+                              <property role="TrG5h" value="gitFacade" />
+                              <node concept="3uibUv" id="1P$YlGOU9y8" role="1tU5fm">
+                                <ref role="3uigEE" node="1P$YlGOU7O$" resolve="GitFacade" />
+                              </node>
+                              <node concept="2ShNRf" id="1P$YlGOU9Jm" role="33vP2m">
+                                <node concept="1pGfFk" id="1P$YlGOWnZv" role="2ShVmc">
+                                  <ref role="37wK5l" node="1P$YlGOVSSr" resolve="GitFacade" />
+                                  <node concept="37vLTw" id="1P$YlGOXQxA" role="37wK5m">
+                                    <ref role="3cqZAo" node="1P$YlGOXs0B" resolve="gitRoot" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="1P$YlGOUb8V" role="3cqZAp">
+                            <node concept="2OqwBi" id="1P$YlGOUbpG" role="3clFbG">
+                              <node concept="37vLTw" id="1P$YlGOUb8T" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1P$YlGOU9y7" resolve="gitFacade" />
+                              </node>
+                              <node concept="liA8E" id="1P$YlGOUb$B" role="2OqNvi">
+                                <ref role="37wK5l" node="1P$YlGOU8wX" resolve="addAllFiles" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3cpWs8" id="1P$YlGOUdgb" role="3cqZAp">
+                            <node concept="3cpWsn" id="1P$YlGOUdge" role="3cpWs9">
+                              <property role="TrG5h" value="message" />
+                              <node concept="17QB3L" id="1P$YlGOUdg9" role="1tU5fm" />
+                              <node concept="2OqwBi" id="1P$YlGOUduU" role="33vP2m">
+                                <node concept="37vLTw" id="1P$YlGOUduV" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1P$YlGOU0uR" resolve="req" />
+                                </node>
+                                <node concept="liA8E" id="1P$YlGOUduW" role="2OqNvi">
+                                  <ref role="37wK5l" to="9xi5:~Request.body()" resolve="body" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbJ" id="1P$YlGOUef7" role="3cqZAp">
+                            <node concept="3clFbS" id="1P$YlGOUef9" role="3clFbx">
+                              <node concept="3clFbF" id="1P$YlGOUfzr" role="3cqZAp">
+                                <node concept="37vLTI" id="1P$YlGOUfOC" role="3clFbG">
+                                  <node concept="Xl_RD" id="1P$YlGOUfWv" role="37vLTx">
+                                    <property role="Xl_RC" value="commit without description" />
+                                  </node>
+                                  <node concept="37vLTw" id="1P$YlGOUfzp" role="37vLTJ">
+                                    <ref role="3cqZAo" node="1P$YlGOUdge" resolve="message" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="2OqwBi" id="1P$YlGOUf6V" role="3clFbw">
+                              <node concept="37vLTw" id="1P$YlGOUeGh" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1P$YlGOUdge" resolve="message" />
+                              </node>
+                              <node concept="liA8E" id="1P$YlGOUfpO" role="2OqNvi">
+                                <ref role="37wK5l" to="wyt6:~String.isBlank()" resolve="isBlank" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="1P$YlGOUbUl" role="3cqZAp">
+                            <node concept="2OqwBi" id="1P$YlGOUc6T" role="3clFbG">
+                              <node concept="37vLTw" id="1P$YlGOUbUj" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1P$YlGOU9y7" resolve="gitFacade" />
+                              </node>
+                              <node concept="liA8E" id="1P$YlGOUcca" role="2OqNvi">
+                                <ref role="37wK5l" node="1P$YlGOU8qR" resolve="commit" />
+                                <node concept="37vLTw" id="1P$YlGOUdLI" role="37wK5m">
+                                  <ref role="3cqZAo" node="1P$YlGOUdge" resolve="message" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3cpWs6" id="1P$YlGOU0v3" role="3cqZAp">
+                            <node concept="Xl_RD" id="1P$YlGOU0v4" role="3cqZAk">
+                              <property role="Xl_RC" value="ok" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="TDmWw" id="1P$YlGOU0v5" role="TEbGg">
+                          <node concept="3cpWsn" id="1P$YlGOU0v6" role="TDEfY">
+                            <property role="TrG5h" value="e" />
+                            <node concept="3uibUv" id="1P$YlGOU0v7" role="1tU5fm">
+                              <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                            </node>
+                          </node>
+                          <node concept="3clFbS" id="1P$YlGOU0v8" role="TDEfX">
+                            <node concept="3clFbF" id="1P$YlGOU0v9" role="3cqZAp">
+                              <node concept="2OqwBi" id="1P$YlGOU0va" role="3clFbG">
+                                <node concept="37vLTw" id="1P$YlGOU0vb" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1P$YlGOU0v6" resolve="e" />
+                                </node>
+                                <node concept="liA8E" id="1P$YlGOU0vc" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3cpWs6" id="1P$YlGOU0vd" role="3cqZAp">
+                              <node concept="2OqwBi" id="1P$YlGOU0ve" role="3cqZAk">
+                                <node concept="37vLTw" id="1P$YlGOU0vf" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1P$YlGOU0v6" resolve="e" />
+                                </node>
+                                <node concept="liA8E" id="1P$YlGOU0vg" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~Throwable.getMessage()" resolve="getMessage" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2AHcQZ" id="1P$YlGOU0vh" role="2AJF6D">
+                      <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="1P$YlGOU0vi" role="37wK5m">
+              <node concept="HV5vD" id="1P$YlGOU0vj" role="2ShVmc">
+                <ref role="HV5vE" node="6Iad5Is72Yc" resolve="Server.JsonTransformer" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3Tm6S6" id="1P$YlGOMKdU" role="1B3o_S" />
       <node concept="3cqZAl" id="1P$YlGOMMwr" role="3clF45" />
@@ -17741,6 +17966,172 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="1P$YlGOOHHd" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="1P$YlGOU7O$">
+    <property role="3GE5qa" value="server" />
+    <property role="TrG5h" value="GitFacade" />
+    <node concept="2tJIrI" id="1P$YlGOVSL6" role="jymVt" />
+    <node concept="312cEg" id="1P$YlGOWxrr" role="jymVt">
+      <property role="TrG5h" value="git" />
+      <node concept="3Tm6S6" id="1P$YlGOWwPA" role="1B3o_S" />
+      <node concept="3uibUv" id="1P$YlGOWwZ$" role="1tU5fm">
+        <ref role="3uigEE" to="v5yd:~Git" resolve="Git" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="1P$YlGOVSXi" role="jymVt" />
+    <node concept="3clFbW" id="1P$YlGOVSSr" role="jymVt">
+      <node concept="3cqZAl" id="1P$YlGOVSSt" role="3clF45" />
+      <node concept="3Tm1VV" id="1P$YlGOVSSu" role="1B3o_S" />
+      <node concept="3clFbS" id="1P$YlGOVSSv" role="3clF47">
+        <node concept="SfApY" id="1P$YlGOVUEq" role="3cqZAp">
+          <node concept="3clFbS" id="1P$YlGOVUEr" role="SfCbr">
+            <node concept="3clFbF" id="1P$YlGOWxDz" role="3cqZAp">
+              <node concept="37vLTI" id="1P$YlGOWxQQ" role="3clFbG">
+                <node concept="2YIFZM" id="1P$YlGOWAVz" role="37vLTx">
+                  <ref role="37wK5l" to="v5yd:~Git.open(java.io.File)" resolve="open" />
+                  <ref role="1Pybhc" to="v5yd:~Git" resolve="Git" />
+                  <node concept="37vLTw" id="1P$YlGOXSja" role="37wK5m">
+                    <ref role="3cqZAo" node="1P$YlGOVTg7" resolve="repoPath" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="1P$YlGOWxDx" role="37vLTJ">
+                  <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="TDmWw" id="1P$YlGOVUEm" role="TEbGg">
+            <node concept="3clFbS" id="1P$YlGOVUEn" role="TDEfX">
+              <node concept="YS8fn" id="1P$YlGOVUMz" role="3cqZAp">
+                <node concept="2ShNRf" id="1P$YlGOVUPO" role="YScLw">
+                  <node concept="1pGfFk" id="1P$YlGOVW7R" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                    <node concept="37vLTw" id="1P$YlGOVWpz" role="37wK5m">
+                      <ref role="3cqZAo" node="1P$YlGOVUEo" resolve="e" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWsn" id="1P$YlGOVUEo" role="TDEfY">
+              <property role="TrG5h" value="e" />
+              <node concept="3uibUv" id="1P$YlGOVUEp" role="1tU5fm">
+                <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="37vLTG" id="1P$YlGOVTg7" role="3clF46">
+        <property role="TrG5h" value="repoPath" />
+        <node concept="3uibUv" id="1P$YlGOXQWQ" role="1tU5fm">
+          <ref role="3uigEE" to="guwi:~File" resolve="File" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="1P$YlGOVSMu" role="jymVt" />
+    <node concept="3clFb_" id="1P$YlGOU8wX" role="jymVt">
+      <property role="TrG5h" value="addAllFiles" />
+      <node concept="3clFbS" id="1P$YlGOU8x0" role="3clF47">
+        <node concept="3clFbF" id="1P$YlGOWEbG" role="3cqZAp">
+          <node concept="2OqwBi" id="1P$YlGOWFe7" role="3clFbG">
+            <node concept="2OqwBi" id="1P$YlGOWElw" role="2Oq$k0">
+              <node concept="37vLTw" id="1P$YlGOWEbF" role="2Oq$k0">
+                <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+              </node>
+              <node concept="liA8E" id="1P$YlGOWEyd" role="2OqNvi">
+                <ref role="37wK5l" to="v5yd:~Git.add()" resolve="add" />
+              </node>
+            </node>
+            <node concept="liA8E" id="1P$YlGOWFB7" role="2OqNvi">
+              <ref role="37wK5l" to="v5yd:~AddCommand.addFilepattern(java.lang.String)" resolve="addFilepattern" />
+              <node concept="Xl_RD" id="1P$YlGOWFHz" role="37wK5m">
+                <property role="Xl_RC" value="*" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="1P$YlGOU8v8" role="1B3o_S" />
+      <node concept="3cqZAl" id="1P$YlGOU8wI" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="1P$YlGOWDWz" role="jymVt" />
+    <node concept="3clFb_" id="1P$YlGOU8qR" role="jymVt">
+      <property role="TrG5h" value="commit" />
+      <node concept="3clFbS" id="1P$YlGOU8qU" role="3clF47">
+        <node concept="SfApY" id="1P$YlGOW8DA" role="3cqZAp">
+          <node concept="3clFbS" id="1P$YlGOW8DC" role="SfCbr">
+            <node concept="3cpWs8" id="1P$YlGOWNe5" role="3cqZAp">
+              <node concept="3cpWsn" id="1P$YlGOWNe6" role="3cpWs9">
+                <property role="TrG5h" value="rc" />
+                <node concept="3uibUv" id="1P$YlGOWNe7" role="1tU5fm">
+                  <ref role="3uigEE" to="r5tj:~RevCommit" resolve="RevCommit" />
+                </node>
+                <node concept="2OqwBi" id="1P$YlGOWJwK" role="33vP2m">
+                  <node concept="2OqwBi" id="1P$YlGOWIvT" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1P$YlGOWHwQ" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1P$YlGOWGK3" role="2Oq$k0">
+                        <node concept="37vLTw" id="1P$YlGOWGsT" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                        </node>
+                        <node concept="liA8E" id="1P$YlGOWHdF" role="2OqNvi">
+                          <ref role="37wK5l" to="v5yd:~Git.commit()" resolve="commit" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="1P$YlGOWHWU" role="2OqNvi">
+                        <ref role="37wK5l" to="v5yd:~CommitCommand.setAuthor(java.lang.String,java.lang.String)" resolve="setAuthor" />
+                        <node concept="Xl_RD" id="1P$YlGOWI2c" role="37wK5m">
+                          <property role="Xl_RC" value="mpsserver" />
+                        </node>
+                        <node concept="Xl_RD" id="1P$YlGOWI2d" role="37wK5m">
+                          <property role="Xl_RC" value="mpsserver@strumenta.com" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="1P$YlGOWJ2k" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~CommitCommand.setMessage(java.lang.String)" resolve="setMessage" />
+                      <node concept="37vLTw" id="1P$YlGOWJaZ" role="37wK5m">
+                        <ref role="3cqZAo" node="1P$YlGOU8sv" resolve="message" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOWK61" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~CommitCommand.call()" resolve="call" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="TDmWw" id="1P$YlGOW8DD" role="TEbGg">
+            <node concept="3cpWsn" id="1P$YlGOW8DF" role="TDEfY">
+              <property role="TrG5h" value="e" />
+              <node concept="3uibUv" id="1P$YlGOWPaG" role="1tU5fm">
+                <ref role="3uigEE" to="fnh0:~GitAPIException" resolve="GitAPIException" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="1P$YlGOW8DJ" role="TDEfX">
+              <node concept="YS8fn" id="1P$YlGOWtrv" role="3cqZAp">
+                <node concept="2ShNRf" id="1P$YlGOWtrw" role="YScLw">
+                  <node concept="1pGfFk" id="1P$YlGOWtrx" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                    <node concept="37vLTw" id="1P$YlGOWtry" role="37wK5m">
+                      <ref role="3cqZAo" node="1P$YlGOW8DF" resolve="e" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="1P$YlGOU8pg" role="1B3o_S" />
+      <node concept="3cqZAl" id="1P$YlGOU8qG" role="3clF45" />
+      <node concept="37vLTG" id="1P$YlGOU8sv" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="17QB3L" id="1P$YlGOU8su" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="1P$YlGOU7O_" role="1B3o_S" />
   </node>
 </model>
 

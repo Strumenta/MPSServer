@@ -7,6 +7,36 @@
     <modelRoot contentPath="${module}/libs/mpsserver-dependencies-0.1-SNAPSHOT.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="JavaEWAH.jar" />
+    </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="commons-logging.jar" />
+    </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="httpcore.jar" />
+    </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="org.eclipse.jgit.jar" />
+    </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="parallelgit-utils.jar" />
+    </modelRoot>    
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="commons-codec.jar" />
+    </modelRoot>    
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="httpclient.jar" />
+    </modelRoot>    
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="jsch.jar" />
+    </modelRoot>    
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="parallelgit-filesystem.jar" />
+    </modelRoot>
+    <modelRoot contentPath="${mpsserver.home}/build/libs" type="java_classes">
+      <sourceRoot location="slf4j-api.jar" />
+    </modelRoot>    
   </models>
   <facets>
     <facet type="java">
@@ -15,6 +45,16 @@
   </facets>
   <stubModelEntries>
     <stubModelEntry path="${module}/libs/mpsserver-dependencies-0.1-SNAPSHOT.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/JavaEWAH.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/commons-logging.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/httpcore.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/org.eclipse.jgit.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/parallelgit-utils.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/commons-codec.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/httpclient.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/jsch.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/parallelgit-filesystem.jar" />
+    <stubModelEntry path="${mpsserver.home}/build/libs/slf4j-api.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

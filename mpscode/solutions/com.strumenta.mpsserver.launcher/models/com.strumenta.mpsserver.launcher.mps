@@ -247,7 +247,7 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="2IXprNT7buk" role="3cqZAp" />
+        <node concept="3clFbH" id="1P$YlGOXLvn" role="3cqZAp" />
         <node concept="3cpWs8" id="4o9fmPfXSBc" role="3cqZAp">
           <node concept="3cpWsn" id="4o9fmPfXSBd" role="3cpWs9">
             <property role="TrG5h" value="projectFile" />
@@ -269,12 +269,59 @@
             </node>
           </node>
         </node>
+        <node concept="3cpWs8" id="1P$YlGOXLW3" role="3cqZAp">
+          <node concept="3cpWsn" id="1P$YlGOXLW4" role="3cpWs9">
+            <property role="TrG5h" value="gitRootPath" />
+            <node concept="17QB3L" id="1P$YlGOXLW5" role="1tU5fm" />
+            <node concept="2YIFZM" id="1P$YlGOXLW6" role="33vP2m">
+              <ref role="37wK5l" to="wyt6:~System.getenv(java.lang.String)" resolve="getenv" />
+              <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
+              <node concept="Xl_RD" id="1P$YlGOXLW7" role="37wK5m">
+                <property role="Xl_RC" value="MPSSERVER_GIT_ROOT" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="1P$YlGOXLW8" role="3cqZAp">
+          <node concept="3clFbS" id="1P$YlGOXLW9" role="3clFbx">
+            <node concept="3clFbF" id="1P$YlGOXLWa" role="3cqZAp">
+              <node concept="37vLTI" id="1P$YlGOXLWb" role="3clFbG">
+                <node concept="2OqwBi" id="1P$YlGOXNJA" role="37vLTx">
+                  <node concept="37vLTw" id="1P$YlGOXNzQ" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOXNSY" role="2OqNvi">
+                    <ref role="37wK5l" to="guwi:~File.getAbsolutePath()" resolve="getAbsolutePath" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="1P$YlGOXLWd" role="37vLTJ">
+                  <ref role="3cqZAo" node="1P$YlGOXLW4" resolve="gitRootPath" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="1P$YlGOXLWe" role="3clFbw">
+            <node concept="10Nm6u" id="1P$YlGOXLWf" role="3uHU7w" />
+            <node concept="37vLTw" id="1P$YlGOXLWg" role="3uHU7B">
+              <ref role="3cqZAo" node="1P$YlGOXLW4" resolve="gitRootPath" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1P$YlGOXO2H" role="3cqZAp" />
         <node concept="abc8K" id="4o9fmPfXRQk" role="3cqZAp">
           <node concept="Xl_RD" id="4o9fmPfXRUD" role="abp_N">
             <property role="Xl_RC" value="Project file " />
           </node>
           <node concept="37vLTw" id="4o9fmPfXSV4" role="abp_N">
             <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+          </node>
+        </node>
+        <node concept="abc8K" id="1P$YlGOXOgV" role="3cqZAp">
+          <node concept="Xl_RD" id="1P$YlGOXOgW" role="abp_N">
+            <property role="Xl_RC" value="Git root path " />
+          </node>
+          <node concept="37vLTw" id="1P$YlGOXOsx" role="abp_N">
+            <ref role="3cqZAo" node="1P$YlGOXLW4" resolve="gitRootPath" />
           </node>
         </node>
         <node concept="3cpWs8" id="4o9fmPfXS7K" role="3cqZAp">
@@ -420,10 +467,21 @@
                   <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
                 </node>
                 <node concept="2YIFZM" id="2p2ql82MmkH" role="33vP2m">
-                  <ref role="37wK5l" to="30ym:5SYYrGB_ohV" resolve="launch" />
                   <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                  <ref role="37wK5l" to="30ym:80AXrSevja" resolve="launch" />
                   <node concept="37vLTw" id="2p2ql82Mmld" role="37wK5m">
                     <ref role="3cqZAo" node="2mQU3MvgZf3" resolve="repo" />
+                  </node>
+                  <node concept="37vLTw" id="1P$YlGOXLtW" role="37wK5m">
+                    <ref role="3cqZAo" node="80AXrSdLii" resolve="port" />
+                  </node>
+                  <node concept="2ShNRf" id="1P$YlGOXOBt" role="37wK5m">
+                    <node concept="1pGfFk" id="1P$YlGOXP2e" role="2ShVmc">
+                      <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
+                      <node concept="37vLTw" id="1P$YlGOXPcj" role="37wK5m">
+                        <ref role="3cqZAo" node="1P$YlGOXLW4" resolve="gitRootPath" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>

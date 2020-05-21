@@ -42,6 +42,7 @@ ext.mpsVersion = '2019.3.1'
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
 	mps "com.jetbrains:mps:$mpsVersion"
+    libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
 }
 
 repositories {	
@@ -105,14 +106,31 @@ task resolveMpsArtifacts(type: Copy) {
 	into artifactsDir
 }
 
+task resolveLibs(type: Sync) {
+    from configurations.libs
+    into file('mpscode/build/libs')
+
+    rename { filename ->
+        def ra = configurations.libs.resolvedConfiguration.resolvedArtifacts.find { ResolvedArtifact ra -> ra.file.name == filename }
+        String finalName
+        if (ra.classifier != null) {
+            finalName = "${ra.name}-${ra.classifier}.${ra.extension}"
+        } else {
+            finalName = "${ra.name}.${ra.extension}"
+        }
+        println("Renaming $filename into $finalName")
+        return finalName
+    }
+}
+
 task setuplocal {
-	dependsOn resolveMps, resolveMpsArtifacts
+	dependsOn resolveMps, resolveMpsArtifacts, resolveLibs
 }
 
 // Alias setuplocal as setup
 task setup(dependsOn: setuplocal)
 
-task generateBuildAntScripts(type: BuildLanguages, dependsOn: [resolveMps, resolveMpsArtifacts]) {
+task generateBuildAntScripts(type: BuildLanguages, dependsOn: [setuplocal]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-meta.xml')
