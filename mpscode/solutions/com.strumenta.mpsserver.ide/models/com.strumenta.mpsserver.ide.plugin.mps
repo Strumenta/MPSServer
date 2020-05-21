@@ -19,6 +19,7 @@
     <import index="71xd" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.tools(MPS.Platform/)" />
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" />
     <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -81,16 +82,25 @@
       </concept>
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
+        <child id="1082485599096" name="statements" index="9aQI4" />
+      </concept>
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1076505808687" name="jetbrains.mps.baseLanguage.structure.WhileStatement" flags="nn" index="2$JKZl">
+        <child id="1076505808688" name="condition" index="2$JKZa" />
+      </concept>
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
         <reference id="1188208074048" name="annotation" index="2AI5Lk" />
       </concept>
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
+      </concept>
+      <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
+        <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
@@ -111,6 +121,8 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -128,8 +140,15 @@
         <child id="1068580123135" name="body" index="3clF47" />
       </concept>
       <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_" />
+      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
+      </concept>
+      <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
+        <child id="1068580123160" name="condition" index="3clFbw" />
+        <child id="1068580123161" name="ifTrue" index="3clFbx" />
+        <child id="1206060520071" name="elsifClauses" index="3eNLev" />
       </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
@@ -145,6 +164,13 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
+        <child id="1206060619838" name="condition" index="3eO9$A" />
+        <child id="1206060644605" name="statementList" index="3eOfB_" />
+      </concept>
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -156,6 +182,10 @@
       </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
+      </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -179,6 +209,7 @@
         <reference id="1205756909548" name="member" index="2WH_rO" />
       </concept>
       <concept id="1205769003971" name="jetbrains.mps.baseLanguage.classifiers.structure.DefaultClassifierMethodDeclaration" flags="ng" index="2XrIbr" />
+      <concept id="1205769149993" name="jetbrains.mps.baseLanguage.classifiers.structure.DefaultClassifierMethodCallOperation" flags="nn" index="2XshWL" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
       <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
@@ -226,6 +257,152 @@
     <property role="2bmUCM" value="2aGS$UDXOxV/RIGHT" />
     <property role="2XNbzY" value="MPS Server Launcher" />
     <property role="3GE5qa" value="" />
+    <node concept="2XrIbr" id="1P$YlGOZ4Sc" role="2XNbBy">
+      <property role="TrG5h" value="getGitRoot" />
+      <node concept="3uibUv" id="1P$YlGOZ57N" role="3clF45">
+        <ref role="3uigEE" to="guwi:~File" resolve="File" />
+      </node>
+      <node concept="3Tm6S6" id="1P$YlGOZ4Yk" role="1B3o_S" />
+      <node concept="3clFbS" id="1P$YlGOZ60N" role="3clF47">
+        <node concept="3cpWs8" id="1P$YlGOZ6mI" role="3cqZAp">
+          <node concept="3cpWsn" id="1P$YlGOZ6mJ" role="3cpWs9">
+            <property role="TrG5h" value="projectFile" />
+            <node concept="3uibUv" id="1P$YlGOZ6mK" role="1tU5fm">
+              <ref role="3uigEE" to="guwi:~File" resolve="File" />
+            </node>
+            <node concept="2OqwBi" id="1P$YlGOZ6nx" role="33vP2m">
+              <node concept="2OqwBi" id="1P$YlGOZ6ny" role="2Oq$k0">
+                <node concept="2WthIp" id="1P$YlGOZ6nz" role="2Oq$k0" />
+                <node concept="2XshWL" id="1P$YlGOZ6n$" role="2OqNvi">
+                  <ref role="2WH_rO" node="5xYAxr6GjiN" resolve="getCurrentProject" />
+                </node>
+              </node>
+              <node concept="liA8E" id="1P$YlGOZ6n_" role="2OqNvi">
+                <ref role="37wK5l" to="z1c3:~Project.getProjectFile()" resolve="getProjectFile" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="abc8K" id="1P$YlGOZ6wn" role="3cqZAp">
+          <node concept="Xl_RD" id="1P$YlGOZ6x8" role="abp_N">
+            <property role="Xl_RC" value="PROJECT FILE " />
+          </node>
+          <node concept="37vLTw" id="1P$YlGOZ6y3" role="abp_N">
+            <ref role="3cqZAo" node="1P$YlGOZ6mJ" resolve="projectFile" />
+          </node>
+        </node>
+        <node concept="3cpWs8" id="1P$YlGOZ6B1" role="3cqZAp">
+          <node concept="3cpWsn" id="1P$YlGOZ6B2" role="3cpWs9">
+            <property role="TrG5h" value="gitRoot" />
+            <node concept="3uibUv" id="1P$YlGOZ6B3" role="1tU5fm">
+              <ref role="3uigEE" to="guwi:~File" resolve="File" />
+            </node>
+            <node concept="37vLTw" id="1P$YlGOZ6Cp" role="33vP2m">
+              <ref role="3cqZAo" node="1P$YlGOZ6mJ" resolve="projectFile" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="4enSzNUGU4q" role="3cqZAp">
+          <node concept="3cpWsn" id="4enSzNUGU4t" role="3cpWs9">
+            <property role="TrG5h" value="found" />
+            <node concept="10P_77" id="4enSzNUGU4o" role="1tU5fm" />
+            <node concept="3clFbT" id="4enSzNUGUa9" role="33vP2m" />
+          </node>
+        </node>
+        <node concept="2$JKZl" id="4enSzNUGUmk" role="3cqZAp">
+          <node concept="3clFbS" id="4enSzNUGUmm" role="2LFqv$">
+            <node concept="3cpWs8" id="4enSzNUGUsM" role="3cqZAp">
+              <node concept="3cpWsn" id="4enSzNUGUsN" role="3cpWs9">
+                <property role="TrG5h" value="gitDir" />
+                <node concept="3uibUv" id="4enSzNUGUsO" role="1tU5fm">
+                  <ref role="3uigEE" to="guwi:~File" resolve="File" />
+                </node>
+                <node concept="2ShNRf" id="4enSzNUGUt$" role="33vP2m">
+                  <node concept="1pGfFk" id="4enSzNUH0x9" role="2ShVmc">
+                    <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.io.File,java.lang.String)" resolve="File" />
+                    <node concept="37vLTw" id="4enSzNUH0xz" role="37wK5m">
+                      <ref role="3cqZAo" node="1P$YlGOZ6B2" resolve="gitRoot" />
+                    </node>
+                    <node concept="Xl_RD" id="4enSzNUH1QS" role="37wK5m">
+                      <property role="Xl_RC" value=".git" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="4enSzNUH1VF" role="3cqZAp">
+              <node concept="3clFbS" id="4enSzNUH1VH" role="3clFbx">
+                <node concept="3clFbF" id="4enSzNUH2k_" role="3cqZAp">
+                  <node concept="37vLTI" id="4enSzNUH2vB" role="3clFbG">
+                    <node concept="3clFbT" id="4enSzNUH2zD" role="37vLTx">
+                      <property role="3clFbU" value="true" />
+                    </node>
+                    <node concept="37vLTw" id="4enSzNUH2kz" role="37vLTJ">
+                      <ref role="3cqZAo" node="4enSzNUGU4t" resolve="found" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="4enSzNUH279" role="3clFbw">
+                <node concept="37vLTw" id="4enSzNUH1We" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4enSzNUGUsN" resolve="gitDir" />
+                </node>
+                <node concept="liA8E" id="4enSzNUH2gD" role="2OqNvi">
+                  <ref role="37wK5l" to="guwi:~File.exists()" resolve="exists" />
+                </node>
+              </node>
+              <node concept="3eNFk2" id="4enSzNUH2Ba" role="3eNLev">
+                <node concept="3clFbC" id="4enSzNUH2ZF" role="3eO9$A">
+                  <node concept="10Nm6u" id="4enSzNUH30I" role="3uHU7w" />
+                  <node concept="2OqwBi" id="4enSzNUH2MA" role="3uHU7B">
+                    <node concept="37vLTw" id="4enSzNUH2BO" role="2Oq$k0">
+                      <ref role="3cqZAo" node="4enSzNUGUsN" resolve="gitDir" />
+                    </node>
+                    <node concept="liA8E" id="4enSzNUH2V8" role="2OqNvi">
+                      <ref role="37wK5l" to="guwi:~File.getParentFile()" resolve="getParentFile" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbS" id="4enSzNUH2Bc" role="3eOfB_">
+                  <node concept="3cpWs6" id="4enSzNUH41J" role="3cqZAp">
+                    <node concept="10Nm6u" id="4enSzNUH42d" role="3cqZAk" />
+                  </node>
+                </node>
+              </node>
+              <node concept="9aQIb" id="4enSzNUH3Ud" role="9aQIa">
+                <node concept="3clFbS" id="4enSzNUH3Ue" role="9aQI4">
+                  <node concept="3clFbF" id="4enSzNUH4bX" role="3cqZAp">
+                    <node concept="37vLTI" id="4enSzNUH4j$" role="3clFbG">
+                      <node concept="2OqwBi" id="4enSzNUH4rK" role="37vLTx">
+                        <node concept="37vLTw" id="4enSzNUH4nP" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4enSzNUGUsN" resolve="gitDir" />
+                        </node>
+                        <node concept="liA8E" id="4enSzNUH4BS" role="2OqNvi">
+                          <ref role="37wK5l" to="guwi:~File.getParentFile()" resolve="getParentFile" />
+                        </node>
+                      </node>
+                      <node concept="37vLTw" id="4enSzNUH4bW" role="37vLTJ">
+                        <ref role="3cqZAo" node="1P$YlGOZ6B2" resolve="gitRoot" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3fqX7Q" id="4enSzNUGUoC" role="2$JKZa">
+            <node concept="37vLTw" id="4enSzNUGUp3" role="3fr31v">
+              <ref role="3cqZAo" node="4enSzNUGU4t" resolve="found" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="1P$YlGOZ6JN" role="3cqZAp">
+          <node concept="37vLTw" id="1P$YlGOZ6KY" role="3cqZAk">
+            <ref role="3cqZAo" node="1P$YlGOZ6B2" resolve="gitRoot" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2XrIbr" id="5xYAxr6GjiN" role="2XNbBy">
       <property role="TrG5h" value="getCurrentProject" />
       <node concept="3uibUv" id="5xYAxr6HZEd" role="3clF45">
@@ -346,7 +523,7 @@
                             </node>
                             <node concept="2YIFZM" id="5SYYrGB_vn2" role="33vP2m">
                               <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                              <ref role="37wK5l" to="30ym:5SYYrGB_ohV" resolve="launch" />
+                              <ref role="37wK5l" to="30ym:80AXrSevja" resolve="launch" />
                               <node concept="2OqwBi" id="5SYYrGB_xce" role="37wK5m">
                                 <node concept="2OqwBi" id="5SYYrGB_wMC" role="2Oq$k0">
                                   <node concept="2WthIp" id="5SYYrGB_v$T" role="2Oq$k0">
@@ -358,6 +535,14 @@
                                 </node>
                                 <node concept="liA8E" id="5SYYrGB_xwe" role="2OqNvi">
                                   <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                                </node>
+                              </node>
+                              <node concept="2OqwBi" id="1P$YlGOZ5ns" role="37wK5m">
+                                <node concept="2WthIp" id="1P$YlGOZ5nv" role="2Oq$k0">
+                                  <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                </node>
+                                <node concept="2XshWL" id="1P$YlGOZ5nx" role="2OqNvi">
+                                  <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
                                 </node>
                               </node>
                             </node>

@@ -18033,6 +18033,11 @@
     <node concept="3clFb_" id="1P$YlGOU8wX" role="jymVt">
       <property role="TrG5h" value="addAllFiles" />
       <node concept="3clFbS" id="1P$YlGOU8x0" role="3clF47">
+        <node concept="3clFbF" id="1P$YlGOYo2N" role="3cqZAp">
+          <node concept="1rXfSq" id="1P$YlGOYo2L" role="3clFbG">
+            <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingChangedAndNotAdded" />
+          </node>
+        </node>
         <node concept="3clFbF" id="1P$YlGOWEbG" role="3cqZAp">
           <node concept="2OqwBi" id="1P$YlGOWFe7" role="3clFbG">
             <node concept="2OqwBi" id="1P$YlGOWElw" role="2Oq$k0">
@@ -18055,12 +18060,148 @@
       <node concept="3Tm1VV" id="1P$YlGOU8v8" role="1B3o_S" />
       <node concept="3cqZAl" id="1P$YlGOU8wI" role="3clF45" />
     </node>
+    <node concept="2tJIrI" id="1P$YlGOYgi7" role="jymVt" />
+    <node concept="3clFb_" id="1P$YlGOYgKT" role="jymVt">
+      <property role="TrG5h" value="isSomethingChangedAndNotAdded" />
+      <node concept="3clFbS" id="1P$YlGOYgKW" role="3clF47">
+        <node concept="SfApY" id="1P$YlGOYgWK" role="3cqZAp">
+          <node concept="3clFbS" id="1P$YlGOYgWL" role="SfCbr">
+            <node concept="3cpWs8" id="1P$YlGOYirK" role="3cqZAp">
+              <node concept="3cpWsn" id="1P$YlGOYirL" role="3cpWs9">
+                <property role="TrG5h" value="status" />
+                <node concept="3uibUv" id="1P$YlGOYirM" role="1tU5fm">
+                  <ref role="3uigEE" to="v5yd:~Status" resolve="Status" />
+                </node>
+                <node concept="2OqwBi" id="1P$YlGOYiL0" role="33vP2m">
+                  <node concept="2OqwBi" id="1P$YlGOYiL1" role="2Oq$k0">
+                    <node concept="37vLTw" id="1P$YlGOYiL2" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                    </node>
+                    <node concept="liA8E" id="1P$YlGOYiL3" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~Git.status()" resolve="status" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOYiL4" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~StatusCommand.call()" resolve="call" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="1P$YlGOYkjc" role="3cqZAp">
+              <node concept="Xl_RD" id="1P$YlGOYkpt" role="abp_N">
+                <property role="Xl_RC" value="CHANGED " />
+              </node>
+              <node concept="2OqwBi" id="1P$YlGOYl3$" role="abp_N">
+                <node concept="2OqwBi" id="1P$YlGOYk_9" role="2Oq$k0">
+                  <node concept="37vLTw" id="1P$YlGOYkuf" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1P$YlGOYirL" resolve="status" />
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOYkFr" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~Status.getChanged()" resolve="getChanged" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1P$YlGOYlCD" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Set.size()" resolve="size" />
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="1P$YlGOYlMc" role="3cqZAp">
+              <node concept="Xl_RD" id="1P$YlGOYlMd" role="abp_N">
+                <property role="Xl_RC" value="MODIFIED " />
+              </node>
+              <node concept="2OqwBi" id="1P$YlGOYlMe" role="abp_N">
+                <node concept="2OqwBi" id="1P$YlGOYlMf" role="2Oq$k0">
+                  <node concept="37vLTw" id="1P$YlGOYlMg" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1P$YlGOYirL" resolve="status" />
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOYm3_" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~Status.getModified()" resolve="getModified" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1P$YlGOYlMi" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Set.size()" resolve="size" />
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="1P$YlGOYmao" role="3cqZAp">
+              <node concept="Xl_RD" id="1P$YlGOYmap" role="abp_N">
+                <property role="Xl_RC" value="ADDED " />
+              </node>
+              <node concept="2OqwBi" id="1P$YlGOYmaq" role="abp_N">
+                <node concept="2OqwBi" id="1P$YlGOYmar" role="2Oq$k0">
+                  <node concept="37vLTw" id="1P$YlGOYmas" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1P$YlGOYirL" resolve="status" />
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOYm_K" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~Status.getAdded()" resolve="getAdded" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1P$YlGOYmau" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Set.size()" resolve="size" />
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="1P$YlGOYmEC" role="3cqZAp">
+              <node concept="Xl_RD" id="1P$YlGOYmED" role="abp_N">
+                <property role="Xl_RC" value="UNCOMMITTED " />
+              </node>
+              <node concept="2OqwBi" id="1P$YlGOYmEE" role="abp_N">
+                <node concept="2OqwBi" id="1P$YlGOYmEF" role="2Oq$k0">
+                  <node concept="37vLTw" id="1P$YlGOYmEG" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1P$YlGOYirL" resolve="status" />
+                  </node>
+                  <node concept="liA8E" id="1P$YlGOYn0$" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~Status.getUncommittedChanges()" resolve="getUncommittedChanges" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1P$YlGOYmEI" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Set.size()" resolve="size" />
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs6" id="1P$YlGOYnaj" role="3cqZAp">
+              <node concept="3clFbT" id="1P$YlGOYnuR" role="3cqZAk">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+          <node concept="TDmWw" id="1P$YlGOYgX7" role="TEbGg">
+            <node concept="3cpWsn" id="1P$YlGOYgX8" role="TDEfY">
+              <property role="TrG5h" value="e" />
+              <node concept="3uibUv" id="1P$YlGOYgX9" role="1tU5fm">
+                <ref role="3uigEE" to="fnh0:~GitAPIException" resolve="GitAPIException" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="1P$YlGOYgXa" role="TDEfX">
+              <node concept="YS8fn" id="1P$YlGOYgXb" role="3cqZAp">
+                <node concept="2ShNRf" id="1P$YlGOYgXc" role="YScLw">
+                  <node concept="1pGfFk" id="1P$YlGOYgXd" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                    <node concept="37vLTw" id="1P$YlGOYgXe" role="37wK5m">
+                      <ref role="3cqZAo" node="1P$YlGOYgX8" resolve="e" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="1P$YlGOYgz1" role="1B3o_S" />
+      <node concept="10P_77" id="1P$YlGOYgKy" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="1P$YlGOWDWz" role="jymVt" />
     <node concept="3clFb_" id="1P$YlGOU8qR" role="jymVt">
       <property role="TrG5h" value="commit" />
       <node concept="3clFbS" id="1P$YlGOU8qU" role="3clF47">
         <node concept="SfApY" id="1P$YlGOW8DA" role="3cqZAp">
           <node concept="3clFbS" id="1P$YlGOW8DC" role="SfCbr">
+            <node concept="3clFbF" id="1P$YlGOYodh" role="3cqZAp">
+              <node concept="1rXfSq" id="1P$YlGOYodi" role="3clFbG">
+                <ref role="37wK5l" node="1P$YlGOYgKT" resolve="isSomethingChangedAndNotAdded" />
+              </node>
+            </node>
+            <node concept="3clFbH" id="1P$YlGOYocK" role="3cqZAp" />
             <node concept="3cpWs8" id="1P$YlGOWNe5" role="3cqZAp">
               <node concept="3cpWsn" id="1P$YlGOWNe6" role="3cpWs9">
                 <property role="TrG5h" value="rc" />
