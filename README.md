@@ -58,3 +58,11 @@ You can find the Node ID in the inspector:
 
 And this is how you can use the simplest API call:
 ![](images/api.png)
+
+## Release a new version
+
+* Check all tests pass on the CI server (currently using GitHub actions)
+* Set the version number in build.gradle
+* Add a tag: `git tag -a vVERSION_NAME` (message: "Version VERSION_NAME")
+* Ensure the tag is pushed
+* `./gradlew bintrayUpload`
