@@ -577,6 +577,9 @@
                   </node>
                   <node concept="1rXfSq" id="6Jg9HT9V20E" role="37wK5m">
                     <ref role="37wK5l" node="6Jg9HT9V0bV" resolve="getGitRoot" />
+                    <node concept="37vLTw" id="6Jg9HT9Xr9h" role="37wK5m">
+                      <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                    </node>
                   </node>
                 </node>
               </node>
