@@ -25,6 +25,10 @@
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1173175405605" name="jetbrains.mps.baseLanguage.structure.ArrayAccessExpression" flags="nn" index="AH0OO">
+        <child id="1173175577737" name="index" index="AHEQo" />
+        <child id="1173175590490" name="array" index="AHHXb" />
+      </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -53,6 +57,9 @@
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
+      <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
+        <child id="1070534760952" name="componentType" index="10Q1$1" />
+      </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -64,6 +71,7 @@
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1225271283259" name="jetbrains.mps.baseLanguage.structure.NPEEqualsExpression" flags="nn" index="17R0WA" />
+      <concept id="1225271408483" name="jetbrains.mps.baseLanguage.structure.IsNotEmptyOperation" flags="nn" index="17RvpY" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -531,6 +539,136 @@
       <node concept="3Tm6S6" id="6Jg9HTa83Hj" role="1B3o_S" />
       <node concept="10P_77" id="6Jg9HTa83YM" role="3clF45" />
     </node>
+    <node concept="2tJIrI" id="6Ks8zCw7LAb" role="jymVt" />
+    <node concept="2YIFZL" id="6Ks8zCw7Gmg" role="jymVt">
+      <property role="TrG5h" value="considerGitCredentials" />
+      <node concept="3clFbS" id="6Ks8zCw7Gmh" role="3clF47">
+        <node concept="3cpWs8" id="6Ks8zCw7Gmi" role="3cqZAp">
+          <node concept="3cpWsn" id="6Ks8zCw7Gmj" role="3cpWs9">
+            <property role="TrG5h" value="gitCredentials" />
+            <node concept="17QB3L" id="6Ks8zCw7Gmk" role="1tU5fm" />
+            <node concept="2YIFZM" id="6Ks8zCw7Gml" role="33vP2m">
+              <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
+              <ref role="37wK5l" to="wyt6:~System.getenv(java.lang.String)" resolve="getenv" />
+              <node concept="Xl_RD" id="6Ks8zCw7Gmm" role="37wK5m">
+                <property role="Xl_RC" value="MPSSERVER_GIT_CREDENTIALS" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="6Ks8zCw7Gmn" role="3cqZAp">
+          <node concept="3clFbS" id="6Ks8zCw7Gmo" role="3clFbx">
+            <node concept="abc8K" id="6Ks8zCw7KYe" role="3cqZAp">
+              <node concept="Xl_RD" id="6Ks8zCw7L0S" role="abp_N">
+                <property role="Xl_RC" value="Git credentials found" />
+              </node>
+            </node>
+            <node concept="3cpWs8" id="6Ks8zCw7ILP" role="3cqZAp">
+              <node concept="3cpWsn" id="6Ks8zCw7ILS" role="3cpWs9">
+                <property role="TrG5h" value="parts" />
+                <node concept="10Q1$e" id="6Ks8zCw7JkS" role="1tU5fm">
+                  <node concept="17QB3L" id="6Ks8zCw7ILN" role="10Q1$1" />
+                </node>
+                <node concept="2OqwBi" id="6Ks8zCw7IVP" role="33vP2m">
+                  <node concept="37vLTw" id="6Ks8zCw7IN2" role="2Oq$k0">
+                    <ref role="3cqZAo" node="6Ks8zCw7Gmj" resolve="gitCredentials" />
+                  </node>
+                  <node concept="liA8E" id="6Ks8zCw7IWV" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.split(java.lang.String)" resolve="split" />
+                    <node concept="Xl_RD" id="6Ks8zCw7J0J" role="37wK5m">
+                      <property role="Xl_RC" value=":" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="6Ks8zCw7L82" role="3cqZAp">
+              <node concept="Xl_RD" id="6Ks8zCw7L83" role="abp_N">
+                <property role="Xl_RC" value="  git username: " />
+              </node>
+              <node concept="AH0OO" id="6Ks8zCw7LbP" role="abp_N">
+                <node concept="3cmrfG" id="6Ks8zCw7LfI" role="AHEQo">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="37vLTw" id="6Ks8zCw7LeU" role="AHHXb">
+                  <ref role="3cqZAo" node="6Ks8zCw7ILS" resolve="parts" />
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="6Ks8zCw7Lgi" role="3cqZAp">
+              <node concept="Xl_RD" id="6Ks8zCw7Lgj" role="abp_N">
+                <property role="Xl_RC" value="  git password: " />
+              </node>
+              <node concept="AH0OO" id="6Ks8zCw7Lgk" role="abp_N">
+                <node concept="3cmrfG" id="6Ks8zCw7Lgl" role="AHEQo">
+                  <property role="3cmrfH" value="1" />
+                </node>
+                <node concept="37vLTw" id="6Ks8zCw7Lgm" role="AHHXb">
+                  <ref role="3cqZAo" node="6Ks8zCw7ILS" resolve="parts" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="6Ks8zCw7ICw" role="3cqZAp">
+              <node concept="2OqwBi" id="6Ks8zCw7IGG" role="3clFbG">
+                <node concept="37vLTw" id="6Ks8zCw7ICp" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Ks8zCw7GmG" resolve="serverConfiguration" />
+                </node>
+                <node concept="liA8E" id="6Ks8zCw7IK4" role="2OqNvi">
+                  <ref role="37wK5l" to="30ym:6Ks8zCw6UH_" resolve="gitCredentials" />
+                  <node concept="AH0OO" id="6Ks8zCw7J_0" role="37wK5m">
+                    <node concept="3cmrfG" id="6Ks8zCw7JAc" role="AHEQo">
+                      <property role="3cmrfH" value="0" />
+                    </node>
+                    <node concept="37vLTw" id="6Ks8zCw7Ju5" role="AHHXb">
+                      <ref role="3cqZAo" node="6Ks8zCw7ILS" resolve="parts" />
+                    </node>
+                  </node>
+                  <node concept="AH0OO" id="6Ks8zCw7JPM" role="37wK5m">
+                    <node concept="3cmrfG" id="6Ks8zCw7JQ4" role="AHEQo">
+                      <property role="3cmrfH" value="1" />
+                    </node>
+                    <node concept="37vLTw" id="6Ks8zCw7JJM" role="AHHXb">
+                      <ref role="3cqZAo" node="6Ks8zCw7ILS" resolve="parts" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1Wc70l" id="6Ks8zCw7IiT" role="3clFbw">
+            <node concept="3y3z36" id="6Ks8zCw7IdJ" role="3uHU7B">
+              <node concept="37vLTw" id="6Ks8zCw7Gmx" role="3uHU7B">
+                <ref role="3cqZAo" node="6Ks8zCw7Gmj" resolve="gitCredentials" />
+              </node>
+              <node concept="10Nm6u" id="6Ks8zCw7Gmw" role="3uHU7w" />
+            </node>
+            <node concept="2OqwBi" id="6Ks8zCw7Ibw" role="3uHU7w">
+              <node concept="37vLTw" id="6Ks8zCw7HXU" role="2Oq$k0">
+                <ref role="3cqZAo" node="6Ks8zCw7Gmj" resolve="gitCredentials" />
+              </node>
+              <node concept="17RvpY" id="6Ks8zCw7Ipw" role="2OqNvi" />
+            </node>
+          </node>
+          <node concept="9aQIb" id="6Ks8zCw7Lsq" role="9aQIa">
+            <node concept="3clFbS" id="6Ks8zCw7Lsr" role="9aQI4">
+              <node concept="abc8K" id="6Ks8zCw7L$k" role="3cqZAp">
+                <node concept="Xl_RD" id="6Ks8zCw7L$A" role="abp_N">
+                  <property role="Xl_RC" value="No Git credentials" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="6Ks8zCw7GmE" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Ks8zCw7Hku" role="3clF45" />
+      <node concept="37vLTG" id="6Ks8zCw7GmG" role="3clF46">
+        <property role="TrG5h" value="serverConfiguration" />
+        <node concept="3uibUv" id="6Ks8zCw7GGZ" role="1tU5fm">
+          <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
+        </node>
+      </node>
+    </node>
     <node concept="2tJIrI" id="6Jg9HT9UWxT" role="jymVt" />
     <node concept="2YIFZL" id="4ZsvGZupGOJ" role="jymVt">
       <property role="TrG5h" value="mpsMain" />
@@ -623,6 +761,14 @@
                   <ref role="37wK5l" node="6Jg9HTa83GT" resolve="getAutoSave" />
                 </node>
               </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="6Ks8zCw7Kjq" role="3cqZAp">
+          <node concept="1rXfSq" id="6Ks8zCw7Kjl" role="3clFbG">
+            <ref role="37wK5l" node="6Ks8zCw7Gmg" resolve="considerGitCredentials" />
+            <node concept="37vLTw" id="6Ks8zCw7Kqi" role="37wK5m">
+              <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
             </node>
           </node>
         </node>

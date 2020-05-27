@@ -489,6 +489,18 @@
           <property role="3clFbU" value="true" />
         </node>
       </node>
+      <node concept="312cEg" id="6Ks8zCw6Mdm" role="jymVt">
+        <property role="TrG5h" value="gitUsername" />
+        <node concept="3Tm6S6" id="6Ks8zCw6KxC" role="1B3o_S" />
+        <node concept="17QB3L" id="6Ks8zCw6Md7" role="1tU5fm" />
+        <node concept="10Nm6u" id="6Ks8zCw6NOM" role="33vP2m" />
+      </node>
+      <node concept="312cEg" id="6Ks8zCw6PPv" role="jymVt">
+        <property role="TrG5h" value="gitPassword" />
+        <node concept="3Tm6S6" id="6Ks8zCw6OO7" role="1B3o_S" />
+        <node concept="17QB3L" id="6Ks8zCw6OSb" role="1tU5fm" />
+        <node concept="10Nm6u" id="6Ks8zCw6RlG" role="33vP2m" />
+      </node>
       <node concept="2tJIrI" id="6Jg9HTa6N0B" role="jymVt" />
       <node concept="3clFbW" id="6Jg9HTa6Ode" role="jymVt">
         <node concept="37vLTG" id="6Jg9HTa767R" role="3clF46">
@@ -575,6 +587,53 @@
           <node concept="3uibUv" id="6Jg9HTa7SwT" role="1tU5fm">
             <ref role="3uigEE" to="guwi:~File" resolve="File" />
           </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="6Ks8zCw6Ry_" role="jymVt" />
+      <node concept="3clFb_" id="6Ks8zCw6UH_" role="jymVt">
+        <property role="TrG5h" value="gitCredentials" />
+        <node concept="3clFbS" id="6Ks8zCw6UHC" role="3clF47">
+          <node concept="3clFbF" id="6Ks8zCw72JA" role="3cqZAp">
+            <node concept="37vLTI" id="6Ks8zCw74Ru" role="3clFbG">
+              <node concept="37vLTw" id="6Ks8zCw759n" role="37vLTx">
+                <ref role="3cqZAo" node="6Ks8zCw6XWG" resolve="gitUsername" />
+              </node>
+              <node concept="2OqwBi" id="6Ks8zCw73OY" role="37vLTJ">
+                <node concept="Xjq3P" id="6Ks8zCw72J$" role="2Oq$k0" />
+                <node concept="2OwXpG" id="6Ks8zCw74xU" role="2OqNvi">
+                  <ref role="2Oxat5" node="6Ks8zCw6Mdm" resolve="gitUsername" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="6Ks8zCw75b0" role="3cqZAp">
+            <node concept="37vLTI" id="6Ks8zCw75b1" role="3clFbG">
+              <node concept="37vLTw" id="6Ks8zCw76uk" role="37vLTx">
+                <ref role="3cqZAo" node="6Ks8zCw6ZjT" resolve="gitPassword" />
+              </node>
+              <node concept="2OqwBi" id="6Ks8zCw75b3" role="37vLTJ">
+                <node concept="Xjq3P" id="6Ks8zCw75b4" role="2Oq$k0" />
+                <node concept="2OwXpG" id="6Ks8zCw76HF" role="2OqNvi">
+                  <ref role="2Oxat5" node="6Ks8zCw6PPv" resolve="gitPassword" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs6" id="6Ks8zCw713l" role="3cqZAp">
+            <node concept="Xjq3P" id="6Ks8zCw718J" role="3cqZAk" />
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="6Ks8zCw6T8R" role="1B3o_S" />
+        <node concept="3uibUv" id="6Ks8zCw6Wpt" role="3clF45">
+          <ref role="3uigEE" node="6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
+        </node>
+        <node concept="37vLTG" id="6Ks8zCw6XWG" role="3clF46">
+          <property role="TrG5h" value="gitUsername" />
+          <node concept="17QB3L" id="6Ks8zCw6XWF" role="1tU5fm" />
+        </node>
+        <node concept="37vLTG" id="6Ks8zCw6ZjT" role="3clF46">
+          <property role="TrG5h" value="gitPassword" />
+          <node concept="17QB3L" id="6Ks8zCw70kO" role="1tU5fm" />
         </node>
       </node>
       <node concept="2tJIrI" id="6Jg9HTa7XbC" role="jymVt" />
@@ -3485,6 +3544,82 @@
       <node concept="3cqZAl" id="1P$YlGONe1S" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="1P$YlGONdIk" role="jymVt" />
+    <node concept="3clFb_" id="6Ks8zCw80eQ" role="jymVt">
+      <property role="TrG5h" value="gitFacade" />
+      <node concept="3clFbS" id="6Ks8zCw80eT" role="3clF47">
+        <node concept="3cpWs8" id="6Ks8zCw86YU" role="3cqZAp">
+          <node concept="3cpWsn" id="6Ks8zCw86YV" role="3cpWs9">
+            <property role="TrG5h" value="gitFacade" />
+            <node concept="3uibUv" id="6Ks8zCw86YW" role="1tU5fm">
+              <ref role="3uigEE" node="1P$YlGOU7O$" resolve="GitFacade" />
+            </node>
+            <node concept="2ShNRf" id="1P$YlGOU9Jm" role="33vP2m">
+              <node concept="1pGfFk" id="1P$YlGOWnZv" role="2ShVmc">
+                <ref role="37wK5l" node="1P$YlGOVSSr" resolve="GitFacade" />
+                <node concept="2OqwBi" id="6Jg9HTa7v2z" role="37wK5m">
+                  <node concept="37vLTw" id="6Jg9HTa7v2$" role="2Oq$k0">
+                    <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
+                  </node>
+                  <node concept="2OwXpG" id="6Jg9HTa7v2_" role="2OqNvi">
+                    <ref role="2Oxat5" node="6Jg9HTa6AAf" resolve="gitRoot" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="6Ks8zCw8bzD" role="3cqZAp">
+          <node concept="3clFbS" id="6Ks8zCw8bzF" role="3clFbx">
+            <node concept="3clFbF" id="6Ks8zCw8hFx" role="3cqZAp">
+              <node concept="2OqwBi" id="6Ks8zCw8hMw" role="3clFbG">
+                <node concept="37vLTw" id="6Ks8zCw8hFv" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Ks8zCw86YV" resolve="gitFacade" />
+                </node>
+                <node concept="liA8E" id="6Ks8zCw8ifA" role="2OqNvi">
+                  <ref role="37wK5l" node="6Ks8zCw7bFe" resolve="setCredentials" />
+                  <node concept="2OqwBi" id="6Ks8zCw8ih2" role="37wK5m">
+                    <node concept="37vLTw" id="6Ks8zCw8ih3" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
+                    </node>
+                    <node concept="2OwXpG" id="6Ks8zCw8ih4" role="2OqNvi">
+                      <ref role="2Oxat5" node="6Ks8zCw6Mdm" resolve="gitUsername" />
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="6Ks8zCw8iJG" role="37wK5m">
+                    <node concept="37vLTw" id="6Ks8zCw8iJH" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
+                    </node>
+                    <node concept="2OwXpG" id="6Ks8zCw8jdq" role="2OqNvi">
+                      <ref role="2Oxat5" node="6Ks8zCw6PPv" resolve="gitPassword" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="6Ks8zCw8hnx" role="3clFbw">
+            <node concept="10Nm6u" id="6Ks8zCw8hwz" role="3uHU7w" />
+            <node concept="2OqwBi" id="6Ks8zCw8fjq" role="3uHU7B">
+              <node concept="37vLTw" id="6Ks8zCw8fam" role="2Oq$k0">
+                <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
+              </node>
+              <node concept="2OwXpG" id="6Ks8zCw8gZS" role="2OqNvi">
+                <ref role="2Oxat5" node="6Ks8zCw6Mdm" resolve="gitUsername" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="6Ks8zCw88zl" role="3cqZAp">
+          <node concept="37vLTw" id="6Ks8zCw88F7" role="3cqZAk">
+            <ref role="3cqZAo" node="6Ks8zCw86YV" resolve="gitFacade" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="6Ks8zCw7UAL" role="1B3o_S" />
+      <node concept="3uibUv" id="6Ks8zCw7Z9h" role="3clF45">
+        <ref role="3uigEE" node="1P$YlGOU7O$" resolve="GitFacade" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="1P$YlGOMGIg" role="jymVt" />
     <node concept="3clFb_" id="1P$YlGOMNGk" role="jymVt">
       <property role="TrG5h" value="routesForGlobalLevel" />
@@ -4389,18 +4524,8 @@
                               <node concept="3uibUv" id="1P$YlGOU9y8" role="1tU5fm">
                                 <ref role="3uigEE" node="1P$YlGOU7O$" resolve="GitFacade" />
                               </node>
-                              <node concept="2ShNRf" id="1P$YlGOU9Jm" role="33vP2m">
-                                <node concept="1pGfFk" id="1P$YlGOWnZv" role="2ShVmc">
-                                  <ref role="37wK5l" node="1P$YlGOVSSr" resolve="GitFacade" />
-                                  <node concept="2OqwBi" id="6Jg9HTa7v2z" role="37wK5m">
-                                    <node concept="37vLTw" id="6Jg9HTa7v2$" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
-                                    </node>
-                                    <node concept="2OwXpG" id="6Jg9HTa7v2_" role="2OqNvi">
-                                      <ref role="2Oxat5" node="6Jg9HTa6AAf" resolve="gitRoot" />
-                                    </node>
-                                  </node>
-                                </node>
+                              <node concept="1rXfSq" id="6Ks8zCw867z" role="33vP2m">
+                                <ref role="37wK5l" node="6Ks8zCw80eQ" resolve="gitFacade" />
                               </node>
                             </node>
                           </node>
@@ -4564,18 +4689,8 @@
                               <node concept="3uibUv" id="3bFL3i$5xZj" role="1tU5fm">
                                 <ref role="3uigEE" node="1P$YlGOU7O$" resolve="GitFacade" />
                               </node>
-                              <node concept="2ShNRf" id="3bFL3i$5xZk" role="33vP2m">
-                                <node concept="1pGfFk" id="3bFL3i$5xZl" role="2ShVmc">
-                                  <ref role="37wK5l" node="1P$YlGOVSSr" resolve="GitFacade" />
-                                  <node concept="2OqwBi" id="6Jg9HTa7u2f" role="37wK5m">
-                                    <node concept="37vLTw" id="6Jg9HTa7tJV" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
-                                    </node>
-                                    <node concept="2OwXpG" id="6Jg9HTa7uCB" role="2OqNvi">
-                                      <ref role="2Oxat5" node="6Jg9HTa6AAf" resolve="gitRoot" />
-                                    </node>
-                                  </node>
-                                </node>
+                              <node concept="1rXfSq" id="6Ks8zCw8kfX" role="33vP2m">
+                                <ref role="37wK5l" node="6Ks8zCw80eQ" resolve="gitFacade" />
                               </node>
                             </node>
                           </node>
@@ -19778,6 +19893,17 @@
         <ref role="3uigEE" to="v5yd:~Git" resolve="Git" />
       </node>
     </node>
+    <node concept="312cEg" id="6Ks8zCw7g0U" role="jymVt">
+      <property role="TrG5h" value="cp" />
+      <node concept="3Tm6S6" id="6Ks8zCw7fjn" role="1B3o_S" />
+      <node concept="3uibUv" id="6Ks8zCw7fHF" role="1tU5fm">
+        <ref role="3uigEE" to="gmno:~CredentialsProvider" resolve="CredentialsProvider" />
+      </node>
+      <node concept="2YIFZM" id="6Ks8zCw7gR8" role="33vP2m">
+        <ref role="37wK5l" to="gmno:~CredentialsProvider.getDefault()" resolve="getDefault" />
+        <ref role="1Pybhc" to="gmno:~CredentialsProvider" resolve="CredentialsProvider" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="1P$YlGOVSXi" role="jymVt" />
     <node concept="3clFbW" id="1P$YlGOVSSr" role="jymVt">
       <node concept="3cqZAl" id="1P$YlGOVSSt" role="3clF45" />
@@ -19828,6 +19954,40 @@
           <ref role="3uigEE" to="guwi:~File" resolve="File" />
         </node>
       </node>
+    </node>
+    <node concept="2tJIrI" id="6Ks8zCw79dr" role="jymVt" />
+    <node concept="3clFb_" id="6Ks8zCw7bFe" role="jymVt">
+      <property role="TrG5h" value="setCredentials" />
+      <node concept="37vLTG" id="6Ks8zCw7e7h" role="3clF46">
+        <property role="TrG5h" value="gitUsername" />
+        <node concept="17QB3L" id="6Ks8zCw7e7i" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6Ks8zCw7e7j" role="3clF46">
+        <property role="TrG5h" value="gitPassword" />
+        <node concept="17QB3L" id="6Ks8zCw7e7k" role="1tU5fm" />
+      </node>
+      <node concept="3clFbS" id="6Ks8zCw7bFh" role="3clF47">
+        <node concept="3clFbF" id="6Ks8zCw7gYE" role="3cqZAp">
+          <node concept="37vLTI" id="6Ks8zCw7h8f" role="3clFbG">
+            <node concept="2ShNRf" id="6Ks8zCw7hbZ" role="37vLTx">
+              <node concept="1pGfFk" id="6Ks8zCw7ihk" role="2ShVmc">
+                <ref role="37wK5l" to="gmno:~UsernamePasswordCredentialsProvider.&lt;init&gt;(java.lang.String,java.lang.String)" resolve="UsernamePasswordCredentialsProvider" />
+                <node concept="37vLTw" id="6Ks8zCw7ioE" role="37wK5m">
+                  <ref role="3cqZAo" node="6Ks8zCw7e7h" resolve="gitUsername" />
+                </node>
+                <node concept="37vLTw" id="6Ks8zCw7i$f" role="37wK5m">
+                  <ref role="3cqZAo" node="6Ks8zCw7e7j" resolve="gitPassword" />
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="6Ks8zCw7gYD" role="37vLTJ">
+              <ref role="3cqZAo" node="6Ks8zCw7g0U" resolve="cp" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6Ks8zCw7akl" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Ks8zCw7aZS" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="1P$YlGOVSMu" role="jymVt" />
     <node concept="3clFb_" id="1P$YlGOU8wX" role="jymVt">
@@ -20202,34 +20362,51 @@
       <node concept="3clFbS" id="3bFL3i$59ZR" role="3clF47">
         <node concept="SfApY" id="3bFL3i$59ZS" role="3cqZAp">
           <node concept="3clFbS" id="3bFL3i$59ZT" role="SfCbr">
+            <node concept="abc8K" id="6Ks8zCw6Fsc" role="3cqZAp">
+              <node concept="Xl_RD" id="6Ks8zCw6F_V" role="abp_N">
+                <property role="Xl_RC" value="credentialsProvider " />
+              </node>
+              <node concept="2YIFZM" id="6Ks8zCw6FGe" role="abp_N">
+                <ref role="1Pybhc" to="gmno:~CredentialsProvider" resolve="CredentialsProvider" />
+                <ref role="37wK5l" to="gmno:~CredentialsProvider.getDefault()" resolve="getDefault" />
+              </node>
+            </node>
             <node concept="3clFbF" id="3bFL3i$5bx_" role="3cqZAp">
               <node concept="2OqwBi" id="3bFL3i$5wl0" role="3clFbG">
-                <node concept="2OqwBi" id="3bFL3i$5gab" role="2Oq$k0">
-                  <node concept="2OqwBi" id="3bFL3i$5eTB" role="2Oq$k0">
-                    <node concept="2OqwBi" id="3bFL3i$5bH8" role="2Oq$k0">
-                      <node concept="37vLTw" id="3bFL3i$5bxz" role="2Oq$k0">
-                        <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                <node concept="2OqwBi" id="6Ks8zCw4TgU" role="2Oq$k0">
+                  <node concept="2OqwBi" id="3bFL3i$5gab" role="2Oq$k0">
+                    <node concept="2OqwBi" id="3bFL3i$5eTB" role="2Oq$k0">
+                      <node concept="2OqwBi" id="3bFL3i$5bH8" role="2Oq$k0">
+                        <node concept="37vLTw" id="3bFL3i$5bxz" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                        </node>
+                        <node concept="liA8E" id="3bFL3i$5bVg" role="2OqNvi">
+                          <ref role="37wK5l" to="v5yd:~Git.push()" resolve="push" />
+                        </node>
                       </node>
-                      <node concept="liA8E" id="3bFL3i$5bVg" role="2OqNvi">
-                        <ref role="37wK5l" to="v5yd:~Git.push()" resolve="push" />
+                      <node concept="liA8E" id="3bFL3i$5fvM" role="2OqNvi">
+                        <ref role="37wK5l" to="v5yd:~PushCommand.setRemote(java.lang.String)" resolve="setRemote" />
+                        <node concept="37vLTw" id="3bFL3i$5g65" role="37wK5m">
+                          <ref role="3cqZAo" node="3bFL3i$5f$n" resolve="remoteName" />
+                        </node>
                       </node>
                     </node>
-                    <node concept="liA8E" id="3bFL3i$5fvM" role="2OqNvi">
-                      <ref role="37wK5l" to="v5yd:~PushCommand.setRemote(java.lang.String)" resolve="setRemote" />
-                      <node concept="37vLTw" id="3bFL3i$5g65" role="37wK5m">
-                        <ref role="3cqZAo" node="3bFL3i$5f$n" resolve="remoteName" />
+                    <node concept="liA8E" id="3bFL3i$5gkj" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~PushCommand.setRefSpecs(org.eclipse.jgit.transport.RefSpec...)" resolve="setRefSpecs" />
+                      <node concept="2ShNRf" id="3bFL3i$5gqz" role="37wK5m">
+                        <node concept="1pGfFk" id="3bFL3i$5oNl" role="2ShVmc">
+                          <ref role="37wK5l" to="gmno:~RefSpec.&lt;init&gt;(java.lang.String)" resolve="RefSpec" />
+                          <node concept="1rXfSq" id="3bFL3i$5vVg" role="37wK5m">
+                            <ref role="37wK5l" node="3bFL3i$5qp1" resolve="currentBranch" />
+                          </node>
+                        </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="liA8E" id="3bFL3i$5gkj" role="2OqNvi">
-                    <ref role="37wK5l" to="v5yd:~PushCommand.setRefSpecs(org.eclipse.jgit.transport.RefSpec...)" resolve="setRefSpecs" />
-                    <node concept="2ShNRf" id="3bFL3i$5gqz" role="37wK5m">
-                      <node concept="1pGfFk" id="3bFL3i$5oNl" role="2ShVmc">
-                        <ref role="37wK5l" to="gmno:~RefSpec.&lt;init&gt;(java.lang.String)" resolve="RefSpec" />
-                        <node concept="1rXfSq" id="3bFL3i$5vVg" role="37wK5m">
-                          <ref role="37wK5l" node="3bFL3i$5qp1" resolve="currentBranch" />
-                        </node>
-                      </node>
+                  <node concept="liA8E" id="6Ks8zCw4T$l" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~TransportCommand.setCredentialsProvider(org.eclipse.jgit.transport.CredentialsProvider)" resolve="setCredentialsProvider" />
+                    <node concept="37vLTw" id="6Ks8zCw7iRh" role="37wK5m">
+                      <ref role="3cqZAo" node="6Ks8zCw7g0U" resolve="cp" />
                     </node>
                   </node>
                 </node>

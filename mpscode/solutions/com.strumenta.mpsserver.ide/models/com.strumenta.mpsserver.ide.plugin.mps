@@ -515,6 +515,43 @@
                         </node>
                       </node>
                       <node concept="3clFbS" id="5SYYrGB_ueh" role="3clF47">
+                        <node concept="3cpWs8" id="6Ks8zCw5YQe" role="3cqZAp">
+                          <node concept="3cpWsn" id="6Ks8zCw5YQf" role="3cpWs9">
+                            <property role="TrG5h" value="serverConfiguration" />
+                            <node concept="3uibUv" id="6Ks8zCw5YQg" role="1tU5fm">
+                              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
+                            </node>
+                            <node concept="2OqwBi" id="6Ks8zCw5Utn" role="33vP2m">
+                              <node concept="2ShNRf" id="6Ks8zCw5Psh" role="2Oq$k0">
+                                <node concept="1pGfFk" id="6Ks8zCw5UnR" role="2ShVmc">
+                                  <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
+                                  <node concept="2OqwBi" id="6Ks8zCw5Uom" role="37wK5m">
+                                    <node concept="2OqwBi" id="6Ks8zCw5Uon" role="2Oq$k0">
+                                      <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
+                                        <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                      </node>
+                                      <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
+                                        <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="6Ks8zCw5Uoq" role="2OqNvi">
+                                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="6Ks8zCw5UEo" role="2OqNvi">
+                                <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
+                                <node concept="2OqwBi" id="6Ks8zCw5Ykt" role="37wK5m">
+                                  <node concept="2WthIp" id="6Ks8zCw5Y6B" role="2Oq$k0" />
+                                  <node concept="2XshWL" id="6Ks8zCw5Yr7" role="2OqNvi">
+                                    <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                         <node concept="3cpWs8" id="5SYYrGB_wqG" role="3cqZAp">
                           <node concept="3cpWsn" id="5SYYrGB_wqH" role="3cpWs9">
                             <property role="TrG5h" value="sc" />
@@ -523,27 +560,9 @@
                             </node>
                             <node concept="2YIFZM" id="5SYYrGB_vn2" role="33vP2m">
                               <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                              <ref role="37wK5l" to="30ym:5SYYrGB_ohV" resolve="launch" />
-                              <node concept="2OqwBi" id="5SYYrGB_xce" role="37wK5m">
-                                <node concept="2OqwBi" id="5SYYrGB_wMC" role="2Oq$k0">
-                                  <node concept="2WthIp" id="5SYYrGB_v$T" role="2Oq$k0">
-                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                  </node>
-                                  <node concept="2BZ7hE" id="5SYYrGB_x2w" role="2OqNvi">
-                                    <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
-                                  </node>
-                                </node>
-                                <node concept="liA8E" id="5SYYrGB_xwe" role="2OqNvi">
-                                  <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
-                                </node>
-                              </node>
-                              <node concept="2OqwBi" id="1P$YlGOZ5ns" role="37wK5m">
-                                <node concept="2WthIp" id="1P$YlGOZ5nv" role="2Oq$k0">
-                                  <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                </node>
-                                <node concept="2XshWL" id="1P$YlGOZ5nx" role="2OqNvi">
-                                  <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
-                                </node>
+                              <ref role="37wK5l" to="30ym:80AXrSevja" resolve="launch" />
+                              <node concept="37vLTw" id="6Ks8zCw5Zn2" role="37wK5m">
+                                <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
                               </node>
                             </node>
                           </node>
