@@ -1,5 +1,5 @@
 cd ..
-MPSSERVER_PORT=7994 ./gradlew runLauncher & #> server_log_out.txt 2>server_log_err.txt &
+MPSSERVER_AUTOSAVE=false MPSSERVER_PORT=7994 ./gradlew runLauncher & #> server_log_out.txt 2>server_log_err.txt &
 cd functional_tests
 MPS_SERVER_PID=$!
 #sleep 4m # we need time to install the stuff
