@@ -33,7 +33,7 @@
     </language>
   </registry>
   <node concept="1sDjY4" id="4$zH10lxXM$">
-    <property role="TrG5h" value="SuperAcme9" />
+    <property role="TrG5h" value="Acme" />
     <node concept="1sDjY7" id="4$zH10ly0XR" role="1sD6yR">
       <property role="TrG5h" value="CEO" />
     </node>
@@ -91,7 +91,7 @@
   </node>
   <node concept="1sDjYf" id="4$zH10lyb2f">
     <property role="TrG5h" value="Writing proposals" />
-    <ref role="1sDjYM" node="4$zH10lxXM$" resolve="SuperAcme9" />
+    <ref role="1sDjYM" node="4$zH10lxXM$" resolve="Acme" />
     <node concept="1sDjZw" id="4$zH10lyfKp" role="1sDjZz">
       <property role="TrG5h" value="Prepare first draft" />
       <ref role="1sEH5t" node="4$zH10ly0Y0" resolve="CTO" />
