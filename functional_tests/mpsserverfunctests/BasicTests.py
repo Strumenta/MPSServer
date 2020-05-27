@@ -64,30 +64,30 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(200, r.status_code)
         self.assertEqual("SuperAcme", r.content.decode("utf-8"))
 
-    # def test_changed_models(self):
-    #     r = requests.get('%s/persistence/changedModels' % BASE_URL)
-    #     self.assertEqual(200, r.status_code)
-    #     changedModels = r.json()
-    #     self.assertEqual(0, len(changedModels))
+    def test_changed_models(self):
+        r = requests.get('%s/persistence/changedModels' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        changedModels = r.json()
+        self.assertEqual(0, len(changedModels))
         
-    #     r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL, data='My new name')
-    #     self.assertEqual(200, r.status_code)
-    #     time.sleep(1)
+        r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL, data='My new name')
+        self.assertEqual(200, r.status_code)
+        time.sleep(1)
 
-    #     r = requests.get('%s/persistence/changedModels' % BASE_URL)
-    #     self.assertEqual(200, r.status_code)
-    #     changedModels = r.json()
-    #     self.assertEqual(['com.strumenta.businessorg.sandbox.acmeinc'], changedModels)
-    #     time.sleep(1)
+        r = requests.get('%s/persistence/changedModels' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        changedModels = r.json()
+        self.assertEqual(['com.strumenta.businessorg.sandbox.acmeinc'], changedModels)
+        time.sleep(1)
 
-    #     r = requests.post('%s/persistence/reloadAll' % BASE_URL)
-    #     self.assertEqual(200, r.status_code)
-    #     time.sleep(1)
+        r = requests.post('%s/persistence/reloadAll' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        time.sleep(1)
 
-    #     r = requests.get('%s/persistence/changedModels' % BASE_URL)
-    #     self.assertEqual(200, r.status_code)
-    #     changedModels = r.json()
-    #     self.assertEqual(0, len(changedModels))
+        r = requests.get('%s/persistence/changedModels' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        changedModels = r.json()
+        self.assertEqual(0, len(changedModels))
 
 if __name__ == '__main__':
     unittest.main()
