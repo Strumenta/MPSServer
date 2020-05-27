@@ -52,9 +52,9 @@
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
-        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -473,6 +473,64 @@
         </node>
       </node>
     </node>
+    <node concept="2YIFZL" id="6Jg9HTa83GT" role="jymVt">
+      <property role="TrG5h" value="getAutoSave" />
+      <node concept="3clFbS" id="6Jg9HTa83GU" role="3clF47">
+        <node concept="3cpWs8" id="6Jg9HTa83GV" role="3cqZAp">
+          <node concept="3cpWsn" id="6Jg9HTa83GW" role="3cpWs9">
+            <property role="TrG5h" value="autosave" />
+            <node concept="17QB3L" id="6Jg9HTa83GX" role="1tU5fm" />
+            <node concept="2YIFZM" id="6Jg9HTa83GY" role="33vP2m">
+              <ref role="37wK5l" to="wyt6:~System.getenv(java.lang.String)" resolve="getenv" />
+              <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
+              <node concept="Xl_RD" id="6Jg9HTa83GZ" role="37wK5m">
+                <property role="Xl_RC" value="MPSSERVER_AUTOSAVE" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="6Jg9HTa83H0" role="3cqZAp">
+          <node concept="3clFbS" id="6Jg9HTa83H1" role="3clFbx">
+            <node concept="3clFbF" id="6Jg9HTa83H2" role="3cqZAp">
+              <node concept="37vLTI" id="6Jg9HTa83H3" role="3clFbG">
+                <node concept="37vLTw" id="6Jg9HTa83H7" role="37vLTJ">
+                  <ref role="3cqZAo" node="6Jg9HTa83GW" resolve="autosave" />
+                </node>
+                <node concept="Xl_RD" id="6Jg9HTa85ps" role="37vLTx">
+                  <property role="Xl_RC" value="true" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="6Jg9HTa83H8" role="3clFbw">
+            <node concept="10Nm6u" id="6Jg9HTa83H9" role="3uHU7w" />
+            <node concept="37vLTw" id="6Jg9HTa83Ha" role="3uHU7B">
+              <ref role="3cqZAo" node="6Jg9HTa83GW" resolve="autosave" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="6Jg9HTa83Hb" role="3cqZAp" />
+        <node concept="abc8K" id="6Jg9HTa83Hc" role="3cqZAp">
+          <node concept="Xl_RD" id="6Jg9HTa83Hd" role="abp_N">
+            <property role="Xl_RC" value="Autosave " />
+          </node>
+          <node concept="37vLTw" id="6Jg9HTa83He" role="abp_N">
+            <ref role="3cqZAo" node="6Jg9HTa83GW" resolve="autosave" />
+          </node>
+        </node>
+        <node concept="3cpWs6" id="6Jg9HTa83Hf" role="3cqZAp">
+          <node concept="2YIFZM" id="6Jg9HTa85g5" role="3cqZAk">
+            <ref role="37wK5l" to="wyt6:~Boolean.parseBoolean(java.lang.String)" resolve="parseBoolean" />
+            <ref role="1Pybhc" to="wyt6:~Boolean" resolve="Boolean" />
+            <node concept="37vLTw" id="6Jg9HTa85kL" role="37wK5m">
+              <ref role="3cqZAo" node="6Jg9HTa83GW" resolve="autosave" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="6Jg9HTa83Hj" role="1B3o_S" />
+      <node concept="10P_77" id="6Jg9HTa83YM" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="6Jg9HT9UWxT" role="jymVt" />
     <node concept="2YIFZL" id="4ZsvGZupGOJ" role="jymVt">
       <property role="TrG5h" value="mpsMain" />
@@ -520,39 +578,65 @@
             <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
           </node>
         </node>
-        <node concept="3cpWs8" id="2mQU3MvgZf2" role="3cqZAp">
-          <node concept="3cpWsn" id="2mQU3MvgZf3" role="3cpWs9">
-            <property role="TrG5h" value="repo" />
-            <property role="3TUv4t" value="true" />
-            <node concept="3uibUv" id="2mQU3MvgZf4" role="1tU5fm">
-              <ref role="3uigEE" to="lui2:~SRepository" resolve="SRepository" />
+        <node concept="3cpWs8" id="6Jg9HTa82dP" role="3cqZAp">
+          <node concept="3cpWsn" id="6Jg9HTa82dQ" role="3cpWs9">
+            <property role="TrG5h" value="serverConfiguration" />
+            <node concept="3uibUv" id="6Jg9HTa82dR" role="1tU5fm">
+              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
             </node>
-            <node concept="2OqwBi" id="2mQU3MvgZf5" role="33vP2m">
-              <node concept="37vLTw" id="2mQU3MvgZf6" role="2Oq$k0">
-                <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
+            <node concept="2OqwBi" id="6Jg9HTa83wL" role="33vP2m">
+              <node concept="2OqwBi" id="6Jg9HTa831o" role="2Oq$k0">
+                <node concept="2OqwBi" id="6Jg9HTa82QT" role="2Oq$k0">
+                  <node concept="2ShNRf" id="6Jg9HTa82kg" role="2Oq$k0">
+                    <node concept="1pGfFk" id="6Jg9HTa82k7" role="2ShVmc">
+                      <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
+                      <node concept="2OqwBi" id="6Jg9HTa82BW" role="37wK5m">
+                        <node concept="37vLTw" id="6Jg9HTa82wH" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
+                        </node>
+                        <node concept="liA8E" id="6Jg9HTa82I6" role="2OqNvi">
+                          <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="6Jg9HTa82VU" role="2OqNvi">
+                    <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
+                    <node concept="1rXfSq" id="6Jg9HTa82Y8" role="37wK5m">
+                      <ref role="37wK5l" node="6Jg9HT9UXWv" resolve="getPort" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="6Jg9HTa836f" role="2OqNvi">
+                  <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
+                  <node concept="1rXfSq" id="6Jg9HTa8396" role="37wK5m">
+                    <ref role="37wK5l" node="6Jg9HT9V0bV" resolve="getGitRoot" />
+                    <node concept="37vLTw" id="6Jg9HTa83d8" role="37wK5m">
+                      <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                    </node>
+                  </node>
+                </node>
               </node>
-              <node concept="liA8E" id="2mQU3MvgZf7" role="2OqNvi">
-                <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+              <node concept="liA8E" id="6Jg9HTa83Dc" role="2OqNvi">
+                <ref role="37wK5l" to="30ym:6Jg9HTa7XRn" resolve="autosave" />
+                <node concept="1rXfSq" id="6Jg9HTa85yI" role="37wK5m">
+                  <ref role="37wK5l" node="6Jg9HTa83GT" resolve="getAutoSave" />
+                </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="2mQU3MvgZ9Q" role="3cqZAp" />
-        <node concept="abc8K" id="2IXprNT7y5X" role="3cqZAp">
-          <node concept="Xl_RD" id="2IXprNT7y5Y" role="abp_N">
-            <property role="Xl_RC" value="[MPS Server - Start]" />
-          </node>
-        </node>
-        <node concept="3cpWs8" id="80AXrSdLif" role="3cqZAp">
-          <node concept="3cpWsn" id="80AXrSdLii" role="3cpWs9">
-            <property role="TrG5h" value="port" />
-            <node concept="10Oyi0" id="80AXrSdLid" role="1tU5fm" />
-            <node concept="1rXfSq" id="6Jg9HT9UYf1" role="33vP2m">
-              <ref role="37wK5l" node="6Jg9HT9UXWv" resolve="getPort" />
+        <node concept="3clFbF" id="6Jg9HTa976W" role="3cqZAp">
+          <node concept="2OqwBi" id="6Jg9HTa97eW" role="3clFbG">
+            <node concept="37vLTw" id="6Jg9HTa976U" role="2Oq$k0">
+              <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
+            </node>
+            <node concept="liA8E" id="6Jg9HTa97kO" role="2OqNvi">
+              <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="2IXprNT7y2Z" role="3cqZAp" />
+        <node concept="3clFbH" id="6Jg9HTa97lQ" role="3cqZAp" />
         <node concept="abc8K" id="2p2ql82MlR7" role="3cqZAp">
           <node concept="Xl_RD" id="2p2ql82MlXP" role="abp_N">
             <property role="Xl_RC" value="[MPS Server - Start]" />
@@ -569,17 +653,8 @@
                 <node concept="2YIFZM" id="2p2ql82MmkH" role="33vP2m">
                   <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
                   <ref role="37wK5l" to="30ym:80AXrSevja" resolve="launch" />
-                  <node concept="37vLTw" id="2p2ql82Mmld" role="37wK5m">
-                    <ref role="3cqZAo" node="2mQU3MvgZf3" resolve="repo" />
-                  </node>
-                  <node concept="37vLTw" id="1P$YlGOXLtW" role="37wK5m">
-                    <ref role="3cqZAo" node="80AXrSdLii" resolve="port" />
-                  </node>
-                  <node concept="1rXfSq" id="6Jg9HT9V20E" role="37wK5m">
-                    <ref role="37wK5l" node="6Jg9HT9V0bV" resolve="getGitRoot" />
-                    <node concept="37vLTw" id="6Jg9HT9Xr9h" role="37wK5m">
-                      <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
-                    </node>
+                  <node concept="37vLTw" id="6Jg9HTa83sk" role="37wK5m">
+                    <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
                   </node>
                 </node>
               </node>
