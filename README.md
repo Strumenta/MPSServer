@@ -12,6 +12,17 @@ There is also a framework to define web editors interoperable with MPSServer. Th
 
 You can find some basic instructions and an example here: https://github.com/Strumenta/calc-webeditkit-example
 
+## How to configure MPSServer Launcher
+
+MPSServer comes with a launcher: you can see it as a command line application that embeds an instance of MPS headless.
+
+The launcher can be run:
+
+* As a contributor to MPSServer: using this source and running `./gradlew runLauncher`
+* As a user of MPSServer: using the [MPSServer Gradle Plugin](https://github.com/Strumenta/mpsserver-gradle-plugin)
+
+This launcher can be configured. Read instructions here: [configuration](configuration.md)
+
 ## The simplest way to use MPSServer
 
 Simply look in the `example` directory.
