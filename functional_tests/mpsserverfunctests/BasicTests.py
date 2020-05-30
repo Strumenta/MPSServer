@@ -81,9 +81,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(['com.strumenta.businessorg.sandbox.acmeinc'], changedModels)
         time.sleep(1)
 
-        r = requests.post('%s/persistence/reloadAll' % BASE_URL)
-        self.assertEqual(200, r.status_code)
-        time.sleep(1)
+        self.reloadAll()
 
         r = requests.get('%s/persistence/changedModels' % BASE_URL)
         self.assertEqual(200, r.status_code)
