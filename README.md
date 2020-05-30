@@ -12,17 +12,6 @@ There is also a framework to define web editors interoperable with MPSServer. Th
 
 You can find some basic instructions and an example here: https://github.com/Strumenta/calc-webeditkit-example
 
-## How to configure MPSServer Launcher
-
-MPSServer comes with a launcher: you can see it as a command line application that embeds an instance of MPS headless.
-
-The launcher can be run:
-
-* As a contributor to MPSServer: using this source and running `./gradlew runLauncher`
-* As a user of MPSServer: using the [MPSServer Gradle Plugin](https://github.com/Strumenta/mpsserver-gradle-plugin)
-
-This launcher can be configured. Read instructions here: [configuration](configuration.md)
-
 ## The simplest way to use MPSServer
 
 Simply look in the `example` directory.
@@ -70,7 +59,34 @@ You can find the Node ID in the inspector:
 And this is how you can use the simplest API call:
 ![](images/api.png)
 
-## Release a new version
+## How to configure MPSServer Launcher
+
+MPSServer comes with a launcher: you can see it as a command line application that embeds an instance of MPS headless.
+
+The launcher can be run:
+
+* As a contributor to MPSServer: using this source and running `./gradlew runLauncher`
+* As a user of MPSServer: using the [MPSServer Gradle Plugin](https://github.com/Strumenta/mpsserver-gradle-plugin)
+
+This launcher can be configured. Read instructions here: [configuration](documentation/configuration.md)
+
+## Exposed API
+
+It is possible to use the MPSServer through:
+
+* HTTP calls, [documented here](documentation/routes.md)
+* WebSocket messages, [documented here](documentation/wsprotocol.md)
+
+## Development
+
+### Testing
+
+The project contains:
+
+* unit tests: written within MPS
+* functional tests: written in Python
+
+### Release a new version
 
 * Check all tests pass on the CI server (currently using GitHub actions)
 * Set the version number in build.gradle
