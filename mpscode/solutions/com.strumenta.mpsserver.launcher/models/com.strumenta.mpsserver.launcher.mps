@@ -96,6 +96,7 @@
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
+      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -450,24 +451,71 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="6Jg9HT9V2eK" role="3cqZAp" />
-        <node concept="abc8K" id="6Jg9HT9V2eL" role="3cqZAp">
-          <node concept="Xl_RD" id="6Jg9HT9V2eM" role="abp_N">
-            <property role="Xl_RC" value="Git root path " />
-          </node>
-          <node concept="37vLTw" id="6Jg9HT9V2eN" role="abp_N">
-            <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
-          </node>
-        </node>
-        <node concept="3cpWs6" id="6Jg9HT9V2kq" role="3cqZAp">
-          <node concept="2ShNRf" id="6Jg9HT9V2o_" role="3cqZAk">
-            <node concept="1pGfFk" id="6Jg9HT9V2Ku" role="2ShVmc">
-              <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
-              <node concept="37vLTw" id="6Jg9HT9V2OE" role="37wK5m">
-                <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+        <node concept="3clFbH" id="7f23gRhKPEP" role="3cqZAp" />
+        <node concept="3cpWs8" id="7f23gRhKQ8B" role="3cqZAp">
+          <node concept="3cpWsn" id="7f23gRhKQ8C" role="3cpWs9">
+            <property role="TrG5h" value="dotGitDir" />
+            <node concept="3uibUv" id="7f23gRhKQ8D" role="1tU5fm">
+              <ref role="3uigEE" to="guwi:~File" resolve="File" />
+            </node>
+            <node concept="2ShNRf" id="7f23gRhKQgD" role="33vP2m">
+              <node concept="1pGfFk" id="7f23gRhKQgw" role="2ShVmc">
+                <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
+                <node concept="3cpWs3" id="7f23gRhKR5f" role="37wK5m">
+                  <node concept="Xl_RD" id="7f23gRhKR5q" role="3uHU7w">
+                    <property role="Xl_RC" value=".git" />
+                  </node>
+                  <node concept="3cpWs3" id="7f23gRhKQHf" role="3uHU7B">
+                    <node concept="37vLTw" id="7f23gRhKQm6" role="3uHU7B">
+                      <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+                    </node>
+                    <node concept="10M0yZ" id="7f23gRhKQLk" role="3uHU7w">
+                      <ref role="3cqZAo" to="guwi:~File.separator" resolve="separator" />
+                      <ref role="1PxDUh" to="guwi:~File" resolve="File" />
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>
+        </node>
+        <node concept="3clFbJ" id="7f23gRhKRng" role="3cqZAp">
+          <node concept="3clFbS" id="7f23gRhKRni" role="3clFbx">
+            <node concept="abc8K" id="6Jg9HT9V2eL" role="3cqZAp">
+              <node concept="Xl_RD" id="6Jg9HT9V2eM" role="abp_N">
+                <property role="Xl_RC" value="Git root path " />
+              </node>
+              <node concept="37vLTw" id="6Jg9HT9V2eN" role="abp_N">
+                <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+              </node>
+            </node>
+            <node concept="3cpWs6" id="7f23gRhKRKe" role="3cqZAp">
+              <node concept="2ShNRf" id="7f23gRhKRKz" role="3cqZAk">
+                <node concept="1pGfFk" id="7f23gRhKRK$" role="2ShVmc">
+                  <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
+                  <node concept="37vLTw" id="7f23gRhKRK_" role="37wK5m">
+                    <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="7f23gRhKRE5" role="3clFbw">
+            <node concept="37vLTw" id="7f23gRhKRv1" role="2Oq$k0">
+              <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
+            </node>
+            <node concept="liA8E" id="7f23gRhKRIA" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~File.exists()" resolve="exists" />
+            </node>
+          </node>
+        </node>
+        <node concept="abc8K" id="7f23gRhKSu6" role="3cqZAp">
+          <node concept="Xl_RD" id="7f23gRhKSAp" role="abp_N">
+            <property role="Xl_RC" value="No Git root" />
+          </node>
+        </node>
+        <node concept="3cpWs6" id="6Jg9HT9V2kq" role="3cqZAp">
+          <node concept="10Nm6u" id="7f23gRhKSG3" role="3cqZAk" />
         </node>
       </node>
       <node concept="3Tm6S6" id="6Jg9HT9V03_" role="1B3o_S" />

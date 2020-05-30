@@ -3,7 +3,7 @@ name: FunctionalTests
 on: [push]
 
 jobs:
-  build:
+  run-functional-tests:
 
     runs-on: ubuntu-latest
 
