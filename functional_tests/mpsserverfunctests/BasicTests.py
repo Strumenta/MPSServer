@@ -37,6 +37,7 @@ class MyTestCase(unittest.TestCase):
     def reloadAll(self):
         r = requests.post('%s/persistence/reloadAll' % BASE_URL)
         self.assertEqual(200, r.status_code)
+        time.sleep(1)
 
 
     def test_healthcheck(self):
