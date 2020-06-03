@@ -29,7 +29,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
+    id 'com.strumenta.mpsserver' version "0.1.0"
 }
 
 repositories {
