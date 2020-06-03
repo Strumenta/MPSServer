@@ -6,6 +6,9 @@
 
 **GET /modules**: _to be documented_
 
+* query parameter _includeReadOnly_, flag, default false. If set include read-only modules in the list
+* query parameter _includePackaged_, flag, default false. If set include packaged modules in the list
+
 **GET /solutions**: _to be documented_
 
 **POST /persistence/saveAll**: _to be documented_
