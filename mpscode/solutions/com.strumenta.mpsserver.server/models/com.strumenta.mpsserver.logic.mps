@@ -39,9 +39,6 @@
     <import index="tp6m" ref="r:00000000-0000-4000-0000-011c895903a2(jetbrains.mps.lang.test.runtime)" />
     <import index="g3l6" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.extapi.model(MPS.Core/)" />
     <import index="vndm" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.language(MPS.Core/)" />
-    <import index="vcd6" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.utils(com.strumenta.mpsserver.deps/)" />
-    <import index="mqaq" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem(com.strumenta.mpsserver.deps/)" />
-    <import index="w9qs" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.beijunyi.parallelgit.filesystem.commands(com.strumenta.mpsserver.deps/)" />
     <import index="v5yd" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.api(com.strumenta.mpsserver.deps/)" />
     <import index="vdxs" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.lib(com.strumenta.mpsserver.deps/)" />
     <import index="r5tj" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:org.eclipse.jgit.revwalk(com.strumenta.mpsserver.deps/)" />
@@ -51,8 +48,6 @@
     <import index="nddn" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.intentions(MPS.Editor/)" />
     <import index="18ew" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.util(MPS.Core/)" />
     <import index="exr9" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.nodeEditor(MPS.Editor/)" />
-    <import index="uxaq" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.editor.intentions(MPS.Editor/)" />
-    <import index="ev0w" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.typechecking.backend(MPS.Core/)" />
     <import index="82uw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.function(JDK/)" />
     <import index="1ctc" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.stream(JDK/)" />
   </imports>
