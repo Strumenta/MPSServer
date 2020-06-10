@@ -292,6 +292,15 @@
         <child id="1163668922816" name="ifTrue" index="3K4E3e" />
         <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
+      <concept id="1163670490218" name="jetbrains.mps.baseLanguage.structure.SwitchStatement" flags="nn" index="3KaCP$">
+        <child id="1163670592366" name="defaultBlock" index="3Kb1Dw" />
+        <child id="1163670766145" name="expression" index="3KbGdf" />
+        <child id="1163670772911" name="case" index="3KbHQx" />
+      </concept>
+      <concept id="1163670641947" name="jetbrains.mps.baseLanguage.structure.SwitchCase" flags="ng" index="3KbdKl">
+        <child id="1163670677455" name="expression" index="3Kbmr1" />
+        <child id="1163670683720" name="body" index="3Kbo56" />
+      </concept>
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="1350122676458893092" name="text" index="3ndbpf" />
       </concept>
@@ -1968,14 +1977,19 @@
         <node concept="SfApY" id="6Iad5Is6Uro" role="3cqZAp">
           <node concept="3clFbS" id="6Iad5Is6Urq" role="SfCbr">
             <node concept="3clFbF" id="6Y14zWtKYiV" role="3cqZAp">
-              <node concept="2YIFZM" id="6Y14zWtKYjW" role="3clFbG">
-                <ref role="37wK5l" to="9xi5:~Spark.webSocket(java.lang.String,java.lang.Class)" resolve="webSocket" />
+              <node concept="2YIFZM" id="6uy13AN_ynS" role="3clFbG">
+                <ref role="37wK5l" to="9xi5:~Spark.webSocket(java.lang.String,java.lang.Object)" resolve="webSocket" />
                 <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
-                <node concept="Xl_RD" id="6Y14zWtKYnr" role="37wK5m">
+                <node concept="Xl_RD" id="6uy13AN_ynT" role="37wK5m">
                   <property role="Xl_RC" value="/socket" />
                 </node>
-                <node concept="3VsKOn" id="6Y14zWtL7zn" role="37wK5m">
-                  <ref role="3VsUkX" node="6Y14zWtL0rJ" resolve="WebSocketHandler" />
+                <node concept="2ShNRf" id="6uy13AN_ynU" role="37wK5m">
+                  <node concept="1pGfFk" id="6uy13AN_ynV" role="2ShVmc">
+                    <ref role="37wK5l" node="6Y14zWtOxff" resolve="WebSocketHandler" />
+                    <node concept="37vLTw" id="6uy13ANE3jm" role="37wK5m">
+                      <ref role="3cqZAo" node="3ronlYH7Hbj" resolve="intentionsModule" />
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
@@ -2669,8 +2683,8 @@
                       <ref role="3uigEE" node="5I6f3mSOFS1" resolve="SolutionInfo" />
                     </node>
                     <node concept="2ShNRf" id="5I6f3mSOmq6" role="33vP2m">
-                      <node concept="HV5vD" id="5I6f3mSOmq7" role="2ShVmc">
-                        <ref role="HV5vE" node="5I6f3mSOFS1" resolve="SolutionInfo" />
+                      <node concept="1pGfFk" id="6uy13ANB93Z" role="2ShVmc">
+                        <ref role="37wK5l" node="5lWY37WKrrW" resolve="SolutionInfo" />
                       </node>
                     </node>
                   </node>
@@ -6685,11 +6699,38 @@
         <property role="3clFbU" value="true" />
       </node>
     </node>
+    <node concept="312cEg" id="6uy13ANA6Rk" role="jymVt">
+      <property role="TrG5h" value="intentionsIntegrationServerModule" />
+      <node concept="3Tm6S6" id="6uy13ANA6Rl" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANA6Rn" role="1tU5fm">
+        <ref role="3uigEE" node="3ronlYH5$Qr" resolve="IntentionsIntegrationServerModule" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="6Y14zWtOwTw" role="jymVt" />
     <node concept="3clFbW" id="6Y14zWtOxff" role="jymVt">
       <node concept="3cqZAl" id="6Y14zWtOxfh" role="3clF45" />
       <node concept="3Tm1VV" id="6Y14zWtOxfi" role="1B3o_S" />
-      <node concept="3clFbS" id="6Y14zWtOxfj" role="3clF47" />
+      <node concept="3clFbS" id="6Y14zWtOxfj" role="3clF47">
+        <node concept="3clFbF" id="6uy13ANAa7g" role="3cqZAp">
+          <node concept="37vLTI" id="6uy13ANAa_g" role="3clFbG">
+            <node concept="37vLTw" id="6uy13ANAaJ$" role="37vLTx">
+              <ref role="3cqZAo" node="6uy13ANA6mp" resolve="intentionsIntegrationServerModule" />
+            </node>
+            <node concept="2OqwBi" id="6uy13ANAabw" role="37vLTJ">
+              <node concept="Xjq3P" id="6uy13ANAa7f" role="2Oq$k0" />
+              <node concept="2OwXpG" id="6uy13ANAap4" role="2OqNvi">
+                <ref role="2Oxat5" node="6uy13ANA6Rk" resolve="intentionsIntegrationServerModule" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="37vLTG" id="6uy13ANA6mp" role="3clF46">
+        <property role="TrG5h" value="intentionsIntegrationServerModule" />
+        <node concept="3uibUv" id="6uy13ANA6mo" role="1tU5fm">
+          <ref role="3uigEE" node="3ronlYH5$Qr" resolve="IntentionsIntegrationServerModule" />
+        </node>
+      </node>
     </node>
     <node concept="2tJIrI" id="SXzjmhsJp0" role="jymVt" />
     <node concept="3clFb_" id="3ESggWmJuak" role="jymVt">
@@ -7376,6 +7417,499 @@
       </node>
       <node concept="3Tm6S6" id="2j5iOBR5q$g" role="1B3o_S" />
       <node concept="3cqZAl" id="2j5iOBR5tad" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="6uy13ANAhqQ" role="jymVt" />
+    <node concept="2tJIrI" id="6uy13ANAhTO" role="jymVt" />
+    <node concept="3clFb_" id="6uy13ANAlI4" role="jymVt">
+      <property role="TrG5h" value="handleIntentionsMessages" />
+      <node concept="3clFbS" id="6uy13ANAlI7" role="3clF47">
+        <node concept="3KaCP$" id="6uy13ANAywn" role="3cqZAp">
+          <node concept="3KbdKl" id="6uy13ANA$Hx" role="3KbHQx">
+            <node concept="3clFbS" id="6uy13ANA$Hz" role="3Kbo56">
+              <node concept="SfApY" id="6uy13ANAD3P" role="3cqZAp">
+                <node concept="3clFbS" id="6uy13ANAD3Q" role="SfCbr">
+                  <node concept="3cpWs8" id="6uy13ANAD3R" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANAD3S" role="3cpWs9">
+                      <property role="TrG5h" value="msg" />
+                      <node concept="3uibUv" id="6uy13ANAGwu" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANAbbI" resolve="CreateIntentionsBlock" />
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANAD3U" role="33vP2m">
+                        <node concept="2YIFZM" id="6uy13ANAD3V" role="2Oq$k0">
+                          <ref role="1Pybhc" node="4XQ2p$w2w51" resolve="Serialization" />
+                          <ref role="37wK5l" node="4XQ2p$w2wg4" resolve="getInstance" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANAD3W" role="2OqNvi">
+                          <ref role="37wK5l" node="SXzjmhsPTE" resolve="unserialize" />
+                          <node concept="37vLTw" id="6uy13ANAD3X" role="37wK5m">
+                            <ref role="3cqZAo" node="6uy13ANAHgq" resolve="message" />
+                          </node>
+                          <node concept="3VsKOn" id="6uy13ANAD3Y" role="37wK5m">
+                            <ref role="3VsUkX" node="6uy13ANAbbI" resolve="CreateIntentionsBlock" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3cpWs8" id="6uy13ANAX4h" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANAX4i" role="3cpWs9">
+                      <property role="TrG5h" value="answer" />
+                      <node concept="3uibUv" id="6uy13ANAX4j" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANAbD$" resolve="CreateIntentionsBlockAnswer" />
+                      </node>
+                      <node concept="2ShNRf" id="6uy13ANAXoY" role="33vP2m">
+                        <node concept="HV5vD" id="6uy13ANAY2u" role="2ShVmc">
+                          <ref role="HV5vE" node="6uy13ANAbD$" resolve="CreateIntentionsBlockAnswer" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANAYo1" role="3cqZAp">
+                    <node concept="37vLTI" id="6uy13ANAZmQ" role="3clFbG">
+                      <node concept="2OqwBi" id="6uy13ANAYGy" role="37vLTJ">
+                        <node concept="37vLTw" id="6uy13ANAYnZ" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANAX4i" resolve="answer" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANAYVK" role="2OqNvi">
+                          <ref role="2Oxat5" node="6uy13ANAdT6" resolve="blockUUID" />
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANAZy7" role="37vLTx">
+                        <node concept="37vLTw" id="6uy13ANAZy8" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANA6Rk" resolve="intentionsIntegrationServerModule" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANAZy9" role="2OqNvi">
+                          <ref role="37wK5l" node="3ronlYH6aZN" resolve="createBlock" />
+                          <node concept="2OqwBi" id="6uy13ANBdvu" role="37wK5m">
+                            <node concept="2OqwBi" id="6uy13ANBd7T" role="2Oq$k0">
+                              <node concept="37vLTw" id="6uy13ANBcXr" role="2Oq$k0">
+                                <ref role="3cqZAo" node="6Y14zWtOZZA" resolve="serverController" />
+                              </node>
+                              <node concept="liA8E" id="6uy13ANBdnH" role="2OqNvi">
+                                <ref role="37wK5l" node="2yBD7rQl5Yk" resolve="getData" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="6uy13ANBeHv" role="2OqNvi">
+                              <ref role="37wK5l" node="7jLdWIstm4M" resolve="toSNode" />
+                              <node concept="2OqwBi" id="6uy13ANBfr_" role="37wK5m">
+                                <node concept="37vLTw" id="6uy13ANBfdU" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="6uy13ANAD3S" resolve="msg" />
+                                </node>
+                                <node concept="2OwXpG" id="6uy13ANBfMa" role="2OqNvi">
+                                  <ref role="2Oxat5" node="6uy13ANAb_N" resolve="node" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANB0iq" role="3cqZAp">
+                    <node concept="37vLTI" id="6uy13ANB1wD" role="3clFbG">
+                      <node concept="2OqwBi" id="6uy13ANB1O_" role="37vLTx">
+                        <node concept="37vLTw" id="6uy13ANB1Cg" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANAD3S" resolve="msg" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANB23D" role="2OqNvi">
+                          <ref role="2Oxat5" node="3h0CTvwIjPg" resolve="requestId" />
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANB0_G" role="37vLTJ">
+                        <node concept="37vLTw" id="6uy13ANB0io" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANAX4i" resolve="answer" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANB0ND" role="2OqNvi">
+                          <ref role="2Oxat5" node="3h0CTvwIo9e" resolve="requestId" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANARa6" role="3cqZAp">
+                    <node concept="1rXfSq" id="6uy13ANARa4" role="3clFbG">
+                      <ref role="37wK5l" node="5p1VBoMhq9l" resolve="sendObject" />
+                      <node concept="37vLTw" id="6uy13ANARAm" role="37wK5m">
+                        <ref role="3cqZAo" node="6uy13ANAOjc" resolve="session" />
+                      </node>
+                      <node concept="37vLTw" id="6uy13ANBjqf" role="37wK5m">
+                        <ref role="3cqZAo" node="6uy13ANAX4i" resolve="answer" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="TDmWw" id="6uy13ANAD4e" role="TEbGg">
+                  <node concept="3cpWsn" id="6uy13ANAD4f" role="TDEfY">
+                    <property role="TrG5h" value="t" />
+                    <node concept="3uibUv" id="6uy13ANAD4g" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6uy13ANAD4h" role="TDEfX">
+                    <node concept="3clFbF" id="6uy13ANAD4i" role="3cqZAp">
+                      <node concept="2OqwBi" id="6uy13ANAD4j" role="3clFbG">
+                        <node concept="37vLTw" id="6uy13ANAD4k" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANAD4f" resolve="t" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANAD4l" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="6uy13ANADGU" role="3cqZAp">
+                <node concept="3clFbT" id="6uy13ANAFgD" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="Xl_RD" id="6uy13ANCWmQ" role="3Kbmr1">
+              <property role="Xl_RC" value="createintentionsblock" />
+            </node>
+          </node>
+          <node concept="3KbdKl" id="6uy13ANBkc1" role="3KbHQx">
+            <node concept="3clFbS" id="6uy13ANBkc2" role="3Kbo56">
+              <node concept="SfApY" id="6uy13ANBkc3" role="3cqZAp">
+                <node concept="3clFbS" id="6uy13ANBkc4" role="SfCbr">
+                  <node concept="3cpWs8" id="6uy13ANBkc5" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANBkc6" role="3cpWs9">
+                      <property role="TrG5h" value="msg" />
+                      <node concept="3uibUv" id="6uy13ANBu4r" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANAe2i" resolve="DeleteIntentionsBlock" />
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANBkc8" role="33vP2m">
+                        <node concept="2YIFZM" id="6uy13ANBkc9" role="2Oq$k0">
+                          <ref role="37wK5l" node="4XQ2p$w2wg4" resolve="getInstance" />
+                          <ref role="1Pybhc" node="4XQ2p$w2w51" resolve="Serialization" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBkca" role="2OqNvi">
+                          <ref role="37wK5l" node="SXzjmhsPTE" resolve="unserialize" />
+                          <node concept="37vLTw" id="6uy13ANBkcb" role="37wK5m">
+                            <ref role="3cqZAo" node="6uy13ANAHgq" resolve="message" />
+                          </node>
+                          <node concept="3VsKOn" id="6uy13ANBkcc" role="37wK5m">
+                            <ref role="3VsUkX" node="6uy13ANAe2i" resolve="DeleteIntentionsBlock" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANBweA" role="3cqZAp">
+                    <node concept="2OqwBi" id="6uy13ANBwsV" role="3clFbG">
+                      <node concept="37vLTw" id="6uy13ANBwe$" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6uy13ANA6Rk" resolve="intentionsIntegrationServerModule" />
+                      </node>
+                      <node concept="liA8E" id="6uy13ANBx3f" role="2OqNvi">
+                        <ref role="37wK5l" node="3ronlYH6ybW" resolve="deleteBlock" />
+                        <node concept="2OqwBi" id="6uy13ANBxmQ" role="37wK5m">
+                          <node concept="37vLTw" id="6uy13ANBxfl" role="2Oq$k0">
+                            <ref role="3cqZAo" node="6uy13ANBkc6" resolve="msg" />
+                          </node>
+                          <node concept="2OwXpG" id="6uy13ANBx$j" role="2OqNvi">
+                            <ref role="2Oxat5" node="6uy13ANAe2j" resolve="blockUUID" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="TDmWw" id="6uy13ANBkcH" role="TEbGg">
+                  <node concept="3cpWsn" id="6uy13ANBkcI" role="TDEfY">
+                    <property role="TrG5h" value="t" />
+                    <node concept="3uibUv" id="6uy13ANBkcJ" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6uy13ANBkcK" role="TDEfX">
+                    <node concept="3clFbF" id="6uy13ANBkcL" role="3cqZAp">
+                      <node concept="2OqwBi" id="6uy13ANBkcM" role="3clFbG">
+                        <node concept="37vLTw" id="6uy13ANBkcN" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBkcI" resolve="t" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBkcO" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="6uy13ANBkcP" role="3cqZAp">
+                <node concept="3clFbT" id="6uy13ANBkcQ" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="Xl_RD" id="6uy13ANCPJN" role="3Kbmr1">
+              <property role="Xl_RC" value="deleteintentionsblock" />
+            </node>
+          </node>
+          <node concept="3KbdKl" id="6uy13ANBnn$" role="3KbHQx">
+            <node concept="3clFbS" id="6uy13ANBnn_" role="3Kbo56">
+              <node concept="SfApY" id="6uy13ANBnnA" role="3cqZAp">
+                <node concept="3clFbS" id="6uy13ANBnnB" role="SfCbr">
+                  <node concept="3cpWs8" id="6uy13ANBnnC" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANBnnD" role="3cpWs9">
+                      <property role="TrG5h" value="msg" />
+                      <node concept="3uibUv" id="6uy13ANBxOH" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANASh8" resolve="GetIntentionsBlock" />
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANBnnF" role="33vP2m">
+                        <node concept="2YIFZM" id="6uy13ANBnnG" role="2Oq$k0">
+                          <ref role="37wK5l" node="4XQ2p$w2wg4" resolve="getInstance" />
+                          <ref role="1Pybhc" node="4XQ2p$w2w51" resolve="Serialization" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBnnH" role="2OqNvi">
+                          <ref role="37wK5l" node="SXzjmhsPTE" resolve="unserialize" />
+                          <node concept="37vLTw" id="6uy13ANBnnI" role="37wK5m">
+                            <ref role="3cqZAo" node="6uy13ANAHgq" resolve="message" />
+                          </node>
+                          <node concept="3VsKOn" id="6uy13ANBnnJ" role="37wK5m">
+                            <ref role="3VsUkX" node="6uy13ANASh8" resolve="GetIntentionsBlock" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3cpWs8" id="6uy13ANBnnK" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANBnnL" role="3cpWs9">
+                      <property role="TrG5h" value="answer" />
+                      <node concept="3uibUv" id="6uy13ANBAxi" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANByjS" resolve="GetIntentionsBlockAnswer" />
+                      </node>
+                      <node concept="2ShNRf" id="6uy13ANBnnN" role="33vP2m">
+                        <node concept="HV5vD" id="6uy13ANBnnO" role="2ShVmc">
+                          <ref role="HV5vE" node="6uy13ANByjS" resolve="GetIntentionsBlockAnswer" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANBWSH" role="3cqZAp">
+                    <node concept="37vLTI" id="6uy13ANBYgV" role="3clFbG">
+                      <node concept="2OqwBi" id="6uy13ANBYRU" role="37vLTx">
+                        <node concept="37vLTw" id="6uy13ANBYC8" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANA6Rk" resolve="intentionsIntegrationServerModule" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBZ_h" role="2OqNvi">
+                          <ref role="37wK5l" node="3ronlYH5ZeZ" resolve="intentionsData" />
+                          <node concept="2OqwBi" id="6uy13ANC08n" role="37wK5m">
+                            <node concept="37vLTw" id="6uy13ANBZS1" role="2Oq$k0">
+                              <ref role="3cqZAo" node="6uy13ANBnnD" resolve="msg" />
+                            </node>
+                            <node concept="2OwXpG" id="6uy13ANC0zR" role="2OqNvi">
+                              <ref role="2Oxat5" node="6uy13ANByDf" resolve="blockUUID" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANBXfv" role="37vLTJ">
+                        <node concept="37vLTw" id="6uy13ANBWSE" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnnL" resolve="answer" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANBXyd" role="2OqNvi">
+                          <ref role="2Oxat5" node="6uy13ANByk1" resolve="intentions" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANBno4" role="3cqZAp">
+                    <node concept="37vLTI" id="6uy13ANBno5" role="3clFbG">
+                      <node concept="2OqwBi" id="6uy13ANBno6" role="37vLTx">
+                        <node concept="37vLTw" id="6uy13ANBno7" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnnD" resolve="msg" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANBno8" role="2OqNvi">
+                          <ref role="2Oxat5" node="3h0CTvwIjPg" resolve="requestId" />
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANBno9" role="37vLTJ">
+                        <node concept="37vLTw" id="6uy13ANBnoa" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnnL" resolve="answer" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANBnob" role="2OqNvi">
+                          <ref role="2Oxat5" node="3h0CTvwIo9e" resolve="requestId" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANBnoc" role="3cqZAp">
+                    <node concept="1rXfSq" id="6uy13ANBnod" role="3clFbG">
+                      <ref role="37wK5l" node="5p1VBoMhq9l" resolve="sendObject" />
+                      <node concept="37vLTw" id="6uy13ANBnoe" role="37wK5m">
+                        <ref role="3cqZAo" node="6uy13ANAOjc" resolve="session" />
+                      </node>
+                      <node concept="37vLTw" id="6uy13ANBnof" role="37wK5m">
+                        <ref role="3cqZAo" node="6uy13ANBnnL" resolve="answer" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="TDmWw" id="6uy13ANBnog" role="TEbGg">
+                  <node concept="3cpWsn" id="6uy13ANBnoh" role="TDEfY">
+                    <property role="TrG5h" value="t" />
+                    <node concept="3uibUv" id="6uy13ANBnoi" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6uy13ANBnoj" role="TDEfX">
+                    <node concept="3clFbF" id="6uy13ANBnok" role="3cqZAp">
+                      <node concept="2OqwBi" id="6uy13ANBnol" role="3clFbG">
+                        <node concept="37vLTw" id="6uy13ANBnom" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnoh" resolve="t" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBnon" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="6uy13ANBnoo" role="3cqZAp">
+                <node concept="3clFbT" id="6uy13ANBnop" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="Xl_RD" id="6uy13ANCF0o" role="3Kbmr1">
+              <property role="Xl_RC" value="getintentionsblock" />
+            </node>
+          </node>
+          <node concept="3KbdKl" id="6uy13ANBqy$" role="3KbHQx">
+            <node concept="3clFbS" id="6uy13ANBqy_" role="3Kbo56">
+              <node concept="SfApY" id="6uy13ANBqyA" role="3cqZAp">
+                <node concept="3clFbS" id="6uy13ANBqyB" role="SfCbr">
+                  <node concept="3cpWs8" id="6uy13ANBqyC" role="3cqZAp">
+                    <node concept="3cpWsn" id="6uy13ANBqyD" role="3cpWs9">
+                      <property role="TrG5h" value="msg" />
+                      <node concept="3uibUv" id="6uy13ANC36V" role="1tU5fm">
+                        <ref role="3uigEE" node="6uy13ANAe_z" resolve="ExecuteIntention" />
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANBqyF" role="33vP2m">
+                        <node concept="2YIFZM" id="6uy13ANBqyG" role="2Oq$k0">
+                          <ref role="37wK5l" node="4XQ2p$w2wg4" resolve="getInstance" />
+                          <ref role="1Pybhc" node="4XQ2p$w2w51" resolve="Serialization" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBqyH" role="2OqNvi">
+                          <ref role="37wK5l" node="SXzjmhsPTE" resolve="unserialize" />
+                          <node concept="37vLTw" id="6uy13ANBqyI" role="37wK5m">
+                            <ref role="3cqZAo" node="6uy13ANAHgq" resolve="message" />
+                          </node>
+                          <node concept="3VsKOn" id="6uy13ANBqyJ" role="37wK5m">
+                            <ref role="3VsUkX" node="6uy13ANAe_z" resolve="ExecuteIntention" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbF" id="6uy13ANC5c8" role="3cqZAp">
+                    <node concept="2OqwBi" id="6uy13ANC5p9" role="3clFbG">
+                      <node concept="37vLTw" id="6uy13ANC5c6" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6uy13ANA6Rk" resolve="intentionsIntegrationServerModule" />
+                      </node>
+                      <node concept="liA8E" id="6uy13ANC5Yd" role="2OqNvi">
+                        <ref role="37wK5l" node="3ronlYH6pLG" resolve="execute" />
+                        <node concept="2OqwBi" id="6uy13ANC6gY" role="37wK5m">
+                          <node concept="37vLTw" id="6uy13ANC69t" role="2Oq$k0">
+                            <ref role="3cqZAo" node="6uy13ANBqyD" resolve="msg" />
+                          </node>
+                          <node concept="2OwXpG" id="6uy13ANC6yT" role="2OqNvi">
+                            <ref role="2Oxat5" node="6uy13ANAe_$" resolve="blockUUID" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="6uy13ANC6PW" role="37wK5m">
+                          <node concept="37vLTw" id="6uy13ANC6Fz" role="2Oq$k0">
+                            <ref role="3cqZAo" node="6uy13ANBqyD" resolve="msg" />
+                          </node>
+                          <node concept="2OwXpG" id="6uy13ANC78U" role="2OqNvi">
+                            <ref role="2Oxat5" node="6uy13ANAfpG" resolve="index" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="TDmWw" id="6uy13ANBqzg" role="TEbGg">
+                  <node concept="3cpWsn" id="6uy13ANBqzh" role="TDEfY">
+                    <property role="TrG5h" value="t" />
+                    <node concept="3uibUv" id="6uy13ANBqzi" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6uy13ANBqzj" role="TDEfX">
+                    <node concept="3clFbF" id="6uy13ANBqzk" role="3cqZAp">
+                      <node concept="2OqwBi" id="6uy13ANBqzl" role="3clFbG">
+                        <node concept="37vLTw" id="6uy13ANBqzm" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBqzh" resolve="t" />
+                        </node>
+                        <node concept="liA8E" id="6uy13ANBqzn" role="2OqNvi">
+                          <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="6uy13ANBqzo" role="3cqZAp">
+                <node concept="3clFbT" id="6uy13ANBqzp" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="Xl_RD" id="6uy13ANCBFm" role="3Kbmr1">
+              <property role="Xl_RC" value="executeintention" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="6uy13ANAzxq" role="3KbGdf">
+            <node concept="2OqwBi" id="6uy13ANAyXq" role="2Oq$k0">
+              <node concept="2OqwBi" id="6uy13ANAyXr" role="2Oq$k0">
+                <node concept="37vLTw" id="6uy13ANAyXs" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6uy13ANAvgx" resolve="msgJson" />
+                </node>
+                <node concept="liA8E" id="6uy13ANAyXt" role="2OqNvi">
+                  <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
+                  <node concept="Xl_RD" id="6uy13ANAyXu" role="37wK5m">
+                    <property role="Xl_RC" value="type" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="6uy13ANAyXv" role="2OqNvi">
+                <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6uy13ANA$x9" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="6uy13ANA$Md" role="3Kb1Dw">
+            <node concept="3cpWs6" id="6uy13ANA$TG" role="3cqZAp">
+              <node concept="3clFbT" id="6uy13ANA_0l" role="3cqZAk" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="6uy13ANAk1z" role="1B3o_S" />
+      <node concept="10P_77" id="6uy13ANAsn0" role="3clF45" />
+      <node concept="37vLTG" id="6uy13ANAOjc" role="3clF46">
+        <property role="TrG5h" value="session" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="6uy13ANAOjd" role="1tU5fm">
+          <ref role="3uigEE" to="fz1u:~Session" resolve="Session" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="6uy13ANAHgq" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="3uibUv" id="6uy13ANAHgr" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="6uy13ANAvgx" role="3clF46">
+        <property role="TrG5h" value="msgJson" />
+        <node concept="3uibUv" id="6uy13ANAvgw" role="1tU5fm">
+          <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+        </node>
+      </node>
     </node>
     <node concept="2tJIrI" id="3ESggWmJd3f" role="jymVt" />
     <node concept="3Tm1VV" id="6Y14zWtL0rK" role="1B3o_S" />
@@ -10373,6 +10907,29 @@
                         </node>
                       </node>
                     </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3eNFk2" id="6uy13ANAp03" role="3eNLev">
+            <node concept="1rXfSq" id="6uy13ANArHm" role="3eO9$A">
+              <ref role="37wK5l" node="6uy13ANAlI4" resolve="handleIntentionsMessages" />
+              <node concept="37vLTw" id="6uy13ANDvAN" role="37wK5m">
+                <ref role="3cqZAo" node="6Y14zWtL0tT" resolve="session" />
+              </node>
+              <node concept="37vLTw" id="6uy13ANDwtO" role="37wK5m">
+                <ref role="3cqZAo" node="6Y14zWtL0tV" resolve="message" />
+              </node>
+              <node concept="37vLTw" id="6uy13ANDwXb" role="37wK5m">
+                <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="6uy13ANAp05" role="3eOfB_">
+              <node concept="3SKdUt" id="6uy13ANDz2C" role="3cqZAp">
+                <node concept="1PaTwC" id="6uy13ANDz2D" role="3ndbpf">
+                  <node concept="3oM_SD" id="6uy13ANDz2F" role="1PaTwD">
+                    <property role="3oM_SC" value="handled" />
                   </node>
                 </node>
               </node>
@@ -23841,7 +24398,21 @@
       <node concept="2tJIrI" id="3ronlYH5Cbm" role="jymVt" />
       <node concept="3Tm6S6" id="3ronlYH5Cbn" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="3ronlYH5Cbs" role="jymVt" />
+    <node concept="2tJIrI" id="6uy13ANBESz" role="jymVt" />
+    <node concept="312cEu" id="6uy13ANBDFw" role="jymVt">
+      <property role="TrG5h" value="Intention" />
+      <node concept="312cEg" id="6uy13ANBDFx" role="jymVt">
+        <property role="TrG5h" value="index" />
+        <node concept="3Tm1VV" id="6uy13ANBDFy" role="1B3o_S" />
+        <node concept="10Oyi0" id="6uy13ANBDFz" role="1tU5fm" />
+      </node>
+      <node concept="312cEg" id="6uy13ANBDF$" role="jymVt">
+        <property role="TrG5h" value="description" />
+        <node concept="3Tm1VV" id="6uy13ANBDF_" role="1B3o_S" />
+        <node concept="17QB3L" id="6uy13ANBDFA" role="1tU5fm" />
+      </node>
+      <node concept="3Tm1VV" id="6uy13ANBDFB" role="1B3o_S" />
+    </node>
     <node concept="2tJIrI" id="3ronlYH5T9v" role="jymVt" />
     <node concept="3clFb_" id="3ronlYH5T$P" role="jymVt">
       <property role="TrG5h" value="hasBlock" />
@@ -24095,55 +24666,49 @@
                     <node concept="3cpWs8" id="3ronlYH5Z$B" role="3cqZAp">
                       <node concept="3cpWsn" id="3ronlYH5Z$C" role="3cpWs9">
                         <property role="TrG5h" value="intentionData" />
-                        <node concept="3rvAFt" id="3ronlYH5Z$D" role="1tU5fm">
-                          <node concept="17QB3L" id="3ronlYH5Z$E" role="3rvQeY" />
-                          <node concept="3uibUv" id="3ronlYH5Z$F" role="3rvSg0">
-                            <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
-                          </node>
+                        <node concept="3uibUv" id="6uy13ANBGMh" role="1tU5fm">
+                          <ref role="3uigEE" node="6uy13ANBDFw" resolve="IntentionsIntegrationServerModule.Intention" />
                         </node>
                         <node concept="2ShNRf" id="3ronlYH5Z$G" role="33vP2m">
-                          <node concept="3rGOSV" id="3ronlYH5Z$H" role="2ShVmc">
-                            <node concept="17QB3L" id="3ronlYH5Z$I" role="3rHrn6" />
-                            <node concept="3uibUv" id="3ronlYH5Z$J" role="3rHtpV">
-                              <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
-                            </node>
+                          <node concept="HV5vD" id="6uy13ANBJlo" role="2ShVmc">
+                            <ref role="HV5vE" node="6uy13ANBDFw" resolve="IntentionsIntegrationServerModule.Intention" />
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="3clFbF" id="3ronlYH5Z$K" role="3cqZAp">
-                      <node concept="37vLTI" id="3ronlYH5Z$L" role="3clFbG">
-                        <node concept="3uNrnE" id="3ronlYH5Z$M" role="37vLTx">
-                          <node concept="37vLTw" id="3ronlYH5Z$N" role="2$L3a6">
+                    <node concept="3clFbF" id="6uy13ANBKDe" role="3cqZAp">
+                      <node concept="37vLTI" id="6uy13ANBNEQ" role="3clFbG">
+                        <node concept="2OqwBi" id="6uy13ANBLXh" role="37vLTJ">
+                          <node concept="37vLTw" id="6uy13ANBLqZ" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3ronlYH5Z$C" resolve="intentionData" />
+                          </node>
+                          <node concept="2OwXpG" id="6uy13ANBMtu" role="2OqNvi">
+                            <ref role="2Oxat5" node="6uy13ANBDFx" resolve="index" />
+                          </node>
+                        </node>
+                        <node concept="3uNrnE" id="6uy13ANBOkt" role="37vLTx">
+                          <node concept="37vLTw" id="6uy13ANBOku" role="2$L3a6">
                             <ref role="3cqZAo" node="3ronlYH62i4" resolve="index" />
                           </node>
                         </node>
-                        <node concept="3EllGN" id="3ronlYH5Z$O" role="37vLTJ">
-                          <node concept="Xl_RD" id="3ronlYH5Z$P" role="3ElVtu">
-                            <property role="Xl_RC" value="index" />
-                          </node>
-                          <node concept="37vLTw" id="3ronlYH5Z$Q" role="3ElQJh">
-                            <ref role="3cqZAo" node="3ronlYH5Z$C" resolve="intentionData" />
-                          </node>
-                        </node>
                       </node>
                     </node>
-                    <node concept="3clFbF" id="3ronlYH5Z$R" role="3cqZAp">
-                      <node concept="37vLTI" id="3ronlYH5Z$S" role="3clFbG">
-                        <node concept="2OqwBi" id="3ronlYH5Z$T" role="37vLTx">
-                          <node concept="37vLTw" id="3ronlYH5Z$U" role="2Oq$k0">
-                            <ref role="3cqZAo" node="3ronlYH5Z_1" resolve="it" />
+                    <node concept="3clFbF" id="6uy13ANBP2m" role="3cqZAp">
+                      <node concept="37vLTI" id="6uy13ANBP2n" role="3clFbG">
+                        <node concept="2OqwBi" id="6uy13ANBP2o" role="37vLTJ">
+                          <node concept="37vLTw" id="6uy13ANBP2p" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3ronlYH5Z$C" resolve="intentionData" />
                           </node>
-                          <node concept="liA8E" id="3ronlYH5Z$V" role="2OqNvi">
-                            <ref role="37wK5l" node="6DSZY3wK$lR" resolve="getDescription" />
+                          <node concept="2OwXpG" id="6uy13ANBQAB" role="2OqNvi">
+                            <ref role="2Oxat5" node="6uy13ANBDF$" resolve="description" />
                           </node>
                         </node>
-                        <node concept="3EllGN" id="3ronlYH5Z$W" role="37vLTJ">
-                          <node concept="Xl_RD" id="3ronlYH5Z$X" role="3ElVtu">
-                            <property role="Xl_RC" value="description" />
+                        <node concept="2OqwBi" id="6uy13ANBPLc" role="37vLTx">
+                          <node concept="37vLTw" id="6uy13ANBPLd" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3ronlYH5Z_1" resolve="it" />
                           </node>
-                          <node concept="37vLTw" id="3ronlYH5Z$Y" role="3ElQJh">
-                            <ref role="3cqZAo" node="3ronlYH5Z$C" resolve="intentionData" />
+                          <node concept="liA8E" id="6uy13ANBPLe" role="2OqNvi">
+                            <ref role="37wK5l" node="6DSZY3wK$lR" resolve="getDescription" />
                           </node>
                         </node>
                       </node>
@@ -24167,11 +24732,8 @@
       </node>
       <node concept="3Tm1VV" id="3ronlYH5YHy" role="1B3o_S" />
       <node concept="_YKpA" id="3ronlYH5YWs" role="3clF45">
-        <node concept="3rvAFt" id="3ronlYH5Z1q" role="_ZDj9">
-          <node concept="17QB3L" id="3ronlYH5Z6k" role="3rvQeY" />
-          <node concept="3uibUv" id="3ronlYH5Zb8" role="3rvSg0">
-            <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
-          </node>
+        <node concept="3uibUv" id="6uy13ANBFOu" role="_ZDj9">
+          <ref role="3uigEE" node="6uy13ANBDFw" resolve="IntentionsIntegrationServerModule.Intention" />
         </node>
       </node>
       <node concept="37vLTG" id="3ronlYH5Znu" role="3clF46">
@@ -24182,6 +24744,103 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="3ronlYH5$Qs" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="6uy13ANAbbI">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="CreateIntentionsBlock" />
+    <node concept="312cEg" id="6uy13ANAb_N" role="jymVt">
+      <property role="TrG5h" value="node" />
+      <node concept="3Tm1VV" id="6uy13ANAb_O" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANAb_P" role="1tU5fm">
+        <ref role="3uigEE" node="4$zH10l_k3t" resolve="NodeIDInModel" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANAbbJ" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANAbxN" role="1zkMxy">
+      <ref role="3uigEE" node="3h0CTvwIhrW" resolve="RequestMessage" />
+    </node>
+  </node>
+  <node concept="312cEu" id="6uy13ANAbD$">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="CreateIntentionsBlockAnswer" />
+    <node concept="312cEg" id="6uy13ANAdT6" role="jymVt">
+      <property role="TrG5h" value="blockUUID" />
+      <node concept="3Tm1VV" id="6uy13ANAdKf" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANASEv" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANAbD_" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANAc8f" role="1zkMxy">
+      <ref role="3uigEE" node="3h0CTvwIo9d" resolve="RequestAnswerMessage" />
+    </node>
+  </node>
+  <node concept="312cEu" id="6uy13ANAe2i">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="DeleteIntentionsBlock" />
+    <node concept="312cEg" id="6uy13ANAe2j" role="jymVt">
+      <property role="TrG5h" value="blockUUID" />
+      <node concept="3Tm1VV" id="6uy13ANAe2k" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANAexA" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANAe2m" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANAelu" role="1zkMxy">
+      <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
+    </node>
+  </node>
+  <node concept="312cEu" id="6uy13ANAe_z">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="ExecuteIntention" />
+    <node concept="312cEg" id="6uy13ANAe_$" role="jymVt">
+      <property role="TrG5h" value="blockUUID" />
+      <node concept="3Tm1VV" id="6uy13ANAe__" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANAf1i" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+      </node>
+    </node>
+    <node concept="312cEg" id="6uy13ANAfpG" role="jymVt">
+      <property role="TrG5h" value="index" />
+      <node concept="3Tm1VV" id="6uy13ANAfh2" role="1B3o_S" />
+      <node concept="10Oyi0" id="6uy13ANAfm2" role="1tU5fm" />
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANAe_B" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANAeE$" role="1zkMxy">
+      <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
+    </node>
+  </node>
+  <node concept="312cEu" id="6uy13ANASh8">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="GetIntentionsBlock" />
+    <node concept="312cEg" id="6uy13ANByDf" role="jymVt">
+      <property role="TrG5h" value="blockUUID" />
+      <node concept="3Tm1VV" id="6uy13ANByDg" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANByDh" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANAShl" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANBy$G" role="1zkMxy">
+      <ref role="3uigEE" node="3h0CTvwIhrW" resolve="RequestMessage" />
+    </node>
+  </node>
+  <node concept="312cEu" id="6uy13ANByjS">
+    <property role="3GE5qa" value="messages.intentions" />
+    <property role="TrG5h" value="GetIntentionsBlockAnswer" />
+    <node concept="312cEg" id="6uy13ANByk1" role="jymVt">
+      <property role="TrG5h" value="intentions" />
+      <node concept="3Tm1VV" id="6uy13ANByk2" role="1B3o_S" />
+      <node concept="_YKpA" id="6uy13ANByk3" role="1tU5fm">
+        <node concept="3uibUv" id="6uy13ANBT9$" role="_ZDj9">
+          <ref role="3uigEE" node="6uy13ANBDFw" resolve="IntentionsIntegrationServerModule.Intention" />
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6uy13ANByk5" role="1B3o_S" />
+    <node concept="3uibUv" id="6uy13ANByuj" role="1zkMxy">
+      <ref role="3uigEE" node="3h0CTvwIo9d" resolve="RequestAnswerMessage" />
+    </node>
   </node>
 </model>
 
