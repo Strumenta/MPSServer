@@ -7695,6 +7695,26 @@
                       </node>
                     </node>
                   </node>
+                  <node concept="3clFbF" id="6uy13ANJJ2G" role="3cqZAp">
+                    <node concept="37vLTI" id="6uy13ANJKg6" role="3clFbG">
+                      <node concept="2OqwBi" id="6uy13ANJKCh" role="37vLTx">
+                        <node concept="37vLTw" id="6uy13ANJKpY" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnnD" resolve="msg" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANJKYU" role="2OqNvi">
+                          <ref role="2Oxat5" node="6uy13ANByDf" resolve="blockUUID" />
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="6uy13ANJJyh" role="37vLTJ">
+                        <node concept="37vLTw" id="6uy13ANJJ2E" role="2Oq$k0">
+                          <ref role="3cqZAo" node="6uy13ANBnnL" resolve="answer" />
+                        </node>
+                        <node concept="2OwXpG" id="6uy13ANJJO_" role="2OqNvi">
+                          <ref role="2Oxat5" node="6uy13ANJGb3" resolve="blockUUID" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
                   <node concept="3clFbF" id="6uy13ANBWSH" role="3cqZAp">
                     <node concept="37vLTI" id="6uy13ANBYgV" role="3clFbG">
                       <node concept="2OqwBi" id="6uy13ANBYRU" role="37vLTx">
@@ -24926,6 +24946,13 @@
   <node concept="312cEu" id="6uy13ANByjS">
     <property role="3GE5qa" value="messages.intentions" />
     <property role="TrG5h" value="GetIntentionsBlockAnswer" />
+    <node concept="312cEg" id="6uy13ANJGb3" role="jymVt">
+      <property role="TrG5h" value="blockUUID" />
+      <node concept="3Tm1VV" id="6uy13ANJG63" role="1B3o_S" />
+      <node concept="3uibUv" id="6uy13ANJGg3" role="1tU5fm">
+        <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+      </node>
+    </node>
     <node concept="312cEg" id="6uy13ANByk1" role="jymVt">
       <property role="TrG5h" value="intentions" />
       <node concept="3Tm1VV" id="6uy13ANByk2" role="1B3o_S" />
