@@ -2,7 +2,6 @@ import unittest
 import requests
 import time
 
-#BASE_URL = 'http://localhost:7994'
 PORT = 7994
 BASE_URL = "http://localhost:%d" % PORT
 BASE_WS_URL = "ws://localhost:%d/socket" % PORT

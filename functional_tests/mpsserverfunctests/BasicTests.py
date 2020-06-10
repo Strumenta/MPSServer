@@ -2,7 +2,7 @@ import unittest
 import requests
 import time
 
-from mpsserverfunctests.BaseTest import BaseTest, BASE_URL
+from .BaseTest import BaseTest, BASE_URL
 
 
 class BasicTests(BaseTest):

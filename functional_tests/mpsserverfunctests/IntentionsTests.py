@@ -3,7 +3,7 @@ import unittest
 
 import requests
 
-from mpsserverfunctests.BaseTest import BaseTest, BASE_URL, BASE_WS_URL
+from .BaseTest import BaseTest, BASE_URL, BASE_WS_URL
 import asyncio
 import websockets
 import json
