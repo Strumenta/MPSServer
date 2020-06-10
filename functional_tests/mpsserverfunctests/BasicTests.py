@@ -2,34 +2,10 @@ import unittest
 import requests
 import time
 
-BASE_URL = 'http://localhost:7994'
+from mpsserverfunctests.BaseTest import BaseTest, BASE_URL
 
 
-class MyTestCase(unittest.TestCase):
-
-    @classmethod
-    def try_to_connect(cls, attempts_left = 100):
-        try:
-            print ("  attemps left: %d" % attempts_left)
-            r = requests.get(BASE_URL)
-            print(r.status_code)
-            if r.status_code == 200:
-                return True
-            else:
-                print("status code: %d" % r.status_code)
-                return False
-        except Exception as e:
-            if attempts_left > 0:
-                time.sleep(5)
-                return cls.try_to_connect(attempts_left - 1)
-            else:
-                raise Exception("Too many attempts, giving up")
-
-    @classmethod
-    def setUpClass(cls):
-        print("Waiting for server to be up...")
-        if not cls.try_to_connect():
-            raise Exception("Initialization failed")
+class MyTestCase(BaseTest):
 
     def setUp(self):
         self.reloadAll() 
@@ -38,7 +14,6 @@ class MyTestCase(unittest.TestCase):
         r = requests.post('%s/persistence/reloadAll' % BASE_URL)
         self.assertEqual(200, r.status_code)
         time.sleep(1)
-
 
     def test_healthcheck(self):
         r = requests.get(BASE_URL)
@@ -87,6 +62,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(200, r.status_code)
         changedModels = r.json()
         self.assertEqual(0, len(changedModels))
+
 
 if __name__ == '__main__':
     unittest.main()
