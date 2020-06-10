@@ -5,7 +5,11 @@ import time
 from mpsserverfunctests.BaseTest import BaseTest, BASE_URL
 
 
-class MyTestCase(BaseTest):
+class BasicTests(BaseTest):
+
+    @classmethod
+    def setUpClass(cls):
+        BaseTest.setUpClass()
 
     def setUp(self):
         self.reloadAll() 

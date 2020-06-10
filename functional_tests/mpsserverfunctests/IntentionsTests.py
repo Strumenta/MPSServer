@@ -11,6 +11,10 @@ import json
 
 class IntentionsHttpTestCase(BaseTest):
 
+    @classmethod
+    def setUpClass(cls):
+        BaseTest.setUpClass()
+
     def setUp(self):
         pass
 
@@ -33,6 +37,10 @@ class IntentionsHttpTestCase(BaseTest):
 
 
 class IntentionsWsTestCase(BaseTest):
+
+    @classmethod
+    def setUpClass(cls):
+        BaseTest.setUpClass()
 
     def setUp(self):
         pass
