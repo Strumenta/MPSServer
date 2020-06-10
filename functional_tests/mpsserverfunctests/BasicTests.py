@@ -2,7 +2,7 @@ import unittest
 import requests
 import time
 
-from .BaseTest import BaseTest, BASE_URL
+from BaseTest import BaseTest, BASE_URL
 
 
 class BasicTests(BaseTest):
@@ -69,4 +69,8 @@ class BasicTests(BaseTest):
 
 
 if __name__ == '__main__':
+    import os
+    import sys
+
+    sys.path.append(os.getcwd())
     unittest.main()

@@ -1,12 +1,11 @@
 import time
 import unittest
-
 import requests
-
-from .BaseTest import BaseTest, BASE_URL, BASE_WS_URL
 import asyncio
 import websockets
 import json
+
+from BaseTest import BaseTest, BASE_URL, BASE_WS_URL
 
 
 class IntentionsHttpTestCase(BaseTest):
@@ -113,4 +112,8 @@ class IntentionsWsTestCase(BaseTest):
 
 
 if __name__ == '__main__':
+    import os
+    import sys
+
+    sys.path.append(os.getcwd())
     unittest.main()
