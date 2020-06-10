@@ -4,6 +4,7 @@ import time
 
 BASE_URL = 'http://localhost:7994'
 
+
 class MyTestCase(unittest.TestCase):
 
     @classmethod
@@ -18,7 +19,6 @@ class MyTestCase(unittest.TestCase):
                 print("status code: %d" % r.status_code)
                 return False
         except Exception as e:
-            #print("failed: %s" % str(e))
             if attempts_left > 0:
                 time.sleep(5)
                 return cls.try_to_connect(attempts_left - 1)

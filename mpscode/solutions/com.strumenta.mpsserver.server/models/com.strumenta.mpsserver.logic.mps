@@ -1443,6 +1443,35 @@
           <node concept="17QB3L" id="6Ks8zCw4Ezi" role="1tU5fm" />
         </node>
       </node>
+      <node concept="2tJIrI" id="6DSZY3wRIFr" role="jymVt" />
+      <node concept="2YIFZL" id="6DSZY3wRH0T" role="jymVt">
+        <property role="TrG5h" value="failure" />
+        <node concept="3clFbS" id="6DSZY3wRH0U" role="3clF47">
+          <node concept="3cpWs6" id="6DSZY3wRHKb" role="3cqZAp">
+            <node concept="1rXfSq" id="6DSZY3wRHYu" role="3cqZAk">
+              <ref role="37wK5l" node="6Ks8zCw4Ee6" resolve="failure" />
+              <node concept="2OqwBi" id="6DSZY3wRIre" role="37wK5m">
+                <node concept="37vLTw" id="6DSZY3wRId0" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6DSZY3wRH1g" resolve="throwable" />
+                </node>
+                <node concept="liA8E" id="6DSZY3wRIBN" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Throwable.getMessage()" resolve="getMessage" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3uibUv" id="6DSZY3wRH1e" role="3clF45">
+          <ref role="3uigEE" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+        </node>
+        <node concept="3Tm1VV" id="6DSZY3wRH1f" role="1B3o_S" />
+        <node concept="37vLTG" id="6DSZY3wRH1g" role="3clF46">
+          <property role="TrG5h" value="throwable" />
+          <node concept="3uibUv" id="6DSZY3wRHjW" role="1tU5fm">
+            <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+          </node>
+        </node>
+      </node>
       <node concept="3Tm1VV" id="6Ks8zCw4fW8" role="1B3o_S" />
     </node>
     <node concept="2tJIrI" id="80AXrSestr" role="jymVt" />
@@ -21750,8 +21779,8 @@
     </node>
     <node concept="2tJIrI" id="6DSZY3wKDGH" role="jymVt" />
     <node concept="312cEu" id="6DSZY3wKzV7" role="jymVt">
-      <property role="2bfB8j" value="true" />
       <property role="TrG5h" value="Intention" />
+      <property role="2bfB8j" value="true" />
       <node concept="312cEg" id="6DSZY3wK$w6" role="jymVt">
         <property role="TrG5h" value="node" />
         <node concept="3Tm6S6" id="6DSZY3wK$qe" role="1B3o_S" />
@@ -21863,10 +21892,135 @@
       </node>
       <node concept="3Tm1VV" id="6DSZY3wKzV8" role="1B3o_S" />
     </node>
+    <node concept="2tJIrI" id="6DSZY3wSZth" role="jymVt" />
+    <node concept="3clFb_" id="6DSZY3wT1zv" role="jymVt">
+      <property role="TrG5h" value="listIntentions" />
+      <node concept="37vLTG" id="6DSZY3wT3Ac" role="3clF46">
+        <property role="TrG5h" value="node" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3Tqbb2" id="6DSZY3wT3Ad" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6DSZY3wT3DL" role="3clF46">
+        <property role="TrG5h" value="intentionsConsumer" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="6DSZY3wT4Ih" role="1tU5fm">
+          <ref role="3uigEE" to="82uw:~Consumer" resolve="Consumer" />
+          <node concept="_YKpA" id="6DSZY3wT4Zv" role="11_B2D">
+            <node concept="3uibUv" id="6DSZY3wT4Zw" role="_ZDj9">
+              <ref role="3uigEE" node="6DSZY3wKzV7" resolve="IntentionsIntegration.Intention" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3clFbS" id="6DSZY3wT1zy" role="3clF47">
+        <node concept="3clFbJ" id="3ronlYH0F8q" role="3cqZAp">
+          <node concept="3clFbS" id="3ronlYH0F8r" role="3clFbx">
+            <node concept="3clFbF" id="3ronlYH0FDx" role="3cqZAp">
+              <node concept="2OqwBi" id="3ronlYH0FQS" role="3clFbG">
+                <node concept="37vLTw" id="3ronlYH0FDw" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6DSZY3wT3DL" resolve="intentionsConsumer" />
+                </node>
+                <node concept="liA8E" id="3ronlYH0G6Z" role="2OqNvi">
+                  <ref role="37wK5l" to="82uw:~Consumer.accept(java.lang.Object)" resolve="accept" />
+                  <node concept="1rXfSq" id="3ronlYH0Gih" role="37wK5m">
+                    <ref role="37wK5l" node="6DSZY3wKQRB" resolve="listIntentions" />
+                    <node concept="37vLTw" id="3ronlYH0Gvq" role="37wK5m">
+                      <ref role="3cqZAo" node="6DSZY3wT3Ac" resolve="node" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2YIFZM" id="3ronlYH0F8x" role="3clFbw">
+            <ref role="37wK5l" to="dxuu:~SwingUtilities.isEventDispatchThread()" resolve="isEventDispatchThread" />
+            <ref role="1Pybhc" to="dxuu:~SwingUtilities" resolve="SwingUtilities" />
+          </node>
+          <node concept="9aQIb" id="3ronlYH0GR2" role="9aQIa">
+            <node concept="3clFbS" id="3ronlYH0GR3" role="9aQI4">
+              <node concept="3clFbF" id="3ronlYH0H21" role="3cqZAp">
+                <node concept="2YIFZM" id="3ronlYH0H5R" role="3clFbG">
+                  <ref role="37wK5l" to="dxuu:~SwingUtilities.invokeLater(java.lang.Runnable)" resolve="invokeLater" />
+                  <ref role="1Pybhc" to="dxuu:~SwingUtilities" resolve="SwingUtilities" />
+                  <node concept="2ShNRf" id="3ronlYH0H8E" role="37wK5m">
+                    <node concept="YeOm9" id="3ronlYH10sa" role="2ShVmc">
+                      <node concept="1Y3b0j" id="3ronlYH10sd" role="YeSDq">
+                        <property role="2bfB8j" value="true" />
+                        <ref role="1Y3XeK" to="wyt6:~Runnable" resolve="Runnable" />
+                        <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                        <node concept="3Tm1VV" id="3ronlYH10se" role="1B3o_S" />
+                        <node concept="3clFb_" id="3ronlYH10sj" role="jymVt">
+                          <property role="TrG5h" value="run" />
+                          <node concept="3Tm1VV" id="3ronlYH10sk" role="1B3o_S" />
+                          <node concept="3cqZAl" id="3ronlYH10sm" role="3clF45" />
+                          <node concept="3clFbS" id="3ronlYH10sn" role="3clF47">
+                            <node concept="1QHqEK" id="3ronlYH2fj$" role="3cqZAp">
+                              <node concept="1QHqEC" id="3ronlYH2fjA" role="1QHqEI">
+                                <node concept="3clFbS" id="3ronlYH2fjC" role="1bW5cS">
+                                  <node concept="3clFbF" id="3ronlYH10HA" role="3cqZAp">
+                                    <node concept="2OqwBi" id="3ronlYH10HB" role="3clFbG">
+                                      <node concept="37vLTw" id="3ronlYH10HC" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="6DSZY3wT3DL" resolve="intentionsConsumer" />
+                                      </node>
+                                      <node concept="liA8E" id="3ronlYH10HD" role="2OqNvi">
+                                        <ref role="37wK5l" to="82uw:~Consumer.accept(java.lang.Object)" resolve="accept" />
+                                        <node concept="1rXfSq" id="3ronlYH10HE" role="37wK5m">
+                                          <ref role="37wK5l" node="6DSZY3wKQRB" resolve="listIntentions" />
+                                          <node concept="37vLTw" id="3ronlYH10HF" role="37wK5m">
+                                            <ref role="3cqZAo" node="6DSZY3wT3Ac" resolve="node" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="37vLTw" id="3ronlYH2fxB" role="ukAjM">
+                                <ref role="3cqZAo" node="6DSZY3wKLUX" resolve="repo" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2AHcQZ" id="3ronlYH10sp" role="2AJF6D">
+                            <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbH" id="3ronlYH2eK4" role="3cqZAp" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6DSZY3wT0rJ" role="1B3o_S" />
+      <node concept="3cqZAl" id="6DSZY3wT1vK" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="6DSZY3wKzGH" role="jymVt" />
     <node concept="3clFb_" id="6DSZY3wKQRB" role="jymVt">
       <property role="TrG5h" value="listIntentions" />
       <node concept="3clFbS" id="6DSZY3wGkm1" role="3clF47">
+        <node concept="3clFbJ" id="6DSZY3wSR8P" role="3cqZAp">
+          <node concept="3clFbS" id="6DSZY3wSR8R" role="3clFbx">
+            <node concept="YS8fn" id="6DSZY3wSUPv" role="3cqZAp">
+              <node concept="2ShNRf" id="6DSZY3wSVfZ" role="YScLw">
+                <node concept="1pGfFk" id="6DSZY3wSW$T" role="2ShVmc">
+                  <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
+                  <node concept="Xl_RD" id="6DSZY3wSWN_" role="37wK5m">
+                    <property role="Xl_RC" value="This method is available only from the EDT" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3fqX7Q" id="6DSZY3wSU42" role="3clFbw">
+            <node concept="2YIFZM" id="6DSZY3wSU44" role="3fr31v">
+              <ref role="37wK5l" to="dxuu:~SwingUtilities.isEventDispatchThread()" resolve="isEventDispatchThread" />
+              <ref role="1Pybhc" to="dxuu:~SwingUtilities" resolve="SwingUtilities" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="6DSZY3wGRpr" role="3cqZAp">
           <node concept="3cpWsn" id="6DSZY3wGRps" role="3cpWs9">
             <property role="TrG5h" value="queryDescriptor" />
@@ -22080,41 +22234,45 @@
           </node>
         </node>
       </node>
-      <node concept="2tJIrI" id="6DSZY3wPQlf" role="jymVt" />
-      <node concept="3clFbW" id="6DSZY3wPR0Z" role="jymVt">
-        <node concept="37vLTG" id="6DSZY3wPRFX" role="3clF46">
+      <node concept="3clFbW" id="3ronlYH1vGo" role="jymVt">
+        <node concept="37vLTG" id="3ronlYH1wCZ" role="3clF46">
+          <property role="TrG5h" value="uuid" />
+          <node concept="3uibUv" id="3ronlYH1wQo" role="1tU5fm">
+            <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+          </node>
+        </node>
+        <node concept="37vLTG" id="3ronlYH1vGp" role="3clF46">
           <property role="TrG5h" value="intentions" />
-          <node concept="_YKpA" id="6DSZY3wPRFZ" role="1tU5fm">
-            <node concept="3uibUv" id="6DSZY3wPRG0" role="_ZDj9">
+          <node concept="_YKpA" id="3ronlYH1vGq" role="1tU5fm">
+            <node concept="3uibUv" id="3ronlYH1vGr" role="_ZDj9">
               <ref role="3uigEE" node="6DSZY3wKzV7" resolve="IntentionsIntegration.Intention" />
             </node>
           </node>
         </node>
-        <node concept="3cqZAl" id="6DSZY3wPR11" role="3clF45" />
-        <node concept="3Tm6S6" id="6DSZY3wPR12" role="1B3o_S" />
-        <node concept="3clFbS" id="6DSZY3wPR13" role="3clF47">
-          <node concept="3clFbF" id="6DSZY3wPTj2" role="3cqZAp">
-            <node concept="37vLTI" id="6DSZY3wPTIu" role="3clFbG">
-              <node concept="2YIFZM" id="6DSZY3wPU3p" role="37vLTx">
-                <ref role="37wK5l" to="33ny:~UUID.randomUUID()" resolve="randomUUID" />
-                <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
+        <node concept="3cqZAl" id="3ronlYH1vGs" role="3clF45" />
+        <node concept="3Tm6S6" id="3ronlYH1vGt" role="1B3o_S" />
+        <node concept="3clFbS" id="3ronlYH1vGu" role="3clF47">
+          <node concept="3clFbF" id="3ronlYH1vGv" role="3cqZAp">
+            <node concept="37vLTI" id="3ronlYH1vGw" role="3clFbG">
+              <node concept="37vLTw" id="3ronlYH1xbA" role="37vLTx">
+                <ref role="3cqZAo" node="3ronlYH1wCZ" resolve="uuid" />
               </node>
-              <node concept="2OqwBi" id="6DSZY3wPTlk" role="37vLTJ">
-                <node concept="Xjq3P" id="6DSZY3wPTj0" role="2Oq$k0" />
-                <node concept="2OwXpG" id="6DSZY3wPTv3" role="2OqNvi">
+              <node concept="2OqwBi" id="3ronlYH1vGy" role="37vLTJ">
+                <node concept="Xjq3P" id="3ronlYH1vGz" role="2Oq$k0" />
+                <node concept="2OwXpG" id="3ronlYH1vG$" role="2OqNvi">
                   <ref role="2Oxat5" node="6DSZY3wPC9B" resolve="uuid" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="3clFbF" id="6DSZY3wPRPG" role="3cqZAp">
-            <node concept="37vLTI" id="6DSZY3wPSKW" role="3clFbG">
-              <node concept="37vLTw" id="6DSZY3wPT57" role="37vLTx">
-                <ref role="3cqZAo" node="6DSZY3wPRFX" resolve="intentions" />
+          <node concept="3clFbF" id="3ronlYH1vG_" role="3cqZAp">
+            <node concept="37vLTI" id="3ronlYH1vGA" role="3clFbG">
+              <node concept="37vLTw" id="3ronlYH1vGB" role="37vLTx">
+                <ref role="3cqZAo" node="3ronlYH1vGp" resolve="intentions" />
               </node>
-              <node concept="2OqwBi" id="6DSZY3wPRTW" role="37vLTJ">
-                <node concept="Xjq3P" id="6DSZY3wPRPF" role="2Oq$k0" />
-                <node concept="2OwXpG" id="6DSZY3wPS3Z" role="2OqNvi">
+              <node concept="2OqwBi" id="3ronlYH1vGC" role="37vLTJ">
+                <node concept="Xjq3P" id="3ronlYH1vGD" role="2Oq$k0" />
+                <node concept="2OwXpG" id="3ronlYH1vGE" role="2OqNvi">
                   <ref role="2Oxat5" node="6DSZY3wPCtR" resolve="intentions" />
                 </node>
               </node>
@@ -22122,6 +22280,7 @@
           </node>
         </node>
       </node>
+      <node concept="2tJIrI" id="6DSZY3wPQlf" role="jymVt" />
       <node concept="3Tm6S6" id="6DSZY3wPBwc" role="1B3o_S" />
     </node>
     <node concept="2tJIrI" id="6DSZY3wPCxs" role="jymVt" />
@@ -22214,6 +22373,249 @@
     <node concept="3clFb_" id="6DSZY3wP2jR" role="jymVt">
       <property role="TrG5h" value="addRoutes" />
       <node concept="3clFbS" id="6DSZY3wP2jS" role="3clF47">
+        <node concept="3clFbF" id="3ronlYH2HOz" role="3cqZAp">
+          <node concept="2YIFZM" id="3ronlYH2JB9" role="3clFbG">
+            <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
+            <ref role="37wK5l" to="9xi5:~Spark.get(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="get" />
+            <node concept="Xl_RD" id="3ronlYH2JBa" role="37wK5m">
+              <property role="Xl_RC" value="/intentions/:blockUUID" />
+            </node>
+            <node concept="2ShNRf" id="3ronlYH2JBb" role="37wK5m">
+              <node concept="YeOm9" id="3ronlYH2JBc" role="2ShVmc">
+                <node concept="1Y3b0j" id="3ronlYH2JBd" role="YeSDq">
+                  <property role="2bfB8j" value="true" />
+                  <ref role="1Y3XeK" to="9xi5:~Route" resolve="Route" />
+                  <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                  <node concept="3Tm1VV" id="3ronlYH2JBe" role="1B3o_S" />
+                  <node concept="3clFb_" id="3ronlYH2JBf" role="jymVt">
+                    <property role="TrG5h" value="handle" />
+                    <node concept="3Tm1VV" id="3ronlYH2JBg" role="1B3o_S" />
+                    <node concept="3uibUv" id="3ronlYH2JBh" role="3clF45">
+                      <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                    </node>
+                    <node concept="37vLTG" id="3ronlYH2JBi" role="3clF46">
+                      <property role="TrG5h" value="req" />
+                      <node concept="3uibUv" id="3ronlYH2JBj" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Request" resolve="Request" />
+                      </node>
+                    </node>
+                    <node concept="37vLTG" id="3ronlYH2JBk" role="3clF46">
+                      <property role="TrG5h" value="res" />
+                      <node concept="3uibUv" id="3ronlYH2JBl" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Response" resolve="Response" />
+                      </node>
+                    </node>
+                    <node concept="3uibUv" id="3ronlYH2JBm" role="Sfmx6">
+                      <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
+                    </node>
+                    <node concept="3clFbS" id="3ronlYH2JBn" role="3clF47">
+                      <node concept="SfApY" id="3ronlYH2JBo" role="3cqZAp">
+                        <node concept="3clFbS" id="3ronlYH2JBp" role="SfCbr">
+                          <node concept="3cpWs8" id="3ronlYH2NJ9" role="3cqZAp">
+                            <node concept="3cpWsn" id="3ronlYH2NJa" role="3cpWs9">
+                              <property role="TrG5h" value="blockUUID" />
+                              <node concept="3uibUv" id="3ronlYH2NJb" role="1tU5fm">
+                                <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
+                              </node>
+                              <node concept="2YIFZM" id="3ronlYH2NJc" role="33vP2m">
+                                <ref role="37wK5l" to="33ny:~UUID.fromString(java.lang.String)" resolve="fromString" />
+                                <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
+                                <node concept="2OqwBi" id="3ronlYH2NJd" role="37wK5m">
+                                  <node concept="37vLTw" id="3ronlYH2NJe" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="3ronlYH2JBi" resolve="req" />
+                                  </node>
+                                  <node concept="liA8E" id="3ronlYH2NJf" role="2OqNvi">
+                                    <ref role="37wK5l" to="9xi5:~Request.params(java.lang.String)" resolve="params" />
+                                    <node concept="Xl_RD" id="3ronlYH2NJg" role="37wK5m">
+                                      <property role="Xl_RC" value="blockUUID" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbJ" id="3ronlYH2Q6_" role="3cqZAp">
+                            <node concept="3clFbS" id="3ronlYH2Q6B" role="3clFbx">
+                              <node concept="3cpWs8" id="3ronlYH3Pe6" role="3cqZAp">
+                                <node concept="3cpWsn" id="3ronlYH3Pe9" role="3cpWs9">
+                                  <property role="TrG5h" value="index" />
+                                  <node concept="10Oyi0" id="3ronlYH3Pe4" role="1tU5fm" />
+                                  <node concept="3cmrfG" id="3ronlYH3Qan" role="33vP2m">
+                                    <property role="3cmrfH" value="0" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3cpWs6" id="3ronlYH30fA" role="3cqZAp">
+                                <node concept="2YIFZM" id="3ronlYH4wH5" role="3cqZAk">
+                                  <ref role="37wK5l" node="7f23gRhLRYW" resolve="success" />
+                                  <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                  <node concept="2OqwBi" id="3ronlYH53N7" role="37wK5m">
+                                    <node concept="2OqwBi" id="3ronlYH3BDw" role="2Oq$k0">
+                                      <node concept="2OqwBi" id="3ronlYH3_G0" role="2Oq$k0">
+                                        <node concept="3EllGN" id="3ronlYH3140" role="2Oq$k0">
+                                          <node concept="37vLTw" id="3ronlYH333d" role="3ElVtu">
+                                            <ref role="3cqZAo" node="3ronlYH2NJa" resolve="blockUUID" />
+                                          </node>
+                                          <node concept="37vLTw" id="3ronlYH3144" role="3ElQJh">
+                                            <ref role="3cqZAo" node="6DSZY3wPDk6" resolve="intentionsBlocks" />
+                                          </node>
+                                        </node>
+                                        <node concept="2OwXpG" id="3ronlYH3Ana" role="2OqNvi">
+                                          <ref role="2Oxat5" node="6DSZY3wPCtR" resolve="intentions" />
+                                        </node>
+                                      </node>
+                                      <node concept="3$u5V9" id="3ronlYH3CU4" role="2OqNvi">
+                                        <node concept="1bVj0M" id="3ronlYH3CU6" role="23t8la">
+                                          <node concept="3clFbS" id="3ronlYH3CU7" role="1bW5cS">
+                                            <node concept="3cpWs8" id="3ronlYH3DFR" role="3cqZAp">
+                                              <node concept="3cpWsn" id="3ronlYH3DFU" role="3cpWs9">
+                                                <property role="TrG5h" value="intentionData" />
+                                                <node concept="3rvAFt" id="3ronlYH3DFO" role="1tU5fm">
+                                                  <node concept="17QB3L" id="3ronlYH3E7y" role="3rvQeY" />
+                                                  <node concept="3uibUv" id="3ronlYH3EOe" role="3rvSg0">
+                                                    <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                                                  </node>
+                                                </node>
+                                                <node concept="2ShNRf" id="3ronlYH3HlB" role="33vP2m">
+                                                  <node concept="3rGOSV" id="3ronlYH3HdG" role="2ShVmc">
+                                                    <node concept="17QB3L" id="3ronlYH3HdH" role="3rHrn6" />
+                                                    <node concept="3uibUv" id="3ronlYH3HdI" role="3rHtpV">
+                                                      <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="3clFbF" id="3ronlYH3Lid" role="3cqZAp">
+                                              <node concept="37vLTI" id="3ronlYH3QnO" role="3clFbG">
+                                                <node concept="3uNrnE" id="3ronlYH3Sh8" role="37vLTx">
+                                                  <node concept="37vLTw" id="3ronlYH3Sha" role="2$L3a6">
+                                                    <ref role="3cqZAo" node="3ronlYH3Pe9" resolve="index" />
+                                                  </node>
+                                                </node>
+                                                <node concept="3EllGN" id="3ronlYH3Mjd" role="37vLTJ">
+                                                  <node concept="Xl_RD" id="3ronlYH3N5R" role="3ElVtu">
+                                                    <property role="Xl_RC" value="index" />
+                                                  </node>
+                                                  <node concept="37vLTw" id="3ronlYH3Lib" role="3ElQJh">
+                                                    <ref role="3cqZAo" node="3ronlYH3DFU" resolve="intentionData" />
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="3clFbF" id="3ronlYH3TU6" role="3cqZAp">
+                                              <node concept="37vLTI" id="3ronlYH3WTx" role="3clFbG">
+                                                <node concept="2OqwBi" id="3ronlYH3Yd8" role="37vLTx">
+                                                  <node concept="37vLTw" id="3ronlYH3Xrx" role="2Oq$k0">
+                                                    <ref role="3cqZAo" node="3ronlYH3CU8" resolve="it" />
+                                                  </node>
+                                                  <node concept="liA8E" id="3ronlYH3Z01" role="2OqNvi">
+                                                    <ref role="37wK5l" node="6DSZY3wK$lR" resolve="getDescription" />
+                                                  </node>
+                                                </node>
+                                                <node concept="3EllGN" id="3ronlYH3UzK" role="37vLTJ">
+                                                  <node concept="Xl_RD" id="3ronlYH3Vno" role="3ElVtu">
+                                                    <property role="Xl_RC" value="description" />
+                                                  </node>
+                                                  <node concept="37vLTw" id="3ronlYH3TU4" role="3ElQJh">
+                                                    <ref role="3cqZAo" node="3ronlYH3DFU" resolve="intentionData" />
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="3cpWs6" id="3ronlYH3IFx" role="3cqZAp">
+                                              <node concept="37vLTw" id="3ronlYH3JUk" role="3cqZAk">
+                                                <ref role="3cqZAo" node="3ronlYH3DFU" resolve="intentionData" />
+                                              </node>
+                                            </node>
+                                          </node>
+                                          <node concept="Rh6nW" id="3ronlYH3CU8" role="1bW2Oz">
+                                            <property role="TrG5h" value="it" />
+                                            <node concept="2jxLKc" id="3ronlYH3CU9" role="1tU5fm" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="ANE8D" id="3ronlYH55ia" role="2OqNvi" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="2OqwBi" id="3ronlYH2Rmd" role="3clFbw">
+                              <node concept="37vLTw" id="3ronlYH2QNL" role="2Oq$k0">
+                                <ref role="3cqZAo" node="6DSZY3wPDk6" resolve="intentionsBlocks" />
+                              </node>
+                              <node concept="2Nt0df" id="3ronlYH2RKb" role="2OqNvi">
+                                <node concept="37vLTw" id="3ronlYH2RZ2" role="38cxEo">
+                                  <ref role="3cqZAo" node="3ronlYH2NJa" resolve="blockUUID" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="9aQIb" id="3ronlYH2SSg" role="9aQIa">
+                              <node concept="3clFbS" id="3ronlYH2SSh" role="9aQI4">
+                                <node concept="3cpWs6" id="3ronlYH2T9J" role="3cqZAp">
+                                  <node concept="2YIFZM" id="3ronlYH2UrR" role="3cqZAk">
+                                    <ref role="37wK5l" node="6Ks8zCw4Ee6" resolve="failure" />
+                                    <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                    <node concept="3cpWs3" id="3ronlYH2YAg" role="37wK5m">
+                                      <node concept="37vLTw" id="3ronlYH2ZxP" role="3uHU7w">
+                                        <ref role="3cqZAo" node="3ronlYH2NJa" resolve="blockUUID" />
+                                      </node>
+                                      <node concept="Xl_RD" id="3ronlYH2Vi2" role="3uHU7B">
+                                        <property role="Xl_RC" value="Intentions block not found: " />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="TDmWw" id="3ronlYH2JCM" role="TEbGg">
+                          <node concept="3cpWsn" id="3ronlYH2JCN" role="TDEfY">
+                            <property role="TrG5h" value="e" />
+                            <node concept="3uibUv" id="3ronlYH2JCO" role="1tU5fm">
+                              <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                            </node>
+                          </node>
+                          <node concept="3clFbS" id="3ronlYH2JCP" role="TDEfX">
+                            <node concept="3clFbF" id="3ronlYH2JCQ" role="3cqZAp">
+                              <node concept="2OqwBi" id="3ronlYH2JCR" role="3clFbG">
+                                <node concept="37vLTw" id="3ronlYH2JCS" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="3ronlYH2JCN" resolve="e" />
+                                </node>
+                                <node concept="liA8E" id="3ronlYH2JCT" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3cpWs6" id="3ronlYH2JCU" role="3cqZAp">
+                              <node concept="2YIFZM" id="3ronlYH2JCV" role="3cqZAk">
+                                <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                <ref role="37wK5l" node="6DSZY3wRH0T" resolve="failure" />
+                                <node concept="37vLTw" id="3ronlYH2JCW" role="37wK5m">
+                                  <ref role="3cqZAo" node="3ronlYH2JCN" resolve="e" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2AHcQZ" id="3ronlYH2JCX" role="2AJF6D">
+                      <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="3ronlYH2JCY" role="37wK5m">
+              <node concept="HV5vD" id="3ronlYH2JCZ" role="2ShVmc">
+                <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="6DSZY3wP2jT" role="3cqZAp">
           <node concept="2YIFZM" id="6DSZY3wPiJ4" role="3clFbG">
             <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
@@ -22329,66 +22731,111 @@
                           <node concept="3clFbH" id="6DSZY3wP_YI" role="3cqZAp" />
                           <node concept="3clFbJ" id="6DSZY3wP_YJ" role="3cqZAp">
                             <node concept="3clFbS" id="6DSZY3wP_YK" role="3clFbx">
-                              <node concept="3cpWs8" id="6DSZY3wPK6_" role="3cqZAp">
-                                <node concept="3cpWsn" id="6DSZY3wPK6C" role="3cpWs9">
-                                  <property role="TrG5h" value="intentions" />
-                                  <node concept="_YKpA" id="6DSZY3wPK6x" role="1tU5fm">
-                                    <node concept="3uibUv" id="6DSZY3wPKrd" role="_ZDj9">
-                                      <ref role="3uigEE" node="6DSZY3wKzV7" resolve="IntentionsIntegration.Intention" />
-                                    </node>
+                              <node concept="3cpWs8" id="3ronlYH1$aR" role="3cqZAp">
+                                <node concept="3cpWsn" id="3ronlYH1$aS" role="3cpWs9">
+                                  <property role="TrG5h" value="uuid" />
+                                  <property role="3TUv4t" value="true" />
+                                  <node concept="3uibUv" id="3ronlYH1$aT" role="1tU5fm">
+                                    <ref role="3uigEE" to="33ny:~UUID" resolve="UUID" />
                                   </node>
-                                  <node concept="2OqwBi" id="6DSZY3wPNxJ" role="33vP2m">
-                                    <node concept="37vLTw" id="6DSZY3wPNfH" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="6DSZY3wPL$0" resolve="intentionsIntegration" />
-                                    </node>
-                                    <node concept="liA8E" id="6DSZY3wPNKG" role="2OqNvi">
-                                      <ref role="37wK5l" node="6DSZY3wKQRB" resolve="listIntentions" />
-                                      <node concept="37vLTw" id="6DSZY3wPO0d" role="37wK5m">
-                                        <ref role="3cqZAo" node="6DSZY3wP_Yv" resolve="node" />
-                                      </node>
-                                    </node>
+                                  <node concept="2YIFZM" id="3ronlYH1_rl" role="33vP2m">
+                                    <ref role="37wK5l" to="33ny:~UUID.randomUUID()" resolve="randomUUID" />
+                                    <ref role="1Pybhc" to="33ny:~UUID" resolve="UUID" />
                                   </node>
                                 </node>
                               </node>
-                              <node concept="3cpWs8" id="6DSZY3wPF6q" role="3cqZAp">
-                                <node concept="3cpWsn" id="6DSZY3wPF6r" role="3cpWs9">
-                                  <property role="TrG5h" value="intentionsBlock" />
-                                  <node concept="3uibUv" id="6DSZY3wPF6s" role="1tU5fm">
-                                    <ref role="3uigEE" node="6DSZY3wPBCy" resolve="IntentionRoutes.IntentionsBlock" />
+                              <node concept="3clFbF" id="3ronlYH1Asj" role="3cqZAp">
+                                <node concept="2OqwBi" id="3ronlYH1B7J" role="3clFbG">
+                                  <node concept="37vLTw" id="3ronlYH1Ash" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="6DSZY3wPL$0" resolve="intentionsIntegration" />
                                   </node>
-                                  <node concept="2ShNRf" id="6DSZY3wPFtY" role="33vP2m">
-                                    <node concept="1pGfFk" id="6DSZY3wPUfG" role="2ShVmc">
-                                      <ref role="37wK5l" node="6DSZY3wPR0Z" resolve="IntentionRoutes.IntentionsBlock" />
-                                      <node concept="37vLTw" id="6DSZY3wPUfF" role="37wK5m">
-                                        <ref role="3cqZAo" node="6DSZY3wPK6C" resolve="intentions" />
-                                      </node>
+                                  <node concept="liA8E" id="3ronlYH1BC0" role="2OqNvi">
+                                    <ref role="37wK5l" node="6DSZY3wT1zv" resolve="listIntentions" />
+                                    <node concept="37vLTw" id="3ronlYH1BT9" role="37wK5m">
+                                      <ref role="3cqZAo" node="6DSZY3wP_Yv" resolve="node" />
                                     </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbF" id="6DSZY3wPHp3" role="3cqZAp">
-                                <node concept="37vLTI" id="6DSZY3wPJ2p" role="3clFbG">
-                                  <node concept="37vLTw" id="6DSZY3wPJn4" role="37vLTx">
-                                    <ref role="3cqZAo" node="6DSZY3wPF6r" resolve="intentionsBlock" />
-                                  </node>
-                                  <node concept="3EllGN" id="6DSZY3wPHTJ" role="37vLTJ">
-                                    <node concept="2OqwBi" id="6DSZY3wPIDy" role="3ElVtu">
-                                      <node concept="37vLTw" id="6DSZY3wPIpT" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="6DSZY3wPF6r" resolve="intentionsBlock" />
+                                    <node concept="2ShNRf" id="3ronlYH1Cwi" role="37wK5m">
+                                      <node concept="YeOm9" id="3ronlYH1E9Q" role="2ShVmc">
+                                        <node concept="1Y3b0j" id="3ronlYH1E9T" role="YeSDq">
+                                          <property role="2bfB8j" value="true" />
+                                          <ref role="1Y3XeK" to="82uw:~Consumer" resolve="Consumer" />
+                                          <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                                          <node concept="3Tm1VV" id="3ronlYH1E9U" role="1B3o_S" />
+                                          <node concept="3clFb_" id="3ronlYH1Ea0" role="jymVt">
+                                            <property role="TrG5h" value="accept" />
+                                            <node concept="3Tm1VV" id="3ronlYH1Ea1" role="1B3o_S" />
+                                            <node concept="3cqZAl" id="3ronlYH1Ea3" role="3clF45" />
+                                            <node concept="37vLTG" id="3ronlYH1Ea4" role="3clF46">
+                                              <property role="TrG5h" value="intentions" />
+                                              <node concept="_YKpA" id="3ronlYH1Eag" role="1tU5fm">
+                                                <node concept="3uibUv" id="3ronlYH1Eah" role="_ZDj9">
+                                                  <ref role="3uigEE" node="6DSZY3wKzV7" resolve="IntentionsIntegration.Intention" />
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="3clFbS" id="3ronlYH1Ea6" role="3clF47">
+                                              <node concept="3cpWs8" id="6DSZY3wPF6q" role="3cqZAp">
+                                                <node concept="3cpWsn" id="6DSZY3wPF6r" role="3cpWs9">
+                                                  <property role="TrG5h" value="intentionsBlock" />
+                                                  <node concept="3uibUv" id="6DSZY3wPF6s" role="1tU5fm">
+                                                    <ref role="3uigEE" node="6DSZY3wPBCy" resolve="IntentionRoutes.IntentionsBlock" />
+                                                  </node>
+                                                  <node concept="2ShNRf" id="6DSZY3wPFtY" role="33vP2m">
+                                                    <node concept="1pGfFk" id="6DSZY3wPUfG" role="2ShVmc">
+                                                      <ref role="37wK5l" node="3ronlYH1vGo" resolve="IntentionRoutes.IntentionsBlock" />
+                                                      <node concept="37vLTw" id="3ronlYH1HSH" role="37wK5m">
+                                                        <ref role="3cqZAo" node="3ronlYH1$aS" resolve="uuid" />
+                                                      </node>
+                                                      <node concept="37vLTw" id="6DSZY3wPUfF" role="37wK5m">
+                                                        <ref role="3cqZAo" node="3ronlYH1Ea4" resolve="intentions" />
+                                                      </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                              <node concept="3clFbF" id="6DSZY3wPHp3" role="3cqZAp">
+                                                <node concept="37vLTI" id="6DSZY3wPJ2p" role="3clFbG">
+                                                  <node concept="37vLTw" id="6DSZY3wPJn4" role="37vLTx">
+                                                    <ref role="3cqZAo" node="6DSZY3wPF6r" resolve="intentionsBlock" />
+                                                  </node>
+                                                  <node concept="3EllGN" id="6DSZY3wPHTJ" role="37vLTJ">
+                                                    <node concept="2OqwBi" id="6DSZY3wPIDy" role="3ElVtu">
+                                                      <node concept="37vLTw" id="6DSZY3wPIpT" role="2Oq$k0">
+                                                        <ref role="3cqZAo" node="6DSZY3wPF6r" resolve="intentionsBlock" />
+                                                      </node>
+                                                      <node concept="2OwXpG" id="6DSZY3wPIUS" role="2OqNvi">
+                                                        <ref role="2Oxat5" node="6DSZY3wPC9B" resolve="uuid" />
+                                                      </node>
+                                                    </node>
+                                                    <node concept="37vLTw" id="6DSZY3wPHp1" role="3ElQJh">
+                                                      <ref role="3cqZAo" node="6DSZY3wPDk6" resolve="intentionsBlocks" />
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="2AHcQZ" id="3ronlYH1Ea8" role="2AJF6D">
+                                              <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                                            </node>
+                                          </node>
+                                          <node concept="_YKpA" id="3ronlYH1Eae" role="2Ghqu4">
+                                            <node concept="3uibUv" id="3ronlYH1Eaf" role="_ZDj9">
+                                              <ref role="3uigEE" node="6DSZY3wKzV7" resolve="IntentionsIntegration.Intention" />
+                                            </node>
+                                          </node>
+                                        </node>
                                       </node>
-                                      <node concept="2OwXpG" id="6DSZY3wPIUS" role="2OqNvi">
-                                        <ref role="2Oxat5" node="6DSZY3wPC9B" resolve="uuid" />
-                                      </node>
-                                    </node>
-                                    <node concept="37vLTw" id="6DSZY3wPHp1" role="3ElQJh">
-                                      <ref role="3cqZAo" node="6DSZY3wPDk6" resolve="intentionsBlocks" />
                                     </node>
                                   </node>
                                 </node>
                               </node>
                               <node concept="3cpWs6" id="6DSZY3wPE43" role="3cqZAp">
-                                <node concept="37vLTw" id="6DSZY3wPGCA" role="3cqZAk">
-                                  <ref role="3cqZAo" node="6DSZY3wPF6r" resolve="intentionsBlock" />
+                                <node concept="2YIFZM" id="6DSZY3wRL7J" role="3cqZAk">
+                                  <ref role="37wK5l" node="7f23gRhLRYW" resolve="success" />
+                                  <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                  <node concept="37vLTw" id="3ronlYH1IAJ" role="37wK5m">
+                                    <ref role="3cqZAo" node="3ronlYH1$aS" resolve="uuid" />
+                                  </node>
                                 </node>
                               </node>
                             </node>
@@ -22400,26 +22847,25 @@
                             </node>
                             <node concept="9aQIb" id="6DSZY3wP_YU" role="9aQIa">
                               <node concept="3clFbS" id="6DSZY3wP_YV" role="9aQI4">
-                                <node concept="YS8fn" id="6DSZY3wP_YW" role="3cqZAp">
-                                  <node concept="2ShNRf" id="6DSZY3wP_YX" role="YScLw">
-                                    <node concept="1pGfFk" id="6DSZY3wP_YY" role="2ShVmc">
-                                      <ref role="37wK5l" node="2ig$0l9SDlD" resolve="NotFoundException" />
-                                      <node concept="3cpWs3" id="6DSZY3wP_YZ" role="37wK5m">
-                                        <node concept="37vLTw" id="6DSZY3wP_Z0" role="3uHU7w">
-                                          <ref role="3cqZAo" node="6DSZY3wP_Yh" resolve="nodeId" />
+                                <node concept="3cpWs6" id="6DSZY3wRMuf" role="3cqZAp">
+                                  <node concept="2YIFZM" id="6DSZY3wRPd1" role="3cqZAk">
+                                    <ref role="37wK5l" node="6Ks8zCw4Ee6" resolve="failure" />
+                                    <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                    <node concept="3cpWs3" id="6DSZY3wRPd2" role="37wK5m">
+                                      <node concept="37vLTw" id="6DSZY3wRPd3" role="3uHU7w">
+                                        <ref role="3cqZAo" node="6DSZY3wP_Yh" resolve="nodeId" />
+                                      </node>
+                                      <node concept="3cpWs3" id="6DSZY3wRPd4" role="3uHU7B">
+                                        <node concept="3cpWs3" id="6DSZY3wRPd5" role="3uHU7B">
+                                          <node concept="Xl_RD" id="6DSZY3wRPd6" role="3uHU7B">
+                                            <property role="Xl_RC" value="Node not found: " />
+                                          </node>
+                                          <node concept="37vLTw" id="6DSZY3wRPd7" role="3uHU7w">
+                                            <ref role="3cqZAo" node="6DSZY3wP_Ya" resolve="modelName" />
+                                          </node>
                                         </node>
-                                        <node concept="3cpWs3" id="6DSZY3wP_Z1" role="3uHU7B">
-                                          <node concept="3cpWs3" id="6DSZY3wP_Z2" role="3uHU7B">
-                                            <node concept="Xl_RD" id="6DSZY3wP_Z3" role="3uHU7B">
-                                              <property role="Xl_RC" value="Node " />
-                                            </node>
-                                            <node concept="37vLTw" id="6DSZY3wP_Z4" role="3uHU7w">
-                                              <ref role="3cqZAo" node="6DSZY3wP_Ya" resolve="modelName" />
-                                            </node>
-                                          </node>
-                                          <node concept="Xl_RD" id="6DSZY3wP_Z5" role="3uHU7w">
-                                            <property role="Xl_RC" value="/" />
-                                          </node>
+                                        <node concept="Xl_RD" id="6DSZY3wRPd8" role="3uHU7w">
+                                          <property role="Xl_RC" value="/" />
                                         </node>
                                       </node>
                                     </node>
@@ -22448,12 +22894,11 @@
                               </node>
                             </node>
                             <node concept="3cpWs6" id="6DSZY3wPiJO" role="3cqZAp">
-                              <node concept="2OqwBi" id="6DSZY3wPiJP" role="3cqZAk">
-                                <node concept="37vLTw" id="6DSZY3wPiJQ" role="2Oq$k0">
+                              <node concept="2YIFZM" id="6DSZY3wRDCK" role="3cqZAk">
+                                <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                <ref role="37wK5l" node="6DSZY3wRH0T" resolve="failure" />
+                                <node concept="37vLTw" id="6DSZY3wREij" role="37wK5m">
                                   <ref role="3cqZAo" node="6DSZY3wPiJH" resolve="e" />
-                                </node>
-                                <node concept="liA8E" id="6DSZY3wPiJR" role="2OqNvi">
-                                  <ref role="37wK5l" to="wyt6:~Throwable.getMessage()" resolve="getMessage" />
                                 </node>
                               </node>
                             </node>
