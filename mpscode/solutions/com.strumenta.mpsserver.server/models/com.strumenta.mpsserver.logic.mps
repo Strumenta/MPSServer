@@ -461,6 +461,7 @@
       <concept id="1162934736510" name="jetbrains.mps.baseLanguage.collections.structure.GetElementOperation" flags="nn" index="34jXtK" />
       <concept id="1240325842691" name="jetbrains.mps.baseLanguage.collections.structure.AsSequenceOperation" flags="nn" index="39bAoz" />
       <concept id="3055999550620853964" name="jetbrains.mps.baseLanguage.collections.structure.RemoveWhereOperation" flags="nn" index="1aUR6E" />
+      <concept id="1201872418428" name="jetbrains.mps.baseLanguage.collections.structure.GetKeysOperation" flags="nn" index="3lbrtF" />
       <concept id="1197683403723" name="jetbrains.mps.baseLanguage.collections.structure.MapType" flags="in" index="3rvAFt">
         <child id="1197683466920" name="keyType" index="3rvQeY" />
         <child id="1197683475734" name="valueType" index="3rvSg0" />
@@ -24843,17 +24844,39 @@
                               <ref role="3cqZAo" node="3ronlYH6bmf" resolve="intentionsBlock" />
                             </node>
                             <node concept="3EllGN" id="3ronlYH6bmo" role="37vLTJ">
-                              <node concept="2OqwBi" id="3ronlYH6bmp" role="3ElVtu">
-                                <node concept="37vLTw" id="3ronlYH6bmq" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="3ronlYH6bmf" resolve="intentionsBlock" />
-                                </node>
-                                <node concept="2OwXpG" id="3ronlYH6bmr" role="2OqNvi">
-                                  <ref role="2Oxat5" node="3ronlYH5CaW" resolve="uuid" />
-                                </node>
+                              <node concept="37vLTw" id="3s1IJ3PQlkw" role="3ElVtu">
+                                <ref role="3cqZAo" node="3ronlYH6eqG" resolve="uuid" />
                               </node>
                               <node concept="37vLTw" id="3ronlYH6bms" role="3ElQJh">
                                 <ref role="3cqZAo" node="3ronlYH5Cbt" resolve="intentionsBlocks" />
                               </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbJ" id="3s1IJ3PQlJG" role="3cqZAp">
+                          <node concept="3clFbS" id="3s1IJ3PQlJI" role="3clFbx">
+                            <node concept="YS8fn" id="3s1IJ3PQqoY" role="3cqZAp">
+                              <node concept="2ShNRf" id="3s1IJ3PQqEy" role="YScLw">
+                                <node concept="1pGfFk" id="3s1IJ3PQR5A" role="2ShVmc">
+                                  <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
+                                  <node concept="Xl_RD" id="3s1IJ3PQRn7" role="37wK5m">
+                                    <property role="Xl_RC" value="This should not happen" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="17QLQc" id="3s1IJ3PQous" role="3clFbw">
+                            <node concept="2OqwBi" id="3s1IJ3PQpRC" role="3uHU7w">
+                              <node concept="37vLTw" id="3s1IJ3PQpxK" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3ronlYH6bmf" resolve="intentionsBlock" />
+                              </node>
+                              <node concept="2OwXpG" id="3s1IJ3PQq1v" role="2OqNvi">
+                                <ref role="2Oxat5" node="3ronlYH5CaW" resolve="uuid" />
+                              </node>
+                            </node>
+                            <node concept="37vLTw" id="3s1IJ3PQnTU" role="3uHU7B">
+                              <ref role="3cqZAo" node="3ronlYH6eqG" resolve="uuid" />
                             </node>
                           </node>
                         </node>
@@ -24958,12 +24981,25 @@
               <node concept="2ShNRf" id="6uy13ANJ5gj" role="YScLw">
                 <node concept="1pGfFk" id="6uy13ANJ5gk" role="2ShVmc">
                   <ref role="37wK5l" node="2ig$0l9SDlD" resolve="NotFoundException" />
-                  <node concept="3cpWs3" id="6uy13ANJ5gl" role="37wK5m">
-                    <node concept="37vLTw" id="6uy13ANJ6vL" role="3uHU7w">
-                      <ref role="3cqZAo" node="3ronlYH6qja" resolve="blockUUID" />
+                  <node concept="3cpWs3" id="3s1IJ3PQVwy" role="37wK5m">
+                    <node concept="2OqwBi" id="3s1IJ3PQWb5" role="3uHU7w">
+                      <node concept="37vLTw" id="3s1IJ3PQVLh" role="2Oq$k0">
+                        <ref role="3cqZAo" node="3ronlYH5Cbt" resolve="intentionsBlocks" />
+                      </node>
+                      <node concept="3lbrtF" id="3s1IJ3PQWC6" role="2OqNvi" />
                     </node>
-                    <node concept="Xl_RD" id="6uy13ANJ5gn" role="3uHU7B">
-                      <property role="Xl_RC" value="Intentions block with UUID " />
+                    <node concept="3cpWs3" id="3s1IJ3PQUXC" role="3uHU7B">
+                      <node concept="3cpWs3" id="6uy13ANJ5gl" role="3uHU7B">
+                        <node concept="Xl_RD" id="6uy13ANJ5gn" role="3uHU7B">
+                          <property role="Xl_RC" value="Intentions block with UUID " />
+                        </node>
+                        <node concept="37vLTw" id="6uy13ANJ6vL" role="3uHU7w">
+                          <ref role="3cqZAo" node="3ronlYH6qja" resolve="blockUUID" />
+                        </node>
+                      </node>
+                      <node concept="Xl_RD" id="3s1IJ3PQV0k" role="3uHU7w">
+                        <property role="Xl_RC" value=". Known UUIDs: " />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -25024,12 +25060,25 @@
               <node concept="2ShNRf" id="6uy13ANI_Oc" role="YScLw">
                 <node concept="1pGfFk" id="6uy13ANIAsf" role="2ShVmc">
                   <ref role="37wK5l" node="2ig$0l9SDlD" resolve="NotFoundException" />
-                  <node concept="3cpWs3" id="6uy13ANIAVD" role="37wK5m">
-                    <node concept="37vLTw" id="6uy13ANIB72" role="3uHU7w">
-                      <ref role="3cqZAo" node="3ronlYH5Znu" resolve="blockUUID" />
+                  <node concept="3cpWs3" id="3s1IJ3PQSr5" role="37wK5m">
+                    <node concept="2OqwBi" id="3s1IJ3PQT0E" role="3uHU7w">
+                      <node concept="37vLTw" id="3s1IJ3PQS_L" role="2Oq$k0">
+                        <ref role="3cqZAo" node="3ronlYH5Cbt" resolve="intentionsBlocks" />
+                      </node>
+                      <node concept="3lbrtF" id="3s1IJ3PQUIu" role="2OqNvi" />
                     </node>
-                    <node concept="Xl_RD" id="6uy13ANIA$0" role="3uHU7B">
-                      <property role="Xl_RC" value="Intentions block with UUID " />
+                    <node concept="3cpWs3" id="3s1IJ3PQRQN" role="3uHU7B">
+                      <node concept="3cpWs3" id="6uy13ANIAVD" role="3uHU7B">
+                        <node concept="Xl_RD" id="6uy13ANIA$0" role="3uHU7B">
+                          <property role="Xl_RC" value="Intentions block with UUID " />
+                        </node>
+                        <node concept="37vLTw" id="6uy13ANIB72" role="3uHU7w">
+                          <ref role="3cqZAo" node="3ronlYH5Znu" resolve="blockUUID" />
+                        </node>
+                      </node>
+                      <node concept="Xl_RD" id="3s1IJ3PQS4N" role="3uHU7w">
+                        <property role="Xl_RC" value=". Known UUIDs: " />
+                      </node>
                     </node>
                   </node>
                 </node>
