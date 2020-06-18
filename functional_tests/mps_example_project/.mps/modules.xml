@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/MySimpleLanguage/MySimpleLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/MySimpleLanguage/runtime/MySimpleLanguage.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/MySimpleLanguage/sandbox/MySimpleLanguage.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/MyMPSServerExtension/MyMPSServerExtension.msd" folder="" />
+      <!--<modulePath path="../../mpscode/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="" />-->
+      <modulePath path="/Users/federico/repos/mpsserver/mpscode/solutions/com.strumenta.mpsserver.server/com.strumenta.mpsserver.server.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
