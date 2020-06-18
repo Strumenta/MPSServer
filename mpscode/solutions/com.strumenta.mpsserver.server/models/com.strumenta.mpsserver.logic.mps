@@ -556,6 +556,21 @@
           </node>
         </node>
       </node>
+      <node concept="2tJIrI" id="2OkDVTXfFNw" role="jymVt" />
+      <node concept="3clFb_" id="2OkDVTXfK1Y" role="jymVt">
+        <property role="TrG5h" value="getRepo" />
+        <node concept="3clFbS" id="2OkDVTXfK21" role="3clF47">
+          <node concept="3cpWs6" id="2OkDVTXfMYI" role="3cqZAp">
+            <node concept="37vLTw" id="2OkDVTXfNbe" role="3cqZAk">
+              <ref role="3cqZAo" node="5SYYrGBzPNi" resolve="repo" />
+            </node>
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="2OkDVTXfI1b" role="1B3o_S" />
+        <node concept="3uibUv" id="2OkDVTXfLRW" role="3clF45">
+          <ref role="3uigEE" to="lui2:~SRepository" resolve="SRepository" />
+        </node>
+      </node>
       <node concept="2tJIrI" id="6Jg9HTa78_g" role="jymVt" />
       <node concept="3clFb_" id="6Jg9HTa7afr" role="jymVt">
         <property role="TrG5h" value="port" />
@@ -25571,6 +25586,22 @@
     <node concept="3uibUv" id="15JNn0t1YRV" role="1zkMxy">
       <ref role="3uigEE" node="3h0CTvwIo9d" resolve="RequestAnswerMessage" />
     </node>
+  </node>
+  <node concept="3HP615" id="2OkDVTX2Kdi">
+    <property role="TrG5h" value="MPSServerExtension" />
+    <node concept="3clFb_" id="2OkDVTX2KiL" role="jymVt">
+      <property role="TrG5h" value="activate" />
+      <node concept="3clFbS" id="2OkDVTX2KiO" role="3clF47" />
+      <node concept="3Tm1VV" id="2OkDVTX2KiP" role="1B3o_S" />
+      <node concept="3cqZAl" id="2OkDVTX2Ki$" role="3clF45" />
+      <node concept="37vLTG" id="2OkDVTX2KpT" role="3clF46">
+        <property role="TrG5h" value="server" />
+        <node concept="3uibUv" id="2OkDVTX2KpS" role="1tU5fm">
+          <ref role="3uigEE" node="5SYYrGBzPK3" resolve="Server" />
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="2OkDVTX2Kdj" role="1B3o_S" />
   </node>
 </model>
 
