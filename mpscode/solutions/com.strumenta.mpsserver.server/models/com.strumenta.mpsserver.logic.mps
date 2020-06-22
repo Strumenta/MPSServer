@@ -2512,6 +2512,21 @@
       <node concept="3cqZAl" id="5SYYrGB_oyw" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="5SYYrGBzQw2" role="jymVt" />
+    <node concept="2YIFZL" id="6QloSDeOvWP" role="jymVt">
+      <property role="TrG5h" value="isRunning" />
+      <node concept="3clFbS" id="6QloSDeOvWR" role="3clF47">
+        <node concept="3cpWs6" id="6QloSDeOvWS" role="3cqZAp">
+          <node concept="3y3z36" id="6QloSDeOxMU" role="3cqZAk">
+            <node concept="10Nm6u" id="6QloSDeOxRb" role="3uHU7w" />
+            <node concept="37vLTw" id="6QloSDeOxAF" role="3uHU7B">
+              <ref role="3cqZAo" node="5SYYrGB_nXY" resolve="INSTANCE" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="10P_77" id="6QloSDeOvWV" role="3clF45" />
+      <node concept="3Tm1VV" id="6QloSDeOvWU" role="1B3o_S" />
+    </node>
     <node concept="3Tm1VV" id="5SYYrGBzPK4" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="4XQ2p$w1IaY">
