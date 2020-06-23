@@ -108,7 +108,10 @@ task resolveMpsArtifacts(type: Copy) {
 
 task resolveLibs(type: Sync) {
     from configurations.libs
-    into file('mpscode/build/libs')
+    into file('mpscode/solutions/com.strumenta.mpsserver.deps/libs')
+    preserve {
+        include 'mpsserver-dependencies-*.jar'
+    }
 
     rename { filename ->
         def ra = configurations.libs.resolvedConfiguration.resolvedArtifacts.find { ResolvedArtifact ra -> ra.file.name == filename }
