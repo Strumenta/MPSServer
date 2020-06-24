@@ -17,9 +17,14 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11      
-      - run: |
+      - name: prepareFunctionalTests
+        run: |
           ./gradlew prepareFunctionalTests
+      - name: buildProtocolLanguage
+        run: |
           cd functional_tests
           ../gradlew buildProtocolLanguage
+      - name: execute_functional_tests
+        run: |
           pip install -r requirements.txt
-          sh execute_functional_tests.sh
+          sh execute_functional_tests.sh          
