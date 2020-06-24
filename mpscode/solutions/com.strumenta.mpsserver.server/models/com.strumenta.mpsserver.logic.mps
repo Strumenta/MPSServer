@@ -501,6 +501,49 @@
     <property role="TrG5h" value="Server" />
     <property role="3GE5qa" value="server" />
     <node concept="2tJIrI" id="6Jg9HTa6t8Z" role="jymVt" />
+    <node concept="312cEg" id="4GXMUnNrHuU" role="jymVt">
+      <property role="TrG5h" value="registeredExtensions" />
+      <node concept="3Tm6S6" id="4GXMUnNrFLh" role="1B3o_S" />
+      <node concept="_YKpA" id="4GXMUnNrHoW" role="1tU5fm">
+        <node concept="3uibUv" id="4GXMUnNsqVJ" role="_ZDj9">
+          <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+        </node>
+      </node>
+      <node concept="2ShNRf" id="4GXMUnNrJSP" role="33vP2m">
+        <node concept="2Jqq0_" id="4GXMUnNrVpm" role="2ShVmc">
+          <node concept="3uibUv" id="4GXMUnNsrrv" role="HW$YZ">
+            <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="4GXMUnNrW5i" role="jymVt" />
+    <node concept="3clFb_" id="4GXMUnNrZ0J" role="jymVt">
+      <property role="TrG5h" value="registerExtension" />
+      <node concept="3clFbS" id="4GXMUnNrZ0M" role="3clF47">
+        <node concept="3clFbF" id="4GXMUnNscVg" role="3cqZAp">
+          <node concept="2OqwBi" id="4GXMUnNsdTD" role="3clFbG">
+            <node concept="37vLTw" id="4GXMUnNscVf" role="2Oq$k0">
+              <ref role="3cqZAo" node="4GXMUnNrHuU" resolve="registeredExtensions" />
+            </node>
+            <node concept="TSZUe" id="4GXMUnNseLO" role="2OqNvi">
+              <node concept="37vLTw" id="4GXMUnNseXC" role="25WWJ7">
+                <ref role="3cqZAo" node="4GXMUnNs0Be" resolve="extension" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="4GXMUnNrXCO" role="1B3o_S" />
+      <node concept="3cqZAl" id="4GXMUnNrYZ6" role="3clF45" />
+      <node concept="37vLTG" id="4GXMUnNs0Be" role="3clF46">
+        <property role="TrG5h" value="extension" />
+        <node concept="3uibUv" id="4GXMUnNscu4" role="1tU5fm">
+          <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="4GXMUnNrDNx" role="jymVt" />
     <node concept="312cEu" id="6Jg9HTa6xHe" role="jymVt">
       <property role="TrG5h" value="ServerConfiguration" />
       <node concept="312cEg" id="6Jg9HTa6AAc" role="jymVt">
@@ -2636,6 +2679,91 @@
         <node concept="3clFbF" id="1P$YlGONtlm" role="3cqZAp">
           <node concept="1rXfSq" id="1P$YlGONtlk" role="3clFbG">
             <ref role="37wK5l" node="1P$YlGON5yl" resolve="routesForNodes" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="4GXMUnNswfQ" role="3cqZAp">
+          <node concept="2YIFZM" id="4GXMUnNswDI" role="3clFbG">
+            <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
+            <ref role="37wK5l" to="9xi5:~Spark.get(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="get" />
+            <node concept="Xl_RD" id="4GXMUnNsx7u" role="37wK5m">
+              <property role="Xl_RC" value="/server/extensions" />
+            </node>
+            <node concept="2ShNRf" id="4GXMUnNsxzw" role="37wK5m">
+              <node concept="YeOm9" id="4GXMUnNs$df" role="2ShVmc">
+                <node concept="1Y3b0j" id="4GXMUnNs$di" role="YeSDq">
+                  <property role="2bfB8j" value="true" />
+                  <ref role="1Y3XeK" to="9xi5:~Route" resolve="Route" />
+                  <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                  <node concept="3Tm1VV" id="4GXMUnNs$dj" role="1B3o_S" />
+                  <node concept="3clFb_" id="4GXMUnNs$do" role="jymVt">
+                    <property role="TrG5h" value="handle" />
+                    <node concept="3Tm1VV" id="4GXMUnNs$dp" role="1B3o_S" />
+                    <node concept="3uibUv" id="4GXMUnNs$dr" role="3clF45">
+                      <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                    </node>
+                    <node concept="37vLTG" id="4GXMUnNs$ds" role="3clF46">
+                      <property role="TrG5h" value="p0" />
+                      <node concept="3uibUv" id="4GXMUnNs$dt" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Request" resolve="Request" />
+                      </node>
+                    </node>
+                    <node concept="37vLTG" id="4GXMUnNs$du" role="3clF46">
+                      <property role="TrG5h" value="res" />
+                      <node concept="3uibUv" id="4GXMUnNs$dv" role="1tU5fm">
+                        <ref role="3uigEE" to="9xi5:~Response" resolve="Response" />
+                      </node>
+                    </node>
+                    <node concept="3uibUv" id="4GXMUnNs$dw" role="Sfmx6">
+                      <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
+                    </node>
+                    <node concept="3clFbS" id="4GXMUnNs$dx" role="3clF47">
+                      <node concept="3cpWs6" id="4GXMUnNs_aA" role="3cqZAp">
+                        <node concept="2YIFZM" id="4GXMUnNsBj8" role="3cqZAk">
+                          <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                          <ref role="37wK5l" node="7f23gRhLRYW" resolve="success" />
+                          <node concept="2OqwBi" id="4GXMUnNsG8Z" role="37wK5m">
+                            <node concept="2OqwBi" id="4GXMUnNsEdS" role="2Oq$k0">
+                              <node concept="37vLTw" id="4GXMUnNsD9H" role="2Oq$k0">
+                                <ref role="3cqZAo" node="4GXMUnNrHuU" resolve="registeredExtensions" />
+                              </node>
+                              <node concept="3$u5V9" id="4GXMUnNsEVZ" role="2OqNvi">
+                                <node concept="1bVj0M" id="4GXMUnNsEW1" role="23t8la">
+                                  <node concept="3clFbS" id="4GXMUnNsEW2" role="1bW5cS">
+                                    <node concept="3clFbF" id="4GXMUnNsFbs" role="3cqZAp">
+                                      <node concept="2OqwBi" id="4GXMUnNsFtw" role="3clFbG">
+                                        <node concept="37vLTw" id="4GXMUnNsFbr" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="4GXMUnNsEW3" resolve="it" />
+                                        </node>
+                                        <node concept="liA8E" id="4GXMUnNsFOf" role="2OqNvi">
+                                          <ref role="37wK5l" to="e4as:4GXMUnNstGd" resolve="name" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="Rh6nW" id="4GXMUnNsEW3" role="1bW2Oz">
+                                    <property role="TrG5h" value="it" />
+                                    <node concept="2jxLKc" id="4GXMUnNsEW4" role="1tU5fm" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="ANE8D" id="4GXMUnNsGPD" role="2OqNvi" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2AHcQZ" id="4GXMUnNs$dz" role="2AJF6D">
+                      <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="4GXMUnNsJHd" role="37wK5m">
+              <node concept="HV5vD" id="4GXMUnNsLal" role="2ShVmc">
+                <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+              </node>
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="6DSZY3wPc5l" role="3cqZAp">

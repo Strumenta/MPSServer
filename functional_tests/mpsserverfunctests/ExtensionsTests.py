@@ -17,6 +17,16 @@ class ExtensionsTestCase(BaseAsyncTest):
     def setUp(self):
         pass
 
+    def test_registered_extensions(self):
+        r = requests.get("%s/server/extensions" % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        print(r)
+        data = r.json()
+        print("test_invoke_concept_specific_action")
+        print(data)
+        self.assertEqual(True, data['success'])
+        self.assertEqual(['ProtocolLanguage.extension.MyExtension'], data['value'])
+
     def test_invoke_concept_specific_action(self):
         model_name = 'ProtocolLanguage.sandbox'
         node_id = '5465070037663835837'
