@@ -444,6 +444,7 @@ task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
     doLast {
         def extensionkitDir = new File(mpscode, 'build/artifacts/MpsServer-extensionkit')
         def buildPluginDir = new File(mpscode, 'build/artifacts/MpsServer-build')
+        def exampleProjectDir = new File(rootDir, "functional_tests/mps_example_project_withextension") 
         def exampleProjectArtifactsDir = new File(rootDir, "functional_tests/mps_example_project_withextension/artifacts") 
         println("[extension kit plugin]")
         fileTree(extensionkitDir).visit { FileVisitDetails details -> 
@@ -466,6 +467,11 @@ task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
                 buildPluginDir
             }
             into exampleProjectArtifactsDir
-        }        
+        }
+        println("[exampleProjectDir]")
+        fileTree(exampleProjectDir).visit { FileVisitDetails details -> 
+            println(" * ${details.file.path}")
+        }
+        println()        
     }
 }

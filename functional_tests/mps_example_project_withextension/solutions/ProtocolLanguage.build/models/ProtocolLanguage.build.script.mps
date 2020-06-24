@@ -372,9 +372,6 @@
       <property role="TrG5h" value="mpsserver.extensionkit.artifacts" />
       <node concept="398BVA" id="4JnP3TVFtXf" role="398pKh">
         <ref role="398BVh" node="2p2ql82LUxF" resolve="artifacts.root" />
-        <node concept="2Ry0Ak" id="4JnP3TVFtXw" role="iGT6I">
-          <property role="2Ry0Am" value="MPSServer.extensionkit.plugin" />
-        </node>
       </node>
     </node>
     <node concept="398rNT" id="2p2ql82LUxI" role="1l3spd">
