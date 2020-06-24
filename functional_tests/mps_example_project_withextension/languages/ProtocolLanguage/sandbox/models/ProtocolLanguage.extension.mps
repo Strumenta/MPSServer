@@ -140,7 +140,7 @@
             <node concept="liA8E" id="4JnP3TV_dJT" role="2OqNvi">
               <ref role="37wK5l" to="e4as:i07tI0JL0g" resolve="registerConceptSpecificAction" />
               <node concept="Xl_RD" id="4JnP3TV_ei4" role="37wK5m">
-                <property role="Xl_RC" value="ProtocolLanguage.Message" />
+                <property role="Xl_RC" value="ProtocolLanguage.structure.Message" />
               </node>
               <node concept="Xl_RD" id="4JnP3TV_erC" role="37wK5m">
                 <property role="Xl_RC" value="document" />
@@ -215,7 +215,7 @@
             <node concept="liA8E" id="4JnP3TV_nxl" role="2OqNvi">
               <ref role="37wK5l" to="e4as:i07tI0JL0g" resolve="registerConceptSpecificAction" />
               <node concept="Xl_RD" id="4JnP3TV_nxm" role="37wK5m">
-                <property role="Xl_RC" value="ProtocolLanguage.Request" />
+                <property role="Xl_RC" value="ProtocolLanguage.structure.Request" />
               </node>
               <node concept="Xl_RD" id="4JnP3TV_nxn" role="37wK5m">
                 <property role="Xl_RC" value="document" />

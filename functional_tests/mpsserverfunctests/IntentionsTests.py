@@ -42,29 +42,13 @@ class IntentionsWsTestCase(BaseAsyncTest):
 
     @classmethod
     def setUpClass(cls):
-        BaseTest.setUpClass()
+        BaseAsyncTest.setUpClass()
 
     def setUp(self):
         pass
 
     def reloadAll(self):
         pass
-
-    # async def create_intentions_block(self):
-    #     async with websockets.connect(BASE_WS_URL) as websocket:
-    #         await websocket.send(json.dumps({'type':'CreateIntentionsBlock',
-    #                               'node':{
-    #                                   'model': 'ProtocolLanguage.sandbox',
-    #                                   'id':{'regularId': 5465070037663859703}
-    #                                 }}))
-    #         response = json.loads(await websocket.recv())
-    #         self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
-    #         uuid = response['blockUUID']
-    #         await websocket.send(json.dumps({'type': 'GetIntentionsBlock',
-    #                                  'blockUUID': uuid}))
-    #         response = json.loads(await websocket.recv())
-    #         self.assertEqual('GetIntentionsBlockAnswer', response['type'])
-    #         self.assertEqual([{'index': 0, 'description': 'Intention on Protocol Element'}, {'index': 1, 'description': 'Intention on Protocol'}], response['intentions'])
 
     async def test_create_intentions_block(self):
         async with websockets.connect(BASE_WS_URL) as websocket:
