@@ -88,26 +88,22 @@ class IntentionsWsTestCase(BaseAsyncTest):
                 self.assertEqual('GetIntentionsBlockAnswer', response['type'])
                 self.assertEqual(False, response['result']['success'])
 
-    async def execute_intention(self):
-        async with websockets.connect(BASE_WS_URL) as websocket:
-            await websocket.send(json.dumps({'type': 'CreateIntentionsBlock',
-                                             'node': {
-                                                 'model': 'ProtocolLanguage.sandbox',
-                                                 'id': {'regularId': 5465070037663859703}
-                                             }}))
-            response = json.loads(await websocket.recv())
-            print("[execute_intention]")
-            print(response)
-            self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
-            uuid = response['blockUUID']
-            await websocket.send(json.dumps({'type': 'ExecuteIntention',
-                                             'blockUUID': uuid,
-                                             'index': 0}))
-
-    def test_execute_intention(self):
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(self.execute_intention())
-        loop.close()
+    async def test_execute_intention(self):
+        async with timeout(5):
+            async with websockets.connect(BASE_WS_URL) as websocket:
+                await websocket.send(json.dumps({'type': 'CreateIntentionsBlock',
+                                                 'node': {
+                                                     'model': 'ProtocolLanguage.sandbox',
+                                                     'id': {'regularId': 5465070037663859703}
+                                                 }}))
+                response = json.loads(await websocket.recv())
+                print("[execute_intention]")
+                print(response)
+                self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
+                uuid = response['blockUUID']
+                await websocket.send(json.dumps({'type': 'ExecuteIntention',
+                                                 'blockUUID': uuid,
+                                                 'index': 0}))
 
 
 if __name__ == '__main__':
