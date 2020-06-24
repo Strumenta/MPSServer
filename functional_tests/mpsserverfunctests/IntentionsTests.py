@@ -78,6 +78,8 @@ class IntentionsWsTestCase(BaseAsyncTest):
                                           'id':{'regularId': 5465070037663859703}
                                         }}))
                 response = json.loads(await websocket.recv())
+                print("[test_delete_intentions_block]")
+                print(response)
                 self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
                 uuid = response['blockUUID']
                 await websocket.send(json.dumps({'type': 'DeleteIntentionsBlock',
