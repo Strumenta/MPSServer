@@ -2,6 +2,10 @@
 
 ## Global routes
 
+**GET /**: Returns the message `MPS Server up and running.`. It can be used to verify that the MPS Server is up.
+
+**GET /server/extensions**: Returns a list of the extensions that were loaded. The list is composed by the names of such extensions. 
+
 **GET /languages**: _to be documented_
 
 **GET /modules**: _to be documented_

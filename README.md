@@ -77,6 +77,12 @@ It is possible to use the MPSServer through:
 * HTTP calls, [documented here](documentation/routes.md)
 * WebSocket messages, [documented here](documentation/wsprotocol.md)
 
+## Extensions
+
+It is possible to specify extensions for the MPS Server.
+
+TODO: document how to do that.
+
 ## Development
 
 ### Testing

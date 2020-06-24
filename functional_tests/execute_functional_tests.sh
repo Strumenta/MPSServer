@@ -5,4 +5,4 @@ MPS_SERVER_PID=$!
 python -m unittest discover mpsserverfunctests -p '*Tests.py'
 RESULT=$?
 kill -9 $MPS_SERVER_PID
-exit RESULT
+exit $RESULT
