@@ -889,19 +889,6 @@
                         </node>
                         <node concept="9aQIb" id="2OkDVTXjQBO" role="9aQIa">
                           <node concept="3clFbS" id="2OkDVTXjQBP" role="9aQI4">
-                            <node concept="abc8K" id="2OkDVTX6tG8" role="3cqZAp">
-                              <node concept="Xl_RD" id="2OkDVTX6u25" role="abp_N">
-                                <property role="Xl_RC" value="MODULE IS RELOADABLE " />
-                              </node>
-                              <node concept="2OqwBi" id="2OkDVTX6uIy" role="abp_N">
-                                <node concept="2GrUjf" id="2OkDVTX6uDx" role="2Oq$k0">
-                                  <ref role="2Gs0qQ" node="2OkDVTX35oU" resolve="module" />
-                                </node>
-                                <node concept="liA8E" id="2OkDVTX6w3S" role="2OqNvi">
-                                  <ref role="37wK5l" to="lui2:~SModule.getModuleName()" resolve="getModuleName" />
-                                </node>
-                              </node>
-                            </node>
                             <node concept="3cpWs8" id="2OkDVTX3rSU" role="3cqZAp">
                               <node concept="3cpWsn" id="2OkDVTX3rSV" role="3cpWs9">
                                 <property role="TrG5h" value="reloadableModule" />
@@ -969,16 +956,26 @@
                                             </node>
                                             <node concept="3clFbJ" id="2OkDVTXiJR8" role="3cqZAp">
                                               <node concept="3clFbS" id="2OkDVTXiJRa" role="3clFbx">
-                                                <node concept="abc8K" id="2OkDVTX6wlD" role="3cqZAp">
-                                                  <node concept="Xl_RD" id="2OkDVTX6wHi" role="abp_N">
-                                                    <property role="Xl_RC" value="ROOT NODE CLASS FOUND " />
-                                                  </node>
-                                                  <node concept="2OqwBi" id="2OkDVTX6xs2" role="abp_N">
-                                                    <node concept="37vLTw" id="2OkDVTX6$8h" role="2Oq$k0">
-                                                      <ref role="3cqZAo" node="2OkDVTX3kaf" resolve="rootClass" />
+                                                <node concept="3clFbF" id="4JnP3TVyflE" role="3cqZAp">
+                                                  <node concept="2OqwBi" id="4JnP3TVyfBf" role="3clFbG">
+                                                    <node concept="37vLTw" id="4JnP3TVyflC" role="2Oq$k0">
+                                                      <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
                                                     </node>
-                                                    <node concept="2qgKlT" id="2OkDVTX6Abn" role="2OqNvi">
-                                                      <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
+                                                    <node concept="liA8E" id="4JnP3TVyg4c" role="2OqNvi">
+                                                      <ref role="37wK5l" to="30ym:4JnP3TVybmi" resolve="log" />
+                                                      <node concept="3cpWs3" id="4JnP3TVyjti" role="37wK5m">
+                                                        <node concept="2OqwBi" id="4JnP3TVykjq" role="3uHU7w">
+                                                          <node concept="37vLTw" id="4JnP3TVyjN_" role="2Oq$k0">
+                                                            <ref role="3cqZAo" node="2OkDVTX3kaf" resolve="rootClass" />
+                                                          </node>
+                                                          <node concept="2qgKlT" id="4JnP3TVymcg" role="2OqNvi">
+                                                            <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
+                                                          </node>
+                                                        </node>
+                                                        <node concept="Xl_RD" id="4JnP3TVygVX" role="3uHU7B">
+                                                          <property role="Xl_RC" value="Extension class found " />
+                                                        </node>
+                                                      </node>
                                                     </node>
                                                   </node>
                                                 </node>
@@ -1033,27 +1030,11 @@
                                                     </node>
                                                   </node>
                                                 </node>
-                                                <node concept="abc8K" id="2OkDVTX3I6L" role="3cqZAp">
-                                                  <node concept="Xl_RD" id="2OkDVTX3Igb" role="abp_N">
-                                                    <property role="Xl_RC" value="LOADED " />
-                                                  </node>
-                                                  <node concept="37vLTw" id="2OkDVTX3IAB" role="abp_N">
-                                                    <ref role="3cqZAo" node="2OkDVTX3u2N" resolve="clazz" />
-                                                  </node>
-                                                </node>
                                                 <node concept="2Gpval" id="2OkDVTX3Kro" role="3cqZAp">
                                                   <node concept="2GrKxI" id="2OkDVTX3Krq" role="2Gsz3X">
                                                     <property role="TrG5h" value="constructor" />
                                                   </node>
                                                   <node concept="3clFbS" id="2OkDVTX3Kru" role="2LFqv$">
-                                                    <node concept="abc8K" id="2OkDVTX3Ltu" role="3cqZAp">
-                                                      <node concept="Xl_RD" id="2OkDVTX3LC2" role="abp_N">
-                                                        <property role="Xl_RC" value="CONSTRUCTOR " />
-                                                      </node>
-                                                      <node concept="2GrUjf" id="2OkDVTX3LSw" role="abp_N">
-                                                        <ref role="2Gs0qQ" node="2OkDVTX3Krq" resolve="constructor" />
-                                                      </node>
-                                                    </node>
                                                     <node concept="3clFbJ" id="2OkDVTX3M4x" role="3cqZAp">
                                                       <node concept="3clFbS" id="2OkDVTX3M4z" role="3clFbx">
                                                         <node concept="3cpWs8" id="2OkDVTX3S2l" role="3cqZAp">
@@ -1072,21 +1053,8 @@
                                                             </node>
                                                           </node>
                                                         </node>
-                                                        <node concept="abc8K" id="2OkDVTX3Tse" role="3cqZAp">
-                                                          <node concept="Xl_RD" id="2OkDVTX3T_v" role="abp_N">
-                                                            <property role="Xl_RC" value="INSTANCE " />
-                                                          </node>
-                                                          <node concept="37vLTw" id="2OkDVTX3TXP" role="abp_N">
-                                                            <ref role="3cqZAo" node="2OkDVTX3S2m" resolve="instance" />
-                                                          </node>
-                                                        </node>
                                                         <node concept="3clFbJ" id="2OkDVTX3Ugh" role="3cqZAp">
                                                           <node concept="3clFbS" id="2OkDVTX3Ugj" role="3clFbx">
-                                                            <node concept="abc8K" id="2OkDVTX3Yqq" role="3cqZAp">
-                                                              <node concept="Xl_RD" id="2OkDVTX3YF7" role="abp_N">
-                                                                <property role="Xl_RC" value="RECOGNIZED as MPSServerExtension" />
-                                                              </node>
-                                                            </node>
                                                             <node concept="3cpWs8" id="2OkDVTX3Zox" role="3cqZAp">
                                                               <node concept="3cpWsn" id="2OkDVTX3Zoy" role="3cpWs9">
                                                                 <property role="TrG5h" value="mpsServerExtension" />
@@ -1120,11 +1088,6 @@
                                                                     </node>
                                                                   </node>
                                                                 </node>
-                                                                <node concept="abc8K" id="2OkDVTX41tk" role="3cqZAp">
-                                                                  <node concept="Xl_RD" id="2OkDVTX41Jl" role="abp_N">
-                                                                    <property role="Xl_RC" value="ACTIVATED" />
-                                                                  </node>
-                                                                </node>
                                                               </node>
                                                               <node concept="TDmWw" id="2OkDVTX422_" role="TEbGg">
                                                                 <node concept="3cpWsn" id="2OkDVTX422B" role="TDEfY">
@@ -1144,9 +1107,27 @@
                                                                       </node>
                                                                     </node>
                                                                   </node>
-                                                                  <node concept="abc8K" id="2OkDVTX444H" role="3cqZAp">
-                                                                    <node concept="Xl_RD" id="2OkDVTX44mU" role="abp_N">
-                                                                      <property role="Xl_RC" value="ISSUE WHILE ACTIVATING" />
+                                                                  <node concept="3clFbF" id="4JnP3TVyq$1" role="3cqZAp">
+                                                                    <node concept="2OqwBi" id="4JnP3TVyqO2" role="3clFbG">
+                                                                      <node concept="37vLTw" id="4JnP3TVyqzZ" role="2Oq$k0">
+                                                                        <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
+                                                                      </node>
+                                                                      <node concept="liA8E" id="4JnP3TVyrfi" role="2OqNvi">
+                                                                        <ref role="37wK5l" to="30ym:4JnP3TVybmi" resolve="log" />
+                                                                        <node concept="3cpWs3" id="4JnP3TVytsU" role="37wK5m">
+                                                                          <node concept="2OqwBi" id="4JnP3TVyuTR" role="3uHU7w">
+                                                                            <node concept="37vLTw" id="4JnP3TVyulv" role="2Oq$k0">
+                                                                              <ref role="3cqZAo" node="2OkDVTX3kaf" resolve="rootClass" />
+                                                                            </node>
+                                                                            <node concept="2qgKlT" id="4JnP3TVyvMh" role="2OqNvi">
+                                                                              <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
+                                                                            </node>
+                                                                          </node>
+                                                                          <node concept="Xl_RD" id="4JnP3TVyr_D" role="3uHU7B">
+                                                                            <property role="Xl_RC" value="Error while activating extension " />
+                                                                          </node>
+                                                                        </node>
+                                                                      </node>
                                                                     </node>
                                                                   </node>
                                                                 </node>
@@ -1254,6 +1235,19 @@
                                                   </node>
                                                   <node concept="liA8E" id="2OkDVTXfWVt" role="2OqNvi">
                                                     <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                                                  </node>
+                                                </node>
+                                              </node>
+                                              <node concept="3clFbF" id="4JnP3TVyw8B" role="3cqZAp">
+                                                <node concept="2OqwBi" id="4JnP3TVyw8C" role="3clFbG">
+                                                  <node concept="37vLTw" id="4JnP3TVyw8D" role="2Oq$k0">
+                                                    <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
+                                                  </node>
+                                                  <node concept="liA8E" id="4JnP3TVyw8E" role="2OqNvi">
+                                                    <ref role="37wK5l" to="30ym:4JnP3TVybmi" resolve="log" />
+                                                    <node concept="Xl_RD" id="4JnP3TVyw8J" role="37wK5m">
+                                                      <property role="Xl_RC" value="Error while searching for extensions" />
+                                                    </node>
                                                   </node>
                                                 </node>
                                               </node>
