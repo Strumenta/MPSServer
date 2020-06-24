@@ -43,7 +43,9 @@ It contains three fields:
 
 ## Module routes
 
-**GET /modules/:moduleName**: _to be documented_
+**GET /modules/:moduleName**: it returns `ModuleInfoDetailed`. It contains all fields of `ModuleInfo` plus a list of models. For each model we get a `ModelInfo`. `ModelInfo` contains the fields `qualifiedName`, `uuid`, `foreignName`, `intValue`, `readOnly`.
+
+* query parameter _includeModelsWithoutUUID_, flag, default false. If set include modules which have not a UUID
 
 ## Model routes
 
