@@ -35,6 +35,7 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)" version="0" />
+    <module reference="5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)" version="0" />
     <module reference="e5e015cc-d614-4900-9223-63bde6969324(com.strumenta.mpsserver.ide)" version="0" />
     <module reference="bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)" version="0" />
     <module reference="bfbdd672-7ff5-403f-af4f-16da5226f34c(jetbrains.mps.findUsages.runtime)" version="0" />

@@ -171,6 +171,12 @@ task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExamples]
 	script new File('mpscode/build-launcher.xml')
 }
 
+task buildExtensionKit(type: BuildLanguages, dependsOn: []) {
+    scriptArgs = antScriptArgs
+    scriptClasspath = buildScriptClasspath
+    script new File('mpscode/build-extensionkit.xml')
+}
+
 task justRunLauncher(type: RunAntScript, dependsOn: []) {
 	targets = ['run.com.strumenta.mpsserver.launcher']
 	scriptArgs = antScriptArgs
@@ -261,6 +267,13 @@ task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
     exclude 'MpsServer-launcher/*.zip'
 }
 
+task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
+    archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-extensionkit/**'
+    exclude 'MpsServer-extensionkit/*.zip'
+}
+
 publishing {
     publications {
         mpsServerCore(MavenPublication) {
@@ -337,7 +350,32 @@ publishing {
                     dependencyNode.appendNode('scope', 'provided')
                 }
             }
-        }             
+        }
+        mpsServerExtensionKit(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-extensionkit'
+            artifact packageExtensionKit
+            version project.version
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }                     
     }
 }
 

@@ -649,6 +649,55 @@
             <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
           </node>
         </node>
+        <node concept="1SiIV0" id="4JnP3TV$Fiv" role="3bR37C">
+          <node concept="3bR9La" id="4JnP3TV$Fiw" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="4JnP3TV$EDw" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.strumenta.mpsserver.extensionkit" />
+        <property role="3LESm3" value="5b9b211c-9338-4880-881e-9982edcce804" />
+        <node concept="55IIr" id="4JnP3TV$EDz" role="3LF7KH">
+          <node concept="2Ry0Ak" id="4JnP3TV$EL8" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="4JnP3TV$EVn" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit" />
+              <node concept="2Ry0Ak" id="4JnP3TV$F42" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4JnP3TV$Fb5" role="3bR37C">
+          <node concept="3bR9La" id="4JnP3TV$Fb6" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="4JnP3TV$Fbf" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="4JnP3TV$Fbg" role="1HemKq">
+            <node concept="398BVA" id="4JnP3TV$Fb7" role="3LXTmr">
+              <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
+              <node concept="2Ry0Ak" id="4JnP3TV$Fb8" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4JnP3TV$Fb9" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit" />
+                  <node concept="2Ry0Ak" id="4JnP3TV$Fba" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="4JnP3TV$Fbh" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
@@ -928,8 +977,8 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="2p2ql82Ml$Z" role="3989C9">
-      <property role="m$_wk" value="MPSServerLauncher" />
-      <node concept="m$_yC" id="2p2ql82MlH4" role="m$_yJ">
+      <property role="m$_wk" value="MPSServer.launcher.plugin" />
+      <node concept="m$_yC" id="4JnP3TV$NV_" role="m$_yJ">
         <ref role="m$_y1" node="1Y19Fp43fxb" resolve="MPSServer.core.plugin" />
       </node>
       <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
@@ -1032,6 +1081,11 @@
         <node concept="1SiIV0" id="2OkDVTXg_TS" role="3bR37C">
           <node concept="3bR9La" id="2OkDVTXg_TT" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4JnP3TV$O0K" role="3bR37C">
+          <node concept="3bR9La" id="4JnP3TV$O0L" role="1SiIV1">
+            <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
           </node>
         </node>
       </node>
@@ -1700,6 +1754,212 @@
       <property role="TrG5h" value="mpsserver.tests" />
       <node concept="22LTRM" id="5jTJHMulWD9" role="22LTRK">
         <ref role="22LTRN" node="5jTJHMulWCp" resolve="com.strumenta.mpsserver.server.tests" />
+      </node>
+    </node>
+  </node>
+  <node concept="1l3spW" id="4JnP3TV$Dub">
+    <property role="2DA0ip" value="../.." />
+    <property role="TrG5h" value="MpsServer-extensionkit" />
+    <property role="turDy" value="build-extensionkit.xml" />
+    <node concept="1wNqPr" id="4JnP3TV$Duc" role="3989C9">
+      <property role="1wNuhe" value="true" />
+      <property role="1wNuhh" value="8" />
+      <property role="1wOHq$" value="true" />
+      <property role="3Ej$Sc" value="true" />
+    </node>
+    <node concept="2_Ic$z" id="4JnP3TV$Dud" role="3989C9">
+      <property role="2_Ic$$" value="true" />
+      <property role="TZNOO" value="1.8" />
+    </node>
+    <node concept="m$_wf" id="4JnP3TV$Due" role="3989C9">
+      <property role="m$_wk" value="MPSServer.extensionkit.plugin" />
+      <node concept="3_J27D" id="4JnP3TV$Duf" role="m$_yQ">
+        <node concept="3Mxwew" id="4JnP3TV$Dug" role="3MwsjC">
+          <property role="3MwjfP" value="MPSServer.extensionkit.plugin" />
+        </node>
+      </node>
+      <node concept="3_J27D" id="4JnP3TV$Duh" role="m$_w8">
+        <node concept="3Mxwey" id="4JnP3TV$Dui" role="3MwsjC">
+          <ref role="3Mxwex" node="4JnP3TV$DwP" resolve="mpsserver.version" />
+        </node>
+      </node>
+      <node concept="m$f5U" id="4JnP3TV$Duj" role="m$_yh">
+        <ref role="m$f5T" node="4JnP3TV$Duq" resolve="MPSServer.extensionkit.group" />
+      </node>
+      <node concept="m$_yC" id="4JnP3TV$Duk" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+      <node concept="3_J27D" id="4JnP3TV$Dul" role="m_cZH">
+        <node concept="3Mxwew" id="4JnP3TV$Dum" role="3MwsjC">
+          <property role="3MwjfP" value="MPSServer.extensionkit.plugin" />
+        </node>
+      </node>
+      <node concept="m$_yC" id="4JnP3TV$Dun" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
+      </node>
+      <node concept="m$_yC" id="4JnP3TV$Duo" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:6EN03E8oSte" resolve="jetbrains.mps.ide.make" />
+      </node>
+      <node concept="m$_yC" id="4JnP3TV$Dup" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
+      </node>
+    </node>
+    <node concept="2G$12M" id="4JnP3TV$Duq" role="3989C9">
+      <property role="TrG5h" value="MPSServer.extensionkit.group" />
+      <node concept="1E1JtA" id="4JnP3TV$Dur" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.strumenta.mpsserver.extensionkit" />
+        <property role="3LESm3" value="5b9b211c-9338-4880-881e-9982edcce804" />
+        <node concept="55IIr" id="4JnP3TV$Dus" role="3LF7KH">
+          <node concept="2Ry0Ak" id="4JnP3TV$Dut" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="4JnP3TV$Duu" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit" />
+              <node concept="2Ry0Ak" id="4JnP3TV$DVj" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="4JnP3TV$Duy" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="4JnP3TV$Duz" role="1HemKq">
+            <node concept="398BVA" id="4JnP3TV$Du$" role="3LXTmr">
+              <ref role="398BVh" node="4JnP3TV$DwS" resolve="mpsserver.home" />
+              <node concept="2Ry0Ak" id="4JnP3TV$Du_" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4JnP3TV$DuA" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.build" />
+                  <node concept="2Ry0Ak" id="4JnP3TV$DuB" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="4JnP3TV$DuC" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+          <node concept="3LXTmp" id="4JnP3TV$DuD" role="1HemKq">
+            <node concept="398BVA" id="4JnP3TV$DuE" role="3LXTmr">
+              <ref role="398BVh" node="4JnP3TV$DwS" resolve="mpsserver.home" />
+              <node concept="2Ry0Ak" id="4JnP3TV$DuF" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4JnP3TV$DuG" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.build" />
+                  <node concept="2Ry0Ak" id="4JnP3TV$DuH" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="4JnP3TV$DuI" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+          <node concept="3LXTmp" id="4JnP3TV$E0$" role="1HemKq">
+            <node concept="398BVA" id="4JnP3TV$E0s" role="3LXTmr">
+              <ref role="398BVh" node="4JnP3TV$DwS" resolve="mpsserver.home" />
+              <node concept="2Ry0Ak" id="4JnP3TV$E0t" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4JnP3TV$E0u" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.extensionkit" />
+                  <node concept="2Ry0Ak" id="4JnP3TV$E0v" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="4JnP3TV$E0_" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4JnP3TV$E0q" role="3bR37C">
+          <node concept="3bR9La" id="4JnP3TV$E0r" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2kB4xC" id="4JnP3TV$DwP" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.version" />
+      <node concept="aVJcg" id="4JnP3TV$DwQ" role="aVJcv">
+        <node concept="NbPM2" id="4JnP3TV$DwR" role="aVJcq" />
+      </node>
+    </node>
+    <node concept="398rNT" id="4JnP3TV$DwS" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.home" />
+      <node concept="55IIr" id="4JnP3TV$DwT" role="398pKh" />
+    </node>
+    <node concept="398rNT" id="4JnP3TV$DwU" role="1l3spd">
+      <property role="TrG5h" value="artifacts.root" />
+      <node concept="55IIr" id="4JnP3TV$DwV" role="398pKh">
+        <node concept="2Ry0Ak" id="4JnP3TV$DwW" role="iGT6I">
+          <property role="2Ry0Am" value="artifacts" />
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="4JnP3TV$DwX" role="1l3spd">
+      <property role="TrG5h" value="mps.home" />
+    </node>
+    <node concept="10PD9b" id="4JnP3TV$DwY" role="10PD9s" />
+    <node concept="3b7kt6" id="4JnP3TV$DwZ" role="10PD9s" />
+    <node concept="55IIr" id="4JnP3TV$Dx0" role="auvoZ" />
+    <node concept="1l3spV" id="4JnP3TV$Dx1" role="1l3spN">
+      <node concept="m$_wl" id="4JnP3TV$Dx2" role="39821P">
+        <ref role="m_rDy" node="4JnP3TV$Due" resolve="MPSServer.extensionkit.plugin" />
+        <node concept="pUk6x" id="4JnP3TV$Dy2" role="pUk7w" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dy3" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
+      <node concept="398BVA" id="4JnP3TV$Dy4" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dy5" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:1diLdO26mQ6" resolve="mpsStandalone" />
+      <node concept="398BVA" id="4JnP3TV$Dy6" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dy7" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:5yMuYWFN8P1" resolve="mpsPlugins" />
+      <node concept="398BVA" id="4JnP3TV$Dy8" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dy9" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:5D1dJ7xWer5" resolve="mpsCore" />
+      <node concept="398BVA" id="4JnP3TV$Dya" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dyb" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:2eDSGe9d1ot" resolve="mpsWorkbench" />
+      <node concept="398BVA" id="4JnP3TV$Dyc" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dyd" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:6qT2v0qOlpw" resolve="mpsJavaPlatform" />
+      <node concept="398BVA" id="4JnP3TV$Dye" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dyf" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:6WtY9M1bDN0" resolve="mpsJava" />
+      <node concept="398BVA" id="4JnP3TV$Dyg" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4JnP3TV$Dyh" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:3IKDaVZnIjX" resolve="mpsDistribution" />
+      <node concept="398BVA" id="4JnP3TV$Dyi" role="2JcizS">
+        <ref role="398BVh" node="4JnP3TV$DwX" resolve="mps.home" />
       </node>
     </node>
   </node>

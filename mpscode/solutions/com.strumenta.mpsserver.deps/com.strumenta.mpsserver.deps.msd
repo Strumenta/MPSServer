@@ -21,16 +21,16 @@
     </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="parallelgit-utils.jar" />
-    </modelRoot>    
+    </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="commons-codec.jar" />
-    </modelRoot>    
+    </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="httpclient.jar" />
-    </modelRoot>    
+    </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="jsch.jar" />
-    </modelRoot>    
+    </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="parallelgit-filesystem.jar" />
     </modelRoot>

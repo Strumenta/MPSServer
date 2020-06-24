@@ -21,6 +21,7 @@
     <import index="j8aq" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.module(MPS.Core/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="t6h5" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang.reflect(JDK/)" />
+    <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" implicit="true" />
   </imports>
@@ -1059,12 +1060,12 @@
                                                               <node concept="3cpWsn" id="2OkDVTX3Zoy" role="3cpWs9">
                                                                 <property role="TrG5h" value="mpsServerExtension" />
                                                                 <node concept="3uibUv" id="2OkDVTXfTYj" role="1tU5fm">
-                                                                  <ref role="3uigEE" to="30ym:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+                                                                  <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                                 </node>
                                                                 <node concept="1eOMI4" id="2OkDVTX401D" role="33vP2m">
                                                                   <node concept="10QFUN" id="2OkDVTX401A" role="1eOMHV">
                                                                     <node concept="3uibUv" id="2OkDVTXfU2P" role="10QFUM">
-                                                                      <ref role="3uigEE" to="30ym:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+                                                                      <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                                     </node>
                                                                     <node concept="37vLTw" id="2OkDVTX40bn" role="10QFUP">
                                                                       <ref role="3cqZAo" node="2OkDVTX3S2m" resolve="instance" />
@@ -1081,7 +1082,7 @@
                                                                       <ref role="3cqZAo" node="2OkDVTX3Zoy" resolve="mpsServerExtension" />
                                                                     </node>
                                                                     <node concept="liA8E" id="2OkDVTX40VR" role="2OqNvi">
-                                                                      <ref role="37wK5l" to="30ym:2OkDVTX2KiL" resolve="activate" />
+                                                                      <ref role="37wK5l" to="e4as:2OkDVTX2KiL" resolve="activate" />
                                                                       <node concept="37vLTw" id="2OkDVTXfPgi" role="37wK5m">
                                                                         <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
                                                                       </node>
@@ -1136,7 +1137,7 @@
                                                           </node>
                                                           <node concept="2ZW3vV" id="2OkDVTX3UKy" role="3clFbw">
                                                             <node concept="3uibUv" id="2OkDVTXfTUe" role="2ZW6by">
-                                                              <ref role="3uigEE" to="30ym:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+                                                              <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                             </node>
                                                             <node concept="37vLTw" id="2OkDVTX3UqJ" role="2ZW6bz">
                                                               <ref role="3cqZAo" node="2OkDVTX3S2m" resolve="instance" />
@@ -1187,7 +1188,7 @@
                                                             <node concept="2OqwBi" id="2OkDVTXiFP4" role="2Oq$k0">
                                                               <node concept="2tJFMh" id="2OkDVTXiEij" role="2Oq$k0">
                                                                 <node concept="ZC_QK" id="2OkDVTXiELo" role="2tJFKM">
-                                                                  <ref role="2aWVGs" to="30ym:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+                                                                  <ref role="2aWVGs" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                                 </node>
                                                               </node>
                                                               <node concept="Vyspw" id="2OkDVTXiGE4" role="2OqNvi">
