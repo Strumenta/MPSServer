@@ -4,6 +4,8 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/ProtocolLanguage/ProtocolLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ProtocolLanguage/sandbox/ProtocolLanguage.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/ProtocolLanguage.build.meta/ProtocolLanguage.build.meta.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/ProtocolLanguage.build/ProtocolLanguage.build.msd" folder="" />
     </projectModules>
   </component>
 </project>

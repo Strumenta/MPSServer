@@ -176,6 +176,12 @@ task buildExtensionKit(type: BuildLanguages, dependsOn: [generateBuildAntScripts
     script new File('mpscode/build-extensionkit.xml')
 }
 
+task buildBuild(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
+    scriptArgs = antScriptArgs
+    scriptClasspath = buildScriptClasspath
+    script new File('mpscode/build-build.xml')
+}
+
 task justRunLauncher(type: RunAntScript, dependsOn: []) {
 	targets = ['run.com.strumenta.mpsserver.launcher']
 	scriptArgs = antScriptArgs
@@ -271,6 +277,13 @@ task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'MpsServer-extensionkit/**'
     exclude 'MpsServer-extensionkit/*.zip'
+}
+
+task packageBuild(type: Zip, dependsOn: [buildBuild]) {
+    archiveBaseName = 'com.strumenta.mpsserver.build'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'MpsServer-build/**'
+    exclude 'MpsServer-build/*.zip'
 }
 
 publishing {
@@ -374,7 +387,32 @@ publishing {
                     dependencyNode.appendNode('scope', 'provided')
                 }
             }
-        }                     
+        }                    
+        mpsServerExtensionKit(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-build'
+            artifact packageBuild
+            version project.version
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }           
     }
 }
 
@@ -396,15 +434,25 @@ bintray {
 	    }
     }
 
-    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit'] 
+    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit', 'mpsServerBuild'] 
     dryRun = false
     publish = true
     override = true
 }
 
-task prepareFunctionalTests(type: Copy, dependsOn:[packageExtensionKit]) {
-    from {
-        new File(rootDir, 'mpscode/build/artifacts/MpsServer-extensionkit')
+task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
+    doLast {
+        copy {
+           from {
+                new File(rootDir, 'mpscode/build/artifacts/MpsServer-extensionkit')
+            }
+            into new File("functional_tests/mps_example_project_withextension/artifacts") 
+        }
+        copy {
+           from {
+                new File(rootDir, 'mpscode/build/artifacts/MpsServer-build')
+            }
+            into new File("functional_tests/mps_example_project_withextension/artifacts") 
+        }        
     }
-    into new File("functional_tests/mps_example_project_withextension/artifacts")
 }

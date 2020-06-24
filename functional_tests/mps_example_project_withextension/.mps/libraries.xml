@@ -10,6 +10,14 @@
             </Library>
           </value>
         </entry>
+        <entry key='mpsserver.build'>
+          <value>
+            <Library>
+              <option name='name' value='mpsserver.build' />
+              <option name='path' value='$PROJECT_DIR$/artifacts/MPSServer.build.plugin' />
+            </Library>
+          </value>
+        </entry>        
       </map>
     </option>
   </component>
