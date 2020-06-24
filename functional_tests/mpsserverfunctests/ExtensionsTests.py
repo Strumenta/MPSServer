@@ -24,6 +24,7 @@ class ExtensionsTestCase(BaseAsyncTest):
         r = requests.post("%s/models/%s/%s/action/%s" % (BASE_URL, model_name, node_id, action_name))
         self.assertEqual(200, r.status_code)
         data = r.json()
+        print("test_invoke_concept_specific_action")
         print(data)
         self.assertEqual(True, data['success'])
         self.assertEqual('Documentation for Message MySimpleMessage', data['value'])
