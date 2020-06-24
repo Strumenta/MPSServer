@@ -1,5 +1,13 @@
 # MPSServer HTTP routes
 
+Most routes return an `OperationResult`, encoded in JSON.
+
+It contains three fields:
+
+* success: boolean value
+* message: string value
+* value: it could be anything
+
 ## Global routes
 
 **GET /**: return the message `MPS Server up and running.`. It can be used to verify that the MPS Server is up.
@@ -21,17 +29,17 @@
 * query parameter _includePackaged_, flag, default false. If set include packaged modules in the list
 * query parameter _langauages_, list of strings. It select only solutions having all of these languages
 
-**POST /persistence/saveAll**: _to be documented_
+**POST /persistence/saveAll**: it saves all pending changes to models on disk.
 
-**POST /persistence/reloadAll**: _to be documented_
+**POST /persistence/reloadAll**: it throws away all pending changes, reloading the content of models from disk.
 
-**GET /persistence/changedModels**: _to be documented_
+**GET /persistence/changedModels**: it returns a list of all models which are changed and either need to save data on disk or to be reloaded from disk.
 
-**POST /git/addAndCommit**: _to be documented_
+**POST /git/addAndCommit**: it adds all the files to the staging area and then commit. The message can be specified as the body of this request. Otherwise it defaults to `commit without description`.
 
-**POST /git/push**: _to be documented_
+**POST /git/push**: it pushes. The body can specify the remote, otherwise by default `origin` is used.
 
-**GET /git/currentBranch**: _to be documented_
+**GET /git/currentBranch**: it returns the name of the current branch.
 
 ## Module routes
 
