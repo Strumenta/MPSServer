@@ -5,34 +5,16 @@
       <sourceRoot location="models" />
     </modelRoot>
     <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="mpsserver-dependencies-0.1-SNAPSHOT.jar!" />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="JavaEWAH.jar" />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="commons-logging.jar" />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="httpcore.jar" />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="org.eclipse.jgit.jar" />
-    </modelRoot>
-    <modelRoot contentPath="${module}/libs" type="java_classes">
-      <sourceRoot location="parallelgit-utils.jar" />
-    </modelRoot>    
-    <modelRoot contentPath="${module}/libs" type="java_classes">
       <sourceRoot location="commons-codec.jar" />
-    </modelRoot>    
-    <modelRoot contentPath="${module}/libs" type="java_classes">
+      <sourceRoot location="commons-logging.jar" />
       <sourceRoot location="httpclient.jar" />
-    </modelRoot>    
-    <modelRoot contentPath="${module}/libs" type="java_classes">
+      <sourceRoot location="httpcore.jar" />
       <sourceRoot location="jsch.jar" />
-    </modelRoot>    
-    <modelRoot contentPath="${module}/libs" type="java_classes">
+      <sourceRoot location="JavaEWAH.jar" />
+      <sourceRoot location="mpsserver-dependencies-0.1-SNAPSHOT.jar" />
+      <sourceRoot location="org.eclipse.jgit.jar" />
       <sourceRoot location="parallelgit-filesystem.jar" />
+      <sourceRoot location="parallelgit-utils.jar" />
     </modelRoot>
   </models>
   <facets>
