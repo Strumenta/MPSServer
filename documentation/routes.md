@@ -8,6 +8,41 @@ It contains three fields:
 * message: string value
 * value: it could be anything
 
+## Data structures
+
+*NodeInfo*
+
+* id: `NodeInfo`
+* name: `string`
+* concept: `string`
+* abstractConcept: `boolean`
+
+*NodeInfoDetailed* extends *NodeInfo*
+
+* containingLink: `string`
+* children: `NodeInfoDetailed[]`
+* properties: `{string -> any}`
+* refs: `{string -> ReferenceInfo}`
+
+*ReferenceInfo*
+
+* id: `NodeIDInfo`
+* model: `ModelInfo`
+
+abstract *NodeIDInfo*
+
+*RegularNodeIDInfo* extends *NodeIDInfo*
+
+* regularId: `number`
+
+*ModelInfo*
+
+* qualifiedName: `string`
+* uuid: `UUID`
+* foreignName: `string`
+* intValue: `number`
+* readOnly: `boolean`
+
 ## Global routes
 
 **GET /**: return the message `MPS Server up and running.`. It can be used to verify that the MPS Server is up.
@@ -49,14 +84,14 @@ It contains three fields:
 
 ## Model routes
 
-**GET /models/:modelName**: _to be documented_
+**GET /models/:modelName**: return an instance of `ModelInfoDetailed`. It is `ModelInfo` with an additional list of roots. Each root is a `NodeInfo`. 
 
-**GET /models/:modelName/concept/:conceptName**: _to be documented_
+**GET /models/:modelName/concept/:conceptName**: return the roots of the model which has the precise concept indicated. For each root a `NodeInfo` is returned.
 
-**POST /models/:modelName/reload**: _to be documented_
+**POST /models/:modelName/reload**: the specific model is reloaded.
 
-**POST /models/:modelName/save**: _to be documented_
+**POST /models/:modelName/save**: the specific model is saved.
 
-**GET /models/:modelName/:nodeId**: _to be documented_
+**GET /models/:modelName/:nodeId**: the specific node is returned. The value is a `NodeInfoDetailed`.
 
 **POST /models/:modelName/:nodeId/action/:actionName**: _to be documented_
