@@ -28,11 +28,12 @@ class IntentionsHttpTestCase(BaseTest):
         data = r.json()
         self.assertEqual(True, data['success'])
         uuid = data['value']
-        time.sleep(0.5)
+        time.sleep(1.5)
         r = requests.get(
             "%s/intentions/%s" % (BASE_URL, uuid))
         self.assertEqual(200, r.status_code)
         data = r.json()
+        print('[test_create_intentions_block]')
         print(data)
         self.assertEqual(True, data['success'])
         self.assertEqual([{'index': 0, 'description': 'Intention on Protocol Element'}, {'index': 1, 'description': 'Intention on Protocol'}], data['value'])
