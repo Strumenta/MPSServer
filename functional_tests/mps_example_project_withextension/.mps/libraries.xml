@@ -1,0 +1,16 @@
+<project version='4'>
+  <component name='ProjectLibraryManager'>
+    <option name='libraries'>
+      <map>
+        <entry key='mpsserver.extensionkit'>
+          <value>
+            <Library>
+              <option name='name' value='mpsserver.extensionkit' />
+              <option name='path' value='$PROJECT_DIR$/artifacts/MPSServer.extensionkit.plugin' />
+            </Library>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

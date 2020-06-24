@@ -13,7 +13,6 @@ buildscript {
 
     dependencies {
         classpath 'de.itemis.mps:mps-gradle-plugin:1.0.85.03fbeda'
-        classpath 'com.bmuschko:gradle-izpack-plugin:3.0'
     }
 }
 
@@ -171,7 +170,7 @@ task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExamples]
 	script new File('mpscode/build-launcher.xml')
 }
 
-task buildExtensionKit(type: BuildLanguages, dependsOn: []) {
+task buildExtensionKit(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
     scriptArgs = antScriptArgs
     scriptClasspath = buildScriptClasspath
     script new File('mpscode/build-extensionkit.xml')
@@ -270,7 +269,7 @@ task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
 task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
     archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-extensionkit/**'
+    include 'MpsServer-extensionkit/**'
     exclude 'MpsServer-extensionkit/*.zip'
 }
 
@@ -397,8 +396,15 @@ bintray {
 	    }
     }
 
-    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher'] 
+    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit'] 
     dryRun = false
     publish = true
     override = true
+}
+
+task prepareFunctionalTests(type: Copy, dependsOn:[packageExtensionKit]) {
+    from {
+        new File(rootDir, 'mpscode/build/artifacts/MpsServer-extensionkit')
+    }
+    into new File("functional_tests/mps_example_project_withextension/artifacts")
 }

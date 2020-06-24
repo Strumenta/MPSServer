@@ -27,9 +27,12 @@ class BasicTests(BaseTest):
     def test_modules(self):
         r = requests.get('%s/modules' % BASE_URL)
         self.assertEqual(200, r.status_code)
-        financial_sandboxes = [m for m in r.json() if m["name"] == "com.strumenta.financialcalc.sandbox"]
-        self.assertEqual(1, len(financial_sandboxes))
-        self.assertEqual("f56d08a3-65f8-447b-bdb0-6e1a85c1e08d", financial_sandboxes[0]["uuid"])
+        protocolLanguage = [m for m in r.json() if m["name"] == "ProtocolLanguage"]
+        self.assertEqual(1, len(protocolLanguage))
+        self.assertEqual("53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff", protocolLanguage[0]["uuid"])
+        protocolLanguageSandbox = [m for m in r.json() if m["name"] == "ProtocolLanguage.sandbox"]
+        self.assertEqual(1, len(protocolLanguageSandbox))
+        self.assertEqual("bb0b4740-c31b-4055-b888-4bba31abf5fe", protocolLanguageSandbox[0]["uuid"])
 
     def test_setting_property(self):
         r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)

@@ -6,19 +6,11 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="645ff6e4-0425-4c30-9fbd-0ac4d797f079" name="Default Changelist" comment="" />
+    <list default="true" id="86068aaa-7def-4264-b36f-bb41da20aa8e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ConceptEditorHintSettings">
-    <option name="enabledHints">
-      <set>
-        <option value="de.slisson.mps.conditionalEditor.hints.editor.conditionalEditorHints.conditionalEditor" />
-        <option value="de.slisson.mps.conditionalEditor.hints.editor.conditionalEditorHints.conditionalEditor_doNotUseThisHint" />
-      </set>
-    </option>
   </component>
   <component name="ConsoleHistory">
     <option name="tabs">
@@ -26,7 +18,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="70c39c03-d598-4908-b763-e68e0e924677/r:1842d6ba-6dd1-45bf-ab55-d25c867d241b(TempModule70c39c03-d598-4908-b763-e68e0e924677/ConsoleModel_8361684446585)">
+            <model ref="607e3165-5782-4328-a787-94c8276d62e6/r:5b7cdf50-1e57-445d-8efc-401ebcfd1590(TempModule607e3165-5782-4328-a787-94c8276d62e6/ConsoleModel_5187847480040)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -46,11 +38,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="4JnP3TV_pNR">
-                <node concept="3balQm" id="4JnP3TV_pNS" role="aymYE" />
-                <node concept="2Clz$F" id="4JnP3TV_pNT" role="aymYO" />
-                <node concept="2_V_lH" id="4JnP3TV_pNU" role="1PhJh3">
-                  <ref role="2_V_lI" node="4JnP3TV_pNT" resolve="CommandHolder" />
+              <node concept="aymSD" id="4JnP3TV_cFO">
+                <node concept="3balQm" id="4JnP3TV_cFP" role="aymYE" />
+                <node concept="2Clz$F" id="4JnP3TV_cFQ" role="aymYO" />
+                <node concept="2_V_lH" id="4JnP3TV_cFR" role="1PhJh3">
+                  <ref role="2_V_lI" node="4JnP3TV_cFQ" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -97,193 +89,10 @@
       </MessageListState>
     </option>
   </component>
-  <component name="ProjectId" id="1dUHcIyA73uLOlYSj2C6vYvnBVn" />
+  <component name="ProjectId" id="1dkpabNVvgZGhRd4lYzHmjIqlPd" />
   <component name="ProjectPluginManager">
     <option name="pluginsState">
-      <option name="com.mbeddr.core.base.pluginSolution.plugin.PluginSolution_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin">
-        <value>
-          <PluginState>
-            <option name="myComponentsState">
-              <list>
-                <ComponentState>
-                  <option name="first" value="com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin$2" />
-                </ComponentState>
-              </list>
-            </option>
-          </PluginState>
-        </value>
-      </option>
-      <option name="com.mbeddr.doc.aspect.ui.plugin.Ui_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.doc.pluginSolution.plugin.PluginSolution_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.asynccell.plugin.Asynccell_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.breadcrumb.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.ccmenu.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.contextactions.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.ecore.ui.plugin.Ui_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.editingGuide.execution.plugin.Execution_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.genreview.plugin.Genreview_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.httpserver.plugin.Httpserver_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.hyperlink.plugin.Hyperlink_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.intentions.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.jfreechart.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.jung.pluginSolution.plugin.PluginSolution_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.multilingual.concept.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.multilingual.settings.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.plantuml.pluginSolution.plugin.PluginSolution_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.projectview.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.projectview.vcs.plugin.Vcs_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.traceExplorer.plugin.TraceExplorer_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="com.mbeddr.mpsutil.userstyles.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
       <option name="com.strumenta.mpsserver.ide.plugin.Ide_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.itemis.mps.editor.celllayout.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.itemis.mps.editor.diagram.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.itemis.mps.mouselistener.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.itemis.mps.selection.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.itemis.mps.tooltips.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.q60.mps.explorer.plugin.Explorer_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.q60.mps.shadowmodels.modelcheck.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.q60.mps.shadowmodels.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="de.slisson.mps.conditionalEditor.runtime.plugin.Runtime_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="gescomplus.dsl.mpsserver.ide.plugin.Ide_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="gescomplus.ide.changelog.plugin.Changelog_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="gescomplus.ide.plugin.Ide_ProjectPlugin">
         <value>
           <PluginState />
         </value>
@@ -341,24 +150,6 @@
           <PluginState />
         </value>
       </option>
-      <option name="org.iets3.core.expr.plugin.plugin.Plugin_ProjectPlugin">
-        <value>
-          <PluginState />
-        </value>
-      </option>
-      <option name="org.iets3.core.expr.testExecution.plugin.TestExecution_ProjectPlugin">
-        <value>
-          <PluginState>
-            <option name="myComponentsState">
-              <list>
-                <ComponentState>
-                  <option name="first" value="org.iets3.core.expr.testExecution.plugin.TestExecution_ProjectPlugin$2" />
-                </ComponentState>
-              </list>
-            </option>
-          </PluginState>
-        </value>
-      </option>
     </option>
   </component>
   <component name="ProjectView">
@@ -369,15 +160,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="Modules Pool" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fcaadae8-2a9b-4aa2-9e3b-dcabe60c68b6" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyMPSServerExtension" />
+              <option name="myItemId" value="Languages" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,15 +174,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fcaadae8-2a9b-4aa2-9e3b-dcabe60c68b6" />
+              <option name="myItemId" value="53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff(ProtocolLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MyMPSServerExtension" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:36efbbab-fcbb-4a83-8456-cce2d3a742e7(MyMPSServerExtension.extension) in IdeaFile[path: /Users/federico/repos/mpsserver/functional_tests/mps_example_project/solutions/MyMPSServerExtension/models/MyMPSServerExtension.extension.mps]" />
+              <option name="myItemId" value="r:ff51949a-1d8b-42bd-8003-dbba82f40153(ProtocolLanguage.intentions) in IdeaFile[path: /Users/federico/repos/mpsserver/functional_tests/mps_example_project_withextension/languages/ProtocolLanguage/models/ProtocolLanguage.intentions.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,21 +188,17 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ca3637d5-360d-4361-a73e-46128549a570" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MySimpleLanguage" />
+              <option name="myItemId" value="53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff(ProtocolLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="Modules Pool" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" />
+              <option name="myItemId" value="Solutions" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -432,8 +211,28 @@
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ca3637d5-360d-4361-a73e-46128549a570" />
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solutions" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,7 +242,33 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" />
+              <option name="myItemId" value="bb0b4740-c31b-4055-b888-4bba31abf5fe" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProtocolLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:a66061c7-2111-47bd-ac57-bef0e9b59348(ProtocolLanguage.sandbox) in IdeaFile[path: /Users/federico/repos/mpsserver/functional_tests/mps_example_project_withextension/languages/ProtocolLanguage/sandbox/models/ProtocolLanguage.sandbox.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solutions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mpsserver" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,42 +278,71 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fcaadae8-2a9b-4aa2-9e3b-dcabe60c68b6" />
+              <option name="myItemId" value="bb0b4740-c31b-4055-b888-4bba31abf5fe" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProtocolLanguage" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb0b4740-c31b-4055-b888-4bba31abf5fe" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb0b4740-c31b-4055-b888-4bba31abf5fe" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProtocolLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:979c152f-5da2-4c89-b78b-6452731d9642(ProtocolLanguage.extension) in IdeaFile[path: /Users/federico/repos/mpsserver/functional_tests/mps_example_project_withextension/languages/ProtocolLanguage/sandbox/models/ProtocolLanguage.extension.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <SELECTED>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="Modules Pool" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="31977ef3-476d-4014-832a-f0a175a7b53f(MySimpleLanguage)" />
+              <option name="myItemId" value="Solutions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mpsserver" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
         </subPane>
-      </pane>
-      <pane id="CustomProjectView_gescomplus.ide.plugin.ActivitiesProjectView">
-        <subPane />
-      </pane>
-      <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
-        <subPane />
-      </pane>
-      <pane id="CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer">
-        <subPane />
-      </pane>
-      <pane id="CustomProjectView_gescomplus.ide.plugin.ObjectsProjectView">
-        <subPane />
-      </pane>
-      <pane id="CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -499,8 +353,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.mbeddr.mpsutil.multilingual.concept.runtime.plugin.MultilingualConceptProjectPlugin_ProjectPluginPart.showTranslations" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -551,11 +404,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="645ff6e4-0425-4c30-9fbd-0ac4d797f079" name="Default Changelist" comment="" />
-      <created>1592472829552</created>
+      <changelist id="86068aaa-7def-4264-b36f-bb41da20aa8e" name="Default Changelist" comment="" />
+      <created>1592979009741</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592472829552</updated>
+      <updated>1592979009741</updated>
     </task>
     <servers />
   </component>
@@ -567,21 +420,21 @@
     </default_view_options>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1704" y="303" key="#MPSPropertiesConfigurable" timestamp="1592472946950">
+    <state x="1680" y="303" key="#MPSPropertiesConfigurable" timestamp="1592979217475">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="1704" y="303" key="#MPSPropertiesConfigurable/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592472946950" />
-    <state x="2088" y="291" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard" timestamp="1592475198425">
+    <state x="1680" y="303" key="#MPSPropertiesConfigurable/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592979217475" />
+    <state x="2088" y="291" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard" timestamp="1592979500065">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2088" y="291" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592475198425" />
-    <state x="2130" y="215" key="#jetbrains.mps.ide.util.NodesChooser" timestamp="1592473002867">
+    <state x="2088" y="291" key="#jetbrains.mps.ide.migration.MigrationAssistantWizard/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592979500065" />
+    <state x="2130" y="215" key="#jetbrains.mps.ide.util.NodesChooser" timestamp="1592979316985">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2130" y="215" key="#jetbrains.mps.ide.util.NodesChooser/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592473002867" />
-    <state x="2138" y="366" width="1083" height="491" key="jetbrains.mps.workbench.dialogs.project.properties.project.ProjectPropertiesDialog" timestamp="1592982449048">
+    <state x="2130" y="215" key="#jetbrains.mps.ide.util.NodesChooser/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592979316985" />
+    <state x="1680" y="8" width="1440" height="1072" key="SettingsEditor" timestamp="1592979240171">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2138" y="366" width="1083" height="491" key="jetbrains.mps.workbench.dialogs.project.properties.project.ProjectPropertiesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592982449048" />
+    <state x="1680" y="8" width="1440" height="1072" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1592979240171" />
   </component>
 </project>

@@ -4,8 +4,10 @@ import requests
 import asyncio
 import websockets
 import json
+import aiounittest
 
-from BaseTest import BaseTest, BASE_URL, BASE_WS_URL
+from BaseTest import BaseTest, BASE_URL, BASE_WS_URL, BaseAsyncTest
+from async_timeout import timeout
 
 
 class IntentionsHttpTestCase(BaseTest):
@@ -21,21 +23,22 @@ class IntentionsHttpTestCase(BaseTest):
         pass
 
     def test_create_intentions_block(self):
-        r = requests.post("%s/intentions/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/createBlock" % BASE_URL)
+        r = requests.post("%s/intentions/ProtocolLanguage.sandbox/5465070037663859703/createBlock" % BASE_URL)
         self.assertEqual(200, r.status_code)
         data = r.json()
         self.assertEqual(True, data['success'])
         uuid = data['value']
-        time.sleep(0.05)
+        time.sleep(0.25)
         r = requests.get(
             "%s/intentions/%s" % (BASE_URL, uuid))
         self.assertEqual(200, r.status_code)
         data = r.json()
+        print(data)
         self.assertEqual(True, data['success'])
-        self.assertEqual([{'index': 0, 'description': 'Dummy Intention 1'}, {'index': 1, 'description': 'Dummy Intention 2'}], data['value'])
+        self.assertEqual([{'index': 0, 'description': 'Intention on Protocol Element'}, {'index': 1, 'description': 'Intention on Protocol'}], data['value'])
 
 
-class IntentionsWsTestCase(BaseTest):
+class IntentionsWsTestCase(BaseAsyncTest):
 
     @classmethod
     def setUpClass(cls):
@@ -47,12 +50,28 @@ class IntentionsWsTestCase(BaseTest):
     def reloadAll(self):
         pass
 
-    async def create_intentions_block(self):
+    # async def create_intentions_block(self):
+    #     async with websockets.connect(BASE_WS_URL) as websocket:
+    #         await websocket.send(json.dumps({'type':'CreateIntentionsBlock',
+    #                               'node':{
+    #                                   'model': 'ProtocolLanguage.sandbox',
+    #                                   'id':{'regularId': 5465070037663859703}
+    #                                 }}))
+    #         response = json.loads(await websocket.recv())
+    #         self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
+    #         uuid = response['blockUUID']
+    #         await websocket.send(json.dumps({'type': 'GetIntentionsBlock',
+    #                                  'blockUUID': uuid}))
+    #         response = json.loads(await websocket.recv())
+    #         self.assertEqual('GetIntentionsBlockAnswer', response['type'])
+    #         self.assertEqual([{'index': 0, 'description': 'Intention on Protocol Element'}, {'index': 1, 'description': 'Intention on Protocol'}], response['intentions'])
+
+    async def test_create_intentions_block(self):
         async with websockets.connect(BASE_WS_URL) as websocket:
             await websocket.send(json.dumps({'type':'CreateIntentionsBlock',
                                   'node':{
-                                      'model': 'com.strumenta.businessorg.sandbox.acmeinc',
-                                      'id':{'regularId': 5270253970127314084}
+                                      'model': 'ProtocolLanguage.sandbox',
+                                      'id':{'regularId': 5465070037663859703}
                                     }}))
             response = json.loads(await websocket.recv())
             self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
@@ -61,42 +80,33 @@ class IntentionsWsTestCase(BaseTest):
                                      'blockUUID': uuid}))
             response = json.loads(await websocket.recv())
             self.assertEqual('GetIntentionsBlockAnswer', response['type'])
-            self.assertEqual([{'index': 0, 'description': 'Dummy Intention 1'}, {'index': 1, 'description': 'Dummy Intention 2'}], response['intentions'])
+            self.assertEqual([{'index': 0, 'description': 'Intention on Protocol Element'}, {'index': 1, 'description': 'Intention on Protocol'}], response['intentions'])
 
-    def test_create_intentions_block(self):
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(self.create_intentions_block())
-        loop.close()
-
-    async def delete_intentions_block(self):
-        async with websockets.connect(BASE_WS_URL) as websocket:
-            await websocket.send(json.dumps({'type': 'CreateIntentionsBlock',
-                                  'node':{
-                                      'model': 'com.strumenta.businessorg.sandbox.acmeinc',
-                                      'id':{'regularId': 5270253970127314084}
-                                    }}))
-            response = json.loads(await websocket.recv())
-            self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
-            uuid = response['blockUUID']
-            await websocket.send(json.dumps({'type': 'DeleteIntentionsBlock',
-                                     'blockUUID': uuid}))
-            await websocket.send(json.dumps({'type': 'GetIntentionsBlock',
-                                             'blockUUID': uuid}))
-            response = json.loads(await websocket.recv())
-            self.assertEqual('GetIntentionsBlockAnswer', response['type'])
-            self.assertEqual(False, response['success'])
-
-    def test_delete_intentions_block(self):
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(self.delete_intentions_block())
-        loop.close()
+    async def test_delete_intentions_block(self):
+        async with timeout(5):
+            async with websockets.connect(BASE_WS_URL) as websocket:
+                await websocket.send(json.dumps({'type': 'CreateIntentionsBlock',
+                                      'node':{
+                                          'model': 'ProtocolLanguage.sandbox',
+                                          'id':{'regularId': 5465070037663859703}
+                                        }}))
+                response = json.loads(await websocket.recv())
+                self.assertEqual('CreateIntentionsBlockAnswer', response['type'])
+                uuid = response['blockUUID']
+                await websocket.send(json.dumps({'type': 'DeleteIntentionsBlock',
+                                         'blockUUID': uuid}))
+                await websocket.send(json.dumps({'type': 'GetIntentionsBlock',
+                                                 'blockUUID': uuid}))
+                response = json.loads(await websocket.recv())
+                self.assertEqual('GetIntentionsBlockAnswer', response['type'])
+                self.assertEqual(False, response['result']['success'])
 
     async def execute_intention(self):
         async with websockets.connect(BASE_WS_URL) as websocket:
             await websocket.send(json.dumps({'type': 'CreateIntentionsBlock',
                                              'node': {
-                                                 'model': 'com.strumenta.businessorg.sandbox.acmeinc',
-                                                 'id': {'regularId': 5270253970127314084}
+                                                 'model': 'ProtocolLanguage.sandbox',
+                                                 'id': {'regularId': 5465070037663859703}
                                              }}))
             response = json.loads(await websocket.recv())
             self.assertEqual('CreateIntentionsBlockAnswer', response['type'])

@@ -18,6 +18,7 @@ jobs:
         with:
           java-version: 11      
       - run: |
+          ./gradlew prepareFunctionalTests
           cd functional_tests
           pip install -r requirements.txt
           sh execute_functional_tests.sh
