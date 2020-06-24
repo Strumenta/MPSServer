@@ -388,7 +388,7 @@ publishing {
                 }
             }
         }                    
-        mpsServerExtensionKit(MavenPublication) {
+        mpsServerBuild(MavenPublication) {
             groupId 'com.strumenta.mpsserver'
             artifactId 'mpsserver-build'
             artifact packageBuild
@@ -442,17 +442,30 @@ bintray {
 
 task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
     doLast {
+        def extensionkitDir = new File(mpscode, 'build/artifacts/MpsServer-extensionkit')
+        def buildPluginDir = new File(mpscode, 'build/artifacts/MpsServer-build')
+        def exampleProjectArtifactsDir = new File(rootDir, "functional_tests/mps_example_project_withextension/artifacts") 
+        println("[extension kit plugin]")
+        fileTree(extensionkitDir).visit { FileVisitDetails details -> 
+            println(" * ${details.file.path}")
+        }
+        println()
+        println("[build plugin]")
+        fileTree(buildPluginDir).visit { FileVisitDetails details -> 
+            println(" * ${details.file.path}")
+        }
+        println()
         copy {
-           from {
-                new File(rootDir, 'mpscode/build/artifacts/MpsServer-extensionkit')
+            from {
+                extensionkitDir
             }
-            into new File("functional_tests/mps_example_project_withextension/artifacts") 
+            into exampleProjectArtifactsDir
         }
         copy {
-           from {
-                new File(rootDir, 'mpscode/build/artifacts/MpsServer-build')
+            from {
+                buildPluginDir
             }
-            into new File("functional_tests/mps_example_project_withextension/artifacts") 
+            into exampleProjectArtifactsDir
         }        
     }
 }
