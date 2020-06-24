@@ -26,5 +26,6 @@ jobs:
           ../gradlew buildProtocolLanguage
       - name: execute_functional_tests
         run: |
+          cd functional_tests
           pip install -r requirements.txt
           sh execute_functional_tests.sh          
