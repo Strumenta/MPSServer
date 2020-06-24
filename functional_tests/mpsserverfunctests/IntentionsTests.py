@@ -28,7 +28,7 @@ class IntentionsHttpTestCase(BaseTest):
         data = r.json()
         self.assertEqual(True, data['success'])
         uuid = data['value']
-        time.sleep(1.5)
+        time.sleep(0.5)
         r = requests.get(
             "%s/intentions/%s" % (BASE_URL, uuid))
         self.assertEqual(200, r.status_code)
