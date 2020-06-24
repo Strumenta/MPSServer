@@ -1,0 +1,10 @@
+JavaEWAH.jar
+commons-codec.jar
+commons-logging.jar
+httpclient.jar
+httpcore.jar
+jsch.jar
+org.eclipse.jgit.jar
+parallelgit-filesystem.jar
+parallelgit-utils.jar
+slf4j-api.jar

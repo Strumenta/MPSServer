@@ -98,18 +98,8 @@
       <concept id="4173297143638832582" name="jetbrains.mps.build.mps.runner.structure.BuildSolutionRunnerPlugin" flags="ng" index="_l39y" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps">
@@ -224,47 +214,6 @@
       </node>
       <node concept="m$_yC" id="565tb0CY2Lt" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
-      </node>
-    </node>
-    <node concept="1X3_iC" id="26HagJ0gblc" role="lGtFl">
-      <property role="3V$3am" value="parts" />
-      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/7389400916848080626" />
-      <node concept="m$_wf" id="lEUZLtjCnN" role="8Wnug">
-        <property role="m$_wk" value="MPSServer.build" />
-        <node concept="3_J27D" id="lEUZLtjCnO" role="m$_yQ">
-          <node concept="3Mxwew" id="lEUZLtjCnP" role="3MwsjC">
-            <property role="3MwjfP" value="MPSServer.build" />
-          </node>
-        </node>
-        <node concept="3_J27D" id="lEUZLtjCnQ" role="m$_w8">
-          <node concept="3Mxwey" id="lEUZLtjCnR" role="3MwsjC">
-            <ref role="3Mxwex" node="2E6SLKT_DBc" resolve="mpsserver.version" />
-          </node>
-        </node>
-        <node concept="m$f5U" id="lEUZLtjCrf" role="m$_yh">
-          <ref role="m$f5T" node="lEUZLtjCeb" resolve="MPSServer.build" />
-        </node>
-        <node concept="m$_yC" id="lEUZLtjCnT" role="m$_yJ">
-          <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
-        </node>
-        <node concept="3_J27D" id="lEUZLtjCnU" role="m_cZH">
-          <node concept="3Mxwew" id="lEUZLtjCnV" role="3MwsjC">
-            <property role="3MwjfP" value="MPSServer.build" />
-          </node>
-        </node>
-        <node concept="m$_yC" id="lEUZLtjCnW" role="m$_yJ">
-          <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
-        </node>
-        <node concept="m$_yC" id="lEUZLtjCnX" role="m$_yJ">
-          <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
-        </node>
-      </node>
-    </node>
-    <node concept="1X3_iC" id="26HagJ0gbja" role="lGtFl">
-      <property role="3V$3am" value="parts" />
-      <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/5617550519002745363/7389400916848080626" />
-      <node concept="2G$12M" id="lEUZLtjCeb" role="8Wnug">
-        <property role="TrG5h" value="MPSServer.build" />
       </node>
     </node>
     <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
@@ -408,144 +357,171 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsKi" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsKj" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKa" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlbc" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlbd" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlb2" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKb" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKc" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKd" role="2Ry0An">
-                    <property role="2Ry0Am" value="JavaEWAH.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlb3" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlb4" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlb5" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlb6" role="2Ry0An">
+                      <property role="2Ry0Am" value="JavaEWAH.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsKs" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsKt" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKk" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlbo" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlbp" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlbe" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKl" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKm" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKn" role="2Ry0An">
-                    <property role="2Ry0Am" value="commons-logging.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlbf" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlbg" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlbh" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlbi" role="2Ry0An">
+                      <property role="2Ry0Am" value="commons-logging.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsKA" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsKB" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKu" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlb$" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlb_" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlbq" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKv" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKw" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKx" role="2Ry0An">
-                    <property role="2Ry0Am" value="httpcore.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlbr" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlbs" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlbt" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlbu" role="2Ry0An">
+                      <property role="2Ry0Am" value="httpcore.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsKK" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsKL" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKC" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0JlbK" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0JlbL" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0JlbA" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKD" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKE" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKF" role="2Ry0An">
-                    <property role="2Ry0Am" value="org.eclipse.jgit.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JlbB" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JlbC" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JlbD" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JlbE" role="2Ry0An">
+                      <property role="2Ry0Am" value="org.eclipse.jgit.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsKU" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsKV" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKM" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0JlbW" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0JlbX" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0JlbM" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKN" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKO" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKP" role="2Ry0An">
-                    <property role="2Ry0Am" value="parallelgit-utils.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JlbN" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JlbO" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JlbP" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JlbQ" role="2Ry0An">
+                      <property role="2Ry0Am" value="parallelgit-utils.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsL4" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsL5" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsKW" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlc8" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlc9" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0JlbY" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsKX" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsKY" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsKZ" role="2Ry0An">
-                    <property role="2Ry0Am" value="commons-codec.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JlbZ" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlc0" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlc1" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlc2" role="2Ry0An">
+                      <property role="2Ry0Am" value="commons-codec.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsLe" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsLf" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsL6" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlck" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlcl" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlca" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsL7" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsL8" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsL9" role="2Ry0An">
-                    <property role="2Ry0Am" value="httpclient.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlcb" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlcc" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlcd" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlce" role="2Ry0An">
+                      <property role="2Ry0Am" value="httpclient.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsLo" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsLp" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsLg" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0Jlcw" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0Jlcx" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlcm" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsLh" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsLi" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsLj" role="2Ry0An">
-                    <property role="2Ry0Am" value="jsch.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlcn" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlco" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlcp" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jlcq" role="2Ry0An">
+                      <property role="2Ry0Am" value="jsch.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1P$YlGOVsLy" role="3bR37C">
-          <node concept="1BurEX" id="1P$YlGOVsLz" role="1SiIV1">
-            <node concept="398BVA" id="1P$YlGOVsLq" role="1BurEY">
+        <node concept="1SiIV0" id="4aUgzo0JlcG" role="3bR37C">
+          <node concept="1BurEX" id="4aUgzo0JlcH" role="1SiIV1">
+            <node concept="398BVA" id="4aUgzo0Jlcy" role="1BurEY">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVsLr" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVsLs" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsLt" role="2Ry0An">
-                    <property role="2Ry0Am" value="parallelgit-filesystem.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jlcz" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jlc$" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jlc_" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JlcA" role="2Ry0An">
+                      <property role="2Ry0Am" value="parallelgit-filesystem.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -700,14 +676,6 @@
     <node concept="3b7kt6" id="5yOqbw5UOgF" role="10PD9s" />
     <node concept="55IIr" id="5yOqbw5UOfC" role="auvoZ" />
     <node concept="1l3spV" id="5yOqbw5UOfD" role="1l3spN">
-      <node concept="1X3_iC" id="26HagJ0gbnf" role="lGtFl">
-        <property role="3V$3am" value="children" />
-        <property role="3V$3ak" value="798100da-4f0a-421a-b991-71f8c50ce5d2/4701820937132344003/7389400916848037006" />
-        <node concept="m$_wl" id="lEUZLtjCt4" role="8Wnug">
-          <ref role="m_rDy" node="lEUZLtjCnN" resolve="MPSServer.build" />
-          <node concept="pUk6x" id="lEUZLtjCu2" role="pUk7w" />
-        </node>
-      </node>
       <node concept="m$_wl" id="BHWycb_1UD" role="39821P">
         <ref role="m_rDy" node="1Y19Fp43fxb" resolve="MPSServer.core.plugin" />
         <node concept="398223" id="BHWycb_1UE" role="39821P">
@@ -737,11 +705,14 @@
             <node concept="398BVA" id="1P$YlGOVrGQ" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
               <node concept="2Ry0Ak" id="1P$YlGOVrJY" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
+                <property role="2Ry0Am" value="solutions" />
                 <node concept="2Ry0Ak" id="1P$YlGOVrLF" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVrLK" role="2Ry0An">
-                    <property role="2Ry0Am" value="JavaEWAH.jar" />
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jm1Q" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jmax" role="2Ry0An">
+                      <property role="2Ry0Am" value="JavaEWAH.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -751,109 +722,133 @@
             <node concept="398BVA" id="1P$YlGOVrNr" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
               <node concept="2Ry0Ak" id="1P$YlGOVrNs" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
+                <property role="2Ry0Am" value="solutions" />
                 <node concept="2Ry0Ak" id="1P$YlGOVrNt" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVs7s" role="2Ry0An">
-                    <property role="2Ry0Am" value="commons-codec.jar" />
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmiK" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jmrr" role="2Ry0An">
+                      <property role="2Ry0Am" value="commons-codec.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrQL" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrQM" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0Jmyx" role="39821P">
+            <node concept="398BVA" id="4aUgzo0Jmyy" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrQN" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrQO" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsaw" role="2Ry0An">
-                    <property role="2Ry0Am" value="commons-logging.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0Jmyz" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0Jmy$" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0Jmy_" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jn5u" role="2Ry0An">
+                      <property role="2Ry0Am" value="commons-logging.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrRb" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrRc" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmCB" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmCC" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrRd" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrRe" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsi3" role="2Ry0An">
-                    <property role="2Ry0Am" value="httpclient.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmCD" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmCE" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmCF" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jna_" role="2Ry0An">
+                      <property role="2Ry0Am" value="httpclient.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrRE" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrRF" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmHg" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmHh" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrRG" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrRH" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsl7" role="2Ry0An">
-                    <property role="2Ry0Am" value="httpcore.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmHi" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmHj" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmHk" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JnfG" role="2Ry0An">
+                      <property role="2Ry0Am" value="httpcore.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrTC" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrTD" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmLZ" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmM0" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrTE" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrTF" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsob" role="2Ry0An">
-                    <property role="2Ry0Am" value="org.eclipse.jgit.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmM1" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmM2" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmM3" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JnkN" role="2Ry0An">
+                      <property role="2Ry0Am" value="org.eclipse.jgit.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrUh" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrUi" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmNj" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmNk" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrUj" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrUk" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsrf" role="2Ry0An">
-                    <property role="2Ry0Am" value="parallelgit-filesystem.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmNl" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmNm" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmNn" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0JnpU" role="2Ry0An">
+                      <property role="2Ry0Am" value="parallelgit-filesystem.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrXq" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrXr" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmSe" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmSf" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrXs" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrXt" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVs_Q" role="2Ry0An">
-                    <property role="2Ry0Am" value="parallelgit-utils.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmSg" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmSh" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmSi" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jnv1" role="2Ry0An">
+                      <property role="2Ry0Am" value="parallelgit-utils.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="1P$YlGOVrYi" role="39821P">
-            <node concept="398BVA" id="1P$YlGOVrYj" role="28jJRO">
+          <node concept="28jJK3" id="4aUgzo0JmTI" role="39821P">
+            <node concept="398BVA" id="4aUgzo0JmTJ" role="28jJRO">
               <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
-              <node concept="2Ry0Ak" id="1P$YlGOVrYk" role="iGT6I">
-                <property role="2Ry0Am" value="build" />
-                <node concept="2Ry0Ak" id="1P$YlGOVrYl" role="2Ry0An">
-                  <property role="2Ry0Am" value="libs" />
-                  <node concept="2Ry0Ak" id="1P$YlGOVsCU" role="2Ry0An">
-                    <property role="2Ry0Am" value="jsch.jar" />
+              <node concept="2Ry0Ak" id="4aUgzo0JmTK" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="4aUgzo0JmTL" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.deps" />
+                  <node concept="2Ry0Ak" id="4aUgzo0JmTM" role="2Ry0An">
+                    <property role="2Ry0Am" value="libs" />
+                    <node concept="2Ry0Ak" id="4aUgzo0Jn$8" role="2Ry0An">
+                      <property role="2Ry0Am" value="jsch.jar" />
+                    </node>
                   </node>
                 </node>
               </node>
