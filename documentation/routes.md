@@ -94,4 +94,12 @@ abstract *NodeIDInfo*
 
 **GET /models/:modelName/:nodeId**: the specific node is returned. The value is a `NodeInfoDetailed`.
 
-**POST /models/:modelName/:nodeId/action/:actionName**: _to be documented_
+**POST /models/:modelName/:nodeId/action/:actionName**: it invokes a register _concept specific action_. These actions are registered through MPS Server extensions. These actions may produce any result. That result is returned.
+
+## Nodes routes
+
+**GET /nodes/:conceptName**: this returns all roots of that concept. For each node a `NodeInfo` structure is returned.
+
+**GET /nodes/:modelName/:nodeId:/property/:propertyName**: this returns the value of a given property.
+
+**PUT /nodes/:modelName/:nodeId:/property/:propertyName**: this sets the value of a given property. The value should be specified in the body.
