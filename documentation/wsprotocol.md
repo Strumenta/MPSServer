@@ -28,8 +28,7 @@ We have four types of messages:
 
 **DeleteNode**:
 
-* modelName: string
-* node: long
+* node: NodeIDInModel
 
 **SetChild**:
 
