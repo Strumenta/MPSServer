@@ -32,8 +32,7 @@ We have four types of messages:
 
 **SetChild**:
 
-* modelName: string
-* container: long
+* container: NodeIDInModel
 * containmentName: string
 * conceptToInstantiate: string
 
@@ -49,9 +48,8 @@ _no fields_
 
 **InstantiateConcept**:
 
-* modelName: string
+* nodeToReplace: NodeIDInModel
 * conceptToInstantiate: string
-* nodeToReplace: long
 
 **CreateRoot**:
 
