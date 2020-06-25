@@ -17,8 +17,7 @@ We have four types of messages:
 
 **AddChild** (Req): used to indicate that we want to add a child
 
-* modelName: string
-* container: long
+* container: NodeIDInModel
 * containmentName: string
 * conceptToInstantiate: string
 * index: int
