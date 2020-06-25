@@ -10728,14 +10728,6 @@
                       </node>
                       <node concept="liA8E" id="68SGi$iU_P0" role="2OqNvi">
                         <ref role="37wK5l" node="68SGi$iUOtv" resolve="setChild" />
-                        <node concept="2OqwBi" id="68SGi$iU_P1" role="37wK5m">
-                          <node concept="37vLTw" id="68SGi$iU_P2" role="2Oq$k0">
-                            <ref role="3cqZAo" node="68SGi$iU_OR" resolve="sic" />
-                          </node>
-                          <node concept="2OwXpG" id="68SGi$iU_P3" role="2OqNvi">
-                            <ref role="2Oxat5" node="68SGi$iUB9D" resolve="modelName" />
-                          </node>
-                        </node>
                         <node concept="2OqwBi" id="68SGi$iU_P4" role="37wK5m">
                           <node concept="37vLTw" id="68SGi$iU_P5" role="2Oq$k0">
                             <ref role="3cqZAo" node="68SGi$iU_OR" resolve="sic" />
@@ -13825,13 +13817,24 @@
                       <ref role="3cqZAo" node="2yBD7rQki8C" resolve="data" />
                     </node>
                     <node concept="liA8E" id="68SGi$iUOtH" role="2OqNvi">
-                      <ref role="37wK5l" node="i07tI0J1ig" resolve="getSNode" />
-                      <node concept="37vLTw" id="68SGi$iUOtI" role="37wK5m">
-                        <ref role="3cqZAo" node="68SGi$iUOun" resolve="modelName" />
-                      </node>
+                      <ref role="37wK5l" node="1taqoP6prf9" resolve="getSNode" />
                       <node concept="37vLTw" id="68SGi$iUOtJ" role="37wK5m">
-                        <ref role="3cqZAo" node="68SGi$iUOup" resolve="containerNodeId" />
+                        <ref role="3cqZAo" node="68SGi$iUOup" resolve="container" />
                       </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs8" id="1taqoP6sHfw" role="3cqZAp">
+                <node concept="3cpWsn" id="1taqoP6sHfz" role="3cpWs9">
+                  <property role="TrG5h" value="modelName" />
+                  <node concept="17QB3L" id="1taqoP6sHfu" role="1tU5fm" />
+                  <node concept="2OqwBi" id="1taqoP6sJvi" role="33vP2m">
+                    <node concept="37vLTw" id="1taqoP6sJcT" role="2Oq$k0">
+                      <ref role="3cqZAo" node="68SGi$iUOup" resolve="container" />
+                    </node>
+                    <node concept="2OwXpG" id="1taqoP6sJZQ" role="2OqNvi">
+                      <ref role="2Oxat5" node="4$zH10l_k3u" resolve="model" />
                     </node>
                   </node>
                 </node>
@@ -13843,7 +13846,7 @@
                   <node concept="1rXfSq" id="68SGi$iUOtN" role="33vP2m">
                     <ref role="37wK5l" node="2yBD7rQdcly" resolve="findConcept" />
                     <node concept="37vLTw" id="68SGi$iUOtO" role="37wK5m">
-                      <ref role="3cqZAo" node="68SGi$iUOun" resolve="modelName" />
+                      <ref role="3cqZAo" node="1taqoP6sHfz" resolve="modelName" />
                     </node>
                     <node concept="37vLTw" id="68SGi$iUOtP" role="37wK5m">
                       <ref role="3cqZAo" node="68SGi$iUOut" resolve="conceptToInstantiateName" />
@@ -13958,13 +13961,11 @@
       </node>
       <node concept="3Tm1VV" id="68SGi$iUOul" role="1B3o_S" />
       <node concept="3cqZAl" id="4UxIa3Gdd_j" role="3clF45" />
-      <node concept="37vLTG" id="68SGi$iUOun" role="3clF46">
-        <property role="TrG5h" value="modelName" />
-        <node concept="17QB3L" id="68SGi$iUOuo" role="1tU5fm" />
-      </node>
       <node concept="37vLTG" id="68SGi$iUOup" role="3clF46">
-        <property role="TrG5h" value="containerNodeId" />
-        <node concept="3cpWsb" id="68SGi$iUOuq" role="1tU5fm" />
+        <property role="TrG5h" value="container" />
+        <node concept="3uibUv" id="1taqoP6sEqd" role="1tU5fm">
+          <ref role="3uigEE" node="4$zH10l_k3t" resolve="NodeIDInModel" />
+        </node>
       </node>
       <node concept="37vLTG" id="68SGi$iUOur" role="3clF46">
         <property role="TrG5h" value="containmentLinkName" />
@@ -15634,15 +15635,12 @@
     <property role="2bfB8j" value="true" />
     <property role="TrG5h" value="SetChild" />
     <property role="3GE5qa" value="messages.containments" />
-    <node concept="312cEg" id="68SGi$iUB9D" role="jymVt">
-      <property role="TrG5h" value="modelName" />
-      <node concept="3Tm1VV" id="68SGi$iUB9E" role="1B3o_S" />
-      <node concept="17QB3L" id="68SGi$iUB9F" role="1tU5fm" />
-    </node>
     <node concept="312cEg" id="68SGi$iUB9G" role="jymVt">
       <property role="TrG5h" value="container" />
       <node concept="3Tm1VV" id="68SGi$iUB9H" role="1B3o_S" />
-      <node concept="3cpWsb" id="68SGi$iUB9I" role="1tU5fm" />
+      <node concept="3uibUv" id="1taqoP6sBLU" role="1tU5fm">
+        <ref role="3uigEE" node="4$zH10l_k3t" resolve="NodeIDInModel" />
+      </node>
     </node>
     <node concept="312cEg" id="68SGi$iUB9J" role="jymVt">
       <property role="TrG5h" value="containmentName" />
