@@ -6,9 +6,10 @@ Each message is expected to be a valid JSON object, and it will be distinguished
 
 The type field is case insensitive.
 
-We have three types of messages:
+We have four types of messages:
 
 * simple messages
+* (**Not**) notifications, messages which are sent exclusively from the server
 * (**Req**) requests, messages which contains a requestId
 * (**Ans**) request answers, messages which contains a requestId, which was used in a request message
 
@@ -38,21 +39,59 @@ We have three types of messages:
 * containmentName: string
 * conceptToInstantiate: string
 
-## Notifications regarding nodes
+**RequestForPropertyChange** (Req):
 
-**NodeAdded**:
+* node: NodeIDInModel
+* propertyName: string
+* propertyValue: any
+
+**AnswerPropertyChange** (Ans):
+
+_no fields_ 
+
+**InstantiateConcept**:
+
+* modelName: string
+* conceptToInstantiate: string
+* nodeToReplace: long
+
+**CreateRoot**:
+
+* modelName: string
+* conceptName: string
+* propertiesValues: map<string, Object>
+
+## Notifications
+
+**RegisterForChanges**: it should be called to receive notifications about a model
+
+* modelName: string
+
+**NodeAdded** (Not):
 
 * parentNodeId: NodeIDInfo
 * child: NodeInfoDetailed
 * index: int
 * relationName: string
 
-**NodeRemoved**:
+**NodeRemoved** (Not):
 
 * parentNodeId: NodeIDInfo
 * child: NodeInfoDetailed
 * index: int
 * relationName: string
+
+**PropertyChange** (Not):
+
+* node: NodeIDInModel
+* propertyName: string
+* propertyValue: any
+
+**ReferenceChange**: it can be used both as a command or as a notification
+
+* node: NodeIDInModel
+* referenceName: string
+* referenceValue: NodeIDInModel
 
 ## Messages regarding editing
 
@@ -86,6 +125,38 @@ AnswerAlternativeItem:
 * modelName: string
 * sibling: long
 
+**RequestForDirectReferences** (Req): 
+
+* modelName: string
+* container: long
+* referenceName: string
+
+**AnswerForDirectReferences** (Ans):
+
+* items: DirAlternative[]
+
+DirAlternative:
+
+* label: string
+* modelName: string
+* nodeId: NodeIDInfo
+
+**RequestForWrappingReferences** (Req): 
+
+* modelName: string
+* container: long
+* containmentName: string
+
+**AnswerForWrappingReferences** (Ans):
+
+* items: WraAlternative[]
+
+WraAlternative:
+
+* label: string
+* modelName: string
+* nodeId: NodeIDInfo
+
 ## Messages regarding errors
 
 **AskErrorsForNode**:
@@ -111,32 +182,3 @@ IssueDescription:
 
 * message: string
 * severity: string
-
-## Messages receivable by the server
-
-**PropertyChange**: _to be documented_
-
-**RegisterForChanges**: _to be documented_
-
-**InstantiateConcept**: _to be documented_
-
-**RequestForWrappingReferences**: _to be documented_
-
-**RequestForDirectReferences**: _to be documented_
-
-**ReferenceChange**: _to be documented_
-
-**CreateRoot**: _to be documented_
-
-## Messages sent by the server
-
-**AnswerForDirectReferences**: _to be documented_
-
-**AnswerForWrappingReferences**: _to be documented_
-
-
-**AnswerPropertyChange**: _to be documented_
-
-**PropertyChange**: _to be documented_
-
-**ReferenceChange**: _to be documented_
