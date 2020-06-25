@@ -19,3 +19,6 @@ default: _true_
 
 **MPSSERVER_GIT_CREDENTIALS**: it should contain the credentials, separated by a colon (e.g. "username:password"). It is used to push and pull to git repositories using https
 default: _credentials not specified_
+
+**MPSSERVER_EXTENSION_PATH**: comma separated list of module name or prefixes to consider while looking for extensions
+default: _empty_
