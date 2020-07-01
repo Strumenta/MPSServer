@@ -1113,27 +1113,14 @@
                                                       </node>
                                                       <node concept="SfApY" id="4GXMUnNsN8m" role="3cqZAp">
                                                         <node concept="3clFbS" id="4GXMUnNsN8n" role="SfCbr">
-                                                          <node concept="3clFbF" id="4GXMUnNsN8o" role="3cqZAp">
-                                                            <node concept="2OqwBi" id="4GXMUnNsN8p" role="3clFbG">
-                                                              <node concept="37vLTw" id="4GXMUnNsN8q" role="2Oq$k0">
-                                                                <ref role="3cqZAo" node="4GXMUnNsN8g" resolve="mpsServerExtension" />
-                                                              </node>
-                                                              <node concept="liA8E" id="4GXMUnNsN8r" role="2OqNvi">
-                                                                <ref role="37wK5l" to="e4as:2OkDVTX2KiL" resolve="activate" />
-                                                                <node concept="37vLTw" id="4GXMUnNsN8s" role="37wK5m">
-                                                                  <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
-                                                                </node>
-                                                              </node>
-                                                            </node>
-                                                          </node>
-                                                          <node concept="3clFbF" id="4GXMUnNsN8t" role="3cqZAp">
-                                                            <node concept="2OqwBi" id="4GXMUnNsN8u" role="3clFbG">
-                                                              <node concept="37vLTw" id="4GXMUnNsN8v" role="2Oq$k0">
+                                                          <node concept="3clFbF" id="68bedQPfVz9" role="3cqZAp">
+                                                            <node concept="2OqwBi" id="68bedQPfW5b" role="3clFbG">
+                                                              <node concept="37vLTw" id="68bedQPfVz7" role="2Oq$k0">
                                                                 <ref role="3cqZAo" node="2OkDVTXfya1" resolve="server" />
                                                               </node>
-                                                              <node concept="liA8E" id="4GXMUnNsN8w" role="2OqNvi">
-                                                                <ref role="37wK5l" to="30ym:4GXMUnNrZ0J" resolve="registerExtension" />
-                                                                <node concept="37vLTw" id="4GXMUnNsN8x" role="37wK5m">
+                                                              <node concept="liA8E" id="68bedQPfX4E" role="2OqNvi">
+                                                                <ref role="37wK5l" to="30ym:68bedQPfKlh" resolve="activateAndRegisterExtension" />
+                                                                <node concept="37vLTw" id="68bedQPfXFX" role="37wK5m">
                                                                   <ref role="3cqZAo" node="4GXMUnNsN8g" resolve="mpsServerExtension" />
                                                                 </node>
                                                               </node>

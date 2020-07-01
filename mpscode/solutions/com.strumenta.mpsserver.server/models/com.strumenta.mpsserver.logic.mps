@@ -544,6 +544,43 @@
         </node>
       </node>
     </node>
+    <node concept="2tJIrI" id="68bedQPfzjg" role="jymVt" />
+    <node concept="3clFb_" id="68bedQPfKlh" role="jymVt">
+      <property role="TrG5h" value="activateAndRegisterExtension" />
+      <node concept="37vLTG" id="68bedQPfMTw" role="3clF46">
+        <property role="TrG5h" value="extension" />
+        <property role="3TUv4t" value="true" />
+        <node concept="3uibUv" id="68bedQPfMTx" role="1tU5fm">
+          <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="68bedQPfKlk" role="3clF47">
+        <node concept="3clFbF" id="68bedQPfPrB" role="3cqZAp">
+          <node concept="2OqwBi" id="68bedQPfPHQ" role="3clFbG">
+            <node concept="37vLTw" id="68bedQPfPrA" role="2Oq$k0">
+              <ref role="3cqZAo" node="68bedQPfMTw" resolve="extension" />
+            </node>
+            <node concept="liA8E" id="68bedQPfPTQ" role="2OqNvi">
+              <ref role="37wK5l" to="e4as:2OkDVTX2KiL" resolve="activate" />
+              <node concept="Xjq3P" id="68bedQPfQ2r" role="37wK5m" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="68bedQPfQcX" role="3cqZAp">
+          <node concept="2OqwBi" id="68bedQPfQtG" role="3clFbG">
+            <node concept="Xjq3P" id="68bedQPfQcV" role="2Oq$k0" />
+            <node concept="liA8E" id="68bedQPfQBw" role="2OqNvi">
+              <ref role="37wK5l" node="4GXMUnNrZ0J" resolve="registerExtension" />
+              <node concept="37vLTw" id="68bedQPfQZs" role="37wK5m">
+                <ref role="3cqZAo" node="68bedQPfMTw" resolve="extension" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="68bedQPfIiG" role="1B3o_S" />
+      <node concept="3cqZAl" id="68bedQPfK9p" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="4GXMUnNrDNx" role="jymVt" />
     <node concept="312cEu" id="6Jg9HTa6xHe" role="jymVt">
       <property role="TrG5h" value="ServerConfiguration" />
