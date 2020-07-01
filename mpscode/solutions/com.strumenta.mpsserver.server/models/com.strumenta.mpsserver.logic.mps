@@ -581,6 +581,23 @@
       <node concept="3Tm1VV" id="68bedQPfIiG" role="1B3o_S" />
       <node concept="3cqZAl" id="68bedQPfK9p" role="3clF45" />
     </node>
+    <node concept="2tJIrI" id="68bedQPqMGi" role="jymVt" />
+    <node concept="3clFb_" id="68bedQPqSds" role="jymVt">
+      <property role="TrG5h" value="getRegisteredExtensions" />
+      <node concept="3clFbS" id="68bedQPqSdv" role="3clF47">
+        <node concept="3cpWs6" id="68bedQPqVa4" role="3cqZAp">
+          <node concept="37vLTw" id="68bedQPqV_$" role="3cqZAk">
+            <ref role="3cqZAo" node="4GXMUnNrHuU" resolve="registeredExtensions" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="68bedQPqPKj" role="1B3o_S" />
+      <node concept="_YKpA" id="68bedQPqRQu" role="3clF45">
+        <node concept="3uibUv" id="68bedQPqU_L" role="_ZDj9">
+          <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
+        </node>
+      </node>
+    </node>
     <node concept="2tJIrI" id="4GXMUnNrDNx" role="jymVt" />
     <node concept="312cEu" id="6Jg9HTa6xHe" role="jymVt">
       <property role="TrG5h" value="ServerConfiguration" />
@@ -939,6 +956,24 @@
     <node concept="2tJIrI" id="SXzjmhrJyz" role="jymVt" />
     <node concept="312cEu" id="2yBD7rQjfS1" role="jymVt">
       <property role="TrG5h" value="IssueSettingPortException" />
+      <node concept="3clFbW" id="68bedQPrDgN" role="jymVt">
+        <node concept="3cqZAl" id="68bedQPrDgP" role="3clF45" />
+        <node concept="3Tm6S6" id="68bedQPrDgQ" role="1B3o_S" />
+        <node concept="3clFbS" id="68bedQPrDgR" role="3clF47">
+          <node concept="XkiVB" id="68bedQPrI1R" role="3cqZAp">
+            <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+            <node concept="37vLTw" id="68bedQPrIiG" role="37wK5m">
+              <ref role="3cqZAo" node="68bedQPrHle" resolve="cause" />
+            </node>
+          </node>
+        </node>
+        <node concept="37vLTG" id="68bedQPrHle" role="3clF46">
+          <property role="TrG5h" value="cause" />
+          <node concept="3uibUv" id="68bedQPrHld" role="1tU5fm">
+            <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+          </node>
+        </node>
+      </node>
       <node concept="3uibUv" id="2yBD7rQjl5Z" role="1zkMxy">
         <ref role="3uigEE" to="wyt6:~RuntimeException" resolve="RuntimeException" />
       </node>
@@ -1949,7 +1984,7 @@
                                             <property role="TrG5h" value="nRetries" />
                                             <node concept="10Oyi0" id="80AXrSevjg" role="1tU5fm" />
                                             <node concept="3cmrfG" id="80AXrSevjh" role="33vP2m">
-                                              <property role="3cmrfH" value="3" />
+                                              <property role="3cmrfH" value="5" />
                                             </node>
                                           </node>
                                         </node>
@@ -2005,7 +2040,10 @@
                                                     <node concept="3clFbS" id="80AXrSevjS" role="3clFbx">
                                                       <node concept="abc8K" id="80AXrSevjT" role="3cqZAp">
                                                         <node concept="Xl_RD" id="80AXrSevjU" role="abp_N">
-                                                          <property role="Xl_RC" value="Issue setting port, retry..." />
+                                                          <property role="Xl_RC" value="Issue setting port, retry... nRetries=" />
+                                                        </node>
+                                                        <node concept="37vLTw" id="68bedQPrMrw" role="abp_N">
+                                                          <ref role="3cqZAo" node="80AXrSevjf" resolve="nRetries" />
                                                         </node>
                                                       </node>
                                                       <node concept="3clFbF" id="80AXrSevjV" role="3cqZAp">
@@ -2506,7 +2544,7 @@
                       <ref role="37wK5l" to="wyt6:~Thread.sleep(long)" resolve="sleep" />
                       <ref role="1Pybhc" to="wyt6:~Thread" resolve="Thread" />
                       <node concept="3cmrfG" id="SXzjmhtrJL" role="37wK5m">
-                        <property role="3cmrfH" value="300" />
+                        <property role="3cmrfH" value="250" />
                       </node>
                     </node>
                   </node>
@@ -2523,8 +2561,11 @@
               </node>
               <node concept="YS8fn" id="2yBD7rQjdrK" role="3cqZAp">
                 <node concept="2ShNRf" id="2yBD7rQjjVx" role="YScLw">
-                  <node concept="HV5vD" id="2yBD7rQjkNs" role="2ShVmc">
-                    <ref role="HV5vE" node="2yBD7rQjfS1" resolve="Server.IssueSettingPortException" />
+                  <node concept="1pGfFk" id="68bedQPrKGP" role="2ShVmc">
+                    <ref role="37wK5l" node="68bedQPrDgN" resolve="Server.IssueSettingPortException" />
+                    <node concept="37vLTw" id="68bedQPrKQS" role="37wK5m">
+                      <ref role="3cqZAo" node="6Iad5Is6Urt" resolve="e" />
+                    </node>
                   </node>
                 </node>
               </node>
