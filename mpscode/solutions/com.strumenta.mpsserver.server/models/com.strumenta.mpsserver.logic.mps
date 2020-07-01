@@ -24784,7 +24784,7 @@
         <node concept="3clFbF" id="1P$YlGOO4Vv" role="3cqZAp">
           <node concept="2YIFZM" id="1P$YlGOO600" role="3clFbG">
             <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
-            <ref role="37wK5l" to="9xi5:~Spark.put(java.lang.String,spark.Route)" resolve="put" />
+            <ref role="37wK5l" to="9xi5:~Spark.put(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="put" />
             <node concept="Xl_RD" id="1P$YlGOO6k4" role="37wK5m">
               <property role="Xl_RC" value="/nodes/:modelName/:nodeId/property/:propertyName" />
             </node>
@@ -25032,12 +25032,17 @@
                 </node>
               </node>
             </node>
+            <node concept="2ShNRf" id="68bedQPe3pm" role="37wK5m">
+              <node concept="HV5vD" id="68bedQPe3pn" role="2ShVmc">
+                <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+              </node>
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="6Jg9HTa36If" role="3cqZAp">
           <node concept="2YIFZM" id="6Jg9HTa38ZL" role="3clFbG">
-            <ref role="37wK5l" to="9xi5:~Spark.get(java.lang.String,spark.Route)" resolve="get" />
             <ref role="1Pybhc" to="9xi5:~Spark" resolve="Spark" />
+            <ref role="37wK5l" to="9xi5:~Spark.get(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="get" />
             <node concept="Xl_RD" id="6Jg9HTa38ZM" role="37wK5m">
               <property role="Xl_RC" value="/nodes/:modelName/:nodeId/property/:propertyName" />
             </node>
@@ -25261,6 +25266,11 @@
                     </node>
                   </node>
                 </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="68bedQPdMSW" role="37wK5m">
+              <node concept="HV5vD" id="68bedQPe2CH" role="2ShVmc">
+                <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
               </node>
             </node>
           </node>
