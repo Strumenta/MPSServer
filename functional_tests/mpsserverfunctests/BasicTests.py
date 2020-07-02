@@ -71,6 +71,26 @@ class BasicTests(BaseTest):
         changedModels = r.json()['value']
         self.assertEqual(0, len(changedModels))
 
+    def test_reload_all(self):
+        r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        self.assertEqual("Acme", r.json()['value'])
+
+        r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL,
+            data='SuperAcme')
+        self.assertEqual(200, r.status_code)
+
+        r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        self.assertEqual("SuperAcme", r.json()['value'])
+
+        r = requests.post('%s/persistence/reloadAll' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+
+        r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
+        self.assertEqual(200, r.status_code)
+        self.assertEqual("Acme", r.json()['value'])
+
 
 if __name__ == '__main__':
     import os
