@@ -29,6 +29,7 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
@@ -248,12 +249,22 @@
               </node>
             </node>
           </node>
-          <node concept="17R0WA" id="6Jg9HT9UXqw" role="3clFbw">
-            <node concept="Xl_RD" id="6Jg9HT9UXqx" role="3uHU7w">
-              <property role="Xl_RC" value="enabled" />
+          <node concept="22lmx$" id="3pfWNm6rWIz" role="3clFbw">
+            <node concept="17R0WA" id="6Jg9HT9UXqw" role="3uHU7B">
+              <node concept="37vLTw" id="6Jg9HT9UXqy" role="3uHU7B">
+                <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+              </node>
+              <node concept="Xl_RD" id="6Jg9HT9UXqx" role="3uHU7w">
+                <property role="Xl_RC" value="enabled" />
+              </node>
             </node>
-            <node concept="37vLTw" id="6Jg9HT9UXqy" role="3uHU7B">
-              <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+            <node concept="17R0WA" id="3pfWNm6rWNk" role="3uHU7w">
+              <node concept="Xl_RD" id="3pfWNm6rWNl" role="3uHU7w">
+                <property role="Xl_RC" value="true" />
+              </node>
+              <node concept="37vLTw" id="3pfWNm6rWNm" role="3uHU7B">
+                <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+              </node>
             </node>
           </node>
         </node>
