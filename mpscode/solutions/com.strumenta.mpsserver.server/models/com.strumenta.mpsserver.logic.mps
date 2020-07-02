@@ -603,10 +603,12 @@
       <property role="TrG5h" value="getPort" />
       <node concept="3clFbS" id="1IgkoDdCTVn" role="3clF47">
         <node concept="3cpWs6" id="1IgkoDdCWMU" role="3cqZAp">
-          <node concept="2OqwBi" id="1IgkoDdCXdi" role="3cqZAk">
-            <node concept="Xjq3P" id="1IgkoDdCWUL" role="2Oq$k0" />
-            <node concept="liA8E" id="1IgkoDdCZVZ" role="2OqNvi">
-              <ref role="37wK5l" node="1IgkoDdCTVk" resolve="getPort" />
+          <node concept="2OqwBi" id="35Xk1OhkDxr" role="3cqZAk">
+            <node concept="37vLTw" id="35Xk1OhkBK8" role="2Oq$k0">
+              <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
+            </node>
+            <node concept="liA8E" id="35Xk1OhkVZn" role="2OqNvi">
+              <ref role="37wK5l" node="35Xk1OhkFY_" resolve="getPort" />
             </node>
           </node>
         </node>
@@ -766,6 +768,21 @@
           <property role="TrG5h" value="port" />
           <node concept="10Oyi0" id="6Jg9HTa7b6S" role="1tU5fm" />
         </node>
+      </node>
+      <node concept="3clFb_" id="35Xk1OhkFY_" role="jymVt">
+        <property role="TrG5h" value="getPort" />
+        <node concept="3clFbS" id="35Xk1OhkFYA" role="3clF47">
+          <node concept="3cpWs6" id="35Xk1OhkFYH" role="3cqZAp">
+            <node concept="2OqwBi" id="35Xk1OhkPBw" role="3cqZAk">
+              <node concept="Xjq3P" id="35Xk1OhkFYI" role="2Oq$k0" />
+              <node concept="2OwXpG" id="35Xk1OhkRvH" role="2OqNvi">
+                <ref role="2Oxat5" node="6Jg9HTa6AAc" resolve="port" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="35Xk1OhkFYJ" role="1B3o_S" />
+        <node concept="10Oyi0" id="35Xk1OhkHOS" role="3clF45" />
       </node>
       <node concept="2tJIrI" id="6Jg9HTa7R1H" role="jymVt" />
       <node concept="3clFb_" id="6Jg9HTa7RVL" role="jymVt">
@@ -1062,7 +1079,7 @@
     </node>
     <node concept="Wx3nA" id="5SYYrGBDhag" role="jymVt">
       <property role="TrG5h" value="DEFAULT_PORT" />
-      <node concept="3Tm6S6" id="5SYYrGBDh2o" role="1B3o_S" />
+      <node concept="3Tm1VV" id="35Xk1OhkXPs" role="1B3o_S" />
       <node concept="10Oyi0" id="5SYYrGBDh9O" role="1tU5fm" />
       <node concept="3cmrfG" id="5SYYrGBDhhP" role="33vP2m">
         <property role="3cmrfH" value="2904" />
