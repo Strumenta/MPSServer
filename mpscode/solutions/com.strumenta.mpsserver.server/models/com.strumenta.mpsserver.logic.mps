@@ -20627,6 +20627,15 @@
         </node>
       </node>
     </node>
+    <node concept="2tJIrI" id="zMaLmAaynd" role="jymVt" />
+    <node concept="Wx3nA" id="zMaLmAazxQ" role="jymVt">
+      <property role="TrG5h" value="NOT_FOUND" />
+      <node concept="3Tm1VV" id="zMaLmAayX9" role="1B3o_S" />
+      <node concept="3cmrfG" id="zMaLmAa$lK" role="33vP2m">
+        <property role="3cmrfH" value="404" />
+      </node>
+      <node concept="10Oyi0" id="zMaLmAa$5l" role="1tU5fm" />
+    </node>
     <node concept="2tJIrI" id="58QDHkDpT8e" role="jymVt" />
     <node concept="3clFb_" id="58QDHkDpT8g" role="jymVt">
       <property role="TrG5h" value="addRoutes" />
@@ -20677,6 +20686,29 @@
                       </node>
                       <node concept="3clFbS" id="5I6f3mSO5wp" role="3clF47">
                         <node concept="SfApY" id="5I6f3mSO5wq" role="3cqZAp">
+                          <node concept="TDmWw" id="zMaLmAapAf" role="TEbGg">
+                            <node concept="3cpWsn" id="zMaLmAapAg" role="TDEfY">
+                              <property role="TrG5h" value="e" />
+                              <node concept="3uibUv" id="zMaLmAarn2" role="1tU5fm">
+                                <ref role="3uigEE" node="4XQ2p$w3qf4" resolve="NotFoundException" />
+                              </node>
+                            </node>
+                            <node concept="3clFbS" id="zMaLmAapAi" role="TDEfX">
+                              <node concept="3cpWs6" id="zMaLmAarEI" role="3cqZAp">
+                                <node concept="2OqwBi" id="zMaLmAasDe" role="3cqZAk">
+                                  <node concept="37vLTw" id="zMaLmAasdA" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="5I6f3mSO5wm" resolve="res" />
+                                  </node>
+                                  <node concept="liA8E" id="zMaLmAat1t" role="2OqNvi">
+                                    <ref role="37wK5l" to="9xi5:~Response.status(int)" resolve="status" />
+                                    <node concept="37vLTw" id="zMaLmAa$MK" role="37wK5m">
+                                      <ref role="3cqZAo" node="zMaLmAazxQ" resolve="NOT_FOUND" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
                           <node concept="3clFbS" id="5I6f3mSO5wr" role="SfCbr">
                             <node concept="3cpWs8" id="5I6f3mSO5wR" role="3cqZAp">
                               <node concept="3cpWsn" id="5I6f3mSO5wS" role="3cpWs9">
