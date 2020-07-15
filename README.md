@@ -92,6 +92,11 @@ The project contains:
 * unit tests: written within MPS
 * functional tests: written in Python
 
+To run the unit tests inside MPS, first you have to set the path
+variable "mpsserver.home" (MPS > Preferences > Appearance & Behavior >
+Path Variables) to the full path to the directory MPSServer/mpscode.
+Then, you can launch them from the MPS UI (right click > run).
+
 ### Release a new version
 
 * Check all tests pass on the CI server (currently using GitHub actions)
