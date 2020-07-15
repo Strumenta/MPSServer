@@ -658,6 +658,16 @@
             <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
           </node>
         </node>
+        <node concept="1SiIV0" id="1AoMUD2X7NZ" role="3bR37C">
+          <node concept="3bR9La" id="1AoMUD2X7O0" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6L9O" resolve="jetbrains.mps.lang.smodel" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1AoMUD2X7O1" role="3bR37C">
+          <node concept="3bR9La" id="1AoMUD2X7O2" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="4JnP3TV$EDw" role="2G$12L">
         <property role="BnDLt" value="true" />
