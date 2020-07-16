@@ -668,6 +668,11 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
           </node>
         </node>
+        <node concept="1SiIV0" id="2R9WLW45JD2" role="3bR37C">
+          <node concept="3bR9La" id="2R9WLW45JD3" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="4JnP3TV$EDw" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1730,6 +1735,11 @@
       <node concept="1SiIV0" id="3XsdshnRxND" role="3bR37C">
         <node concept="3bR9La" id="3XsdshnRxNE" role="1SiIV1">
           <ref role="3bR37D" node="3XsdshnRw0A" resolve="com.strumenta.businessorg" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="2R9WLW4aMQn" role="3bR37C">
+        <node concept="3bR9La" id="2R9WLW4aMQo" role="1SiIV1">
+          <ref role="3bR37D" node="3XsdshnRw2P" resolve="com.strumenta.businessorg.sandbox" />
         </node>
       </node>
     </node>

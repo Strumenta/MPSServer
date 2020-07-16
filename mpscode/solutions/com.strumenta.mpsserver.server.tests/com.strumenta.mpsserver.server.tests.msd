@@ -22,6 +22,7 @@
     <dependency reexport="false">20c6e580-bdc5-4067-8049-d7e3265a86de(jetbrains.mps.typesystemEngine)</dependency>
     <dependency reexport="false">96ad5b8f-04fe-4e16-a7d6-0e014b8726e4(com.strumenta.businessorg)</dependency>
     <dependency reexport="false">9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)</dependency>
+    <dependency reexport="false">304d28bd-2c3c-4fbd-b987-dbce2813a938(com.strumenta.businessorg.sandbox)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:96ad5b8f-04fe-4e16-a7d6-0e014b8726e4:com.strumenta.businessorg" version="0" />
@@ -50,6 +51,7 @@
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="96ad5b8f-04fe-4e16-a7d6-0e014b8726e4(com.strumenta.businessorg)" version="0" />
+    <module reference="304d28bd-2c3c-4fbd-b987-dbce2813a938(com.strumenta.businessorg.sandbox)" version="0" />
     <module reference="48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)" version="0" />
     <module reference="5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)" version="0" />
     <module reference="bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)" version="0" />
