@@ -455,6 +455,117 @@
         </node>
       </node>
     </node>
+    <node concept="1LZb2c" id="5CDZnbm9roR" role="1SL9yI">
+      <property role="TrG5h" value="injectStructureInConceptName_InsertionNecessary" />
+      <node concept="3cqZAl" id="5CDZnbm9roS" role="3clF45" />
+      <node concept="3clFbS" id="5CDZnbm9roW" role="3clF47">
+        <node concept="3vlDli" id="5CDZnbm9sXa" role="3cqZAp">
+          <node concept="Xl_RD" id="5CDZnbm9t7s" role="3tpDZB">
+            <property role="Xl_RC" value="gescomplus.dsl.core.structure.AllInstancesQuery" />
+          </node>
+          <node concept="2YIFZM" id="5CDZnbm9t2n" role="3tpDZA">
+            <ref role="37wK5l" to="30ym:5CDZnbm9lKW" resolve="injectStructureInConceptName" />
+            <ref role="1Pybhc" to="30ym:4XQ2p$w1IaY" resolve="DataExposer" />
+            <node concept="Xl_RD" id="5CDZnbm9t66" role="37wK5m">
+              <property role="Xl_RC" value="gescomplus.dsl.core.AllInstancesQuery" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5CDZnbmb58C" role="1SL9yI">
+      <property role="TrG5h" value="injectStructureInConceptName_InsertionNecessaryShort" />
+      <node concept="3cqZAl" id="5CDZnbmb58D" role="3clF45" />
+      <node concept="3clFbS" id="5CDZnbmb58E" role="3clF47">
+        <node concept="3vlDli" id="5CDZnbmb58F" role="3cqZAp">
+          <node concept="Xl_RD" id="5CDZnbmb58G" role="3tpDZB">
+            <property role="Xl_RC" value="structure.AllInstancesQuery" />
+          </node>
+          <node concept="2YIFZM" id="5CDZnbmb58H" role="3tpDZA">
+            <ref role="1Pybhc" to="30ym:4XQ2p$w1IaY" resolve="DataExposer" />
+            <ref role="37wK5l" to="30ym:5CDZnbm9lKW" resolve="injectStructureInConceptName" />
+            <node concept="Xl_RD" id="5CDZnbmb58I" role="37wK5m">
+              <property role="Xl_RC" value="AllInstancesQuery" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5CDZnbm9ti3" role="1SL9yI">
+      <property role="TrG5h" value="injectStructureInConceptName_InsertionNotNecessary" />
+      <node concept="3cqZAl" id="5CDZnbm9ti4" role="3clF45" />
+      <node concept="3clFbS" id="5CDZnbm9ti5" role="3clF47">
+        <node concept="3vlDli" id="5CDZnbm9tia" role="3cqZAp">
+          <node concept="Xl_RD" id="5CDZnbm9tib" role="3tpDZB">
+            <property role="Xl_RC" value="gescomplus.dsl.core.structure.AllInstancesQuery" />
+          </node>
+          <node concept="2YIFZM" id="5CDZnbm9tic" role="3tpDZA">
+            <ref role="1Pybhc" to="30ym:4XQ2p$w1IaY" resolve="DataExposer" />
+            <ref role="37wK5l" to="30ym:5CDZnbm9lKW" resolve="injectStructureInConceptName" />
+            <node concept="Xl_RD" id="5CDZnbm9tid" role="37wK5m">
+              <property role="Xl_RC" value="gescomplus.dsl.core.structure.AllInstancesQuery" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5CDZnbmcaRG" role="1SL9yI">
+      <property role="TrG5h" value="getConceptByName" />
+      <node concept="3cqZAl" id="5CDZnbmcaRH" role="3clF45" />
+      <node concept="3clFbS" id="5CDZnbmcaRL" role="3clF47">
+        <node concept="3cpWs8" id="5CDZnbmceBf" role="3cqZAp">
+          <node concept="3cpWsn" id="5CDZnbmceBg" role="3cpWs9">
+            <property role="TrG5h" value="data" />
+            <node concept="3uibUv" id="5CDZnbmceBh" role="1tU5fm">
+              <ref role="3uigEE" to="30ym:4XQ2p$w1IaY" resolve="DataExposer" />
+            </node>
+            <node concept="2ShNRf" id="5CDZnbmceBi" role="33vP2m">
+              <node concept="1pGfFk" id="5CDZnbmceBj" role="2ShVmc">
+                <ref role="37wK5l" to="30ym:4XQ2p$w1QnN" resolve="DataExposer" />
+                <node concept="2OqwBi" id="5CDZnbmceBk" role="37wK5m">
+                  <node concept="1jxXqW" id="5CDZnbmceBl" role="2Oq$k0" />
+                  <node concept="liA8E" id="5CDZnbmceBm" role="2OqNvi">
+                    <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5CDZnbmccwu" role="3cqZAp">
+          <node concept="35c_gC" id="5CDZnbmccwG" role="3tpDZB">
+            <ref role="35c_gD" to="tpee:g7pOWCK" resolve="Classifier" />
+          </node>
+          <node concept="2OqwBi" id="5CDZnbmcePs" role="3tpDZA">
+            <node concept="37vLTw" id="5CDZnbmceKO" role="2Oq$k0">
+              <ref role="3cqZAo" node="5CDZnbmceBg" resolve="data" />
+            </node>
+            <node concept="liA8E" id="5CDZnbmceYV" role="2OqNvi">
+              <ref role="37wK5l" to="30ym:5CDZnbm1ZoD" resolve="getConceptByName" />
+              <node concept="Xl_RD" id="5CDZnbmcf2p" role="37wK5m">
+                <property role="Xl_RC" value="jetbrains.mps.baseLanguage.Classifier" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5CDZnbmd5rb" role="3cqZAp">
+          <node concept="35c_gC" id="5CDZnbmd5rc" role="3tpDZB">
+            <ref role="35c_gD" to="tpee:g7pOWCK" resolve="Classifier" />
+          </node>
+          <node concept="2OqwBi" id="5CDZnbmd5rd" role="3tpDZA">
+            <node concept="37vLTw" id="5CDZnbmd5re" role="2Oq$k0">
+              <ref role="3cqZAo" node="5CDZnbmceBg" resolve="data" />
+            </node>
+            <node concept="liA8E" id="5CDZnbmd5rf" role="2OqNvi">
+              <ref role="37wK5l" to="30ym:5CDZnbm1ZoD" resolve="getConceptByName" />
+              <node concept="Xl_RD" id="5CDZnbmd5rg" role="37wK5m">
+                <property role="Xl_RC" value="jetbrains.mps.baseLanguage.structure.Classifier" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1X3_iC" id="Fhwl$ayIiG" role="lGtFl">
       <property role="3V$3am" value="testMethods" />
       <property role="3V$3ak" value="8585453e-6bfb-4d80-98de-b16074f1d86c/1216913645126/1217501895093" />
