@@ -1021,6 +1021,12 @@
       <node concept="m$_yC" id="2p2ql82Ml_8" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
       </node>
+      <node concept="m$_yC" id="4NnQddZ$qdy" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
+      </node>
+      <node concept="m$_yC" id="4NnQddZ$MIJ" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:5xhjlkpPhJu" resolve="jetbrains.mps.ide.httpsupport" />
+      </node>
     </node>
     <node concept="2G$12M" id="2p2ql82Ml_9" role="3989C9">
       <property role="TrG5h" value="MPSServerLauncher" />
@@ -1243,6 +1249,18 @@
     <node concept="2sgV4H" id="2p2ql82MlAu" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZnIjX" resolve="mpsDistribution" />
       <node concept="398BVA" id="2p2ql82MlAv" role="2JcizS">
+        <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4NnQddZ$qco" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:1lMM4owFq4Y" resolve="mpsVcs" />
+      <node concept="398BVA" id="4NnQddZ$qdo" role="2JcizS">
+        <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4NnQddZ$qd2" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:6ifcnI8$2iR" resolve="mpsVcsPlatform" />
+      <node concept="398BVA" id="4NnQddZ$qdq" role="2JcizS">
         <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
       </node>
     </node>
