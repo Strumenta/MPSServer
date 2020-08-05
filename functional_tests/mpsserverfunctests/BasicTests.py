@@ -38,6 +38,8 @@ class BasicTests(BaseTest):
     def test_setting_property(self):
         r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
         self.assertEqual(200, r.status_code)
+        if 'value' not in r.json():
+            raise Exception("value not present. Answer: %s" % str(r.json()))
         self.assertEqual("Acme", r.json()['value'], "actual value is %s. Answer is %s" % (r.json()['value'], r.json()))
 
         r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL, 
@@ -60,6 +62,8 @@ class BasicTests(BaseTest):
 
         r = requests.get('%s/persistence/changedModels' % BASE_URL)
         self.assertEqual(200, r.status_code)
+        if 'value' not in r.json():
+            raise Exception("value not present. Answer: %s" % str(r.json()))
         changedModels = r.json()['value']
         self.assertEqual(['com.strumenta.businessorg.sandbox.acmeinc'], changedModels, "actual value is %s. Answer is %s" % (str(changedModels), r.json()))
         time.sleep(1)
@@ -74,6 +78,8 @@ class BasicTests(BaseTest):
     def test_reload_all(self):
         r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
         self.assertEqual(200, r.status_code)
+        if 'value' not in r.json():
+            raise Exception("value not present. Answer: %s" % str(r.json()))
         self.assertEqual("Acme", r.json()['value'], "actual value is %s. Answer is %s" % (r.json()['value'], r.json()))
 
         r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL,
