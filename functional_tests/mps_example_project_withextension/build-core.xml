@@ -6,7 +6,7 @@
   <property name="mpsserver.version" value="" />
   <property name="project.home" location="${basedir}" />
   <property name="artifacts.root" location="${basedir}/artifacts" />
-  <property name="mpsserver.extensionkit.artifacts" location="${artifacts.root}/MPSServer.extensionkit.plugin" />
+  <property name="mpsserver.extensionkit.artifacts" location="${artifacts.root}" />
   <property name="mps.home" location="" />
   <property name="artifacts.mps" location="${mps.home}" />
   <property name="artifacts.mpsStandalone" location="${mps.home}" />

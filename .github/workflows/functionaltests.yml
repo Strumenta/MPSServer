@@ -28,4 +28,8 @@ jobs:
         run: |
           cd functional_tests
           pip install -r requirements.txt
-          sh execute_functional_tests.sh          
+          sh execute_functional_tests.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: logs
+          path: server_log_*.txt          
