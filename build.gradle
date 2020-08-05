@@ -19,7 +19,6 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id "com.github.breadmoirai.github-release" version "2.2.12"
     id "com.jfrog.bintray" version "1.8.5"
 }
 
