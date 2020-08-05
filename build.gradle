@@ -25,7 +25,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '1.2.4-rc1'
+version = '1.2.4-rc2'
 
 configurations {
 	mps
@@ -164,7 +164,7 @@ task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExample
 	script new File('mpscode/build-tests.xml')
 }
 
-task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExamples]) {
+task buildLauncher(type: BuildLanguages, dependsOn: [buildServer]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-launcher.xml')
