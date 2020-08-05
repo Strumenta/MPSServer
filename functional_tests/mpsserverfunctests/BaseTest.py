@@ -10,7 +10,6 @@ BASE_WS_URL = "ws://localhost:%d/socket" % PORT
 
 
 class BaseAsyncTest(aiounittest.AsyncTestCase):
-
     @classmethod
     def try_to_connect(cls, attempts_left=100):
         try:
@@ -37,7 +36,6 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
 
 
 class BaseTest(unittest.TestCase):
-
     @classmethod
     def try_to_connect(cls, attempts_left=100):
         try:

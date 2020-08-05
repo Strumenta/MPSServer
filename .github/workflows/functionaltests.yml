@@ -24,6 +24,11 @@ jobs:
         run: |
           cd functional_tests
           ../gradlew buildProtocolLanguage
+      - name: Install through Poetry
+         uses: abatilo/actions-poetry@v1.5.0
+         with:
+           working_directory: ./functional_tests
+           args: install    
       - name: execute_functional_tests
         run: |
           cd functional_tests

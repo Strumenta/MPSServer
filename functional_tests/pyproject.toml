@@ -16,6 +16,7 @@ requests = "^2.24.0"
 urllib3 = "^1.25.10"
 websockets = "^8.1"
 wrapt = "^1.12.1"
+black = "^19.10b0"
 
 [tool.poetry.dev-dependencies]
 
