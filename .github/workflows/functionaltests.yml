@@ -17,6 +17,14 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11      
+      - name: Install through Poetry
+        run: |
+          cd functional_tests
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          source $HOME/.poetry/env
+          mkdir -p ~/.cache/pypoetry/virtualenvs
+          poetry env use python
+          poetry install                        
       - name: prepareFunctionalTests
         run: |
           ./gradlew prepareFunctionalTests
@@ -27,11 +35,6 @@ jobs:
       - name: Install through Poetry
         run: |
           cd functional_tests
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-          source $HOME/.poetry/env
-          mkdir -p ~/.cache/pypoetry/virtualenvs
-          poetry env use python
-          poetry install    
           poetry env use python
           sh execute_functional_tests.sh
       - uses: actions/upload-artifact@v2
