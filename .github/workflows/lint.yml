@@ -1,0 +1,19 @@
+name: Lint
+
+on: [push]
+
+jobs:
+  lintFunctionalTests:
+
+    runs-on: ubuntu-latest
+
+    steps:  
+    - name: Install through Poetry
+      uses: abatilo/actions-poetry@v1.5.0
+        with:
+          working_directory: ./functional_tests
+          args: install    
+    - name: Run linter
+      run: |
+        cd functional_tests
+        flake8 mpsserverfunctests

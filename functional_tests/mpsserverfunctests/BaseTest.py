@@ -20,7 +20,7 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
             else:
                 print("status code: %d" % r.status_code)
                 return False
-        except Exception as e:
+        except Exception:
             if attempts_left > 0:
                 print("  attemps left: %d" % attempts_left)
                 time.sleep(5)
@@ -46,7 +46,7 @@ class BaseTest(unittest.TestCase):
             else:
                 print("status code: %d" % r.status_code)
                 return False
-        except Exception as e:
+        except Exception:
             if attempts_left > 0:
                 print("  attemps left: %d" % attempts_left)
                 time.sleep(5)
