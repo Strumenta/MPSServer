@@ -42,27 +42,27 @@ class BasicTests(BaseTest):
 
     def test_setting_property(self):
         r = requests.get(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL
         )
         self.assertEqual(200, r.status_code)
         if "value" not in r.json():
             raise Exception("value not present. Answer: %s" % str(r.json()))
         self.assertEqual(
-            "Acme",
+            "MyProtocol",
             r.json()["value"],
             "actual value is %s. Answer is %s" % (r.json()["value"], r.json()),
         )
 
         r = requests.put(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL,
             data="SuperAcme",
         )
         self.assertEqual(200, r.status_code)
 
         r = requests.get(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL
         )
         self.assertEqual(200, r.status_code)
@@ -75,7 +75,7 @@ class BasicTests(BaseTest):
         self.assertEqual(0, len(changedModels))
 
         r = requests.put(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL,
             data="My new name",
         )
@@ -88,7 +88,7 @@ class BasicTests(BaseTest):
             raise Exception("value not present. Answer: %s" % str(r.json()))
         changedModels = r.json()["value"]
         self.assertEqual(
-            ["com.strumenta.businessorg.sandbox.acmeinc"],
+            ["ProtocolLanguage.sandbox"],
             changedModels,
             "actual value is %s. Answer is %s" % (str(changedModels), r.json()),
         )
@@ -103,27 +103,27 @@ class BasicTests(BaseTest):
 
     def test_reload_all(self):
         r = requests.get(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL
         )
         self.assertEqual(200, r.status_code)
         if "value" not in r.json():
             raise Exception("value not present. Answer: %s" % str(r.json()))
         self.assertEqual(
-            "Acme",
+            "MyProtocol",
             r.json()["value"],
             "actual value is %s. Answer is %s" % (r.json()["value"], r.json()),
         )
 
         r = requests.put(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL,
             data="SuperAcme",
         )
         self.assertEqual(200, r.status_code)
 
         r = requests.get(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL
         )
         self.assertEqual(200, r.status_code)
@@ -133,11 +133,11 @@ class BasicTests(BaseTest):
         self.assertEqual(200, r.status_code)
 
         r = requests.get(
-            "%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name"
+            "%s/nodes/ProtocolLanguage.sandbox/5465070037663859025/property/name"
             % BASE_URL
         )
         self.assertEqual(200, r.status_code)
-        self.assertEqual("Acme", r.json()["value"])
+        self.assertEqual("MyProtocol", r.json()["value"])
 
 
 if __name__ == "__main__":

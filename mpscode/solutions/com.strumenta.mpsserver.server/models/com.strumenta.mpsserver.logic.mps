@@ -569,6 +569,14 @@
         <ref role="3uigEE" to="9xi5:~Service" resolve="Service" />
       </node>
     </node>
+    <node concept="Wx3nA" id="1EElfIe9c5X" role="jymVt">
+      <property role="TrG5h" value="NOT_FOUND" />
+      <node concept="3Tm1VV" id="1EElfIe9c5Y" role="1B3o_S" />
+      <node concept="3cmrfG" id="1EElfIe9c5Z" role="33vP2m">
+        <property role="3cmrfH" value="404" />
+      </node>
+      <node concept="10Oyi0" id="1EElfIe9c60" role="1tU5fm" />
+    </node>
     <node concept="2tJIrI" id="4GXMUnNrW5i" role="jymVt" />
     <node concept="3clFb_" id="4GXMUnNrZ0J" role="jymVt">
       <property role="TrG5h" value="registerExtension" />
@@ -3544,8 +3552,8 @@
                             </node>
                             <node concept="liA8E" id="2ig$0l9SLk5" role="2OqNvi">
                               <ref role="37wK5l" to="9xi5:~Response.status(int)" resolve="status" />
-                              <node concept="3cmrfG" id="2ig$0l9SLn2" role="37wK5m">
-                                <property role="3cmrfH" value="404" />
+                              <node concept="37vLTw" id="1EElfIe9gEt" role="37wK5m">
+                                <ref role="3cqZAo" node="1EElfIe9c5X" resolve="NOT_FOUND" />
                               </node>
                             </node>
                           </node>
