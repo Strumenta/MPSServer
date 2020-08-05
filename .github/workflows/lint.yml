@@ -22,5 +22,6 @@ jobs:
         args: install        
     - name: Run linter
       run: |
+        poetry install
         cd functional_tests
         flake8 mpsserverfunctests
