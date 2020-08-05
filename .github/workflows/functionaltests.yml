@@ -35,6 +35,7 @@ jobs:
       - name: Install through Poetry
         run: |
           cd functional_tests
+          source $HOME/.poetry/env
           poetry env use python
           sh execute_functional_tests.sh
       - uses: actions/upload-artifact@v2
