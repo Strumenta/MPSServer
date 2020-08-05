@@ -26,5 +26,4 @@ jobs:
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
         source $HOME/.poetry/env
         poetry install
-        pip install flake8
-        python -m flake8 mpsserverfunctests mpsserverfunctests
+        poetry run flake8 mpsserverfunctests mpsserverfunctests
