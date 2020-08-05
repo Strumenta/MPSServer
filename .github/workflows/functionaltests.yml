@@ -29,10 +29,8 @@ jobs:
           cd functional_tests
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
           export PATH=$HOME/.poetry/bin:$PATH
+          source $HOME/.poetry/env
           poetry install    
-      - name: execute_functional_tests
-        run: |
-          cd functional_tests
           sh execute_functional_tests.sh
       - uses: actions/upload-artifact@v2
         if: failure()
