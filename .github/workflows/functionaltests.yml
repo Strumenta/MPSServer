@@ -25,14 +25,15 @@ jobs:
           cd functional_tests
           ../gradlew buildProtocolLanguage
       - name: Install through Poetry
-        uses: abatilo/actions-poetry@v1.5.0
-        with:
-          working_directory: ./functional_tests
-          args: install    
+        run: |
+          cd functional_tests
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+          export PATH=$HOME/.poetry/bin:$PATH
+          poetry install    
       - name: execute_functional_tests
         run: |
           cd functional_tests
-          pip install -r requirements.txt
+          # pip install -r requirements.txt
           sh execute_functional_tests.sh
       - uses: actions/upload-artifact@v2
         if: failure()
