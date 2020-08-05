@@ -32,7 +32,7 @@ class IntentionsHttpTestCase(BaseTest):
         r = requests.get("%s/intentions/%s" % (BASE_URL, uuid))
         self.assertEqual(200, r.status_code)
         data = r.json()
-        self.assertEqual(True, data["success"])
+        self.assertEqual(True, data["success"], "returned %s" % str(data))
         self.assertEqual(
             [
                 {"index": 0, "description": "Intention on Protocol Element"},
