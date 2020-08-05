@@ -28,8 +28,8 @@ jobs:
         run: |
           cd functional_tests
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-          export PATH=$HOME/.poetry/bin:$PATH
           source $HOME/.poetry/env
+          mkdir -p ~/.cache/pypoetry/virtualenvs
           poetry env use python
           poetry install    
           poetry env use python
