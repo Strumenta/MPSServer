@@ -10,9 +10,9 @@ jobs:
     steps:  
     - name: Install through Poetry
       uses: abatilo/actions-poetry@v1.5.0
-        with:
-          working_directory: ./functional_tests
-          args: install    
+      with:
+        working_directory: ./functional_tests
+        args: install    
     - name: Run linter
       run: |
         cd functional_tests
