@@ -74,7 +74,7 @@ class BasicTests(BaseTest):
     def test_reload_all(self):
         r = requests.get('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL)
         self.assertEqual(200, r.status_code)
-        self.assertEqual("Acme", r.json()['value'])
+        self.assertEqual("Acme", r.json()['value'], "actual value is %s. Answer is %s" % (r.json()['value'], r.json()))
 
         r = requests.put('%s/nodes/com.strumenta.businessorg.sandbox.acmeinc/5270253970127314084/property/name' % BASE_URL,
             data='SuperAcme')
