@@ -6214,8 +6214,8 @@
           <node concept="3cpWsn" id="2R9WLW4cmI$" role="3cpWs9">
             <property role="TrG5h" value="alts" />
             <node concept="_YKpA" id="2R9WLW4cmGt" role="1tU5fm">
-              <node concept="3uibUv" id="2R9WLW4cmGw" role="_ZDj9">
-                <ref role="3uigEE" to="30ym:4XQ2p$w7GMr" resolve="NodeInfoDetailed" />
+              <node concept="3uibUv" id="5FBB4gO2lCd" role="_ZDj9">
+                <ref role="3uigEE" to="30ym:5FBB4gO07K$" resolve="SmartReferenceInfo" />
               </node>
             </node>
             <node concept="2OqwBi" id="2R9WLW4cmI_" role="33vP2m">
@@ -7630,7 +7630,7 @@
               <ref role="3cqZAo" node="5CDZnbmlW2P" resolve="integerConstant" />
             </node>
             <node concept="2OwXpG" id="5CDZnbmlW37" role="2OqNvi">
-              <ref role="2Oxat5" to="30ym:oVoawNhItp" resolve="alias" />
+              <ref role="2Oxat5" to="30ym:oVoawNhItp" resolve="conceptAlias" />
             </node>
           </node>
         </node>
