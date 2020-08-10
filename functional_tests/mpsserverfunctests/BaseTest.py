@@ -10,7 +10,6 @@ BASE_WS_URL = "ws://localhost:%d/socket" % PORT
 
 
 class BaseAsyncTest(aiounittest.AsyncTestCase):
-
     @classmethod
     def try_to_connect(cls, attempts_left=100):
         try:
@@ -21,7 +20,7 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
             else:
                 print("status code: %d" % r.status_code)
                 return False
-        except Exception as e:
+        except Exception:
             if attempts_left > 0:
                 print("  attemps left: %d" % attempts_left)
                 time.sleep(5)
@@ -37,7 +36,6 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
 
 
 class BaseTest(unittest.TestCase):
-
     @classmethod
     def try_to_connect(cls, attempts_left=100):
         try:
@@ -48,7 +46,7 @@ class BaseTest(unittest.TestCase):
             else:
                 print("status code: %d" % r.status_code)
                 return False
-        except Exception as e:
+        except Exception:
             if attempts_left > 0:
                 print("  attemps left: %d" % attempts_left)
                 time.sleep(5)

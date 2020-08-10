@@ -19,13 +19,12 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id "com.github.breadmoirai.github-release" version "2.2.12"
     id "com.jfrog.bintray" version "1.8.5"
 }
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '1.2.3-rc5'
+version = '1.2.4-rc3'
 
 configurations {
 	mps
@@ -164,7 +163,7 @@ task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExample
 	script new File('mpscode/build-tests.xml')
 }
 
-task buildLauncher(type: BuildLanguages, dependsOn: [buildServer, buildExamples]) {
+task buildLauncher(type: BuildLanguages, dependsOn: [buildServer]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-launcher.xml')

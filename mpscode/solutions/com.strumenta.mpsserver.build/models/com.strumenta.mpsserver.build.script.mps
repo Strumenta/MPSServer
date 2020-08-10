@@ -658,19 +658,14 @@
             <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1AoMUD2X7NZ" role="3bR37C">
-          <node concept="3bR9La" id="1AoMUD2X7O0" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L9O" resolve="jetbrains.mps.lang.smodel" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1AoMUD2X7O1" role="3bR37C">
-          <node concept="3bR9La" id="1AoMUD2X7O2" role="1SiIV1">
+        <node concept="1SiIV0" id="5CDZnbm4k1X" role="3bR37C">
+          <node concept="3bR9La" id="5CDZnbm4k1Y" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
           </node>
         </node>
-        <node concept="1SiIV0" id="2R9WLW45JD2" role="3bR37C">
-          <node concept="3bR9La" id="2R9WLW45JD3" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
+        <node concept="1SiIV0" id="5CDZnbmgIFx" role="3bR37C">
+          <node concept="3bR9La" id="5CDZnbmgIFy" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6L4X" resolve="jetbrains.mps.lang.editor" />
           </node>
         </node>
       </node>
@@ -1026,6 +1021,12 @@
       <node concept="m$_yC" id="2p2ql82Ml_8" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
       </node>
+      <node concept="m$_yC" id="4NnQddZ$qdy" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:RJsmGEieyQ" resolve="jetbrains.mps.vcs" />
+      </node>
+      <node concept="m$_yC" id="4NnQddZ$MIJ" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:5xhjlkpPhJu" resolve="jetbrains.mps.ide.httpsupport" />
+      </node>
     </node>
     <node concept="2G$12M" id="2p2ql82Ml_9" role="3989C9">
       <property role="TrG5h" value="MPSServerLauncher" />
@@ -1248,6 +1249,18 @@
     <node concept="2sgV4H" id="2p2ql82MlAu" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZnIjX" resolve="mpsDistribution" />
       <node concept="398BVA" id="2p2ql82MlAv" role="2JcizS">
+        <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4NnQddZ$qco" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:1lMM4owFq4Y" resolve="mpsVcs" />
+      <node concept="398BVA" id="4NnQddZ$qdo" role="2JcizS">
+        <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4NnQddZ$qd2" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:6ifcnI8$2iR" resolve="mpsVcsPlatform" />
+      <node concept="398BVA" id="4NnQddZ$qdq" role="2JcizS">
         <ref role="398BVh" node="2p2ql82Ml_U" resolve="mps.home" />
       </node>
     </node>
