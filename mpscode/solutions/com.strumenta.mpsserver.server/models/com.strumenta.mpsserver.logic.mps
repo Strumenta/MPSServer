@@ -18313,12 +18313,30 @@
                     <node concept="2ShNRf" id="5p1VBoMe10j" role="YScLw">
                       <node concept="1pGfFk" id="5p1VBoMebHq" role="2ShVmc">
                         <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
-                        <node concept="3cpWs3" id="5p1VBoMedkK" role="37wK5m">
-                          <node concept="37vLTw" id="5p1VBoMedR8" role="3uHU7w">
-                            <ref role="3cqZAo" node="5p1VBoMdxrE" resolve="containmentLinkName" />
+                        <node concept="3cpWs3" id="2wfnSD9fCJu" role="37wK5m">
+                          <node concept="2OqwBi" id="2wfnSD9fH1l" role="3uHU7w">
+                            <node concept="2OqwBi" id="2wfnSD9fFRS" role="2Oq$k0">
+                              <node concept="37vLTw" id="2wfnSD9fFfi" role="2Oq$k0">
+                                <ref role="3cqZAo" node="5p1VBoMdxqS" resolve="containerSNode" />
+                              </node>
+                              <node concept="2yIwOk" id="2wfnSD9fGpZ" role="2OqNvi" />
+                            </node>
+                            <node concept="liA8E" id="2wfnSD9fIBN" role="2OqNvi">
+                              <ref role="37wK5l" to="c17a:~SAbstractConcept.getName()" resolve="getName" />
+                            </node>
                           </node>
-                          <node concept="Xl_RD" id="5p1VBoMec2C" role="3uHU7B">
-                            <property role="Xl_RC" value="Unknown containment link " />
+                          <node concept="3cpWs3" id="2wfnSD9fAzM" role="3uHU7B">
+                            <node concept="3cpWs3" id="5p1VBoMedkK" role="3uHU7B">
+                              <node concept="Xl_RD" id="5p1VBoMec2C" role="3uHU7B">
+                                <property role="Xl_RC" value="Unknown containment link " />
+                              </node>
+                              <node concept="37vLTw" id="5p1VBoMedR8" role="3uHU7w">
+                                <ref role="3cqZAo" node="5p1VBoMdxrE" resolve="containmentLinkName" />
+                              </node>
+                            </node>
+                            <node concept="Xl_RD" id="2wfnSD9fACV" role="3uHU7w">
+                              <property role="Xl_RC" value=" for node of concept " />
+                            </node>
                           </node>
                         </node>
                       </node>
