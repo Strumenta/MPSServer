@@ -33,14 +33,9 @@
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
       <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
         <reference id="1188208074048" name="annotation" index="2AI5Lk" />
-        <child id="1188214630783" name="value" index="2B76xF" />
       </concept>
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
-      </concept>
-      <concept id="1188214545140" name="jetbrains.mps.baseLanguage.structure.AnnotationInstanceValue" flags="ng" index="2B6LJw">
-        <reference id="1188214555875" name="key" index="2B6OnR" />
-        <child id="1188214607812" name="value" index="2B70Vg" />
       </concept>
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
@@ -106,9 +101,6 @@
       <concept id="1225271283259" name="jetbrains.mps.baseLanguage.structure.NPEEqualsExpression" flags="nn" index="17R0WA" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
-      </concept>
-      <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
-        <property id="1113006610751" name="value" index="$nhwW" />
       </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <child id="1068580123133" name="returnType" index="3clF45" />
@@ -180,14 +172,9 @@
     <language id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc">
       <concept id="5349172909345501395" name="jetbrains.mps.baseLanguage.javadoc.structure.BaseDocComment" flags="ng" index="P$AiS">
         <child id="8465538089690331502" name="body" index="TZ5H$" />
-        <child id="5383422241790532083" name="tags" index="3nqlJM" />
       </concept>
-      <concept id="5349172909345532724" name="jetbrains.mps.baseLanguage.javadoc.structure.MethodDocComment" flags="ng" index="P$JXv" />
       <concept id="8465538089690331500" name="jetbrains.mps.baseLanguage.javadoc.structure.CommentLine" flags="ng" index="TZ5HA">
         <child id="8970989240999019149" name="part" index="1dT_Ay" />
-      </concept>
-      <concept id="8465538089690331492" name="jetbrains.mps.baseLanguage.javadoc.structure.DeprecatedBlockDocTag" flags="ng" index="TZ5HI">
-        <child id="2667874559098216723" name="text" index="3HnX3l" />
       </concept>
       <concept id="8970989240999019143" name="jetbrains.mps.baseLanguage.javadoc.structure.TextCommentLinePart" flags="ng" index="1dT_AC">
         <property id="8970989240999019144" name="text" index="1dT_AB" />
@@ -2274,40 +2261,6 @@
                   </node>
                 </node>
                 <node concept="2tJIrI" id="bXFpGBqYlu" role="jymVt" />
-                <node concept="3clFb_" id="bXFpGBqYlv" role="jymVt">
-                  <property role="TrG5h" value="flushEventQueue" />
-                  <node concept="3Tm1VV" id="bXFpGBqYlw" role="1B3o_S" />
-                  <node concept="2AHcQZ" id="bXFpGBqYly" role="2AJF6D">
-                    <ref role="2AI5Lk" to="wyt6:~Deprecated" resolve="Deprecated" />
-                  </node>
-                  <node concept="2AHcQZ" id="bXFpGBqYlz" role="2AJF6D">
-                    <ref role="2AI5Lk" to="ncw5:~ToRemove" resolve="ToRemove" />
-                    <node concept="2B6LJw" id="bXFpGBqYl$" role="2B76xF">
-                      <ref role="2B6OnR" to="ncw5:~ToRemove.version()" resolve="version" />
-                      <node concept="3b6qkQ" id="bXFpGBqYl_" role="2B70Vg">
-                        <property role="$nhwW" value="3.3" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="P$JXv" id="bXFpGBqYlA" role="lGtFl">
-                    <node concept="TZ5HI" id="bXFpGBqYlB" role="3nqlJM">
-                      <node concept="TZ5HA" id="bXFpGBqYlC" role="3HnX3l" />
-                    </node>
-                  </node>
-                  <node concept="3cqZAl" id="bXFpGBqYlD" role="3clF45" />
-                  <node concept="3clFbS" id="bXFpGBqYlE" role="3clF47">
-                    <node concept="YS8fn" id="bXFpGBr0dJ" role="3cqZAp">
-                      <node concept="2ShNRf" id="bXFpGBr0eD" role="YScLw">
-                        <node concept="1pGfFk" id="bXFpGBr1cI" role="2ShVmc">
-                          <ref role="37wK5l" to="wyt6:~UnsupportedOperationException.&lt;init&gt;()" resolve="UnsupportedOperationException" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="2AHcQZ" id="bXFpGBqYlG" role="2AJF6D">
-                    <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
-                  </node>
-                </node>
                 <node concept="3clFb_" id="581JTJZjT4q" role="jymVt">
                   <property role="TrG5h" value="checkReadAccess" />
                   <node concept="3Tm1VV" id="581JTJZjT4r" role="1B3o_S" />
@@ -2341,6 +2294,34 @@
                     <node concept="3clFbH" id="bXFpGBr5G4" role="3cqZAp" />
                   </node>
                   <node concept="2AHcQZ" id="bXFpGBr4jf" role="2AJF6D">
+                    <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                  </node>
+                </node>
+                <node concept="3clFb_" id="1tFwe6V6yHk" role="jymVt">
+                  <property role="TrG5h" value="getUndoHandler" />
+                  <node concept="3Tmbuc" id="1tFwe6V6yHl" role="1B3o_S" />
+                  <node concept="2AHcQZ" id="1tFwe6V6yHn" role="2AJF6D">
+                    <ref role="2AI5Lk" to="mhfm:~Nullable" resolve="Nullable" />
+                  </node>
+                  <node concept="3uibUv" id="1tFwe6V6yHo" role="3clF45">
+                    <ref role="3uigEE" to="w1kc:~UndoHandler" resolve="UndoHandler" />
+                  </node>
+                  <node concept="37vLTG" id="1tFwe6V6yHp" role="3clF46">
+                    <property role="TrG5h" value="model" />
+                    <node concept="3uibUv" id="1tFwe6V6yHq" role="1tU5fm">
+                      <ref role="3uigEE" to="mhbf:~SModel" resolve="SModel" />
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="1tFwe6V6yHs" role="3clF47">
+                    <node concept="YS8fn" id="1tFwe6V6$Hh" role="3cqZAp">
+                      <node concept="2ShNRf" id="1tFwe6V6$Hi" role="YScLw">
+                        <node concept="1pGfFk" id="1tFwe6V6$Hj" role="2ShVmc">
+                          <ref role="37wK5l" to="wyt6:~UnsupportedOperationException.&lt;init&gt;()" resolve="UnsupportedOperationException" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2AHcQZ" id="1tFwe6V6yHt" role="2AJF6D">
                     <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
                   </node>
                 </node>
