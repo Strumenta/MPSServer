@@ -64,10 +64,15 @@
     <import index="twe9" ref="r:28e6d713-c3c3-493e-8d97-e9a2c49f28ce(jetbrains.mps.lang.structure.util)" />
     <import index="tpc2" ref="r:00000000-0000-4000-0000-011c8959029e(jetbrains.mps.lang.editor.structure)" />
     <import index="i290" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.java.stub(MPS.Core/)" />
+    <import index="4o98" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.core.platform(MPS.Core/)" />
+    <import index="wyuk" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.components(MPS.Core/)" />
+    <import index="bd8o" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.application(MPS.IDEA/)" />
+    <import index="3a50" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide(MPS.Platform/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" implicit="true" />
     <import index="tpcn" ref="r:00000000-0000-4000-0000-011c8959028b(jetbrains.mps.lang.structure.behavior)" implicit="true" />
+    <import index="1m72" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.components(MPS.IDEA/)" implicit="true" />
   </imports>
   <registry>
     <language id="a247e09e-2435-45ba-b8d2-07e93feba96a" name="jetbrains.mps.baseLanguage.tuples">
@@ -23798,6 +23803,31 @@
           </node>
         </node>
         <node concept="3clFbH" id="P$tD$BjE$3" role="3cqZAp" />
+        <node concept="3cpWs8" id="1tFwe6VaRke" role="3cqZAp">
+          <node concept="3cpWsn" id="1tFwe6VaRkf" role="3cpWs9">
+            <property role="TrG5h" value="platform" />
+            <node concept="3uibUv" id="1tFwe6VaRkg" role="1tU5fm">
+              <ref role="3uigEE" to="wyuk:~ComponentHost" resolve="ComponentHost" />
+            </node>
+            <node concept="2OqwBi" id="1tFwe6Vb5gi" role="33vP2m">
+              <node concept="2OqwBi" id="1tFwe6VaV5w" role="2Oq$k0">
+                <node concept="2YIFZM" id="1tFwe6VaUOg" role="2Oq$k0">
+                  <ref role="37wK5l" to="bd8o:~ApplicationManager.getApplication()" resolve="getApplication" />
+                  <ref role="1Pybhc" to="bd8o:~ApplicationManager" resolve="ApplicationManager" />
+                </node>
+                <node concept="liA8E" id="1tFwe6VaVn3" role="2OqNvi">
+                  <ref role="37wK5l" to="1m72:~ComponentManager.getComponent(java.lang.Class)" resolve="getComponent" />
+                  <node concept="3VsKOn" id="1tFwe6Vb53$" role="37wK5m">
+                    <ref role="3VsUkX" to="3a50:~MPSCoreComponents" resolve="MPSCoreComponents" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="1tFwe6Vb5td" role="2OqNvi">
+                <ref role="37wK5l" to="3a50:~MPSCoreComponents.getPlatform()" resolve="getPlatform" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="P$tD$BjE$4" role="3cqZAp">
           <node concept="3cpWsn" id="P$tD$BjE$5" role="3cpWs9">
             <property role="TrG5h" value="checker" />
@@ -23830,7 +23860,10 @@
                     </node>
                     <node concept="2ShNRf" id="P$tD$BjE$j" role="HW$Y0">
                       <node concept="1pGfFk" id="7K9NxDNb9oy" role="2ShVmc">
-                        <ref role="37wK5l" to="k2t0:~ModelPropertiesChecker.&lt;init&gt;()" resolve="ModelPropertiesChecker" />
+                        <ref role="37wK5l" to="k2t0:~ModelPropertiesChecker.&lt;init&gt;(jetbrains.mps.components.ComponentHost)" resolve="ModelPropertiesChecker" />
+                        <node concept="37vLTw" id="1tFwe6Vb5H1" role="37wK5m">
+                          <ref role="3cqZAo" node="1tFwe6VaRkf" resolve="platform" />
+                        </node>
                       </node>
                     </node>
                     <node concept="2ShNRf" id="P$tD$BjE$l" role="HW$Y0">
@@ -23841,7 +23874,9 @@
                     <node concept="2ShNRf" id="P$tD$BjE$n" role="HW$Y0">
                       <node concept="1pGfFk" id="P$tD$BjE$o" role="2ShVmc">
                         <ref role="37wK5l" to="k2t0:~ConstraintsChecker.&lt;init&gt;(jetbrains.mps.components.ComponentHost)" resolve="ConstraintsChecker" />
-                        <node concept="10Nm6u" id="7$K3p$cXi5s" role="37wK5m" />
+                        <node concept="37vLTw" id="1tFwe6Vb9C7" role="37wK5m">
+                          <ref role="3cqZAo" node="1tFwe6VaRkf" resolve="platform" />
+                        </node>
                       </node>
                     </node>
                     <node concept="2ShNRf" id="P$tD$BjE$p" role="HW$Y0">
@@ -23852,7 +23887,10 @@
                     </node>
                     <node concept="2ShNRf" id="P$tD$BjE$r" role="HW$Y0">
                       <node concept="1pGfFk" id="P$tD$BjE$s" role="2ShVmc">
-                        <ref role="37wK5l" to="wsw7:6qi2OtU3tVc" resolve="TargetConceptChecker" />
+                        <ref role="37wK5l" to="k2t0:~TargetConceptChecker2.&lt;init&gt;(jetbrains.mps.components.ComponentHost)" resolve="TargetConceptChecker2" />
+                        <node concept="37vLTw" id="1tFwe6Vb7GI" role="37wK5m">
+                          <ref role="3cqZAo" node="1tFwe6VaRkf" resolve="platform" />
+                        </node>
                       </node>
                     </node>
                     <node concept="2ShNRf" id="P$tD$BjE$t" role="HW$Y0">

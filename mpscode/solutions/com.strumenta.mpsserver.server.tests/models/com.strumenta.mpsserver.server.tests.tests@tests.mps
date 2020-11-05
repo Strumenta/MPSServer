@@ -157,6 +157,7 @@
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
+      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
@@ -250,6 +251,12 @@
       <concept id="1171978097730" name="jetbrains.mps.baseLanguage.unitTest.structure.AssertEquals" flags="nn" index="3vlDli" />
       <concept id="1171981022339" name="jetbrains.mps.baseLanguage.unitTest.structure.AssertTrue" flags="nn" index="3vwNmj">
         <child id="1171981057159" name="condition" index="3vwVQn" />
+      </concept>
+      <concept id="1172073500303" name="jetbrains.mps.baseLanguage.unitTest.structure.Message" flags="ng" index="3_1$Yv">
+        <child id="1172073511101" name="message" index="3_1BAH" />
+      </concept>
+      <concept id="1172075514136" name="jetbrains.mps.baseLanguage.unitTest.structure.MessageHolder" flags="ng" index="3_9gw8">
+        <child id="1172075534298" name="message" index="3_9lra" />
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
@@ -1119,7 +1126,7 @@
           </node>
           <node concept="3eOSWO" id="Fhwl$ayXAx" role="3tpDZA">
             <node concept="3cmrfG" id="Fhwl$ayXFX" role="3uHU7w">
-              <property role="3cmrfH" value="290" />
+              <property role="3cmrfH" value="300" />
             </node>
             <node concept="2OqwBi" id="4XQ2p$w6f4z" role="3uHU7B">
               <node concept="2OqwBi" id="4XQ2p$w6d7M" role="2Oq$k0">
@@ -1151,7 +1158,7 @@
               <node concept="34oBXx" id="Fhwl$ayYbE" role="2OqNvi" />
             </node>
             <node concept="3cmrfG" id="Fhwl$ayYb_" role="3uHU7w">
-              <property role="3cmrfH" value="310" />
+              <property role="3cmrfH" value="350" />
             </node>
           </node>
         </node>
@@ -4204,6 +4211,16 @@
                               </node>
                             </node>
                             <node concept="34oBXx" id="2j5iOBQZoge" role="2OqNvi" />
+                          </node>
+                          <node concept="3_1$Yv" id="1tFwe6V8I_N" role="3_9lra">
+                            <node concept="3cpWs3" id="1tFwe6V8ISs" role="3_1BAH">
+                              <node concept="37vLTw" id="1tFwe6V8IVA" role="3uHU7w">
+                                <ref role="3cqZAo" node="bXFpGBopv0" resolve="items" />
+                              </node>
+                              <node concept="Xl_RD" id="1tFwe6V8IDr" role="3uHU7B">
+                                <property role="Xl_RC" value="I was expecting 4 errors. Found instead: " />
+                              </node>
+                            </node>
                           </node>
                         </node>
                         <node concept="3vlDli" id="2j5iOBQYUjy" role="3cqZAp">
@@ -7381,7 +7398,7 @@
           </node>
           <node concept="3eOSWO" id="5CDZnbmlW1g" role="3tpDZA">
             <node concept="3cmrfG" id="5CDZnbmlW1h" role="3uHU7w">
-              <property role="3cmrfH" value="290" />
+              <property role="3cmrfH" value="300" />
             </node>
             <node concept="2OqwBi" id="5CDZnbmlW1i" role="3uHU7B">
               <node concept="2OqwBi" id="5CDZnbmlW1j" role="2Oq$k0">
@@ -7413,7 +7430,7 @@
               <node concept="34oBXx" id="5CDZnbmlW1u" role="2OqNvi" />
             </node>
             <node concept="3cmrfG" id="5CDZnbmlW1v" role="3uHU7w">
-              <property role="3cmrfH" value="310" />
+              <property role="3cmrfH" value="350" />
             </node>
           </node>
         </node>
