@@ -62,7 +62,7 @@ abstract *NodeIDInfo*
 
 * query parameter _includeReadOnly_, flag, default false. If set include read-only modules in the list
 * query parameter _includePackaged_, flag, default false. If set include packaged modules in the list
-* query parameter _langauages_, list of strings. It select only solutions having all of these languages
+* query parameter _languages_, list of strings. It select only solutions having all of these languages
 
 **POST /persistence/saveAll**: it saves all pending changes to models on disk.
 

@@ -12,6 +12,10 @@ There is also a framework to define web editors interoperable with MPSServer. Th
 
 You can find some basic instructions and an example here: https://github.com/Strumenta/calc-webeditkit-example
 
+## License
+
+MPSServer is released under the Apache License V2
+
 ## The simplest way to use MPSServer
 
 Simply look in the `example` directory.
