@@ -66,6 +66,9 @@
     <import index="i290" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.java.stub(MPS.Core/)" />
     <import index="1m72" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.components(MPS.IDEA/)" />
     <import index="bd8o" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.application(MPS.IDEA/)" />
+    <import index="5mlj" ref="6fd1293f-7f65-4ffd-99dc-4719eca7c171/java:git4idea.repo(jetbrains.mps.ide.vcs.platform/)" />
+    <import index="4nm9" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.project(MPS.IDEA/)" />
+    <import index="rtk5" ref="r:cd7c9d90-25b3-4a54-a510-a0bcc7072c1d(jetbrains.mps.vcs)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" implicit="true" />
@@ -24918,7 +24921,7 @@
       <node concept="3Tm1VV" id="3bFL3i$5pVt" role="1B3o_S" />
       <node concept="17QB3L" id="3bFL3i$5qo2" role="3clF45" />
     </node>
-    <node concept="2tJIrI" id="3bFL3i$59$f" role="jymVt" />
+    <node concept="2tJIrI" id="6lQl8ljPO_9" role="jymVt" />
     <node concept="3clFb_" id="3bFL3i$59ZQ" role="jymVt">
       <property role="TrG5h" value="push" />
       <node concept="3clFbS" id="3bFL3i$59ZR" role="3clF47">
@@ -24999,6 +25002,64 @@
       </node>
     </node>
     <node concept="2tJIrI" id="3bFL3i$59Bb" role="jymVt" />
+    <node concept="3clFb_" id="6lQl8ljPDJ3" role="jymVt">
+      <property role="TrG5h" value="checkout" />
+      <node concept="3clFbS" id="6lQl8ljPDJ6" role="3clF47">
+        <node concept="SfApY" id="6lQl8ljPHaW" role="3cqZAp">
+          <node concept="3clFbS" id="6lQl8ljPHaY" role="SfCbr">
+            <node concept="3clFbF" id="6lQl8ljPF4P" role="3cqZAp">
+              <node concept="2OqwBi" id="6lQl8ljPGIf" role="3clFbG">
+                <node concept="2OqwBi" id="6lQl8ljPFUA" role="2Oq$k0">
+                  <node concept="2OqwBi" id="6lQl8ljPFnO" role="2Oq$k0">
+                    <node concept="37vLTw" id="6lQl8ljPF4O" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1P$YlGOWxrr" resolve="git" />
+                    </node>
+                    <node concept="liA8E" id="6lQl8ljPFBf" role="2OqNvi">
+                      <ref role="37wK5l" to="v5yd:~Git.checkout()" resolve="checkout" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="6lQl8ljPGsD" role="2OqNvi">
+                    <ref role="37wK5l" to="v5yd:~CheckoutCommand.setName(java.lang.String)" resolve="setName" />
+                    <node concept="37vLTw" id="6lQl8ljPG_X" role="37wK5m">
+                      <ref role="3cqZAo" node="6lQl8ljPEeH" resolve="commitId" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="6lQl8ljPGUC" role="2OqNvi">
+                  <ref role="37wK5l" to="v5yd:~CheckoutCommand.call()" resolve="call" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="TDmWw" id="6lQl8ljPHaZ" role="TEbGg">
+            <node concept="3cpWsn" id="6lQl8ljPHb1" role="TDEfY">
+              <property role="TrG5h" value="e" />
+              <node concept="3uibUv" id="6lQl8ljPHEA" role="1tU5fm">
+                <ref role="3uigEE" to="fnh0:~GitAPIException" resolve="GitAPIException" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="6lQl8ljPHb5" role="TDEfX">
+              <node concept="YS8fn" id="6lQl8ljPHPc" role="3cqZAp">
+                <node concept="2ShNRf" id="6lQl8ljPHPd" role="YScLw">
+                  <node concept="1pGfFk" id="6lQl8ljPHPe" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                    <node concept="37vLTw" id="6lQl8ljPHPf" role="37wK5m">
+                      <ref role="3cqZAo" node="6lQl8ljPHb1" resolve="e" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6lQl8ljPDe0" role="1B3o_S" />
+      <node concept="3cqZAl" id="6lQl8ljPDHu" role="3clF45" />
+      <node concept="37vLTG" id="6lQl8ljPEeH" role="3clF46">
+        <property role="TrG5h" value="commitId" />
+        <node concept="17QB3L" id="6lQl8ljPEeG" role="1tU5fm" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="1P$YlGOWDWz" role="jymVt" />
     <node concept="3clFb_" id="1P$YlGOU8qR" role="jymVt">
       <property role="TrG5h" value="commit" />
