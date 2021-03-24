@@ -174,7 +174,7 @@
   </registry>
   <node concept="1l3spW" id="5yOqbw5UOfB">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-core" />
+    <property role="TrG5h" value="mpsserver-core" />
     <property role="turDy" value="build-server.xml" />
     <node concept="1wNqPr" id="1Y19Fp4b5CU" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -1035,7 +1035,7 @@
   </node>
   <node concept="1l3spW" id="2p2ql82Ml$V">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-launcher" />
+    <property role="TrG5h" value="mpsserver-launcher" />
     <property role="turDy" value="build-launcher.xml" />
     <node concept="_awnq" id="3mLHDKYZ7IG" role="1hWBAP">
       <ref role="30Vec$" node="3mLHDKYZ7WC" resolve="com.strumenta.mpsserver.operations" />
@@ -1329,15 +1329,15 @@
       </node>
     </node>
     <node concept="2sgV4H" id="2p2ql82MlGw" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="mpsserver-core" />
     </node>
     <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="mpsserver-examples" />
     </node>
   </node>
   <node concept="1l3spW" id="1yyBh0vFuTG">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-examples" />
+    <property role="TrG5h" value="mpsserver-examples" />
     <property role="turDy" value="build-examples.xml" />
     <node concept="1wNqPr" id="1yyBh0vFuTH" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -1709,7 +1709,7 @@
   </node>
   <node concept="1l3spW" id="5jTJHMulSwR">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-tests" />
+    <property role="TrG5h" value="mpsserver-tests" />
     <property role="turDy" value="build-tests.xml" />
     <node concept="398rNT" id="5jTJHMulWJa" role="1l3spd">
       <property role="TrG5h" value="project.home" />
@@ -1845,10 +1845,10 @@
       </node>
     </node>
     <node concept="2sgV4H" id="5jTJHMulSwU" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="mpsserver-core" />
     </node>
     <node concept="2sgV4H" id="3XsdshnRxNz" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="mpsserver-examples" />
     </node>
     <node concept="22LTRH" id="5jTJHMulWD7" role="1hWBAP">
       <property role="TrG5h" value="mpsserver.tests" />
@@ -1859,7 +1859,7 @@
   </node>
   <node concept="1l3spW" id="4JnP3TV$Dub">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-extensionkit" />
+    <property role="TrG5h" value="mpsserver-extensionkit" />
     <property role="turDy" value="build-extensionkit.xml" />
     <node concept="1wNqPr" id="4JnP3TV$Duc" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -2065,7 +2065,7 @@
   </node>
   <node concept="1l3spW" id="7GBq2$eodh3">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-build" />
+    <property role="TrG5h" value="mpsserver-build" />
     <property role="turDy" value="build-build.xml" />
     <node concept="1wNqPr" id="4JnP3TVG73k" role="3989C9">
       <property role="1wNuhe" value="true" />
