@@ -1054,16 +1054,16 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="2p2ql82Ml$Z" role="3989C9">
-      <property role="m$_wk" value="MPSServer.launcher.plugin" />
+      <property role="m$_wk" value="mpsserver.launcher.plugin" />
       <node concept="m$_yC" id="4JnP3TV$NV_" role="m$_yJ">
-        <ref role="m$_y1" node="1Y19Fp43fxb" resolve="MPSServer.core.plugin" />
+        <ref role="m$_y1" node="1Y19Fp43fxb" resolve="mpsserver.core.plugin" />
       </node>
       <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
         <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_0" role="m$_yQ">
         <node concept="3Mxwew" id="2p2ql82Ml_1" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer" />
+          <property role="3MwjfP" value="mpsserver.launcher.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_2" role="m$_w8">
@@ -1079,7 +1079,7 @@
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_6" role="m_cZH">
         <node concept="3Mxwew" id="2p2ql82Ml_7" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer" />
+          <property role="3MwjfP" value="mpsserver.launcher.plugin" />
         </node>
       </node>
       <node concept="m$_yC" id="2p2ql82Ml_8" role="m$_yJ">
