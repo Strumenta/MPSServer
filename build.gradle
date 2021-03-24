@@ -24,7 +24,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '2019.3-7'
+version = '2019.3-8'
 
 configurations {
 	mps
@@ -253,36 +253,36 @@ task checkLanguageTests() {
 task packageServer(type: Zip, dependsOn: [buildServer]) {
     archiveBaseName = 'com.strumenta.mpsserver'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-core/**'
-    exclude 'MpsServer-core/*.zip'
+    include 'mpsserver-core/**'
+    exclude 'mpsserver-core/*.zip'
 }
 
 task packageExamples(type: Zip, dependsOn: [buildExamples]) {
     archiveBaseName = 'com.strumenta.mpsserver.examples'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-examples/**'
-    exclude 'MpsServer-examples/*.zip'
+    include 'mpsserver-examples/**'
+    exclude 'mpsserver-examples/*.zip'
 }
 
 task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
     archiveBaseName = 'com.strumenta.mpsserver.launcher'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-launcher/**'
-    exclude 'MpsServer-launcher/*.zip'
+    include 'mpsserver-launcher/**'
+    exclude 'mpsserver-launcher/*.zip'
 }
 
 task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
     archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-extensionkit/**'
-    exclude 'MpsServer-extensionkit/*.zip'
+    include 'mpsserver-extensionkit/**'
+    exclude 'mpsserver-extensionkit/*.zip'
 }
 
 task packageBuild(type: Zip, dependsOn: [buildBuild]) {
     archiveBaseName = 'com.strumenta.mpsserver.build'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-build/**'
-    exclude 'MpsServer-build/*.zip'
+    include 'mpsserver-build/**'
+    exclude 'mpsserver-build/*.zip'
 }
 
 publishing {
@@ -443,8 +443,8 @@ bintray {
 
 task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
     doLast {
-        def extensionkitDir = new File(mpscode, 'build/artifacts/MpsServer-extensionkit')
-        def buildPluginDir = new File(mpscode, 'build/artifacts/MpsServer-build')
+        def extensionkitDir = new File(mpscode, 'build/artifacts/mpsserver-extensionkit')
+        def buildPluginDir = new File(mpscode, 'build/artifacts/mpsserver-build')
         def exampleProjectDir = new File(rootDir, "functional_tests/mps_example_project_withextension") 
         def exampleProjectArtifactsDir = new File(rootDir, "functional_tests/mps_example_project_withextension/artifacts") 
         println("[extension kit plugin]")
