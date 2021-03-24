@@ -24,7 +24,7 @@ plugins {
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '2019.3-8'
+version = '2019.3.9'
 
 configurations {
 	mps
