@@ -174,7 +174,7 @@
   </registry>
   <node concept="1l3spW" id="5yOqbw5UOfB">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-core" />
+    <property role="TrG5h" value="mpsserver-core" />
     <property role="turDy" value="build-server.xml" />
     <node concept="1wNqPr" id="1Y19Fp4b5CU" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -187,10 +187,10 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="1Y19Fp43fxb" role="3989C9">
-      <property role="m$_wk" value="MPSServer.core.plugin" />
+      <property role="m$_wk" value="mpsserver.core.plugin" />
       <node concept="3_J27D" id="1Y19Fp43fxc" role="m$_yQ">
         <node concept="3Mxwew" id="1Y19Fp43fxd" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.core.plugin" />
+          <property role="3MwjfP" value="mpsserver.core.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxe" role="m$_w8">
@@ -199,14 +199,14 @@
         </node>
       </node>
       <node concept="m$f5U" id="2p2ql82Ml4i" role="m$_yh">
-        <ref role="m$f5T" node="2p2ql82MkSi" resolve="MPSServer.core.group" />
+        <ref role="m$f5T" node="2p2ql82MkSi" resolve="mpsserver.core.group" />
       </node>
       <node concept="m$_yC" id="1Y19Fp43fxh" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="1Y19Fp43fxi" role="m_cZH">
         <node concept="3Mxwew" id="1Y19Fp43fxj" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.core.plugin" />
+          <property role="3MwjfP" value="mpsserver.core.plugin" />
         </node>
       </node>
       <node concept="m$_yC" id="7C6tnXfWyCZ" role="m$_yJ">
@@ -220,7 +220,7 @@
       </node>
     </node>
     <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
-      <property role="TrG5h" value="MPSServer.core.group" />
+      <property role="TrG5h" value="mpsserver.core.group" />
       <node concept="1E1JtA" id="lEUZLtjCiX" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.build" />
@@ -678,6 +678,11 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
+        <node concept="1SiIV0" id="5oFHat9o$3Y" role="3bR37C">
+          <node concept="3bR9La" id="5oFHat9o$3Z" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="4JnP3TV$EDw" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -798,7 +803,7 @@
     <node concept="55IIr" id="5yOqbw5UOfC" role="auvoZ" />
     <node concept="1l3spV" id="5yOqbw5UOfD" role="1l3spN">
       <node concept="m$_wl" id="BHWycb_1UD" role="39821P">
-        <ref role="m_rDy" node="1Y19Fp43fxb" resolve="MPSServer.core.plugin" />
+        <ref role="m_rDy" node="1Y19Fp43fxb" resolve="mpsserver.core.plugin" />
         <node concept="398223" id="BHWycb_1UE" role="39821P">
           <node concept="3_J27D" id="BHWycb_1UF" role="Nbhlr">
             <node concept="3Mxwew" id="BHWycb_1UG" role="3MwsjC">
@@ -1030,7 +1035,7 @@
   </node>
   <node concept="1l3spW" id="2p2ql82Ml$V">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-launcher" />
+    <property role="TrG5h" value="mpsserver-launcher" />
     <property role="turDy" value="build-launcher.xml" />
     <node concept="_awnq" id="3mLHDKYZ7IG" role="1hWBAP">
       <ref role="30Vec$" node="3mLHDKYZ7WC" resolve="com.strumenta.mpsserver.operations" />
@@ -1049,16 +1054,16 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="2p2ql82Ml$Z" role="3989C9">
-      <property role="m$_wk" value="MPSServer.launcher.plugin" />
+      <property role="m$_wk" value="mpsserver.launcher.plugin" />
       <node concept="m$_yC" id="4JnP3TV$NV_" role="m$_yJ">
-        <ref role="m$_y1" node="1Y19Fp43fxb" resolve="MPSServer.core.plugin" />
+        <ref role="m$_y1" node="1Y19Fp43fxb" resolve="mpsserver.core.plugin" />
       </node>
       <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
         <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_0" role="m$_yQ">
         <node concept="3Mxwew" id="2p2ql82Ml_1" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer" />
+          <property role="3MwjfP" value="mpsserver.launcher.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_2" role="m$_w8">
@@ -1074,7 +1079,7 @@
       </node>
       <node concept="3_J27D" id="2p2ql82Ml_6" role="m_cZH">
         <node concept="3Mxwew" id="2p2ql82Ml_7" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer" />
+          <property role="3MwjfP" value="mpsserver.launcher.plugin" />
         </node>
       </node>
       <node concept="m$_yC" id="2p2ql82Ml_8" role="m$_yJ">
@@ -1324,15 +1329,15 @@
       </node>
     </node>
     <node concept="2sgV4H" id="2p2ql82MlGw" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="mpsserver-core" />
     </node>
     <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="mpsserver-examples" />
     </node>
   </node>
   <node concept="1l3spW" id="1yyBh0vFuTG">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-examples" />
+    <property role="TrG5h" value="mpsserver-examples" />
     <property role="turDy" value="build-examples.xml" />
     <node concept="1wNqPr" id="1yyBh0vFuTH" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -1704,7 +1709,7 @@
   </node>
   <node concept="1l3spW" id="5jTJHMulSwR">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-tests" />
+    <property role="TrG5h" value="mpsserver-tests" />
     <property role="turDy" value="build-tests.xml" />
     <node concept="398rNT" id="5jTJHMulWJa" role="1l3spd">
       <property role="TrG5h" value="project.home" />
@@ -1840,10 +1845,10 @@
       </node>
     </node>
     <node concept="2sgV4H" id="5jTJHMulSwU" role="1l3spa">
-      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="MpsServer-core" />
+      <ref role="1l3spb" node="5yOqbw5UOfB" resolve="mpsserver-core" />
     </node>
     <node concept="2sgV4H" id="3XsdshnRxNz" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="MpsServer-examples" />
+      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="mpsserver-examples" />
     </node>
     <node concept="22LTRH" id="5jTJHMulWD7" role="1hWBAP">
       <property role="TrG5h" value="mpsserver.tests" />
@@ -1854,7 +1859,7 @@
   </node>
   <node concept="1l3spW" id="4JnP3TV$Dub">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-extensionkit" />
+    <property role="TrG5h" value="mpsserver-extensionkit" />
     <property role="turDy" value="build-extensionkit.xml" />
     <node concept="1wNqPr" id="4JnP3TV$Duc" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -1867,10 +1872,10 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="4JnP3TV$Due" role="3989C9">
-      <property role="m$_wk" value="MPSServer.extensionkit.plugin" />
+      <property role="m$_wk" value="mpsserver.extensionkit.plugin" />
       <node concept="3_J27D" id="4JnP3TV$Duf" role="m$_yQ">
         <node concept="3Mxwew" id="4JnP3TV$Dug" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.extensionkit.plugin" />
+          <property role="3MwjfP" value="mpsserver.extensionkit.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="4JnP3TV$Duh" role="m$_w8">
@@ -1879,14 +1884,14 @@
         </node>
       </node>
       <node concept="m$f5U" id="4JnP3TV$Duj" role="m$_yh">
-        <ref role="m$f5T" node="4JnP3TV$Duq" resolve="MPSServer.extensionkit.group" />
+        <ref role="m$f5T" node="4JnP3TV$Duq" resolve="mpsserver.extensionkit.group" />
       </node>
       <node concept="m$_yC" id="4JnP3TV$Duk" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="4JnP3TV$Dul" role="m_cZH">
         <node concept="3Mxwew" id="4JnP3TV$Dum" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.extensionkit.plugin" />
+          <property role="3MwjfP" value="mpsserver.extensionkit.plugin" />
         </node>
       </node>
       <node concept="m$_yC" id="4JnP3TV$Dun" role="m$_yJ">
@@ -1900,7 +1905,7 @@
       </node>
     </node>
     <node concept="2G$12M" id="4JnP3TV$Duq" role="3989C9">
-      <property role="TrG5h" value="MPSServer.extensionkit.group" />
+      <property role="TrG5h" value="mpsserver.extensionkit.group" />
       <node concept="1E1JtA" id="4JnP3TV$Dur" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.extensionkit" />
@@ -2005,7 +2010,7 @@
     <node concept="55IIr" id="4JnP3TV$Dx0" role="auvoZ" />
     <node concept="1l3spV" id="4JnP3TV$Dx1" role="1l3spN">
       <node concept="m$_wl" id="4JnP3TV$Dx2" role="39821P">
-        <ref role="m_rDy" node="4JnP3TV$Due" resolve="MPSServer.extensionkit.plugin" />
+        <ref role="m_rDy" node="4JnP3TV$Due" resolve="mpsserver.extensionkit.plugin" />
         <node concept="pUk6x" id="4JnP3TV$Dy2" role="pUk7w" />
       </node>
     </node>
@@ -2060,7 +2065,7 @@
   </node>
   <node concept="1l3spW" id="7GBq2$eodh3">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-build" />
+    <property role="TrG5h" value="mpsserver-build" />
     <property role="turDy" value="build-build.xml" />
     <node concept="1wNqPr" id="4JnP3TVG73k" role="3989C9">
       <property role="1wNuhe" value="true" />
@@ -2073,10 +2078,10 @@
       <property role="TZNOO" value="1.8" />
     </node>
     <node concept="m$_wf" id="4JnP3TVG73m" role="3989C9">
-      <property role="m$_wk" value="MPSServer.build.plugin" />
+      <property role="m$_wk" value="mpsserver.build.plugin" />
       <node concept="3_J27D" id="4JnP3TVG73n" role="m$_yQ">
         <node concept="3Mxwew" id="4JnP3TVG73o" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.build.plugin" />
+          <property role="3MwjfP" value="mpsserver.build.plugin" />
         </node>
       </node>
       <node concept="3_J27D" id="4JnP3TVG73p" role="m$_w8">
@@ -2089,7 +2094,7 @@
       </node>
       <node concept="3_J27D" id="4JnP3TVG73s" role="m_cZH">
         <node concept="3Mxwew" id="4JnP3TVG73t" role="3MwsjC">
-          <property role="3MwjfP" value="MPSServer.build.plugin" />
+          <property role="3MwjfP" value="mpsserver.build.plugin" />
         </node>
       </node>
       <node concept="m$_yC" id="4JnP3TVG73u" role="m$_yJ">
@@ -2102,7 +2107,7 @@
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
       <node concept="m$f5U" id="4JnP3TVFHI9" role="m$_yh">
-        <ref role="m$f5T" node="4JnP3TVG73$" resolve="MPSServer.build.group" />
+        <ref role="m$f5T" node="4JnP3TVG73$" resolve="mpsserver.build.group" />
       </node>
     </node>
     <node concept="2kB4xC" id="4IusG9vM7RW" role="1l3spd">
@@ -2137,12 +2142,12 @@
     <node concept="55IIr" id="7GBq2$eodh4" role="auvoZ" />
     <node concept="1l3spV" id="7GBq2$eodh5" role="1l3spN">
       <node concept="m$_wl" id="4JnP3TVFl$7" role="39821P">
-        <ref role="m_rDy" node="4JnP3TVG73m" resolve="MPSServer.build.plugin" />
+        <ref role="m_rDy" node="4JnP3TVG73m" resolve="mpsserver.build.plugin" />
         <node concept="pUk6x" id="4JnP3TVFlFd" role="pUk7w" />
       </node>
     </node>
     <node concept="2G$12M" id="4JnP3TVG73$" role="3989C9">
-      <property role="TrG5h" value="MPSServer.build.group" />
+      <property role="TrG5h" value="mpsserver.build.group" />
       <node concept="1E1JtA" id="7GBq2$eodiE" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="com.strumenta.mpsserver.build" />

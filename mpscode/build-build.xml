@@ -28,12 +28,12 @@
   </path>
   
   <target name="assemble" depends="classes, declare-mps-tasks">
-    <mkdir dir="${build.layout}/MPSServer.build.plugin" />
-    <mkdir dir="${build.layout}/MPSServer.build.plugin/META-INF" />
-    <echoxml file="${build.layout}/MPSServer.build.plugin/META-INF/plugin.xml">
+    <mkdir dir="${build.layout}/mpsserver.build.plugin" />
+    <mkdir dir="${build.layout}/mpsserver.build.plugin/META-INF" />
+    <echoxml file="${build.layout}/mpsserver.build.plugin/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
-        <id>MPSServer.build.plugin</id>
-        <name>MPSServer.build.plugin</name>
+        <id>mpsserver.build.plugin</id>
+        <name>mpsserver.build.plugin</name>
         <version>${mpsserver.version}</version>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
@@ -45,8 +45,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.layout}/MPSServer.build.plugin/languages" />
-    <mkdir dir="${build.layout}/MPSServer.build.plugin/languages/MPSServer.build.group" />
+    <mkdir dir="${build.layout}/mpsserver.build.plugin/languages" />
+    <mkdir dir="${build.layout}/mpsserver.build.plugin/languages/mpsserver.build.group" />
     <mkdir dir="${build.tmp}/default/com.strumenta.mpsserver.build.jar" />
     <mkdir dir="${build.tmp}/default/com.strumenta.mpsserver.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.strumenta.mpsserver.build.jar/META-INF/module.xml">
@@ -66,7 +66,7 @@
         <sources jar="com.strumenta.mpsserver.build-src.jar" descriptor="com.strumenta.mpsserver.build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/MPSServer.build.plugin/languages/MPSServer.build.group/com.strumenta.mpsserver.build.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/mpsserver.build.plugin/languages/mpsserver.build.group/com.strumenta.mpsserver.build.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.strumenta.mpsserver.build" />
       <fileset dir="${mpsserver.home}/solutions/com.strumenta.mpsserver.build/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.strumenta.mpsserver.build.jar" />
@@ -74,7 +74,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.strumenta.mpsserver.build-models">
       <fileset dir="${mpsserver.home}/solutions/com.strumenta.mpsserver.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/MPSServer.build.plugin/languages/MPSServer.build.group/com.strumenta.mpsserver.build-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/mpsserver.build.plugin/languages/mpsserver.build.group/com.strumenta.mpsserver.build-src.jar" duplicate="preserve">
       <fileset dir="${mpsserver.home}/solutions/com.strumenta.mpsserver.build/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />

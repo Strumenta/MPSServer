@@ -502,6 +502,14 @@
                 </node>
               </node>
             </node>
+            <node concept="abc8K" id="34fZDhVYKi" role="3cqZAp">
+              <node concept="Xl_RD" id="34fZDhVYPl" role="abp_N">
+                <property role="Xl_RC" value="No Git Root specified, using project file: " />
+              </node>
+              <node concept="37vLTw" id="34fZDhVYYE" role="abp_N">
+                <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+              </node>
+            </node>
           </node>
           <node concept="3clFbC" id="6Jg9HT9V2eH" role="3clFbw">
             <node concept="10Nm6u" id="6Jg9HT9V2eI" role="3uHU7w" />
@@ -535,6 +543,25 @@
                   </node>
                 </node>
               </node>
+            </node>
+          </node>
+        </node>
+        <node concept="abc8K" id="34fZDhVZrD" role="3cqZAp">
+          <node concept="Xl_RD" id="34fZDhVZDm" role="abp_N">
+            <property role="Xl_RC" value="Looking for .git dir in " />
+          </node>
+          <node concept="37vLTw" id="34fZDhVZMy" role="abp_N">
+            <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
+          </node>
+          <node concept="Xl_RD" id="34fZDhVZRh" role="abp_N">
+            <property role="Xl_RC" value=" -&gt; " />
+          </node>
+          <node concept="2OqwBi" id="34fZDhW0mE" role="abp_N">
+            <node concept="37vLTw" id="34fZDhW00i" role="2Oq$k0">
+              <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
+            </node>
+            <node concept="liA8E" id="34fZDhW0Af" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~File.getAbsolutePath()" resolve="getAbsolutePath" />
             </node>
           </node>
         </node>
@@ -994,6 +1021,29 @@
           </node>
         </node>
         <node concept="3J1_TO" id="2p2ql82Mm5n" role="3cqZAp">
+          <node concept="3uVAMA" id="2p2ql82Mm5q" role="1zxBo5">
+            <node concept="XOnhg" id="2p2ql82Mm5s" role="1zc67B">
+              <property role="3TUv4t" value="false" />
+              <property role="TrG5h" value="t" />
+              <node concept="nSUau" id="8GwkoCGtojZ" role="1tU5fm">
+                <node concept="3uibUv" id="2p2ql82Mm7u" role="nSUat">
+                  <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="2p2ql82Mm5w" role="1zc67A">
+              <node concept="3clFbF" id="2p2ql82Mm8j" role="3cqZAp">
+                <node concept="2OqwBi" id="2p2ql82Mmar" role="3clFbG">
+                  <node concept="37vLTw" id="2p2ql82Mm8i" role="2Oq$k0">
+                    <ref role="3cqZAo" node="2p2ql82Mm5s" resolve="t" />
+                  </node>
+                  <node concept="liA8E" id="2p2ql82Mmgr" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="3clFbS" id="2p2ql82Mm5p" role="1zxBo7">
             <node concept="3cpWs8" id="7MdXHVxkemr" role="3cqZAp">
               <node concept="3cpWsn" id="7MdXHVxkems" role="3cpWs9">
@@ -1028,29 +1078,6 @@
             <node concept="abc8K" id="2p2ql82Mt1E" role="3cqZAp">
               <node concept="Xl_RD" id="2p2ql82Mt1F" role="abp_N">
                 <property role="Xl_RC" value="WAITED FOR STOP, RETURNED" />
-              </node>
-            </node>
-          </node>
-          <node concept="3uVAMA" id="2p2ql82Mm5q" role="1zxBo5">
-            <node concept="XOnhg" id="2p2ql82Mm5s" role="1zc67B">
-              <property role="3TUv4t" value="false" />
-              <property role="TrG5h" value="t" />
-              <node concept="nSUau" id="8GwkoCGtojZ" role="1tU5fm">
-                <node concept="3uibUv" id="2p2ql82Mm7u" role="nSUat">
-                  <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbS" id="2p2ql82Mm5w" role="1zc67A">
-              <node concept="3clFbF" id="2p2ql82Mm8j" role="3cqZAp">
-                <node concept="2OqwBi" id="2p2ql82Mmar" role="3clFbG">
-                  <node concept="37vLTw" id="2p2ql82Mm8i" role="2Oq$k0">
-                    <ref role="3cqZAo" node="2p2ql82Mm5s" resolve="t" />
-                  </node>
-                  <node concept="liA8E" id="2p2ql82Mmgr" role="2OqNvi">
-                    <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
-                  </node>
-                </node>
               </node>
             </node>
           </node>
