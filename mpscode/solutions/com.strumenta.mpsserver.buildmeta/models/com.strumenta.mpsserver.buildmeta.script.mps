@@ -86,7 +86,7 @@
   </registry>
   <node concept="1l3spW" id="7GBq2$eodh3">
     <property role="2DA0ip" value="../.." />
-    <property role="TrG5h" value="MpsServer-meta" />
+    <property role="TrG5h" value="mpsserver-meta" />
     <property role="turDy" value="build-meta.xml" />
     <node concept="2kB4xC" id="4IusG9vM7RW" role="1l3spd">
       <property role="TrG5h" value="mpsserver.version" />

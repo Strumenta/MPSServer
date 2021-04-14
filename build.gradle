@@ -26,8 +26,8 @@ apply plugin: 'signing'
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '2019.3-5dev'
-project.archivesBaseName = "langmodel"
+project.archivesBaseName = "mpsserver"
+version = '2019.3-9'
 
 configurations {
 	mps
@@ -256,37 +256,58 @@ task checkLanguageTests() {
 task packageServer(type: Zip, dependsOn: [buildServer]) {
     archiveBaseName = 'com.strumenta.mpsserver'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-core/**'
-    exclude 'MpsServer-core/*.zip'
+    include 'mpsserver-core/**'
+    exclude 'mpsserver-core/*.zip'
 }
 
 task packageExamples(type: Zip, dependsOn: [buildExamples]) {
     archiveBaseName = 'com.strumenta.mpsserver.examples'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-examples/**'
-    exclude 'MpsServer-examples/*.zip'
+    include 'mpsserver-examples/**'
+    exclude 'mpsserver-examples/*.zip'
 }
 
 task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
     archiveBaseName = 'com.strumenta.mpsserver.launcher'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-launcher/**'
-    exclude 'MpsServer-launcher/*.zip'
+    include 'mpsserver-launcher/**'
+    exclude 'mpsserver-launcher/*.zip'
 }
 
 task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
     archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-extensionkit/**'
-    exclude 'MpsServer-extensionkit/*.zip'
+    include 'mpsserver-extensionkit/**'
+    exclude 'mpsserver-extensionkit/*.zip'
 }
 
 task packageBuild(type: Zip, dependsOn: [buildBuild]) {
     archiveBaseName = 'com.strumenta.mpsserver.build'
     from new File(rootDir, 'mpscode/build/artifacts')
-    include 'MpsServer-build/**'
-    exclude 'MpsServer-build/*.zip'
+    include 'mpsserver-build/**'
+    exclude 'mpsserver-build/*.zip'
 }
+
+mpsServerCorePom = pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+
 
 publishing {
     publications {
@@ -421,33 +442,33 @@ publishing {
 
 
 
-bintray {
-    user = rootProject.findProperty('bintray_user')
-    key = rootProject.findProperty('bintray_api_key')
-    pkg {
-    	repo = 'strumenta-oss-maven'
-    	name = 'MPSServer'
-    	userOrg = 'strumenta'
-    	licenses = ['Apache-2.0']
-    	vcsUrl = 'https://github.com/Strumenta/MPSServer.git'
-    	version {
-	    	name = 'v' + project.version
-	    	desc = 'Version ' + project.version
-	    	released = new Date()
-	    	vcsTag = 'v'+project.version
-	    }
-    }
+// bintray {
+//     user = rootProject.findProperty('bintray_user')
+//     key = rootProject.findProperty('bintray_api_key')
+//     pkg {
+//     	repo = 'strumenta-oss-maven'
+//     	name = 'MPSServer'
+//     	userOrg = 'strumenta'
+//     	licenses = ['Apache-2.0']
+//     	vcsUrl = 'https://github.com/Strumenta/MPSServer.git'
+//     	version {
+// 	    	name = 'v' + project.version
+// 	    	desc = 'Version ' + project.version
+// 	    	released = new Date()
+// 	    	vcsTag = 'v'+project.version
+// 	    }
+//     }
 
-    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit', 'mpsServerBuild'] 
-    dryRun = false
-    publish = true
-    override = true
-}
+//     publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit', 'mpsServerBuild'] 
+//     dryRun = false
+//     publish = true
+//     override = true
+// }
 
 task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
     doLast {
-        def extensionkitDir = new File(mpscode, 'build/artifacts/MpsServer-extensionkit')
-        def buildPluginDir = new File(mpscode, 'build/artifacts/MpsServer-build')
+        def extensionkitDir = new File(mpscode, 'build/artifacts/mpsserver-extensionkit')
+        def buildPluginDir = new File(mpscode, 'build/artifacts/mpsserver-build')
         def exampleProjectDir = new File(rootDir, "functional_tests/mps_example_project_withextension") 
         def exampleProjectArtifactsDir = new File(rootDir, "functional_tests/mps_example_project_withextension/artifacts") 
         println("[extension kit plugin]")
@@ -477,5 +498,50 @@ task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
             println(" * ${details.file.path}")
         }
         println()        
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name 'Example Application'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description "Model"
+                url 'https://github.com/strumenta/polyast'
+
+                scm {
+                    connection 'https://github.com/Strumenta/polyast.git'
+                    developerConnection 'https://github.com/Strumenta/polyast.git'
+                    url 'https://github.com/strumenta/polyast'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'ftomassetti'
+                        name 'Federico Tomassetti'
+                        email 'federico@tomassetti.me'
+                    }
+                }
+            }
+        }
     }
 }
