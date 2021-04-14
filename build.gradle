@@ -19,12 +19,15 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id "com.jfrog.bintray" version "1.8.5"
 }
+
+apply plugin: 'maven'
+apply plugin: 'signing'
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
 version = '2019.3-5dev'
+project.archivesBaseName = "langmodel"
 
 configurations {
 	mps
