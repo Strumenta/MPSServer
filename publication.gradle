@@ -1,0 +1,293 @@
+/*
+ We need to publish five packages:
+    mpsServerCore (packageServer), 
+    mpsServerExamples (packageExamples), 
+    mpsServerLauncher (packageLauncher), 
+    mpsServerExtensionKit (packageExtensionKit), 
+    mpsServerBuild (packageBuild)
+ */
+
+ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+
+publishing {
+
+ repositories {
+        maven {
+            def releaseRepo = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotRepo = "https://oss.sonatype.org/content/repositories/snapshots/"
+            url = isReleaseVersion ? releaseRepo : snapshotRepo
+            credentials {
+                username = project.hasProperty('ossrhUsername') ? ossrhUsername : "Unknown user"
+                password = project.hasProperty('ossrhPassword') ? ossrhPassword : "Unknown password"
+            }
+        }
+    }
+
+    publications {
+        mpsServerCore(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-core'
+            artifact packageServer
+            version project.version
+            pom {
+                name = 'mpsserver-core'
+                description = 'MPSServer core'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }
+        
+		mpsServerExamples(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-examples'
+            artifact packageExamples
+            version project.version
+            pom {
+                name = 'mpsserver-examples'
+                description = 'MPSServer examples'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }    
+		mpsServerLauncher(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-launcher'
+            artifact packageLauncher
+            version project.version
+            pom {
+                name = 'mpsserver-launcher'
+                description = 'MPSServer launcher'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                	println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }
+        mpsServerExtensionKit(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-extensionkit'
+            artifact packageExtensionKit
+            version project.version
+            pom {
+                name = 'mpsserver-extensionkit'
+                description = 'MPSServer extensionkit'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }                    
+        mpsServerBuild(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-build'
+            artifact packageBuild
+            version project.version
+            pom {
+                name = 'mpsserver-build'
+                description = 'MPSServer build'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }           
+    }
+}
+
+signing {
+    sign publishing.publications.mpsServerCore
+    sign publishing.publications.mpsServerLauncher
+    sign publishing.publications.mpsServerExamples
+    sign publishing.publications.mpsServerExtensionKit
+    sign publishing.publications.mpsServerBuild
+}
+
+tasks.withType(Sign) {
+    onlyIf { isReleaseVersion }
+}
+
+
