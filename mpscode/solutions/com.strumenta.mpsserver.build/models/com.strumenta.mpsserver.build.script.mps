@@ -775,6 +775,11 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="3mQF3ceSN_I" role="3bR37C">
+          <node concept="3bR9La" id="3mQF3ceSN_J" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:3zjMY$95UAa" resolve="jetbrains.mps.core.tool.environment" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">

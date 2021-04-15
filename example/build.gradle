@@ -1,7 +1,8 @@
 buildscript {
     repositories {
+    	mavenLocal()
         jcenter()
-        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }        
     }
 }
 
@@ -10,15 +11,13 @@ plugins {
 }
 
 repositories {
-	mavenCentral()
-	maven {
-		url 'https://dl.bintray.com/strumenta/strumenta-oss-maven'
-	}
+	mavenLocal()
+	mavenCentral()	
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
 }
 
 mpsserver {
-	mpsServerVersion = '1.1.0-rc1'
+	mpsServerVersion = '2019.3-10-SNAPSHOT'
 }
