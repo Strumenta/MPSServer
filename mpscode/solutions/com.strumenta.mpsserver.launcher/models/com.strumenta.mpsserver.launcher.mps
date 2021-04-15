@@ -384,6 +384,14 @@
             </node>
           </node>
         </node>
+        <node concept="abc8K" id="41VgPlFKHpR" role="3cqZAp">
+          <node concept="Xl_RD" id="41VgPlFKH$7" role="abp_N">
+            <property role="Xl_RC" value="MPSSERVER_PROJECT_FILE_PATH is " />
+          </node>
+          <node concept="37vLTw" id="41VgPlFKHJR" role="abp_N">
+            <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+          </node>
+        </node>
         <node concept="3clFbJ" id="6Jg9HT9UZr2" role="3cqZAp">
           <node concept="3clFbS" id="6Jg9HT9UZr3" role="3clFbx">
             <node concept="abc8K" id="2OkDVTXjstc" role="3cqZAp">
@@ -395,10 +403,23 @@
               <node concept="10Nm6u" id="4BgspmWOkHV" role="3cqZAk" />
             </node>
           </node>
-          <node concept="3clFbC" id="6Jg9HT9UZr8" role="3clFbw">
-            <node concept="10Nm6u" id="6Jg9HT9UZr9" role="3uHU7w" />
-            <node concept="37vLTw" id="6Jg9HT9UZra" role="3uHU7B">
-              <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+          <node concept="22lmx$" id="41VgPlFKHOg" role="3clFbw">
+            <node concept="2OqwBi" id="41VgPlFKI$Q" role="3uHU7w">
+              <node concept="37vLTw" id="41VgPlFKIaX" role="2Oq$k0">
+                <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+              </node>
+              <node concept="liA8E" id="41VgPlFKIOq" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
+                <node concept="Xl_RD" id="41VgPlFKIS3" role="37wK5m">
+                  <property role="Xl_RC" value="null" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="6Jg9HT9UZr8" role="3uHU7B">
+              <node concept="37vLTw" id="6Jg9HT9UZra" role="3uHU7B">
+                <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+              </node>
+              <node concept="10Nm6u" id="6Jg9HT9UZr9" role="3uHU7w" />
             </node>
           </node>
           <node concept="9aQIb" id="2OkDVTXjsCY" role="9aQIa">
