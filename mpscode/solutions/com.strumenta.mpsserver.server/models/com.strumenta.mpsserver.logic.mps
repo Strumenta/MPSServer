@@ -16455,17 +16455,40 @@
                   <node concept="3uibUv" id="4BgspmWTbff" role="1tU5fm">
                     <ref role="3uigEE" to="guwi:~File" resolve="File" />
                   </node>
-                  <node concept="2ShNRf" id="4BgspmWTbIP" role="33vP2m">
-                    <node concept="1pGfFk" id="4BgspmWTbjx" role="2ShVmc">
-                      <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
-                      <node concept="2OqwBi" id="4BgspmWTf8F" role="37wK5m">
-                        <node concept="37vLTw" id="4BgspmWTeRF" role="2Oq$k0">
-                          <ref role="3cqZAo" node="4BgspmWTctY" resolve="openProject" />
-                        </node>
-                        <node concept="2OwXpG" id="4BgspmWTf_C" role="2OqNvi">
-                          <ref role="2Oxat5" node="4BgspmWO6j1" resolve="projectPath" />
+                  <node concept="10Nm6u" id="41VgPlFNCHl" role="33vP2m" />
+                </node>
+              </node>
+              <node concept="3clFbJ" id="41VgPlFNE2i" role="3cqZAp">
+                <node concept="3clFbS" id="41VgPlFNE2k" role="3clFbx">
+                  <node concept="3clFbF" id="41VgPlFNC98" role="3cqZAp">
+                    <node concept="37vLTI" id="41VgPlFNC9a" role="3clFbG">
+                      <node concept="2ShNRf" id="4BgspmWTbIP" role="37vLTx">
+                        <node concept="1pGfFk" id="4BgspmWTbjx" role="2ShVmc">
+                          <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
+                          <node concept="2OqwBi" id="4BgspmWTf8F" role="37wK5m">
+                            <node concept="37vLTw" id="4BgspmWTeRF" role="2Oq$k0">
+                              <ref role="3cqZAo" node="4BgspmWTctY" resolve="openProject" />
+                            </node>
+                            <node concept="2OwXpG" id="4BgspmWTf_C" role="2OqNvi">
+                              <ref role="2Oxat5" node="4BgspmWO6j1" resolve="projectPath" />
+                            </node>
+                          </node>
                         </node>
                       </node>
+                      <node concept="37vLTw" id="41VgPlFNC9e" role="37vLTJ">
+                        <ref role="3cqZAo" node="4BgspmWTbfe" resolve="projectFile" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3y3z36" id="41VgPlFNGvK" role="3clFbw">
+                  <node concept="10Nm6u" id="41VgPlFNG$k" role="3uHU7w" />
+                  <node concept="2OqwBi" id="41VgPlFNF8E" role="3uHU7B">
+                    <node concept="37vLTw" id="41VgPlFNE$o" role="2Oq$k0">
+                      <ref role="3cqZAo" node="4BgspmWTctY" resolve="openProject" />
+                    </node>
+                    <node concept="2OwXpG" id="41VgPlFNFDZ" role="2OqNvi">
+                      <ref role="2Oxat5" node="4BgspmWO6j1" resolve="projectPath" />
                     </node>
                   </node>
                 </node>
