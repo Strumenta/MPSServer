@@ -107,4 +107,6 @@ Then, you can launch them from the MPS UI (right click > run).
 * Set the version number in build.gradle
 * Add a tag: `git tag -a vVERSION_NAME` (message: "Version VERSION_NAME")
 * Ensure the tag is pushed
-* `./gradlew bintrayUpload`
+* Run `./gradlew publish`
+* Log into `https://oss.sonatype.org/` to close & release
+
