@@ -19,12 +19,15 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id "com.jfrog.bintray" version "1.8.5"
+    id 'signing'
 }
+
+apply plugin: 'maven'
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
-version = '2019.3.9'
+project.archivesBaseName = "mpsserver"
+version = '2019.3-9'
 
 configurations {
 	mps
@@ -285,162 +288,6 @@ task packageBuild(type: Zip, dependsOn: [buildBuild]) {
     exclude 'mpsserver-build/*.zip'
 }
 
-publishing {
-    publications {
-        mpsServerCore(MavenPublication) {
-            groupId 'com.strumenta.mpsserver'
-            artifactId 'mpsserver-core'
-            artifact packageServer
-            version project.version
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
-                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                	println(it)
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  it.moduleVersion)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                    dependencyNode.appendNode('scope', 'provided')
-                }
-            }
-        }
-		mpsServerExamples(MavenPublication) {
-            groupId 'com.strumenta.mpsserver'
-            artifactId 'mpsserver-examples'
-            artifact packageExamples
-            version project.version
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
-                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                	println(it)
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  it.moduleVersion)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                    dependencyNode.appendNode('scope', 'provided')
-                }
-            }
-        }    
-		mpsServerLauncher(MavenPublication) {
-            groupId 'com.strumenta.mpsserver'
-            artifactId 'mpsserver-launcher'
-            artifact packageLauncher
-            version project.version
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
-                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                	println(it)
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  it.moduleVersion)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                    dependencyNode.appendNode('scope', 'provided')
-                }
-            }
-        }
-        mpsServerExtensionKit(MavenPublication) {
-            groupId 'com.strumenta.mpsserver'
-            artifactId 'mpsserver-extensionkit'
-            artifact packageExtensionKit
-            version project.version
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
-                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    println(it)
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  it.moduleVersion)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                    dependencyNode.appendNode('scope', 'provided')
-                }
-            }
-        }                    
-        mpsServerBuild(MavenPublication) {
-            groupId 'com.strumenta.mpsserver'
-            artifactId 'mpsserver-build'
-            artifact packageBuild
-            version project.version
-            pom.withXml {
-                def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
-                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    println(it)
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  it.moduleVersion)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                    dependencyNode.appendNode('scope', 'provided')
-                }
-            }
-        }           
-    }
-}
-
-
-
-
-bintray {
-    user = rootProject.findProperty('bintray_user')
-    key = rootProject.findProperty('bintray_api_key')
-    pkg {
-    	repo = 'strumenta-oss-maven'
-    	name = 'MPSServer'
-    	userOrg = 'strumenta'
-    	licenses = ['Apache-2.0']
-    	vcsUrl = 'https://github.com/Strumenta/MPSServer.git'
-    	version {
-	    	name = 'v' + project.version
-	    	desc = 'Version ' + project.version
-	    	released = new Date()
-	    	vcsTag = 'v'+project.version
-	    }
-    }
-
-    publications = ['mpsServerCore', 'mpsServerExamples', 'mpsServerLauncher', 'mpsServerExtensionKit', 'mpsServerBuild'] 
-    dryRun = false
-    publish = true
-    override = true
-}
-
 task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
     doLast {
         def extensionkitDir = new File(mpscode, 'build/artifacts/mpsserver-extensionkit')
@@ -476,3 +323,5 @@ task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
         println()        
     }
 }
+
+apply from: 'publication.gradle'
