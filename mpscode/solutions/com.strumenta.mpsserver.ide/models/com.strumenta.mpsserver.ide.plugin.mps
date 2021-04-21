@@ -20,6 +20,7 @@
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" />
     <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
+    <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -525,17 +526,13 @@
                               <node concept="2ShNRf" id="6Ks8zCw5Psh" role="2Oq$k0">
                                 <node concept="1pGfFk" id="6Ks8zCw5UnR" role="2ShVmc">
                                   <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
-                                  <node concept="2OqwBi" id="6Ks8zCw5Uom" role="37wK5m">
-                                    <node concept="2OqwBi" id="6Ks8zCw5Uon" role="2Oq$k0">
-                                      <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
-                                        <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                      </node>
-                                      <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
-                                        <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
-                                      </node>
+                                  <node concept="10Nm6u" id="4BgspmX3ya_" role="37wK5m" />
+                                  <node concept="2OqwBi" id="6Ks8zCw5Uon" role="37wK5m">
+                                    <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
+                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
                                     </node>
-                                    <node concept="liA8E" id="6Ks8zCw5Uoq" role="2OqNvi">
-                                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                                    <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
+                                      <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
                                     </node>
                                   </node>
                                 </node>

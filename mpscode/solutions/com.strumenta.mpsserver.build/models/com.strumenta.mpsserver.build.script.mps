@@ -668,11 +668,6 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L4X" resolve="jetbrains.mps.lang.editor" />
           </node>
         </node>
-        <node concept="1SiIV0" id="5FBB4gO2zBh" role="3bR37C">
-          <node concept="3bR9La" id="5FBB4gO2zBi" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L9O" resolve="jetbrains.mps.lang.smodel" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="5FBB4gO2zBj" role="3bR37C">
           <node concept="3bR9La" id="5FBB4gO2zBk" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
@@ -681,6 +676,11 @@
         <node concept="1SiIV0" id="5oFHat9o$3Y" role="3bR37C">
           <node concept="3bR9La" id="5oFHat9o$3Z" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4BgspmX0Dsx" role="3bR37C">
+          <node concept="3bR9La" id="4BgspmX0Dsy" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:3zjMY$95UAa" resolve="jetbrains.mps.core.tool.environment" />
           </node>
         </node>
       </node>
@@ -773,6 +773,11 @@
             <node concept="3qWCbU" id="4h3_XpsIpBv" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3mQF3ceSN_I" role="3bR37C">
+          <node concept="3bR9La" id="3mQF3ceSN_J" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:3zjMY$95UAa" resolve="jetbrains.mps.core.tool.environment" />
           </node>
         </node>
       </node>
@@ -1058,9 +1063,6 @@
       <node concept="m$_yC" id="4JnP3TV$NV_" role="m$_yJ">
         <ref role="m$_y1" node="1Y19Fp43fxb" resolve="mpsserver.core.plugin" />
       </node>
-      <node concept="m$_yC" id="4GsXML2MxVd" role="m$_yJ">
-        <ref role="m$_y1" node="1yyBh0vFuTJ" resolve="BusinessOrg" />
-      </node>
       <node concept="3_J27D" id="2p2ql82Ml_0" role="m$_yQ">
         <node concept="3Mxwew" id="2p2ql82Ml_1" role="3MwsjC">
           <property role="3MwjfP" value="mpsserver.launcher.plugin" />
@@ -1330,9 +1332,6 @@
     </node>
     <node concept="2sgV4H" id="2p2ql82MlGw" role="1l3spa">
       <ref role="1l3spb" node="5yOqbw5UOfB" resolve="mpsserver-core" />
-    </node>
-    <node concept="2sgV4H" id="4GsXML2MxUO" role="1l3spa">
-      <ref role="1l3spb" node="1yyBh0vFuTG" resolve="mpsserver-examples" />
     </node>
   </node>
   <node concept="1l3spW" id="1yyBh0vFuTG">

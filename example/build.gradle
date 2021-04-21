@@ -1,24 +1,25 @@
 buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
     }
+  }
+  dependencies {
+    classpath "com.strumenta.mpsserver:mpsserver-gradle-plugin:1.1.1"
+  }
 }
 
-plugins {
-    id 'com.strumenta.mpsserver' version "0.1.0-snapshot"
-}
+apply plugin: "com.strumenta.mpsserver"
 
 repositories {
-	mavenCentral()
-	maven {
-		url 'https://dl.bintray.com/strumenta/strumenta-oss-maven'
-	}
+	mavenLocal()
+	mavenCentral()	
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
 }
 
 mpsserver {
-	mpsServerVersion = '1.1.0-rc1'
+  openNoProject = true
+	mpsServerVersion = '2019.3-10-SNAPSHOT'
 }

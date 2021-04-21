@@ -110,3 +110,19 @@ Then, you can launch them from the MPS UI (right click > run).
 * Run `./gradlew publish`
 * Log into `https://oss.sonatype.org/` to close & release
 
+## Test WebSocket
+
+Open http://localhost:2904/
+
+Open console
+
+Type:
+
+```
+ws = new WebSocket("ws://localhost:2904/socket");
+ws.onopen = () => {
+	ws.onmessage = (m)=>console.log("received", m.data);
+	ws.send(JSON.stringify({type:"GetProjectInfo"}));
+}
+``` 
+
