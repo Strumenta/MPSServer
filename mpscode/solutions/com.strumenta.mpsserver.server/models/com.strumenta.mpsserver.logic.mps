@@ -2862,16 +2862,69 @@
                   </node>
                 </node>
                 <node concept="3clFbS" id="7MdXHVxjL6n" role="2LFqv$">
-                  <node concept="abc8K" id="3cTvByc3xgs" role="3cqZAp">
-                    <node concept="Xl_RD" id="3cTvByc3yy6" role="abp_N">
-                      <property role="Xl_RC" value="  module " />
-                    </node>
-                    <node concept="2OqwBi" id="3cTvByc3ALw" role="abp_N">
-                      <node concept="2GrUjf" id="3cTvByc3A3F" role="2Oq$k0">
-                        <ref role="2Gs0qQ" node="7MdXHVxjL6j" resolve="module" />
+                  <node concept="3clFbJ" id="6NlwFoSCfnP" role="3cqZAp">
+                    <node concept="3clFbS" id="6NlwFoSCfnR" role="3clFbx">
+                      <node concept="3cpWs8" id="6NlwFoSCk7a" role="3cqZAp">
+                        <node concept="3cpWsn" id="6NlwFoSCk7b" role="3cpWs9">
+                          <property role="TrG5h" value="reloadableModule" />
+                          <node concept="3uibUv" id="6NlwFoSCk7c" role="1tU5fm">
+                            <ref role="3uigEE" to="j8aq:~ReloadableModule" resolve="ReloadableModule" />
+                          </node>
+                          <node concept="1eOMI4" id="6NlwFoSCk7d" role="33vP2m">
+                            <node concept="10QFUN" id="6NlwFoSCk7e" role="1eOMHV">
+                              <node concept="3uibUv" id="6NlwFoSCk7f" role="10QFUM">
+                                <ref role="3uigEE" to="j8aq:~ReloadableModule" resolve="ReloadableModule" />
+                              </node>
+                              <node concept="2GrUjf" id="6NlwFoSCk7g" role="10QFUP">
+                                <ref role="2Gs0qQ" node="7MdXHVxjL6j" resolve="module" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
-                      <node concept="liA8E" id="3cTvByc3BXv" role="2OqNvi">
-                        <ref role="37wK5l" to="lui2:~SModule.getModuleName()" resolve="getModuleName" />
+                      <node concept="3clFbJ" id="6NlwFoSClD2" role="3cqZAp">
+                        <node concept="3clFbS" id="6NlwFoSClD4" role="3clFbx">
+                          <node concept="abc8K" id="3cTvByc3xgs" role="3cqZAp">
+                            <node concept="Xl_RD" id="3cTvByc3yy6" role="abp_N">
+                              <property role="Xl_RC" value="  module " />
+                            </node>
+                            <node concept="2OqwBi" id="3cTvByc3ALw" role="abp_N">
+                              <node concept="2GrUjf" id="3cTvByc3A3F" role="2Oq$k0">
+                                <ref role="2Gs0qQ" node="7MdXHVxjL6j" resolve="module" />
+                              </node>
+                              <node concept="liA8E" id="3cTvByc3BXv" role="2OqNvi">
+                                <ref role="37wK5l" to="lui2:~SModule.getModuleName()" resolve="getModuleName" />
+                              </node>
+                            </node>
+                            <node concept="Xl_RD" id="6NlwFoSCwJJ" role="abp_N">
+                              <property role="Xl_RC" value=" IS NOT DEPLOYED" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3fqX7Q" id="6NlwFoSCt8C" role="3clFbw">
+                          <node concept="2OqwBi" id="6NlwFoSCt8E" role="3fr31v">
+                            <node concept="2OqwBi" id="6NlwFoSCt8F" role="2Oq$k0">
+                              <node concept="37vLTw" id="6NlwFoSCt8G" role="2Oq$k0">
+                                <ref role="3cqZAo" node="6NlwFoSCk7b" resolve="reloadableModule" />
+                              </node>
+                              <node concept="liA8E" id="6NlwFoSCt8H" role="2OqNvi">
+                                <ref role="37wK5l" to="j8aq:~ReloadableModule.getStatus()" resolve="getStatus" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="6NlwFoSCt8I" role="2OqNvi">
+                              <ref role="37wK5l" to="j8aq:~ReloadableModule$DeploymentStatus.isDeployed()" resolve="isDeployed" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbH" id="6NlwFoSCfnQ" role="3cqZAp" />
+                    </node>
+                    <node concept="2ZW3vV" id="6NlwFoSCj6U" role="3clFbw">
+                      <node concept="3uibUv" id="6NlwFoSCj6V" role="2ZW6by">
+                        <ref role="3uigEE" to="j8aq:~ReloadableModule" resolve="ReloadableModule" />
+                      </node>
+                      <node concept="2GrUjf" id="6NlwFoSCj6W" role="2ZW6bz">
+                        <ref role="2Gs0qQ" node="7MdXHVxjL6j" resolve="module" />
                       </node>
                     </node>
                   </node>
