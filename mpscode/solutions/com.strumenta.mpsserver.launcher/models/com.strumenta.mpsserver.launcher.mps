@@ -53,9 +53,6 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
-      <concept id="1164879751025" name="jetbrains.mps.baseLanguage.structure.TryCatchStatement" flags="nn" index="SfApY">
-        <child id="1164879758292" name="body" index="SfCbr" />
-      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -933,7 +930,7 @@
           <node concept="3cpWsn" id="4BgspmWOmXL" role="3cpWs9">
             <property role="TrG5h" value="serverConfiguration" />
             <node concept="3uibUv" id="4BgspmWOmXM" role="1tU5fm">
-              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="ServerConfiguration" />
+              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
             </node>
           </node>
         </node>
@@ -1125,43 +1122,6 @@
           </node>
         </node>
         <node concept="3J1_TO" id="2p2ql82Mm5n" role="3cqZAp">
-          <node concept="3clFbS" id="2p2ql82Mm5p" role="SfCbr">
-            <node concept="3cpWs8" id="7MdXHVxkemr" role="3cqZAp">
-              <node concept="3cpWsn" id="7MdXHVxkems" role="3cpWs9">
-                <property role="TrG5h" value="sc" />
-                <node concept="3uibUv" id="7MdXHVxkemt" role="1tU5fm">
-                  <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                </node>
-                <node concept="2YIFZM" id="7MdXHVxkeQW" role="33vP2m">
-                  <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
-                  <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                  <node concept="37vLTw" id="7MdXHVxkeQX" role="37wK5m">
-                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="abc8K" id="2p2ql82MsR5" role="3cqZAp">
-              <node concept="Xl_RD" id="2p2ql82MsXa" role="abp_N">
-                <property role="Xl_RC" value="WAIT FOR STOP" />
-              </node>
-            </node>
-            <node concept="3clFbF" id="2p2ql82MrK1" role="3cqZAp">
-              <node concept="2OqwBi" id="2p2ql82MrQ3" role="3clFbG">
-                <node concept="37vLTw" id="2p2ql82MrJZ" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7MdXHVxkems" resolve="sc" />
-                </node>
-                <node concept="liA8E" id="7MdXHVximYh" role="2OqNvi">
-                  <ref role="37wK5l" to="30ym:2p2ql82MpdJ" resolve="waitForStop" />
-                </node>
-              </node>
-            </node>
-            <node concept="abc8K" id="2p2ql82Mt1E" role="3cqZAp">
-              <node concept="Xl_RD" id="2p2ql82Mt1F" role="abp_N">
-                <property role="Xl_RC" value="WAITED FOR STOP, RETURNED" />
-              </node>
-            </node>
-          </node>
           <node concept="3uVAMA" id="2p2ql82Mm5q" role="1zxBo5">
             <node concept="XOnhg" id="2p2ql82Mm5s" role="1zc67B">
               <property role="3TUv4t" value="false" />
@@ -1195,8 +1155,8 @@
                 <node concept="2YIFZM" id="lGCzCbjEUM" role="33vP2m">
                   <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
                   <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                  <node concept="37vLTw" id="lGCzCbjEUN" role="37wK5m">
-                    <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
+                  <node concept="37vLTw" id="5610mFjF3ie" role="37wK5m">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
                   </node>
                 </node>
               </node>
@@ -1209,7 +1169,7 @@
             <node concept="3clFbF" id="lGCzCbjEUQ" role="3cqZAp">
               <node concept="2OqwBi" id="lGCzCbjEUR" role="3clFbG">
                 <node concept="37vLTw" id="lGCzCbjEUS" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7MdXHVxkems" resolve="sc" />
+                  <ref role="3cqZAo" node="lGCzCbjEUK" resolve="sc" />
                 </node>
                 <node concept="liA8E" id="lGCzCbjEUT" role="2OqNvi">
                   <ref role="37wK5l" to="30ym:2p2ql82MpdJ" resolve="waitForStop" />
