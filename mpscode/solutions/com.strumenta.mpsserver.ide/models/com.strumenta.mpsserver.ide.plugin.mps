@@ -2,11 +2,11 @@
 <model ref="r:83426abb-2070-490d-b7ef-d9a956a95c67(com.strumenta.mpsserver.ide.plugin)">
   <persistence version="9" />
   <languages>
-    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="5" />
-    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
-    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
-    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="-1" />
+    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="-1" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
+    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="-1" />
+    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="-1" />
   </languages>
   <imports>
     <import index="tprs" ref="r:00000000-0000-4000-0000-011c895904a4(jetbrains.mps.ide.actions)" />
@@ -20,6 +20,7 @@
     <import index="hyam" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt.event(JDK/)" />
     <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
+    <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -525,17 +526,13 @@
                               <node concept="2ShNRf" id="6Ks8zCw5Psh" role="2Oq$k0">
                                 <node concept="1pGfFk" id="6Ks8zCw5UnR" role="2ShVmc">
                                   <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
-                                  <node concept="2OqwBi" id="6Ks8zCw5Uom" role="37wK5m">
-                                    <node concept="2OqwBi" id="6Ks8zCw5Uon" role="2Oq$k0">
-                                      <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
-                                        <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                      </node>
-                                      <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
-                                        <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
-                                      </node>
+                                  <node concept="10Nm6u" id="4BgspmX3ya_" role="37wK5m" />
+                                  <node concept="2OqwBi" id="6Ks8zCw5Uon" role="37wK5m">
+                                    <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
+                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
                                     </node>
-                                    <node concept="liA8E" id="6Ks8zCw5Uoq" role="2OqNvi">
-                                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                                    <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
+                                      <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
                                     </node>
                                   </node>
                                 </node>

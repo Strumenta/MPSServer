@@ -2,7 +2,7 @@
 <model ref="r:c2d9b334-861b-401e-b805-94c1896b2f59(com.strumenta.mpsserver.launcher)">
   <persistence version="9" />
   <languages>
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="1" />
@@ -52,6 +52,9 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1164879751025" name="jetbrains.mps.baseLanguage.structure.TryCatchStatement" flags="nn" index="SfApY">
+        <child id="1164879758292" name="body" index="SfCbr" />
       </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
@@ -389,28 +392,23 @@
             </node>
           </node>
         </node>
+        <node concept="abc8K" id="41VgPlFKHpR" role="3cqZAp">
+          <node concept="Xl_RD" id="41VgPlFKH$7" role="abp_N">
+            <property role="Xl_RC" value="MPSSERVER_PROJECT_FILE_PATH is " />
+          </node>
+          <node concept="37vLTw" id="41VgPlFKHJR" role="abp_N">
+            <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+          </node>
+        </node>
         <node concept="3clFbJ" id="6Jg9HT9UZr2" role="3cqZAp">
           <node concept="3clFbS" id="6Jg9HT9UZr3" role="3clFbx">
             <node concept="abc8K" id="2OkDVTXjstc" role="3cqZAp">
               <node concept="Xl_RD" id="2OkDVTXjswW" role="abp_N">
-                <property role="Xl_RC" value="NO PROJECT SPECIFIED, DEFAULTING TO CURRENT DIRECTORY" />
+                <property role="Xl_RC" value="NO PROJECT SPECIFIED, STARTING WITHOUT PROJECT SET" />
               </node>
             </node>
-            <node concept="3clFbF" id="6Jg9HT9UZr4" role="3cqZAp">
-              <node concept="37vLTI" id="6Jg9HT9UZr5" role="3clFbG">
-                <node concept="Xl_RD" id="6Jg9HT9UZr6" role="37vLTx">
-                  <property role="Xl_RC" value="" />
-                </node>
-                <node concept="37vLTw" id="6Jg9HT9UZr7" role="37vLTJ">
-                  <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3clFbC" id="6Jg9HT9UZr8" role="3clFbw">
-            <node concept="10Nm6u" id="6Jg9HT9UZr9" role="3uHU7w" />
-            <node concept="37vLTw" id="6Jg9HT9UZra" role="3uHU7B">
-              <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+            <node concept="3cpWs6" id="4BgspmWOjYF" role="3cqZAp">
+              <node concept="10Nm6u" id="4BgspmWOkHV" role="3cqZAk" />
             </node>
           </node>
           <node concept="9aQIb" id="2OkDVTXjsCY" role="9aQIa">
@@ -423,6 +421,25 @@
                   <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
                 </node>
               </node>
+            </node>
+          </node>
+          <node concept="22lmx$" id="41VgPlFKHOg" role="3clFbw">
+            <node concept="2OqwBi" id="41VgPlFKI$Q" role="3uHU7w">
+              <node concept="37vLTw" id="41VgPlFKIaX" role="2Oq$k0">
+                <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+              </node>
+              <node concept="liA8E" id="41VgPlFKIOq" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
+                <node concept="Xl_RD" id="41VgPlFKIS3" role="37wK5m">
+                  <property role="Xl_RC" value="null" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="6Jg9HT9UZr8" role="3uHU7B">
+              <node concept="37vLTw" id="6Jg9HT9UZra" role="3uHU7B">
+                <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+              </node>
+              <node concept="10Nm6u" id="6Jg9HT9UZr9" role="3uHU7w" />
             </node>
           </node>
         </node>
@@ -912,105 +929,192 @@
             </node>
           </node>
         </node>
-        <node concept="3cpWs8" id="4o9fmPfXS7K" role="3cqZAp">
-          <node concept="3cpWsn" id="4o9fmPfXS7L" role="3cpWs9">
-            <property role="TrG5h" value="project" />
-            <node concept="3uibUv" id="4o9fmPfXS7M" role="1tU5fm">
-              <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
-            </node>
-            <node concept="2OqwBi" id="4o9fmPfXBzr" role="33vP2m">
-              <node concept="37vLTw" id="4o9fmPfXB9T" role="2Oq$k0">
-                <ref role="3cqZAo" node="4ZsvGZutXBI" resolve="ideaEnvironment" />
-              </node>
-              <node concept="liA8E" id="4o9fmPfXBCt" role="2OqNvi">
-                <ref role="37wK5l" to="79ha:6rx4kZDjWg4" resolve="openProject" />
-                <node concept="37vLTw" id="4o9fmPfXSJt" role="37wK5m">
-                  <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="abc8K" id="4o9fmPfXT6u" role="3cqZAp">
-          <node concept="Xl_RD" id="4o9fmPfXTaK" role="abp_N">
-            <property role="Xl_RC" value="Project " />
-          </node>
-          <node concept="37vLTw" id="4o9fmPfXTh5" role="abp_N">
-            <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
-          </node>
-        </node>
-        <node concept="3cpWs8" id="6Jg9HTa82dP" role="3cqZAp">
-          <node concept="3cpWsn" id="6Jg9HTa82dQ" role="3cpWs9">
+        <node concept="3cpWs8" id="4BgspmWOmXK" role="3cqZAp">
+          <node concept="3cpWsn" id="4BgspmWOmXL" role="3cpWs9">
             <property role="TrG5h" value="serverConfiguration" />
-            <property role="3TUv4t" value="true" />
-            <node concept="3uibUv" id="6Jg9HTa82dR" role="1tU5fm">
-              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
+            <node concept="3uibUv" id="4BgspmWOmXM" role="1tU5fm">
+              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="ServerConfiguration" />
             </node>
-            <node concept="2OqwBi" id="6Jg9HTa83wL" role="33vP2m">
-              <node concept="2OqwBi" id="6Jg9HTa831o" role="2Oq$k0">
-                <node concept="2OqwBi" id="6Jg9HTa82QT" role="2Oq$k0">
-                  <node concept="2ShNRf" id="6Jg9HTa82kg" role="2Oq$k0">
-                    <node concept="1pGfFk" id="6Jg9HTa82k7" role="2ShVmc">
-                      <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
-                      <node concept="2OqwBi" id="6Jg9HTa82BW" role="37wK5m">
-                        <node concept="37vLTw" id="6Jg9HTa82wH" role="2Oq$k0">
-                          <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
+          </node>
+        </node>
+        <node concept="3clFbJ" id="4BgspmWOlu0" role="3cqZAp">
+          <node concept="3clFbS" id="4BgspmWOlu2" role="3clFbx">
+            <node concept="abc8K" id="4BgspmWOmwS" role="3cqZAp">
+              <node concept="Xl_RD" id="4BgspmWOm$V" role="abp_N">
+                <property role="Xl_RC" value="starting without project" />
+              </node>
+            </node>
+            <node concept="3clFbF" id="4BgspmWOq2j" role="3cqZAp">
+              <node concept="37vLTI" id="4BgspmWOq2l" role="3clFbG">
+                <node concept="2OqwBi" id="4BgspmWOmXN" role="37vLTx">
+                  <node concept="2OqwBi" id="4BgspmWOmXO" role="2Oq$k0">
+                    <node concept="2OqwBi" id="4BgspmWOmXP" role="2Oq$k0">
+                      <node concept="2ShNRf" id="4BgspmWOmXQ" role="2Oq$k0">
+                        <node concept="1pGfFk" id="4BgspmWOmXR" role="2ShVmc">
+                          <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
+                          <node concept="37vLTw" id="4BgspmWSgVC" role="37wK5m">
+                            <ref role="3cqZAo" node="4ZsvGZutXBI" resolve="ideaEnvironment" />
+                          </node>
+                          <node concept="10Nm6u" id="4BgspmWOnuU" role="37wK5m" />
                         </node>
-                        <node concept="liA8E" id="6Jg9HTa82I6" role="2OqNvi">
-                          <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                      </node>
+                      <node concept="liA8E" id="4BgspmWOmXV" role="2OqNvi">
+                        <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
+                        <node concept="1rXfSq" id="4BgspmWOmXW" role="37wK5m">
+                          <ref role="37wK5l" node="6Jg9HT9UXWv" resolve="getPort" />
                         </node>
                       </node>
                     </node>
+                    <node concept="liA8E" id="4BgspmWOmXX" role="2OqNvi">
+                      <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
+                      <node concept="10Nm6u" id="4BgspmWOnNX" role="37wK5m" />
+                    </node>
                   </node>
-                  <node concept="liA8E" id="6Jg9HTa82VU" role="2OqNvi">
-                    <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
-                    <node concept="1rXfSq" id="6Jg9HTa82Y8" role="37wK5m">
-                      <ref role="37wK5l" node="6Jg9HT9UXWv" resolve="getPort" />
+                  <node concept="liA8E" id="4BgspmWOmY0" role="2OqNvi">
+                    <ref role="37wK5l" to="30ym:6Jg9HTa7XRn" resolve="autosave" />
+                    <node concept="1rXfSq" id="4BgspmWOmY1" role="37wK5m">
+                      <ref role="37wK5l" node="6Jg9HTa83GT" resolve="getAutoSave" />
                     </node>
                   </node>
                 </node>
-                <node concept="liA8E" id="6Jg9HTa836f" role="2OqNvi">
-                  <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
-                  <node concept="1rXfSq" id="6Jg9HTa8396" role="37wK5m">
-                    <ref role="37wK5l" node="6Jg9HT9V0bV" resolve="getGitRoot" />
-                    <node concept="37vLTw" id="6Jg9HTa83d8" role="37wK5m">
-                      <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                <node concept="37vLTw" id="4BgspmWOq2p" role="37vLTJ">
+                  <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="4BgspmWOmY2" role="3cqZAp">
+              <node concept="1rXfSq" id="4BgspmWOmY3" role="3clFbG">
+                <ref role="37wK5l" node="6Ks8zCw7Gmg" resolve="considerGitCredentials" />
+                <node concept="37vLTw" id="4BgspmWOmY4" role="37wK5m">
+                  <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="4BgspmWOmY5" role="3cqZAp">
+              <node concept="1rXfSq" id="4BgspmWOmY6" role="3clFbG">
+                <ref role="37wK5l" node="1taqoP6vqUp" resolve="considerExtensionPath" />
+                <node concept="37vLTw" id="4BgspmWOmY7" role="37wK5m">
+                  <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="4BgspmWOmY8" role="3cqZAp">
+              <node concept="2OqwBi" id="4BgspmWOmY9" role="3clFbG">
+                <node concept="37vLTw" id="4BgspmWOmYa" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                </node>
+                <node concept="liA8E" id="4BgspmWOmYb" role="2OqNvi">
+                  <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="4BgspmWOm9u" role="3clFbw">
+            <node concept="10Nm6u" id="4BgspmWOmsC" role="3uHU7w" />
+            <node concept="37vLTw" id="4BgspmWOlIZ" role="3uHU7B">
+              <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+            </node>
+          </node>
+          <node concept="9aQIb" id="4BgspmWOmDy" role="9aQIa">
+            <node concept="3clFbS" id="4BgspmWOmDz" role="9aQI4">
+              <node concept="3cpWs8" id="4o9fmPfXS7K" role="3cqZAp">
+                <node concept="3cpWsn" id="4o9fmPfXS7L" role="3cpWs9">
+                  <property role="TrG5h" value="project" />
+                  <node concept="3uibUv" id="4o9fmPfXS7M" role="1tU5fm">
+                    <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
+                  </node>
+                  <node concept="2OqwBi" id="4o9fmPfXBzr" role="33vP2m">
+                    <node concept="37vLTw" id="4o9fmPfXB9T" role="2Oq$k0">
+                      <ref role="3cqZAo" node="4ZsvGZutXBI" resolve="ideaEnvironment" />
+                    </node>
+                    <node concept="liA8E" id="4o9fmPfXBCt" role="2OqNvi">
+                      <ref role="37wK5l" to="79ha:6rx4kZDjWg4" resolve="openProject" />
+                      <node concept="37vLTw" id="4o9fmPfXSJt" role="37wK5m">
+                        <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                      </node>
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="liA8E" id="6Jg9HTa83Dc" role="2OqNvi">
-                <ref role="37wK5l" to="30ym:6Jg9HTa7XRn" resolve="autosave" />
-                <node concept="1rXfSq" id="6Jg9HTa85yI" role="37wK5m">
-                  <ref role="37wK5l" node="6Jg9HTa83GT" resolve="getAutoSave" />
+              <node concept="abc8K" id="4o9fmPfXT6u" role="3cqZAp">
+                <node concept="Xl_RD" id="4o9fmPfXTaK" role="abp_N">
+                  <property role="Xl_RC" value="Project " />
+                </node>
+                <node concept="37vLTw" id="4o9fmPfXTh5" role="abp_N">
+                  <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
                 </node>
               </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="6Ks8zCw7Kjq" role="3cqZAp">
-          <node concept="1rXfSq" id="6Ks8zCw7Kjl" role="3clFbG">
-            <ref role="37wK5l" node="6Ks8zCw7Gmg" resolve="considerGitCredentials" />
-            <node concept="37vLTw" id="6Ks8zCw7Kqi" role="37wK5m">
-              <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1taqoP6vs24" role="3cqZAp">
-          <node concept="1rXfSq" id="1taqoP6vs22" role="3clFbG">
-            <ref role="37wK5l" node="1taqoP6vqUp" resolve="considerExtensionPath" />
-            <node concept="37vLTw" id="1taqoP6vsqn" role="37wK5m">
-              <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="6Jg9HTa976W" role="3cqZAp">
-          <node concept="2OqwBi" id="6Jg9HTa97eW" role="3clFbG">
-            <node concept="37vLTw" id="6Jg9HTa976U" role="2Oq$k0">
-              <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
-            </node>
-            <node concept="liA8E" id="7MdXHVximj_" role="2OqNvi">
-              <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
+              <node concept="3clFbF" id="4BgspmWOqZp" role="3cqZAp">
+                <node concept="37vLTI" id="4BgspmWOrsZ" role="3clFbG">
+                  <node concept="37vLTw" id="4BgspmWOqZn" role="37vLTJ">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                  </node>
+                  <node concept="2OqwBi" id="4BgspmWOrug" role="37vLTx">
+                    <node concept="2OqwBi" id="4BgspmWOruh" role="2Oq$k0">
+                      <node concept="2OqwBi" id="4BgspmWOrui" role="2Oq$k0">
+                        <node concept="2ShNRf" id="4BgspmWOruj" role="2Oq$k0">
+                          <node concept="1pGfFk" id="4BgspmWOruk" role="2ShVmc">
+                            <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
+                            <node concept="37vLTw" id="4BgspmWShak" role="37wK5m">
+                              <ref role="3cqZAo" node="4ZsvGZutXBI" resolve="ideaEnvironment" />
+                            </node>
+                            <node concept="37vLTw" id="4BgspmWOrum" role="37wK5m">
+                              <ref role="3cqZAo" node="4o9fmPfXS7L" resolve="project" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="4BgspmWOruo" role="2OqNvi">
+                          <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
+                          <node concept="1rXfSq" id="4BgspmWOrup" role="37wK5m">
+                            <ref role="37wK5l" node="6Jg9HT9UXWv" resolve="getPort" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="4BgspmWOruq" role="2OqNvi">
+                        <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
+                        <node concept="1rXfSq" id="4BgspmWOrur" role="37wK5m">
+                          <ref role="37wK5l" node="6Jg9HT9V0bV" resolve="getGitRoot" />
+                          <node concept="37vLTw" id="4BgspmWOrus" role="37wK5m">
+                            <ref role="3cqZAo" node="4o9fmPfXSBd" resolve="projectFile" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="4BgspmWOrut" role="2OqNvi">
+                      <ref role="37wK5l" to="30ym:6Jg9HTa7XRn" resolve="autosave" />
+                      <node concept="1rXfSq" id="4BgspmWOruu" role="37wK5m">
+                        <ref role="37wK5l" node="6Jg9HTa83GT" resolve="getAutoSave" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="6Ks8zCw7Kjq" role="3cqZAp">
+                <node concept="1rXfSq" id="6Ks8zCw7Kjl" role="3clFbG">
+                  <ref role="37wK5l" node="6Ks8zCw7Gmg" resolve="considerGitCredentials" />
+                  <node concept="37vLTw" id="6Ks8zCw7Kqi" role="37wK5m">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="1taqoP6vs24" role="3cqZAp">
+                <node concept="1rXfSq" id="1taqoP6vs22" role="3clFbG">
+                  <ref role="37wK5l" node="1taqoP6vqUp" resolve="considerExtensionPath" />
+                  <node concept="37vLTw" id="1taqoP6vsqn" role="37wK5m">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="6Jg9HTa976W" role="3cqZAp">
+                <node concept="2OqwBi" id="6Jg9HTa97eW" role="3clFbG">
+                  <node concept="37vLTw" id="6Jg9HTa976U" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                  </node>
+                  <node concept="liA8E" id="7MdXHVximj_" role="2OqNvi">
+                    <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -1021,6 +1125,43 @@
           </node>
         </node>
         <node concept="3J1_TO" id="2p2ql82Mm5n" role="3cqZAp">
+          <node concept="3clFbS" id="2p2ql82Mm5p" role="SfCbr">
+            <node concept="3cpWs8" id="7MdXHVxkemr" role="3cqZAp">
+              <node concept="3cpWsn" id="7MdXHVxkems" role="3cpWs9">
+                <property role="TrG5h" value="sc" />
+                <node concept="3uibUv" id="7MdXHVxkemt" role="1tU5fm">
+                  <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                </node>
+                <node concept="2YIFZM" id="7MdXHVxkeQW" role="33vP2m">
+                  <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
+                  <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                  <node concept="37vLTw" id="7MdXHVxkeQX" role="37wK5m">
+                    <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="2p2ql82MsR5" role="3cqZAp">
+              <node concept="Xl_RD" id="2p2ql82MsXa" role="abp_N">
+                <property role="Xl_RC" value="WAIT FOR STOP" />
+              </node>
+            </node>
+            <node concept="3clFbF" id="2p2ql82MrK1" role="3cqZAp">
+              <node concept="2OqwBi" id="2p2ql82MrQ3" role="3clFbG">
+                <node concept="37vLTw" id="2p2ql82MrJZ" role="2Oq$k0">
+                  <ref role="3cqZAo" node="7MdXHVxkems" resolve="sc" />
+                </node>
+                <node concept="liA8E" id="7MdXHVximYh" role="2OqNvi">
+                  <ref role="37wK5l" to="30ym:2p2ql82MpdJ" resolve="waitForStop" />
+                </node>
+              </node>
+            </node>
+            <node concept="abc8K" id="2p2ql82Mt1E" role="3cqZAp">
+              <node concept="Xl_RD" id="2p2ql82Mt1F" role="abp_N">
+                <property role="Xl_RC" value="WAITED FOR STOP, RETURNED" />
+              </node>
+            </node>
+          </node>
           <node concept="3uVAMA" id="2p2ql82Mm5q" role="1zxBo5">
             <node concept="XOnhg" id="2p2ql82Mm5s" role="1zc67B">
               <property role="3TUv4t" value="false" />
@@ -1044,39 +1185,39 @@
               </node>
             </node>
           </node>
-          <node concept="3clFbS" id="2p2ql82Mm5p" role="1zxBo7">
-            <node concept="3cpWs8" id="7MdXHVxkemr" role="3cqZAp">
-              <node concept="3cpWsn" id="7MdXHVxkems" role="3cpWs9">
+          <node concept="3clFbS" id="lGCzCbjEUI" role="1zxBo7">
+            <node concept="3cpWs8" id="lGCzCbjEUJ" role="3cqZAp">
+              <node concept="3cpWsn" id="lGCzCbjEUK" role="3cpWs9">
                 <property role="TrG5h" value="sc" />
-                <node concept="3uibUv" id="7MdXHVxkemt" role="1tU5fm">
+                <node concept="3uibUv" id="lGCzCbjEUL" role="1tU5fm">
                   <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
                 </node>
-                <node concept="2YIFZM" id="7MdXHVxkeQW" role="33vP2m">
+                <node concept="2YIFZM" id="lGCzCbjEUM" role="33vP2m">
                   <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
                   <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                  <node concept="37vLTw" id="7MdXHVxkeQX" role="37wK5m">
+                  <node concept="37vLTw" id="lGCzCbjEUN" role="37wK5m">
                     <ref role="3cqZAo" node="6Jg9HTa82dQ" resolve="serverConfiguration" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="abc8K" id="2p2ql82MsR5" role="3cqZAp">
-              <node concept="Xl_RD" id="2p2ql82MsXa" role="abp_N">
+            <node concept="abc8K" id="lGCzCbjEUO" role="3cqZAp">
+              <node concept="Xl_RD" id="lGCzCbjEUP" role="abp_N">
                 <property role="Xl_RC" value="WAIT FOR STOP" />
               </node>
             </node>
-            <node concept="3clFbF" id="2p2ql82MrK1" role="3cqZAp">
-              <node concept="2OqwBi" id="2p2ql82MrQ3" role="3clFbG">
-                <node concept="37vLTw" id="2p2ql82MrJZ" role="2Oq$k0">
+            <node concept="3clFbF" id="lGCzCbjEUQ" role="3cqZAp">
+              <node concept="2OqwBi" id="lGCzCbjEUR" role="3clFbG">
+                <node concept="37vLTw" id="lGCzCbjEUS" role="2Oq$k0">
                   <ref role="3cqZAo" node="7MdXHVxkems" resolve="sc" />
                 </node>
-                <node concept="liA8E" id="7MdXHVximYh" role="2OqNvi">
+                <node concept="liA8E" id="lGCzCbjEUT" role="2OqNvi">
                   <ref role="37wK5l" to="30ym:2p2ql82MpdJ" resolve="waitForStop" />
                 </node>
               </node>
             </node>
-            <node concept="abc8K" id="2p2ql82Mt1E" role="3cqZAp">
-              <node concept="Xl_RD" id="2p2ql82Mt1F" role="abp_N">
+            <node concept="abc8K" id="lGCzCbjEUU" role="3cqZAp">
+              <node concept="Xl_RD" id="lGCzCbjEUV" role="abp_N">
                 <property role="Xl_RC" value="WAITED FOR STOP, RETURNED" />
               </node>
             </node>
