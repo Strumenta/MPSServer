@@ -9,6 +9,7 @@
   <imports>
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
+    <import index="9xi5" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:spark(com.strumenta.mpsserver.deps/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -137,6 +138,54 @@
   </node>
   <node concept="3HP615" id="4JnP3TVzc4K">
     <property role="TrG5h" value="ExtendableServer" />
+    <node concept="3clFb_" id="6mL1JKjFgbn" role="jymVt">
+      <property role="TrG5h" value="registerGetRoute" />
+      <node concept="3clFbS" id="6mL1JKjFgbq" role="3clF47" />
+      <node concept="3Tm1VV" id="6mL1JKjFgbr" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjFgaR" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjFhLd" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjFhLc" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjFhMs" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjFhUC" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+    </node>
+    <node concept="3clFb_" id="6mL1JKjGdKL" role="jymVt">
+      <property role="TrG5h" value="registerPutRoute" />
+      <node concept="3clFbS" id="6mL1JKjGdKM" role="3clF47" />
+      <node concept="3Tm1VV" id="6mL1JKjGdKN" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjGdKO" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjGdKP" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjGdKQ" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjGdKR" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjGdKS" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+    </node>
+    <node concept="3clFb_" id="6mL1JKjGdLj" role="jymVt">
+      <property role="TrG5h" value="registerPostRoute" />
+      <node concept="3clFbS" id="6mL1JKjGdLk" role="3clF47" />
+      <node concept="3Tm1VV" id="6mL1JKjGdLl" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjGdLm" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjGdLn" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjGdLo" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjGdLp" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjGdLq" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+    </node>
     <node concept="3clFb_" id="i07tI0JL0g" role="jymVt">
       <property role="TrG5h" value="registerConceptSpecificAction" />
       <node concept="3clFbS" id="i07tI0JL0j" role="3clF47" />

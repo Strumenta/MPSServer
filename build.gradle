@@ -39,10 +39,12 @@ configurations {
 }
 
 ext.mpsVersion = '2020.3.3'
+ext.modelixVersion = '0.0.30'
 
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
 	mps "com.jetbrains:mps:$mpsVersion"
+    mpsArtifacts "org.modelix:mps-model-plugin:$modelixVersion"
     libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
 }
 

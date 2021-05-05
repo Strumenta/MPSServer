@@ -3530,7 +3530,7 @@
                                                 <node concept="3cpWs3" id="lGCzCbkENw" role="37wK5m">
                                                   <node concept="2OqwBi" id="lGCzCbkENx" role="3uHU7w">
                                                     <node concept="37vLTw" id="lGCzCbkENy" role="2Oq$k0">
-                                                      <ref role="3cqZAo" node="7MdXHVxjL6V" resolve="rootClass" />
+                                                      <ref role="3cqZAo" node="lGCzCbkENl" resolve="rootClass" />
                                                     </node>
                                                     <node concept="2qgKlT" id="lGCzCbkENz" role="2OqNvi">
                                                       <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
@@ -3549,7 +3549,7 @@
                                               <node concept="17QB3L" id="lGCzCbkENB" role="1tU5fm" />
                                               <node concept="2OqwBi" id="lGCzCbkENC" role="33vP2m">
                                                 <node concept="37vLTw" id="lGCzCbkEND" role="2Oq$k0">
-                                                  <ref role="3cqZAo" node="7MdXHVxjL6V" resolve="rootClass" />
+                                                  <ref role="3cqZAo" node="lGCzCbkENl" resolve="rootClass" />
                                                 </node>
                                                 <node concept="2qgKlT" id="lGCzCbkENE" role="2OqNvi">
                                                   <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
@@ -3575,7 +3575,7 @@
                                                 <node concept="liA8E" id="7MdXHVxjL7t" role="2OqNvi">
                                                   <ref role="37wK5l" to="wyt6:~ClassLoader.loadClass(java.lang.String)" resolve="loadClass" />
                                                   <node concept="37vLTw" id="7MdXHVxjL7u" role="37wK5m">
-                                                    <ref role="3cqZAo" node="7MdXHVxjL7h" resolve="qname" />
+                                                    <ref role="3cqZAo" node="lGCzCbkENA" resolve="qname" />
                                                   </node>
                                                 </node>
                                               </node>
@@ -3596,7 +3596,7 @@
                                                       </node>
                                                       <node concept="2OqwBi" id="lGCzCbkENW" role="33vP2m">
                                                         <node concept="2GrUjf" id="lGCzCbkENX" role="2Oq$k0">
-                                                          <ref role="2Gs0qQ" node="7MdXHVxjL7w" resolve="constructor" />
+                                                          <ref role="2Gs0qQ" node="lGCzCbkENP" resolve="constructor" />
                                                         </node>
                                                         <node concept="liA8E" id="lGCzCbkENY" role="2OqNvi">
                                                           <ref role="37wK5l" to="t6h5:~Constructor.newInstance(java.lang.Object...)" resolve="newInstance" />
@@ -3618,7 +3618,7 @@
                                                                 <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                               </node>
                                                               <node concept="37vLTw" id="lGCzCbkEO7" role="10QFUP">
-                                                                <ref role="3cqZAo" node="7MdXHVxjL7_" resolve="instance" />
+                                                                <ref role="3cqZAo" node="lGCzCbkENU" resolve="instance" />
                                                               </node>
                                                             </node>
                                                           </node>
@@ -3632,7 +3632,7 @@
                                                               <node concept="liA8E" id="lGCzCbkEOd" role="2OqNvi">
                                                                 <ref role="37wK5l" node="68bedQPfKlh" resolve="activateAndRegisterExtension" />
                                                                 <node concept="37vLTw" id="lGCzCbkEOe" role="37wK5m">
-                                                                  <ref role="3cqZAo" node="7MdXHVxjL7H" resolve="mpsServerExtension" />
+                                                                  <ref role="3cqZAo" node="lGCzCbkEO2" resolve="mpsServerExtension" />
                                                                 </node>
                                                               </node>
                                                             </node>
@@ -3652,7 +3652,7 @@
                                                             <node concept="3clFbF" id="lGCzCbkEOj" role="3cqZAp">
                                                               <node concept="2OqwBi" id="lGCzCbkEOk" role="3clFbG">
                                                                 <node concept="37vLTw" id="lGCzCbkEOl" role="2Oq$k0">
-                                                                  <ref role="3cqZAo" node="7MdXHVxjL7V" resolve="t" />
+                                                                  <ref role="3cqZAo" node="lGCzCbkEOg" resolve="t" />
                                                                 </node>
                                                                 <node concept="liA8E" id="lGCzCbkEOm" role="2OqNvi">
                                                                   <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
@@ -3667,7 +3667,7 @@
                                                                   <node concept="3cpWs3" id="lGCzCbkEOr" role="37wK5m">
                                                                     <node concept="2OqwBi" id="lGCzCbkEOs" role="3uHU7w">
                                                                       <node concept="37vLTw" id="lGCzCbkEOt" role="2Oq$k0">
-                                                                        <ref role="3cqZAo" node="7MdXHVxjL6V" resolve="rootClass" />
+                                                                        <ref role="3cqZAo" node="lGCzCbkENl" resolve="rootClass" />
                                                                       </node>
                                                                       <node concept="2qgKlT" id="lGCzCbkEOu" role="2OqNvi">
                                                                         <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
@@ -3689,7 +3689,7 @@
                                                         <ref role="3uigEE" to="e4as:2OkDVTX2Kdi" resolve="MPSServerExtension" />
                                                       </node>
                                                       <node concept="37vLTw" id="lGCzCbkEOy" role="2ZW6bz">
-                                                        <ref role="3cqZAo" node="7MdXHVxjL7_" resolve="instance" />
+                                                        <ref role="3cqZAo" node="lGCzCbkENU" resolve="instance" />
                                                       </node>
                                                     </node>
                                                   </node>
@@ -3700,7 +3700,7 @@
                                                   </node>
                                                   <node concept="2OqwBi" id="lGCzCbkEO_" role="3uHU7B">
                                                     <node concept="2GrUjf" id="lGCzCbkEOA" role="2Oq$k0">
-                                                      <ref role="2Gs0qQ" node="7MdXHVxjL7w" resolve="constructor" />
+                                                      <ref role="2Gs0qQ" node="lGCzCbkENP" resolve="constructor" />
                                                     </node>
                                                     <node concept="liA8E" id="lGCzCbkEOB" role="2OqNvi">
                                                       <ref role="37wK5l" to="t6h5:~Constructor.getParameterCount()" resolve="getParameterCount" />
@@ -3722,7 +3722,7 @@
                                         <node concept="2OqwBi" id="lGCzCbkEOF" role="3clFbw">
                                           <node concept="2OqwBi" id="lGCzCbkEOG" role="2Oq$k0">
                                             <node concept="37vLTw" id="lGCzCbkEOH" role="2Oq$k0">
-                                              <ref role="3cqZAo" node="7MdXHVxjL6V" resolve="rootClass" />
+                                              <ref role="3cqZAo" node="lGCzCbkENl" resolve="rootClass" />
                                             </node>
                                             <node concept="2qgKlT" id="lGCzCbkEOI" role="2OqNvi">
                                               <ref role="37wK5l" to="tpek:4fAeKISQjDi" resolve="getAllSuperClassifiers" />
@@ -3752,7 +3752,7 @@
                                                     </node>
                                                     <node concept="2OqwBi" id="lGCzCbkEOV" role="3uHU7B">
                                                       <node concept="37vLTw" id="lGCzCbkEOW" role="2Oq$k0">
-                                                        <ref role="3cqZAo" node="7MdXHVxjL8D" resolve="it" />
+                                                        <ref role="3cqZAo" node="lGCzCbkEOY" resolve="it" />
                                                       </node>
                                                       <node concept="2qgKlT" id="lGCzCbkEOX" role="2OqNvi">
                                                         <ref role="37wK5l" to="tpcu:hEwIO9y" resolve="getFqName" />
@@ -5320,6 +5320,138 @@
     </node>
     <node concept="3uibUv" id="3cTvBybY7yA" role="EKbjA">
       <ref role="3uigEE" node="3cTvBybXVS6" resolve="ServerStateProvider" />
+    </node>
+    <node concept="3clFb_" id="6mL1JKjFwXU" role="jymVt">
+      <property role="TrG5h" value="registerGetRoute" />
+      <node concept="3Tm1VV" id="6mL1JKjFwXW" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjFwXX" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjFwXY" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjFwXZ" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjFwY0" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjFwY1" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="6mL1JKjFwY2" role="3clF47">
+        <node concept="3clFbF" id="6mL1JKjG0OA" role="3cqZAp">
+          <node concept="2OqwBi" id="6mL1JKjG2mG" role="3clFbG">
+            <node concept="2OqwBi" id="6mL1JKjG1xL" role="2Oq$k0">
+              <node concept="Xjq3P" id="6mL1JKjG0O_" role="2Oq$k0" />
+              <node concept="2OwXpG" id="6mL1JKjG2bB" role="2OqNvi">
+                <ref role="2Oxat5" node="4sxAHuu5dvW" resolve="sparkService" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6mL1JKjG3bn" role="2OqNvi">
+              <ref role="37wK5l" to="9xi5:~Routable.get(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="get" />
+              <node concept="37vLTw" id="6mL1JKjG3Uy" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjFwXY" resolve="path" />
+              </node>
+              <node concept="37vLTw" id="6mL1JKjG4Uo" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjFwY0" resolve="route" />
+              </node>
+              <node concept="2ShNRf" id="6mL1JKjG8Oa" role="37wK5m">
+                <node concept="HV5vD" id="6mL1JKjG8Ob" role="2ShVmc">
+                  <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="6mL1JKjFwY3" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="6mL1JKjGkfh" role="jymVt">
+      <property role="TrG5h" value="registerPutRoute" />
+      <node concept="3Tm1VV" id="6mL1JKjGkfi" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjGkfj" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjGkfk" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjGkfl" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjGkfm" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjGkfn" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="6mL1JKjGkfo" role="3clF47">
+        <node concept="3clFbF" id="6mL1JKjGkfp" role="3cqZAp">
+          <node concept="2OqwBi" id="6mL1JKjGkfq" role="3clFbG">
+            <node concept="2OqwBi" id="6mL1JKjGkfr" role="2Oq$k0">
+              <node concept="Xjq3P" id="6mL1JKjGkfs" role="2Oq$k0" />
+              <node concept="2OwXpG" id="6mL1JKjGkft" role="2OqNvi">
+                <ref role="2Oxat5" node="4sxAHuu5dvW" resolve="sparkService" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6mL1JKjGkfu" role="2OqNvi">
+              <ref role="37wK5l" to="9xi5:~Routable.put(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="put" />
+              <node concept="37vLTw" id="6mL1JKjGkfv" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjGkfk" resolve="path" />
+              </node>
+              <node concept="37vLTw" id="6mL1JKjGkfw" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjGkfm" resolve="route" />
+              </node>
+              <node concept="2ShNRf" id="6mL1JKjGkfx" role="37wK5m">
+                <node concept="HV5vD" id="6mL1JKjGkfy" role="2ShVmc">
+                  <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="6mL1JKjGkfz" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="6mL1JKjGkKn" role="jymVt">
+      <property role="TrG5h" value="registerPostRoute" />
+      <node concept="3Tm1VV" id="6mL1JKjGkKo" role="1B3o_S" />
+      <node concept="3cqZAl" id="6mL1JKjGkKp" role="3clF45" />
+      <node concept="37vLTG" id="6mL1JKjGkKq" role="3clF46">
+        <property role="TrG5h" value="path" />
+        <node concept="17QB3L" id="6mL1JKjGkKr" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6mL1JKjGkKs" role="3clF46">
+        <property role="TrG5h" value="route" />
+        <node concept="3uibUv" id="6mL1JKjGkKt" role="1tU5fm">
+          <ref role="3uigEE" to="9xi5:~Route" resolve="Route" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="6mL1JKjGkKu" role="3clF47">
+        <node concept="3clFbF" id="6mL1JKjGkKv" role="3cqZAp">
+          <node concept="2OqwBi" id="6mL1JKjGkKw" role="3clFbG">
+            <node concept="2OqwBi" id="6mL1JKjGkKx" role="2Oq$k0">
+              <node concept="Xjq3P" id="6mL1JKjGkKy" role="2Oq$k0" />
+              <node concept="2OwXpG" id="6mL1JKjGkKz" role="2OqNvi">
+                <ref role="2Oxat5" node="4sxAHuu5dvW" resolve="sparkService" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6mL1JKjGkK$" role="2OqNvi">
+              <ref role="37wK5l" to="9xi5:~Routable.post(java.lang.String,spark.Route,spark.ResponseTransformer)" resolve="post" />
+              <node concept="37vLTw" id="6mL1JKjGkK_" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjGkKq" resolve="path" />
+              </node>
+              <node concept="37vLTw" id="6mL1JKjGkKA" role="37wK5m">
+                <ref role="3cqZAo" node="6mL1JKjGkKs" resolve="route" />
+              </node>
+              <node concept="2ShNRf" id="6mL1JKjGkKB" role="37wK5m">
+                <node concept="HV5vD" id="6mL1JKjGkKC" role="2ShVmc">
+                  <ref role="HV5vE" node="58QDHkDp9W3" resolve="JsonTransformer" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="6mL1JKjGkKD" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
   </node>
   <node concept="312cEu" id="4XQ2p$w1IaY">
