@@ -4207,6 +4207,14 @@
       <node concept="3cqZAl" id="1P$YlGOMMwr" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="2yBD7rQhZch" role="jymVt" />
+    <node concept="312cEg" id="6Hz$xA6_3FL" role="jymVt">
+      <property role="TrG5h" value="webSocketHandler" />
+      <node concept="3Tm6S6" id="6Hz$xA6_0DS" role="1B3o_S" />
+      <node concept="3uibUv" id="6Hz$xA6_3pq" role="1tU5fm">
+        <ref role="3uigEE" node="6Y14zWtL0rJ" resolve="WebSocketHandler" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6Hz$xA6$XkO" role="jymVt" />
     <node concept="3clFb_" id="5SYYrGBDfKz" role="jymVt">
       <property role="TrG5h" value="start" />
       <node concept="3clFbS" id="5SYYrGBDfKA" role="3clF47">
@@ -4303,6 +4311,24 @@
             </node>
           </node>
           <node concept="3clFbS" id="6Iad5Is6Urq" role="1zxBo7">
+            <node concept="3clFbF" id="6Hz$xA6_8TM" role="3cqZAp">
+              <node concept="37vLTI" id="6Hz$xA6_9zv" role="3clFbG">
+                <node concept="37vLTw" id="6Hz$xA6_8TK" role="37vLTJ">
+                  <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="webSocketHandler" />
+                </node>
+                <node concept="2ShNRf" id="6Hz$xA6_ao9" role="37vLTx">
+                  <node concept="1pGfFk" id="6Hz$xA6_aoa" role="2ShVmc">
+                    <ref role="37wK5l" node="6Y14zWtOxff" resolve="WebSocketHandler" />
+                    <node concept="37vLTw" id="6Hz$xA6_aob" role="37wK5m">
+                      <ref role="3cqZAo" node="3ronlYH7Hbj" resolve="intentionsModule" />
+                    </node>
+                    <node concept="37vLTw" id="6Hz$xA6__gJ" role="37wK5m">
+                      <ref role="3cqZAo" node="6Hz$xA6$18m" resolve="registeredMessageHandlers" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3clFbF" id="4sxAHuu86YA" role="3cqZAp">
               <node concept="2OqwBi" id="4sxAHuu87bT" role="3clFbG">
                 <node concept="37vLTw" id="4sxAHuu86Y$" role="2Oq$k0">
@@ -4313,13 +4339,8 @@
                   <node concept="Xl_RD" id="4sxAHuu87ny" role="37wK5m">
                     <property role="Xl_RC" value="/socket" />
                   </node>
-                  <node concept="2ShNRf" id="4sxAHuu87nz" role="37wK5m">
-                    <node concept="1pGfFk" id="4sxAHuu87n$" role="2ShVmc">
-                      <ref role="37wK5l" node="6Y14zWtOxff" resolve="WebSocketHandler" />
-                      <node concept="37vLTw" id="4sxAHuu87n_" role="37wK5m">
-                        <ref role="3cqZAo" node="3ronlYH7Hbj" resolve="intentionsModule" />
-                      </node>
-                    </node>
+                  <node concept="37vLTw" id="6Hz$xA6_bBd" role="37wK5m">
+                    <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="webSocketHandler" />
                   </node>
                 </node>
               </node>
@@ -5131,6 +5152,65 @@
       </node>
       <node concept="2AHcQZ" id="6mL1JKjGkKD" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="6Hz$xA6zsd2" role="jymVt">
+      <property role="TrG5h" value="registerMessageHandler" />
+      <node concept="3Tm1VV" id="6Hz$xA6zsd4" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Hz$xA6zsd5" role="3clF45" />
+      <node concept="37vLTG" id="6Hz$xA6zsd6" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="17QB3L" id="6Hz$xA6zsd7" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6Hz$xA6zsd8" role="3clF46">
+        <property role="TrG5h" value="messageHandler" />
+        <node concept="3uibUv" id="6Hz$xA6zOZj" role="1tU5fm">
+          <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="6Hz$xA6zsda" role="3clF47">
+        <node concept="3clFbF" id="6Hz$xA6$6Vx" role="3cqZAp">
+          <node concept="37vLTI" id="6Hz$xA6$8C7" role="3clFbG">
+            <node concept="37vLTw" id="6Hz$xA6$9xZ" role="37vLTx">
+              <ref role="3cqZAo" node="6Hz$xA6zsd8" resolve="messageHandler" />
+            </node>
+            <node concept="3EllGN" id="6Hz$xA6$7tu" role="37vLTJ">
+              <node concept="2OqwBi" id="6Hz$xA6_GSQ" role="3ElVtu">
+                <node concept="37vLTw" id="6Hz$xA6$80g" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Hz$xA6zsd6" resolve="message" />
+                </node>
+                <node concept="liA8E" id="6Hz$xA6_Hlr" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="6Hz$xA6$6Vw" role="3ElQJh">
+                <ref role="3cqZAo" node="6Hz$xA6$18m" resolve="registeredMessageHandlers" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="6Hz$xA6zsdb" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6Hz$xA6zQiX" role="jymVt" />
+    <node concept="312cEg" id="6Hz$xA6$18m" role="jymVt">
+      <property role="TrG5h" value="registeredMessageHandlers" />
+      <node concept="3Tm6S6" id="6Hz$xA6zV23" role="1B3o_S" />
+      <node concept="3rvAFt" id="6Hz$xA6zXUQ" role="1tU5fm">
+        <node concept="17QB3L" id="6Hz$xA6$0y0" role="3rvQeY" />
+        <node concept="3uibUv" id="6Hz$xA6$0Dt" role="3rvSg0">
+          <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+        </node>
+      </node>
+      <node concept="2ShNRf" id="6Hz$xA6$648" role="33vP2m">
+        <node concept="3rGOSV" id="6Hz$xA6$1Nv" role="2ShVmc">
+          <node concept="17QB3L" id="6Hz$xA6$1Nw" role="3rHrn6" />
+          <node concept="3uibUv" id="6Hz$xA6$1Nx" role="3rHtpV">
+            <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+          </node>
+        </node>
       </node>
     </node>
   </node>
@@ -11986,6 +12066,25 @@
       <node concept="3cqZAl" id="4aUgzo0Hp0$" role="3clF45" />
     </node>
     <node concept="2tJIrI" id="6Y14zWtOwTw" role="jymVt" />
+    <node concept="312cEg" id="6Hz$xA6_rpg" role="jymVt">
+      <property role="TrG5h" value="registeredMessageHandlers" />
+      <node concept="3Tm6S6" id="6Hz$xA6_rph" role="1B3o_S" />
+      <node concept="3rvAFt" id="6Hz$xA6_rpi" role="1tU5fm">
+        <node concept="17QB3L" id="6Hz$xA6_rpj" role="3rvQeY" />
+        <node concept="3uibUv" id="6Hz$xA6_rpk" role="3rvSg0">
+          <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+        </node>
+      </node>
+      <node concept="2ShNRf" id="6Hz$xA6_rpl" role="33vP2m">
+        <node concept="3rGOSV" id="6Hz$xA6_rpm" role="2ShVmc">
+          <node concept="17QB3L" id="6Hz$xA6_rpn" role="3rHrn6" />
+          <node concept="3uibUv" id="6Hz$xA6_rpo" role="3rHtpV">
+            <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="6Hz$xA6_o3T" role="jymVt" />
     <node concept="3clFbW" id="6Y14zWtOxff" role="jymVt">
       <node concept="3cqZAl" id="6Y14zWtOxfh" role="3clF45" />
       <node concept="3Tm1VV" id="6Y14zWtOxfi" role="1B3o_S" />
@@ -12003,11 +12102,33 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="6Hz$xA6_vRv" role="3cqZAp">
+          <node concept="37vLTI" id="6Hz$xA6_xjP" role="3clFbG">
+            <node concept="37vLTw" id="6Hz$xA6_xPl" role="37vLTx">
+              <ref role="3cqZAo" node="6Hz$xA6_mtc" resolve="registeredMessageHandlers" />
+            </node>
+            <node concept="2OqwBi" id="6Hz$xA6_vY1" role="37vLTJ">
+              <node concept="Xjq3P" id="6Hz$xA6_vRt" role="2Oq$k0" />
+              <node concept="2OwXpG" id="6Hz$xA6_w90" role="2OqNvi">
+                <ref role="2Oxat5" node="6Hz$xA6_rpg" resolve="registeredMessageHandlers" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="37vLTG" id="6uy13ANA6mp" role="3clF46">
         <property role="TrG5h" value="intentionsIntegrationServerModule" />
         <node concept="3uibUv" id="6uy13ANA6mo" role="1tU5fm">
           <ref role="3uigEE" node="3ronlYH5$Qr" resolve="IntentionsIntegrationServerModule" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="6Hz$xA6_mtc" role="3clF46">
+        <property role="TrG5h" value="registeredMessageHandlers" />
+        <node concept="3rvAFt" id="6Hz$xA6_mte" role="1tU5fm">
+          <node concept="17QB3L" id="6Hz$xA6_mtf" role="3rvQeY" />
+          <node concept="3uibUv" id="6Hz$xA6_mtg" role="3rvSg0">
+            <ref role="3uigEE" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+          </node>
         </node>
       </node>
     </node>
@@ -13687,6 +13808,86 @@
               </node>
               <node concept="liA8E" id="6Y14zWtOOlU" role="2OqNvi">
                 <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="6Hz$xA6_Mv$" role="3cqZAp">
+          <node concept="3clFbS" id="6Hz$xA6_MvA" role="3clFbx">
+            <node concept="3clFbF" id="6Hz$xA6_Ygy" role="3cqZAp">
+              <node concept="2OqwBi" id="6Hz$xA6A1lx" role="3clFbG">
+                <node concept="3EllGN" id="6Hz$xA6_ZxC" role="2Oq$k0">
+                  <node concept="37vLTw" id="6Hz$xA6_Ygw" role="3ElQJh">
+                    <ref role="3cqZAo" node="6Hz$xA6_rpg" resolve="registeredMessageHandlers" />
+                  </node>
+                  <node concept="2OqwBi" id="6Hz$xA6A0Fo" role="3ElVtu">
+                    <node concept="37vLTw" id="6Hz$xA6A0Fp" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
+                    </node>
+                    <node concept="liA8E" id="6Hz$xA6A0Fq" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="6Hz$xA6A2Dt" role="2OqNvi">
+                  <ref role="37wK5l" to="e4as:6Hz$xA6zDkJ" resolve="handle" />
+                  <node concept="37vLTw" id="6Hz$xA6A30W" role="37wK5m">
+                    <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
+                  </node>
+                  <node concept="2ShNRf" id="6Hz$xA6AZ8p" role="37wK5m">
+                    <node concept="YeOm9" id="6Hz$xA6B0LR" role="2ShVmc">
+                      <node concept="1Y3b0j" id="6Hz$xA6B0LU" role="YeSDq">
+                        <property role="2bfB8j" value="true" />
+                        <ref role="1Y3XeK" to="e4as:6Hz$xA6zDuK" resolve="WebSocketServerContext" />
+                        <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                        <node concept="3Tm1VV" id="6Hz$xA6B0LV" role="1B3o_S" />
+                        <node concept="3clFb_" id="6Hz$xA6B0M0" role="jymVt">
+                          <property role="TrG5h" value="sendMessage" />
+                          <node concept="3Tm1VV" id="6Hz$xA6B0M2" role="1B3o_S" />
+                          <node concept="3cqZAl" id="6Hz$xA6B0M3" role="3clF45" />
+                          <node concept="37vLTG" id="6Hz$xA6B0M4" role="3clF46">
+                            <property role="TrG5h" value="message" />
+                            <node concept="3uibUv" id="6Hz$xA6BaF1" role="1tU5fm">
+                              <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+                            </node>
+                          </node>
+                          <node concept="3clFbS" id="6Hz$xA6B0M6" role="3clF47">
+                            <node concept="3clFbF" id="6Hz$xA6B3yT" role="3cqZAp">
+                              <node concept="1rXfSq" id="6Hz$xA6B74z" role="3clFbG">
+                                <ref role="37wK5l" node="5p1VBoMhq9l" resolve="sendObject" />
+                                <node concept="37vLTw" id="6Hz$xA6B8SO" role="37wK5m">
+                                  <ref role="3cqZAo" node="6Y14zWtL0tT" resolve="session" />
+                                </node>
+                                <node concept="37vLTw" id="6Hz$xA6Baht" role="37wK5m">
+                                  <ref role="3cqZAo" node="6Hz$xA6B0M4" resolve="message" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2AHcQZ" id="6Hz$xA6B0M8" role="2AJF6D">
+                            <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs6" id="6Hz$xA6_X$a" role="3cqZAp" />
+          </node>
+          <node concept="2OqwBi" id="6Hz$xA6_RG7" role="3clFbw">
+            <node concept="37vLTw" id="6Hz$xA6_PEM" role="2Oq$k0">
+              <ref role="3cqZAo" node="6Hz$xA6_rpg" resolve="registeredMessageHandlers" />
+            </node>
+            <node concept="2Nt0df" id="6Hz$xA6_ULW" role="2OqNvi">
+              <node concept="2OqwBi" id="6Hz$xA6_Wvi" role="38cxEo">
+                <node concept="37vLTw" id="6Hz$xA6_W62" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
+                </node>
+                <node concept="liA8E" id="6Hz$xA6_X6A" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                </node>
               </node>
             </node>
           </node>

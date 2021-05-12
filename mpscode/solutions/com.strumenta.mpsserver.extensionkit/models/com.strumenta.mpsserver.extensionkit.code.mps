@@ -9,6 +9,7 @@
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="9xi5" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:spark(com.strumenta.mpsserver.deps/)" />
+    <import index="wy2b" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson(com.strumenta.mpsserver.deps/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -185,6 +186,22 @@
         </node>
       </node>
     </node>
+    <node concept="3clFb_" id="6Hz$xA6zj8J" role="jymVt">
+      <property role="TrG5h" value="registerMessageHandler" />
+      <node concept="3clFbS" id="6Hz$xA6zj8M" role="3clF47" />
+      <node concept="3Tm1VV" id="6Hz$xA6zj8N" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Hz$xA6zj7C" role="3clF45" />
+      <node concept="37vLTG" id="6Hz$xA6zjaK" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="17QB3L" id="6Hz$xA6zjaJ" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="6Hz$xA6zjcS" role="3clF46">
+        <property role="TrG5h" value="messageHandler" />
+        <node concept="3uibUv" id="6Hz$xA6zDzW" role="1tU5fm">
+          <ref role="3uigEE" node="6Hz$xA6zDij" resolve="MessageHandler" />
+        </node>
+      </node>
+    </node>
     <node concept="3clFb_" id="i07tI0JL0g" role="jymVt">
       <property role="TrG5h" value="registerConceptSpecificAction" />
       <node concept="3clFbS" id="i07tI0JL0j" role="3clF47" />
@@ -236,6 +253,44 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="i07tI0JCFC" role="1B3o_S" />
+  </node>
+  <node concept="3HP615" id="6Hz$xA6zDij">
+    <property role="TrG5h" value="MessageHandler" />
+    <node concept="3clFb_" id="6Hz$xA6zDkJ" role="jymVt">
+      <property role="TrG5h" value="handle" />
+      <node concept="3clFbS" id="6Hz$xA6zDkM" role="3clF47" />
+      <node concept="3Tm1VV" id="6Hz$xA6zDkN" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Hz$xA6zDiR" role="3clF45" />
+      <node concept="37vLTG" id="6Hz$xA6zDtd" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="3uibUv" id="6Hz$xA6zDtc" role="1tU5fm">
+          <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="6Hz$xA6zDtP" role="3clF46">
+        <property role="TrG5h" value="serverContext" />
+        <node concept="3uibUv" id="6Hz$xA6zDw$" role="1tU5fm">
+          <ref role="3uigEE" node="6Hz$xA6zDuK" resolve="WebSocketServerContext" />
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6Hz$xA6zDik" role="1B3o_S" />
+  </node>
+  <node concept="3HP615" id="6Hz$xA6zDuK">
+    <property role="TrG5h" value="WebSocketServerContext" />
+    <node concept="3clFb_" id="6Hz$xA6zDvx" role="jymVt">
+      <property role="TrG5h" value="sendMessage" />
+      <node concept="3clFbS" id="6Hz$xA6zDv$" role="3clF47" />
+      <node concept="3Tm1VV" id="6Hz$xA6zDv_" role="1B3o_S" />
+      <node concept="3cqZAl" id="6Hz$xA6zDvk" role="3clF45" />
+      <node concept="37vLTG" id="6Hz$xA6zDvW" role="3clF46">
+        <property role="TrG5h" value="message" />
+        <node concept="3uibUv" id="6Hz$xA6BcVX" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="6Hz$xA6zDuL" role="1B3o_S" />
   </node>
 </model>
 
