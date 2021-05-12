@@ -10,7 +10,7 @@
   <property name="mpsserver.home" location="${basedir}" />
   <property name="artifacts.root" location="${basedir}/../artifacts" />
   <property name="mpsextensions.home" location="${artifacts.root}/de.itemis.mps.extensions" />
-  <property name="modelix.home" location="${artifacts.root}" />
+  <property name="modelix.home" location="${artifacts.root}/modelix" />
   <property name="mps.home" location="" />
   <property name="artifacts.mps" location="${mps.home}" />
   <property name="artifacts.mpsStandalone" location="${mps.home}" />
@@ -68,6 +68,7 @@
         <depends>jetbrains.mps.vcs</depends>
         <depends>jetbrains.mps.ide.httpsupport</depends>
         <depends>org.modelix.model</depends>
+        <depends>de.q60.shadowmodels</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />

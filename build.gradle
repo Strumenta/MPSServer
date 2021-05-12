@@ -32,6 +32,7 @@ version = '2020.3-2'
 configurations {
 	mps
 	mpsArtifacts
+    modelixArtifacts
 	jdk
 	ant_lib
 	libs
@@ -45,8 +46,8 @@ ext.mpsExtensionsVersion = '2020.3.1710.8c5c648'
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
 	mps "com.jetbrains:mps:$mpsVersion"
-    mpsArtifacts "org.modelix:mps-model-plugin:$modelixVersion"
-    mpsArtifacts "org.modelix:build-scripts:$modelixVersion"
+    modelixArtifacts "org.modelix:mps-model-plugin:$modelixVersion"
+    modelixArtifacts "org.modelix:build-scripts:$modelixVersion"
     mpsArtifacts "de.itemis.mps:extensions:$mpsExtensionsVersion"
     libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
 }
@@ -77,6 +78,8 @@ if (!hasProperty("jdk_home")) {
 }
 
 ext.artifactsDir = new File(rootDir, 'artifacts')
+ext.mpsExtensionsDir = new File(artifactsDir, "de.itemis.mps.extensions")
+ext.modelixDir = new File(artifactsDir, "modelix")
 ext.mpscode = new File(rootDir, 'mpscode')
 ext.mpsDir = project.hasProperty('mpsPath') ? new File("${mpsPath}") : new File(artifactsDir, 'mps')
 ext.distributionDependenciesDir = new File(buildDir, 'distribution-dependencies')
@@ -90,6 +93,8 @@ ext.antScriptArgs =  [
    "-Dmps.macro.mpsserver.home=${mpscode.getAbsolutePath()}",
    "-Dmpsserver.version=${project.version}",
    "-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
+   "-Dmodelix.home=${modelixDir.getAbsolutePath()}",
+   "-Dmpsextensions.home=${mpsExtensionsDir.getAbsolutePath()}",
    "-Djava.awt.headless=true"
 ]
 	
@@ -110,6 +115,13 @@ task resolveMpsArtifacts(type: Copy) {
 		configurations.mpsArtifacts.resolve().collect { zipTree(it) }
 	}
 	into artifactsDir
+}
+
+task resolveModelixArtifacts(type: Copy) {
+    from {
+        configurations.modelixArtifacts.resolve().collect { zipTree(it) }
+    }
+    into modelixDir
 }
 
 task resolveLibs(type: Sync) {
@@ -133,7 +145,7 @@ task resolveLibs(type: Sync) {
 }
 
 task setuplocal {
-	dependsOn resolveMps, resolveMpsArtifacts, resolveLibs
+	dependsOn resolveMps, resolveMpsArtifacts, resolveModelixArtifacts, resolveLibs
 }
 
 // Alias setuplocal as setup

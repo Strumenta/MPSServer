@@ -7,7 +7,7 @@
           <value>
             <Library>
               <option name="name" value="modelix-build" />
-              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.build" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/modelix/plugins/org.modelix.build" />
             </Library>
           </value>
         </entry>
@@ -15,7 +15,7 @@
           <value>
             <Library>
               <option name="name" value="modelix-common" />
-              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.common" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/modelix/plugins/org.modelix.common" />
             </Library>
           </value>
         </entry>
@@ -23,7 +23,7 @@
           <value>
             <Library>
               <option name="name" value="modelix-model" />
-              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.model" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/modelix/plugins/org.modelix.model" />
             </Library>
           </value>
         </entry>

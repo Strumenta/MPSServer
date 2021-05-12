@@ -112,6 +112,7 @@
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
+        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="4297162197620964123" name="jetbrains.mps.build.mps.structure.BuildMps_GeneratorOptions" flags="ng" index="1wNqPr">
@@ -189,6 +190,9 @@
       <node concept="m$_yC" id="6mL1JKjI4NU" role="m$_yJ">
         <ref role="m$_y1" to="indb:7gF2HTviNPW" resolve="org.modelix.model" />
       </node>
+      <node concept="m$_yC" id="4uvDsSym29g" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:4iIKqJTZ5I8" resolve="de.q60.shadowmodels" />
+      </node>
     </node>
     <node concept="2G$12M" id="6mL1JKjG$LD" role="3989C9">
       <property role="TrG5h" value="MPSServerModelix" />
@@ -248,6 +252,7 @@
         </node>
         <node concept="1SiIV0" id="6mL1JKjG$M4" role="3bR37C">
           <node concept="3bR9La" id="6mL1JKjG$M5" role="1SiIV1">
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="24gg:4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
           </node>
         </node>
@@ -301,6 +306,9 @@
       <property role="TrG5h" value="modelix.home" />
       <node concept="398BVA" id="4ZOWApKnq8H" role="398pKh">
         <ref role="398BVh" node="1Y19Fp43kP9" resolve="artifacts.root" />
+        <node concept="2Ry0Ak" id="6Hz$xA6zcoY" role="iGT6I">
+          <property role="2Ry0Am" value="modelix" />
+        </node>
       </node>
     </node>
     <node concept="398rNT" id="6mL1JKjG$M$" role="1l3spd">
