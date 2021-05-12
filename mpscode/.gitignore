@@ -6,3 +6,4 @@ build-examples.xml
 junit*.properties
 build-extensionkit.xml
 build-modelix.xml
+build-build.xml

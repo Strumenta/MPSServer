@@ -102,7 +102,6 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="1208623485264" name="jetbrains.mps.baseLanguage.structure.AbstractOperation" flags="nn" index="1B$H19" />
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
       </concept>
@@ -132,7 +131,7 @@
     <node concept="312cEg" id="6mL1JKjHUdS" role="jymVt">
       <property role="TrG5h" value="cloudRepository" />
       <node concept="3Tm6S6" id="6mL1JKjHUdT" role="1B3o_S" />
-      <node concept="3uibUv" id="6mL1JKjHTVa" role="1tU5fm">
+      <node concept="3uibUv" id="4ZOWApKniJM" role="1tU5fm">
         <ref role="3uigEE" to="csg2:6aRQr1WOV$v" resolve="CloudRepository" />
       </node>
     </node>
@@ -241,7 +240,7 @@
         </node>
       </node>
       <node concept="3Tm6S6" id="6mL1JKjHmpW" role="1B3o_S" />
-      <node concept="3uibUv" id="6mL1JKjHWtl" role="3clF45">
+      <node concept="3uibUv" id="4ZOWApKniVp" role="3clF45">
         <ref role="3uigEE" to="csg2:6aRQr1WOV$v" resolve="CloudRepository" />
       </node>
     </node>
@@ -261,14 +260,6 @@
         </node>
       </node>
       <node concept="3clFbS" id="6mL1JKjFg3$" role="3clF47">
-        <node concept="3clFbF" id="6mL1JKjHWF5" role="3cqZAp">
-          <node concept="2OqwBi" id="6mL1JKjHWMR" role="3clFbG">
-            <node concept="37vLTw" id="6mL1JKjHWF3" role="2Oq$k0">
-              <ref role="3cqZAo" node="6mL1JKjFg3t" resolve="server" />
-            </node>
-            <node concept="1B$H19" id="6mL1JKjHWMW" role="2OqNvi" />
-          </node>
-        </node>
         <node concept="3clFbF" id="6mL1JKjGdAq" role="3cqZAp">
           <node concept="2OqwBi" id="6mL1JKjGdEK" role="3clFbG">
             <node concept="37vLTw" id="6mL1JKjGdAp" role="2Oq$k0">

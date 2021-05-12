@@ -7,6 +7,8 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="indb" ref="r:af9443ad-0981-45a3-a5fa-cc9a9d65725b(org.modelix.build)" />
+    <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.itemis.mps.extensions.build)" />
   </imports>
   <registry>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
@@ -100,16 +102,46 @@
         <ref role="398BVh" node="1Y19Fp43fwE" resolve="mps.home" />
       </node>
     </node>
+    <node concept="2sgV4H" id="4ZOWApKnjdJ" role="1l3spa">
+      <ref role="1l3spb" to="indb:7gF2HTviNP8" resolve="org.modelix" />
+      <node concept="398BVA" id="4ZOWApKnjws" role="2JcizS">
+        <ref role="398BVh" node="4ZOWApKnq8v" resolve="modelix.home" />
+      </node>
+    </node>
+    <node concept="2sgV4H" id="4ZOWApKno_3" role="1l3spa">
+      <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="de.itemis.mps.extensions" />
+      <node concept="398BVA" id="4ZOWApKno_X" role="2JcizS">
+        <ref role="398BVh" node="4ZOWApKno_y" resolve="mpsextensions.home" />
+      </node>
+    </node>
     <node concept="398rNT" id="5jTJHMumiWk" role="1l3spd">
       <property role="TrG5h" value="mpsserver.home" />
       <node concept="55IIr" id="3XsdshnRWFX" role="398pKh" />
     </node>
     <node concept="398rNT" id="1Y19Fp43kP9" role="1l3spd">
       <property role="TrG5h" value="artifacts.root" />
-      <node concept="55IIr" id="1Y19Fp43mID" role="398pKh">
-        <node concept="2Ry0Ak" id="5fOZdCVhTdk" role="iGT6I">
-          <property role="2Ry0Am" value="artifacts" />
+      <node concept="55IIr" id="4ZOWApKnjw$" role="398pKh">
+        <node concept="2Ry0Ak" id="4ZOWApKnjwC" role="iGT6I">
+          <property role="2Ry0Am" value=".." />
+          <node concept="2Ry0Ak" id="4ZOWApKnjwH" role="2Ry0An">
+            <property role="2Ry0Am" value="artifacts" />
+          </node>
         </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="4ZOWApKno_y" role="1l3spd">
+      <property role="TrG5h" value="mpsextensions.home" />
+      <node concept="398BVA" id="4ZOWApKno_Q" role="398pKh">
+        <ref role="398BVh" node="1Y19Fp43kP9" resolve="artifacts.root" />
+        <node concept="2Ry0Ak" id="4ZOWApKno_V" role="iGT6I">
+          <property role="2Ry0Am" value="de.itemis.mps.extensions" />
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="4ZOWApKnq8v" role="1l3spd">
+      <property role="TrG5h" value="modelix.home" />
+      <node concept="398BVA" id="4ZOWApKnq8H" role="398pKh">
+        <ref role="398BVh" node="1Y19Fp43kP9" resolve="artifacts.root" />
       </node>
     </node>
     <node concept="398rNT" id="1Y19Fp43fwE" role="1l3spd">
@@ -160,6 +192,16 @@
           <node concept="3qWCbU" id="3Q_qRdUyWmk" role="3LXTna">
             <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
           </node>
+        </node>
+      </node>
+      <node concept="1SiIV0" id="4ZOWApKnjdO" role="3bR37C">
+        <node concept="3bR9La" id="4ZOWApKnjdP" role="1SiIV1">
+          <ref role="3bR37D" to="indb:NHxLR6KATu" resolve="org.modelix.build" />
+        </node>
+      </node>
+      <node concept="1SiIV0" id="4ZOWApKnq9U" role="3bR37C">
+        <node concept="3bR9La" id="4ZOWApKnq9V" role="1SiIV1">
+          <ref role="3bR37D" to="90a9:PE3B26VOkn" resolve="de.itemis.mps.extensions.build" />
         </node>
       </node>
     </node>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectLibraryManager">
+    <option name="libraries">
+      <map>
+        <entry key="modelix-build">
+          <value>
+            <Library>
+              <option name="name" value="modelix-build" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.build" />
+            </Library>
+          </value>
+        </entry>
+        <entry key="modelix-common">
+          <value>
+            <Library>
+              <option name="name" value="modelix-common" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.common" />
+            </Library>
+          </value>
+        </entry>
+        <entry key="modelix-model">
+          <value>
+            <Library>
+              <option name="name" value="modelix-model" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/org.modelix.model" />
+            </Library>
+          </value>
+        </entry>
+        <entry key="mps-extensions">
+          <value>
+            <Library>
+              <option name="name" value="mps-extensions" />
+              <option name="path" value="$PROJECT_DIR$/../artifacts/de.itemis.mps.extensions" />
+            </Library>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/com.strumenta.financialcalc/com.strumenta.financialcalc.mpl" folder="financialcalc" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.businessorg.sandbox/com.strumenta.businessorg.sandbox.msd" folder="business" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.financialcalc.sandbox/com.strumenta.financialcalc.sandbox.msd" folder="financialcalc" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build.modelix/com.strumenta.mpsserver.build.modelix.msd" folder="_build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.build/com.strumenta.mpsserver.build.msd" folder="_build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.buildmeta/com.strumenta.mpsserver.buildmeta.msd" folder="_build" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="main" />
