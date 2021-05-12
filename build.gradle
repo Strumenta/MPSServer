@@ -195,7 +195,7 @@ task buildExtensionKit(type: BuildLanguages, dependsOn: [generateBuildAntScripts
     script new File('mpscode/build-extensionkit.xml')
 }
 
-task buildModelixExtension(type: BuildLanguages, dependsOn: [/*buildCore*/]) {
+task buildModelixExtension(type: BuildLanguages, dependsOn: [buildCore]) {
     scriptArgs = antScriptArgs
     scriptClasspath = buildScriptClasspath
     script new File('mpscode/build-modelix.xml')
