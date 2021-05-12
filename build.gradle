@@ -145,10 +145,10 @@ task generateBuildAntScripts(type: BuildLanguages, dependsOn: [setuplocal]) {
 	script new File('mpscode/build-meta.xml')
 }
 
-task buildServer(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
+task buildCore(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
-	script new File('mpscode/build-server.xml')
+	script new File('mpscode/build-core.xml')
 }
 
 task buildExamples(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
@@ -157,7 +157,7 @@ task buildExamples(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	script new File('mpscode/build-examples.xml')
 }
 
-task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExamples]) {
+task runLanguageTests(type: TestLanguages, dependsOn: [buildCore, buildExamples]) {
 	doFirst {
         def antTestScriptFile = file(it['script'])
         antTestScriptFile.text = antTestScriptFile.text.replace("-Xmx1024m", "-Xmx2048m")
@@ -171,7 +171,7 @@ task runLanguageTests(type: TestLanguages, dependsOn: [buildServer, buildExample
 	script new File('mpscode/build-tests.xml')
 }
 
-task buildLauncher(type: BuildLanguages, dependsOn: [buildServer]) {
+task buildLauncher(type: BuildLanguages, dependsOn: [buildCore]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
 	script new File('mpscode/build-launcher.xml')
@@ -181,6 +181,12 @@ task buildExtensionKit(type: BuildLanguages, dependsOn: [generateBuildAntScripts
     scriptArgs = antScriptArgs
     scriptClasspath = buildScriptClasspath
     script new File('mpscode/build-extensionkit.xml')
+}
+
+task buildModelixExtension(type: BuildLanguages, dependsOn: [buildCore]) {
+    scriptArgs = antScriptArgs
+    scriptClasspath = buildScriptClasspath
+    script new File('mpscode/build-modelix.xml')
 }
 
 task buildBuild(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
@@ -258,7 +264,7 @@ task checkLanguageTests() {
 	tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
 }
 
-task packageServer(type: Zip, dependsOn: [buildServer]) {
+task packageCore(type: Zip, dependsOn: [buildCore]) {
     archiveBaseName = 'com.strumenta.mpsserver'
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'mpsserver-core/**'

@@ -27,7 +27,7 @@ publishing {
         mpsServerCore(MavenPublication) {
             groupId 'com.strumenta.mpsserver'
             artifactId 'mpsserver-core'
-            artifact packageServer
+            artifact packageCore
             version project.version
             pom {
                 name = 'mpsserver-core'

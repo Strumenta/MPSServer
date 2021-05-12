@@ -175,7 +175,7 @@
   <node concept="1l3spW" id="5yOqbw5UOfB">
     <property role="2DA0ip" value="../.." />
     <property role="TrG5h" value="mpsserver-core" />
-    <property role="turDy" value="build-server.xml" />
+    <property role="turDy" value="build-core.xml" />
     <node concept="1wNqPr" id="1Y19Fp4b5CU" role="3989C9">
       <property role="1wNuhe" value="true" />
       <property role="1wNuhh" value="8" />
