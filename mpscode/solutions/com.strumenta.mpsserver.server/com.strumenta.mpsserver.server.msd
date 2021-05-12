@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="com.strumenta.mpsserver.server" uuid="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
+<solution name="com.strumenta.mpsserver.server" uuid="bf983e15-b4da-4ef2-8e0a-5041eab7ff32" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
