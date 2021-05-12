@@ -27,7 +27,7 @@ apply plugin: 'maven'
 group "com.strumenta.mpsserver"
 description = "MpsServer"
 project.archivesBaseName = "mpsserver"
-version = '2020.3-2'
+version = '2020.3-3-SNAPSHOT'
 
 configurations {
 	mps
@@ -81,6 +81,7 @@ ext.artifactsDir = new File(rootDir, 'artifacts')
 ext.mpsExtensionsDir = new File(artifactsDir, "de.itemis.mps.extensions")
 ext.modelixDir = new File(artifactsDir, "modelix")
 ext.mpscode = new File(rootDir, 'mpscode')
+ext.mpsserverCoreBuilt = new File(new File(new File(mpscode, "build"), "artifacts"), "mpsserver-core")
 ext.mpsDir = project.hasProperty('mpsPath') ? new File("${mpsPath}") : new File(artifactsDir, 'mps')
 ext.distributionDependenciesDir = new File(buildDir, 'distribution-dependencies')
 ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
@@ -95,6 +96,7 @@ ext.antScriptArgs =  [
    "-Dartifacts.root=${artifactsDir.getAbsolutePath()}",
    "-Dmodelix.home=${modelixDir.getAbsolutePath()}",
    "-Dmpsextensions.home=${mpsExtensionsDir.getAbsolutePath()}",
+   "-Dmpsserver.core.built=${mpsserverCoreBuilt.getAbsolutePath()}",
    "-Djava.awt.headless=true"
 ]
 	
@@ -309,6 +311,13 @@ task packageBuild(type: Zip, dependsOn: [buildBuild]) {
     from new File(rootDir, 'mpscode/build/artifacts')
     include 'mpsserver-build/**'
     exclude 'mpsserver-build/*.zip'
+}
+
+task packageModelix(type: Zip, dependsOn: [buildModelixExtension]) {
+    archiveBaseName = 'com.strumenta.mpsserver.modelix'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-modelix/**'
+    exclude 'mpsserver-modelix/*.zip'
 }
 
 task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {

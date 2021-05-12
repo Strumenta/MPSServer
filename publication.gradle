@@ -274,6 +274,56 @@ publishing {
                     dependencyNode.appendNode('scope', 'provided')
                 }
             }
+        }   
+        mpsServerModelix(MavenPublication) {
+            groupId 'com.strumenta.mpsserver'
+            artifactId 'mpsserver-modelix'
+            artifact packageModelix
+            version project.version
+            pom {
+                name = 'mpsserver-modelix'
+                description = 'MPSServer modelix'
+                url = 'https://github.com/Strumenta/mpsserver'
+                scm {
+                    connection = 'https://github.com/Strumenta/mpsserver.git'
+                    developerConnection = 'https://github.com/Strumenta/mpsserver.git'
+                    url = 'https://github.com/strumenta/mpsserver'
+                }
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'ftomassetti'
+                        name = 'Federico Tomassetti'
+                        email = 'federico@strumenta.com'
+                    }
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    println(it)
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
         }           
     }
 }
@@ -284,6 +334,7 @@ signing {
     sign publishing.publications.mpsServerExamples
     sign publishing.publications.mpsServerExtensionKit
     sign publishing.publications.mpsServerBuild
+    sign publishing.publications.mpsServerModelix
 }
 
 tasks.withType(Sign) {

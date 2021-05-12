@@ -266,6 +266,27 @@
             <ref role="3bR37D" to="indb:7gF2HTviNPs" resolve="org.modelix.model.mpsplugin" />
           </node>
         </node>
+        <node concept="1SiIV0" id="6Hz$xA6Kh1f" role="3bR37C">
+          <node concept="3bR9La" id="6Hz$xA6Kh1g" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:5U8hsWC70jw" resolve="org.modelix.model.api" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6Hz$xA6Kh1h" role="3bR37C">
+          <node concept="3bR9La" id="6Hz$xA6Kh1i" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6Hz$xA6Kh1j" role="3bR37C">
+          <node concept="3bR9La" id="6Hz$xA6Kh1k" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6Hz$xA6Kh1l" role="3bR37C">
+          <node concept="3bR9La" id="6Hz$xA6Kh1m" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" to="24gg:2p2ql82MleI" resolve="com.strumenta.mpsserver.server" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="6mL1JKjG$Mq" role="1l3spd">
@@ -281,6 +302,20 @@
     <node concept="398rNT" id="6mL1JKjG$Mv" role="1l3spd">
       <property role="TrG5h" value="mpsserver.home" />
       <node concept="55IIr" id="6mL1JKjG$Mw" role="398pKh" />
+    </node>
+    <node concept="398rNT" id="6Hz$xA6Ksjp" role="1l3spd">
+      <property role="TrG5h" value="mpsserver.core.built" />
+      <node concept="55IIr" id="6Hz$xA6Ksjq" role="398pKh">
+        <node concept="2Ry0Ak" id="6Hz$xA6KsjS" role="iGT6I">
+          <property role="2Ry0Am" value="build" />
+          <node concept="2Ry0Ak" id="6Hz$xA6KsjX" role="2Ry0An">
+            <property role="2Ry0Am" value="artifacts" />
+            <node concept="2Ry0Ak" id="6Hz$xA6Ksk2" role="2Ry0An">
+              <property role="2Ry0Am" value="mpsserver-core" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="398rNT" id="1Y19Fp43kP9" role="1l3spd">
       <property role="TrG5h" value="artifacts.root" />
@@ -386,6 +421,9 @@
     </node>
     <node concept="2sgV4H" id="6mL1JKjG$N0" role="1l3spa">
       <ref role="1l3spb" to="24gg:5yOqbw5UOfB" resolve="mpsserver-core" />
+      <node concept="398BVA" id="6Hz$xA6Kh1c" role="2JcizS">
+        <ref role="398BVh" node="6Hz$xA6Ksjp" resolve="mpsserver.core.built" />
+      </node>
     </node>
     <node concept="2sgV4H" id="4ZOWApKnjdJ" role="1l3spa">
       <ref role="1l3spb" to="indb:7gF2HTviNP8" resolve="org.modelix" />
