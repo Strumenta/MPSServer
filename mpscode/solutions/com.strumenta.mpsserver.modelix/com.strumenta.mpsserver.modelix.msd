@@ -12,7 +12,7 @@
   </facets>
   <sourcePath />
   <dependencies>
-    <dependency reexport="false">5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)</dependency>
+    <dependency reexport="true">5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)</dependency>
     <dependency reexport="false">48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)</dependency>
     <dependency reexport="false">c5e5433e-201f-43e2-ad14-a6cba8c80cd6(org.modelix.model.mpsplugin)</dependency>
   </dependencies>
