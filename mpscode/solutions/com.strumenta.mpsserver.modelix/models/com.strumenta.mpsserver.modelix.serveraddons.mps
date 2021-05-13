@@ -210,6 +210,7 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
+      <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
       <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
         <reference id="1116615189566" name="classifier" index="3VsUkX" />
       </concept>
@@ -294,7 +295,7 @@
             <property role="TrG5h" value="targetURL" />
             <node concept="17QB3L" id="8tCK0sRZiH" role="1tU5fm" />
             <node concept="Xl_RD" id="8tCK0sS0Ag" role="33vP2m">
-              <property role="Xl_RC" value="http://localhost:3904" />
+              <property role="Xl_RC" value="http://localhost:3904/" />
             </node>
           </node>
         </node>
@@ -1008,34 +1009,41 @@
               <ref role="3cqZAo" node="6mL1JKjFg3t" resolve="server" />
             </node>
             <node concept="liA8E" id="6Hz$xA6IMTN" role="2OqNvi">
-              <ref role="37wK5l" to="e4as:6Hz$xA6zj8J" resolve="registerMessageHandler" />
-              <node concept="Xl_RD" id="6Hz$xA6IMTO" role="37wK5m">
-                <property role="Xl_RC" value="modelixCleanTransient" />
+              <ref role="37wK5l" to="e4as:8tCK0t0QC1" resolve="registerMessageHandler" />
+              <node concept="3VsKOn" id="8tCK0t0O95" role="37wK5m">
+                <ref role="3VsUkX" node="8tCK0t0El$" resolve="ModelixCleanTransient" />
               </node>
               <node concept="2ShNRf" id="6Hz$xA6IMTP" role="37wK5m">
                 <node concept="YeOm9" id="6Hz$xA6IMTQ" role="2ShVmc">
                   <node concept="1Y3b0j" id="6Hz$xA6IMTR" role="YeSDq">
                     <property role="2bfB8j" value="true" />
-                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
-                    <ref role="1Y3XeK" to="e4as:6Hz$xA6zDij" resolve="MessageHandler" />
+                    <ref role="1Y3XeK" to="30ym:8tCK0sTpsn" resolve="TypedMessageHandler" />
+                    <ref role="37wK5l" to="30ym:8tCK0sTqxm" resolve="TypedMessageHandler" />
+                    <node concept="3VsKOn" id="8tCK0t14RV" role="37wK5m">
+                      <ref role="3VsUkX" node="8tCK0t0El$" resolve="ModelixCleanTransient" />
+                    </node>
                     <node concept="3Tm1VV" id="6Hz$xA6IMTS" role="1B3o_S" />
-                    <node concept="3clFb_" id="6Hz$xA6IMTT" role="jymVt">
+                    <node concept="2tJIrI" id="8tCK0t0MdM" role="jymVt" />
+                    <node concept="3uibUv" id="8tCK0t0Fqo" role="2Ghqu4">
+                      <ref role="3uigEE" node="8tCK0t0El$" resolve="ModelixCleanTransient" />
+                    </node>
+                    <node concept="3clFb_" id="8tCK0t0FXb" role="jymVt">
                       <property role="TrG5h" value="handle" />
-                      <node concept="3Tm1VV" id="6Hz$xA6IMTU" role="1B3o_S" />
-                      <node concept="3cqZAl" id="6Hz$xA6IMTV" role="3clF45" />
-                      <node concept="37vLTG" id="6Hz$xA6IMTW" role="3clF46">
+                      <node concept="37vLTG" id="8tCK0t0FXc" role="3clF46">
                         <property role="TrG5h" value="message" />
-                        <node concept="3uibUv" id="6Hz$xA6IMTX" role="1tU5fm">
-                          <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+                        <node concept="3uibUv" id="8tCK0t0FXl" role="1tU5fm">
+                          <ref role="3uigEE" node="8tCK0t0El$" resolve="ModelixCleanTransient" />
                         </node>
                       </node>
-                      <node concept="37vLTG" id="6Hz$xA6IMTY" role="3clF46">
+                      <node concept="37vLTG" id="8tCK0t0FXe" role="3clF46">
                         <property role="TrG5h" value="serverContext" />
-                        <node concept="3uibUv" id="6Hz$xA6IMTZ" role="1tU5fm">
+                        <node concept="3uibUv" id="8tCK0t0FXf" role="1tU5fm">
                           <ref role="3uigEE" to="e4as:6Hz$xA6zDuK" resolve="WebSocketServerContext" />
                         </node>
                       </node>
-                      <node concept="3clFbS" id="6Hz$xA6IMU0" role="3clF47">
+                      <node concept="3Tmbuc" id="8tCK0t0FXh" role="1B3o_S" />
+                      <node concept="3cqZAl" id="8tCK0t0FXi" role="3clF45" />
+                      <node concept="3clFbS" id="8tCK0t0FXm" role="3clF47">
                         <node concept="abc8K" id="6Hz$xA6O3pF" role="3cqZAp">
                           <node concept="Xl_RD" id="6Hz$xA6O3N_" role="abp_N">
                             <property role="Xl_RC" value="handling modelixCleanTransient" />
@@ -1077,20 +1085,12 @@
                               </node>
                               <node concept="3clFbF" id="8tCK0sRcJv" role="3cqZAp">
                                 <node concept="37vLTI" id="8tCK0sRcJw" role="3clFbG">
-                                  <node concept="2OqwBi" id="8tCK0sRcJx" role="37vLTx">
-                                    <node concept="2OqwBi" id="8tCK0sRcJy" role="2Oq$k0">
-                                      <node concept="37vLTw" id="8tCK0sRcJz" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="6Hz$xA6IMTW" resolve="message" />
-                                      </node>
-                                      <node concept="liA8E" id="8tCK0sRcJ$" role="2OqNvi">
-                                        <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
-                                        <node concept="Xl_RD" id="8tCK0sRcJ_" role="37wK5m">
-                                          <property role="Xl_RC" value="requestId" />
-                                        </node>
-                                      </node>
+                                  <node concept="2OqwBi" id="8tCK0t0X$j" role="37vLTx">
+                                    <node concept="37vLTw" id="8tCK0t0Xgk" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="8tCK0t0FXc" resolve="message" />
                                     </node>
-                                    <node concept="liA8E" id="8tCK0sRcJA" role="2OqNvi">
-                                      <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                                    <node concept="2OwXpG" id="8tCK0t0XK5" role="2OqNvi">
+                                      <ref role="2Oxat5" to="30ym:3h0CTvwIjPg" resolve="requestId" />
                                     </node>
                                   </node>
                                   <node concept="2OqwBi" id="8tCK0sRcJB" role="37vLTJ">
@@ -1139,7 +1139,7 @@
                               <node concept="3clFbF" id="8tCK0sRcJS" role="3cqZAp">
                                 <node concept="2OqwBi" id="8tCK0sRcJT" role="3clFbG">
                                   <node concept="37vLTw" id="8tCK0sRcJU" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="6Hz$xA6IMTY" resolve="serverContext" />
+                                    <ref role="3cqZAo" node="8tCK0t0FXe" resolve="serverContext" />
                                   </node>
                                   <node concept="liA8E" id="8tCK0sRcJV" role="2OqNvi">
                                     <ref role="37wK5l" to="e4as:6Hz$xA6zDvx" resolve="sendMessage" />
@@ -1262,20 +1262,12 @@
                             </node>
                             <node concept="3clFbF" id="8tCK0sQwJB" role="3cqZAp">
                               <node concept="37vLTI" id="8tCK0sQwJC" role="3clFbG">
-                                <node concept="2OqwBi" id="8tCK0sQwJD" role="37vLTx">
-                                  <node concept="2OqwBi" id="8tCK0sQwJE" role="2Oq$k0">
-                                    <node concept="37vLTw" id="8tCK0sQwJF" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="6Hz$xA6IMTW" resolve="message" />
-                                    </node>
-                                    <node concept="liA8E" id="8tCK0sQwJG" role="2OqNvi">
-                                      <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
-                                      <node concept="Xl_RD" id="8tCK0sQwJH" role="37wK5m">
-                                        <property role="Xl_RC" value="requestId" />
-                                      </node>
-                                    </node>
+                                <node concept="2OqwBi" id="8tCK0t0Wf_" role="37vLTx">
+                                  <node concept="37vLTw" id="8tCK0t0VVD" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="8tCK0t0FXc" resolve="message" />
                                   </node>
-                                  <node concept="liA8E" id="8tCK0sQwJI" role="2OqNvi">
-                                    <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                                  <node concept="2OwXpG" id="8tCK0t0Wvw" role="2OqNvi">
+                                    <ref role="2Oxat5" to="30ym:3h0CTvwIjPg" resolve="requestId" />
                                   </node>
                                 </node>
                                 <node concept="2OqwBi" id="8tCK0sQwJJ" role="37vLTJ">
@@ -1319,7 +1311,7 @@
                             <node concept="3clFbF" id="8tCK0sQwJY" role="3cqZAp">
                               <node concept="2OqwBi" id="8tCK0sQwJZ" role="3clFbG">
                                 <node concept="37vLTw" id="8tCK0sQwK0" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="6Hz$xA6IMTY" resolve="serverContext" />
+                                  <ref role="3cqZAo" node="8tCK0t0FXe" resolve="serverContext" />
                                 </node>
                                 <node concept="liA8E" id="8tCK0sQwK1" role="2OqNvi">
                                   <ref role="37wK5l" to="e4as:6Hz$xA6zDvx" resolve="sendMessage" />
@@ -1340,7 +1332,7 @@
                           </node>
                         </node>
                       </node>
-                      <node concept="2AHcQZ" id="6Hz$xA6IMWk" role="2AJF6D">
+                      <node concept="2AHcQZ" id="8tCK0t0FXn" role="2AJF6D">
                         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
                       </node>
                     </node>
@@ -2429,6 +2421,13 @@
     </node>
     <node concept="3Tm1VV" id="8tCK0sOm6X" role="1B3o_S" />
     <node concept="3uibUv" id="8tCK0sOmib" role="1zkMxy">
+      <ref role="3uigEE" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
+    </node>
+  </node>
+  <node concept="312cEu" id="8tCK0t0El$">
+    <property role="TrG5h" value="ModelixCleanTransient" />
+    <node concept="3Tm1VV" id="8tCK0t0ElI" role="1B3o_S" />
+    <node concept="3uibUv" id="8tCK0t0ElJ" role="1zkMxy">
       <ref role="3uigEE" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
     </node>
   </node>
