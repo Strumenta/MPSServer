@@ -56,13 +56,13 @@ publishing {
             }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
+                // configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                //     def dependencyNode = dependenciesNode.appendNode('dependency')
+                //     dependencyNode.appendNode('groupId', it.moduleGroup)
+                //     dependencyNode.appendNode('artifactId', it.moduleName)
+                //     dependencyNode.appendNode('version',  it.version)
+                //     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                // }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                 	println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
@@ -107,13 +107,13 @@ publishing {
             }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
+                // configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                //     def dependencyNode = dependenciesNode.appendNode('dependency')
+                //     dependencyNode.appendNode('groupId', it.moduleGroup)
+                //     dependencyNode.appendNode('artifactId', it.moduleName)
+                //     dependencyNode.appendNode('version',  it.version)
+                //     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                // }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                 	println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
@@ -157,13 +157,13 @@ publishing {
             }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
+                // configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                //     def dependencyNode = dependenciesNode.appendNode('dependency')
+                //     dependencyNode.appendNode('groupId', it.moduleGroup)
+                //     dependencyNode.appendNode('artifactId', it.moduleName)
+                //     dependencyNode.appendNode('version',  it.version)
+                //     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                // }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                 	println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
@@ -207,13 +207,13 @@ publishing {
             }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
+                // configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                //     def dependencyNode = dependenciesNode.appendNode('dependency')
+                //     dependencyNode.appendNode('groupId', it.moduleGroup)
+                //     dependencyNode.appendNode('artifactId', it.moduleName)
+                //     dependencyNode.appendNode('version',  it.version)
+                //     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                // }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                     println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
@@ -257,13 +257,13 @@ publishing {
             }
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
-                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    def dependencyNode = dependenciesNode.appendNode('dependency')
-                    dependencyNode.appendNode('groupId', it.moduleGroup)
-                    dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
-                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
-                }
+                // configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                //     def dependencyNode = dependenciesNode.appendNode('dependency')
+                //     dependencyNode.appendNode('groupId', it.moduleGroup)
+                //     dependencyNode.appendNode('artifactId', it.moduleName)
+                //     dependencyNode.appendNode('version',  it.version)
+                //     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                // }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
                     println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
@@ -279,7 +279,7 @@ publishing {
             groupId 'com.strumenta.mpsserver'
             artifactId 'mpsserver-modelix'
             artifact packageModelix
-            version project.version
+            version it.version
             pom {
                 name = 'mpsserver-modelix'
                 description = 'MPSServer modelix'
@@ -311,11 +311,17 @@ publishing {
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
-                    dependencyNode.appendNode('version',  project.version)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.modelixArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each {
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version',  it.moduleVersion)
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                 }
                 configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
-                    println(it)
                     def dependencyNode = dependenciesNode.appendNode('dependency')
                     dependencyNode.appendNode('groupId', it.moduleGroup)
                     dependencyNode.appendNode('artifactId', it.moduleName)
@@ -323,6 +329,13 @@ publishing {
                     dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
                     dependencyNode.appendNode('scope', 'provided')
                 }
+
+                def coreDependencyNode = dependenciesNode.appendNode('dependency')
+                coreDependencyNode.appendNode('groupId', 'com.strumenta.mpsserver')
+                coreDependencyNode.appendNode('artifactId', 'mpsserver-core')
+                coreDependencyNode.appendNode('version',  project.version)
+                coreDependencyNode.appendNode('type', 'zip')
+                coreDependencyNode.appendNode('scope', 'provided')
             }
         }           
     }
