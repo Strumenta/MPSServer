@@ -653,6 +653,19 @@
                           <node concept="3clFbS" id="hu$DhQhZdS" role="2LFqv$">
                             <node concept="3clFbJ" id="hu$DhQi5F1" role="3cqZAp">
                               <node concept="3clFbS" id="hu$DhQi5F3" role="3clFbx">
+                                <node concept="abc8K" id="7APob9UDybP" role="3cqZAp">
+                                  <node concept="Xl_RD" id="7APob9UDyjD" role="abp_N">
+                                    <property role="Xl_RC" value="adding extension " />
+                                  </node>
+                                  <node concept="2OqwBi" id="7APob9UDykp" role="abp_N">
+                                    <node concept="37vLTw" id="7APob9UDykq" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                    </node>
+                                    <node concept="liA8E" id="7APob9UDykr" role="2OqNvi">
+                                      <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                    </node>
+                                  </node>
+                                </node>
                                 <node concept="3clFbF" id="hu$DhQi7XV" role="3cqZAp">
                                   <node concept="2OqwBi" id="hu$DhQi89m" role="3clFbG">
                                     <node concept="37vLTw" id="hu$DhQi7XT" role="2Oq$k0">
