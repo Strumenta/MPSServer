@@ -22,6 +22,7 @@
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="r791" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.text(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin">
@@ -132,6 +133,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -157,6 +159,9 @@
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -169,6 +174,7 @@
         <child id="1206060619838" name="condition" index="3eO9$A" />
         <child id="1206060644605" name="statementList" index="3eOfB_" />
       </concept>
+      <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -190,6 +196,12 @@
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
+      </concept>
+      <concept id="1144226303539" name="jetbrains.mps.baseLanguage.structure.ForeachStatement" flags="nn" index="1DcWWT">
+        <child id="1144226360166" name="iterable" index="1DdaDG" />
+      </concept>
+      <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
+        <child id="1144230900587" name="variable" index="1Duv9x" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -460,6 +472,13 @@
         <ref role="3uigEE" to="dxuu:~JPanel" resolve="JPanel" />
       </node>
     </node>
+    <node concept="2BZ0e9" id="hu$DhQhWdb" role="2XNbBz">
+      <property role="TrG5h" value="extensionsPath" />
+      <node concept="3Tm6S6" id="hu$DhQhWdc" role="1B3o_S" />
+      <node concept="3uibUv" id="hu$DhQhWV6" role="1tU5fm">
+        <ref role="3uigEE" to="dxuu:~JTextField" resolve="JTextField" />
+      </node>
+    </node>
     <node concept="2UmK3q" id="6Ut89YPhSNE" role="2Um5zG">
       <node concept="3clFbS" id="6Ut89YPhSNF" role="2VODD2">
         <node concept="3cpWs8" id="5SYYrGB$PFF" role="3cqZAp">
@@ -470,7 +489,88 @@
             </node>
             <node concept="2ShNRf" id="5SYYrGB$Qbu" role="33vP2m">
               <node concept="1pGfFk" id="5SYYrGB$Q9Q" role="2ShVmc">
-                <ref role="37wK5l" to="dxuu:~JPanel.&lt;init&gt;()" resolve="JPanel" />
+                <ref role="37wK5l" to="dxuu:~JPanel.&lt;init&gt;(java.awt.LayoutManager)" resolve="JPanel" />
+                <node concept="2ShNRf" id="hu$DhQh$Go" role="37wK5m">
+                  <node concept="1pGfFk" id="hu$DhQhEds" role="2ShVmc">
+                    <ref role="37wK5l" to="z60i:~FlowLayout.&lt;init&gt;()" resolve="FlowLayout" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="hu$DhQhxLV" role="3cqZAp">
+          <node concept="3cpWsn" id="hu$DhQhxLW" role="3cpWs9">
+            <property role="TrG5h" value="extensionsPathLabel" />
+            <node concept="3uibUv" id="hu$DhQhxLX" role="1tU5fm">
+              <ref role="3uigEE" to="dxuu:~JLabel" resolve="JLabel" />
+            </node>
+            <node concept="2ShNRf" id="hu$DhQhy8O" role="33vP2m">
+              <node concept="1pGfFk" id="hu$DhQhy5K" role="2ShVmc">
+                <ref role="37wK5l" to="dxuu:~JLabel.&lt;init&gt;(java.lang.String)" resolve="JLabel" />
+                <node concept="Xl_RD" id="hu$DhQhyw8" role="37wK5m">
+                  <property role="Xl_RC" value="Extensions Paths" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="hu$DhQhz3u" role="3cqZAp">
+          <node concept="2OqwBi" id="hu$DhQhz_f" role="3clFbG">
+            <node concept="37vLTw" id="hu$DhQhz3s" role="2Oq$k0">
+              <ref role="3cqZAo" node="5SYYrGB$PFG" resolve="panel" />
+            </node>
+            <node concept="liA8E" id="hu$DhQhzW7" role="2OqNvi">
+              <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component)" resolve="add" />
+              <node concept="37vLTw" id="hu$DhQh$02" role="37wK5m">
+                <ref role="3cqZAo" node="hu$DhQhxLW" resolve="extensionsPathLabel" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="hu$DhQhWVv" role="3cqZAp">
+          <node concept="37vLTI" id="hu$DhQhWVx" role="3clFbG">
+            <node concept="2ShNRf" id="hu$DhQhMQN" role="37vLTx">
+              <node concept="1pGfFk" id="hu$DhQhMQL" role="2ShVmc">
+                <ref role="37wK5l" to="dxuu:~JTextField.&lt;init&gt;()" resolve="JTextField" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="hu$DhQhXEw" role="37vLTJ">
+              <node concept="2WthIp" id="hu$DhQhXEz" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="hu$DhQhXE_" role="2OqNvi">
+                <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="hu$DhQhSvq" role="3cqZAp">
+          <node concept="2OqwBi" id="hu$DhQhSS2" role="3clFbG">
+            <node concept="2OqwBi" id="hu$DhQhY4p" role="2Oq$k0">
+              <node concept="2WthIp" id="hu$DhQhY4s" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="hu$DhQhY4u" role="2OqNvi">
+                <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+              </node>
+            </node>
+            <node concept="liA8E" id="hu$DhQhUbY" role="2OqNvi">
+              <ref role="37wK5l" to="dxuu:~JTextField.setColumns(int)" resolve="setColumns" />
+              <node concept="3cmrfG" id="hu$DhQhUi$" role="37wK5m">
+                <property role="3cmrfH" value="30" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="hu$DhQhOmz" role="3cqZAp">
+          <node concept="2OqwBi" id="hu$DhQhOEw" role="3clFbG">
+            <node concept="37vLTw" id="hu$DhQhOmu" role="2Oq$k0">
+              <ref role="3cqZAo" node="5SYYrGB$PFG" resolve="panel" />
+            </node>
+            <node concept="liA8E" id="hu$DhQhPD6" role="2OqNvi">
+              <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component)" resolve="add" />
+              <node concept="2OqwBi" id="hu$DhQhYjP" role="37wK5m">
+                <node concept="2WthIp" id="hu$DhQhYjS" role="2Oq$k0" />
+                <node concept="2BZ7hE" id="hu$DhQhYjU" role="2OqNvi">
+                  <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+                </node>
               </node>
             </node>
           </node>
@@ -545,6 +645,75 @@
                                     <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
                                   </node>
                                 </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="1DcWWT" id="hu$DhQhZdQ" role="3cqZAp">
+                          <node concept="3clFbS" id="hu$DhQhZdS" role="2LFqv$">
+                            <node concept="3clFbJ" id="hu$DhQi5F1" role="3cqZAp">
+                              <node concept="3clFbS" id="hu$DhQi5F3" role="3clFbx">
+                                <node concept="3clFbF" id="hu$DhQi7XV" role="3cqZAp">
+                                  <node concept="2OqwBi" id="hu$DhQi89m" role="3clFbG">
+                                    <node concept="37vLTw" id="hu$DhQi7XT" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
+                                    </node>
+                                    <node concept="liA8E" id="hu$DhQi8dV" role="2OqNvi">
+                                      <ref role="37wK5l" to="30ym:1taqoP6uwfX" resolve="addExtensionPath" />
+                                      <node concept="2OqwBi" id="hu$DhQi8GJ" role="37wK5m">
+                                        <node concept="37vLTw" id="hu$DhQi8sk" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                        </node>
+                                        <node concept="liA8E" id="hu$DhQi8Tm" role="2OqNvi">
+                                          <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3eOSWO" id="hu$DhQi7ln" role="3clFbw">
+                                <node concept="3cmrfG" id="hu$DhQi7s4" role="3uHU7w">
+                                  <property role="3cmrfH" value="0" />
+                                </node>
+                                <node concept="2OqwBi" id="hu$DhQi6xl" role="3uHU7B">
+                                  <node concept="2OqwBi" id="hu$DhQi6cF" role="2Oq$k0">
+                                    <node concept="37vLTw" id="hu$DhQi5SP" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                    </node>
+                                    <node concept="liA8E" id="hu$DhQi6nH" role="2OqNvi">
+                                      <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="hu$DhQi6Kv" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.length()" resolve="length" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3cpWsn" id="hu$DhQhZdT" role="1Duv9x">
+                            <property role="TrG5h" value="pathElement" />
+                            <node concept="17QB3L" id="hu$DhQhZv0" role="1tU5fm" />
+                          </node>
+                          <node concept="2OqwBi" id="hu$DhQi4Ml" role="1DdaDG">
+                            <node concept="2OqwBi" id="hu$DhQi3JS" role="2Oq$k0">
+                              <node concept="2OqwBi" id="hu$DhQi3gc" role="2Oq$k0">
+                                <node concept="2WthIp" id="hu$DhQi3gf" role="2Oq$k0">
+                                  <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                </node>
+                                <node concept="2BZ7hE" id="hu$DhQi3gh" role="2OqNvi">
+                                  <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="hu$DhQi4Ch" role="2OqNvi">
+                                <ref role="37wK5l" to="r791:~JTextComponent.getText()" resolve="getText" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="hu$DhQi59K" role="2OqNvi">
+                              <ref role="37wK5l" to="wyt6:~String.split(java.lang.String)" resolve="split" />
+                              <node concept="Xl_RD" id="hu$DhQi5ok" role="37wK5m">
+                                <property role="Xl_RC" value="," />
                               </node>
                             </node>
                           </node>
