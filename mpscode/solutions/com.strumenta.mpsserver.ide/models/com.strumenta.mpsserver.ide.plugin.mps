@@ -653,19 +653,6 @@
                           <node concept="3clFbS" id="hu$DhQhZdS" role="2LFqv$">
                             <node concept="3clFbJ" id="hu$DhQi5F1" role="3cqZAp">
                               <node concept="3clFbS" id="hu$DhQi5F3" role="3clFbx">
-                                <node concept="abc8K" id="7APob9UDybP" role="3cqZAp">
-                                  <node concept="Xl_RD" id="7APob9UDyjD" role="abp_N">
-                                    <property role="Xl_RC" value="adding extension " />
-                                  </node>
-                                  <node concept="2OqwBi" id="7APob9UDykp" role="abp_N">
-                                    <node concept="37vLTw" id="7APob9UDykq" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
-                                    </node>
-                                    <node concept="liA8E" id="7APob9UDykr" role="2OqNvi">
-                                      <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
-                                    </node>
-                                  </node>
-                                </node>
                                 <node concept="3clFbF" id="hu$DhQi7XV" role="3cqZAp">
                                   <node concept="2OqwBi" id="hu$DhQi89m" role="3clFbG">
                                     <node concept="37vLTw" id="hu$DhQi7XT" role="2Oq$k0">
@@ -737,10 +724,10 @@
                             <node concept="3uibUv" id="5SYYrGB_wqI" role="1tU5fm">
                               <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
                             </node>
-                            <node concept="2YIFZM" id="5SYYrGB_vn2" role="33vP2m">
+                            <node concept="2YIFZM" id="2jT6WJ_CG$T" role="33vP2m">
+                              <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
                               <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                              <ref role="37wK5l" to="30ym:4JnP3TVE2ip" resolve="launch" />
-                              <node concept="37vLTw" id="6Ks8zCw5Zn2" role="37wK5m">
+                              <node concept="37vLTw" id="2jT6WJ_CG$U" role="37wK5m">
                                 <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
                               </node>
                             </node>
