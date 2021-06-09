@@ -13,7 +13,6 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="true">5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)</dependency>
-    <dependency reexport="false">48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)</dependency>
     <dependency reexport="false">c5e5433e-201f-43e2-ad14-a6cba8c80cd6(org.modelix.model.mpsplugin)</dependency>
     <dependency reexport="true">bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)</dependency>
     <dependency reexport="false">6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)</dependency>

@@ -12,7 +12,6 @@
     <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
     <import index="9xi5" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:spark(com.strumenta.mpsserver.deps/)" />
     <import index="csg2" ref="r:b0cc4f86-cf49-4ffc-b138-1f9973329ce1(org.modelix.model.mpsplugin)" />
-    <import index="wy2b" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson(com.strumenta.mpsserver.deps/)" />
     <import index="xkhl" ref="0a2651ab-f212-45c2-a2f0-343e76cbc26b/java:org.modelix.model.lazy(org.modelix.model.client/)" />
     <import index="5440" ref="0a2651ab-f212-45c2-a2f0-343e76cbc26b/java:org.modelix.model.client(org.modelix.model.client/)" />
     <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
@@ -24,6 +23,7 @@
     <import index="82uw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.function(JDK/)" />
     <import index="z1c4" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.project(MPS.Platform/)" />
     <import index="alof" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.project(MPS.Platform/)" />
+    <import index="wy2b" ref="87f4b21e-a3a5-459e-a54b-408fd9eb7350/java:com.google.gson(org.modelix.lib/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="hvt5" ref="0a2651ab-f212-45c2-a2f0-343e76cbc26b/java:org.modelix.model(org.modelix.model.client/)" implicit="true" />
   </imports>
@@ -272,7 +272,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="6mL1JKjFg18">
-    <property role="TrG5h" value="ModelixMPSServerExtenstion" />
+    <property role="TrG5h" value="ModelixMPSServerExtension" />
     <node concept="2tJIrI" id="6mL1JKjH9P8" role="jymVt" />
     <node concept="312cEg" id="6mL1JKjHUdS" role="jymVt">
       <property role="TrG5h" value="cloudRepository" />
@@ -1352,7 +1352,7 @@
                       <node concept="37vLTG" id="6Hz$xA6CCGl" role="3clF46">
                         <property role="TrG5h" value="message" />
                         <property role="3TUv4t" value="true" />
-                        <node concept="3uibUv" id="6Hz$xA6CCGm" role="1tU5fm">
+                        <node concept="3uibUv" id="2wu2WWb8KJ" role="1tU5fm">
                           <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
                         </node>
                       </node>
