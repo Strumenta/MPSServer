@@ -25,6 +25,7 @@
     <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="c8ee" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.table(JDK/)" />
     <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
+    <import index="wy2b" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson(com.strumenta.mpsserver.deps/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="r791" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.text(JDK/)" implicit="true" />
   </imports>
@@ -336,7 +337,12 @@
             </node>
             <node concept="2ShNRf" id="2wu2WWde1r" role="33vP2m">
               <node concept="1pGfFk" id="2wu2WWde1p" role="2ShVmc">
-                <ref role="37wK5l" to="dxuu:~JPanel.&lt;init&gt;()" resolve="JPanel" />
+                <ref role="37wK5l" to="dxuu:~JPanel.&lt;init&gt;(java.awt.LayoutManager)" resolve="JPanel" />
+                <node concept="2ShNRf" id="4ppZrkiVXWB" role="37wK5m">
+                  <node concept="1pGfFk" id="4ppZrkiW5fe" role="2ShVmc">
+                    <ref role="37wK5l" to="z60i:~BorderLayout.&lt;init&gt;()" resolve="BorderLayout" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -477,22 +483,32 @@
                       <node concept="3clFbJ" id="2wu2WWj1UY" role="3cqZAp">
                         <node concept="3clFbS" id="2wu2WWj1UZ" role="3clFbx">
                           <node concept="3cpWs6" id="2wu2WWj1V0" role="3cqZAp">
-                            <node concept="1LFfDK" id="2wu2WWj1V2" role="3cqZAk">
-                              <node concept="1y4W85" id="2wu2WWj1V4" role="1LFl5Q">
-                                <node concept="37vLTw" id="2wu2WWj1V5" role="1y58nS">
-                                  <ref role="3cqZAo" node="2wu2WWdxfj" resolve="row" />
-                                </node>
-                                <node concept="2OqwBi" id="2wu2WWj1V6" role="1y566C">
-                                  <node concept="2WthIp" id="2wu2WWj1V7" role="2Oq$k0">
-                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                  </node>
-                                  <node concept="2BZ7hE" id="2wu2WWj1V8" role="2OqNvi">
-                                    <ref role="2WH_rO" node="2wu2WWimVE" resolve="messages" />
-                                  </node>
+                            <node concept="2OqwBi" id="4ppZrkiWDL9" role="3cqZAk">
+                              <node concept="2ShNRf" id="4ppZrkiWB1C" role="2Oq$k0">
+                                <node concept="1pGfFk" id="4ppZrkiWDFM" role="2ShVmc">
+                                  <ref role="37wK5l" to="wy2b:~Gson.&lt;init&gt;()" resolve="Gson" />
                                 </node>
                               </node>
-                              <node concept="3cmrfG" id="2wu2WWj3zA" role="1LF_Uc">
-                                <property role="3cmrfH" value="1" />
+                              <node concept="liA8E" id="4ppZrkiWDUS" role="2OqNvi">
+                                <ref role="37wK5l" to="wy2b:~Gson.toJson(java.lang.Object)" resolve="toJson" />
+                                <node concept="1LFfDK" id="4ppZrkiWEbt" role="37wK5m">
+                                  <node concept="1y4W85" id="4ppZrkiWEbu" role="1LFl5Q">
+                                    <node concept="37vLTw" id="4ppZrkiWEbv" role="1y58nS">
+                                      <ref role="3cqZAo" node="2wu2WWdxfj" resolve="row" />
+                                    </node>
+                                    <node concept="2OqwBi" id="4ppZrkiWEbw" role="1y566C">
+                                      <node concept="2WthIp" id="4ppZrkiWEbx" role="2Oq$k0">
+                                        <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                      </node>
+                                      <node concept="2BZ7hE" id="4ppZrkiWEby" role="2OqNvi">
+                                        <ref role="2WH_rO" node="2wu2WWimVE" resolve="messages" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="3cmrfG" id="4ppZrkiWEbz" role="1LF_Uc">
+                                    <property role="3cmrfH" value="1" />
+                                  </node>
+                                </node>
                               </node>
                             </node>
                           </node>
@@ -583,6 +599,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="4ppZrkiVPrE" role="3cqZAp">
+          <node concept="2OqwBi" id="4ppZrkiVQ1T" role="3clFbG">
+            <node concept="37vLTw" id="4ppZrkiVPrC" role="2Oq$k0">
+              <ref role="3cqZAo" node="2wu2WWilJZ" resolve="c0" />
+            </node>
+            <node concept="liA8E" id="4ppZrkiVQm1" role="2OqNvi">
+              <ref role="37wK5l" to="c8ee:~TableColumn.setModelIndex(int)" resolve="setModelIndex" />
+              <node concept="3cmrfG" id="4ppZrkiVQm$" role="37wK5m">
+                <property role="3cmrfH" value="0" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="2wu2WWilK8" role="3cqZAp">
           <node concept="2OqwBi" id="2wu2WWilK9" role="3clFbG">
             <node concept="37vLTw" id="2wu2WWilKa" role="2Oq$k0">
@@ -623,6 +652,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="4ppZrkiVQpU" role="3cqZAp">
+          <node concept="2OqwBi" id="4ppZrkiVQpV" role="3clFbG">
+            <node concept="37vLTw" id="4ppZrkiVRjD" role="2Oq$k0">
+              <ref role="3cqZAo" node="2wu2WWeblc" resolve="c1" />
+            </node>
+            <node concept="liA8E" id="4ppZrkiVQpX" role="2OqNvi">
+              <ref role="37wK5l" to="c8ee:~TableColumn.setModelIndex(int)" resolve="setModelIndex" />
+              <node concept="3cmrfG" id="4ppZrkiVQpY" role="37wK5m">
+                <property role="3cmrfH" value="1" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="2wu2WWe8fF" role="3cqZAp">
           <node concept="2OqwBi" id="2wu2WWe8Nk" role="3clFbG">
             <node concept="37vLTw" id="2wu2WWe8fD" role="2Oq$k0">
@@ -636,6 +678,7 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="4ppZrkiVQna" role="3cqZAp" />
         <node concept="3cpWs8" id="2wu2WWeghU" role="3cqZAp">
           <node concept="3cpWsn" id="2wu2WWeghV" role="3cpWs9">
             <property role="TrG5h" value="c2" />
@@ -658,6 +701,19 @@
               <ref role="37wK5l" to="c8ee:~TableColumn.setHeaderValue(java.lang.Object)" resolve="setHeaderValue" />
               <node concept="Xl_RD" id="2wu2WWegi3" role="37wK5m">
                 <property role="Xl_RC" value="Message Values" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="4ppZrkiVRkk" role="3cqZAp">
+          <node concept="2OqwBi" id="4ppZrkiVRkl" role="3clFbG">
+            <node concept="37vLTw" id="4ppZrkiVRWQ" role="2Oq$k0">
+              <ref role="3cqZAo" node="2wu2WWeghV" resolve="c2" />
+            </node>
+            <node concept="liA8E" id="4ppZrkiVRkn" role="2OqNvi">
+              <ref role="37wK5l" to="c8ee:~TableColumn.setModelIndex(int)" resolve="setModelIndex" />
+              <node concept="3cmrfG" id="4ppZrkiVRko" role="37wK5m">
+                <property role="3cmrfH" value="2" />
               </node>
             </node>
           </node>
@@ -720,9 +776,13 @@
               <ref role="3cqZAo" node="2wu2WWddxi" resolve="panel" />
             </node>
             <node concept="liA8E" id="2wu2WWdiZF" role="2OqNvi">
-              <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component)" resolve="add" />
+              <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component,java.lang.Object)" resolve="add" />
               <node concept="37vLTw" id="2wu2WWepvC" role="37wK5m">
                 <ref role="3cqZAo" node="2wu2WWen_1" resolve="sp" />
+              </node>
+              <node concept="10M0yZ" id="4ppZrkiW76J" role="37wK5m">
+                <ref role="3cqZAo" to="z60i:~BorderLayout.CENTER" resolve="CENTER" />
+                <ref role="1PxDUh" to="z60i:~BorderLayout" resolve="BorderLayout" />
               </node>
             </node>
           </node>
@@ -761,6 +821,11 @@
                   <node concept="3cqZAl" id="2wu2WWizl3" role="3clF45" />
                   <node concept="3Tm1VV" id="2wu2WWizl4" role="1B3o_S" />
                   <node concept="3clFbS" id="2wu2WWizl7" role="3clF47">
+                    <node concept="abc8K" id="2DTPz1eL2My" role="3cqZAp">
+                      <node concept="Xl_RD" id="2DTPz1eL2Xr" role="abp_N">
+                        <property role="Xl_RC" value="Received message in ServerLauncherTool" />
+                      </node>
+                    </node>
                     <node concept="3clFbF" id="2wu2WWiMzE" role="3cqZAp">
                       <node concept="2OqwBi" id="2wu2WWiO2t" role="3clFbG">
                         <node concept="2OqwBi" id="2wu2WWiMKC" role="2Oq$k0">
@@ -814,6 +879,11 @@
                     </node>
                   </node>
                   <node concept="3clFbS" id="2wu2WWizlg" role="3clF47">
+                    <node concept="abc8K" id="2DTPz1eL2Yq" role="3cqZAp">
+                      <node concept="Xl_RD" id="2DTPz1eL2Yr" role="abp_N">
+                        <property role="Xl_RC" value="Sent message in ServerLauncherTool" />
+                      </node>
+                    </node>
                     <node concept="3clFbF" id="2wu2WWiQ3k" role="3cqZAp">
                       <node concept="2OqwBi" id="2wu2WWiQ3l" role="3clFbG">
                         <node concept="2OqwBi" id="2wu2WWiQ3m" role="2Oq$k0">

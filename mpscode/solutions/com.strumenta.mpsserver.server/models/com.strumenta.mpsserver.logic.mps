@@ -4555,14 +4555,7 @@
                     <node concept="37vLTw" id="2jT6WJ_Fx4F" role="37wK5m">
                       <ref role="3cqZAo" node="i07tI0JG2m" resolve="conceptSpecificActions" />
                     </node>
-                    <node concept="2OqwBi" id="2wu2WWfYa$" role="37wK5m">
-                      <node concept="37vLTw" id="2wu2WWfXAI" role="2Oq$k0">
-                        <ref role="3cqZAo" node="6Jg9HTa7nVE" resolve="serverConfiguration" />
-                      </node>
-                      <node concept="2OwXpG" id="2wu2WWfYZ5" role="2OqNvi">
-                        <ref role="2Oxat5" node="2wu2WWeUCA" resolve="communicationLoggers" />
-                      </node>
-                    </node>
+                    <node concept="Xjq3P" id="3zpwQ15YqkN" role="37wK5m" />
                   </node>
                 </node>
               </node>
@@ -12559,19 +12552,10 @@
       </node>
     </node>
     <node concept="312cEg" id="2wu2WWfMty" role="jymVt">
-      <property role="TrG5h" value="communicationLoggers" />
+      <property role="TrG5h" value="communicationsLogger" />
       <node concept="3Tm6S6" id="2wu2WWfMtz" role="1B3o_S" />
-      <node concept="_YKpA" id="2wu2WWfMt$" role="1tU5fm">
-        <node concept="3uibUv" id="2wu2WWfMt_" role="_ZDj9">
-          <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
-        </node>
-      </node>
-      <node concept="2ShNRf" id="2wu2WWfMtA" role="33vP2m">
-        <node concept="2Jqq0_" id="2wu2WWfMtB" role="2ShVmc">
-          <node concept="3uibUv" id="2wu2WWfMtC" role="HW$YZ">
-            <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
-          </node>
-        </node>
+      <node concept="3uibUv" id="3zpwQ15YuVa" role="1tU5fm">
+        <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
       </node>
     </node>
     <node concept="2tJIrI" id="2wu2WWfL$_" role="jymVt" />
@@ -12612,6 +12596,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="3zpwQ15YxNB" role="3cqZAp">
+          <node concept="37vLTI" id="3zpwQ15Yy$_" role="3clFbG">
+            <node concept="37vLTw" id="3zpwQ15YF_v" role="37vLTx">
+              <ref role="3cqZAo" node="2wu2WWfTgL" resolve="communicationsLogger" />
+            </node>
+            <node concept="2OqwBi" id="3zpwQ15Yy37" role="37vLTJ">
+              <node concept="Xjq3P" id="3zpwQ15YxN_" role="2Oq$k0" />
+              <node concept="2OwXpG" id="3zpwQ15Yyd7" role="2OqNvi">
+                <ref role="2Oxat5" node="2wu2WWfMty" resolve="communicationsLogger" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="8tCK0sUbrB" role="3cqZAp">
           <node concept="1rXfSq" id="8tCK0sUbr_" role="3clFbG">
             <ref role="37wK5l" node="8tCK0sU6mC" resolve="addStandardGlobalHandlers" />
@@ -12646,11 +12643,9 @@
         </node>
       </node>
       <node concept="37vLTG" id="2wu2WWfTgL" role="3clF46">
-        <property role="TrG5h" value="communicationsLoggers" />
-        <node concept="_YKpA" id="2wu2WWfUr$" role="1tU5fm">
-          <node concept="3uibUv" id="2wu2WWfUr_" role="_ZDj9">
-            <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
-          </node>
+        <property role="TrG5h" value="communicationsLogger" />
+        <node concept="3uibUv" id="2wu2WWfUr_" role="1tU5fm">
+          <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
         </node>
       </node>
     </node>
@@ -12658,32 +12653,15 @@
     <node concept="3clFb_" id="2wu2WWgluL" role="jymVt">
       <property role="TrG5h" value="logMessageSent" />
       <node concept="3clFbS" id="2wu2WWgluO" role="3clF47">
-        <node concept="3clFbF" id="2wu2WWgCb7" role="3cqZAp">
-          <node concept="2OqwBi" id="2wu2WWgCYe" role="3clFbG">
-            <node concept="37vLTw" id="2wu2WWgCb6" role="2Oq$k0">
-              <ref role="3cqZAo" node="2wu2WWfMty" resolve="communicationLoggers" />
+        <node concept="3clFbF" id="2wu2WWgGyi" role="3cqZAp">
+          <node concept="2OqwBi" id="2wu2WWgGJF" role="3clFbG">
+            <node concept="37vLTw" id="3zpwQ15Y$YJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="2wu2WWfMty" resolve="communicationsLogger" />
             </node>
-            <node concept="2es0OD" id="2wu2WWgGj5" role="2OqNvi">
-              <node concept="1bVj0M" id="2wu2WWgGj7" role="23t8la">
-                <node concept="3clFbS" id="2wu2WWgGj8" role="1bW5cS">
-                  <node concept="3clFbF" id="2wu2WWgGyi" role="3cqZAp">
-                    <node concept="2OqwBi" id="2wu2WWgGJF" role="3clFbG">
-                      <node concept="37vLTw" id="2wu2WWgGyh" role="2Oq$k0">
-                        <ref role="3cqZAo" node="2wu2WWgGj9" resolve="it" />
-                      </node>
-                      <node concept="liA8E" id="2wu2WWgGW3" role="2OqNvi">
-                        <ref role="37wK5l" to="e4as:2wu2WWg5PL" resolve="messageSent" />
-                        <node concept="37vLTw" id="2wu2WWgH9_" role="37wK5m">
-                          <ref role="3cqZAo" node="2wu2WWgoo0" resolve="message" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="Rh6nW" id="2wu2WWgGj9" role="1bW2Oz">
-                  <property role="TrG5h" value="it" />
-                  <node concept="2jxLKc" id="2wu2WWgGja" role="1tU5fm" />
-                </node>
+            <node concept="liA8E" id="2wu2WWgGW3" role="2OqNvi">
+              <ref role="37wK5l" to="e4as:2wu2WWg5PL" resolve="messageSent" />
+              <node concept="37vLTw" id="2wu2WWgH9_" role="37wK5m">
+                <ref role="3cqZAo" node="2wu2WWgoo0" resolve="message" />
               </node>
             </node>
           </node>
@@ -12701,32 +12679,15 @@
     <node concept="3clFb_" id="2wu2WWgIdy" role="jymVt">
       <property role="TrG5h" value="logMessageReceived" />
       <node concept="3clFbS" id="2wu2WWgIdz" role="3clF47">
-        <node concept="3clFbF" id="2wu2WWgId$" role="3cqZAp">
-          <node concept="2OqwBi" id="2wu2WWgId_" role="3clFbG">
-            <node concept="37vLTw" id="2wu2WWgIdA" role="2Oq$k0">
-              <ref role="3cqZAo" node="2wu2WWfMty" resolve="communicationLoggers" />
+        <node concept="3clFbF" id="2wu2WWgIdE" role="3cqZAp">
+          <node concept="2OqwBi" id="2wu2WWgIdF" role="3clFbG">
+            <node concept="37vLTw" id="3zpwQ15YChJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="2wu2WWfMty" resolve="communicationsLogger" />
             </node>
-            <node concept="2es0OD" id="2wu2WWgIdB" role="2OqNvi">
-              <node concept="1bVj0M" id="2wu2WWgIdC" role="23t8la">
-                <node concept="3clFbS" id="2wu2WWgIdD" role="1bW5cS">
-                  <node concept="3clFbF" id="2wu2WWgIdE" role="3cqZAp">
-                    <node concept="2OqwBi" id="2wu2WWgIdF" role="3clFbG">
-                      <node concept="37vLTw" id="2wu2WWgIdG" role="2Oq$k0">
-                        <ref role="3cqZAo" node="2wu2WWgIdJ" resolve="it" />
-                      </node>
-                      <node concept="liA8E" id="2wu2WWgIdH" role="2OqNvi">
-                        <ref role="37wK5l" to="e4as:2wu2WWg5Jz" resolve="messageReceived" />
-                        <node concept="37vLTw" id="2wu2WWgIdI" role="37wK5m">
-                          <ref role="3cqZAo" node="2wu2WWgIdN" resolve="message" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="Rh6nW" id="2wu2WWgIdJ" role="1bW2Oz">
-                  <property role="TrG5h" value="it" />
-                  <node concept="2jxLKc" id="2wu2WWgIdK" role="1tU5fm" />
-                </node>
+            <node concept="liA8E" id="2wu2WWgIdH" role="2OqNvi">
+              <ref role="37wK5l" to="e4as:2wu2WWg5Jz" resolve="messageReceived" />
+              <node concept="37vLTw" id="2wu2WWgIdI" role="37wK5m">
+                <ref role="3cqZAo" node="2wu2WWgIdN" resolve="message" />
               </node>
             </node>
           </node>
@@ -30326,6 +30287,30 @@
                                 <node concept="_YKpA" id="6rECjEChy3t" role="1tU5fm">
                                   <node concept="3uibUv" id="6rECjEChy3v" role="_ZDj9">
                                     <ref role="3uigEE" node="Fhwl$atgqq" resolve="ModuleInfo" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbJ" id="2DTPz1eJp7Y" role="3cqZAp">
+                              <node concept="3clFbS" id="2DTPz1eJp80" role="3clFbx">
+                                <node concept="3cpWs6" id="2DTPz1eJraD" role="3cqZAp">
+                                  <node concept="2YIFZM" id="2DTPz1eJraE" role="3cqZAk">
+                                    <ref role="1Pybhc" node="6Ks8zCw4fW7" resolve="Server.OperationResult" />
+                                    <ref role="37wK5l" node="6Ks8zCw4Ee6" resolve="failure" />
+                                    <node concept="Xl_RD" id="2DTPz1eJv7F" role="37wK5m">
+                                      <property role="Xl_RC" value="No project open" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3clFbC" id="2DTPz1eJqGX" role="3clFbw">
+                                <node concept="10Nm6u" id="2DTPz1eJr6D" role="3uHU7w" />
+                                <node concept="2OqwBi" id="2DTPz1eJqlV" role="3uHU7B">
+                                  <node concept="37vLTw" id="2DTPz1eJpSB" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="3cTvBybZHl5" resolve="serverConfiguration" />
+                                  </node>
+                                  <node concept="liA8E" id="2DTPz1eJq_w" role="2OqNvi">
+                                    <ref role="37wK5l" node="3cTvBybXVUy" resolve="getRepo" />
                                   </node>
                                 </node>
                               </node>
