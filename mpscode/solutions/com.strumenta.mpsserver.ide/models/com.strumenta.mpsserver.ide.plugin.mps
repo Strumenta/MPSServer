@@ -24,6 +24,7 @@
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="79ha" ref="r:2876f1ee-0b45-4db5-8c09-0682cdee5c67(jetbrains.mps.tool.environment)" />
     <import index="c8ee" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.table(JDK/)" />
+    <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="r791" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.text(JDK/)" implicit="true" />
   </imports>
@@ -459,7 +460,7 @@
                                 </node>
                               </node>
                               <node concept="2OwXpG" id="2wu2WWj1vF" role="2OqNvi">
-                                <ref role="2Oxat5" to="30ym:6_QtqtnpJ9$" resolve="type" />
+                                <ref role="2Oxat5" to="e4as:6_QtqtnpJ9$" resolve="type" />
                               </node>
                             </node>
                           </node>
@@ -738,7 +739,7 @@
     <node concept="2XrIbr" id="2wu2WWfccP" role="2XNbBy">
       <property role="TrG5h" value="getCommunicationsLogger" />
       <node concept="3uibUv" id="2wu2WWfdXj" role="3clF45">
-        <ref role="3uigEE" to="30ym:2wu2WWeLkx" resolve="CommunicationsLogger" />
+        <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
       </node>
       <node concept="3clFbS" id="2wu2WWfccR" role="3clF47">
         <node concept="3cpWs6" id="2wu2WWfe5C" role="3cqZAp">
@@ -746,15 +747,15 @@
             <node concept="YeOm9" id="2wu2WWfe_w" role="2ShVmc">
               <node concept="1Y3b0j" id="2wu2WWfe_z" role="YeSDq">
                 <property role="2bfB8j" value="true" />
-                <ref role="1Y3XeK" to="30ym:2wu2WWeLkx" resolve="CommunicationsLogger" />
                 <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                <ref role="1Y3XeK" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
                 <node concept="3Tm1VV" id="2wu2WWfe_$" role="1B3o_S" />
                 <node concept="3clFb_" id="2wu2WWizl0" role="jymVt">
                   <property role="TrG5h" value="messageReceived" />
                   <node concept="37vLTG" id="2wu2WWizl1" role="3clF46">
                     <property role="TrG5h" value="message" />
                     <node concept="3uibUv" id="2wu2WWizl2" role="1tU5fm">
-                      <ref role="3uigEE" to="30ym:6_QtqtnpJ9z" resolve="Message" />
+                      <ref role="3uigEE" to="e4as:6_QtqtnpJ9z" resolve="Message" />
                     </node>
                   </node>
                   <node concept="3cqZAl" id="2wu2WWizl3" role="3clF45" />
@@ -809,7 +810,7 @@
                   <node concept="37vLTG" id="2wu2WWizld" role="3clF46">
                     <property role="TrG5h" value="message" />
                     <node concept="3uibUv" id="2wu2WWizle" role="1tU5fm">
-                      <ref role="3uigEE" to="30ym:6_QtqtnpJ9z" resolve="Message" />
+                      <ref role="3uigEE" to="e4as:6_QtqtnpJ9z" resolve="Message" />
                     </node>
                   </node>
                   <node concept="3clFbS" id="2wu2WWizlg" role="3clF47">
@@ -1751,7 +1752,7 @@
         <node concept="1LlUBW" id="2wu2WWityX" role="_ZDj9">
           <node concept="17QB3L" id="2wu2WWitAt" role="1Lm7xW" />
           <node concept="3uibUv" id="2wu2WWitHk" role="1Lm7xW">
-            <ref role="3uigEE" to="30ym:6_QtqtnpJ9z" resolve="Message" />
+            <ref role="3uigEE" to="e4as:6_QtqtnpJ9z" resolve="Message" />
           </node>
         </node>
       </node>
@@ -1760,7 +1761,7 @@
           <node concept="1LlUBW" id="2wu2WWitIu" role="HW$YZ">
             <node concept="17QB3L" id="2wu2WWitIv" role="1Lm7xW" />
             <node concept="3uibUv" id="2wu2WWitIw" role="1Lm7xW">
-              <ref role="3uigEE" to="30ym:6_QtqtnpJ9z" resolve="Message" />
+              <ref role="3uigEE" to="e4as:6_QtqtnpJ9z" resolve="Message" />
             </node>
           </node>
         </node>
