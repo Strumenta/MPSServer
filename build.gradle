@@ -40,7 +40,7 @@ configurations {
 }
 
 ext.mpsVersion = '2020.3.3'
-ext.modelixVersion = '0.0.30'
+ext.modelixVersion = '0.0.32'
 ext.mpsExtensionsVersion = '2020.3.1710.8c5c648'
 
 dependencies {
@@ -123,7 +123,7 @@ task resolveModelixArtifacts(type: Copy) {
     from {
         configurations.modelixArtifacts.resolve().collect { zipTree(it) }
     }
-    into modelixDir
+    into new File(modelixDir, "plugins")
 }
 
 task resolveLibs(type: Sync) {
