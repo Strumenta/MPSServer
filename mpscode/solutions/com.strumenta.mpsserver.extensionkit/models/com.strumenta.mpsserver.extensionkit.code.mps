@@ -404,9 +404,7 @@
       <property role="TrG5h" value="messageReceived" />
       <node concept="37vLTG" id="2wu2WWg5Kx" role="3clF46">
         <property role="TrG5h" value="message" />
-        <node concept="3uibUv" id="2wu2WWg5Nm" role="1tU5fm">
-          <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
-        </node>
+        <node concept="17QB3L" id="10$ElfnPr_x" role="1tU5fm" />
       </node>
       <node concept="3cqZAl" id="2wu2WWg5J_" role="3clF45" />
       <node concept="3Tm1VV" id="2wu2WWg5JA" role="1B3o_S" />
