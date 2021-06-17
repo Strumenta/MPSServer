@@ -683,6 +683,11 @@
             <ref role="3bR37D" to="ffeo:3zjMY$95UAa" resolve="jetbrains.mps.core.tool.environment" />
           </node>
         </node>
+        <node concept="1SiIV0" id="5wf7OU9yHQS" role="3bR37C">
+          <node concept="3bR9La" id="5wf7OU9yHQT" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="4JnP3TV$EDw" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -729,6 +734,11 @@
         <node concept="1SiIV0" id="6mL1JKjG$RE" role="3bR37C">
           <node concept="3bR9La" id="6mL1JKjG$RF" role="1SiIV1">
             <ref role="3bR37D" node="2p2ql82MkU0" resolve="com.strumenta.mpsserver.deps" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5wf7OU9yHR2" role="3bR37C">
+          <node concept="3bR9La" id="5wf7OU9yHR3" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
       </node>
@@ -2243,6 +2253,11 @@
         <node concept="1SiIV0" id="6mL1JKjGAt8" role="3bR37C">
           <node concept="3bR9La" id="6mL1JKjGAt9" role="1SiIV1">
             <ref role="3bR37D" node="6mL1JKjGAmE" resolve="com.strumenta.mpsserver.deps" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5wf7OU9yY5p" role="3bR37C">
+          <node concept="3bR9La" id="5wf7OU9yY5q" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
       </node>
