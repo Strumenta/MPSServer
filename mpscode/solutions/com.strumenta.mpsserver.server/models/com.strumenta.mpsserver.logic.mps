@@ -3887,6 +3887,71 @@
                       </node>
                     </node>
                     <node concept="3clFbS" id="4JnP3TVEbiZ" role="3clF47">
+                      <node concept="3clFbJ" id="5wf7OU9HsrI" role="3cqZAp">
+                        <node concept="3clFbS" id="5wf7OU9HsrK" role="3clFbx">
+                          <node concept="3clFbJ" id="5wf7OU9Hyv9" role="3cqZAp">
+                            <node concept="3clFbS" id="5wf7OU9Hyvb" role="3clFbx">
+                              <node concept="abc8K" id="5wf7OU9H$K8" role="3cqZAp">
+                                <node concept="Xl_RD" id="5wf7OU9H_bX" role="abp_N">
+                                  <property role="Xl_RC" value="no project to make..." />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbC" id="5wf7OU9Hzmi" role="3clFbw">
+                              <node concept="10Nm6u" id="5wf7OU9HzQ6" role="3uHU7w" />
+                              <node concept="2OqwBi" id="5wf7OU9Hywt" role="3uHU7B">
+                                <node concept="37vLTw" id="5wf7OU9Hywu" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="7MdXHVxjzDC" resolve="serverConfiguration" />
+                                </node>
+                                <node concept="2OwXpG" id="5wf7OU9Hywv" role="2OqNvi">
+                                  <ref role="2Oxat5" node="4BgspmWUVW$" resolve="project" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="9aQIb" id="5wf7OU9H_eS" role="9aQIa">
+                              <node concept="3clFbS" id="5wf7OU9H_eT" role="9aQI4">
+                                <node concept="abc8K" id="3IKzUjYhrWx" role="3cqZAp">
+                                  <node concept="Xl_RD" id="3IKzUjYhsu5" role="abp_N">
+                                    <property role="Xl_RC" value="Making project before loading extensions" />
+                                  </node>
+                                </node>
+                                <node concept="3clFbF" id="5wf7OU9Hvxa" role="3cqZAp">
+                                  <node concept="2YIFZM" id="5wf7OU9HvYn" role="3clFbG">
+                                    <ref role="1Pybhc" node="5wf7OU9ni8A" resolve="MakeProjectHandler" />
+                                    <ref role="37wK5l" node="5wf7OU9qJBO" resolve="execute" />
+                                    <node concept="2OqwBi" id="5wf7OU9Hxng" role="37wK5m">
+                                      <node concept="37vLTw" id="5wf7OU9HwPk" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="7MdXHVxjzDC" resolve="serverConfiguration" />
+                                      </node>
+                                      <node concept="2OwXpG" id="5wf7OU9HxTl" role="2OqNvi">
+                                        <ref role="2Oxat5" node="4BgspmWUVW$" resolve="project" />
+                                      </node>
+                                    </node>
+                                    <node concept="3clFbT" id="5wf7OU9HAcP" role="37wK5m" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="5wf7OU9HtVs" role="3clFbw">
+                          <node concept="37vLTw" id="5wf7OU9Htpg" role="2Oq$k0">
+                            <ref role="3cqZAo" node="7MdXHVxjzDC" resolve="serverConfiguration" />
+                          </node>
+                          <node concept="2OwXpG" id="5wf7OU9Huv1" role="2OqNvi">
+                            <ref role="2Oxat5" node="5wf7OU9HdlJ" resolve="makeProjectAtStart" />
+                          </node>
+                        </node>
+                        <node concept="9aQIb" id="3IKzUjYhsuK" role="9aQIa">
+                          <node concept="3clFbS" id="3IKzUjYhsuL" role="9aQI4">
+                            <node concept="abc8K" id="3IKzUjYhsz9" role="3cqZAp">
+                              <node concept="Xl_RD" id="3IKzUjYhsza" role="abp_N">
+                                <property role="Xl_RC" value="Configuration set not to trigger make" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
                       <node concept="3clFbF" id="7MdXHVxka6L" role="3cqZAp">
                         <node concept="2OqwBi" id="7MdXHVxkatS" role="3clFbG">
                           <node concept="1LFfDK" id="7MdXHVxka6N" role="2Oq$k0">
@@ -4138,57 +4203,6 @@
                                           <node concept="3fqX7Q" id="80AXrSevk4" role="2$JKZa">
                                             <node concept="37vLTw" id="80AXrSevk5" role="3fr31v">
                                               <ref role="3cqZAo" node="80AXrSevjj" resolve="success" />
-                                            </node>
-                                          </node>
-                                        </node>
-                                        <node concept="3clFbJ" id="5wf7OU9HsrI" role="3cqZAp">
-                                          <node concept="3clFbS" id="5wf7OU9HsrK" role="3clFbx">
-                                            <node concept="3clFbJ" id="5wf7OU9Hyv9" role="3cqZAp">
-                                              <node concept="3clFbS" id="5wf7OU9Hyvb" role="3clFbx">
-                                                <node concept="abc8K" id="5wf7OU9H$K8" role="3cqZAp">
-                                                  <node concept="Xl_RD" id="5wf7OU9H_bX" role="abp_N">
-                                                    <property role="Xl_RC" value="no project to make..." />
-                                                  </node>
-                                                </node>
-                                              </node>
-                                              <node concept="3clFbC" id="5wf7OU9Hzmi" role="3clFbw">
-                                                <node concept="10Nm6u" id="5wf7OU9HzQ6" role="3uHU7w" />
-                                                <node concept="2OqwBi" id="5wf7OU9Hywt" role="3uHU7B">
-                                                  <node concept="37vLTw" id="5wf7OU9Hywu" role="2Oq$k0">
-                                                    <ref role="3cqZAo" node="80AXrSevjb" resolve="serverConfiguration" />
-                                                  </node>
-                                                  <node concept="2OwXpG" id="5wf7OU9Hywv" role="2OqNvi">
-                                                    <ref role="2Oxat5" node="4BgspmWUVW$" resolve="project" />
-                                                  </node>
-                                                </node>
-                                              </node>
-                                              <node concept="9aQIb" id="5wf7OU9H_eS" role="9aQIa">
-                                                <node concept="3clFbS" id="5wf7OU9H_eT" role="9aQI4">
-                                                  <node concept="3clFbF" id="5wf7OU9Hvxa" role="3cqZAp">
-                                                    <node concept="2YIFZM" id="5wf7OU9HvYn" role="3clFbG">
-                                                      <ref role="37wK5l" node="5wf7OU9qJBO" resolve="execute" />
-                                                      <ref role="1Pybhc" node="5wf7OU9ni8A" resolve="MakeProjectHandler" />
-                                                      <node concept="2OqwBi" id="5wf7OU9Hxng" role="37wK5m">
-                                                        <node concept="37vLTw" id="5wf7OU9HwPk" role="2Oq$k0">
-                                                          <ref role="3cqZAo" node="80AXrSevjb" resolve="serverConfiguration" />
-                                                        </node>
-                                                        <node concept="2OwXpG" id="5wf7OU9HxTl" role="2OqNvi">
-                                                          <ref role="2Oxat5" node="4BgspmWUVW$" resolve="project" />
-                                                        </node>
-                                                      </node>
-                                                      <node concept="3clFbT" id="5wf7OU9HAcP" role="37wK5m" />
-                                                    </node>
-                                                  </node>
-                                                </node>
-                                              </node>
-                                            </node>
-                                          </node>
-                                          <node concept="2OqwBi" id="5wf7OU9HtVs" role="3clFbw">
-                                            <node concept="37vLTw" id="5wf7OU9Htpg" role="2Oq$k0">
-                                              <ref role="3cqZAo" node="80AXrSevjb" resolve="serverConfiguration" />
-                                            </node>
-                                            <node concept="2OwXpG" id="5wf7OU9Huv1" role="2OqNvi">
-                                              <ref role="2Oxat5" node="5wf7OU9HdlJ" resolve="makeProjectAtStart" />
                                             </node>
                                           </node>
                                         </node>
