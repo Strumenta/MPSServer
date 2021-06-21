@@ -27,7 +27,7 @@ apply plugin: 'maven'
 group "com.strumenta.mpsserver"
 description = "MpsServer"
 project.archivesBaseName = "mpsserver"
-version = '2020.3-13-SNAPSHOT'
+version = '2020.3-13'
 
 configurations {
 	mps
