@@ -1862,6 +1862,12 @@
     <node concept="2tJIrI" id="qzlxesv1yF" role="jymVt" />
     <node concept="3clFb_" id="qzlxesvoh3" role="jymVt">
       <property role="TrG5h" value="closeCurrentProject" />
+      <node concept="37vLTG" id="qzlxesvXSu" role="3clF46">
+        <property role="TrG5h" value="loadingExtensionsCallback" />
+        <node concept="3uibUv" id="qzlxesvXSv" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Runnable" resolve="Runnable" />
+        </node>
+      </node>
       <node concept="3clFbS" id="qzlxesvoh6" role="3clF47">
         <node concept="3cpWs8" id="qzlxesvyBs" role="3cqZAp">
           <node concept="3cpWsn" id="qzlxesvyBt" role="3cpWs9">
@@ -1878,7 +1884,9 @@
             <node concept="37vLTw" id="qzlxesvzUG" role="37wK5m">
               <ref role="3cqZAo" node="qzlxesvyBt" resolve="project" />
             </node>
-            <node concept="10Nm6u" id="qzlxesvx6r" role="37wK5m" />
+            <node concept="37vLTw" id="qzlxesw3UO" role="37wK5m">
+              <ref role="3cqZAo" node="qzlxesvXSu" resolve="loadingExtensionsCallback" />
+            </node>
           </node>
         </node>
       </node>
@@ -1925,6 +1933,9 @@
             <node concept="3clFbF" id="qzlxesvuLx" role="3cqZAp">
               <node concept="1rXfSq" id="qzlxesvuLv" role="3clFbG">
                 <ref role="37wK5l" node="qzlxesvoh3" resolve="closeCurrentProject" />
+                <node concept="37vLTw" id="qzlxesw4LL" role="37wK5m">
+                  <ref role="3cqZAo" node="6Hz$xA6KTfO" resolve="loadingExtensionsCallback" />
+                </node>
               </node>
             </node>
             <node concept="3cpWs8" id="6Hz$xA6KRVP" role="3cqZAp">
@@ -3226,7 +3237,7 @@
             <ref role="3cqZAo" node="7MdXHVxjL9j" resolve="repo" />
           </node>
           <node concept="Xl_RD" id="3cTvByc3kkT" role="abp_N">
-            <property role="Xl_RC" value=".Extensions paths: " />
+            <property role="Xl_RC" value=". Extensions paths: " />
           </node>
           <node concept="2OqwBi" id="3cTvByc3lFC" role="abp_N">
             <node concept="37vLTw" id="3cTvByc3lq1" role="2Oq$k0">
@@ -3239,17 +3250,32 @@
         </node>
         <node concept="3clFbJ" id="41VgPlFLgE2" role="3cqZAp">
           <node concept="3clFbS" id="41VgPlFLgE4" role="3clFbx">
-            <node concept="3clFbF" id="41VgPlFMzXb" role="3cqZAp">
-              <node concept="2OqwBi" id="41VgPlFM$ea" role="3clFbG">
-                <node concept="37vLTw" id="41VgPlFMzX9" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7MdXHVxjL9l" resolve="followUp" />
+            <node concept="abc8K" id="qzlxes$hDJ" role="3cqZAp">
+              <node concept="Xl_RD" id="qzlxes$hDK" role="abp_N">
+                <property role="Xl_RC" value="----" />
+              </node>
+            </node>
+            <node concept="abc8K" id="qzlxesz2vw" role="3cqZAp">
+              <node concept="Xl_RD" id="qzlxesz2KC" role="abp_N">
+                <property role="Xl_RC" value="given there is no project using default repo" />
+              </node>
+            </node>
+            <node concept="3clFbF" id="qzlxesz3qF" role="3cqZAp">
+              <node concept="37vLTI" id="qzlxesz3H8" role="3clFbG">
+                <node concept="37vLTw" id="qzlxesz3qD" role="37vLTJ">
+                  <ref role="3cqZAo" node="7MdXHVxjL9j" resolve="repo" />
                 </node>
-                <node concept="liA8E" id="41VgPlFM$yv" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~Runnable.run()" resolve="run" />
+                <node concept="2YIFZM" id="qzlxesz4ud" role="37vLTx">
+                  <ref role="37wK5l" to="w1kc:~MPSModuleRepository.getInstance()" resolve="getInstance" />
+                  <ref role="1Pybhc" to="w1kc:~MPSModuleRepository" resolve="MPSModuleRepository" />
                 </node>
               </node>
             </node>
-            <node concept="3cpWs6" id="41VgPlFLiuB" role="3cqZAp" />
+            <node concept="abc8K" id="qzlxesyPax" role="3cqZAp">
+              <node concept="Xl_RD" id="qzlxesyPqN" role="abp_N">
+                <property role="Xl_RC" value="----" />
+              </node>
+            </node>
           </node>
           <node concept="3clFbC" id="41VgPlFLhWy" role="3clFbw">
             <node concept="10Nm6u" id="41VgPlFLi8e" role="3uHU7w" />
@@ -3856,7 +3882,6 @@
       <node concept="3cqZAl" id="7MdXHVxjL9p" role="3clF45" />
       <node concept="37vLTG" id="7MdXHVxjL9j" role="3clF46">
         <property role="TrG5h" value="repo" />
-        <property role="3TUv4t" value="true" />
         <node concept="3uibUv" id="7MdXHVxjL9k" role="1tU5fm">
           <ref role="3uigEE" to="lui2:~SRepository" resolve="SRepository" />
         </node>
