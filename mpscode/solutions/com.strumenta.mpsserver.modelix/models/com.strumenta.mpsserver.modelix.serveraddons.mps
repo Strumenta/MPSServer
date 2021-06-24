@@ -304,39 +304,15 @@
                 <node concept="37vLTw" id="8tCK0sS0Un" role="37vLTJ">
                   <ref role="3cqZAo" node="6mL1JKjHUdS" resolve="cloudRepository" />
                 </node>
-                <node concept="2OqwBi" id="8tCK0sRWF3" role="37vLTx">
-                  <node concept="2OqwBi" id="8tCK0sRWpo" role="2Oq$k0">
-                    <node concept="2YIFZM" id="8tCK0sRWk7" role="2Oq$k0">
-                      <ref role="37wK5l" to="csg2:1LVcV5Kxxmz" resolve="getInstance" />
-                      <ref role="1Pybhc" to="csg2:1LVcV5Kxxi$" resolve="CloudRepositories" />
-                    </node>
-                    <node concept="liA8E" id="8tCK0sRWtR" role="2OqNvi">
-                      <ref role="37wK5l" to="csg2:1LVcV5KxBgM" resolve="getRepositories" />
-                    </node>
+                <node concept="2OqwBi" id="8tCK0sRWpo" role="37vLTx">
+                  <node concept="2YIFZM" id="8tCK0sRWk7" role="2Oq$k0">
+                    <ref role="37wK5l" to="csg2:1LVcV5Kxxmz" resolve="getInstance" />
+                    <ref role="1Pybhc" to="csg2:1LVcV5Kxxi$" resolve="CloudRepositories" />
                   </node>
-                  <node concept="1z4cxt" id="8tCK0sRXcZ" role="2OqNvi">
-                    <node concept="1bVj0M" id="8tCK0sRXd1" role="23t8la">
-                      <node concept="3clFbS" id="8tCK0sRXd2" role="1bW5cS">
-                        <node concept="3clFbF" id="8tCK0sRXhN" role="3cqZAp">
-                          <node concept="3clFbC" id="8tCK0sRXRX" role="3clFbG">
-                            <node concept="37vLTw" id="8tCK0sS0Fs" role="3uHU7w">
-                              <ref role="3cqZAo" node="2wu2WW9sz5" resolve="targetURL" />
-                            </node>
-                            <node concept="2OqwBi" id="8tCK0sRXqF" role="3uHU7B">
-                              <node concept="37vLTw" id="8tCK0sRXhM" role="2Oq$k0">
-                                <ref role="3cqZAo" node="8tCK0sRXd3" resolve="it" />
-                              </node>
-                              <node concept="liA8E" id="8tCK0sRXxI" role="2OqNvi">
-                                <ref role="37wK5l" to="csg2:6aRQr1WQLS7" resolve="getBaseUrl" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                      <node concept="Rh6nW" id="8tCK0sRXd3" role="1bW2Oz">
-                        <property role="TrG5h" value="it" />
-                        <node concept="2jxLKc" id="8tCK0sRXd4" role="1tU5fm" />
-                      </node>
+                  <node concept="liA8E" id="qzlxes_13V" role="2OqNvi">
+                    <ref role="37wK5l" to="csg2:4bo3wpSgMZv" resolve="getRepository" />
+                    <node concept="37vLTw" id="qzlxes_1d6" role="37wK5m">
+                      <ref role="3cqZAo" node="2wu2WW9sz5" resolve="targetURL" />
                     </node>
                   </node>
                 </node>
