@@ -1859,6 +1859,21 @@
         <ref role="3uigEE" node="5SYYrGBzPK3" resolve="Server" />
       </node>
     </node>
+    <node concept="2tJIrI" id="qzlxesv1yF" role="jymVt" />
+    <node concept="3clFb_" id="qzlxesvoh3" role="jymVt">
+      <property role="TrG5h" value="closeCurrentProject" />
+      <node concept="3clFbS" id="qzlxesvoh6" role="3clF47">
+        <node concept="3clFbF" id="qzlxesvw0C" role="3cqZAp">
+          <node concept="1rXfSq" id="qzlxesvw0B" role="3clFbG">
+            <ref role="37wK5l" node="6Hz$xA6KXrE" resolve="switchProject" />
+            <node concept="10Nm6u" id="qzlxesvw$h" role="37wK5m" />
+            <node concept="10Nm6u" id="qzlxesvx6r" role="37wK5m" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="qzlxesviu8" role="1B3o_S" />
+      <node concept="3cqZAl" id="qzlxesvnWk" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="4BgspmWRknc" role="jymVt" />
     <node concept="3clFb_" id="6Hz$xA6KLm4" role="jymVt">
       <property role="TrG5h" value="createProject" />
@@ -1896,6 +1911,11 @@
         </node>
         <node concept="SfApY" id="6Hz$xA6Lc7M" role="3cqZAp">
           <node concept="3clFbS" id="6Hz$xA6Lc7N" role="SfCbr">
+            <node concept="3clFbF" id="qzlxesvuLx" role="3cqZAp">
+              <node concept="1rXfSq" id="qzlxesvuLv" role="3clFbG">
+                <ref role="37wK5l" node="qzlxesvoh3" resolve="closeCurrentProject" />
+              </node>
+            </node>
             <node concept="3cpWs8" id="6Hz$xA6KRVP" role="3cqZAp">
               <node concept="3cpWsn" id="6Hz$xA6KRVQ" role="3cpWs9">
                 <property role="TrG5h" value="newProject" />
