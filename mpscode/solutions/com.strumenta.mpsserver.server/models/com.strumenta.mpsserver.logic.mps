@@ -1863,10 +1863,21 @@
     <node concept="3clFb_" id="qzlxesvoh3" role="jymVt">
       <property role="TrG5h" value="closeCurrentProject" />
       <node concept="3clFbS" id="qzlxesvoh6" role="3clF47">
+        <node concept="3cpWs8" id="qzlxesvyBs" role="3cqZAp">
+          <node concept="3cpWsn" id="qzlxesvyBt" role="3cpWs9">
+            <property role="TrG5h" value="project" />
+            <node concept="3uibUv" id="qzlxesvyBu" role="1tU5fm">
+              <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
+            </node>
+            <node concept="10Nm6u" id="qzlxesvzwt" role="33vP2m" />
+          </node>
+        </node>
         <node concept="3clFbF" id="qzlxesvw0C" role="3cqZAp">
           <node concept="1rXfSq" id="qzlxesvw0B" role="3clFbG">
             <ref role="37wK5l" node="6Hz$xA6KXrE" resolve="switchProject" />
-            <node concept="10Nm6u" id="qzlxesvw$h" role="37wK5m" />
+            <node concept="37vLTw" id="qzlxesvzUG" role="37wK5m">
+              <ref role="3cqZAo" node="qzlxesvyBt" resolve="project" />
+            </node>
             <node concept="10Nm6u" id="qzlxesvx6r" role="37wK5m" />
           </node>
         </node>
