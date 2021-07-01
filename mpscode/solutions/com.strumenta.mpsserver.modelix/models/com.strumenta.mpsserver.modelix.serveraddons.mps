@@ -1380,8 +1380,23 @@
                                             <ref role="2Oxat5" to="30ym:3h0CTvwIjPg" resolve="requestId" />
                                           </node>
                                         </node>
-                                        <node concept="Xl_RD" id="qzlxesCd03" role="37wK5m">
-                                          <property role="Xl_RC" value="Version not found" />
+                                        <node concept="3cpWs3" id="4pEVX9_K7Eq" role="37wK5m">
+                                          <node concept="2OqwBi" id="4pEVX9_K8mo" role="3uHU7w">
+                                            <node concept="2OqwBi" id="4pEVX9_K7YW" role="2Oq$k0">
+                                              <node concept="37vLTw" id="4pEVX9_K7Nl" role="2Oq$k0">
+                                                <ref role="3cqZAo" node="2DTPz1eDaKY" resolve="treeInRepository" />
+                                              </node>
+                                              <node concept="AQDAd" id="4pEVX9_K8ai" role="2OqNvi">
+                                                <ref role="37wK5l" node="4pEVX9_K5Jo" resolve="latestVersion" />
+                                              </node>
+                                            </node>
+                                            <node concept="liA8E" id="4pEVX9_K8xO" role="2OqNvi">
+                                              <ref role="37wK5l" to="xkhl:~CLVersion.getId()" resolve="getId" />
+                                            </node>
+                                          </node>
+                                          <node concept="Xl_RD" id="qzlxesCd03" role="3uHU7B">
+                                            <property role="Xl_RC" value="Version not found. Latest version available: " />
+                                          </node>
                                         </node>
                                       </node>
                                     </node>
@@ -2731,6 +2746,50 @@
   </node>
   <node concept="KRBjq" id="6Hz$xA6Eopu">
     <property role="TrG5h" value="VersionsNavigation" />
+    <node concept="ATzpf" id="4pEVX9_K5Jo" role="a7sos">
+      <property role="TrG5h" value="latestVersion" />
+      <node concept="3Tm1VV" id="4pEVX9_K5Jp" role="1B3o_S" />
+      <node concept="3uibUv" id="4pEVX9_K5Jq" role="3clF45">
+        <ref role="3uigEE" to="xkhl:~CLVersion" resolve="CLVersion" />
+      </node>
+      <node concept="3clFbS" id="4pEVX9_K5Jr" role="3clF47">
+        <node concept="3cpWs8" id="4pEVX9_K5Js" role="3cqZAp">
+          <node concept="3cpWsn" id="4pEVX9_K5Jt" role="3cpWs9">
+            <property role="TrG5h" value="activeBranch" />
+            <node concept="3uibUv" id="4pEVX9_K5Ju" role="1tU5fm">
+              <ref role="3uigEE" to="5440:~ActiveBranch" resolve="ActiveBranch" />
+            </node>
+            <node concept="2OqwBi" id="4pEVX9_K5Jv" role="33vP2m">
+              <node concept="2V_BSl" id="4pEVX9_K5Jw" role="2Oq$k0" />
+              <node concept="liA8E" id="4pEVX9_K5Jx" role="2OqNvi">
+                <ref role="37wK5l" to="csg2:2fgGmVJWuwV" resolve="getActiveBranch" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="4pEVX9_K5Jy" role="3cqZAp">
+          <node concept="3cpWsn" id="4pEVX9_K5Jz" role="3cpWs9">
+            <property role="TrG5h" value="currentVersion" />
+            <node concept="3uibUv" id="4pEVX9_K5J$" role="1tU5fm">
+              <ref role="3uigEE" to="xkhl:~CLVersion" resolve="CLVersion" />
+            </node>
+            <node concept="2OqwBi" id="4pEVX9_K5J_" role="33vP2m">
+              <node concept="37vLTw" id="4pEVX9_K5JA" role="2Oq$k0">
+                <ref role="3cqZAo" node="4pEVX9_K5Jt" resolve="activeBranch" />
+              </node>
+              <node concept="liA8E" id="4pEVX9_K5JB" role="2OqNvi">
+                <ref role="37wK5l" to="5440:~ActiveBranch.getVersion()" resolve="getVersion" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="4pEVX9_K5JW" role="3cqZAp">
+          <node concept="37vLTw" id="4pEVX9_K677" role="3cqZAk">
+            <ref role="3cqZAo" node="4pEVX9_K5Jz" resolve="currentVersion" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="ATzpf" id="6Hz$xA6EoqH" role="a7sos">
       <property role="TrG5h" value="findVersionByID" />
       <node concept="3Tm1VV" id="6Hz$xA6EoqI" role="1B3o_S" />
@@ -2738,33 +2797,17 @@
         <ref role="3uigEE" to="xkhl:~CLVersion" resolve="CLVersion" />
       </node>
       <node concept="3clFbS" id="6Hz$xA6EoqK" role="3clF47">
-        <node concept="3cpWs8" id="6Hz$xA6EorT" role="3cqZAp">
-          <node concept="3cpWsn" id="6Hz$xA6EorU" role="3cpWs9">
-            <property role="TrG5h" value="activeBranch" />
-            <node concept="3uibUv" id="6Hz$xA6EorV" role="1tU5fm">
-              <ref role="3uigEE" to="5440:~ActiveBranch" resolve="ActiveBranch" />
-            </node>
-            <node concept="2OqwBi" id="6Hz$xA6EorW" role="33vP2m">
-              <node concept="2V_BSl" id="6Hz$xA6EovX" role="2Oq$k0" />
-              <node concept="liA8E" id="6Hz$xA6EorY" role="2OqNvi">
-                <ref role="37wK5l" to="csg2:2fgGmVJWuwV" resolve="getActiveBranch" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs8" id="6Hz$xA6EorZ" role="3cqZAp">
           <node concept="3cpWsn" id="6Hz$xA6Eos0" role="3cpWs9">
             <property role="TrG5h" value="currentVersion" />
             <node concept="3uibUv" id="6Hz$xA6Eos1" role="1tU5fm">
               <ref role="3uigEE" to="xkhl:~CLVersion" resolve="CLVersion" />
             </node>
-            <node concept="2OqwBi" id="6Hz$xA6Eos2" role="33vP2m">
-              <node concept="37vLTw" id="6Hz$xA6Eos3" role="2Oq$k0">
-                <ref role="3cqZAo" node="6Hz$xA6EorU" resolve="activeBranch" />
+            <node concept="2OqwBi" id="4pEVX9_K6au" role="33vP2m">
+              <node concept="AQDAd" id="4pEVX9_K6ax" role="2OqNvi">
+                <ref role="37wK5l" node="4pEVX9_K5Jo" resolve="latestVersion" />
               </node>
-              <node concept="liA8E" id="6Hz$xA6Eos4" role="2OqNvi">
-                <ref role="37wK5l" to="5440:~ActiveBranch.getVersion()" resolve="getVersion" />
-              </node>
+              <node concept="2V_BSl" id="4pEVX9_K6az" role="2Oq$k0" />
             </node>
           </node>
         </node>
