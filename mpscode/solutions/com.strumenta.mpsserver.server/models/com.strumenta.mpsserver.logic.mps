@@ -38407,7 +38407,7 @@
     <property role="1sVAO0" value="true" />
     <node concept="2tJIrI" id="8tCK0sTq2a" role="jymVt" />
     <node concept="312cEg" id="8tCK0sTqnu" role="jymVt">
-      <property role="TrG5h" value="clazz" />
+      <property role="TrG5h" value="messageClass" />
       <node concept="3Tm6S6" id="8tCK0sTq9e" role="1B3o_S" />
       <node concept="3uibUv" id="8tCK0sTqg0" role="1tU5fm">
         <ref role="3uigEE" to="wyt6:~Class" resolve="Class" />
@@ -38419,7 +38419,7 @@
     <node concept="2tJIrI" id="8tCK0sTqpb" role="jymVt" />
     <node concept="3clFbW" id="8tCK0sTqxm" role="jymVt">
       <node concept="37vLTG" id="8tCK0sTqzk" role="3clF46">
-        <property role="TrG5h" value="clazz" />
+        <property role="TrG5h" value="messageClass" />
         <node concept="3uibUv" id="8tCK0sTqzm" role="1tU5fm">
           <ref role="3uigEE" to="wyt6:~Class" resolve="Class" />
           <node concept="16syzq" id="8tCK0sTqzn" role="11_B2D">
@@ -38433,12 +38433,12 @@
         <node concept="3clFbF" id="8tCK0sTqGR" role="3cqZAp">
           <node concept="37vLTI" id="8tCK0sTrE3" role="3clFbG">
             <node concept="37vLTw" id="8tCK0sTrPu" role="37vLTx">
-              <ref role="3cqZAo" node="8tCK0sTqzk" resolve="clazz" />
+              <ref role="3cqZAo" node="8tCK0sTqzk" resolve="messageClass" />
             </node>
             <node concept="2OqwBi" id="8tCK0sTqV1" role="37vLTJ">
               <node concept="Xjq3P" id="8tCK0sTqGQ" role="2Oq$k0" />
               <node concept="2OwXpG" id="8tCK0sTr7U" role="2OqNvi">
-                <ref role="2Oxat5" node="8tCK0sTqnu" resolve="clazz" />
+                <ref role="2Oxat5" node="8tCK0sTqnu" resolve="messageClass" />
               </node>
             </node>
           </node>
@@ -38451,7 +38451,7 @@
       <node concept="3clFbS" id="8tCK0sUDp_" role="3clF47">
         <node concept="3cpWs6" id="8tCK0sUDEu" role="3cqZAp">
           <node concept="37vLTw" id="8tCK0sUDMp" role="3cqZAk">
-            <ref role="3cqZAo" node="8tCK0sTqnu" resolve="clazz" />
+            <ref role="3cqZAo" node="8tCK0sTqnu" resolve="messageClass" />
           </node>
         </node>
       </node>
@@ -38503,7 +38503,7 @@
                   <ref role="3cqZAo" node="8tCK0sTpx7" resolve="message" />
                 </node>
                 <node concept="37vLTw" id="8tCK0sTVmI" role="37wK5m">
-                  <ref role="3cqZAo" node="8tCK0sTqnu" resolve="clazz" />
+                  <ref role="3cqZAo" node="8tCK0sTqnu" resolve="messageClass" />
                 </node>
               </node>
             </node>
