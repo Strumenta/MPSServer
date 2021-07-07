@@ -41,8 +41,8 @@ configurations {
 }
 
 ext.mpsVersion = '2020.3.3'
-ext.modelixVersion = '0.0.32'
-ext.mpsExtensionsVersion = '2020.3.1710.8c5c648'
+ext.modelixVersion = '0.0.35'
+ext.mpsExtensionsVersion = '2020.3.1824.6a262ff'
 
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
