@@ -41108,7 +41108,13 @@
       <property role="2vBHbC" value="This triggers an error check which in turns can cause ErrorsForModelReport and ErrorsForNodeReport messages to be sent" />
       <ref role="2vww_0" node="7jLdWIssMg5" resolve="AskErrorsForNode" />
     </node>
-    <node concept="2vZhGF" id="73quuNJvOPZ" role="2vWcE4" />
+    <node concept="2vZhHr" id="73quuNJyz3N" role="2vWcE4">
+      <ref role="2vZhGV" node="15JNn0t1ISO" resolve="GetNode" />
+      <node concept="2vZg1_" id="73quuNJyN6V" role="2vZg1Q">
+        <ref role="2vZg1P" node="15JNn0t1YAP" resolve="GetNodeAnswer" />
+      </node>
+    </node>
+    <node concept="2vZhGF" id="73quuNJyVlD" role="2vWcE4" />
   </node>
   <node concept="312cEu" id="73quuNJs8VI">
     <property role="2bfB8j" value="true" />
@@ -41141,6 +41147,56 @@
   <node concept="2vZhHa" id="73quuNJwfCC">
     <property role="3GE5qa" value="documentation" />
     <property role="TrG5h" value="Intentions" />
+    <node concept="2vZhHr" id="73quuNJwJYH" role="2vWcE4">
+      <ref role="2vZhGV" node="6uy13ANAbbI" resolve="CreateIntentionsBlock" />
+      <node concept="2vZg1_" id="73quuNJwP6L" role="2vZg1Q">
+        <ref role="2vZg1P" node="6uy13ANAbD$" resolve="CreateIntentionsBlockAnswer" />
+      </node>
+    </node>
+    <node concept="2vww_R" id="73quuNJwVUY" role="2vWcE4">
+      <ref role="2vww_0" node="6uy13ANAe2i" resolve="DeleteIntentionsBlock" />
+    </node>
+    <node concept="2vZhHr" id="73quuNJx3ky" role="2vWcE4">
+      <ref role="2vZhGV" node="6uy13ANASh8" resolve="GetIntentionsBlock" />
+      <node concept="2vZg1_" id="73quuNJx5sH" role="2vZg1Q">
+        <ref role="2vZg1P" node="6uy13ANByjS" resolve="GetIntentionsBlockAnswer" />
+      </node>
+    </node>
+    <node concept="2vww_R" id="73quuNJxpaK" role="2vWcE4">
+      <ref role="2vww_0" node="6uy13ANAe_z" resolve="ExecuteIntention" />
+    </node>
+  </node>
+  <node concept="2vZhHa" id="73quuNJznaT">
+    <property role="3GE5qa" value="documentation" />
+    <property role="TrG5h" value="Actions" />
+    <node concept="2vZhHr" id="73quuNJzr0I" role="2vWcE4">
+      <ref role="2vZhGV" node="2jT6WJ_CNAU" resolve="ExecuteAction" />
+      <node concept="2vZg1_" id="73quuNJzsh6" role="2vZg1Q">
+        <ref role="2vZg1P" node="2jT6WJ_GfGn" resolve="ExecuteActionAnswer" />
+      </node>
+    </node>
+  </node>
+  <node concept="2vZhHa" id="73quuNJzAfS">
+    <property role="3GE5qa" value="documentation" />
+    <property role="TrG5h" value="Projects" />
+    <node concept="2vZhHr" id="73quuNJzE6R" role="2vWcE4">
+      <ref role="2vZhGV" node="4BgspmWO6aH" resolve="OpenProject" />
+      <node concept="2vZg1_" id="73quuNJzFnf" role="2vZg1Q">
+        <ref role="2vZg1P" node="4BgspmWThuR" resolve="DoneAnswerMessage" />
+      </node>
+    </node>
+    <node concept="2vZhHr" id="73quuNJzLmx" role="2vWcE4">
+      <ref role="2vZhGV" node="6Hz$xA6Lsw8" resolve="NewProject" />
+      <node concept="2vZg1_" id="73quuNJzNsw" role="2vZg1Q">
+        <ref role="2vZg1P" node="4BgspmWThuR" resolve="DoneAnswerMessage" />
+      </node>
+    </node>
+    <node concept="2vZhHr" id="769wvHiQnCb" role="2vWcE4">
+      <ref role="2vZhGV" node="4BgspmWUmIg" resolve="GetProjectInfo" />
+      <node concept="2vZg1_" id="769wvHiQpIc" role="2vZg1Q">
+        <ref role="2vZg1P" node="4BgspmWUmIO" resolve="GetProjectInfoAnswer" />
+      </node>
+    </node>
   </node>
 </model>
 
