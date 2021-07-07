@@ -7,6 +7,7 @@
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="5dc5fc0d-37ef-4782-8192-8b5ce1f69f80" name="jetbrains.mps.baseLanguage.extensionMethods" version="0" />
     <use id="a247e09e-2435-45ba-b8d2-07e93feba96a" name="jetbrains.mps.baseLanguage.tuples" version="0" />
+    <use id="943fbe9f-1803-4066-9f3f-ab996a001440" name="com.strumenta.mpsserver.protocol" version="0" />
   </languages>
   <imports>
     <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
@@ -276,6 +277,18 @@
       <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
       <concept id="1202128969694" name="jetbrains.mps.baseLanguage.collections.structure.SelectOperation" flags="nn" index="3$u5V9" />
+    </language>
+    <language id="943fbe9f-1803-4066-9f3f-ab996a001440" name="com.strumenta.mpsserver.protocol">
+      <concept id="8131946135702436233" name="com.strumenta.mpsserver.protocol.structure.Answer" flags="ng" index="2vZg1_">
+        <reference id="8131946135702436249" name="requestAnswerClass" index="2vZg1P" />
+      </concept>
+      <concept id="8131946135702430374" name="com.strumenta.mpsserver.protocol.structure.WebSocketsAPIsGroup" flags="ng" index="2vZhHa">
+        <child id="8131946135702647656" name="endpoints" index="2vWcE4" />
+      </concept>
+      <concept id="8131946135702430391" name="com.strumenta.mpsserver.protocol.structure.WSRequestEndpoint" flags="ng" index="2vZhHr">
+        <reference id="8131946135702430423" name="requestMessageClass" index="2vZhGV" />
+        <child id="8131946135702436250" name="answers" index="2vZg1Q" />
+      </concept>
     </language>
   </registry>
   <node concept="312cEu" id="6mL1JKjFg18">
@@ -3388,6 +3401,27 @@
     <node concept="3Tm1VV" id="2DTPz1eCNiH" role="1B3o_S" />
     <node concept="3uibUv" id="2DTPz1eCNiI" role="1zkMxy">
       <ref role="3uigEE" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
+    </node>
+  </node>
+  <node concept="2vZhHa" id="73quuNJfAPx">
+    <property role="TrG5h" value="ModelixIntegration" />
+    <node concept="2vZhHr" id="73quuNJfB_R" role="2vWcE4">
+      <ref role="2vZhGV" node="8tCK0t0El$" resolve="ModelixCleanTransient" />
+      <node concept="2vZg1_" id="73quuNJfE$W" role="2vZg1Q">
+        <ref role="2vZg1P" to="30ym:4BgspmWThuR" resolve="DoneAnswerMessage" />
+      </node>
+    </node>
+    <node concept="2vZhHr" id="73quuNJfG1K" role="2vWcE4">
+      <ref role="2vZhGV" node="8tCK0sOm6Q" resolve="ModelixCheckoutTransientProject" />
+      <node concept="2vZg1_" id="73quuNJfHK9" role="2vZg1Q">
+        <ref role="2vZg1P" to="30ym:4BgspmWThuR" resolve="DoneAnswerMessage" />
+      </node>
+    </node>
+    <node concept="2vZhHr" id="73quuNJfI1N" role="2vWcE4">
+      <ref role="2vZhGV" node="2DTPz1eCoSx" resolve="ModelixCheckoutTransientModule" />
+      <node concept="2vZg1_" id="73quuNJfK2f" role="2vZg1Q">
+        <ref role="2vZg1P" to="30ym:4BgspmWThuR" resolve="DoneAnswerMessage" />
+      </node>
     </node>
   </node>
 </model>
