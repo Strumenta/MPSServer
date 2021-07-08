@@ -41,6 +41,7 @@ def process_endpoint(endpoint, messagesmap):
 		html.append("\n\t\t\t<h4>Answers:</h4>")
 		for answer in endpoint.iter('answer'):
 			html.append("\n\t\t\t<p class=\"answer\"><a href=\"#message_%s\">%s</a></p>" % (answer.attrib['messageType'], answer.attrib['messageType']))
+			create_table(messagesmap[answer.attrib['messageType']])
 
 	html.append("\n\t\t</div>")
 
@@ -59,7 +60,7 @@ def process_type(type):
 def process_message(message):
 	type = message.attrib['type']
 
-	html.append("\n\t\t<a id=\"message_%s\">" % message.attrib['name'])
+	html.append("\n\t\t<a id=\"message_%s\"></a>" % message.attrib['name'])
 	html.append("\n\t\t<div class=\"message\">")
 	html.append("\n\t\t\t<h3>%s %s</h3>" % (type, message.attrib['name']))
 	
@@ -70,7 +71,8 @@ def process_message(message):
 def process_group(xmldata):
 	name = xmldata.attrib['name']
 	html.append("\n\t<div class='group'>")
-	html.append("\n\t<h1>Group %s</h1>" % name)
+	html.append("\n\t<div class=\"group-header\"><h1>Group %s</h1></div>" % name)
+	html.append("\n\t<div class='group-content'>")
 
 	messagesmap = {}
 	for message in xmldata:
@@ -89,13 +91,13 @@ def process_group(xmldata):
 		if message.tag == "message":
 			# print(message.tag)			
 			process_message(message)
-	html.append("\n\t</div>")	
+	html.append("\n\t</div></div>")	
 
 for xmlfile in xmlfiles:
 	xmldata = ET.parse(xmlfile).getroot()
 	process_group(xmldata)
 
 print(html.code())
-text_file = open("wsdocumentation.html", "w")
+text_file = open("../documentation/wsdocumentation.html", "w")
 text_file.write(html.code())
 text_file.close()

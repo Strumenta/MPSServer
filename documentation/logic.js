@@ -1,14 +1,12 @@
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("group-header");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+  coll[i].addEventListener("click", function(event) {
+  	console.log("gotcha 0", event.target);
+  	const group = event.target.closest("div.group");
+  	console.log("  group", group);
+    group.classList.toggle("active");
+
   });
 }

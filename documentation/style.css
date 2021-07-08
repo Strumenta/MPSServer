@@ -1,5 +1,6 @@
 body {
 	font-family: sans-serif;
+	margin: 2% 10%;
 }
 
 h1 {
@@ -32,3 +33,53 @@ th, td {
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #ffffff;}
+
+div.group {
+	border: 1px #ccc solid;
+	border-radius: 8px;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: #f8f8f8;
+	box-shadow: 0 0 3px rgb(0 0 0 / 19%);
+}
+
+div.group-content {
+	display: none;
+	padding: 10px;
+}
+
+div.group-content h2 {
+	color: #888;
+}
+
+div.group.active > div.group-content {
+	display: block;
+}
+
+div.group.active > div.group-header {
+	border-bottom: 1px #ccc solid;
+}
+
+div.group-header {
+	cursor: pointer;
+	padding: 5px 15px;
+	border: 1px white solid;
+}
+
+div.group-header:hover {
+	background-color: #eee;
+	border: 1px #ccc solid;
+}
+
+p.description {
+	font-style: italic;
+}
+
+div.endpoint {
+	padding: 9px;
+	margin-bottom: 20px;
+}
+
+span.primitive {
+	font-weight: bold;
+}
