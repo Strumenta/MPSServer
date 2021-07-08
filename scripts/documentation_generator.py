@@ -17,12 +17,27 @@ class HtmlDoc:
 
 html = HtmlDoc()
 
-def create_table(message):
+
+def link(name, messagesmap):
+	if name in messagesmap:
+		return "<a href='#message_%s'>%s</a>" % (name, name)
+	else:
+		return "<span class='unavailable_type'>%s</span>" % name
+
+def create_table(message, messagesmap):
+	if 'superClass' in message.attrib:
+		sup = message.attrib['superClass']
+		html.append("\n\t\t\t<p>superclass: %s</p>" % (link(sup, messagesmap)))			
+
+
 	html.append("\n\t\t\t<table>")
 	html.append("\n\t\t\t\t<tr><th>Name</th><th>Type</th></tr>")
-	for field in message:
-		html.append("\n\t\t\t\t<tr><td>%s</td><td>%s</td></tr>" % (field.attrib['name'], process_type(field.find('type'))))
-	html.append("\n\t\t\t</table>")		
+	for field in message.iter("field"):
+		html.append("\n\t\t\t\t<tr><td>%s</td><td>%s</td></tr>" % (field.attrib['name'], process_type(field.find('type'), messagesmap)))
+	html.append("\n\t\t\t</table>")	
+
+	for sc in message.iter("subclass"):
+		html.append("\n\t\t\t<p>subclass: %s</p>" % (link(sc.attrib['name'], messagesmap)))			
 
 def process_endpoint(endpoint, messagesmap):
 	type = endpoint.tag[0 : len(endpoint.tag) - len('Endpoint')]
@@ -33,38 +48,51 @@ def process_endpoint(endpoint, messagesmap):
 	html.append("\n\t\t\t<h3>%s %s</h3>" % (type, endpoint.attrib['messageType']))
 	html.append("\n\t\t\t<p class=\"description\">%s</p>" % (description))
 
-	create_table(messagesmap[endpoint.attrib['messageType']])
+	html.append("\n\t\t\t<p>%s</p>" % (link(endpoint.attrib['messageType'], messagesmap)))
 
-	html.append("\n\t\t\t<p><a href=\"#message_%s\">Message definition</a></p>" % (endpoint.attrib['messageType']))
+	create_table(messagesmap[endpoint.attrib['messageType']], messagesmap)
+
 
 	if endpoint.tag == "requestEndpoint":
 		html.append("\n\t\t\t<h4>Answers:</h4>")
 		for answer in endpoint.iter('answer'):
-			html.append("\n\t\t\t<p class=\"answer\"><a href=\"#message_%s\">%s</a></p>" % (answer.attrib['messageType'], answer.attrib['messageType']))
-			create_table(messagesmap[answer.attrib['messageType']])
+			html.append("\n\t\t\t<p class=\"answer\">%s</p>" % (link(answer.attrib['messageType'], messagesmap)))
+			create_table(messagesmap[answer.attrib['messageType']], messagesmap)
 
 	html.append("\n\t\t</div>")
 
-def process_type(type):
+def process_type(type, messagesmap):
 	if type is None:
 		return "NO TYPE"
 	name = type.attrib['name']
 	if name == 'String':
 		return "<span class='primitive'>string</span>"
+	if name == 'UUID':
+		return "<span class='primitive'>string</span>"
 	if name == 'Boolean':
 		return "<span class='primitive'>boolean</span>"		
+	if name == 'Int':
+		return "<span class='primitive'>int</span>"
+	if name == 'Long':
+		return "<span class='primitive'>long</span>"
+	if name == 'Object':
+		return "<span class='any'>any</span>"
 	if name == 'List':
-		return "<span class='complex'>%s[]</span>" % (process_type(type.find('type')))
-	return "<span class='complex'><a href='#message_%s'>%s</a></span>" % (name, name)
+		return "<span class='complex'>%s[]</span>" % (process_type(type.find('type'), messagesmap))
+	return "<span class='complex'>%s</span>" % (link(name, messagesmap))
 
-def process_message(message):
+def process_message(message, messagesmap):
 	type = message.attrib['type']
+	name = message.attrib['name']
 
-	html.append("\n\t\t<a id=\"message_%s\"></a>" % message.attrib['name'])
+	if name == 'UUID':
+		return
+
+	html.append("\n\t\t<a id=\"message_%s\"></a>" % name)
 	html.append("\n\t\t<div class=\"message\">")
-	html.append("\n\t\t\t<h3>%s %s</h3>" % (type, message.attrib['name']))
+	html.append("\n\t\t\t<h3>%s %s</h3>" % (type, name))
 	
-	create_table(message)
+	create_table(message, messagesmap)
 
 	html.append("\n\t\t</div>")	
 
@@ -77,7 +105,8 @@ def process_group(xmldata):
 	messagesmap = {}
 	for message in xmldata:
 		if message.tag == "message":
-			messagesmap[message.attrib['name']] = message
+			name = message.attrib['name']
+			messagesmap[name] = message
 
 	# process endpoints
 	html.append("\n\n\t<h2>Endpoints</h2>")
@@ -90,7 +119,7 @@ def process_group(xmldata):
 	for message in xmldata:
 		if message.tag == "message":
 			# print(message.tag)			
-			process_message(message)
+			process_message(message, messagesmap)
 	html.append("\n\t</div></div>")	
 
 for xmlfile in xmlfiles:

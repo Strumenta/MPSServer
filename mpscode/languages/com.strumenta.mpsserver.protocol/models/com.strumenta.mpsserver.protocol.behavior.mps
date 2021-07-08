@@ -578,6 +578,14 @@
         </node>
         <node concept="3clFbJ" id="1B9Rp3N1S0I" role="3cqZAp">
           <node concept="3clFbS" id="1B9Rp3N1S0J" role="3clFbx">
+            <node concept="abc8K" id="eoLigo0GMV" role="3cqZAp">
+              <node concept="Xl_RD" id="eoLigo0GMW" role="abp_N">
+                <property role="Xl_RC" value="addRelevantClasses adding class " />
+              </node>
+              <node concept="37vLTw" id="eoLigo0ICM" role="abp_N">
+                <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+              </node>
+            </node>
             <node concept="3clFbF" id="1B9Rp3N1S0K" role="3cqZAp">
               <node concept="2OqwBi" id="1B9Rp3N1S0L" role="3clFbG">
                 <node concept="37vLTw" id="1B9Rp3N1S0M" role="2Oq$k0">
@@ -637,6 +645,20 @@
                 <node concept="2es0OD" id="1B9Rp3N1S19" role="2OqNvi">
                   <node concept="1bVj0M" id="1B9Rp3N1S1a" role="23t8la">
                     <node concept="3clFbS" id="1B9Rp3N1S1b" role="1bW5cS">
+                      <node concept="abc8K" id="eoLigo0K$C" role="3cqZAp">
+                        <node concept="Xl_RD" id="eoLigo0K$D" role="abp_N">
+                          <property role="Xl_RC" value="addRelevantClasses for class " />
+                        </node>
+                        <node concept="37vLTw" id="eoLigo0K$E" role="abp_N">
+                          <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                        </node>
+                        <node concept="Xl_RD" id="eoLigo0M56" role="abp_N">
+                          <property role="Xl_RC" value=" adding field " />
+                        </node>
+                        <node concept="37vLTw" id="eoLigo0M_Y" role="abp_N">
+                          <ref role="3cqZAo" node="1B9Rp3N1S1g" resolve="it" />
+                        </node>
+                      </node>
                       <node concept="3clFbF" id="1B9Rp3N1V6N" role="3cqZAp">
                         <node concept="1rXfSq" id="1B9Rp3N1V6L" role="3clFbG">
                           <ref role="37wK5l" node="1B9Rp3N1S2k" resolve="addRelevantClassesFromType" />
@@ -797,6 +819,18 @@
               </node>
             </node>
           </node>
+          <node concept="9aQIb" id="eoLigo0Hng" role="9aQIa">
+            <node concept="3clFbS" id="eoLigo0Hnh" role="9aQI4">
+              <node concept="abc8K" id="eoLigo0Ih$" role="3cqZAp">
+                <node concept="Xl_RD" id="eoLigo0Ih_" role="abp_N">
+                  <property role="Xl_RC" value="addRelevantClasses skipping class " />
+                </node>
+                <node concept="37vLTw" id="eoLigo0IuI" role="abp_N">
+                  <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="3cqZAl" id="1B9Rp3N1S2e" role="3clF45" />
@@ -870,6 +904,63 @@
         </node>
         <node concept="3clFbJ" id="1B9Rp3N1S2J" role="3cqZAp">
           <node concept="3clFbS" id="1B9Rp3N1S2K" role="3clFbx">
+            <node concept="3clFbF" id="eoLignTGbj" role="3cqZAp">
+              <node concept="2OqwBi" id="eoLignTJlu" role="3clFbG">
+                <node concept="2OqwBi" id="eoLignTGr3" role="2Oq$k0">
+                  <node concept="1PxgMI" id="eoLignTGbl" role="2Oq$k0">
+                    <node concept="chp4Y" id="eoLignTGbm" role="3oSUPX">
+                      <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                    </node>
+                    <node concept="37vLTw" id="eoLignTGbn" role="1m5AlR">
+                      <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="eoLignTGLf" role="2OqNvi">
+                    <ref role="3TtcxE" to="tpee:g91_B6F" resolve="parameter" />
+                  </node>
+                </node>
+                <node concept="2es0OD" id="eoLignTL8F" role="2OqNvi">
+                  <node concept="1bVj0M" id="eoLignTL8H" role="23t8la">
+                    <node concept="3clFbS" id="eoLignTL8I" role="1bW5cS">
+                      <node concept="abc8K" id="eoLigo0B9t" role="3cqZAp">
+                        <node concept="Xl_RD" id="eoLigo0Be9" role="abp_N">
+                          <property role="Xl_RC" value="addRelevantClassesFromType: considering param " />
+                        </node>
+                        <node concept="37vLTw" id="eoLigo0BrT" role="abp_N">
+                          <ref role="3cqZAo" node="eoLignTL8J" resolve="it" />
+                        </node>
+                        <node concept="Xl_RD" id="eoLigo0BI$" role="abp_N">
+                          <property role="Xl_RC" value=" of " />
+                        </node>
+                        <node concept="1PxgMI" id="eoLigo0BSA" role="abp_N">
+                          <node concept="chp4Y" id="eoLigo0BSB" role="3oSUPX">
+                            <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                          </node>
+                          <node concept="37vLTw" id="eoLigo0BSC" role="1m5AlR">
+                            <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3clFbF" id="eoLignTLcV" role="3cqZAp">
+                        <node concept="1rXfSq" id="eoLignTLcX" role="3clFbG">
+                          <ref role="37wK5l" node="1B9Rp3N1S2k" resolve="addRelevantClassesFromType" />
+                          <node concept="37vLTw" id="eoLignTLcY" role="37wK5m">
+                            <ref role="3cqZAo" node="1B9Rp3N1S3l" resolve="collection" />
+                          </node>
+                          <node concept="37vLTw" id="eoLignTLBp" role="37wK5m">
+                            <ref role="3cqZAo" node="eoLignTL8J" resolve="it" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="eoLignTL8J" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="eoLignTL8K" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3clFbJ" id="1B9Rp3N1S2L" role="3cqZAp">
               <node concept="2OqwBi" id="1B9Rp3N1S2M" role="3clFbw">
                 <node concept="2OqwBi" id="1B9Rp3N1S2N" role="2Oq$k0">
@@ -892,6 +983,29 @@
                 </node>
               </node>
               <node concept="3clFbS" id="1B9Rp3N1S2U" role="3clFbx">
+                <node concept="abc8K" id="eoLigo0EPc" role="3cqZAp">
+                  <node concept="Xl_RD" id="eoLigo0ESW" role="abp_N">
+                    <property role="Xl_RC" value="addRelevantClassesFromType: adding class " />
+                  </node>
+                  <node concept="1PxgMI" id="eoLigo0EUb" role="abp_N">
+                    <node concept="chp4Y" id="eoLigo0EUc" role="3oSUPX">
+                      <ref role="cht4Q" to="tpee:fz12cDA" resolve="ClassConcept" />
+                    </node>
+                    <node concept="2OqwBi" id="eoLigo0EUd" role="1m5AlR">
+                      <node concept="1PxgMI" id="eoLigo0EUe" role="2Oq$k0">
+                        <node concept="chp4Y" id="eoLigo0EUf" role="3oSUPX">
+                          <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                        </node>
+                        <node concept="37vLTw" id="eoLigo0EUg" role="1m5AlR">
+                          <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="eoLigo0EUh" role="2OqNvi">
+                        <ref role="3Tt5mk" to="tpee:g7uigIF" resolve="classifier" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbF" id="1B9Rp3N1S2V" role="3cqZAp">
                   <node concept="1rXfSq" id="1B9Rp3N1YnR" role="3clFbG">
                     <ref role="37wK5l" node="1B9Rp3N1S0l" resolve="addRelevantClasses" />
@@ -922,6 +1036,27 @@
               </node>
               <node concept="9aQIb" id="1B9Rp3N1S36" role="9aQIa">
                 <node concept="3clFbS" id="1B9Rp3N1S37" role="9aQI4">
+                  <node concept="abc8K" id="eoLigo1Len" role="3cqZAp">
+                    <node concept="Xl_RD" id="eoLigo1LfV" role="abp_N">
+                      <property role="Xl_RC" value="something else " />
+                    </node>
+                    <node concept="2OqwBi" id="eoLigo1LIf" role="abp_N">
+                      <node concept="2OqwBi" id="eoLigo1LhA" role="2Oq$k0">
+                        <node concept="1PxgMI" id="eoLigo1LhB" role="2Oq$k0">
+                          <node concept="chp4Y" id="eoLigo1LhC" role="3oSUPX">
+                            <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                          </node>
+                          <node concept="37vLTw" id="eoLigo1LhD" role="1m5AlR">
+                            <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                          </node>
+                        </node>
+                        <node concept="3TrEf2" id="eoLigo1LhE" role="2OqNvi">
+                          <ref role="3Tt5mk" to="tpee:g7uigIF" resolve="classifier" />
+                        </node>
+                      </node>
+                      <node concept="2yIwOk" id="eoLigo1Mo_" role="2OqNvi" />
+                    </node>
+                  </node>
                   <node concept="3cpWs6" id="1B9Rp3N1S38" role="3cqZAp" />
                 </node>
               </node>

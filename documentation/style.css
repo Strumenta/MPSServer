@@ -83,3 +83,8 @@ div.endpoint {
 span.primitive {
 	font-weight: bold;
 }
+
+span.any {
+	font-style: italic;
+	font-weight: lighter;
+}

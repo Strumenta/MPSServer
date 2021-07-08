@@ -7,14 +7,16 @@
 		<div class="endpoint">
 			<h3>request Status</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_Status'>Status</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_Status">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_StatusAnswer">StatusAnswer</a></p>
+			<p class="answer"><a href='#message_StatusAnswer'>StatusAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>description</td><td><span class='primitive'>string</span></td></tr>
@@ -25,14 +27,16 @@
 		<div class="endpoint">
 			<h3>request GetModulesStatus</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetModulesStatus'>GetModulesStatus</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetModulesStatus">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetModuleStatusAnswer">GetModuleStatusAnswer</a></p>
+			<p class="answer"><a href='#message_GetModuleStatusAnswer'>GetModuleStatusAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>repoAvailable</td><td><span class='primitive'>boolean</span></td></tr>
@@ -46,6 +50,7 @@
 		<a id="message_Status"></a>
 		<div class="message">
 			<h3>request Status</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -55,6 +60,7 @@
 		<a id="message_StatusAnswer"></a>
 		<div class="message">
 			<h3>answer StatusAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>description</td><td><span class='primitive'>string</span></td></tr>
@@ -65,6 +71,7 @@
 		<a id="message_GetModulesStatus"></a>
 		<div class="message">
 			<h3>request GetModulesStatus</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -74,12 +81,26 @@
 		<a id="message_GetModuleStatusAnswer"></a>
 		<div class="message">
 			<h3>answer GetModuleStatusAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>repoAvailable</td><td><span class='primitive'>boolean</span></td></tr>
 				<tr><td>modules</td><td><span class='complex'><span class='complex'><a href='#message_ModuleStatus'>ModuleStatus</a></span>[]</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_ModuleStatus"></a>
+		<div class="message">
+			<h3>data ModuleStatus</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>name</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>deployed</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>canBeDeployed</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>reloadable</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>dependenciesNotFound</td><td><span class='complex'><span class='primitive'>string</span>[]</span></td></tr>
+				<tr><td>undeployableDependencies</td><td><span class='complex'><span class='primitive'>string</span>[]</span></td></tr>
 			</table>
 		</div>
 	</div></div>
@@ -91,18 +112,20 @@
 		<div class="endpoint">
 			<h3>request CreateIntentionsBlock</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_CreateIntentionsBlock'>CreateIntentionsBlock</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_CreateIntentionsBlock">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_CreateIntentionsBlockAnswer">CreateIntentionsBlockAnswer</a></p>
+			<p class="answer"><a href='#message_CreateIntentionsBlockAnswer'>CreateIntentionsBlockAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>intentions</td><td><span class='complex'><span class='complex'><a href='#message_Intention'>Intention</a></span>[]</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
@@ -111,28 +134,31 @@
 		<div class="endpoint">
 			<h3>command DeleteIntentionsBlock</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_DeleteIntentionsBlock'>DeleteIntentionsBlock</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_DeleteIntentionsBlock">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request GetIntentionsBlock</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetIntentionsBlock'>GetIntentionsBlock</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetIntentionsBlock">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetIntentionsBlockAnswer">GetIntentionsBlockAnswer</a></p>
+			<p class="answer"><a href='#message_GetIntentionsBlockAnswer'>GetIntentionsBlockAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>intentions</td><td><span class='complex'><span class='complex'><a href='#message_Intention'>Intention</a></span>[]</span></td></tr>
 				<tr><td>result</td><td><span class='complex'><a href='#message_Result'>Result</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -142,19 +168,21 @@
 		<div class="endpoint">
 			<h3>command ExecuteIntention</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_ExecuteIntention'>ExecuteIntention</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_ExecuteIntention">Message definition</a></p>
 		</div>
 
 	<h2>Messages</h2>
 		<a id="message_CreateIntentionsBlock"></a>
 		<div class="message">
 			<h3>request CreateIntentionsBlock</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -176,21 +204,23 @@
 			<h3>data NodeIDInfo</h3>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>RegularNodeIDInfo</td><td>NO TYPE</td></tr>
-				<tr><td>ForeignNodeIDInfo</td><td>NO TYPE</td></tr>
 			</table>
+			<p>subclass: <a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></p>
+			<p>subclass: <a href='#message_ForeignNodeIDInfo'>ForeignNodeIDInfo</a></p>
 		</div>
 		<a id="message_RegularNodeIDInfo"></a>
 		<div class="message">
 			<h3>data RegularNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>regularId</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>regularId</td><td><span class='primitive'>long</span></td></tr>
 			</table>
 		</div>
 		<a id="message_ForeignNodeIDInfo"></a>
 		<div class="message">
 			<h3>data ForeignNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>foreignId</td><td><span class='primitive'>string</span></td></tr>
@@ -199,36 +229,41 @@
 		<a id="message_CreateIntentionsBlockAnswer"></a>
 		<div class="message">
 			<h3>answer CreateIntentionsBlockAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>intentions</td><td><span class='complex'><span class='complex'><a href='#message_Intention'>Intention</a></span>[]</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
-		<a id="message_UUID"></a>
+		<a id="message_Intention"></a>
 		<div class="message">
-			<h3>data UUID</h3>
+			<h3>data Intention</h3>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
+				<tr><td>description</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
 		<a id="message_DeleteIntentionsBlock"></a>
 		<div class="message">
 			<h3>message DeleteIntentionsBlock</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
 		<a id="message_GetIntentionsBlock"></a>
 		<div class="message">
 			<h3>request GetIntentionsBlock</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -236,9 +271,10 @@
 		<a id="message_GetIntentionsBlockAnswer"></a>
 		<div class="message">
 			<h3>answer GetIntentionsBlockAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>intentions</td><td><span class='complex'><span class='complex'><a href='#message_Intention'>Intention</a></span>[]</span></td></tr>
 				<tr><td>result</td><td><span class='complex'><a href='#message_Result'>Result</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -257,10 +293,11 @@
 		<a id="message_ExecuteIntention"></a>
 		<div class="message">
 			<h3>message ExecuteIntention</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>blockUUID</td><td><span class='complex'><a href='#message_UUID'>UUID</a></span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>blockUUID</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
@@ -273,17 +310,19 @@
 		<div class="endpoint">
 			<h3>request RequestForPropertyChange</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_RequestForPropertyChange'>RequestForPropertyChange</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>propertyName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>propertyValue</td><td><span class='complex'><a href='#message_Object'>Object</a></span></td></tr>
+				<tr><td>propertyValue</td><td><span class='any'>any</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_RequestForPropertyChange">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AnswerPropertyChange">AnswerPropertyChange</a></p>
+			<p class="answer"><a href='#message_AnswerPropertyChange'>AnswerPropertyChange</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -293,16 +332,19 @@
 		<div class="endpoint">
 			<h3>registration RegisterForChanges</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_RegisterForChanges'>RegisterForChanges</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_RegisterForChanges">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request GetInstancesOfConcept</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetInstancesOfConcept'>GetInstancesOfConcept</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -310,9 +352,9 @@
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetInstancesOfConcept">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetInstancesOfConceptAnswer">GetInstancesOfConceptAnswer</a></p>
+			<p class="answer"><a href='#message_GetInstancesOfConceptAnswer'>GetInstancesOfConceptAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -325,15 +367,17 @@
 		<div class="endpoint">
 			<h3>request GetRoots</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetRoots'>GetRoots</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetRoots">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetRootsAnswer">GetRootsAnswer</a></p>
+			<p class="answer"><a href='#message_GetRootsAnswer'>GetRootsAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -345,30 +389,33 @@
 		<div class="endpoint">
 			<h3>command InstantiateConcept</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_InstantiateConcept'>InstantiateConcept</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeToReplace</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>conceptToInstantiate</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_InstantiateConcept">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request AddChild</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_AddChild'>AddChild</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>container</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptToInstantiate</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>smartRefNodeId</td><td><span class='complex'><a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_AddChild">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AddChildAnswer">AddChildAnswer</a></p>
+			<p class="answer"><a href='#message_AddChildAnswer'>AddChildAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeCreated</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -379,6 +426,8 @@
 		<div class="endpoint">
 			<h3>command SetChild</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_SetChild'>SetChild</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>container</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -387,33 +436,35 @@
 				<tr><td>smartRefNodeId</td><td><span class='complex'><a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_SetChild">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>command DeleteNode</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_DeleteNode'>DeleteNode</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_DeleteNode">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request DefaultInsertion</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_DefaultInsertion'>DefaultInsertion</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_DefaultInsertion">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AnswerDefaultInsertion">AnswerDefaultInsertion</a></p>
+			<p class="answer"><a href='#message_AnswerDefaultInsertion'>AnswerDefaultInsertion</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>addedNodeID</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
@@ -424,29 +475,32 @@
 		<div class="endpoint">
 			<h3>command InsertNextSibling</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_InsertNextSibling'>InsertNextSibling</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>sibling</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>sibling</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_InsertNextSibling">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request AskAlternatives</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_AskAlternatives'>AskAlternatives</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>nodeId</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>nodeId</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_AskAlternatives">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AnswerAlternatives">AnswerAlternatives</a></p>
+			<p class="answer"><a href='#message_AnswerAlternatives'>AnswerAlternatives</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_AnswerAlternativesItem'>AnswerAlternativesItem</a></span>[]</span></td></tr>
@@ -457,17 +511,19 @@
 		<div class="endpoint">
 			<h3>request RequestForWrappingReferences</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_RequestForWrappingReferences'>RequestForWrappingReferences</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_RequestForWrappingReferences">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AnswerForWrappingReferences">AnswerForWrappingReferences</a></p>
+			<p class="answer"><a href='#message_AnswerForWrappingReferences'>AnswerForWrappingReferences</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_WraAlternative'>WraAlternative</a></span>[]</span></td></tr>
@@ -478,17 +534,19 @@
 		<div class="endpoint">
 			<h3>request RequestForDirectReferences</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_RequestForDirectReferences'>RequestForDirectReferences</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>referenceName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_RequestForDirectReferences">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_AnswerForDirectReferences">AnswerForDirectReferences</a></p>
+			<p class="answer"><a href='#message_AnswerForDirectReferences'>AnswerForDirectReferences</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_DirAlternative'>DirAlternative</a></span>[]</span></td></tr>
@@ -499,6 +557,8 @@
 		<div class="endpoint">
 			<h3>command ReferenceChange</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_ReferenceChange'>ReferenceChange</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -506,42 +566,45 @@
 				<tr><td>referenceValue</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_ReferenceChange">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>command CreateRoot</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_CreateRoot'>CreateRoot</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>propertiesValues</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
+				<tr><td>propertiesValues</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_CreateRoot">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>command AskErrorsForNode</h3>
 			<p class="description">This triggers an error check which in turns can cause ErrorsForModelReport and ErrorsForNodeReport messages to be sent</p>
+			<p><a href='#message_AskErrorsForNode'>AskErrorsForNode</a></p>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>rootNode</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_AskErrorsForNode">Message definition</a></p>
 		</div>
 		<div class="endpoint">
 			<h3>request GetNode</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetNode'>GetNode</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetNode">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetNodeAnswer">GetNodeAnswer</a></p>
+			<p class="answer"><a href='#message_GetNodeAnswer'>GetNodeAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeData</td><td><span class='complex'><a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></span></td></tr>
@@ -554,11 +617,12 @@
 		<a id="message_RequestForPropertyChange"></a>
 		<div class="message">
 			<h3>request RequestForPropertyChange</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>propertyName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>propertyValue</td><td><span class='complex'><a href='#message_Object'>Object</a></span></td></tr>
+				<tr><td>propertyValue</td><td><span class='any'>any</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -577,21 +641,23 @@
 			<h3>data NodeIDInfo</h3>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>RegularNodeIDInfo</td><td>NO TYPE</td></tr>
-				<tr><td>ForeignNodeIDInfo</td><td>NO TYPE</td></tr>
 			</table>
+			<p>subclass: <a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></p>
+			<p>subclass: <a href='#message_ForeignNodeIDInfo'>ForeignNodeIDInfo</a></p>
 		</div>
 		<a id="message_RegularNodeIDInfo"></a>
 		<div class="message">
 			<h3>data RegularNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>regularId</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>regularId</td><td><span class='primitive'>long</span></td></tr>
 			</table>
 		</div>
 		<a id="message_ForeignNodeIDInfo"></a>
 		<div class="message">
 			<h3>data ForeignNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>foreignId</td><td><span class='primitive'>string</span></td></tr>
@@ -600,6 +666,7 @@
 		<a id="message_AnswerPropertyChange"></a>
 		<div class="message">
 			<h3>answer AnswerPropertyChange</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -609,6 +676,7 @@
 		<a id="message_RegisterForChanges"></a>
 		<div class="message">
 			<h3>message RegisterForChanges</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -618,17 +686,19 @@
 		<a id="message_PropertyChange"></a>
 		<div class="message">
 			<h3>notification PropertyChange</h3>
+			<p>superclass: <span class='unavailable_type'>Notification</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>propertyName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>propertyValue</td><td><span class='complex'><a href='#message_Object'>Object</a></span></td></tr>
+				<tr><td>propertyValue</td><td><span class='any'>any</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
 		<a id="message_ReferenceChanged"></a>
 		<div class="message">
 			<h3>notification ReferenceChanged</h3>
+			<p>superclass: <span class='unavailable_type'>Notification</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -640,11 +710,12 @@
 		<a id="message_NodeAdded"></a>
 		<div class="message">
 			<h3>notification NodeAdded</h3>
+			<p>superclass: <span class='unavailable_type'>Notification</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>parentNodeId</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
 				<tr><td>child</td><td><span class='complex'><a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>relationName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -652,12 +723,13 @@
 		<a id="message_NodeInfoDetailed"></a>
 		<div class="message">
 			<h3>data NodeInfoDetailed</h3>
+			<p>superclass: <a href='#message_NodeInfo'>NodeInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>containingLink</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>children</td><td><span class='complex'><span class='complex'><a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></span>[]</span></td></tr>
-				<tr><td>properties</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
-				<tr><td>refs</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
+				<tr><td>properties</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
+				<tr><td>refs</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
 				<tr><td>id</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
 				<tr><td>name</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>concept</td><td><span class='primitive'>string</span></td></tr>
@@ -666,14 +738,36 @@
 				<tr><td>conceptAlias</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_ReferenceInfo"></a>
+		<div class="message">
+			<h3>data ReferenceInfo</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>id</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
+				<tr><td>model</td><td><span class='complex'><a href='#message_ModelInfo'>ModelInfo</a></span></td></tr>
+			</table>
+		</div>
+		<a id="message_ModelInfo"></a>
+		<div class="message">
+			<h3>data ModelInfo</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>qualifiedName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>uuid</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>foreignName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>intValue</td><td><span class='primitive'>int</span></td></tr>
+				<tr><td>readOnly</td><td><span class='primitive'>boolean</span></td></tr>
+			</table>
+		</div>
 		<a id="message_NodeRemoved"></a>
 		<div class="message">
 			<h3>notification NodeRemoved</h3>
+			<p>superclass: <span class='unavailable_type'>Notification</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>parentNodeId</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
 				<tr><td>child</td><td><span class='complex'><a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>relationName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -681,6 +775,7 @@
 		<a id="message_GetInstancesOfConcept"></a>
 		<div class="message">
 			<h3>request GetInstancesOfConcept</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -692,6 +787,7 @@
 		<a id="message_GetInstancesOfConceptAnswer"></a>
 		<div class="message">
 			<h3>answer GetInstancesOfConceptAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -701,9 +797,24 @@
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_NodeInfo"></a>
+		<div class="message">
+			<h3>data NodeInfo</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>id</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
+				<tr><td>name</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>concept</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>abstractConcept</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>interfaceConcept</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>conceptAlias</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+			<p>subclass: <a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></p>
+		</div>
 		<a id="message_GetRoots"></a>
 		<div class="message">
 			<h3>request GetRoots</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -714,6 +825,7 @@
 		<a id="message_GetRootsAnswer"></a>
 		<div class="message">
 			<h3>answer GetRootsAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
@@ -725,6 +837,7 @@
 		<a id="message_InstantiateConcept"></a>
 		<div class="message">
 			<h3>message InstantiateConcept</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeToReplace</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -735,12 +848,13 @@
 		<a id="message_AddChild"></a>
 		<div class="message">
 			<h3>request AddChild</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>container</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptToInstantiate</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>index</td><td><span class='complex'><a href='#message_Int'>Int</a></span></td></tr>
+				<tr><td>index</td><td><span class='primitive'>int</span></td></tr>
 				<tr><td>smartRefNodeId</td><td><span class='complex'><a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
@@ -749,6 +863,7 @@
 		<a id="message_AddChildAnswer"></a>
 		<div class="message">
 			<h3>answer AddChildAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeCreated</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -759,6 +874,7 @@
 		<a id="message_SetChild"></a>
 		<div class="message">
 			<h3>message SetChild</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>container</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -771,6 +887,7 @@
 		<a id="message_DeleteNode"></a>
 		<div class="message">
 			<h3>message DeleteNode</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -780,10 +897,11 @@
 		<a id="message_DefaultInsertion"></a>
 		<div class="message">
 			<h3>request DefaultInsertion</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -793,6 +911,7 @@
 		<a id="message_AnswerDefaultInsertion"></a>
 		<div class="message">
 			<h3>answer AnswerDefaultInsertion</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>addedNodeID</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
@@ -803,10 +922,11 @@
 		<a id="message_InsertNextSibling"></a>
 		<div class="message">
 			<h3>message InsertNextSibling</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>sibling</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>sibling</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -814,10 +934,11 @@
 		<a id="message_AskAlternatives"></a>
 		<div class="message">
 			<h3>request AskAlternatives</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>nodeId</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>nodeId</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
@@ -826,6 +947,7 @@
 		<a id="message_AnswerAlternatives"></a>
 		<div class="message">
 			<h3>answer AnswerAlternatives</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_AnswerAlternativesItem'>AnswerAlternativesItem</a></span>[]</span></td></tr>
@@ -833,13 +955,23 @@
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_AnswerAlternativesItem"></a>
+		<div class="message">
+			<h3>data AnswerAlternativesItem</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>alias</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
 		<a id="message_RequestForWrappingReferences"></a>
 		<div class="message">
 			<h3>request RequestForWrappingReferences</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>containmentName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
@@ -848,6 +980,7 @@
 		<a id="message_AnswerForWrappingReferences"></a>
 		<div class="message">
 			<h3>answer AnswerForWrappingReferences</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_WraAlternative'>WraAlternative</a></span>[]</span></td></tr>
@@ -855,13 +988,24 @@
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_WraAlternative"></a>
+		<div class="message">
+			<h3>data WraAlternative</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>label</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>nodeId</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
+			</table>
+		</div>
 		<a id="message_RequestForDirectReferences"></a>
 		<div class="message">
 			<h3>request RequestForDirectReferences</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>container</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>container</td><td><span class='primitive'>long</span></td></tr>
 				<tr><td>referenceName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
@@ -870,6 +1014,7 @@
 		<a id="message_AnswerForDirectReferences"></a>
 		<div class="message">
 			<h3>answer AnswerForDirectReferences</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>items</td><td><span class='complex'><span class='complex'><a href='#message_DirAlternative'>DirAlternative</a></span>[]</span></td></tr>
@@ -877,9 +1022,20 @@
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_DirAlternative"></a>
+		<div class="message">
+			<h3>data DirAlternative</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>label</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>nodeId</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
+			</table>
+		</div>
 		<a id="message_ReferenceChange"></a>
 		<div class="message">
 			<h3>message ReferenceChange</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -891,17 +1047,19 @@
 		<a id="message_CreateRoot"></a>
 		<div class="message">
 			<h3>message CreateRoot</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>modelName</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>conceptName</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>propertiesValues</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
+				<tr><td>propertiesValues</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
 		<a id="message_AskErrorsForNode"></a>
 		<div class="message">
 			<h3>message AskErrorsForNode</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>rootNode</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -911,6 +1069,7 @@
 		<a id="message_GetNode"></a>
 		<div class="message">
 			<h3>request GetNode</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
@@ -921,6 +1080,7 @@
 		<a id="message_GetNodeAnswer"></a>
 		<div class="message">
 			<h3>answer GetNodeAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>nodeData</td><td><span class='complex'><a href='#message_NodeInfoDetailed'>NodeInfoDetailed</a></span></td></tr>
@@ -931,6 +1091,7 @@
 		<a id="message_ErrorsForModelReport"></a>
 		<div class="message">
 			<h3>message ErrorsForModelReport</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>model</td><td><span class='primitive'>string</span></td></tr>
@@ -938,14 +1099,35 @@
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
+		<a id="message_IssueDescription"></a>
+		<div class="message">
+			<h3>data IssueDescription</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>severity</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>node</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
+			</table>
+		</div>
 		<a id="message_ErrorsForNodeReport"></a>
 		<div class="message">
 			<h3>message ErrorsForNodeReport</h3>
+			<p>superclass: <span class='unavailable_type'>Message</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>rootNode</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>issues</td><td><span class='complex'><span class='complex'><a href='#message_IssueDescription'>IssueDescription</a></span>[]</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_IssueDescription"></a>
+		<div class="message">
+			<h3>data IssueDescription</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>severity</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>node</td><td><span class='complex'><a href='#message_NodeIDInfo'>NodeIDInfo</a></span></td></tr>
 			</table>
 		</div>
 	</div></div>
@@ -957,15 +1139,17 @@
 		<div class="endpoint">
 			<h3>request MakeProject</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_MakeProject'>MakeProject</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>cleanMake</td><td><span class='primitive'>boolean</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_MakeProject">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_MakeProjectAnswer">MakeProjectAnswer</a></p>
+			<p class="answer"><a href='#message_MakeProjectAnswer'>MakeProjectAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>DoneAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>messages</td><td><span class='complex'><span class='complex'><a href='#message_LogMessage'>LogMessage</a></span>[]</span></td></tr>
@@ -980,6 +1164,7 @@
 		<a id="message_MakeProject"></a>
 		<div class="message">
 			<h3>request MakeProject</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>cleanMake</td><td><span class='primitive'>boolean</span></td></tr>
@@ -990,6 +1175,7 @@
 		<a id="message_MakeProjectAnswer"></a>
 		<div class="message">
 			<h3>answer MakeProjectAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>DoneAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>messages</td><td><span class='complex'><span class='complex'><a href='#message_LogMessage'>LogMessage</a></span>[]</span></td></tr>
@@ -997,6 +1183,15 @@
 				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_LogMessage"></a>
+		<div class="message">
+			<h3>data LogMessage</h3>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>kind</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>text</td><td><span class='primitive'>string</span></td></tr>
 			</table>
 		</div>
 	</div></div>
@@ -1008,22 +1203,24 @@
 		<div class="endpoint">
 			<h3>request ExecuteAction</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_ExecuteAction'>ExecuteAction</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>action</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>params</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
+				<tr><td>params</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_ExecuteAction">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_ExecuteActionAnswer">ExecuteActionAnswer</a></p>
+			<p class="answer"><a href='#message_ExecuteActionAnswer'>ExecuteActionAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
 				<tr><td>errorMessage</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>result</td><td><span class='complex'><a href='#message_Object'>Object</a></span></td></tr>
+				<tr><td>result</td><td><span class='any'>any</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -1033,11 +1230,12 @@
 		<a id="message_ExecuteAction"></a>
 		<div class="message">
 			<h3>request ExecuteAction</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>node</td><td><span class='complex'><a href='#message_NodeReference'>NodeReference</a></span></td></tr>
 				<tr><td>action</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>params</td><td><span class='complex'><a href='#message_Map'>Map</a></span></td></tr>
+				<tr><td>params</td><td><span class='complex'><span class='unavailable_type'>Map</span></span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -1056,21 +1254,23 @@
 			<h3>data NodeIDInfo</h3>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>RegularNodeIDInfo</td><td>NO TYPE</td></tr>
-				<tr><td>ForeignNodeIDInfo</td><td>NO TYPE</td></tr>
 			</table>
+			<p>subclass: <a href='#message_RegularNodeIDInfo'>RegularNodeIDInfo</a></p>
+			<p>subclass: <a href='#message_ForeignNodeIDInfo'>ForeignNodeIDInfo</a></p>
 		</div>
 		<a id="message_RegularNodeIDInfo"></a>
 		<div class="message">
 			<h3>data RegularNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
-				<tr><td>regularId</td><td><span class='complex'><a href='#message_Long'>Long</a></span></td></tr>
+				<tr><td>regularId</td><td><span class='primitive'>long</span></td></tr>
 			</table>
 		</div>
 		<a id="message_ForeignNodeIDInfo"></a>
 		<div class="message">
 			<h3>data ForeignNodeIDInfo</h3>
+			<p>superclass: <a href='#message_NodeIDInfo'>NodeIDInfo</a></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>foreignId</td><td><span class='primitive'>string</span></td></tr>
@@ -1079,11 +1279,12 @@
 		<a id="message_ExecuteActionAnswer"></a>
 		<div class="message">
 			<h3>answer ExecuteActionAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
 				<tr><td>errorMessage</td><td><span class='primitive'>string</span></td></tr>
-				<tr><td>result</td><td><span class='complex'><a href='#message_Object'>Object</a></span></td></tr>
+				<tr><td>result</td><td><span class='any'>any</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
@@ -1097,15 +1298,17 @@
 		<div class="endpoint">
 			<h3>request OpenProject</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_OpenProject'>OpenProject</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>projectPath</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_OpenProject">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_DoneAnswerMessage">DoneAnswerMessage</a></p>
+			<p class="answer"><a href='#message_DoneAnswerMessage'>DoneAnswerMessage</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
@@ -1117,14 +1320,16 @@
 		<div class="endpoint">
 			<h3>request NewProject</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_NewProject'>NewProject</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_NewProject">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_DoneAnswerMessage">DoneAnswerMessage</a></p>
+			<p class="answer"><a href='#message_DoneAnswerMessage'>DoneAnswerMessage</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
@@ -1136,14 +1341,16 @@
 		<div class="endpoint">
 			<h3>request GetProjectInfo</h3>
 			<p class="description">No description provided</p>
+			<p><a href='#message_GetProjectInfo'>GetProjectInfo</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
 				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
 			</table>
-			<p><a href="#message_GetProjectInfo">Message definition</a></p>
 			<h4>Answers:</h4>
-			<p class="answer"><a href="#message_GetProjectInfoAnswer">GetProjectInfoAnswer</a></p>
+			<p class="answer"><a href='#message_GetProjectInfoAnswer'>GetProjectInfoAnswer</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>projectName</td><td><span class='primitive'>string</span></td></tr>
@@ -1156,6 +1363,7 @@
 		<a id="message_OpenProject"></a>
 		<div class="message">
 			<h3>request OpenProject</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>projectPath</td><td><span class='primitive'>string</span></td></tr>
@@ -1166,6 +1374,7 @@
 		<a id="message_DoneAnswerMessage"></a>
 		<div class="message">
 			<h3>answer DoneAnswerMessage</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
@@ -1177,6 +1386,7 @@
 		<a id="message_NewProject"></a>
 		<div class="message">
 			<h3>request NewProject</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -1186,6 +1396,7 @@
 		<a id="message_GetProjectInfo"></a>
 		<div class="message">
 			<h3>request GetProjectInfo</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
@@ -1195,6 +1406,7 @@
 		<a id="message_GetProjectInfoAnswer"></a>
 		<div class="message">
 			<h3>answer GetProjectInfoAnswer</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
 			<table>
 				<tr><th>Name</th><th>Type</th></tr>
 				<tr><td>projectName</td><td><span class='primitive'>string</span></td></tr>
