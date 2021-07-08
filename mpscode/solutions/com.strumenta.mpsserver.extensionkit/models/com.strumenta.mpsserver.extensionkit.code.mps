@@ -36,6 +36,7 @@
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <property id="1075300953594" name="abstractClass" index="1sVAO0" />
+        <child id="1165602531693" name="superclass" index="1zkMxy" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
@@ -432,6 +433,43 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="2wu2WWeLky" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="1taqoP6ohVS">
+    <property role="3GE5qa" value="messages" />
+    <property role="TrG5h" value="Notification" />
+    <property role="1sVAO0" value="true" />
+    <node concept="3Tm1VV" id="1taqoP6ohVT" role="1B3o_S" />
+    <node concept="3uibUv" id="1taqoP6ohXP" role="1zkMxy">
+      <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
+    </node>
+  </node>
+  <node concept="312cEu" id="3h0CTvwIo9d">
+    <property role="TrG5h" value="RequestAnswerMessage" />
+    <property role="3GE5qa" value="messages" />
+    <property role="1sVAO0" value="true" />
+    <node concept="312cEg" id="3h0CTvwIo9e" role="jymVt">
+      <property role="TrG5h" value="requestId" />
+      <node concept="3Tm1VV" id="3h0CTvwIo9f" role="1B3o_S" />
+      <node concept="17QB3L" id="3h0CTvwIo9g" role="1tU5fm" />
+    </node>
+    <node concept="3Tm1VV" id="3h0CTvwIo9h" role="1B3o_S" />
+    <node concept="3uibUv" id="6_Qtqtnq4wP" role="1zkMxy">
+      <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
+    </node>
+  </node>
+  <node concept="312cEu" id="3h0CTvwIhrW">
+    <property role="TrG5h" value="RequestMessage" />
+    <property role="3GE5qa" value="messages" />
+    <property role="1sVAO0" value="true" />
+    <node concept="312cEg" id="3h0CTvwIjPg" role="jymVt">
+      <property role="TrG5h" value="requestId" />
+      <node concept="3Tm1VV" id="3h0CTvwIjPh" role="1B3o_S" />
+      <node concept="17QB3L" id="3h0CTvwIjPi" role="1tU5fm" />
+    </node>
+    <node concept="3Tm1VV" id="3h0CTvwIh6C" role="1B3o_S" />
+    <node concept="3uibUv" id="6_Qtqtnq3Xx" role="1zkMxy">
+      <ref role="3uigEE" node="6_QtqtnpJ9z" resolve="Message" />
+    </node>
   </node>
 </model>
 

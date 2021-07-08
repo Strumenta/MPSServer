@@ -796,6 +796,88 @@
           </node>
         </node>
       </node>
+      <node concept="1E1JtD" id="1B9Rp3N3GRr" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.strumenta.mpsserver.protocol" />
+        <property role="3LESm3" value="943fbe9f-1803-4066-9f3f-ab996a001440" />
+        <node concept="55IIr" id="1B9Rp3N3GRu" role="3LF7KH">
+          <node concept="2Ry0Ak" id="1B9Rp3N3H2$" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="1B9Rp3N3H5L" role="2Ry0An">
+              <property role="2Ry0Am" value="com.strumenta.mpsserver.protocol" />
+              <node concept="2Ry0Ak" id="1B9Rp3N3H8Y" role="2Ry0An">
+                <property role="2Ry0Am" value="com.strumenta.mpsserver.protocol.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1B9Rp3N3HcK" role="3bR37C">
+          <node concept="3bR9La" id="1B9Rp3N3HcL" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="1B9Rp3N3HcW" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="1B9Rp3N3HcX" role="1HemKq">
+            <node concept="398BVA" id="1B9Rp3N3HcO" role="3LXTmr">
+              <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
+              <node concept="2Ry0Ak" id="1B9Rp3N3HcP" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="1B9Rp3N3HcQ" role="2Ry0An">
+                  <property role="2Ry0Am" value="com.strumenta.mpsserver.protocol" />
+                  <node concept="2Ry0Ak" id="1B9Rp3N3HcR" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="1B9Rp3N3HcY" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1yeLz9" id="1B9Rp3N3HcZ" role="1TViLv">
+          <property role="TrG5h" value="com.strumenta.mpsserver.protocol.generator" />
+          <property role="3LESm3" value="9347fa54-fa0f-42d2-81d9-451fa317191a" />
+          <node concept="1SiIV0" id="1B9Rp3N3Hd0" role="3bR37C">
+            <node concept="3bR9La" id="1B9Rp3N3Hd1" role="1SiIV1">
+              <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+            </node>
+          </node>
+          <node concept="1BupzO" id="1B9Rp3N3Hde" role="3bR31x">
+            <property role="3ZfqAx" value="generator/templates" />
+            <property role="1Hdu6h" value="true" />
+            <property role="1HemKv" value="true" />
+            <node concept="3LXTmp" id="1B9Rp3N3Hdf" role="1HemKq">
+              <node concept="398BVA" id="1B9Rp3N3Hd4" role="3LXTmr">
+                <ref role="398BVh" node="5jTJHMumiWk" resolve="mpsserver.home" />
+                <node concept="2Ry0Ak" id="1B9Rp3N3Hd5" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="1B9Rp3N3Hd6" role="2Ry0An">
+                    <property role="2Ry0Am" value="com.strumenta.mpsserver.protocol" />
+                    <node concept="2Ry0Ak" id="1B9Rp3N3Hd7" role="2Ry0An">
+                      <property role="2Ry0Am" value="generator" />
+                      <node concept="2Ry0Ak" id="1B9Rp3N3Hd8" role="2Ry0An">
+                        <property role="2Ry0Am" value="templates" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="1B9Rp3N3Hdg" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6dDx6RumcQb" role="3bR37C">
+          <node concept="3bR9La" id="6dDx6RumcQc" role="1SiIV1">
+            <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">
       <property role="TrG5h" value="mpsserver.version" />

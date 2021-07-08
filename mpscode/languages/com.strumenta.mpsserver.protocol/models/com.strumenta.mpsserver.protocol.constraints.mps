@@ -16,7 +16,6 @@
   <imports>
     <import index="fnmy" ref="r:89c0fb70-0977-4113-a076-5906f9d8630f(jetbrains.mps.baseLanguage.scopes)" />
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
-    <import index="30ym" ref="r:83288bbd-38c6-4826-b817-e689c0f3038c(com.strumenta.mpsserver.logic)" />
     <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
     <import index="ud7h" ref="r:da991760-4bb8-41b1-bdd0-8d2f29e6cba3(com.strumenta.mpsserver.protocol.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
@@ -201,7 +200,7 @@
                             <ref role="ehGHo" to="tpee:g7pOWCK" resolve="Classifier" />
                           </node>
                           <node concept="3B5_sB" id="73quuNJcBPP" role="33vP2m">
-                            <ref role="3B5MYn" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
+                            <ref role="3B5MYn" to="e4as:3h0CTvwIhrW" resolve="RequestMessage" />
                           </node>
                         </node>
                       </node>
@@ -306,7 +305,7 @@
                             <ref role="ehGHo" to="tpee:g7pOWCK" resolve="Classifier" />
                           </node>
                           <node concept="3B5_sB" id="73quuNJec4e" role="33vP2m">
-                            <ref role="3B5MYn" to="30ym:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
+                            <ref role="3B5MYn" to="e4as:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
                           </node>
                         </node>
                       </node>
@@ -411,7 +410,7 @@
                             <ref role="ehGHo" to="tpee:g7pOWCK" resolve="Classifier" />
                           </node>
                           <node concept="3B5_sB" id="73quuNJh8TR" role="33vP2m">
-                            <ref role="3B5MYn" to="30ym:1taqoP6ohVS" resolve="Notification" />
+                            <ref role="3B5MYn" to="e4as:1taqoP6ohVS" resolve="Notification" />
                           </node>
                         </node>
                       </node>
@@ -523,7 +522,7 @@
                               </node>
                               <node concept="3JPx81" id="73quuNJjg7I" role="2OqNvi">
                                 <node concept="3B5_sB" id="73quuNJjhAX" role="25WWJ7">
-                                  <ref role="3B5MYn" to="30ym:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
+                                  <ref role="3B5MYn" to="e4as:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
                                 </node>
                               </node>
                             </node>
@@ -541,7 +540,7 @@
                                 </node>
                                 <node concept="3JPx81" id="73quuNJjjFw" role="2OqNvi">
                                   <node concept="3B5_sB" id="73quuNJjjFx" role="25WWJ7">
-                                    <ref role="3B5MYn" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
+                                    <ref role="3B5MYn" to="e4as:3h0CTvwIhrW" resolve="RequestMessage" />
                                   </node>
                                 </node>
                               </node>
@@ -574,7 +573,7 @@
                                   </node>
                                   <node concept="3JPx81" id="73quuNJjkKM" role="2OqNvi">
                                     <node concept="3B5_sB" id="73quuNJjkKN" role="25WWJ7">
-                                      <ref role="3B5MYn" to="30ym:1taqoP6ohVS" resolve="Notification" />
+                                      <ref role="3B5MYn" to="e4as:1taqoP6ohVS" resolve="Notification" />
                                     </node>
                                   </node>
                                 </node>
@@ -674,7 +673,7 @@
                               </node>
                               <node concept="3JPx81" id="73quuNJm7_1" role="2OqNvi">
                                 <node concept="3B5_sB" id="73quuNJm7_2" role="25WWJ7">
-                                  <ref role="3B5MYn" to="30ym:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
+                                  <ref role="3B5MYn" to="e4as:3h0CTvwIo9d" resolve="RequestAnswerMessage" />
                                 </node>
                               </node>
                             </node>
@@ -692,7 +691,7 @@
                                 </node>
                                 <node concept="3JPx81" id="73quuNJm7_9" role="2OqNvi">
                                   <node concept="3B5_sB" id="73quuNJm7_a" role="25WWJ7">
-                                    <ref role="3B5MYn" to="30ym:3h0CTvwIhrW" resolve="RequestMessage" />
+                                    <ref role="3B5MYn" to="e4as:3h0CTvwIhrW" resolve="RequestMessage" />
                                   </node>
                                 </node>
                               </node>
@@ -725,7 +724,7 @@
                                   </node>
                                   <node concept="3JPx81" id="73quuNJm7_n" role="2OqNvi">
                                     <node concept="3B5_sB" id="73quuNJm7_o" role="25WWJ7">
-                                      <ref role="3B5MYn" to="30ym:1taqoP6ohVS" resolve="Notification" />
+                                      <ref role="3B5MYn" to="e4as:1taqoP6ohVS" resolve="Notification" />
                                     </node>
                                   </node>
                                 </node>
