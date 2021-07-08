@@ -639,10 +639,14 @@
       </concept>
       <concept id="8131946135702430374" name="com.strumenta.mpsserver.protocol.structure.WebSocketsAPIsGroup" flags="ng" index="2vZhHa">
         <child id="8131946135702647656" name="endpoints" index="2vWcE4" />
+        <child id="1858259935888834926" name="extraData" index="3FdPNY" />
       </concept>
       <concept id="8131946135702430391" name="com.strumenta.mpsserver.protocol.structure.WSRequestEndpoint" flags="ng" index="2vZhHr">
         <reference id="8131946135702430423" name="requestMessageClass" index="2vZhGV" />
         <child id="8131946135702436250" name="answers" index="2vZg1Q" />
+      </concept>
+      <concept id="1858259935888834884" name="com.strumenta.mpsserver.protocol.structure.Data" flags="ng" index="3FdPNk">
+        <reference id="1858259935888834885" name="classifier" index="3FdPNl" />
       </concept>
     </language>
   </registry>
@@ -41113,6 +41117,12 @@
       <node concept="2vZg1_" id="73quuNJyN6V" role="2vZg1Q">
         <ref role="2vZg1P" node="15JNn0t1YAP" resolve="GetNodeAnswer" />
       </node>
+    </node>
+    <node concept="3FdPNk" id="1B9Rp3N04xO" role="3FdPNY">
+      <ref role="3FdPNl" node="2j5iOBR68n0" resolve="ErrorsForModelReport" />
+    </node>
+    <node concept="3FdPNk" id="1B9Rp3N08r$" role="3FdPNY">
+      <ref role="3FdPNl" node="7jLdWIspqlS" resolve="ErrorsForNodeReport" />
     </node>
   </node>
   <node concept="312cEu" id="73quuNJs8VI">

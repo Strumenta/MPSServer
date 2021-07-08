@@ -56,6 +56,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="73quuNJ9Qb7" resolve="WSEndpoint" />
     </node>
+    <node concept="1TJgyj" id="1B9Rp3MZC5I" role="1TKVEi">
+      <property role="IQ2ns" value="1858259935888834926" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="extraData" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1B9Rp3MZC54" resolve="Data" />
+    </node>
     <node concept="PrWs8" id="73quuNJ9QaQ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -139,6 +146,17 @@
     <node concept="1TJgyj" id="73quuNJm72G" role="1TKVEi">
       <property role="IQ2ns" value="8131946135705645228" />
       <property role="20kJfa" value="commandMessageClass" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="tpee:fz12cDA" resolve="ClassConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1B9Rp3MZC54">
+    <property role="EcuMT" value="1858259935888834884" />
+    <property role="TrG5h" value="Data" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1B9Rp3MZC55" role="1TKVEi">
+      <property role="IQ2ns" value="1858259935888834885" />
+      <property role="20kJfa" value="clazz" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="tpee:fz12cDA" resolve="ClassConcept" />
     </node>
