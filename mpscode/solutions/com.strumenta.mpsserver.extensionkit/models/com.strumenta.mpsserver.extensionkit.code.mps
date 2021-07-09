@@ -373,6 +373,18 @@
       <node concept="3Tm1VV" id="319mNSQ0P_h" role="1B3o_S" />
       <node concept="10P_77" id="319mNSQ0P$O" role="3clF45" />
     </node>
+    <node concept="3clFb_" id="319mNSQ4xrR" role="jymVt">
+      <property role="TrG5h" value="registerCloseCallback" />
+      <node concept="3clFbS" id="319mNSQ4xrU" role="3clF47" />
+      <node concept="3Tm1VV" id="319mNSQ4xrV" role="1B3o_S" />
+      <node concept="3cqZAl" id="319mNSQ4xrp" role="3clF45" />
+      <node concept="37vLTG" id="319mNSQ4xsO" role="3clF46">
+        <property role="TrG5h" value="runnable" />
+        <node concept="3uibUv" id="319mNSQ4xsN" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~Runnable" resolve="Runnable" />
+        </node>
+      </node>
+    </node>
     <node concept="3Tm1VV" id="6Hz$xA6zDuL" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="6_QtqtnpJ9z">
