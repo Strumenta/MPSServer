@@ -33,6 +33,7 @@
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg" />
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <property id="1075300953594" name="abstractClass" index="1sVAO0" />
@@ -365,6 +366,12 @@
       <node concept="3uibUv" id="5wf7OU9o2C5" role="3clF45">
         <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
       </node>
+    </node>
+    <node concept="3clFb_" id="319mNSQ0P_d" role="jymVt">
+      <property role="TrG5h" value="isSessionOpen" />
+      <node concept="3clFbS" id="319mNSQ0P_g" role="3clF47" />
+      <node concept="3Tm1VV" id="319mNSQ0P_h" role="1B3o_S" />
+      <node concept="10P_77" id="319mNSQ0P$O" role="3clF45" />
     </node>
     <node concept="3Tm1VV" id="6Hz$xA6zDuL" role="1B3o_S" />
   </node>
