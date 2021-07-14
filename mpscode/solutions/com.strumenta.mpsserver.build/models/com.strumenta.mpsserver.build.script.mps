@@ -871,6 +871,11 @@
               </node>
             </node>
           </node>
+          <node concept="1SiIV0" id="16h29d3wMJ2" role="3bR37C">
+            <node concept="3bR9La" id="16h29d3wMJ3" role="1SiIV1">
+              <ref role="3bR37D" node="4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
+            </node>
+          </node>
         </node>
         <node concept="1SiIV0" id="6dDx6RumcQb" role="3bR37C">
           <node concept="3bR9La" id="6dDx6RumcQc" role="1SiIV1">
