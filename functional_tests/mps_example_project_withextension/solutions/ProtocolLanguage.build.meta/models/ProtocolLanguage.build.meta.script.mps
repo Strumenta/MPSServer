@@ -156,13 +156,13 @@
       </node>
     </node>
     <node concept="2sgV4H" id="4JnP3TVFo2B" role="1l3spa">
-      <ref role="1l3spb" to="24gg:4JnP3TV$Dub" resolve="MpsServer-extensionkit" />
+      <ref role="1l3spb" to="24gg:4JnP3TV$Dub" resolve="mpsserver-extensionkit" />
       <node concept="398BVA" id="4JnP3TVFo2C" role="2JcizS">
         <ref role="398BVh" node="4JnP3TVGxYY" resolve="mpsserver.extensionkit.artifacts" />
       </node>
     </node>
     <node concept="2sgV4H" id="4JnP3TVGxVm" role="1l3spa">
-      <ref role="1l3spb" to="24gg:7GBq2$eodh3" resolve="MpsServer-build" />
+      <ref role="1l3spb" to="24gg:7GBq2$eodh3" resolve="mpsserver-build" />
       <node concept="398BVA" id="4JnP3TVGygT" role="2JcizS">
         <ref role="398BVh" node="80AXrSaVit" resolve="mpsserver.build.artifacts" />
       </node>

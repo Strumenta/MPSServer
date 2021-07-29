@@ -6,7 +6,7 @@
           <value>
             <Library>
               <option name='name' value='mpsserver.extensionkit' />
-              <option name='path' value='$PROJECT_DIR$/artifacts/MPSServer.extensionkit.plugin' />
+              <option name='path' value='$PROJECT_DIR$/artifacts/mpsserver-extensionkit/mpsserver.extensionkit.plugin' />
             </Library>
           </value>
         </entry>
@@ -14,7 +14,7 @@
           <value>
             <Library>
               <option name='name' value='mpsserver.build' />
-              <option name='path' value='$PROJECT_DIR$/artifacts/MPSServer.build.plugin' />
+              <option name='path' value='$PROJECT_DIR$/artifacts/mpsserver-build/mpsserver.build.plugin' />
             </Library>
           </value>
         </entry>        

@@ -183,7 +183,7 @@
         <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
       </node>
       <node concept="m$_yC" id="4JnP3TVFiau" role="m$_yJ">
-        <ref role="m$_y1" to="24gg:4JnP3TV$Due" resolve="MPSServer.extensionkit.plugin" />
+        <ref role="m$_y1" to="24gg:4JnP3TV$Due" resolve="mpsserver.extensionkit.plugin" />
       </node>
     </node>
     <node concept="2G$12M" id="2p2ql82MkSi" role="3989C9">
@@ -435,7 +435,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="4JnP3TVFhYY" role="1l3spa">
-      <ref role="1l3spb" to="24gg:4JnP3TV$Dub" resolve="MpsServer-extensionkit" />
+      <ref role="1l3spb" to="24gg:4JnP3TV$Dub" resolve="mpsserver-extensionkit" />
       <node concept="398BVA" id="4JnP3TVFtXy" role="2JcizS">
         <ref role="398BVh" node="4JnP3TVFtXe" resolve="mpsserver.extensionkit.artifacts" />
       </node>

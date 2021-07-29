@@ -19,8 +19,6 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-    id "com.github.breadmoirai.github-release" version "2.2.12"
-    id "com.jfrog.bintray" version "1.8.5"
 }
 
 configurations {
@@ -32,7 +30,7 @@ configurations {
 	distribution
 }
 
-ext.mpsVersion = '2019.3.1'
+apply from: '../versions.gradle'
 
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
@@ -119,8 +117,38 @@ task resolveLibs(type: Sync) {
     }
 }
 
+def parentRootDir = rootDir.getParentFile()
+def buildDir = new File(parentRootDir, "build")
+def distributionsDir = new File(buildDir, "distributions")
+File destDir = new File(new File("mps_example_project_withextension"), "artifacts");
+
+task unpackExtensionkit(type: Copy) {
+    def componentName = "extensionkit"
+    def zipFile = new File(distributionsDir, "com.strumenta.mpsserver.${componentName}-${mpsServerVersion}.zip")
+    if (!zipFile.exists()) {
+        throw new RuntimeException("component not found: ${zipFile.getAbsolutePath()}")
+    }
+
+    from zipTree(zipFile.getPath())
+    into destDir
+}
+
+task unpackBuild(type: Copy) {
+    def componentName = "build"
+    def zipFile = new File(distributionsDir, "com.strumenta.mpsserver.${componentName}-${mpsServerVersion}.zip")
+    if (!zipFile.exists()) {
+        throw new RuntimeException("component not found: ${zipFile.getAbsolutePath()}")
+    }
+
+    from zipTree(zipFile.getPath())
+    into destDir
+}
+
+task unpackMPSServer(dependsOn: ["unpackExtensionkit", "unpackBuild"]) {
+}
+
 task setuplocal {
-	dependsOn resolveMps, resolveMpsArtifacts, resolveLibs
+	dependsOn resolveMps, unpackMPSServer, resolveMpsArtifacts, resolveLibs
 }
 
 // Alias setuplocal as setup
