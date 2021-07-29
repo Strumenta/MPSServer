@@ -1,0 +1,41 @@
+task packageCore(type: Zip, dependsOn: [buildCore]) {
+    archiveBaseName = 'com.strumenta.mpsserver'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-core/**'
+    exclude 'mpsserver-core/*.zip'
+}
+
+task packageExamples(type: Zip, dependsOn: [buildExamples]) {
+    archiveBaseName = 'com.strumenta.mpsserver.examples'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-examples/**'
+    exclude 'mpsserver-examples/*.zip'
+}
+
+task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
+    archiveBaseName = 'com.strumenta.mpsserver.launcher'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-launcher/**'
+    exclude 'mpsserver-launcher/*.zip'
+}
+
+task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
+    archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-extensionkit/**'
+    exclude 'mpsserver-extensionkit/*.zip'
+}
+
+task packageBuild(type: Zip, dependsOn: [buildBuild]) {
+    archiveBaseName = 'com.strumenta.mpsserver.build'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-build/**'
+    exclude 'mpsserver-build/*.zip'
+}
+
+task packageModelix(type: Zip, dependsOn: [buildModelixExtension]) {
+    archiveBaseName = 'com.strumenta.mpsserver.modelix'
+    from new File(rootDir, 'mpscode/build/artifacts')
+    include 'mpsserver-modelix/**'
+    exclude 'mpsserver-modelix/*.zip'
+}

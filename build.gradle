@@ -169,20 +169,6 @@ task buildExamples(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
 	script new File('mpscode/build-examples.xml')
 }
 
-task runLanguageTests(type: TestLanguages, dependsOn: [buildCore, buildExamples]) {
-	doFirst {
-        def antTestScriptFile = file(it['script'])
-        antTestScriptFile.text = antTestScriptFile.text.replace("-Xmx1024m", "-Xmx2048m")
-
-        antTestScriptFile.text = antTestScriptFile.text
-                .replace('<jvmarg value="-ea" />',
-                        '<jvmarg value="-ea" /><jvmarg value="-Djava.awt.headless=true" />')
-    }
-	scriptArgs = antScriptArgs
-	scriptClasspath = buildScriptClasspath
-	script new File('mpscode/build-tests.xml')
-}
-
 task buildLauncher(type: BuildLanguages, dependsOn: [buildCore]) {
 	scriptArgs = antScriptArgs
 	scriptClasspath = buildScriptClasspath
@@ -207,6 +193,10 @@ task buildBuild(type: BuildLanguages, dependsOn: [generateBuildAntScripts]) {
     script new File('mpscode/build-build.xml')
 }
 
+task buildAll(dependsOn: [buildBuild, buildCore, buildLauncher, buildModelixExtension, buildExamples]) {
+
+}
+
 task justRunLauncher(type: RunAntScript, dependsOn: []) {
 	targets = ['run.com.strumenta.mpsserver.launcher']
 	scriptArgs = antScriptArgs
@@ -225,133 +215,6 @@ task runLauncher(dependsOn: [buildLauncher, justRunLauncher]) {
 
 }
 
-def examineTestFile(file) {
-	def testsResult = new XmlParser().parse(file)
-	def errors = testsResult.attributes()["errors"] as Integer
-	def failures = testsResult.attributes()["failures"] as Integer
-	def tests = testsResult.attributes()["tests"] as Integer
-	def skipped = testsResult.attributes()["skipped"] as Integer
-	def successes = tests - skipped - failures - errors
-
-	testsResult.get("testcase").each { tc ->
-		if (tc.get("failure").size() > 0) {
-			println("[FAILED TEST]")
-			println("  classname: " + tc.attributes()["classname"])
-			println("  name:      " + tc.attributes()["name"])
-			println("  message:   " + tc.get("failure").get(0).attributes()["message"])
-			println()
-		} else if (tc.get("error").size() > 0) {
-			println("[FAILED TEST]")
-			println("  classname: " + tc.attributes()["classname"])
-			println("  name:      " + tc.attributes()["name"])
-			println("  message:   " + tc.get("error").get(0).attributes()["message"])
-			println()
-		}
-	}
-	
-	println("Tests     : $tests")
-	println("Skipped   : $skipped")
-	println("Failures  : $failures")
-	println("Successes : $successes")
-	println("Errors    : $errors")
-	
-	println()
-	if (failures > 0 || errors > 0) {
-		println("Check tests: FAILURE")
-		throw new GradleException("Not all tests were run successfully")
-	} else {		
-		println("Check tests: SUCCESS")
-	}	
-}
-
-task justCheckLanguageTests() {
-	doLast {
-		examineTestFile("mpscode/TEST-jetbrains.mps.testbench.junit.suites.AntModuleTestSuite0-mpsserver.tests.xml")
-	}	 
-}
-
-task checkLanguageTests() {
-	dependsOn 'runLanguageTests'
-	dependsOn 'justCheckLanguageTests'
-	tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
-}
-
-task packageCore(type: Zip, dependsOn: [buildCore]) {
-    archiveBaseName = 'com.strumenta.mpsserver'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-core/**'
-    exclude 'mpsserver-core/*.zip'
-}
-
-task packageExamples(type: Zip, dependsOn: [buildExamples]) {
-    archiveBaseName = 'com.strumenta.mpsserver.examples'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-examples/**'
-    exclude 'mpsserver-examples/*.zip'
-}
-
-task packageLauncher(type: Zip, dependsOn: [buildLauncher]) {
-    archiveBaseName = 'com.strumenta.mpsserver.launcher'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-launcher/**'
-    exclude 'mpsserver-launcher/*.zip'
-}
-
-task packageExtensionKit(type: Zip, dependsOn: [buildExtensionKit]) {
-    archiveBaseName = 'com.strumenta.mpsserver.extensionkit'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-extensionkit/**'
-    exclude 'mpsserver-extensionkit/*.zip'
-}
-
-task packageBuild(type: Zip, dependsOn: [buildBuild]) {
-    archiveBaseName = 'com.strumenta.mpsserver.build'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-build/**'
-    exclude 'mpsserver-build/*.zip'
-}
-
-task packageModelix(type: Zip, dependsOn: [buildModelixExtension]) {
-    archiveBaseName = 'com.strumenta.mpsserver.modelix'
-    from new File(rootDir, 'mpscode/build/artifacts')
-    include 'mpsserver-modelix/**'
-    exclude 'mpsserver-modelix/*.zip'
-}
-
-task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
-    doLast {
-        def extensionkitDir = new File(mpscode, 'build/artifacts/mpsserver-extensionkit')
-        def buildPluginDir = new File(mpscode, 'build/artifacts/mpsserver-build')
-        def exampleProjectDir = new File(rootDir, "functional_tests/mps_example_project_withextension") 
-        def exampleProjectArtifactsDir = new File(rootDir, "functional_tests/mps_example_project_withextension/artifacts") 
-        println("[extension kit plugin]")
-        fileTree(extensionkitDir).visit { FileVisitDetails details -> 
-            println(" * ${details.file.path}")
-        }
-        println()
-        println("[build plugin]")
-        fileTree(buildPluginDir).visit { FileVisitDetails details -> 
-            println(" * ${details.file.path}")
-        }
-        println()
-        copy {
-            from {
-                extensionkitDir
-            }
-            into exampleProjectArtifactsDir
-        }
-        copy {
-            from {
-                buildPluginDir
-            }
-            into exampleProjectArtifactsDir
-        }
-        println("[exampleProjectDir]")
-        fileTree(exampleProjectDir).visit { FileVisitDetails details -> 
-            println(" * ${details.file.path}")
-        }
-        println()        
-    }
-}
-
+apply from: 'package.gradle'
+apply from: 'tests.gradle'
 apply from: 'publication.gradle'
