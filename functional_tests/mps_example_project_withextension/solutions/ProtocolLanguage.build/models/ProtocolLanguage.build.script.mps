@@ -348,6 +348,11 @@
             <ref role="3bR37D" to="24gg:4JnP3TV$Dur" resolve="com.strumenta.mpsserver.extensionkit" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3v217FUV_ou" role="3bR37C">
+          <node concept="3bR9La" id="3v217FUV_ov" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2kB4xC" id="2E6SLKT_DBc" role="1l3spd">

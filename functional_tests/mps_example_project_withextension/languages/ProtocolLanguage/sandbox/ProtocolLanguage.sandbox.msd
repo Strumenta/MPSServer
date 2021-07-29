@@ -15,6 +15,7 @@
     <dependency reexport="true">5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)</dependency>
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
     <dependency reexport="false">53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff(ProtocolLanguage)</dependency>
+    <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff:ProtocolLanguage" version="0" />
