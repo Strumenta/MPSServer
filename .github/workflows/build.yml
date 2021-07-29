@@ -28,5 +28,4 @@ jobs:
       with:
         java-version: 11
     - run: sudo apt-get install xvfb
-    - run: ./gradlew buildServer buildExamples
     - run: xvfb-run --auto-servernum ./gradlew checkLanguageTests        
