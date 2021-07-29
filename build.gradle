@@ -24,11 +24,12 @@ plugins {
 }
 
 apply plugin: 'maven'
+apply from: 'versions.gradle'
 
 group "com.strumenta.mpsserver"
 description = "MpsServer"
 project.archivesBaseName = "mpsserver"
-version = '2020.3-18-SNAPSHOT'
+version = ext.mpsServerVersion
 
 configurations {
 	mps
@@ -39,10 +40,6 @@ configurations {
 	libs
 	distribution
 }
-
-ext.mpsVersion = '2020.3.3'
-ext.modelixVersion = '0.0.35'
-ext.mpsExtensionsVersion = '2020.3.1824.6a262ff'
 
 dependencies {
 	ant_lib "org.apache.ant:ant-junit:1.10.1"
