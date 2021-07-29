@@ -117,38 +117,8 @@ task resolveLibs(type: Sync) {
     }
 }
 
-def parentRootDir = rootDir.getParentFile()
-def buildDir = new File(parentRootDir, "build")
-def distributionsDir = new File(buildDir, "distributions")
-File destDir = new File(new File("mps_example_project_withextension"), "artifacts");
-
-task unpackExtensionkit(type: Copy) {
-    def componentName = "extensionkit"
-    def zipFile = new File(distributionsDir, "com.strumenta.mpsserver.${componentName}-${mpsServerVersion}.zip")
-    if (!zipFile.exists()) {
-        throw new RuntimeException("component not found: ${zipFile.getAbsolutePath()}")
-    }
-
-    from zipTree(zipFile.getPath())
-    into destDir
-}
-
-task unpackBuild(type: Copy) {
-    def componentName = "build"
-    def zipFile = new File(distributionsDir, "com.strumenta.mpsserver.${componentName}-${mpsServerVersion}.zip")
-    if (!zipFile.exists()) {
-        throw new RuntimeException("component not found: ${zipFile.getAbsolutePath()}")
-    }
-
-    from zipTree(zipFile.getPath())
-    into destDir
-}
-
-task unpackMPSServer(dependsOn: ["unpackExtensionkit", "unpackBuild"]) {
-}
-
 task setuplocal {
-	dependsOn resolveMps, unpackMPSServer, resolveMpsArtifacts, resolveLibs
+	dependsOn resolveMps, resolveMpsArtifacts, resolveLibs
 }
 
 // Alias setuplocal as setup
