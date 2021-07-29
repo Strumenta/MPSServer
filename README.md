@@ -1,9 +1,10 @@
 # MPSServer
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FStrumenta%2FMPSServer%2Fbadge&style=flat)](https://actions-badge.atrox.dev/Strumenta/MPSServer/goto)
-[ ![Download](https://api.bintray.com/packages/strumenta/strumenta-oss-maven/MPSServer/images/download.svg) ](https://bintray.com/strumenta/strumenta-oss-maven/MPSServer/_latestVersion)
 
 **Please take a look to this tutorial: [https://tomassetti.me/mpsserver-enabling-integration-with-mps/](https://tomassetti.me/mpsserver-enabling-integration-with-mps/)**
+
+**The tutorial explain you what MPSServer can be used for, and how to use it**
 
 
 
@@ -23,7 +24,7 @@ MPSServer is released under the Apache License V2
 It is possible to use the MPSServer through:
 
 * HTTP calls, [documented here](documentation/routes.md)
-* WebSocket messages, [documented here](documentation/wsprotocol.md)
+* WebSocket messages, [documented here](documentation/wsdocumentation.html)
 
 ## Extensions
 
