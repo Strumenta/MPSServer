@@ -13,6 +13,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.deps/com.strumenta.mpsserver.deps.msd" folder="main" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.extensionkit/com.strumenta.mpsserver.extensionkit.msd" folder="main" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.ide/com.strumenta.mpsserver.ide.msd" folder="main" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.javaexample/com.strumenta.mpsserver.javaexample.msd" folder="examples_for_tests" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.launcher/com.strumenta.mpsserver.launcher.msd" folder="main" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.modelix/com.strumenta.mpsserver.modelix.msd" folder="main" />
       <modulePath path="$PROJECT_DIR$/solutions/com.strumenta.mpsserver.operations/com.strumenta.mpsserver.operations.msd" folder="main" />
