@@ -1,8 +1,13 @@
 cd ..
 MPSSERVER_EXTENSION_PATH="ProtocolLanguage,com.strumenta.mpsserver.modelix" MPSSERVER_PROJECT_FILE_PATH="`pwd`/functional_tests/mps_example_project_withextension" MPSSERVER_AUTOSAVE=false MPSSERVER_PORT=7994 ./gradlew runLauncher > server_log_out.txt 2>server_log_err.txt &
-cd functional_tests
 MPS_SERVER_PID=$!
+
+java -jar build/tools/model-server-fatjar-0.0.37.jar -inmemory -dumpin functional_tests/modelserver_dumps/testdump1 -port 7777
+MODEL_SERVER_PID=$!
+
+cd functional_tests
 poetry run python -m unittest discover mpsserverfunctests -p '*Tests.py'
 RESULT=$?
 kill -9 $MPS_SERVER_PID
+kill -9 $MODEL_SERVER_PID
 exit $RESULT
