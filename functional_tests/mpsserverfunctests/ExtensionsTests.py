@@ -19,7 +19,8 @@ class ExtensionsTestCase(BaseAsyncTest):
         self.assertEqual(True, data["success"])
         self.assertEqual(2, len(data["value"]))
         self.assertEqual(True, "ProtocolLanguage.extension.MyExtension" in data["value"])
-        self.assertEqual(True, "com.strumenta.mpsserver.modelix.serveraddons.ModelixMPSServerExtension" in data["value"])
+        self.assertEqual(True, "com.strumenta.mpsserver.modelix.serveraddons.ModelixMPSServerExtension"
+                         in data["value"])
 
     def test_invoke_concept_specific_action(self):
         model_name = "ProtocolLanguage.sandbox"
