@@ -3,12 +3,9 @@ import json
 import time
 import unittest
 import uuid
-from uuid import UUID
-
-import requests
 import websockets
 
-from BaseTest import BaseAsyncTest, BASE_URL, BASE_WS_URL, MODEL_SERVER_URL
+from BaseTest import BaseAsyncTest, BASE_WS_URL, MODEL_SERVER_URL
 
 
 class ExtensionsTestCase(BaseAsyncTest):
@@ -78,7 +75,8 @@ class ExtensionsTestCase(BaseAsyncTest):
             self.assertEqual(False, "com.strumenta.mpsserver.javaexample" in modules_names)
 
             # 2. Check out the module
-            await self._checkout_module(websocket, module_name="com.strumenta.mpsserver.javaexample", repository_id="testrepo1", version_id="3901584326462014052")
+            await self._checkout_module(websocket, module_name="com.strumenta.mpsserver.javaexample",
+                                        repository_id="testrepo1", version_id="3901584326462014052")
 
             # 3. Check the module is in the list of modules
             modules_names = await self._get_modules_names(websocket)
