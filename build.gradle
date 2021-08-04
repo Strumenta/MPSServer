@@ -218,3 +218,4 @@ task runLauncher(dependsOn: [buildLauncher, justRunLauncher]) {
 apply from: 'package.gradle'
 apply from: 'tests.gradle'
 apply from: 'publication.gradle'
+apply from: 'modelix.gradle'
