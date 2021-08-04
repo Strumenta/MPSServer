@@ -7,6 +7,7 @@ import time
 PORT = 7994
 BASE_URL = "http://localhost:%d" % PORT
 BASE_WS_URL = "ws://localhost:%d/socket" % PORT
+MODEL_SERVER_URL = "http://localhost:7777"
 
 
 class BaseAsyncTest(aiounittest.AsyncTestCase):
