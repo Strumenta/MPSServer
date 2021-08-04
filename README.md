@@ -6,14 +6,11 @@
 
 **The tutorial explain you what MPSServer can be used for, and how to use it**
 
-
-
 This is a solution that starts a server to read and modify MPS models through HTTP and WebSocket.
 
 The server can be started from MPS running normally or in headless mode.
 
 There is also a framework to define web editors interoperable with MPSServer. This framework is called [WebEditKit](https://github.com/Strumenta/webeditkit) and it is open-source.
-
 
 ## License
 
@@ -24,7 +21,7 @@ MPSServer is released under the Apache License V2
 It is possible to use the MPSServer through:
 
 * HTTP calls, [documented here](documentation/routes.md)
-* WebSocket messages, [documented here](documentation/wsdocumentation.html)
+* WebSocket messages, [core messages](documentation/ws_core_documentation.html) and [Modelix extensions](documentation/ws_modelix_documentation.html)
 
 ## Extensions
 

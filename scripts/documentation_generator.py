@@ -1,9 +1,6 @@
 import glob
 import xml.etree.ElementTree as ET
 
-xmldir = "../mpscode/solutions/com.strumenta.mpsserver.server/source_gen/com/strumenta/mpsserver/logic"
-xmlfiles = glob.glob("%s/wsprotocol*.xml" % xmldir)
-
 class HtmlDoc:
 
 	def __init__(self):
@@ -15,8 +12,7 @@ class HtmlDoc:
 	def code(self):
 		return "<html><head><link rel=\"stylesheet\" href=\"style.css\"></head><body>%s\n<script src='logic.js'></script></body></html>" % self.body
 
-html = HtmlDoc()
-
+html = None
 
 def link(name, messagesmap):
 	if name in messagesmap:
@@ -122,11 +118,19 @@ def process_group(xmldata):
 			process_message(message, messagesmap)
 	html.append("\n\t</div></div>")	
 
-for xmlfile in xmlfiles:
-	xmldata = ET.parse(xmlfile).getroot()
-	process_group(xmldata)
+def generate_html(xmldir, dest_file):	
+	global html
+	html = HtmlDoc()
+	xmlfiles = glob.glob("%s/wsprotocol*.xml" % xmldir)	
 
-print(html.code())
-text_file = open("../documentation/wsdocumentation.html", "w")
-text_file.write(html.code())
-text_file.close()
+	for xmlfile in xmlfiles:
+		xmldata = ET.parse(xmlfile).getroot()
+		process_group(xmldata)
+
+	#print(html.code())
+	text_file = open(dest_file, "w")
+	text_file.write(html.code())
+	text_file.close()
+
+generate_html("../mpscode/solutions/com.strumenta.mpsserver.server/source_gen/com/strumenta/mpsserver/logic", "../documentation/ws_core_documentation.html")
+generate_html("../mpscode/solutions/com.strumenta.mpsserver.modelix/source_gen/com/strumenta/mpsserver/modelix/serveraddons", "../documentation/ws_modelix_documentation.html")

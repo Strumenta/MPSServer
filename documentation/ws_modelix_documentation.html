@@ -1,0 +1,131 @@
+<html><head><link rel="stylesheet" href="style.css"></head><body>
+	<div class='group'>
+	<div class="group-header"><h1>Group ModelixIntegration</h1></div>
+	<div class='group-content'>
+
+	<h2>Endpoints</h2>
+		<div class="endpoint">
+			<h3>request ModelixCleanTransient</h3>
+			<p class="description">No description provided</p>
+			<p><a href='#message_ModelixCleanTransient'>ModelixCleanTransient</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+			<h4>Answers:</h4>
+			<p class="answer"><a href='#message_DoneAnswerMessage'>DoneAnswerMessage</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<div class="endpoint">
+			<h3>request ModelixCheckoutTransientProject</h3>
+			<p class="description">No description provided</p>
+			<p><a href='#message_ModelixCheckoutTransientProject'>ModelixCheckoutTransientProject</a></p>
+			<p>superclass: <span class='unavailable_type'>AbstractModelixCheckoutMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>projectName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>repositoryId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>versionId</td><td><span class='primitive'>long</span></td></tr>
+				<tr><td>modelServerUrl</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+			<h4>Answers:</h4>
+			<p class="answer"><a href='#message_DoneAnswerMessage'>DoneAnswerMessage</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<div class="endpoint">
+			<h3>request ModelixCheckoutTransientModule</h3>
+			<p class="description">No description provided</p>
+			<p><a href='#message_ModelixCheckoutTransientModule'>ModelixCheckoutTransientModule</a></p>
+			<p>superclass: <span class='unavailable_type'>AbstractModelixCheckoutMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>moduleName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>repositoryId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>versionId</td><td><span class='primitive'>long</span></td></tr>
+				<tr><td>modelServerUrl</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+			<h4>Answers:</h4>
+			<p class="answer"><a href='#message_DoneAnswerMessage'>DoneAnswerMessage</a></p>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+
+	<h2>Messages</h2>
+		<a id="message_ModelixCleanTransient"></a>
+		<div class="message">
+			<h3>request ModelixCleanTransient</h3>
+			<p>superclass: <span class='unavailable_type'>RequestMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_DoneAnswerMessage"></a>
+		<div class="message">
+			<h3>answer DoneAnswerMessage</h3>
+			<p>superclass: <span class='unavailable_type'>RequestAnswerMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>success</td><td><span class='primitive'>boolean</span></td></tr>
+				<tr><td>message</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_ModelixCheckoutTransientProject"></a>
+		<div class="message">
+			<h3>request ModelixCheckoutTransientProject</h3>
+			<p>superclass: <span class='unavailable_type'>AbstractModelixCheckoutMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>projectName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>repositoryId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>versionId</td><td><span class='primitive'>long</span></td></tr>
+				<tr><td>modelServerUrl</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+		<a id="message_ModelixCheckoutTransientModule"></a>
+		<div class="message">
+			<h3>request ModelixCheckoutTransientModule</h3>
+			<p>superclass: <span class='unavailable_type'>AbstractModelixCheckoutMessage</span></p>
+			<table>
+				<tr><th>Name</th><th>Type</th></tr>
+				<tr><td>moduleName</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>repositoryId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>versionId</td><td><span class='primitive'>long</span></td></tr>
+				<tr><td>modelServerUrl</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>requestId</td><td><span class='primitive'>string</span></td></tr>
+				<tr><td>type</td><td><span class='primitive'>string</span></td></tr>
+			</table>
+		</div>
+	</div></div>
+<script src='logic.js'></script></body></html>
