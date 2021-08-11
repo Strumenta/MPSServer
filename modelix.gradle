@@ -1,4 +1,3 @@
-
 task download_modelserver_fatjar() {
 	def url = "https://projects.itemis.de/nexus/content/repositories/OS/org/modelix/model-server-fatjar/${modelixVersion}/model-server-fatjar-${modelixVersion}.jar"
 	def toolsDir = new File(buildDir, "tools")
