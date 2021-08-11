@@ -3026,6 +3026,41 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbJ" id="4UHjbrP38J9" role="3cqZAp">
+          <node concept="3clFbS" id="4UHjbrP38Jb" role="3clFbx">
+            <node concept="YS8fn" id="4UHjbrP39Hw" role="3cqZAp">
+              <node concept="2ShNRf" id="4UHjbrP39I3" role="YScLw">
+                <node concept="1pGfFk" id="4UHjbrP3abY" role="2ShVmc">
+                  <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
+                  <node concept="3cpWs3" id="4UHjbrP3bxY" role="37wK5m">
+                    <node concept="37vLTw" id="4UHjbrP3bDv" role="3uHU7w">
+                      <ref role="3cqZAo" node="4pEVX9_Lw65" resolve="branchName" />
+                    </node>
+                    <node concept="3cpWs3" id="4UHjbrP3b5L" role="3uHU7B">
+                      <node concept="3cpWs3" id="4UHjbrP3aPu" role="3uHU7B">
+                        <node concept="Xl_RD" id="4UHjbrP3adO" role="3uHU7B">
+                          <property role="Xl_RC" value="We could not find latest version for repositoryId " />
+                        </node>
+                        <node concept="37vLTw" id="4UHjbrP3aRW" role="3uHU7w">
+                          <ref role="3cqZAo" node="4pEVX9_LvMC" resolve="repositoryId" />
+                        </node>
+                      </node>
+                      <node concept="Xl_RD" id="4UHjbrP3b5Z" role="3uHU7w">
+                        <property role="Xl_RC" value=", branchName " />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="4UHjbrP39AG" role="3clFbw">
+            <node concept="10Nm6u" id="4UHjbrP39GV" role="3uHU7w" />
+            <node concept="37vLTw" id="4UHjbrP39dU" role="3uHU7B">
+              <ref role="3cqZAo" node="4pEVX9_LvN1" resolve="versionHash" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="4pEVX9_LvN7" role="3cqZAp">
           <node concept="3cpWsn" id="4pEVX9_LvN8" role="3cpWs9">
             <property role="TrG5h" value="version" />
