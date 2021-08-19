@@ -80,7 +80,7 @@ class ExtensionsTestCase(BaseAsyncTest):
         print("sent req_id %s" % req_id)
         response = json.loads(await websocket.recv())
         print(response)
-        self.assertEqual(req_id, response['requestId'])
+        self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response['success'])
         self.assertEqual('DoneAnswerMessage', response['type'])
 
