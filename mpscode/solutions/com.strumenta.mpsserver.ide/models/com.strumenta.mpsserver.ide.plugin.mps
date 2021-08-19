@@ -809,39 +809,113 @@
                         <property role="Xl_RC" value="Received message in ServerLauncherTool" />
                       </node>
                     </node>
-                    <node concept="3cpWs8" id="10$ElfnQ36V" role="3cqZAp">
-                      <node concept="3cpWsn" id="10$ElfnQ36Y" role="3cpWs9">
+                    <node concept="3cpWs8" id="74rE$0ZWR6z" role="3cqZAp">
+                      <node concept="3cpWsn" id="74rE$0ZWR6A" role="3cpWs9">
                         <property role="TrG5h" value="type" />
-                        <node concept="17QB3L" id="10$ElfnQ36T" role="1tU5fm" />
-                        <node concept="2OqwBi" id="10$ElfnQ2CW" role="33vP2m">
-                          <node concept="2OqwBi" id="10$ElfnQ20P" role="2Oq$k0">
-                            <node concept="2OqwBi" id="10$ElfnQ1Mr" role="2Oq$k0">
-                              <node concept="2OqwBi" id="10$ElfnQ0Y_" role="2Oq$k0">
-                                <node concept="2ShNRf" id="10$ElfnPZVd" role="2Oq$k0">
-                                  <node concept="1pGfFk" id="10$ElfnQ0U1" role="2ShVmc">
-                                    <ref role="37wK5l" to="wy2b:~JsonParser.&lt;init&gt;()" resolve="JsonParser" />
-                                  </node>
-                                </node>
-                                <node concept="liA8E" id="10$ElfnQ13g" role="2OqNvi">
-                                  <ref role="37wK5l" to="wy2b:~JsonParser.parse(java.lang.String)" resolve="parse" />
-                                  <node concept="37vLTw" id="10$ElfnQ1pD" role="37wK5m">
-                                    <ref role="3cqZAo" node="2wu2WWizl1" resolve="message" />
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="liA8E" id="10$ElfnQ1V7" role="2OqNvi">
-                                <ref role="37wK5l" to="wy2b:~JsonElement.getAsJsonObject()" resolve="getAsJsonObject" />
+                        <node concept="17QB3L" id="74rE$0ZWR6x" role="1tU5fm" />
+                        <node concept="Xl_RD" id="74rE$0ZWRAo" role="33vP2m">
+                          <property role="Xl_RC" value="&lt;unkown&gt;" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3cpWs8" id="74rE$0ZWOrv" role="3cqZAp">
+                      <node concept="3cpWsn" id="74rE$0ZWOrw" role="3cpWs9">
+                        <property role="TrG5h" value="data" />
+                        <node concept="3uibUv" id="74rE$0ZWOrx" role="1tU5fm">
+                          <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+                        </node>
+                        <node concept="2OqwBi" id="74rE$0ZWOxM" role="33vP2m">
+                          <node concept="2OqwBi" id="74rE$0ZWOxN" role="2Oq$k0">
+                            <node concept="2ShNRf" id="74rE$0ZWOxO" role="2Oq$k0">
+                              <node concept="1pGfFk" id="74rE$0ZWOxP" role="2ShVmc">
+                                <ref role="37wK5l" to="wy2b:~JsonParser.&lt;init&gt;()" resolve="JsonParser" />
                               </node>
                             </node>
-                            <node concept="liA8E" id="10$ElfnQ2lY" role="2OqNvi">
-                              <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
-                              <node concept="Xl_RD" id="10$ElfnQ2y5" role="37wK5m">
-                                <property role="Xl_RC" value="type" />
+                            <node concept="liA8E" id="74rE$0ZWOxQ" role="2OqNvi">
+                              <ref role="37wK5l" to="wy2b:~JsonParser.parse(java.lang.String)" resolve="parse" />
+                              <node concept="37vLTw" id="74rE$0ZWOxR" role="37wK5m">
+                                <ref role="3cqZAo" node="2wu2WWizl1" resolve="message" />
                               </node>
                             </node>
                           </node>
-                          <node concept="liA8E" id="10$ElfnQ2Ou" role="2OqNvi">
-                            <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                          <node concept="liA8E" id="74rE$0ZWOxS" role="2OqNvi">
+                            <ref role="37wK5l" to="wy2b:~JsonElement.getAsJsonObject()" resolve="getAsJsonObject" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbJ" id="74rE$0ZWP7u" role="3cqZAp">
+                      <node concept="3clFbS" id="74rE$0ZWP7w" role="3clFbx">
+                        <node concept="3clFbF" id="74rE$0ZWRQ9" role="3cqZAp">
+                          <node concept="37vLTI" id="74rE$0ZWSeL" role="3clFbG">
+                            <node concept="37vLTw" id="74rE$0ZWRQ7" role="37vLTJ">
+                              <ref role="3cqZAo" node="74rE$0ZWR6A" resolve="type" />
+                            </node>
+                            <node concept="2OqwBi" id="74rE$0ZWSel" role="37vLTx">
+                              <node concept="2OqwBi" id="74rE$0ZWSem" role="2Oq$k0">
+                                <node concept="37vLTw" id="74rE$0ZWSG1" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="74rE$0ZWOrw" resolve="data" />
+                                </node>
+                                <node concept="liA8E" id="74rE$0ZWSeu" role="2OqNvi">
+                                  <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
+                                  <node concept="Xl_RD" id="74rE$0ZWSev" role="37wK5m">
+                                    <property role="Xl_RC" value="type" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="74rE$0ZWSew" role="2OqNvi">
+                                <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="74rE$0ZWQaH" role="3clFbw">
+                        <node concept="37vLTw" id="74rE$0ZWPJE" role="2Oq$k0">
+                          <ref role="3cqZAo" node="74rE$0ZWOrw" resolve="data" />
+                        </node>
+                        <node concept="liA8E" id="74rE$0ZWQrN" role="2OqNvi">
+                          <ref role="37wK5l" to="wy2b:~JsonObject.has(java.lang.String)" resolve="has" />
+                          <node concept="Xl_RD" id="74rE$0ZWQLU" role="37wK5m">
+                            <property role="Xl_RC" value="type" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbJ" id="74rE$0ZWSXD" role="3cqZAp">
+                      <node concept="3clFbS" id="74rE$0ZWSXE" role="3clFbx">
+                        <node concept="3clFbF" id="74rE$0ZWSXF" role="3cqZAp">
+                          <node concept="37vLTI" id="74rE$0ZWSXG" role="3clFbG">
+                            <node concept="37vLTw" id="74rE$0ZWSXH" role="37vLTJ">
+                              <ref role="3cqZAo" node="74rE$0ZWR6A" resolve="type" />
+                            </node>
+                            <node concept="2OqwBi" id="74rE$0ZWSXI" role="37vLTx">
+                              <node concept="2OqwBi" id="74rE$0ZWSXJ" role="2Oq$k0">
+                                <node concept="37vLTw" id="74rE$0ZWSXK" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="74rE$0ZWOrw" resolve="data" />
+                                </node>
+                                <node concept="liA8E" id="74rE$0ZWSXL" role="2OqNvi">
+                                  <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
+                                  <node concept="Xl_RD" id="74rE$0ZWSXM" role="37wK5m">
+                                    <property role="Xl_RC" value="method" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="74rE$0ZWSXN" role="2OqNvi">
+                                <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="74rE$0ZWSXO" role="3clFbw">
+                        <node concept="37vLTw" id="74rE$0ZWSXP" role="2Oq$k0">
+                          <ref role="3cqZAo" node="74rE$0ZWOrw" resolve="data" />
+                        </node>
+                        <node concept="liA8E" id="74rE$0ZWSXQ" role="2OqNvi">
+                          <ref role="37wK5l" to="wy2b:~JsonObject.has(java.lang.String)" resolve="has" />
+                          <node concept="Xl_RD" id="74rE$0ZWSXR" role="37wK5m">
+                            <property role="Xl_RC" value="method" />
                           </node>
                         </node>
                       </node>
@@ -862,7 +936,7 @@
                               <property role="Xl_RC" value="Received" />
                             </node>
                             <node concept="37vLTw" id="10$ElfnQ3R6" role="1Lso8e">
-                              <ref role="3cqZAo" node="10$ElfnQ36Y" resolve="type" />
+                              <ref role="3cqZAo" node="74rE$0ZWR6A" resolve="type" />
                             </node>
                             <node concept="37vLTw" id="2wu2WWiPW0" role="1Lso8e">
                               <ref role="3cqZAo" node="2wu2WWizl1" resolve="message" />
