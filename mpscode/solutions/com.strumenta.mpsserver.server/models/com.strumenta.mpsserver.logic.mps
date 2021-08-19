@@ -150,6 +150,10 @@
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
+      <concept id="1083245097125" name="jetbrains.mps.baseLanguage.structure.EnumClass" flags="ig" index="Qs71p">
+        <child id="1083245396908" name="enumConstant" index="Qtgdg" />
+      </concept>
+      <concept id="1083245299891" name="jetbrains.mps.baseLanguage.structure.EnumConstantDeclaration" flags="ig" index="QsSxf" />
       <concept id="1201370618622" name="jetbrains.mps.baseLanguage.structure.Property" flags="ig" index="2RhdJD">
         <property id="1201371481316" name="propertyName" index="2RkwnN" />
         <child id="1201371521209" name="type" index="2RkE6I" />
@@ -4893,9 +4897,16 @@
     </node>
     <node concept="2tJIrI" id="2yBD7rQhZch" role="jymVt" />
     <node concept="312cEg" id="6Hz$xA6_3FL" role="jymVt">
-      <property role="TrG5h" value="webSocketHandler" />
+      <property role="TrG5h" value="customWebSocketHandler" />
       <node concept="3Tm6S6" id="6Hz$xA6_0DS" role="1B3o_S" />
       <node concept="3uibUv" id="6Hz$xA6_3pq" role="1tU5fm">
+        <ref role="3uigEE" node="6Y14zWtL0rJ" resolve="WebSocketHandler" />
+      </node>
+    </node>
+    <node concept="312cEg" id="14oU6UWSAnO" role="jymVt">
+      <property role="TrG5h" value="jsonrpcWebSocketHandler" />
+      <node concept="3Tm6S6" id="14oU6UWSAnP" role="1B3o_S" />
+      <node concept="3uibUv" id="14oU6UWSAnQ" role="1tU5fm">
         <ref role="3uigEE" node="6Y14zWtL0rJ" resolve="WebSocketHandler" />
       </node>
     </node>
@@ -4999,7 +5010,7 @@
             <node concept="3clFbF" id="6Hz$xA6_8TM" role="3cqZAp">
               <node concept="37vLTI" id="6Hz$xA6_9zv" role="3clFbG">
                 <node concept="37vLTw" id="6Hz$xA6_8TK" role="37vLTJ">
-                  <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="webSocketHandler" />
+                  <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="customWebSocketHandler" />
                 </node>
                 <node concept="2ShNRf" id="6Hz$xA6_ao9" role="37vLTx">
                   <node concept="1pGfFk" id="6Hz$xA6_aoa" role="2ShVmc">
@@ -5014,6 +5025,10 @@
                       <ref role="3cqZAo" node="i07tI0JG2m" resolve="conceptSpecificActions" />
                     </node>
                     <node concept="Xjq3P" id="3zpwQ15YqkN" role="37wK5m" />
+                    <node concept="Rm8GO" id="14oU6UWSI1z" role="37wK5m">
+                      <ref role="Rm8GQ" node="14oU6UWRSQA" resolve="CUSTOM" />
+                      <ref role="1Px2BO" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -5029,11 +5044,55 @@
                     <property role="Xl_RC" value="/socket" />
                   </node>
                   <node concept="37vLTw" id="6Hz$xA6_bBd" role="37wK5m">
-                    <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="webSocketHandler" />
+                    <ref role="3cqZAo" node="6Hz$xA6_3FL" resolve="customWebSocketHandler" />
                   </node>
                 </node>
               </node>
             </node>
+            <node concept="3clFbH" id="14oU6UWSJ2k" role="3cqZAp" />
+            <node concept="3clFbF" id="14oU6UWSJig" role="3cqZAp">
+              <node concept="37vLTI" id="14oU6UWSJih" role="3clFbG">
+                <node concept="37vLTw" id="14oU6UWSL62" role="37vLTJ">
+                  <ref role="3cqZAo" node="14oU6UWSAnO" resolve="jsonrpcWebSocketHandler" />
+                </node>
+                <node concept="2ShNRf" id="14oU6UWSJij" role="37vLTx">
+                  <node concept="1pGfFk" id="14oU6UWSJik" role="2ShVmc">
+                    <ref role="37wK5l" node="6Y14zWtOxff" resolve="WebSocketHandler" />
+                    <node concept="37vLTw" id="14oU6UWSJil" role="37wK5m">
+                      <ref role="3cqZAo" node="3ronlYH7Hbj" resolve="intentionsModule" />
+                    </node>
+                    <node concept="37vLTw" id="14oU6UWSJim" role="37wK5m">
+                      <ref role="3cqZAo" node="6Hz$xA6$18m" resolve="registeredMessageHandlers" />
+                    </node>
+                    <node concept="37vLTw" id="14oU6UWSJin" role="37wK5m">
+                      <ref role="3cqZAo" node="i07tI0JG2m" resolve="conceptSpecificActions" />
+                    </node>
+                    <node concept="Xjq3P" id="14oU6UWSJio" role="37wK5m" />
+                    <node concept="Rm8GO" id="14oU6UWSM4V" role="37wK5m">
+                      <ref role="Rm8GQ" node="14oU6UWRX6g" resolve="JSONRPC" />
+                      <ref role="1Px2BO" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="14oU6UWSJiq" role="3cqZAp">
+              <node concept="2OqwBi" id="14oU6UWSJir" role="3clFbG">
+                <node concept="37vLTw" id="14oU6UWSJis" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4sxAHuu5dvW" resolve="sparkService" />
+                </node>
+                <node concept="liA8E" id="14oU6UWSJit" role="2OqNvi">
+                  <ref role="37wK5l" to="9xi5:~Service.webSocket(java.lang.String,java.lang.Object)" resolve="webSocket" />
+                  <node concept="Xl_RD" id="14oU6UWSJiu" role="37wK5m">
+                    <property role="Xl_RC" value="/jsonrpc" />
+                  </node>
+                  <node concept="37vLTw" id="14oU6UWSMIz" role="37wK5m">
+                    <ref role="3cqZAo" node="14oU6UWSAnO" resolve="jsonrpcWebSocketHandler" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="14oU6UWSJdK" role="3cqZAp" />
             <node concept="3clFbF" id="4sxAHuu88hF" role="3cqZAp">
               <node concept="2OqwBi" id="4sxAHuu88_u" role="3clFbG">
                 <node concept="37vLTw" id="4sxAHuu88hD" role="2Oq$k0">
@@ -13146,6 +13205,106 @@
         <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
       </node>
     </node>
+    <node concept="2tJIrI" id="14oU6UWR05r" role="jymVt" />
+    <node concept="Qs71p" id="14oU6UWRJKS" role="jymVt">
+      <property role="2bfB8j" value="true" />
+      <property role="TrG5h" value="CommunicationProtocol" />
+      <node concept="QsSxf" id="14oU6UWRSQA" role="Qtgdg">
+        <property role="TrG5h" value="CUSTOM" />
+        <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+      </node>
+      <node concept="QsSxf" id="14oU6UWRX6g" role="Qtgdg">
+        <property role="TrG5h" value="JSONRPC" />
+        <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+      </node>
+      <node concept="3Tm1VV" id="14oU6UWRJKT" role="1B3o_S" />
+      <node concept="3clFb_" id="14oU6UWUwqs" role="jymVt">
+        <property role="TrG5h" value="getMessageType" />
+        <node concept="3clFbS" id="14oU6UWUwqv" role="3clF47">
+          <node concept="3clFbJ" id="14oU6UWU$Fu" role="3cqZAp">
+            <node concept="3clFbS" id="14oU6UWU$Fw" role="3clFbx">
+              <node concept="3cpWs6" id="14oU6UWUEMH" role="3cqZAp">
+                <node concept="2OqwBi" id="14oU6UWUEOp" role="3cqZAk">
+                  <node concept="2OqwBi" id="14oU6UWUEOq" role="2Oq$k0">
+                    <node concept="37vLTw" id="14oU6UWUEOr" role="2Oq$k0">
+                      <ref role="3cqZAo" node="14oU6UWUy2d" resolve="data" />
+                    </node>
+                    <node concept="liA8E" id="14oU6UWUEOs" role="2OqNvi">
+                      <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
+                      <node concept="Xl_RD" id="14oU6UWUEOt" role="37wK5m">
+                        <property role="Xl_RC" value="type" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="14oU6UWUEOu" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="14oU6UWUACM" role="3clFbw">
+              <node concept="Rm8GO" id="14oU6UWUD2h" role="3uHU7w">
+                <ref role="Rm8GQ" node="14oU6UWRSQA" resolve="CUSTOM" />
+                <ref role="1Px2BO" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
+              </node>
+              <node concept="Xjq3P" id="14oU6UWU_6m" role="3uHU7B" />
+            </node>
+          </node>
+          <node concept="3clFbJ" id="14oU6UWUNcy" role="3cqZAp">
+            <node concept="3clFbS" id="14oU6UWUNcz" role="3clFbx">
+              <node concept="3cpWs6" id="14oU6UWUNc$" role="3cqZAp">
+                <node concept="2OqwBi" id="14oU6UWUNc_" role="3cqZAk">
+                  <node concept="2OqwBi" id="14oU6UWUNcA" role="2Oq$k0">
+                    <node concept="37vLTw" id="14oU6UWUNcB" role="2Oq$k0">
+                      <ref role="3cqZAo" node="14oU6UWUy2d" resolve="data" />
+                    </node>
+                    <node concept="liA8E" id="14oU6UWUNcC" role="2OqNvi">
+                      <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
+                      <node concept="Xl_RD" id="14oU6UWUNcD" role="37wK5m">
+                        <property role="Xl_RC" value="method" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="14oU6UWUNcE" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbC" id="14oU6UWUNcF" role="3clFbw">
+              <node concept="Rm8GO" id="14oU6UWUOD$" role="3uHU7w">
+                <ref role="Rm8GQ" node="14oU6UWRX6g" resolve="JSONRPC" />
+                <ref role="1Px2BO" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
+              </node>
+              <node concept="Xjq3P" id="14oU6UWUNcH" role="3uHU7B" />
+            </node>
+          </node>
+          <node concept="YS8fn" id="14oU6UWUFA5" role="3cqZAp">
+            <node concept="2ShNRf" id="14oU6UWUG0Z" role="YScLw">
+              <node concept="1pGfFk" id="14oU6UWUN9R" role="2ShVmc">
+                <ref role="37wK5l" to="wyt6:~UnsupportedOperationException.&lt;init&gt;()" resolve="UnsupportedOperationException" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="14oU6UWUuXw" role="1B3o_S" />
+        <node concept="17QB3L" id="14oU6UWUwoK" role="3clF45" />
+        <node concept="37vLTG" id="14oU6UWUy2d" role="3clF46">
+          <property role="TrG5h" value="data" />
+          <node concept="3uibUv" id="14oU6UWUy2c" role="1tU5fm">
+            <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="14oU6UWS1n4" role="jymVt" />
+    <node concept="312cEg" id="14oU6UWShZ1" role="jymVt">
+      <property role="TrG5h" value="communicationProtocol" />
+      <node concept="3Tm6S6" id="14oU6UWS8lS" role="1B3o_S" />
+      <node concept="3uibUv" id="14oU6UWSgtL" role="1tU5fm">
+        <ref role="3uigEE" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="2wu2WWfL$_" role="jymVt" />
     <node concept="3clFbW" id="6Y14zWtOxff" role="jymVt">
       <node concept="3cqZAl" id="6Y14zWtOxfh" role="3clF45" />
@@ -13196,6 +13355,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="14oU6UWStkh" role="3cqZAp">
+          <node concept="37vLTI" id="14oU6UWSvoR" role="3clFbG">
+            <node concept="37vLTw" id="14oU6UWSwM$" role="37vLTx">
+              <ref role="3cqZAo" node="14oU6UWSquc" resolve="communicationProtocol" />
+            </node>
+            <node concept="2OqwBi" id="14oU6UWStzL" role="37vLTJ">
+              <node concept="Xjq3P" id="14oU6UWStkf" role="2Oq$k0" />
+              <node concept="2OwXpG" id="14oU6UWStKS" role="2OqNvi">
+                <ref role="2Oxat5" node="14oU6UWShZ1" resolve="communicationProtocol" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="8tCK0sUbrB" role="3cqZAp">
           <node concept="1rXfSq" id="8tCK0sUbr_" role="3clFbG">
             <ref role="37wK5l" node="8tCK0sU6mC" resolve="addStandardGlobalHandlers" />
@@ -13233,6 +13405,12 @@
         <property role="TrG5h" value="communicationsLogger" />
         <node concept="3uibUv" id="2wu2WWfUr_" role="1tU5fm">
           <ref role="3uigEE" to="e4as:2wu2WWeLkx" resolve="CommunicationsLogger" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="14oU6UWSquc" role="3clF46">
+        <property role="TrG5h" value="communicationProtocol" />
+        <node concept="3uibUv" id="14oU6UWSrSU" role="1tU5fm">
+          <ref role="3uigEE" node="14oU6UWRJKS" resolve="WebSocketHandler.CommunicationProtocol" />
         </node>
       </node>
     </node>
@@ -19980,7 +20158,7 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="3ESggWmJd3f" role="jymVt" />
+    <node concept="2tJIrI" id="14oU6UWTPJK" role="jymVt" />
     <node concept="3Tm1VV" id="6Y14zWtL0rK" role="1B3o_S" />
     <node concept="3clFb_" id="6Y14zWtL0tR" role="jymVt">
       <property role="TrG5h" value="handleTextMessage" />
@@ -20049,24 +20227,23 @@
             <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
           </node>
         </node>
+        <node concept="3clFbH" id="14oU6UWTMZW" role="3cqZAp" />
         <node concept="3cpWs8" id="6Y14zWtOOeV" role="3cqZAp">
           <node concept="3cpWsn" id="6Y14zWtOOeY" role="3cpWs9">
             <property role="TrG5h" value="messageType" />
             <node concept="17QB3L" id="6Y14zWtOOeT" role="1tU5fm" />
-            <node concept="2OqwBi" id="6Y14zWtOOlP" role="33vP2m">
-              <node concept="2OqwBi" id="6Y14zWtOOlQ" role="2Oq$k0">
-                <node concept="37vLTw" id="6Y14zWtOOlR" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
-                </node>
-                <node concept="liA8E" id="6Y14zWtOOlS" role="2OqNvi">
-                  <ref role="37wK5l" to="wy2b:~JsonObject.get(java.lang.String)" resolve="get" />
-                  <node concept="Xl_RD" id="6Y14zWtOOlT" role="37wK5m">
-                    <property role="Xl_RC" value="type" />
-                  </node>
+            <node concept="2OqwBi" id="14oU6UWURYS" role="33vP2m">
+              <node concept="2OqwBi" id="14oU6UWUR2o" role="2Oq$k0">
+                <node concept="Xjq3P" id="14oU6UWUQEE" role="2Oq$k0" />
+                <node concept="2OwXpG" id="14oU6UWURkw" role="2OqNvi">
+                  <ref role="2Oxat5" node="14oU6UWShZ1" resolve="communicationProtocol" />
                 </node>
               </node>
-              <node concept="liA8E" id="6Y14zWtOOlU" role="2OqNvi">
-                <ref role="37wK5l" to="wy2b:~JsonElement.getAsString()" resolve="getAsString" />
+              <node concept="liA8E" id="14oU6UWUTJK" role="2OqNvi">
+                <ref role="37wK5l" node="14oU6UWUwqs" resolve="getMessageType" />
+                <node concept="37vLTw" id="14oU6UWUTXN" role="37wK5m">
+                  <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
+                </node>
               </node>
             </node>
           </node>
