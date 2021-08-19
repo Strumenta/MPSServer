@@ -188,10 +188,11 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     {
                         "method": "CreateIntentionsBlock",
                         "params": {
-                        "node": {
-                            "model": "ProtocolLanguage.sandbox",
-                            "id": {"regularId": 5465070037663859703},
-                        }},
+                            "node": {
+                                "model": "ProtocolLanguage.sandbox",
+                                "id": {"regularId": 5465070037663859703},
+                            }
+                        },
                         "id": "req-a-125"
                     }
                 )
@@ -200,10 +201,10 @@ class IntentionsWsTestCase(BaseAsyncTest):
             self.assertEqual("CreateIntentionsBlockAnswer", response['result']["type"])
             uuid = response['result']["blockUUID"]
             await websocket.send(
-                json.dumps({"method": "DeleteIntentionsBlock", "params":{"blockUUID": uuid}})
+                json.dumps({"method": "DeleteIntentionsBlock", "params": {"blockUUID": uuid}})
             )
             await websocket.send(
-                json.dumps({"method": "GetIntentionsBlock", "params":{"blockUUID": uuid}})
+                json.dumps({"method": "GetIntentionsBlock", "params": {"blockUUID": uuid}})
             )
             response = json.loads(await websocket.recv())
             self.assertEqual("GetIntentionsBlockAnswer", response["result"]["type"])
@@ -219,11 +220,11 @@ class IntentionsWsTestCase(BaseAsyncTest):
                 json.dumps(
                     {
                         "method": "CreateIntentionsBlock",
-                        "params":{
-                        "node": {
-                            "model": "ProtocolLanguage.sandbox",
-                            "id": {"regularId": 5465070037663859703},
-                        }
+                        "params": {
+                            "node": {
+                                "model": "ProtocolLanguage.sandbox",
+                                "id": {"regularId": 5465070037663859703},
+                            }
                         }
                     }
                 )
@@ -232,7 +233,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
             self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
             uuid = response["result"]["blockUUID"]
             await websocket.send(
-                json.dumps({"method": "ExecuteIntention", "params":{"blockUUID": uuid, "index": 0}})
+                json.dumps({"method": "ExecuteIntention", "params": {"blockUUID": uuid, "index": 0}})
             )
             await websocket.close()
 

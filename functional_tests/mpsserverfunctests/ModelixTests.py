@@ -37,7 +37,7 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         response = json.loads(await websocket.recv())
-        modules_name = [m["name"] for m in response["modules"]]
+        modules_name = [m["name"] for m in response["result"]["modules"]]
         return modules_name
 
     async def _checkout_module_custom(self, websocket, module_name, repository_id, version_id):
@@ -101,7 +101,6 @@ class ExtensionsTestCase(BaseAsyncTest):
         self.assertEqual(True, response['success'])
         self.assertEqual('DoneAnswerMessage', response['type'])
 
-
     async def _clean_transient_modules_jsonrpc(self, websocket):
         req_id = str(uuid.uuid4())
         await websocket.send(
@@ -129,7 +128,7 @@ class ExtensionsTestCase(BaseAsyncTest):
 
             # 2. Check out the module
             await self._checkout_module_custom(websocket, module_name="com.strumenta.mpsserver.javaexample",
-                                        repository_id="testrepo1", version_id="3901584326462014052")
+                                               repository_id="testrepo1", version_id="3901584326462014052")
 
             # 3. Check the module is in the list of modules
             modules_names = await self._get_modules_names_custom(websocket)
@@ -157,7 +156,7 @@ class ExtensionsTestCase(BaseAsyncTest):
 
             # 2. Check out the module
             await self._checkout_module_jsonrpc(websocket, module_name="com.strumenta.mpsserver.javaexample",
-                                        repository_id="testrepo1", version_id="3901584326462014052")
+                                                repository_id="testrepo1", version_id="3901584326462014052")
 
             # 3. Check the module is in the list of modules
             modules_names = await self._get_modules_names_jsonrpc(websocket)
