@@ -6,7 +6,8 @@ import time
 
 PORT = 7994
 BASE_URL = "http://localhost:%d" % PORT
-BASE_WS_URL = "ws://localhost:%d/socket" % PORT
+BASE_WS_URL_CUSTOM = "ws://localhost:%d/socket" % PORT
+BASE_WS_URL_JSONRPC = "ws://localhost:%d/jsonrpc" % PORT
 MODEL_SERVER_URL = "http://localhost:7777"
 
 

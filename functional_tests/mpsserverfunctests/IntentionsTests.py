@@ -5,7 +5,7 @@ import unittest
 
 import requests
 import websockets
-from BaseTest import BaseTest, BASE_URL, BASE_WS_URL, BaseAsyncTest
+from BaseTest import BaseTest, BASE_URL, BASE_WS_URL_CUSTOM, BASE_WS_URL_JSONRPC, BaseAsyncTest
 
 
 class IntentionsHttpTestCase(BaseTest):
@@ -53,9 +53,9 @@ class IntentionsWsTestCase(BaseAsyncTest):
     def reloadAll(self):
         pass
 
-    def test_create_intentions_block(self):
+    def test_create_intentions_block_custom(self):
         async def f():
-            websocket = await websockets.connect(BASE_WS_URL)
+            websocket = await websockets.connect(BASE_WS_URL_CUSTOM)
             await websocket.send(
                 json.dumps(
                     {
@@ -86,9 +86,9 @@ class IntentionsWsTestCase(BaseAsyncTest):
 
         asyncio.get_event_loop().run_until_complete(f())
 
-    def test_delete_intentions_block(self):
+    def test_delete_intentions_block_custom(self):
         async def f():
-            websocket = await websockets.connect(BASE_WS_URL)
+            websocket = await websockets.connect(BASE_WS_URL_CUSTOM)
             await websocket.send(
                 json.dumps(
                     {
@@ -116,9 +116,96 @@ class IntentionsWsTestCase(BaseAsyncTest):
 
         asyncio.get_event_loop().run_until_complete(f())
 
-    def test_execute_intention(self):
+    def test_execute_intention_jsonrpc(self):
         async def f():
-            websocket = await websockets.connect(BASE_WS_URL)
+            websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
+            await websocket.send(
+                json.dumps(
+                    {
+                        "type": "CreateIntentionsBlock",
+                        "node": {
+                            "model": "ProtocolLanguage.sandbox",
+                            "id": {"regularId": 5465070037663859703},
+                        },
+                    }
+                )
+            )
+            response = json.loads(await websocket.recv())
+            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
+            uuid = response["blockUUID"]
+            await websocket.send(
+                json.dumps({"type": "ExecuteIntention", "blockUUID": uuid, "index": 0})
+            )
+            await websocket.close()
+
+        asyncio.get_event_loop().run_until_complete(f())
+
+    def test_create_intentions_block_jsonrpc(self):
+        async def f():
+            websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
+            await websocket.send(
+                json.dumps(
+                    {
+                        "type": "CreateIntentionsBlock",
+                        "node": {
+                            "model": "ProtocolLanguage.sandbox",
+                            "id": {"regularId": 5465070037663859703},
+                        },
+                    }
+                )
+            )
+            response = json.loads(await websocket.recv())
+            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
+            uuid = response["blockUUID"]
+            await websocket.send(
+                json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
+            )
+            response = json.loads(await websocket.recv())
+            self.assertEqual("GetIntentionsBlockAnswer", response["type"])
+            self.assertEqual(
+                [
+                    {"index": 0, "description": "Intention on Protocol Element"},
+                    {"index": 1, "description": "Intention on Protocol"},
+                ],
+                response["intentions"],
+            )
+            await websocket.close()
+
+        asyncio.get_event_loop().run_until_complete(f())
+
+    def test_delete_intentions_block_jsonrpc(self):
+        async def f():
+            websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
+            await websocket.send(
+                json.dumps(
+                    {
+                        "type": "CreateIntentionsBlock",
+                        "node": {
+                            "model": "ProtocolLanguage.sandbox",
+                            "id": {"regularId": 5465070037663859703},
+                        },
+                    }
+                )
+            )
+            response = json.loads(await websocket.recv())
+            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
+            uuid = response["blockUUID"]
+            await websocket.send(
+                json.dumps({"type": "DeleteIntentionsBlock", "blockUUID": uuid})
+            )
+            await websocket.send(
+                json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
+            )
+            response = json.loads(await websocket.recv())
+            self.assertEqual("GetIntentionsBlockAnswer", response["type"])
+            self.assertEqual(False, response["result"]["success"])
+            await websocket.close()
+
+        asyncio.get_event_loop().run_until_complete(f())
+
+    def test_execute_intention_jsonrpc(self):
+        async def f():
+            websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
             await websocket.send(
                 json.dumps(
                     {
