@@ -116,9 +116,9 @@ class IntentionsWsTestCase(BaseAsyncTest):
 
         asyncio.get_event_loop().run_until_complete(f())
 
-    def test_execute_intention_jsonrpc(self):
+    def test_execute_intention_custom(self):
         async def f():
-            websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
+            websocket = await websockets.connect(BASE_WS_URL_CUSTOM)
             await websocket.send(
                 json.dumps(
                     {
@@ -146,29 +146,36 @@ class IntentionsWsTestCase(BaseAsyncTest):
             await websocket.send(
                 json.dumps(
                     {
-                        "type": "CreateIntentionsBlock",
-                        "node": {
-                            "model": "ProtocolLanguage.sandbox",
-                            "id": {"regularId": 5465070037663859703},
+                        "method": "CreateIntentionsBlock",
+                        "params": {
+                            "node": {
+                                "model": "ProtocolLanguage.sandbox",
+                                "id": {"regularId": 5465070037663859703},
+                            }
                         },
+                        "id": "req-a-123"
                     }
                 )
             )
             response = json.loads(await websocket.recv())
-            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
+            self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
+            self.assertEqual("req-a-123", response["id"])
             uuid = response["blockUUID"]
             await websocket.send(
-                json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
+                json.dumps({"method": "GetIntentionsBlock",
+                            "params": {"blockUUID": uuid},
+                            "id": "req-a-124"})
             )
             response = json.loads(await websocket.recv())
-            self.assertEqual("GetIntentionsBlockAnswer", response["type"])
+            self.assertEqual("GetIntentionsBlockAnswer", response["result"]["type"])
             self.assertEqual(
                 [
                     {"index": 0, "description": "Intention on Protocol Element"},
                     {"index": 1, "description": "Intention on Protocol"},
                 ],
-                response["intentions"],
+                response["result"]["intentions"],
             )
+            self.assertEqual("req-a-124", response["id"])
             await websocket.close()
 
         asyncio.get_event_loop().run_until_complete(f())
