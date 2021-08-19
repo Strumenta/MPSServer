@@ -5022,8 +5022,8 @@
                     </node>
                     <node concept="Xjq3P" id="3zpwQ15YqkN" role="37wK5m" />
                     <node concept="Rm8GO" id="14oU6UWSI1z" role="37wK5m">
-                      <ref role="Rm8GQ" node="14oU6UWRSQA" resolve="CUSTOM" />
-                      <ref role="1Px2BO" node="14oU6UWRJKS" resolve="CommunicationProtocol" />
+                      <ref role="1Px2BO" to="e4as:14oU6UWRJKS" resolve="CommunicationProtocol" />
+                      <ref role="Rm8GQ" to="e4as:14oU6UWRSQA" resolve="CUSTOM" />
                     </node>
                   </node>
                 </node>
@@ -5065,8 +5065,8 @@
                     </node>
                     <node concept="Xjq3P" id="14oU6UWSJio" role="37wK5m" />
                     <node concept="Rm8GO" id="14oU6UWSM4V" role="37wK5m">
-                      <ref role="Rm8GQ" node="14oU6UWRX6g" resolve="JSONRPC" />
-                      <ref role="1Px2BO" node="14oU6UWRJKS" resolve="CommunicationProtocol" />
+                      <ref role="1Px2BO" to="e4as:14oU6UWRJKS" resolve="CommunicationProtocol" />
+                      <ref role="Rm8GQ" to="e4as:14oU6UWRX6g" resolve="JSONRPC" />
                     </node>
                   </node>
                 </node>
@@ -20425,6 +20425,93 @@
                       </node>
                     </node>
                     <node concept="2AHcQZ" id="319mNSQ4DVy" role="2AJF6D">
+                      <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                    </node>
+                  </node>
+                  <node concept="3clFb_" id="14oU6UX10Iw" role="jymVt">
+                    <property role="TrG5h" value="getCommunicationProtocol" />
+                    <node concept="3Tm1VV" id="14oU6UX10Iy" role="1B3o_S" />
+                    <node concept="3uibUv" id="14oU6UX10Iz" role="3clF45">
+                      <ref role="3uigEE" to="e4as:14oU6UWRJKS" resolve="CommunicationProtocol" />
+                    </node>
+                    <node concept="3clFbS" id="14oU6UX10I_" role="3clF47">
+                      <node concept="3cpWs6" id="14oU6UX1lUx" role="3cqZAp">
+                        <node concept="37vLTw" id="14oU6UX1pNS" role="3cqZAk">
+                          <ref role="3cqZAo" node="14oU6UWShZ1" resolve="communicationProtocol" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2AHcQZ" id="14oU6UX10IA" role="2AJF6D">
+                      <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                    </node>
+                  </node>
+                  <node concept="3clFb_" id="14oU6UX10ID" role="jymVt">
+                    <property role="TrG5h" value="unserializeMessage" />
+                    <node concept="37vLTG" id="14oU6UX10IE" role="3clF46">
+                      <property role="TrG5h" value="data" />
+                      <node concept="3uibUv" id="14oU6UX10IF" role="1tU5fm">
+                        <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+                      </node>
+                    </node>
+                    <node concept="37vLTG" id="14oU6UX10IG" role="3clF46">
+                      <property role="TrG5h" value="messageClass" />
+                      <node concept="3uibUv" id="14oU6UX10IH" role="1tU5fm">
+                        <ref role="3uigEE" to="wyt6:~Class" resolve="Class" />
+                        <node concept="16syzq" id="14oU6UX10II" role="11_B2D">
+                          <ref role="16sUi3" node="14oU6UX10IM" resolve="M" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="16syzq" id="14oU6UX10IJ" role="3clF45">
+                      <ref role="16sUi3" node="14oU6UX10IM" resolve="M" />
+                    </node>
+                    <node concept="3Tm1VV" id="14oU6UX10IK" role="1B3o_S" />
+                    <node concept="16euLQ" id="14oU6UX10IM" role="16eVyc">
+                      <property role="TrG5h" value="M" />
+                      <node concept="3uibUv" id="14oU6UX10IN" role="3ztrMU">
+                        <ref role="3uigEE" to="e4as:6_QtqtnpJ9z" resolve="Message" />
+                      </node>
+                    </node>
+                    <node concept="3clFbS" id="14oU6UX10IP" role="3clF47">
+                      <node concept="3clFbJ" id="14oU6UX1DwE" role="3cqZAp">
+                        <node concept="3clFbS" id="14oU6UX1DwG" role="3clFbx">
+                          <node concept="3cpWs6" id="14oU6UX1HAI" role="3cqZAp">
+                            <node concept="2OqwBi" id="14oU6UX1JcT" role="3cqZAk">
+                              <node concept="2YIFZM" id="14oU6UX1IVk" role="2Oq$k0">
+                                <ref role="37wK5l" node="4XQ2p$w2wg4" resolve="getInstance" />
+                                <ref role="1Pybhc" node="4XQ2p$w2w51" resolve="Serialization" />
+                              </node>
+                              <node concept="liA8E" id="14oU6UX1JTw" role="2OqNvi">
+                                <ref role="37wK5l" node="8tCK0sOHcx" resolve="unserialize" />
+                                <node concept="37vLTw" id="14oU6UX1Kof" role="37wK5m">
+                                  <ref role="3cqZAo" node="14oU6UX10IE" resolve="data" />
+                                </node>
+                                <node concept="37vLTw" id="14oU6UX1LFt" role="37wK5m">
+                                  <ref role="3cqZAo" node="14oU6UX10IG" resolve="messageClass" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbC" id="14oU6UX1F8U" role="3clFbw">
+                          <node concept="Rm8GO" id="14oU6UX1Hg6" role="3uHU7w">
+                            <ref role="Rm8GQ" to="e4as:14oU6UWRSQA" resolve="CUSTOM" />
+                            <ref role="1Px2BO" to="e4as:14oU6UWRJKS" resolve="CommunicationProtocol" />
+                          </node>
+                          <node concept="37vLTw" id="14oU6UX1ExT" role="3uHU7B">
+                            <ref role="3cqZAo" node="14oU6UWShZ1" resolve="communicationProtocol" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="YS8fn" id="14oU6UX1MKB" role="3cqZAp">
+                        <node concept="2ShNRf" id="14oU6UX1NjX" role="YScLw">
+                          <node concept="1pGfFk" id="14oU6UX1Qy_" role="2ShVmc">
+                            <ref role="37wK5l" to="wyt6:~UnsupportedOperationException.&lt;init&gt;()" resolve="UnsupportedOperationException" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2AHcQZ" id="14oU6UX10IQ" role="2AJF6D">
                       <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
                     </node>
                   </node>
