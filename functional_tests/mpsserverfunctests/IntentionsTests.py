@@ -160,7 +160,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
             response = json.loads(await websocket.recv())
             self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
             self.assertEqual("req-a-123", response["id"])
-            uuid = response["blockUUID"]
+            uuid = response["result"]["blockUUID"]
             await websocket.send(
                 json.dumps({"method": "GetIntentionsBlock",
                             "params": {"blockUUID": uuid},
@@ -186,26 +186,28 @@ class IntentionsWsTestCase(BaseAsyncTest):
             await websocket.send(
                 json.dumps(
                     {
-                        "type": "CreateIntentionsBlock",
+                        "method": "CreateIntentionsBlock",
+                        "params": {
                         "node": {
                             "model": "ProtocolLanguage.sandbox",
                             "id": {"regularId": 5465070037663859703},
-                        },
+                        }},
+                        "id": "req-a-125"
                     }
                 )
             )
             response = json.loads(await websocket.recv())
-            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
-            uuid = response["blockUUID"]
+            self.assertEqual("CreateIntentionsBlockAnswer", response['result']["type"])
+            uuid = response['result']["blockUUID"]
             await websocket.send(
-                json.dumps({"type": "DeleteIntentionsBlock", "blockUUID": uuid})
+                json.dumps({"method": "DeleteIntentionsBlock", "params":{"blockUUID": uuid}})
             )
             await websocket.send(
-                json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
+                json.dumps({"method": "GetIntentionsBlock", "params":{"blockUUID": uuid}})
             )
             response = json.loads(await websocket.recv())
-            self.assertEqual("GetIntentionsBlockAnswer", response["type"])
-            self.assertEqual(False, response["result"]["success"])
+            self.assertEqual("GetIntentionsBlockAnswer", response["result"]["type"])
+            self.assertEqual(False, response["result"]["result"]["success"])
             await websocket.close()
 
         asyncio.get_event_loop().run_until_complete(f())
@@ -216,19 +218,21 @@ class IntentionsWsTestCase(BaseAsyncTest):
             await websocket.send(
                 json.dumps(
                     {
-                        "type": "CreateIntentionsBlock",
+                        "method": "CreateIntentionsBlock",
+                        "params":{
                         "node": {
                             "model": "ProtocolLanguage.sandbox",
                             "id": {"regularId": 5465070037663859703},
-                        },
+                        }
+                        }
                     }
                 )
             )
             response = json.loads(await websocket.recv())
-            self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
-            uuid = response["blockUUID"]
+            self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
+            uuid = response["result"]["blockUUID"]
             await websocket.send(
-                json.dumps({"type": "ExecuteIntention", "blockUUID": uuid, "index": 0})
+                json.dumps({"method": "ExecuteIntention", "params":{"blockUUID": uuid, "index": 0}})
             )
             await websocket.close()
 

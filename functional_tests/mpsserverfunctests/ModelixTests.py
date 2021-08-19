@@ -32,7 +32,7 @@ class ExtensionsTestCase(BaseAsyncTest):
         await websocket.send(
             json.dumps(
                 {
-                    "type": "GetModulesStatus",
+                    "method": "GetModulesStatus",
                 }
             )
         )
@@ -66,12 +66,14 @@ class ExtensionsTestCase(BaseAsyncTest):
         await websocket.send(
             json.dumps(
                 {
-                    "type": "ModelixCheckoutTransientModule",
-                    "moduleName": module_name,
-                    "repositoryId": repository_id,
-                    "versionId": version_id,
-                    "modelServerUrl": MODEL_SERVER_URL,
-                    "requestId": req_id
+                    "method": "ModelixCheckoutTransientModule",
+                    "params": {
+                        "moduleName": module_name,
+                        "repositoryId": repository_id,
+                        "versionId": version_id,
+                        "modelServerUrl": MODEL_SERVER_URL,
+                    },
+                    "id": req_id
                 }
             )
         )
@@ -105,17 +107,17 @@ class ExtensionsTestCase(BaseAsyncTest):
         await websocket.send(
             json.dumps(
                 {
-                    "type": "ModelixCleanTransient",
-                    "requestId": req_id
+                    "method": "ModelixCleanTransient",
+                    "id": req_id
                 }
             )
         )
         print("sent req_id %s" % req_id)
         response = json.loads(await websocket.recv())
         print(response)
-        self.assertEqual(req_id, response['requestId'])
-        self.assertEqual(True, response['success'])
-        self.assertEqual('DoneAnswerMessage', response['type'])
+        self.assertEqual(req_id, response['id'])
+        self.assertEqual(True, response["result"]['success'])
+        self.assertEqual('DoneAnswerMessage', response["result"]['type'])
 
     def test_checking_out_module_custom(self):
         async def f():
@@ -145,7 +147,6 @@ class ExtensionsTestCase(BaseAsyncTest):
 
         asyncio.get_event_loop().run_until_complete(f())
 
-
     def test_checking_out_module_jsonrpc(self):
         async def f():
             websocket = await websockets.connect(BASE_WS_URL_JSONRPC)
@@ -159,7 +160,7 @@ class ExtensionsTestCase(BaseAsyncTest):
                                         repository_id="testrepo1", version_id="3901584326462014052")
 
             # 3. Check the module is in the list of modules
-            modules_names = await self._get_modules_names(websocket)
+            modules_names = await self._get_modules_names_jsonrpc(websocket)
             self.assertEqual(True, "com.strumenta.mpsserver.javaexample" in modules_names)
 
             # 4. Clean transient modules
