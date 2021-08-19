@@ -81,8 +81,8 @@ class ExtensionsTestCase(BaseAsyncTest):
         response = json.loads(await websocket.recv())
         print(response)
         self.assertEqual(req_id, response['id'])
-        self.assertEqual(True, response['success'])
-        self.assertEqual('DoneAnswerMessage', response['type'])
+        self.assertEqual(True, response['result']['success'])
+        self.assertEqual('DoneAnswerMessage', response['result']['type'])
 
     async def _clean_transient_modules_custom(self, websocket):
         req_id = str(uuid.uuid4())
