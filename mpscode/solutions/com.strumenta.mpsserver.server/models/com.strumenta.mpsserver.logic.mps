@@ -20833,28 +20833,10 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="74rE$0ZUD$t" role="3cqZAp">
-          <node concept="Xl_RD" id="74rE$0ZUE32" role="abp_N">
-            <property role="Xl_RC" value="   about to handle message" />
-          </node>
-        </node>
         <node concept="3clFbJ" id="14oU6UWWhYC" role="3cqZAp">
           <node concept="3clFbS" id="14oU6UWWhYE" role="3clFbx">
-            <node concept="abc8K" id="74rE$0ZU7BG" role="3cqZAp">
-              <node concept="Xl_RD" id="74rE$0ZU7BH" role="abp_N">
-                <property role="Xl_RC" value="   communication protocol is case insensitive" />
-              </node>
-            </node>
             <node concept="3clFbJ" id="14oU6UWWrfX" role="3cqZAp">
               <node concept="3clFbS" id="14oU6UWWrfY" role="3clFbx">
-                <node concept="abc8K" id="14oU6UWWrfZ" role="3cqZAp">
-                  <node concept="Xl_RD" id="14oU6UWWrg0" role="abp_N">
-                    <property role="Xl_RC" value=" found registered message handler for " />
-                  </node>
-                  <node concept="37vLTw" id="14oU6UWWrg1" role="abp_N">
-                    <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
-                  </node>
-                </node>
                 <node concept="3clFbF" id="14oU6UWWrg2" role="3cqZAp">
                   <node concept="2OqwBi" id="14oU6UWWrg3" role="3clFbG">
                     <node concept="3EllGN" id="14oU6UWWrg4" role="2Oq$k0">
@@ -20901,14 +20883,6 @@
             </node>
             <node concept="3clFbJ" id="14oU6UWWrgj" role="3cqZAp">
               <node concept="3clFbS" id="14oU6UWWrgk" role="3clFbx">
-                <node concept="abc8K" id="14oU6UWWrgl" role="3cqZAp">
-                  <node concept="Xl_RD" id="14oU6UWWrgm" role="abp_N">
-                    <property role="Xl_RC" value=" found standard message handler for " />
-                  </node>
-                  <node concept="37vLTw" id="14oU6UWWrgn" role="abp_N">
-                    <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
-                  </node>
-                </node>
                 <node concept="3clFbF" id="14oU6UWWrgo" role="3cqZAp">
                   <node concept="2OqwBi" id="14oU6UWWrgp" role="3clFbG">
                     <node concept="3EllGN" id="14oU6UWWrgq" role="2Oq$k0">
@@ -20965,21 +20939,8 @@
           </node>
           <node concept="9aQIb" id="14oU6UWWl6a" role="9aQIa">
             <node concept="3clFbS" id="14oU6UWWl6b" role="9aQI4">
-              <node concept="abc8K" id="74rE$0ZUw6t" role="3cqZAp">
-                <node concept="Xl_RD" id="74rE$0ZUw6u" role="abp_N">
-                  <property role="Xl_RC" value="   communication protocol is case sensitive" />
-                </node>
-              </node>
               <node concept="3clFbJ" id="6Hz$xA6_Mv$" role="3cqZAp">
                 <node concept="3clFbS" id="6Hz$xA6_MvA" role="3clFbx">
-                  <node concept="abc8K" id="6Hz$xA6NZWt" role="3cqZAp">
-                    <node concept="Xl_RD" id="6Hz$xA6O0ph" role="abp_N">
-                      <property role="Xl_RC" value=" found registered message handler for " />
-                    </node>
-                    <node concept="37vLTw" id="6Hz$xA6O1WN" role="abp_N">
-                      <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
-                    </node>
-                  </node>
                   <node concept="3clFbF" id="6Hz$xA6_Ygy" role="3cqZAp">
                     <node concept="2OqwBi" id="6Hz$xA6A1lx" role="3clFbG">
                       <node concept="3EllGN" id="6Hz$xA6_ZxC" role="2Oq$k0">
@@ -21016,14 +20977,6 @@
               </node>
               <node concept="3clFbJ" id="8tCK0sTHtx" role="3cqZAp">
                 <node concept="3clFbS" id="8tCK0sTHty" role="3clFbx">
-                  <node concept="abc8K" id="8tCK0sTHtz" role="3cqZAp">
-                    <node concept="Xl_RD" id="8tCK0sTHt$" role="abp_N">
-                      <property role="Xl_RC" value=" found standard message handler for " />
-                    </node>
-                    <node concept="37vLTw" id="8tCK0sTHt_" role="abp_N">
-                      <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
-                    </node>
-                  </node>
                   <node concept="3clFbF" id="8tCK0sTHtA" role="3cqZAp">
                     <node concept="2OqwBi" id="8tCK0sTHtB" role="3clFbG">
                       <node concept="3EllGN" id="8tCK0sTHtC" role="2Oq$k0">
