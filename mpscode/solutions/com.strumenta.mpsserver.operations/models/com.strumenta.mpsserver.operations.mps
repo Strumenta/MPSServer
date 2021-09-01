@@ -118,6 +118,7 @@
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
       <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <property id="2034914114981261751" name="severity" index="RRSoG" />
         <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
@@ -269,6 +270,7 @@
           </node>
         </node>
         <node concept="RRSsy" id="5shB1pJd1Mq" role="3cqZAp">
+          <property role="RRSoG" value="h1akgim/info" />
           <node concept="3cpWs3" id="5shB1pJd1Mr" role="RRSoy">
             <node concept="Xl_RD" id="5shB1pJd1Ms" role="3uHU7B">
               <property role="Xl_RC" value="Project file " />

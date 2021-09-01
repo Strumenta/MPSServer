@@ -159,6 +159,7 @@
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
       <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <property id="2034914114981261751" name="severity" index="RRSoG" />
         <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
@@ -388,6 +389,7 @@
               </node>
             </node>
             <node concept="RRSsy" id="5shB1pJaX0V" role="3cqZAp">
+              <property role="RRSoG" value="h1akgim/info" />
               <node concept="3cpWs3" id="5shB1pJaXlC" role="RRSoy">
                 <node concept="37vLTw" id="5shB1pJaXpG" role="3uHU7w">
                   <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
@@ -419,6 +421,7 @@
           <node concept="9aQIb" id="6Jg9HT9UY2r" role="9aQIa">
             <node concept="3clFbS" id="6Jg9HT9UY2s" role="9aQI4">
               <node concept="RRSsy" id="5shB1pJb1iK" role="3cqZAp">
+                <property role="RRSoG" value="h1akgim/info" />
                 <node concept="3cpWs3" id="5shB1pJb1iL" role="RRSoy">
                   <node concept="37vLTw" id="5shB1pJb1iM" role="3uHU7w">
                     <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
@@ -540,6 +543,7 @@
           </node>
         </node>
         <node concept="RRSsy" id="5shB1pJaZRA" role="3cqZAp">
+          <property role="RRSoG" value="h1akgim/info" />
           <node concept="3cpWs3" id="5shB1pJb0iH" role="RRSoy">
             <node concept="37vLTw" id="5shB1pJb0rh" role="3uHU7w">
               <ref role="3cqZAo" node="6Jg9HT9UZrd" resolve="projectFile" />
@@ -642,26 +646,26 @@
           </node>
         </node>
         <node concept="RRSsy" id="5shB1pJdKGN" role="3cqZAp">
-          <node concept="3cpWs3" id="5shB1pJdKGO" role="RRSoy">
-            <node concept="Xl_RD" id="5shB1pJdKGP" role="3uHU7B">
-              <property role="Xl_RC" value="Looking for .git dir in " />
+          <node concept="3cpWs3" id="5shB1pJdKGS" role="RRSoy">
+            <node concept="3cpWs3" id="5shB1pJdKGQ" role="3uHU7B">
+              <node concept="3cpWs3" id="5shB1pJdKGO" role="3uHU7B">
+                <node concept="Xl_RD" id="5shB1pJdKGP" role="3uHU7B">
+                  <property role="Xl_RC" value="Looking for .git dir in " />
+                </node>
+                <node concept="37vLTw" id="5shB1pJdKGR" role="3uHU7w">
+                  <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
+                </node>
+              </node>
+              <node concept="Xl_RD" id="5shB1pJdKGT" role="3uHU7w">
+                <property role="Xl_RC" value=" -&gt; " />
+              </node>
             </node>
-            <node concept="3cpWs3" id="5shB1pJdKGQ" role="3uHU7w">
-              <node concept="37vLTw" id="5shB1pJdKGR" role="3uHU7B">
+            <node concept="2OqwBi" id="5shB1pJdKGU" role="3uHU7w">
+              <node concept="37vLTw" id="5shB1pJdKGV" role="2Oq$k0">
                 <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
               </node>
-              <node concept="3cpWs3" id="5shB1pJdKGS" role="3uHU7w">
-                <node concept="Xl_RD" id="5shB1pJdKGT" role="3uHU7B">
-                  <property role="Xl_RC" value=" -&gt; " />
-                </node>
-                <node concept="2OqwBi" id="5shB1pJdKGU" role="3uHU7w">
-                  <node concept="37vLTw" id="5shB1pJdKGV" role="2Oq$k0">
-                    <ref role="3cqZAo" node="7f23gRhKQ8C" resolve="dotGitDir" />
-                  </node>
-                  <node concept="liA8E" id="5shB1pJdKGW" role="2OqNvi">
-                    <ref role="37wK5l" to="guwi:~File.getAbsolutePath()" resolve="getAbsolutePath" />
-                  </node>
-                </node>
+              <node concept="liA8E" id="5shB1pJdKGW" role="2OqNvi">
+                <ref role="37wK5l" to="guwi:~File.getAbsolutePath()" resolve="getAbsolutePath" />
               </node>
             </node>
           </node>
@@ -933,6 +937,7 @@
         <node concept="3clFbJ" id="1taqoP6vssQ" role="3cqZAp">
           <node concept="3clFbS" id="1taqoP6vssR" role="3clFbx">
             <node concept="RRSsy" id="5shB1pJccDV" role="3cqZAp">
+              <property role="RRSoG" value="h1akgim/info" />
               <node concept="Xl_RD" id="5shB1pJccDW" role="RRSoy">
                 <property role="Xl_RC" value="NO EXTENSION PATH SPECIFIED, NO EXTENSIONS WILL BE LOADED" />
               </node>
@@ -963,17 +968,18 @@
                 </node>
                 <node concept="3clFbS" id="1taqoP6vsJP" role="2LFqv$">
                   <node concept="RRSsy" id="5shB1pJdz6R" role="3cqZAp">
-                    <node concept="3cpWs3" id="5shB1pJdz6S" role="RRSoy">
-                      <node concept="Xl_RD" id="5shB1pJdz6T" role="3uHU7B">
-                        <property role="Xl_RC" value="EXTENSION PATH CONSIDERED: '" />
-                      </node>
-                      <node concept="3cpWs3" id="5shB1pJdz6U" role="3uHU7w">
-                        <node concept="2GrUjf" id="5shB1pJdz6V" role="3uHU7B">
+                    <property role="RRSoG" value="h1akgim/info" />
+                    <node concept="3cpWs3" id="5shB1pJdz6U" role="RRSoy">
+                      <node concept="3cpWs3" id="5shB1pJdz6S" role="3uHU7B">
+                        <node concept="Xl_RD" id="5shB1pJdz6T" role="3uHU7B">
+                          <property role="Xl_RC" value="EXTENSION PATH CONSIDERED: '" />
+                        </node>
+                        <node concept="2GrUjf" id="5shB1pJdz6V" role="3uHU7w">
                           <ref role="2Gs0qQ" node="1taqoP6vsJH" resolve="entry" />
                         </node>
-                        <node concept="Xl_RD" id="5shB1pJdz6W" role="3uHU7w">
-                          <property role="Xl_RC" value="'" />
-                        </node>
+                      </node>
+                      <node concept="Xl_RD" id="5shB1pJdz6W" role="3uHU7w">
+                        <property role="Xl_RC" value="'" />
                       </node>
                     </node>
                   </node>
@@ -1036,6 +1042,7 @@
         <node concept="3clFbJ" id="4BgspmWOlu0" role="3cqZAp">
           <node concept="3clFbS" id="4BgspmWOlu2" role="3clFbx">
             <node concept="RRSsy" id="5shB1pJccDX" role="3cqZAp">
+              <property role="RRSoG" value="h1akgim/info" />
               <node concept="Xl_RD" id="5shB1pJccDY" role="RRSoy">
                 <property role="Xl_RC" value="starting without project" />
               </node>
@@ -1106,7 +1113,7 @@
                   <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
                 </node>
                 <node concept="liA8E" id="4BgspmWOmYb" role="2OqNvi">
-                  <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
+                  <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="log" />
                 </node>
               </node>
             </node>
@@ -1139,6 +1146,7 @@
                 </node>
               </node>
               <node concept="RRSsy" id="5shB1pJd1Mm" role="3cqZAp">
+                <property role="RRSoG" value="h1akgim/info" />
                 <node concept="3cpWs3" id="5shB1pJd1Mn" role="RRSoy">
                   <node concept="Xl_RD" id="5shB1pJd1Mo" role="3uHU7B">
                     <property role="Xl_RC" value="Project " />
@@ -1223,7 +1231,7 @@
                     <ref role="3cqZAo" node="4BgspmWOmXL" resolve="serverConfiguration" />
                   </node>
                   <node concept="liA8E" id="7MdXHVximj_" role="2OqNvi">
-                    <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="print" />
+                    <ref role="37wK5l" to="30ym:6Jg9HTa95kN" resolve="log" />
                   </node>
                 </node>
               </node>
@@ -1232,6 +1240,7 @@
         </node>
         <node concept="3clFbH" id="6Jg9HTa97lQ" role="3cqZAp" />
         <node concept="RRSsy" id="5shB1pJccDZ" role="3cqZAp">
+          <property role="RRSoG" value="h1akgim/info" />
           <node concept="Xl_RD" id="5shB1pJccE0" role="RRSoy">
             <property role="Xl_RC" value="[MPS Server - Start]" />
           </node>
@@ -1277,6 +1286,7 @@
               </node>
             </node>
             <node concept="RRSsy" id="5shB1pJccE1" role="3cqZAp">
+              <property role="RRSoG" value="h1akgim/info" />
               <node concept="Xl_RD" id="5shB1pJccE2" role="RRSoy">
                 <property role="Xl_RC" value="WAIT FOR STOP" />
               </node>
