@@ -117,8 +117,8 @@
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
-        <child id="1168401864803" name="textExpression" index="abp_N" />
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -268,12 +268,14 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="3mLHDKYZ7x0" role="3cqZAp">
-          <node concept="Xl_RD" id="3mLHDKYZ7x1" role="abp_N">
-            <property role="Xl_RC" value="Project file " />
-          </node>
-          <node concept="37vLTw" id="3mLHDKYZ7x2" role="abp_N">
-            <ref role="3cqZAo" node="3mLHDKYZ7wT" resolve="projectFile" />
+        <node concept="RRSsy" id="5shB1pJd1Mq" role="3cqZAp">
+          <node concept="3cpWs3" id="5shB1pJd1Mr" role="RRSoy">
+            <node concept="Xl_RD" id="5shB1pJd1Ms" role="3uHU7B">
+              <property role="Xl_RC" value="Project file " />
+            </node>
+            <node concept="37vLTw" id="5shB1pJd1Mt" role="3uHU7w">
+              <ref role="3cqZAo" node="3mLHDKYZ7wT" resolve="projectFile" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs8" id="3mLHDKYZ7x3" role="3cqZAp">
@@ -295,12 +297,14 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="3mLHDKYZ7xa" role="3cqZAp">
-          <node concept="Xl_RD" id="3mLHDKYZ7xb" role="abp_N">
-            <property role="Xl_RC" value="Project " />
-          </node>
-          <node concept="37vLTw" id="3mLHDKYZ7xc" role="abp_N">
-            <ref role="3cqZAo" node="3mLHDKYZ7x4" resolve="project" />
+        <node concept="RRSsy" id="5shB1pJd1Mu" role="3cqZAp">
+          <node concept="3cpWs3" id="5shB1pJd1Mv" role="RRSoy">
+            <node concept="Xl_RD" id="5shB1pJd1Mw" role="3uHU7B">
+              <property role="Xl_RC" value="Project " />
+            </node>
+            <node concept="37vLTw" id="5shB1pJd1Mx" role="3uHU7w">
+              <ref role="3cqZAo" node="3mLHDKYZ7x4" resolve="project" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs6" id="3mLHDKYZ7xd" role="3cqZAp">

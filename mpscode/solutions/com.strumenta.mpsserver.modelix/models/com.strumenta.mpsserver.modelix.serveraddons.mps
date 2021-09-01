@@ -249,12 +249,12 @@
       </concept>
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
-        <child id="1168401864803" name="textExpression" index="abp_N" />
-      </concept>
       <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
         <property id="6332851714983843871" name="severity" index="2xdLsb" />
         <child id="5721587534047265374" name="message" index="9lYJi" />
+      </concept>
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -1414,8 +1414,8 @@
                       <node concept="3Tm1VV" id="2DTPz1eDaKa" role="1B3o_S" />
                       <node concept="3cqZAl" id="2DTPz1eDaKb" role="3clF45" />
                       <node concept="3clFbS" id="2DTPz1eDaKc" role="3clF47">
-                        <node concept="abc8K" id="2DTPz1eDaKd" role="3cqZAp">
-                          <node concept="Xl_RD" id="2DTPz1eDaKe" role="abp_N">
+                        <node concept="RRSsy" id="5shB1pJccE7" role="3cqZAp">
+                          <node concept="Xl_RD" id="5shB1pJccE8" role="RRSoy">
                             <property role="Xl_RC" value="connected to cloud repository" />
                           </node>
                         </node>
@@ -1544,8 +1544,8 @@
                                 </node>
                               </node>
                             </node>
-                            <node concept="abc8K" id="2DTPz1eDaLM" role="3cqZAp">
-                              <node concept="Xl_RD" id="2DTPz1eDaLN" role="abp_N">
+                            <node concept="RRSsy" id="5shB1pJccE9" role="3cqZAp">
+                              <node concept="Xl_RD" id="5shB1pJccEa" role="RRSoy">
                                 <property role="Xl_RC" value="about to switch to version" />
                               </node>
                             </node>
@@ -1562,8 +1562,8 @@
                                 </node>
                               </node>
                             </node>
-                            <node concept="abc8K" id="2DTPz1eDaLT" role="3cqZAp">
-                              <node concept="Xl_RD" id="2DTPz1eDaLU" role="abp_N">
+                            <node concept="RRSsy" id="5shB1pJccEb" role="3cqZAp">
+                              <node concept="Xl_RD" id="5shB1pJccEc" role="RRSoy">
                                 <property role="Xl_RC" value="switched to version" />
                               </node>
                             </node>

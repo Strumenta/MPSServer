@@ -182,8 +182,8 @@
       <concept id="2068944020170241612" name="jetbrains.mps.baseLanguage.javadoc.structure.ClassifierDocComment" flags="ng" index="3UR2Jj" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
-        <child id="1168401864803" name="textExpression" index="abp_N" />
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -2104,12 +2104,14 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="581JTJZl3dy" role="3cqZAp">
-          <node concept="Xl_RD" id="581JTJZl3ZZ" role="abp_N">
-            <property role="Xl_RC" value="MyRepo.getModel. Modules: " />
-          </node>
-          <node concept="37vLTw" id="581JTJZl41b" role="abp_N">
-            <ref role="3cqZAo" node="Fhwl$azPPz" resolve="modules" />
+        <node concept="RRSsy" id="5shB1pJd1NK" role="3cqZAp">
+          <node concept="3cpWs3" id="5shB1pJd1NL" role="RRSoy">
+            <node concept="Xl_RD" id="5shB1pJd1NM" role="3uHU7B">
+              <property role="Xl_RC" value="MyRepo.getModel. Modules: " />
+            </node>
+            <node concept="37vLTw" id="5shB1pJd1NN" role="3uHU7w">
+              <ref role="3cqZAo" node="Fhwl$azPPz" resolve="modules" />
+            </node>
           </node>
         </node>
         <node concept="3cpWs6" id="581JTJZl0Jo" role="3cqZAp">
