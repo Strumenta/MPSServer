@@ -259,11 +259,6 @@
       <concept id="1205769003971" name="jetbrains.mps.baseLanguage.classifiers.structure.DefaultClassifierMethodDeclaration" flags="ng" index="2XrIbr" />
       <concept id="1205769149993" name="jetbrains.mps.baseLanguage.classifiers.structure.DefaultClassifierMethodCallOperation" flags="nn" index="2XshWL" />
     </language>
-    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
-        <child id="1168401864803" name="textExpression" index="abp_N" />
-      </concept>
-    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
@@ -309,13 +304,7 @@
   <node concept="2uRRBy" id="3PbxmPXIL5o">
     <property role="TrG5h" value="MPSServerIDEProject" />
     <node concept="2uRRBT" id="3PbxmPXILbE" role="2uRRB$">
-      <node concept="3clFbS" id="3PbxmPXILbF" role="2VODD2">
-        <node concept="abc8K" id="5SYYrGB_kiN" role="3cqZAp">
-          <node concept="Xl_RD" id="5SYYrGB_kj5" role="abp_N">
-            <property role="Xl_RC" value="DONE" />
-          </node>
-        </node>
-      </node>
+      <node concept="3clFbS" id="3PbxmPXILbF" role="2VODD2" />
     </node>
   </node>
   <node concept="sEfby" id="6Ut89YPhSND">
@@ -804,11 +793,6 @@
                   <node concept="3cqZAl" id="2wu2WWizl3" role="3clF45" />
                   <node concept="3Tm1VV" id="2wu2WWizl4" role="1B3o_S" />
                   <node concept="3clFbS" id="2wu2WWizl7" role="3clF47">
-                    <node concept="abc8K" id="2DTPz1eL2My" role="3cqZAp">
-                      <node concept="Xl_RD" id="2DTPz1eL2Xr" role="abp_N">
-                        <property role="Xl_RC" value="Received message in ServerLauncherTool" />
-                      </node>
-                    </node>
                     <node concept="3cpWs8" id="74rE$0ZWR6z" role="3cqZAp">
                       <node concept="3cpWsn" id="74rE$0ZWR6A" role="3cpWs9">
                         <property role="TrG5h" value="type" />
@@ -976,11 +960,6 @@
                     </node>
                   </node>
                   <node concept="3clFbS" id="2wu2WWizlg" role="3clF47">
-                    <node concept="abc8K" id="2DTPz1eL2Yq" role="3cqZAp">
-                      <node concept="Xl_RD" id="2DTPz1eL2Yr" role="abp_N">
-                        <property role="Xl_RC" value="Sent message in ServerLauncherTool" />
-                      </node>
-                    </node>
                     <node concept="3clFbF" id="2wu2WWiQ3k" role="3cqZAp">
                       <node concept="2OqwBi" id="2wu2WWiQ3l" role="3clFbG">
                         <node concept="2OqwBi" id="2wu2WWiQ3m" role="2Oq$k0">
@@ -1637,11 +1616,6 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="abc8K" id="5SYYrGB__vA" role="3cqZAp">
-                          <node concept="Xl_RD" id="5SYYrGB__BG" role="abp_N">
-                            <property role="Xl_RC" value="[LAUNCHED]" />
-                          </node>
-                        </node>
                       </node>
                       <node concept="2AHcQZ" id="5SYYrGB_uej" role="2AJF6D">
                         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
@@ -1745,14 +1719,6 @@
                 <ref role="37wK5l" to="z1c3:~Project.getProjectFile()" resolve="getProjectFile" />
               </node>
             </node>
-          </node>
-        </node>
-        <node concept="abc8K" id="1P$YlGOZ6wn" role="3cqZAp">
-          <node concept="Xl_RD" id="1P$YlGOZ6x8" role="abp_N">
-            <property role="Xl_RC" value="PROJECT FILE " />
-          </node>
-          <node concept="37vLTw" id="1P$YlGOZ6y3" role="abp_N">
-            <ref role="3cqZAo" node="1P$YlGOZ6mJ" resolve="projectFile" />
           </node>
         </node>
         <node concept="3cpWs8" id="1P$YlGOZ6B1" role="3cqZAp">

@@ -161,6 +161,9 @@
       <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
         <child id="1168401864803" name="textExpression" index="abp_N" />
       </concept>
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <child id="2034914114981261753" name="message" index="RRSoy" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -199,9 +202,9 @@
         </node>
         <node concept="3clFbJ" id="5wf7OU9GGwd" role="3cqZAp">
           <node concept="3clFbS" id="5wf7OU9GGwe" role="3clFbx">
-            <node concept="abc8K" id="5wf7OU9GH6l" role="3cqZAp">
-              <node concept="Xl_RD" id="5wf7OU9GHa5" role="abp_N">
-                <property role="Xl_RC" value="MAKE PROJECT AT START" />
+            <node concept="RRSsy" id="5shB1pJaW_l" role="3cqZAp">
+              <node concept="Xl_RD" id="5shB1pJaW_n" role="RRSoy">
+                <property role="Xl_RC" value="Make project at start" />
               </node>
             </node>
             <node concept="3cpWs6" id="5wf7OU9GHjD" role="3cqZAp">
@@ -230,9 +233,9 @@
           </node>
           <node concept="9aQIb" id="5wf7OU9GHaP" role="9aQIa">
             <node concept="3clFbS" id="5wf7OU9GHaQ" role="9aQI4">
-              <node concept="abc8K" id="5wf7OU9GHbx" role="3cqZAp">
-                <node concept="Xl_RD" id="5wf7OU9GHby" role="abp_N">
-                  <property role="Xl_RC" value="NOT MAKE PROJECT AT START" />
+              <node concept="RRSsy" id="5shB1pJaWGa" role="3cqZAp">
+                <node concept="Xl_RD" id="5shB1pJaWGb" role="RRSoy">
+                  <property role="Xl_RC" value="Not make project at start" />
                 </node>
               </node>
               <node concept="3cpWs6" id="5wf7OU9GHtK" role="3cqZAp">
@@ -387,12 +390,14 @@
                 </node>
               </node>
             </node>
-            <node concept="abc8K" id="6Jg9HT9UY2g" role="3cqZAp">
-              <node concept="Xl_RD" id="6Jg9HT9UY2h" role="abp_N">
-                <property role="Xl_RC" value="USING MPS SERVER PORT: " />
-              </node>
-              <node concept="37vLTw" id="6Jg9HT9UY2i" role="abp_N">
-                <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
+            <node concept="RRSsy" id="5shB1pJaX0V" role="3cqZAp">
+              <node concept="3cpWs3" id="5shB1pJaXlC" role="RRSoy">
+                <node concept="37vLTw" id="5shB1pJaXpG" role="3uHU7w">
+                  <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
+                </node>
+                <node concept="Xl_RD" id="5shB1pJaX0X" role="3uHU7B">
+                  <property role="Xl_RC" value="Using MPSServer port " />
+                </node>
               </node>
             </node>
           </node>
@@ -416,12 +421,14 @@
           </node>
           <node concept="9aQIb" id="6Jg9HT9UY2r" role="9aQIa">
             <node concept="3clFbS" id="6Jg9HT9UY2s" role="9aQI4">
-              <node concept="abc8K" id="6Jg9HT9UY2t" role="3cqZAp">
-                <node concept="Xl_RD" id="6Jg9HT9UY2u" role="abp_N">
-                  <property role="Xl_RC" value="USING DEFAULT MPS SERVER PORT: " />
-                </node>
-                <node concept="37vLTw" id="6Jg9HT9UY2v" role="abp_N">
-                  <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
+              <node concept="RRSsy" id="5shB1pJb1iK" role="3cqZAp">
+                <node concept="3cpWs3" id="5shB1pJb1iL" role="RRSoy">
+                  <node concept="37vLTw" id="5shB1pJb1iM" role="3uHU7w">
+                    <ref role="3cqZAo" node="6Jg9HT9UY21" resolve="port" />
+                  </node>
+                  <node concept="Xl_RD" id="5shB1pJb1iN" role="3uHU7B">
+                    <property role="Xl_RC" value="Using default MPSServer port " />
+                  </node>
                 </node>
               </node>
             </node>
@@ -458,18 +465,20 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="41VgPlFKHpR" role="3cqZAp">
-          <node concept="Xl_RD" id="41VgPlFKH$7" role="abp_N">
-            <property role="Xl_RC" value="MPSSERVER_PROJECT_FILE_PATH is " />
-          </node>
-          <node concept="37vLTw" id="41VgPlFKHJR" role="abp_N">
-            <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+        <node concept="RRSsy" id="5shB1pJaXFs" role="3cqZAp">
+          <node concept="3cpWs3" id="5shB1pJaY5_" role="RRSoy">
+            <node concept="37vLTw" id="5shB1pJaYeb" role="3uHU7w">
+              <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+            </node>
+            <node concept="Xl_RD" id="5shB1pJaXFu" role="3uHU7B">
+              <property role="Xl_RC" value="MPSSERVER_PROJECT_FILE_PATH is " />
+            </node>
           </node>
         </node>
         <node concept="3clFbJ" id="6Jg9HT9UZr2" role="3cqZAp">
           <node concept="3clFbS" id="6Jg9HT9UZr3" role="3clFbx">
-            <node concept="abc8K" id="2OkDVTXjstc" role="3cqZAp">
-              <node concept="Xl_RD" id="2OkDVTXjswW" role="abp_N">
+            <node concept="RRSsy" id="5shB1pJaYEE" role="3cqZAp">
+              <node concept="Xl_RD" id="5shB1pJaYEG" role="RRSoy">
                 <property role="Xl_RC" value="NO PROJECT SPECIFIED, STARTING WITHOUT PROJECT SET" />
               </node>
             </node>
@@ -479,12 +488,14 @@
           </node>
           <node concept="9aQIb" id="2OkDVTXjsCY" role="9aQIa">
             <node concept="3clFbS" id="2OkDVTXjsCZ" role="9aQI4">
-              <node concept="abc8K" id="2OkDVTXjsH6" role="3cqZAp">
-                <node concept="Xl_RD" id="2OkDVTXjsH7" role="abp_N">
-                  <property role="Xl_RC" value="PROJECT SPECIFIED: " />
-                </node>
-                <node concept="37vLTw" id="2OkDVTXjsOI" role="abp_N">
-                  <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+              <node concept="RRSsy" id="5shB1pJaZ6z" role="3cqZAp">
+                <node concept="3cpWs3" id="5shB1pJaZq7" role="RRSoy">
+                  <node concept="37vLTw" id="5shB1pJaZxN" role="3uHU7w">
+                    <ref role="3cqZAo" node="6Jg9HT9UZqY" resolve="projectFilePath" />
+                  </node>
+                  <node concept="Xl_RD" id="5shB1pJaZ6_" role="3uHU7B">
+                    <property role="Xl_RC" value="PROJECT SPECIFIED: " />
+                  </node>
                 </node>
               </node>
             </node>
@@ -531,12 +542,14 @@
             </node>
           </node>
         </node>
-        <node concept="abc8K" id="6Jg9HT9UZrk" role="3cqZAp">
-          <node concept="Xl_RD" id="6Jg9HT9UZrl" role="abp_N">
-            <property role="Xl_RC" value="Project file " />
-          </node>
-          <node concept="37vLTw" id="6Jg9HT9UZrm" role="abp_N">
-            <ref role="3cqZAo" node="6Jg9HT9UZrd" resolve="projectFile" />
+        <node concept="RRSsy" id="5shB1pJaZRA" role="3cqZAp">
+          <node concept="3cpWs3" id="5shB1pJb0iH" role="RRSoy">
+            <node concept="37vLTw" id="5shB1pJb0rh" role="3uHU7w">
+              <ref role="3cqZAo" node="6Jg9HT9UZrd" resolve="projectFile" />
+            </node>
+            <node concept="Xl_RD" id="5shB1pJaZRC" role="3uHU7B">
+              <property role="Xl_RC" value="Project file " />
+            </node>
           </node>
         </node>
         <node concept="3clFbH" id="6Jg9HT9UZrn" role="3cqZAp" />
@@ -585,12 +598,14 @@
                 </node>
               </node>
             </node>
-            <node concept="abc8K" id="34fZDhVYKi" role="3cqZAp">
-              <node concept="Xl_RD" id="34fZDhVYPl" role="abp_N">
-                <property role="Xl_RC" value="No Git Root specified, using project file: " />
-              </node>
-              <node concept="37vLTw" id="34fZDhVYYE" role="abp_N">
-                <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+            <node concept="RRSsy" id="5shB1pJb0Lm" role="3cqZAp">
+              <node concept="3cpWs3" id="5shB1pJb14m" role="RRSoy">
+                <node concept="37vLTw" id="5shB1pJb1c2" role="3uHU7w">
+                  <ref role="3cqZAo" node="6Jg9HT9V2ex" resolve="gitRootPath" />
+                </node>
+                <node concept="Xl_RD" id="5shB1pJb0Lo" role="3uHU7B">
+                  <property role="Xl_RC" value="No Git Root specified, using project file: " />
+                </node>
               </node>
             </node>
           </node>
