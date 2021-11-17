@@ -26,6 +26,7 @@
     <import index="c8ee" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.table(JDK/)" />
     <import index="e4as" ref="r:0b41bd2a-d72e-4e3a-8bde-c68965ce30dd(com.strumenta.mpsserver.extensionkit.code)" />
     <import index="wy2b" ref="48e3d84c-0510-4776-ac01-301d43fa8646/java:com.google.gson(com.strumenta.mpsserver.deps/)" />
+    <import index="fnpx" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.notification(MPS.IDEA/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="r791" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing.text(JDK/)" implicit="true" />
   </imports>
@@ -133,6 +134,10 @@
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
       <concept id="5763944538902644732" name="jetbrains.mps.baseLanguage.structure.StaticMethodCallOperation" flags="ng" index="2PDubS" />
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
+      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -1480,203 +1485,251 @@
                         </node>
                       </node>
                       <node concept="3clFbS" id="5SYYrGB_ueh" role="3clF47">
-                        <node concept="3cpWs8" id="6Ks8zCw5YQe" role="3cqZAp">
-                          <node concept="3cpWsn" id="6Ks8zCw5YQf" role="3cpWs9">
-                            <property role="TrG5h" value="serverConfiguration" />
-                            <node concept="3uibUv" id="6Ks8zCw5YQg" role="1tU5fm">
-                              <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
-                            </node>
-                            <node concept="2OqwBi" id="6Ks8zCw5Utn" role="33vP2m">
-                              <node concept="2ShNRf" id="6Ks8zCw5Psh" role="2Oq$k0">
-                                <node concept="1pGfFk" id="6Ks8zCw5UnR" role="2ShVmc">
-                                  <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
-                                  <node concept="10Nm6u" id="4BgspmX3ya_" role="37wK5m" />
-                                  <node concept="2OqwBi" id="6Ks8zCw5Uon" role="37wK5m">
-                                    <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
-                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                    </node>
-                                    <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
-                                      <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
-                                    </node>
+                        <node concept="3cpWs8" id="2PqrAIRKTfT" role="3cqZAp">
+                          <node concept="3cpWsn" id="2PqrAIRKTfW" role="3cpWs9">
+                            <property role="TrG5h" value="port" />
+                            <node concept="10Oyi0" id="2PqrAIRKTfR" role="1tU5fm" />
+                            <node concept="10QFUN" id="2wu2WWd9Ge" role="33vP2m">
+                              <node concept="3uibUv" id="2wu2WWd9WM" role="10QFUM">
+                                <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
+                              </node>
+                              <node concept="2OqwBi" id="2wu2WWd80U" role="10QFUP">
+                                <node concept="2OqwBi" id="2wu2WWd7qn" role="2Oq$k0">
+                                  <node concept="2WthIp" id="2wu2WWd7qq" role="2Oq$k0">
+                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                  </node>
+                                  <node concept="2BZ7hE" id="2wu2WWd7qs" role="2OqNvi">
+                                    <ref role="2WH_rO" node="2wu2WWbo4H" resolve="port" />
                                   </node>
                                 </node>
-                              </node>
-                              <node concept="liA8E" id="6Ks8zCw5UEo" role="2OqNvi">
-                                <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
-                                <node concept="2OqwBi" id="6Ks8zCw5Ykt" role="37wK5m">
-                                  <node concept="2WthIp" id="6Ks8zCw5Y6B" role="2Oq$k0" />
-                                  <node concept="2XshWL" id="6Ks8zCw5Yr7" role="2OqNvi">
-                                    <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
-                                  </node>
+                                <node concept="liA8E" id="2wu2WWd8UF" role="2OqNvi">
+                                  <ref role="37wK5l" to="dxuu:~JSpinner.getValue()" resolve="getValue" />
                                 </node>
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="3clFbF" id="2wu2WWd6Cv" role="3cqZAp">
-                          <node concept="2OqwBi" id="2wu2WWd6ZL" role="3clFbG">
-                            <node concept="37vLTw" id="2wu2WWd6Ct" role="2Oq$k0">
-                              <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
-                            </node>
-                            <node concept="liA8E" id="2wu2WWd7bS" role="2OqNvi">
-                              <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
-                              <node concept="10QFUN" id="2wu2WWd9Ge" role="37wK5m">
-                                <node concept="3uibUv" id="2wu2WWd9WM" role="10QFUM">
-                                  <ref role="3uigEE" to="wyt6:~Integer" resolve="Integer" />
+                        <node concept="3clFbJ" id="2PqrAIRKRgw" role="3cqZAp">
+                          <node concept="3clFbS" id="2PqrAIRKRgy" role="3clFbx">
+                            <node concept="3cpWs8" id="6Ks8zCw5YQe" role="3cqZAp">
+                              <node concept="3cpWsn" id="6Ks8zCw5YQf" role="3cpWs9">
+                                <property role="TrG5h" value="serverConfiguration" />
+                                <node concept="3uibUv" id="6Ks8zCw5YQg" role="1tU5fm">
+                                  <ref role="3uigEE" to="30ym:6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
                                 </node>
-                                <node concept="2OqwBi" id="2wu2WWd80U" role="10QFUP">
-                                  <node concept="2OqwBi" id="2wu2WWd7qn" role="2Oq$k0">
-                                    <node concept="2WthIp" id="2wu2WWd7qq" role="2Oq$k0">
-                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                    </node>
-                                    <node concept="2BZ7hE" id="2wu2WWd7qs" role="2OqNvi">
-                                      <ref role="2WH_rO" node="2wu2WWbo4H" resolve="port" />
-                                    </node>
-                                  </node>
-                                  <node concept="liA8E" id="2wu2WWd8UF" role="2OqNvi">
-                                    <ref role="37wK5l" to="dxuu:~JSpinner.getValue()" resolve="getValue" />
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="3clFbF" id="2wu2WWffR9" role="3cqZAp">
-                          <node concept="2OqwBi" id="2wu2WWfgc_" role="3clFbG">
-                            <node concept="37vLTw" id="2wu2WWffR7" role="2Oq$k0">
-                              <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
-                            </node>
-                            <node concept="liA8E" id="2wu2WWfgxI" role="2OqNvi">
-                              <ref role="37wK5l" to="30ym:2wu2WWf3Ac" resolve="addCommunicationLogger" />
-                              <node concept="2OqwBi" id="2wu2WWfhS2" role="37wK5m">
-                                <node concept="2WthIp" id="2wu2WWfhS5" role="2Oq$k0">
-                                  <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                                </node>
-                                <node concept="2XshWL" id="2wu2WWfhS7" role="2OqNvi">
-                                  <ref role="2WH_rO" node="2wu2WWfccP" resolve="getCommunicationsLogger" />
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="1DcWWT" id="hu$DhQhZdQ" role="3cqZAp">
-                          <node concept="3clFbS" id="hu$DhQhZdS" role="2LFqv$">
-                            <node concept="3clFbJ" id="hu$DhQi5F1" role="3cqZAp">
-                              <node concept="3clFbS" id="hu$DhQi5F3" role="3clFbx">
-                                <node concept="3clFbF" id="hu$DhQi7XV" role="3cqZAp">
-                                  <node concept="2OqwBi" id="hu$DhQi89m" role="3clFbG">
-                                    <node concept="37vLTw" id="hu$DhQi7XT" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
-                                    </node>
-                                    <node concept="liA8E" id="hu$DhQi8dV" role="2OqNvi">
-                                      <ref role="37wK5l" to="30ym:1taqoP6uwfX" resolve="addExtensionPath" />
-                                      <node concept="2OqwBi" id="hu$DhQi8GJ" role="37wK5m">
-                                        <node concept="37vLTw" id="hu$DhQi8sk" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                <node concept="2OqwBi" id="6Ks8zCw5Utn" role="33vP2m">
+                                  <node concept="2ShNRf" id="6Ks8zCw5Psh" role="2Oq$k0">
+                                    <node concept="1pGfFk" id="6Ks8zCw5UnR" role="2ShVmc">
+                                      <ref role="37wK5l" to="30ym:6Jg9HTa6Ode" resolve="Server.ServerConfiguration" />
+                                      <node concept="10Nm6u" id="4BgspmX3ya_" role="37wK5m" />
+                                      <node concept="2OqwBi" id="6Ks8zCw5Uon" role="37wK5m">
+                                        <node concept="2WthIp" id="6Ks8zCw5Uoo" role="2Oq$k0">
+                                          <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
                                         </node>
-                                        <node concept="liA8E" id="hu$DhQi8Tm" role="2OqNvi">
-                                          <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                        <node concept="2BZ7hE" id="6Ks8zCw5Uop" role="2OqNvi">
+                                          <ref role="2WH_rO" node="6Ut89YPhT8C" resolve="currentProject" />
                                         </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="6Ks8zCw5UEo" role="2OqNvi">
+                                    <ref role="37wK5l" to="30ym:6Jg9HTa7RVL" resolve="gitRoot" />
+                                    <node concept="2OqwBi" id="6Ks8zCw5Ykt" role="37wK5m">
+                                      <node concept="2WthIp" id="6Ks8zCw5Y6B" role="2Oq$k0" />
+                                      <node concept="2XshWL" id="6Ks8zCw5Yr7" role="2OqNvi">
+                                        <ref role="2WH_rO" node="1P$YlGOZ4Sc" resolve="getGitRoot" />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
                               </node>
-                              <node concept="3eOSWO" id="hu$DhQi7ln" role="3clFbw">
-                                <node concept="3cmrfG" id="hu$DhQi7s4" role="3uHU7w">
-                                  <property role="3cmrfH" value="0" />
+                            </node>
+                            <node concept="3clFbF" id="2wu2WWd6Cv" role="3cqZAp">
+                              <node concept="2OqwBi" id="2wu2WWd6ZL" role="3clFbG">
+                                <node concept="37vLTw" id="2wu2WWd6Ct" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
                                 </node>
-                                <node concept="2OqwBi" id="hu$DhQi6xl" role="3uHU7B">
-                                  <node concept="2OqwBi" id="hu$DhQi6cF" role="2Oq$k0">
-                                    <node concept="37vLTw" id="hu$DhQi5SP" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
-                                    </node>
-                                    <node concept="liA8E" id="hu$DhQi6nH" role="2OqNvi">
-                                      <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
-                                    </node>
-                                  </node>
-                                  <node concept="liA8E" id="hu$DhQi6Kv" role="2OqNvi">
-                                    <ref role="37wK5l" to="wyt6:~String.length()" resolve="length" />
+                                <node concept="liA8E" id="2wu2WWd7bS" role="2OqNvi">
+                                  <ref role="37wK5l" to="30ym:6Jg9HTa7afr" resolve="port" />
+                                  <node concept="37vLTw" id="2PqrAIRKYkl" role="37wK5m">
+                                    <ref role="3cqZAo" node="2PqrAIRKTfW" resolve="port" />
                                   </node>
                                 </node>
                               </node>
                             </node>
-                          </node>
-                          <node concept="3cpWsn" id="hu$DhQhZdT" role="1Duv9x">
-                            <property role="TrG5h" value="pathElement" />
-                            <node concept="17QB3L" id="hu$DhQhZv0" role="1tU5fm" />
-                          </node>
-                          <node concept="2OqwBi" id="hu$DhQi4Ml" role="1DdaDG">
-                            <node concept="2OqwBi" id="hu$DhQi3JS" role="2Oq$k0">
-                              <node concept="2OqwBi" id="hu$DhQi3gc" role="2Oq$k0">
-                                <node concept="2WthIp" id="hu$DhQi3gf" role="2Oq$k0">
-                                  <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                            <node concept="3clFbF" id="2wu2WWffR9" role="3cqZAp">
+                              <node concept="2OqwBi" id="2wu2WWfgc_" role="3clFbG">
+                                <node concept="37vLTw" id="2wu2WWffR7" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
                                 </node>
-                                <node concept="2BZ7hE" id="hu$DhQi3gh" role="2OqNvi">
-                                  <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+                                <node concept="liA8E" id="2wu2WWfgxI" role="2OqNvi">
+                                  <ref role="37wK5l" to="30ym:2wu2WWf3Ac" resolve="addCommunicationLogger" />
+                                  <node concept="2OqwBi" id="2wu2WWfhS2" role="37wK5m">
+                                    <node concept="2WthIp" id="2wu2WWfhS5" role="2Oq$k0">
+                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                    </node>
+                                    <node concept="2XshWL" id="2wu2WWfhS7" role="2OqNvi">
+                                      <ref role="2WH_rO" node="2wu2WWfccP" resolve="getCommunicationsLogger" />
+                                    </node>
+                                  </node>
                                 </node>
                               </node>
-                              <node concept="liA8E" id="hu$DhQi4Ch" role="2OqNvi">
-                                <ref role="37wK5l" to="r791:~JTextComponent.getText()" resolve="getText" />
+                            </node>
+                            <node concept="1DcWWT" id="hu$DhQhZdQ" role="3cqZAp">
+                              <node concept="3clFbS" id="hu$DhQhZdS" role="2LFqv$">
+                                <node concept="3clFbJ" id="hu$DhQi5F1" role="3cqZAp">
+                                  <node concept="3clFbS" id="hu$DhQi5F3" role="3clFbx">
+                                    <node concept="3clFbF" id="hu$DhQi7XV" role="3cqZAp">
+                                      <node concept="2OqwBi" id="hu$DhQi89m" role="3clFbG">
+                                        <node concept="37vLTw" id="hu$DhQi7XT" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
+                                        </node>
+                                        <node concept="liA8E" id="hu$DhQi8dV" role="2OqNvi">
+                                          <ref role="37wK5l" to="30ym:1taqoP6uwfX" resolve="addExtensionPath" />
+                                          <node concept="2OqwBi" id="hu$DhQi8GJ" role="37wK5m">
+                                            <node concept="37vLTw" id="hu$DhQi8sk" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                            </node>
+                                            <node concept="liA8E" id="hu$DhQi8Tm" role="2OqNvi">
+                                              <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="3eOSWO" id="hu$DhQi7ln" role="3clFbw">
+                                    <node concept="3cmrfG" id="hu$DhQi7s4" role="3uHU7w">
+                                      <property role="3cmrfH" value="0" />
+                                    </node>
+                                    <node concept="2OqwBi" id="hu$DhQi6xl" role="3uHU7B">
+                                      <node concept="2OqwBi" id="hu$DhQi6cF" role="2Oq$k0">
+                                        <node concept="37vLTw" id="hu$DhQi5SP" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="hu$DhQhZdT" resolve="pathElement" />
+                                        </node>
+                                        <node concept="liA8E" id="hu$DhQi6nH" role="2OqNvi">
+                                          <ref role="37wK5l" to="wyt6:~String.strip()" resolve="strip" />
+                                        </node>
+                                      </node>
+                                      <node concept="liA8E" id="hu$DhQi6Kv" role="2OqNvi">
+                                        <ref role="37wK5l" to="wyt6:~String.length()" resolve="length" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3cpWsn" id="hu$DhQhZdT" role="1Duv9x">
+                                <property role="TrG5h" value="pathElement" />
+                                <node concept="17QB3L" id="hu$DhQhZv0" role="1tU5fm" />
+                              </node>
+                              <node concept="2OqwBi" id="hu$DhQi4Ml" role="1DdaDG">
+                                <node concept="2OqwBi" id="hu$DhQi3JS" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="hu$DhQi3gc" role="2Oq$k0">
+                                    <node concept="2WthIp" id="hu$DhQi3gf" role="2Oq$k0">
+                                      <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                    </node>
+                                    <node concept="2BZ7hE" id="hu$DhQi3gh" role="2OqNvi">
+                                      <ref role="2WH_rO" node="hu$DhQhWdb" resolve="extensionsPath" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="hu$DhQi4Ch" role="2OqNvi">
+                                    <ref role="37wK5l" to="r791:~JTextComponent.getText()" resolve="getText" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="hu$DhQi59K" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~String.split(java.lang.String)" resolve="split" />
+                                  <node concept="Xl_RD" id="hu$DhQi5ok" role="37wK5m">
+                                    <property role="Xl_RC" value="," />
+                                  </node>
+                                </node>
                               </node>
                             </node>
-                            <node concept="liA8E" id="hu$DhQi59K" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.split(java.lang.String)" resolve="split" />
-                              <node concept="Xl_RD" id="hu$DhQi5ok" role="37wK5m">
-                                <property role="Xl_RC" value="," />
+                            <node concept="3clFbF" id="715CKS9mCR6" role="3cqZAp">
+                              <node concept="37vLTI" id="715CKS9mDRX" role="3clFbG">
+                                <node concept="2OqwBi" id="715CKS9mCR0" role="37vLTJ">
+                                  <node concept="2WthIp" id="715CKS9mCR3" role="2Oq$k0">
+                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                  </node>
+                                  <node concept="2BZ7hE" id="715CKS9mCR5" role="2OqNvi">
+                                    <ref role="2WH_rO" node="715CKS9mAbK" resolve="serverInstance" />
+                                  </node>
+                                </node>
+                                <node concept="2YIFZM" id="2jT6WJ_CG$T" role="37vLTx">
+                                  <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                                  <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
+                                  <node concept="37vLTw" id="2jT6WJ_CG$U" role="37wK5m">
+                                    <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbF" id="715CKS9n8fZ" role="3cqZAp">
+                              <node concept="2OqwBi" id="715CKS9n9M2" role="3clFbG">
+                                <node concept="2OqwBi" id="715CKS9n8fT" role="2Oq$k0">
+                                  <node concept="2WthIp" id="715CKS9n8fW" role="2Oq$k0">
+                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                  </node>
+                                  <node concept="2BZ7hE" id="715CKS9n8fY" role="2OqNvi">
+                                    <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="715CKS9naCq" role="2OqNvi">
+                                  <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                                  <node concept="3clFbT" id="715CKS9naRz" role="37wK5m" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbF" id="715CKS9naY4" role="3cqZAp">
+                              <node concept="2OqwBi" id="715CKS9naY5" role="3clFbG">
+                                <node concept="2OqwBi" id="715CKS9naY6" role="2Oq$k0">
+                                  <node concept="2WthIp" id="715CKS9naY7" role="2Oq$k0">
+                                    <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                                  </node>
+                                  <node concept="2BZ7hE" id="715CKS9ncqj" role="2OqNvi">
+                                    <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="715CKS9naY9" role="2OqNvi">
+                                  <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                                  <node concept="3clFbT" id="715CKS9naYa" role="37wK5m">
+                                    <property role="3clFbU" value="true" />
+                                  </node>
+                                </node>
                               </node>
                             </node>
                           </node>
-                        </node>
-                        <node concept="3clFbF" id="715CKS9mCR6" role="3cqZAp">
-                          <node concept="37vLTI" id="715CKS9mDRX" role="3clFbG">
-                            <node concept="2OqwBi" id="715CKS9mCR0" role="37vLTJ">
-                              <node concept="2WthIp" id="715CKS9mCR3" role="2Oq$k0">
-                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                              </node>
-                              <node concept="2BZ7hE" id="715CKS9mCR5" role="2OqNvi">
-                                <ref role="2WH_rO" node="715CKS9mAbK" resolve="serverInstance" />
-                              </node>
-                            </node>
-                            <node concept="2YIFZM" id="2jT6WJ_CG$T" role="37vLTx">
-                              <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
-                              <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
-                              <node concept="37vLTw" id="2jT6WJ_CG$U" role="37wK5m">
-                                <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
-                              </node>
+                          <node concept="2YIFZM" id="2PqrAIRKSAD" role="3clFbw">
+                            <ref role="37wK5l" to="30ym:2PqrAIRKgKn" resolve="isPortAvailable" />
+                            <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                            <node concept="37vLTw" id="2PqrAIRKZRW" role="37wK5m">
+                              <ref role="3cqZAo" node="2PqrAIRKTfW" resolve="port" />
                             </node>
                           </node>
-                        </node>
-                        <node concept="3clFbF" id="715CKS9n8fZ" role="3cqZAp">
-                          <node concept="2OqwBi" id="715CKS9n9M2" role="3clFbG">
-                            <node concept="2OqwBi" id="715CKS9n8fT" role="2Oq$k0">
-                              <node concept="2WthIp" id="715CKS9n8fW" role="2Oq$k0">
-                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                              </node>
-                              <node concept="2BZ7hE" id="715CKS9n8fY" role="2OqNvi">
-                                <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="715CKS9naCq" role="2OqNvi">
-                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
-                              <node concept="3clFbT" id="715CKS9naRz" role="37wK5m" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="3clFbF" id="715CKS9naY4" role="3cqZAp">
-                          <node concept="2OqwBi" id="715CKS9naY5" role="3clFbG">
-                            <node concept="2OqwBi" id="715CKS9naY6" role="2Oq$k0">
-                              <node concept="2WthIp" id="715CKS9naY7" role="2Oq$k0">
-                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
-                              </node>
-                              <node concept="2BZ7hE" id="715CKS9ncqj" role="2OqNvi">
-                                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="715CKS9naY9" role="2OqNvi">
-                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
-                              <node concept="3clFbT" id="715CKS9naYa" role="37wK5m">
-                                <property role="3clFbU" value="true" />
+                          <node concept="9aQIb" id="2PqrAIRL1t5" role="9aQIa">
+                            <node concept="3clFbS" id="2PqrAIRL1t6" role="9aQI4">
+                              <node concept="3clFbF" id="2PqrAIRL28B" role="3cqZAp">
+                                <node concept="2YIFZM" id="2PqrAIRL3oG" role="3clFbG">
+                                  <ref role="37wK5l" to="fnpx:~Notifications$Bus.notify(com.intellij.notification.Notification)" resolve="notify" />
+                                  <ref role="1Pybhc" to="fnpx:~Notifications$Bus" resolve="Notifications.Bus" />
+                                  <node concept="2ShNRf" id="2PqrAIRL3z6" role="37wK5m">
+                                    <node concept="1pGfFk" id="2PqrAIRLbBP" role="2ShVmc">
+                                      <ref role="37wK5l" to="fnpx:~Notification.&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,com.intellij.notification.NotificationType)" resolve="Notification" />
+                                      <node concept="Xl_RD" id="2PqrAIRLbMq" role="37wK5m">
+                                        <property role="Xl_RC" value="MPSServer" />
+                                      </node>
+                                      <node concept="Xl_RD" id="2PqrAIRLbYe" role="37wK5m">
+                                        <property role="Xl_RC" value="Unable to start" />
+                                      </node>
+                                      <node concept="Xl_RD" id="2PqrAIRLcf1" role="37wK5m">
+                                        <property role="Xl_RC" value="The chosen port seems to be taken" />
+                                      </node>
+                                      <node concept="Rm8GO" id="2PqrAIRLcNb" role="37wK5m">
+                                        <ref role="Rm8GQ" to="fnpx:~NotificationType.ERROR" resolve="ERROR" />
+                                        <ref role="1Px2BO" to="fnpx:~NotificationType" resolve="NotificationType" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
                               </node>
                             </node>
                           </node>
