@@ -132,6 +132,7 @@
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
+      <concept id="5763944538902644732" name="jetbrains.mps.baseLanguage.structure.StaticMethodCallOperation" flags="ng" index="2PDubS" />
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -238,6 +239,9 @@
       <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
         <child id="1144230900587" name="variable" index="1Duv9x" />
       </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="8356039341262087992" name="line" index="1aUNEU" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
@@ -265,6 +269,14 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="c7fb639f-be78-4307-89b0-b5959c3fa8c8" name="jetbrains.mps.lang.text">
+      <concept id="155656958578482948" name="jetbrains.mps.lang.text.structure.Word" flags="nn" index="3oM_SD">
+        <property id="155656958578482949" name="value" index="3oM_SC" />
+      </concept>
+      <concept id="2535923850359271782" name="jetbrains.mps.lang.text.structure.Line" flags="nn" index="1PaTwC">
+        <child id="2535923850359271783" name="elements" index="1PaTwD" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -1412,13 +1424,19 @@
           </node>
         </node>
         <node concept="3clFbH" id="2wu2WWc7vg" role="3cqZAp" />
-        <node concept="3cpWs8" id="5SYYrGB$ViO" role="3cqZAp">
-          <node concept="3cpWsn" id="5SYYrGB$ViP" role="3cpWs9">
-            <property role="TrG5h" value="b" />
-            <node concept="3uibUv" id="5SYYrGB$ViQ" role="1tU5fm">
-              <ref role="3uigEE" to="dxuu:~JButton" resolve="JButton" />
+        <node concept="3SKdUt" id="715CKS9mxTh" role="3cqZAp">
+          <node concept="1PaTwC" id="715CKS9mxTi" role="1aUNEU">
+            <node concept="3oM_SD" id="715CKS9mxTj" role="1PaTwD">
+              <property role="3oM_SC" value="launch" />
             </node>
-            <node concept="2ShNRf" id="5SYYrGB$VNg" role="33vP2m">
+            <node concept="3oM_SD" id="715CKS9mz8V" role="1PaTwD">
+              <property role="3oM_SC" value="button" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mYEY" role="3cqZAp">
+          <node concept="37vLTI" id="715CKS9mYF0" role="3clFbG">
+            <node concept="2ShNRf" id="5SYYrGB$VNg" role="37vLTx">
               <node concept="1pGfFk" id="5SYYrGB$VLC" role="2ShVmc">
                 <ref role="37wK5l" to="dxuu:~JButton.&lt;init&gt;(java.lang.String)" resolve="JButton" />
                 <node concept="Xl_RD" id="5SYYrGB$W4c" role="37wK5m">
@@ -1426,12 +1444,21 @@
                 </node>
               </node>
             </node>
+            <node concept="2OqwBi" id="715CKS9n3sk" role="37vLTJ">
+              <node concept="2WthIp" id="715CKS9n3sn" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="715CKS9n3sp" role="2OqNvi">
+                <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+              </node>
+            </node>
           </node>
         </node>
         <node concept="3clFbF" id="5SYYrGB_qe5" role="3cqZAp">
           <node concept="2OqwBi" id="5SYYrGB_q$z" role="3clFbG">
-            <node concept="37vLTw" id="5SYYrGB_qe3" role="2Oq$k0">
-              <ref role="3cqZAo" node="5SYYrGB$ViP" resolve="b" />
+            <node concept="2OqwBi" id="715CKS9n3D0" role="2Oq$k0">
+              <node concept="2WthIp" id="715CKS9n3D3" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="715CKS9n3D5" role="2OqNvi">
+                <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+              </node>
             </node>
             <node concept="liA8E" id="5SYYrGB_s1a" role="2OqNvi">
               <ref role="37wK5l" to="dxuu:~AbstractButton.addActionListener(java.awt.event.ActionListener)" resolve="addActionListener" />
@@ -1601,17 +1628,55 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="3cpWs8" id="5SYYrGB_wqG" role="3cqZAp">
-                          <node concept="3cpWsn" id="5SYYrGB_wqH" role="3cpWs9">
-                            <property role="TrG5h" value="sc" />
-                            <node concept="3uibUv" id="5SYYrGB_wqI" role="1tU5fm">
-                              <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                        <node concept="3clFbF" id="715CKS9mCR6" role="3cqZAp">
+                          <node concept="37vLTI" id="715CKS9mDRX" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9mCR0" role="37vLTJ">
+                              <node concept="2WthIp" id="715CKS9mCR3" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9mCR5" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mAbK" resolve="serverInstance" />
+                              </node>
                             </node>
-                            <node concept="2YIFZM" id="2jT6WJ_CG$T" role="33vP2m">
-                              <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
+                            <node concept="2YIFZM" id="2jT6WJ_CG$T" role="37vLTx">
                               <ref role="1Pybhc" to="30ym:5SYYrGBzPK3" resolve="Server" />
+                              <ref role="37wK5l" to="30ym:7MdXHVxjuLv" resolve="launchWithExtensionsLoading" />
                               <node concept="37vLTw" id="2jT6WJ_CG$U" role="37wK5m">
                                 <ref role="3cqZAo" node="6Ks8zCw5YQf" resolve="serverConfiguration" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="715CKS9n8fZ" role="3cqZAp">
+                          <node concept="2OqwBi" id="715CKS9n9M2" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9n8fT" role="2Oq$k0">
+                              <node concept="2WthIp" id="715CKS9n8fW" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9n8fY" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="715CKS9naCq" role="2OqNvi">
+                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                              <node concept="3clFbT" id="715CKS9naRz" role="37wK5m" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="715CKS9naY4" role="3cqZAp">
+                          <node concept="2OqwBi" id="715CKS9naY5" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9naY6" role="2Oq$k0">
+                              <node concept="2WthIp" id="715CKS9naY7" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9ncqj" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="715CKS9naY9" role="2OqNvi">
+                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                              <node concept="3clFbT" id="715CKS9naYa" role="37wK5m">
+                                <property role="3clFbU" value="true" />
                               </node>
                             </node>
                           </node>
@@ -1661,8 +1726,11 @@
             </node>
             <node concept="liA8E" id="5SYYrGB$UkK" role="2OqNvi">
               <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component,java.lang.Object)" resolve="add" />
-              <node concept="37vLTw" id="5SYYrGB$XnD" role="37wK5m">
-                <ref role="3cqZAo" node="5SYYrGB$ViP" resolve="b" />
+              <node concept="2OqwBi" id="715CKS9n3VQ" role="37wK5m">
+                <node concept="2WthIp" id="715CKS9n3VT" role="2Oq$k0" />
+                <node concept="2BZ7hE" id="715CKS9n3VV" role="2OqNvi">
+                  <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+                </node>
               </node>
               <node concept="37vLTw" id="2wu2WWc8fs" role="37wK5m">
                 <ref role="3cqZAo" node="2wu2WWbNaE" resolve="c" />
@@ -1670,6 +1738,186 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="715CKS9msli" role="3cqZAp" />
+        <node concept="3SKdUt" id="715CKS9m$sU" role="3cqZAp">
+          <node concept="1PaTwC" id="715CKS9m$sV" role="1aUNEU">
+            <node concept="3oM_SD" id="715CKS9m$sW" role="1PaTwD">
+              <property role="3oM_SC" value="stop" />
+            </node>
+            <node concept="3oM_SD" id="715CKS9m$JR" role="1PaTwD">
+              <property role="3oM_SC" value="button" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mQLZ" role="3cqZAp">
+          <node concept="37vLTI" id="715CKS9mQM1" role="3clFbG">
+            <node concept="2ShNRf" id="715CKS9mtvJ" role="37vLTx">
+              <node concept="1pGfFk" id="715CKS9mtvK" role="2ShVmc">
+                <ref role="37wK5l" to="dxuu:~JButton.&lt;init&gt;(java.lang.String)" resolve="JButton" />
+                <node concept="Xl_RD" id="715CKS9mtvL" role="37wK5m">
+                  <property role="Xl_RC" value="Stop" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="715CKS9mTei" role="37vLTJ">
+              <node concept="2WthIp" id="715CKS9mTel" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="715CKS9mTen" role="2OqNvi">
+                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mUyU" role="3cqZAp">
+          <node concept="2OqwBi" id="715CKS9mXf1" role="3clFbG">
+            <node concept="2OqwBi" id="715CKS9mV$3" role="2Oq$k0">
+              <node concept="2WthIp" id="715CKS9mUyS" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="715CKS9mVPI" role="2OqNvi">
+                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+              </node>
+            </node>
+            <node concept="liA8E" id="715CKS9mY2y" role="2OqNvi">
+              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+              <node concept="3clFbT" id="715CKS9mY32" role="37wK5m" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mtvM" role="3cqZAp">
+          <node concept="2OqwBi" id="715CKS9mtvN" role="3clFbG">
+            <node concept="2OqwBi" id="715CKS9mTnI" role="2Oq$k0">
+              <node concept="2WthIp" id="715CKS9mTnL" role="2Oq$k0" />
+              <node concept="2BZ7hE" id="715CKS9mTnN" role="2OqNvi">
+                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+              </node>
+            </node>
+            <node concept="liA8E" id="715CKS9mtvP" role="2OqNvi">
+              <ref role="37wK5l" to="dxuu:~AbstractButton.addActionListener(java.awt.event.ActionListener)" resolve="addActionListener" />
+              <node concept="2ShNRf" id="715CKS9mtvQ" role="37wK5m">
+                <node concept="YeOm9" id="715CKS9mtvR" role="2ShVmc">
+                  <node concept="1Y3b0j" id="715CKS9mtvS" role="YeSDq">
+                    <property role="2bfB8j" value="true" />
+                    <ref role="1Y3XeK" to="hyam:~ActionListener" resolve="ActionListener" />
+                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                    <node concept="3Tm1VV" id="715CKS9mtvT" role="1B3o_S" />
+                    <node concept="3clFb_" id="715CKS9mtvU" role="jymVt">
+                      <property role="TrG5h" value="actionPerformed" />
+                      <node concept="3Tm1VV" id="715CKS9mtvV" role="1B3o_S" />
+                      <node concept="3cqZAl" id="715CKS9mtvW" role="3clF45" />
+                      <node concept="37vLTG" id="715CKS9mtvX" role="3clF46">
+                        <property role="TrG5h" value="e" />
+                        <node concept="3uibUv" id="715CKS9mtvY" role="1tU5fm">
+                          <ref role="3uigEE" to="hyam:~ActionEvent" resolve="ActionEvent" />
+                        </node>
+                      </node>
+                      <node concept="3clFbS" id="715CKS9mtvZ" role="3clF47">
+                        <node concept="3clFbF" id="715CKS9negn" role="3cqZAp">
+                          <node concept="2OqwBi" id="715CKS9nffk" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9negp" role="2Oq$k0">
+                              <node concept="2WthIp" id="715CKS9negq" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9negr" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mAbK" resolve="serverInstance" />
+                              </node>
+                            </node>
+                            <node concept="2PDubS" id="715CKS9ngaY" role="2OqNvi">
+                              <ref role="37wK5l" to="30ym:1dR4j3lTAYp" resolve="destroy" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="715CKS9ndAh" role="3cqZAp">
+                          <node concept="37vLTI" id="715CKS9ndAi" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9ndAj" role="37vLTJ">
+                              <node concept="2WthIp" id="715CKS9ndAk" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9ndAl" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mAbK" resolve="serverInstance" />
+                              </node>
+                            </node>
+                            <node concept="10Nm6u" id="715CKS9necx" role="37vLTx" />
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="715CKS9ndAo" role="3cqZAp">
+                          <node concept="2OqwBi" id="715CKS9ndAp" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9ndAq" role="2Oq$k0">
+                              <node concept="2WthIp" id="715CKS9ndAr" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9ndAs" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mZZg" resolve="launchButton" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="715CKS9ndAt" role="2OqNvi">
+                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                              <node concept="3clFbT" id="715CKS9ndAu" role="37wK5m">
+                                <property role="3clFbU" value="true" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="715CKS9ndAv" role="3cqZAp">
+                          <node concept="2OqwBi" id="715CKS9ndAw" role="3clFbG">
+                            <node concept="2OqwBi" id="715CKS9ndAx" role="2Oq$k0">
+                              <node concept="2WthIp" id="715CKS9ndAy" role="2Oq$k0">
+                                <ref role="32nkFo" node="6Ut89YPhSND" resolve="ServerLauncherTool" />
+                              </node>
+                              <node concept="2BZ7hE" id="715CKS9ndAz" role="2OqNvi">
+                                <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="715CKS9ndA$" role="2OqNvi">
+                              <ref role="37wK5l" to="dxuu:~AbstractButton.setEnabled(boolean)" resolve="setEnabled" />
+                              <node concept="3clFbT" id="715CKS9ndA_" role="37wK5m" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2AHcQZ" id="715CKS9mtx1" role="2AJF6D">
+                        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mtx7" role="3cqZAp">
+          <node concept="37vLTI" id="715CKS9mtx8" role="3clFbG">
+            <node concept="3cmrfG" id="715CKS9mtx9" role="37vLTx">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="2OqwBi" id="715CKS9mtxa" role="37vLTJ">
+              <node concept="37vLTw" id="715CKS9mtxb" role="2Oq$k0">
+                <ref role="3cqZAo" node="2wu2WWbNaE" resolve="c" />
+              </node>
+              <node concept="2OwXpG" id="715CKS9mtxc" role="2OqNvi">
+                <ref role="2Oxat5" to="z60i:~GridBagConstraints.gridx" resolve="gridx" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="715CKS9mtxd" role="3cqZAp">
+          <node concept="2OqwBi" id="715CKS9mtxe" role="3clFbG">
+            <node concept="37vLTw" id="715CKS9mtxf" role="2Oq$k0">
+              <ref role="3cqZAo" node="5SYYrGB$PFG" resolve="panel" />
+            </node>
+            <node concept="liA8E" id="715CKS9mtxg" role="2OqNvi">
+              <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component,java.lang.Object)" resolve="add" />
+              <node concept="2OqwBi" id="715CKS9n5UN" role="37wK5m">
+                <node concept="2WthIp" id="715CKS9n5UQ" role="2Oq$k0" />
+                <node concept="2BZ7hE" id="715CKS9n5US" role="2OqNvi">
+                  <ref role="2WH_rO" node="715CKS9mO_i" resolve="stopButton" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="715CKS9mtxi" role="37wK5m">
+                <ref role="3cqZAo" node="2wu2WWbNaE" resolve="c" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="715CKS9msBE" role="3cqZAp" />
+        <node concept="3clFbH" id="715CKS9msFS" role="3cqZAp" />
         <node concept="3clFbF" id="2wu2WWcF7r" role="3cqZAp">
           <node concept="2OqwBi" id="2wu2WWcFvC" role="3clFbG">
             <node concept="37vLTw" id="2wu2WWcF7p" role="2Oq$k0">
@@ -1921,6 +2169,27 @@
       <node concept="3Tm6S6" id="2wu2WWiIvc" role="1B3o_S" />
       <node concept="3uibUv" id="2wu2WWiJq1" role="1tU5fm">
         <ref role="3uigEE" to="c8ee:~AbstractTableModel" resolve="AbstractTableModel" />
+      </node>
+    </node>
+    <node concept="2BZ0e9" id="715CKS9mAbK" role="2XNbBz">
+      <property role="TrG5h" value="serverInstance" />
+      <node concept="3Tm6S6" id="715CKS9mAbL" role="1B3o_S" />
+      <node concept="3uibUv" id="715CKS9mOyo" role="1tU5fm">
+        <ref role="3uigEE" to="30ym:5SYYrGBzPK3" resolve="Server" />
+      </node>
+    </node>
+    <node concept="2BZ0e9" id="715CKS9mZZg" role="2XNbBz">
+      <property role="TrG5h" value="launchButton" />
+      <node concept="3Tm6S6" id="715CKS9mZZh" role="1B3o_S" />
+      <node concept="3uibUv" id="715CKS9mZZi" role="1tU5fm">
+        <ref role="3uigEE" to="dxuu:~JButton" resolve="JButton" />
+      </node>
+    </node>
+    <node concept="2BZ0e9" id="715CKS9mO_i" role="2XNbBz">
+      <property role="TrG5h" value="stopButton" />
+      <node concept="3Tm6S6" id="715CKS9mO_j" role="1B3o_S" />
+      <node concept="3uibUv" id="715CKS9mPGR" role="1tU5fm">
+        <ref role="3uigEE" to="dxuu:~JButton" resolve="JButton" />
       </node>
     </node>
     <node concept="2UmK3q" id="6Ut89YPhSNE" role="2Um5zG">
