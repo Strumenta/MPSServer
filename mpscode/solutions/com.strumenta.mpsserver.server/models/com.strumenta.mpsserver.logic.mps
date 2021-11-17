@@ -82,6 +82,7 @@
     <import index="5zyv" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.concurrent(JDK/)" />
     <import index="i9so" ref="r:9e5578e0-37f0-4c9b-a301-771bcb453678(jetbrains.mps.make.script)" />
     <import index="et5u" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.messages(MPS.Core/)" />
+    <import index="pdwk" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.core.aspects.constraints.rules.kinds(MPS.Core/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" implicit="true" />
@@ -24704,6 +24705,121 @@
                   </node>
                 </node>
               </node>
+              <node concept="3SKdUt" id="CJHMEmL19l" role="3cqZAp">
+                <node concept="1PaTwC" id="CJHMEmL19m" role="1aUNEU">
+                  <node concept="3oM_SD" id="CJHMEmL19n" role="1PaTwD">
+                    <property role="3oM_SC" value="filter" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmL1TW" role="1PaTwD">
+                    <property role="3oM_SC" value="considering" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmL26y" role="1PaTwD">
+                    <property role="3oM_SC" value="constraints." />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNgrq" role="1PaTwD">
+                    <property role="3oM_SC" value="Supposedly" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNgrv" role="1PaTwD">
+                    <property role="3oM_SC" value="one" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNgr_" role="1PaTwD">
+                    <property role="3oM_SC" value="should" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNgrG" role="1PaTwD">
+                    <property role="3oM_SC" value="use" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNgWn" role="1PaTwD">
+                    <property role="3oM_SC" value="ConstraintsCanBeFacade" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3SKdUt" id="CJHMEmNi3X" role="3cqZAp">
+                <node concept="1PaTwC" id="CJHMEmNi3Y" role="1aUNEU">
+                  <node concept="3oM_SD" id="CJHMEmNi3Z" role="1PaTwD">
+                    <property role="3oM_SC" value="however" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNixY" role="1PaTwD">
+                    <property role="3oM_SC" value="it" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNiQC" role="1PaTwD">
+                    <property role="3oM_SC" value="seems" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNjj6" role="1PaTwD">
+                    <property role="3oM_SC" value="to" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNjBM" role="1PaTwD">
+                    <property role="3oM_SC" value="cause" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk46" role="1PaTwD">
+                    <property role="3oM_SC" value="NPEs," />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4d" role="1PaTwD">
+                    <property role="3oM_SC" value="so" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4l" role="1PaTwD">
+                    <property role="3oM_SC" value="until" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4u" role="1PaTwD">
+                    <property role="3oM_SC" value="that" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4C" role="1PaTwD">
+                    <property role="3oM_SC" value="is" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4N" role="1PaTwD">
+                    <property role="3oM_SC" value="fixed" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNk4Z" role="1PaTwD">
+                    <property role="3oM_SC" value="we" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNkpN" role="1PaTwD">
+                    <property role="3oM_SC" value="use" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNkq1" role="1PaTwD">
+                    <property role="3oM_SC" value="ModelConstraints" />
+                  </node>
+                  <node concept="3oM_SD" id="CJHMEmNkQE" role="1PaTwD">
+                    <property role="3oM_SC" value="instead" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="CJHMEmL31P" role="3cqZAp">
+                <node concept="37vLTI" id="CJHMEmL3Gz" role="3clFbG">
+                  <node concept="2OqwBi" id="CJHMEmL4UY" role="37vLTx">
+                    <node concept="37vLTw" id="CJHMEmL4ld" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5p1VBoMegIi" resolve="alternatives" />
+                    </node>
+                    <node concept="3zZkjj" id="CJHMEmL5zA" role="2OqNvi">
+                      <node concept="1bVj0M" id="CJHMEmL5zC" role="23t8la">
+                        <node concept="3clFbS" id="CJHMEmL5zD" role="1bW5cS">
+                          <node concept="3clFbF" id="CJHMEmL6wY" role="3cqZAp">
+                            <node concept="2YIFZM" id="CJHMEmL6Tb" role="3clFbG">
+                              <ref role="1Pybhc" to="ykok:~ModelConstraints" resolve="ModelConstraints" />
+                              <ref role="37wK5l" to="ykok:~ModelConstraints.canBeParent(org.jetbrains.mps.openapi.model.SNode,org.jetbrains.mps.openapi.language.SAbstractConcept,org.jetbrains.mps.openapi.language.SContainmentLink,jetbrains.mps.smodel.runtime.CheckingNodeContext)" resolve="canBeParent" />
+                              <node concept="37vLTw" id="CJHMEmL7sb" role="37wK5m">
+                                <ref role="3cqZAo" node="5p1VBoMdxqS" resolve="containerSNode" />
+                              </node>
+                              <node concept="37vLTw" id="CJHMEmL8rD" role="37wK5m">
+                                <ref role="3cqZAo" node="CJHMEmL5zE" resolve="alternative" />
+                              </node>
+                              <node concept="37vLTw" id="CJHMEmLemg" role="37wK5m">
+                                <ref role="3cqZAo" node="5p1VBoMdU4I" resolve="link" />
+                              </node>
+                              <node concept="10Nm6u" id="CJHMEmLf_C" role="37wK5m" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="Rh6nW" id="CJHMEmL5zE" role="1bW2Oz">
+                          <property role="TrG5h" value="alternative" />
+                          <node concept="2jxLKc" id="CJHMEmL5zF" role="1tU5fm" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="37vLTw" id="CJHMEmL31N" role="37vLTJ">
+                    <ref role="3cqZAo" node="5p1VBoMegIi" resolve="alternatives" />
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
           <node concept="37vLTw" id="5p1VBoMdxrx" role="ukAjM">
@@ -24733,7 +24849,7 @@
       <node concept="P$JXv" id="5p1VBoMdxrI" role="lGtFl">
         <node concept="TZ5HA" id="5p1VBoMdxrJ" role="TZ5H$">
           <node concept="1dT_AC" id="5p1VBoMdxrK" role="1dT_Ay">
-            <property role="1dT_AB" value="Provide an answer to return to the called" />
+            <property role="1dT_AB" value="Provide an answer to return to the caller" />
           </node>
         </node>
       </node>
