@@ -1278,24 +1278,29 @@
       <node concept="3clFb_" id="1taqoP6uwfX" role="jymVt">
         <property role="TrG5h" value="addExtensionPath" />
         <node concept="3clFbS" id="1taqoP6uwg0" role="3clF47">
-          <node concept="3clFbF" id="1taqoP6uyfw" role="3cqZAp">
-            <node concept="2OqwBi" id="1taqoP6uzmG" role="3clFbG">
-              <node concept="2OqwBi" id="1taqoP6uywJ" role="2Oq$k0">
-                <node concept="Xjq3P" id="1taqoP6uyfv" role="2Oq$k0" />
-                <node concept="2OwXpG" id="1taqoP6uyBc" role="2OqNvi">
+          <node concept="3clFbF" id="20EFtfelKkH" role="3cqZAp">
+            <node concept="2OqwBi" id="20EFtfelOKF" role="3clFbG">
+              <node concept="2OqwBi" id="20EFtfelNFm" role="2Oq$k0">
+                <node concept="Xjq3P" id="20EFtfelKkF" role="2Oq$k0" />
+                <node concept="2OwXpG" id="20EFtfelNSJ" role="2OqNvi">
                   <ref role="2Oxat5" node="1taqoP6uiQg" resolve="extensionPaths" />
                 </node>
               </node>
-              <node concept="TSZUe" id="1taqoP6u$4Y" role="2OqNvi">
-                <node concept="37vLTw" id="1taqoP6u$gH" role="25WWJ7">
+              <node concept="TSZUe" id="20EFtfelPJP" role="2OqNvi">
+                <node concept="37vLTw" id="20EFtfelPZB" role="25WWJ7">
                   <ref role="3cqZAo" node="1taqoP6uxak" resolve="path" />
                 </node>
               </node>
             </node>
           </node>
+          <node concept="3cpWs6" id="20EFtfelJC6" role="3cqZAp">
+            <node concept="Xjq3P" id="20EFtfelJS0" role="3cqZAk" />
+          </node>
         </node>
         <node concept="3Tm1VV" id="1taqoP6uviA" role="1B3o_S" />
-        <node concept="3cqZAl" id="1taqoP6uvoz" role="3clF45" />
+        <node concept="3uibUv" id="20EFtfelD$l" role="3clF45">
+          <ref role="3uigEE" node="6Jg9HTa6xHe" resolve="Server.ServerConfiguration" />
+        </node>
         <node concept="37vLTG" id="1taqoP6uxak" role="3clF46">
           <property role="TrG5h" value="path" />
           <node concept="17QB3L" id="1taqoP6uxaj" role="1tU5fm" />
