@@ -60,19 +60,6 @@
     <ref role="1M2myG" to="va66:i07tI10mUW" resolve="FinancialCalcSheet" />
     <node concept="9SQb8" id="1nQik02BTyc" role="9SGkC">
       <node concept="3clFbS" id="1nQik02BTyd" role="2VODD2">
-        <node concept="3clFbJ" id="1nQik02BTyz" role="3cqZAp">
-          <node concept="17R0WA" id="1nQik02BTy$" role="3clFbw">
-            <node concept="35c_gC" id="1nQik02BTy_" role="3uHU7w">
-              <ref role="35c_gD" to="va66:i07tI10mV5" resolve="StringType" />
-            </node>
-            <node concept="2DD5aU" id="1nQik02BTyA" role="3uHU7B" />
-          </node>
-          <node concept="3clFbS" id="1nQik02BTyB" role="3clFbx">
-            <node concept="3cpWs6" id="1nQik02BTyC" role="3cqZAp">
-              <node concept="3clFbT" id="1nQik02BTyD" role="3cqZAk" />
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs6" id="1nQik02BTyE" role="3cqZAp">
           <node concept="3clFbT" id="1nQik02BTyF" role="3cqZAk">
             <property role="3clFbU" value="true" />
