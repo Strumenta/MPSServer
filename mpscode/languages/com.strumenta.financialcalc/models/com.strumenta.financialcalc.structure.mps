@@ -87,5 +87,10 @@
     <property role="34LRSv" value="boolean" />
     <ref role="1TJDcQ" node="i07tI10mV4" resolve="Type" />
   </node>
+  <node concept="1TIwiD" id="1nQik02wUhF">
+    <property role="EcuMT" value="1582532858336224363" />
+    <property role="TrG5h" value="DummyType" />
+    <ref role="1TJDcQ" node="i07tI10mV4" resolve="Type" />
+  </node>
 </model>
 
