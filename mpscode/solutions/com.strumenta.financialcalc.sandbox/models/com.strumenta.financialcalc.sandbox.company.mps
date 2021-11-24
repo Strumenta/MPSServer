@@ -8,6 +8,7 @@
   <registry>
     <language id="a50bd8d8-42c1-4879-9850-5fb2cea64ad0" name="com.strumenta.financialcalc">
       <concept id="324292001770073797" name="com.strumenta.financialcalc.structure.StringType" flags="ng" index="25wncu" />
+      <concept id="324292001770073796" name="com.strumenta.financialcalc.structure.Type" flags="ng" index="25wncv" />
       <concept id="324292001770073791" name="com.strumenta.financialcalc.structure.Input" flags="ng" index="25wnd$">
         <child id="324292001770073794" name="type" index="25wncp" />
       </concept>
@@ -31,6 +32,10 @@
     <node concept="25wnd$" id="3B0mmWDgBtw" role="25wmB8">
       <property role="TrG5h" value="input2" />
       <node concept="3u_PAv" id="3B0mmWDgBtA" role="25wncp" />
+    </node>
+    <node concept="25wnd$" id="sFFH8BKZGq" role="25wmB8">
+      <property role="TrG5h" value="input3453333" />
+      <node concept="25wncv" id="sFFH8BKZGr" role="25wncp" />
     </node>
   </node>
 </model>
