@@ -27933,6 +27933,78 @@
                             </node>
                           </node>
                           <node concept="3clFbJ" id="6Y14zWtNQAz" role="3cqZAp">
+                            <node concept="3eNFk2" id="3B7hgP9WJDG" role="3eNLev">
+                              <node concept="17R0WA" id="3B7hgP9WJDH" role="3eO9$A">
+                                <node concept="10M0yZ" id="3B7hgP9WJDI" role="3uHU7w">
+                                  <ref role="1PxDUh" to="xx25:~SPrimitiveTypes" resolve="SPrimitiveTypes" />
+                                  <ref role="3cqZAo" to="xx25:~SPrimitiveTypes.BOOLEAN" resolve="BOOLEAN" />
+                                </node>
+                                <node concept="2OqwBi" id="3B7hgP9WJDJ" role="3uHU7B">
+                                  <node concept="37vLTw" id="3B7hgP9WJDK" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="6Y14zWtNQ_q" resolve="propertyToChange" />
+                                  </node>
+                                  <node concept="liA8E" id="3B7hgP9WJDL" role="2OqNvi">
+                                    <ref role="37wK5l" to="c17a:~SProperty.getType()" resolve="getType" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3clFbS" id="3B7hgP9WJDM" role="3eOfB_">
+                                <node concept="3cpWs8" id="3B7hgP9WJDN" role="3cqZAp">
+                                  <node concept="3cpWsn" id="3B7hgP9WJDO" role="3cpWs9">
+                                    <property role="TrG5h" value="value" />
+                                    <node concept="10P_77" id="3B7hgP9WJDP" role="1tU5fm" />
+                                    <node concept="2YIFZM" id="3B7hgP9WJDQ" role="33vP2m">
+                                      <ref role="1Pybhc" to="wyt6:~Boolean" resolve="Boolean" />
+                                      <ref role="37wK5l" to="wyt6:~Boolean.valueOf(java.lang.String)" resolve="valueOf" />
+                                      <node concept="37vLTw" id="3B7hgP9WJDR" role="37wK5m">
+                                        <ref role="3cqZAo" node="6Y14zWtNQAA" resolve="stringValue" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbF" id="3B7hgP9WJDS" role="3cqZAp">
+                                  <node concept="2OqwBi" id="3B7hgP9WJDT" role="3clFbG">
+                                    <node concept="37vLTw" id="3B7hgP9WJDU" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="6Y14zWtNQ$C" resolve="snode" />
+                                    </node>
+                                    <node concept="liA8E" id="3B7hgP9WJDV" role="2OqNvi">
+                                      <ref role="37wK5l" to="mhbf:~SNode.setProperty(org.jetbrains.mps.openapi.language.SProperty,java.lang.String)" resolve="setProperty" />
+                                      <node concept="37vLTw" id="3B7hgP9WJDW" role="37wK5m">
+                                        <ref role="3cqZAo" node="6Y14zWtNQ_q" resolve="propertyToChange" />
+                                      </node>
+                                      <node concept="2YIFZM" id="3B7hgP9WJDX" role="37wK5m">
+                                        <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                                        <ref role="37wK5l" to="wyt6:~String.valueOf(boolean)" resolve="valueOf" />
+                                        <node concept="37vLTw" id="3B7hgP9WJDY" role="37wK5m">
+                                          <ref role="3cqZAo" node="3B7hgP9WJDO" resolve="value" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbF" id="3B7hgP9WJDZ" role="3cqZAp">
+                                  <node concept="2OqwBi" id="3B7hgP9WJE0" role="3clFbG">
+                                    <node concept="37vLTw" id="3B7hgP9WJE1" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="2PWTLyB$gZ3" resolve="newValueConsumer" />
+                                    </node>
+                                    <node concept="liA8E" id="3B7hgP9WJE2" role="2OqNvi">
+                                      <ref role="37wK5l" to="yyf4:~Consumer.consume(java.lang.Object)" resolve="consume" />
+                                      <node concept="2OqwBi" id="3B7hgP9WJE3" role="37wK5m">
+                                        <node concept="37vLTw" id="3B7hgP9WJE4" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="6Y14zWtNQ$C" resolve="snode" />
+                                        </node>
+                                        <node concept="liA8E" id="3B7hgP9WJE5" role="2OqNvi">
+                                          <ref role="37wK5l" to="mhbf:~SNode.getProperty(org.jetbrains.mps.openapi.language.SProperty)" resolve="getProperty" />
+                                          <node concept="37vLTw" id="3B7hgP9WJE6" role="37wK5m">
+                                            <ref role="3cqZAo" node="6Y14zWtNQ_q" resolve="propertyToChange" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
                             <node concept="3clFbS" id="6Y14zWtNQA$" role="3clFbx">
                               <node concept="3clFbF" id="6Y14zWtNQAI" role="3cqZAp">
                                 <node concept="2OqwBi" id="6Y14zWtNQAJ" role="3clFbG">
@@ -28012,8 +28084,8 @@
                             </node>
                             <node concept="3eNFk2" id="4nZuQw3Mrlc" role="3eNLev">
                               <node concept="17R0WA" id="4nZuQw3MtZ5" role="3eO9$A">
-                                <node concept="10M0yZ" id="4nZuQw3MuOF" role="3uHU7w">
-                                  <ref role="3cqZAo" to="xx25:~SPrimitiveTypes.BOOLEAN" resolve="BOOLEAN" />
+                                <node concept="10M0yZ" id="3B7hgP9WMq0" role="3uHU7w">
+                                  <ref role="3cqZAo" to="xx25:~SPrimitiveTypes.INTEGER" resolve="INTEGER" />
                                   <ref role="1PxDUh" to="xx25:~SPrimitiveTypes" resolve="SPrimitiveTypes" />
                                 </node>
                                 <node concept="2OqwBi" id="4nZuQw3Msli" role="3uHU7B">
@@ -28029,14 +28101,14 @@
                                 <node concept="3cpWs8" id="4nZuQw3Mv27" role="3cqZAp">
                                   <node concept="3cpWsn" id="4nZuQw3Mv2a" role="3cpWs9">
                                     <property role="TrG5h" value="value" />
-                                    <node concept="10P_77" id="4nZuQw3Mv26" role="1tU5fm" />
                                     <node concept="2YIFZM" id="2rZ4Vwlmfne" role="33vP2m">
-                                      <ref role="37wK5l" to="wyt6:~Boolean.valueOf(java.lang.String)" resolve="valueOf" />
-                                      <ref role="1Pybhc" to="wyt6:~Boolean" resolve="Boolean" />
+                                      <ref role="1Pybhc" to="wyt6:~Integer" resolve="Integer" />
+                                      <ref role="37wK5l" to="wyt6:~Integer.valueOf(java.lang.String)" resolve="valueOf" />
                                       <node concept="37vLTw" id="2rZ4VwlmkFB" role="37wK5m">
                                         <ref role="3cqZAo" node="6Y14zWtNQAA" resolve="stringValue" />
                                       </node>
                                     </node>
+                                    <node concept="10Oyi0" id="3B7hgP9WQxK" role="1tU5fm" />
                                   </node>
                                 </node>
                                 <node concept="3clFbF" id="4nZuQw3Myak" role="3cqZAp">
@@ -28050,8 +28122,8 @@
                                         <ref role="3cqZAo" node="6Y14zWtNQ_q" resolve="propertyToChange" />
                                       </node>
                                       <node concept="2YIFZM" id="4nZuQw3MAjS" role="37wK5m">
-                                        <ref role="37wK5l" to="wyt6:~String.valueOf(boolean)" resolve="valueOf" />
                                         <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+                                        <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
                                         <node concept="37vLTw" id="4nZuQw3MARw" role="37wK5m">
                                           <ref role="3cqZAo" node="4nZuQw3Mv2a" resolve="value" />
                                         </node>
