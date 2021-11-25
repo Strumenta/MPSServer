@@ -21606,6 +21606,19 @@
         <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
       </node>
       <node concept="3clFbS" id="6Y14zWtL0tY" role="3clF47">
+        <node concept="3clFbJ" id="Xo7promZnF" role="3cqZAp">
+          <node concept="3clFbS" id="Xo7promZnH" role="3clFbx">
+            <node concept="3cpWs6" id="Xo7pron2vB" role="3cqZAp" />
+          </node>
+          <node concept="17R0WA" id="Xo7pron2nv" role="3clFbw">
+            <node concept="37vLTw" id="Xo7pron1gn" role="3uHU7B">
+              <ref role="3cqZAo" node="6Y14zWtL0tV" resolve="message" />
+            </node>
+            <node concept="Xl_RD" id="Xo7pron2cO" role="3uHU7w">
+              <property role="Xl_RC" value="KEEP-ALIVE" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="6Y14zWtOyaa" role="3cqZAp">
           <node concept="3cpWsn" id="6Y14zWtOyab" role="3cpWs9">
             <property role="TrG5h" value="parser" />
@@ -21625,40 +21638,94 @@
             <node concept="3uibUv" id="6Y14zWtOyAn" role="1tU5fm">
               <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
             </node>
-            <node concept="2OqwBi" id="6Y14zWtOz2c" role="33vP2m">
-              <node concept="2OqwBi" id="6Y14zWtOyMQ" role="2Oq$k0">
-                <node concept="37vLTw" id="6Y14zWtOyFD" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6Y14zWtOyab" resolve="parser" />
-                </node>
-                <node concept="liA8E" id="6Y14zWtOyRm" role="2OqNvi">
-                  <ref role="37wK5l" to="wy2b:~JsonParser.parse(java.lang.String)" resolve="parse" />
-                  <node concept="37vLTw" id="6Y14zWtOyXw" role="37wK5m">
-                    <ref role="3cqZAo" node="6Y14zWtL0tV" resolve="message" />
-                  </node>
-                </node>
-              </node>
-              <node concept="liA8E" id="6Y14zWtOz7t" role="2OqNvi">
-                <ref role="37wK5l" to="wy2b:~JsonElement.getAsJsonObject()" resolve="getAsJsonObject" />
-              </node>
-            </node>
           </node>
         </node>
-        <node concept="3clFbH" id="14oU6UWTMZW" role="3cqZAp" />
         <node concept="3cpWs8" id="6Y14zWtOOeV" role="3cqZAp">
           <node concept="3cpWsn" id="6Y14zWtOOeY" role="3cpWs9">
             <property role="TrG5h" value="messageType" />
             <node concept="17QB3L" id="6Y14zWtOOeT" role="1tU5fm" />
-            <node concept="2OqwBi" id="14oU6UWURYS" role="33vP2m">
-              <node concept="2OqwBi" id="14oU6UWUR2o" role="2Oq$k0">
-                <node concept="Xjq3P" id="14oU6UWUQEE" role="2Oq$k0" />
-                <node concept="2OwXpG" id="14oU6UWURkw" role="2OqNvi">
-                  <ref role="2Oxat5" node="14oU6UWShZ1" resolve="communicationProtocol" />
+          </node>
+        </node>
+        <node concept="3J1_TO" id="Xo7prok7XI" role="3cqZAp">
+          <node concept="3uVAMA" id="Xo7prokow8" role="1zxBo5">
+            <node concept="XOnhg" id="Xo7prokow9" role="1zc67B">
+              <property role="TrG5h" value="t" />
+              <node concept="nSUau" id="Xo7prokowa" role="1tU5fm">
+                <node concept="3uibUv" id="Xo7prokuSU" role="nSUat">
+                  <ref role="3uigEE" to="wyt6:~Throwable" resolve="Throwable" />
                 </node>
               </node>
-              <node concept="liA8E" id="14oU6UWUTJK" role="2OqNvi">
-                <ref role="37wK5l" to="e4as:14oU6UWUwqs" resolve="getMessageType" />
-                <node concept="37vLTw" id="14oU6UWUTXN" role="37wK5m">
+            </node>
+            <node concept="3clFbS" id="Xo7prokowb" role="1zc67A">
+              <node concept="3clFbF" id="Xo7prokxlD" role="3cqZAp">
+                <node concept="2OqwBi" id="Xo7prokxHN" role="3clFbG">
+                  <node concept="10M0yZ" id="Xo7prokxlL" role="2Oq$k0">
+                    <ref role="3cqZAo" to="wyt6:~System.err" resolve="err" />
+                    <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                  </node>
+                  <node concept="liA8E" id="Xo7prokzav" role="2OqNvi">
+                    <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
+                    <node concept="Xl_RD" id="Xo7prokzop" role="37wK5m">
+                      <property role="Xl_RC" value="Unable to process message" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="Xo7prokzWV" role="3cqZAp">
+                <node concept="2OqwBi" id="Xo7prok$6Z" role="3clFbG">
+                  <node concept="37vLTw" id="Xo7prokzWT" role="2Oq$k0">
+                    <ref role="3cqZAo" node="Xo7prokow9" resolve="t" />
+                  </node>
+                  <node concept="liA8E" id="Xo7prok$sz" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~Throwable.printStackTrace()" resolve="printStackTrace" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="Xo7prok$VN" role="3cqZAp" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="Xo7prok7XK" role="1zxBo7">
+            <node concept="3clFbF" id="Xo7prokezS" role="3cqZAp">
+              <node concept="37vLTI" id="Xo7prokezU" role="3clFbG">
+                <node concept="2OqwBi" id="6Y14zWtOz2c" role="37vLTx">
+                  <node concept="2OqwBi" id="6Y14zWtOyMQ" role="2Oq$k0">
+                    <node concept="37vLTw" id="6Y14zWtOyFD" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Y14zWtOyab" resolve="parser" />
+                    </node>
+                    <node concept="liA8E" id="6Y14zWtOyRm" role="2OqNvi">
+                      <ref role="37wK5l" to="wy2b:~JsonParser.parse(java.lang.String)" resolve="parse" />
+                      <node concept="37vLTw" id="6Y14zWtOyXw" role="37wK5m">
+                        <ref role="3cqZAo" node="6Y14zWtL0tV" resolve="message" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="6Y14zWtOz7t" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~JsonElement.getAsJsonObject()" resolve="getAsJsonObject" />
+                  </node>
+                </node>
+                <node concept="37vLTw" id="Xo7prokezY" role="37vLTJ">
                   <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="Xo7prokp6K" role="3cqZAp">
+              <node concept="37vLTI" id="Xo7prokp6M" role="3clFbG">
+                <node concept="2OqwBi" id="14oU6UWURYS" role="37vLTx">
+                  <node concept="2OqwBi" id="14oU6UWUR2o" role="2Oq$k0">
+                    <node concept="Xjq3P" id="14oU6UWUQEE" role="2Oq$k0" />
+                    <node concept="2OwXpG" id="14oU6UWURkw" role="2OqNvi">
+                      <ref role="2Oxat5" node="14oU6UWShZ1" resolve="communicationProtocol" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="14oU6UWUTJK" role="2OqNvi">
+                    <ref role="37wK5l" to="e4as:14oU6UWUwqs" resolve="getMessageType" />
+                    <node concept="37vLTw" id="14oU6UWUTXN" role="37wK5m">
+                      <ref role="3cqZAo" node="6Y14zWtOyAm" resolve="data" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="37vLTw" id="Xo7prokp6Q" role="37vLTJ">
+                  <ref role="3cqZAo" node="6Y14zWtOOeY" resolve="messageType" />
                 </node>
               </node>
             </node>

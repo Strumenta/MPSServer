@@ -68,3 +68,9 @@ ws.onopen = () => {
 }
 ``` 
 
+# Troubleshooting
+
+## The WebSocket connection is falling
+
+It could be because of Chrome: https://solace.community/discussion/694/client-websocket-disconnects-when-browser-is-minimized-or-not-in-focus-chrome
+
