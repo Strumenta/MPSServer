@@ -94,6 +94,12 @@
       <node concept="3F1sOY" id="i07tI10oiI" role="3EZMnx">
         <ref role="1NtTu8" to="va66:i07tI10mV2" resolve="type" />
       </node>
+      <node concept="3F0ifn" id="Xo7prookKn" role="3EZMnx">
+        <property role="3F0ifm" value="default value" />
+      </node>
+      <node concept="3F1sOY" id="Xo7prookKz" role="3EZMnx">
+        <ref role="1NtTu8" to="va66:Xo7prookKf" resolve="defaultValue" />
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="2yBD7rQgqAT">
