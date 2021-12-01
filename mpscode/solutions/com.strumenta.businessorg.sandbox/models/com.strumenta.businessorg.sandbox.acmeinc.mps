@@ -113,5 +113,8 @@
       <ref role="1sEH5t" node="4$zH10lyrhu" resolve="Admin" />
     </node>
   </node>
+  <node concept="1sDjY4" id="3pqysXh$U5X">
+    <property role="TrG5h" value="ABC" />
+  </node>
 </model>
 
