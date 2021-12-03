@@ -115,6 +115,15 @@
   </node>
   <node concept="1sDjY4" id="3pqysXh$U5X">
     <property role="TrG5h" value="ABC" />
+    <node concept="1sDjY7" id="4Hq9" role="1sD6yR">
+      <property role="TrG5h" value="asasas" />
+    </node>
+    <node concept="1sDjYa" id="u91" role="1sD6yP">
+      <property role="TrG5h" value="Jack" />
+      <node concept="1sEVIl" id="u92" role="1sEVIZ">
+        <ref role="1sEVIm" node="4Hq9" resolve="asasas" />
+      </node>
+    </node>
   </node>
 </model>
 
