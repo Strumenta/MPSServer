@@ -576,6 +576,10 @@
     <property role="TrG5h" value="CommunicationsLogger" />
     <node concept="3clFb_" id="2wu2WWg5Jz" role="jymVt">
       <property role="TrG5h" value="messageReceived" />
+      <node concept="37vLTG" id="4ZWwHkULyBU" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="17QB3L" id="4ZWwHkULzYR" role="1tU5fm" />
+      </node>
       <node concept="37vLTG" id="2wu2WWg5Kx" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="17QB3L" id="10$ElfnPr_x" role="1tU5fm" />
@@ -589,6 +593,10 @@
       <node concept="3clFbS" id="2wu2WWg5PO" role="3clF47" />
       <node concept="3Tm1VV" id="2wu2WWg5PP" role="1B3o_S" />
       <node concept="3cqZAl" id="2wu2WWg5Ps" role="3clF45" />
+      <node concept="37vLTG" id="4ZWwHkUL_4L" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="17QB3L" id="4ZWwHkUL_4M" role="1tU5fm" />
+      </node>
       <node concept="37vLTG" id="2wu2WWg5Rz" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="3uibUv" id="2wu2WWg5Ry" role="1tU5fm">

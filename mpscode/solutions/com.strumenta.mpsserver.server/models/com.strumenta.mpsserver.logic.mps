@@ -6438,6 +6438,12 @@
     <node concept="2tJIrI" id="2DTPz1eGHck" role="jymVt" />
     <node concept="3clFb_" id="2DTPz1eGN0Y" role="jymVt">
       <property role="TrG5h" value="messageReceived" />
+      <node concept="37vLTG" id="4ZWwHkUMF$I" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="3uibUv" id="4ZWwHkUMJHe" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
       <node concept="37vLTG" id="2DTPz1eGN0Z" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="3uibUv" id="10$ElfnRa2D" role="1tU5fm">
@@ -6470,6 +6476,9 @@
                       </node>
                       <node concept="liA8E" id="2DTPz1eH7De" role="2OqNvi">
                         <ref role="37wK5l" to="e4as:2wu2WWg5Jz" resolve="messageReceived" />
+                        <node concept="37vLTw" id="4ZWwHkUMY27" role="37wK5m">
+                          <ref role="3cqZAo" node="4ZWwHkUMF$I" resolve="author" />
+                        </node>
                         <node concept="37vLTw" id="2DTPz1eH9Fb" role="37wK5m">
                           <ref role="3cqZAo" node="2DTPz1eGN0Z" resolve="message" />
                         </node>
@@ -6494,6 +6503,12 @@
       <property role="TrG5h" value="messageSent" />
       <node concept="3Tm1VV" id="2DTPz1eGN19" role="1B3o_S" />
       <node concept="3cqZAl" id="2DTPz1eGN1a" role="3clF45" />
+      <node concept="37vLTG" id="4ZWwHkUMM99" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="3uibUv" id="4ZWwHkUMM9a" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
       <node concept="37vLTG" id="2DTPz1eGN1b" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="3uibUv" id="2DTPz1eGN1c" role="1tU5fm">
@@ -6524,6 +6539,9 @@
                       </node>
                       <node concept="liA8E" id="2DTPz1eHasU" role="2OqNvi">
                         <ref role="37wK5l" to="e4as:2wu2WWg5PL" resolve="messageSent" />
+                        <node concept="37vLTw" id="4ZWwHkUNbQI" role="37wK5m">
+                          <ref role="3cqZAo" node="4ZWwHkUMM99" resolve="author" />
+                        </node>
                         <node concept="37vLTw" id="2DTPz1eHasV" role="37wK5m">
                           <ref role="3cqZAo" node="2DTPz1eGN1b" resolve="message" />
                         </node>
@@ -15862,6 +15880,9 @@
             </node>
             <node concept="liA8E" id="2wu2WWgGW3" role="2OqNvi">
               <ref role="37wK5l" to="e4as:2wu2WWg5PL" resolve="messageSent" />
+              <node concept="37vLTw" id="4ZWwHkUO$4Z" role="37wK5m">
+                <ref role="3cqZAo" node="4ZWwHkUNH5O" resolve="author" />
+              </node>
               <node concept="37vLTw" id="2wu2WWgH9_" role="37wK5m">
                 <ref role="3cqZAo" node="2wu2WWgoo0" resolve="message" />
               </node>
@@ -15871,6 +15892,12 @@
       </node>
       <node concept="3Tm6S6" id="2wu2WWgfOe" role="1B3o_S" />
       <node concept="3cqZAl" id="2wu2WWghZ3" role="3clF45" />
+      <node concept="37vLTG" id="4ZWwHkUNH5O" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="3uibUv" id="4ZWwHkUNH5P" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
       <node concept="37vLTG" id="2wu2WWgoo0" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="3uibUv" id="2wu2WWgonZ" role="1tU5fm">
@@ -15888,6 +15915,9 @@
             </node>
             <node concept="liA8E" id="2wu2WWgIdH" role="2OqNvi">
               <ref role="37wK5l" to="e4as:2wu2WWg5Jz" resolve="messageReceived" />
+              <node concept="37vLTw" id="4ZWwHkUOT$Z" role="37wK5m">
+                <ref role="3cqZAo" node="4ZWwHkUNNL9" resolve="author" />
+              </node>
               <node concept="37vLTw" id="2wu2WWgIdI" role="37wK5m">
                 <ref role="3cqZAo" node="2wu2WWgIdN" resolve="message" />
               </node>
@@ -15897,6 +15927,12 @@
       </node>
       <node concept="3Tm6S6" id="2wu2WWgIdL" role="1B3o_S" />
       <node concept="3cqZAl" id="2wu2WWgIdM" role="3clF45" />
+      <node concept="37vLTG" id="4ZWwHkUNNL9" role="3clF46">
+        <property role="TrG5h" value="author" />
+        <node concept="3uibUv" id="4ZWwHkUNNLa" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
       <node concept="37vLTG" id="2wu2WWgIdN" role="3clF46">
         <property role="TrG5h" value="message" />
         <node concept="17QB3L" id="10$ElfnPpKG" role="1tU5fm" />
@@ -25281,6 +25317,12 @@
         <node concept="3clFbF" id="10$ElfnPjDG" role="3cqZAp">
           <node concept="1rXfSq" id="10$ElfnPjDE" role="3clFbG">
             <ref role="37wK5l" node="2wu2WWgIdy" resolve="logMessageReceived" />
+            <node concept="1rXfSq" id="4ZWwHkUPjOL" role="37wK5m">
+              <ref role="37wK5l" node="3B7hgPa34Zu" resolve="getAuthor" />
+              <node concept="37vLTw" id="4ZWwHkUPtI6" role="37wK5m">
+                <ref role="3cqZAo" node="6Y14zWtL0tT" resolve="session" />
+              </node>
+            </node>
             <node concept="37vLTw" id="10$ElfnPogm" role="37wK5m">
               <ref role="3cqZAo" node="6Y14zWtL0tV" resolve="message" />
             </node>
@@ -28048,6 +28090,12 @@
             <node concept="3clFbF" id="2wu2WWh1am" role="3cqZAp">
               <node concept="1rXfSq" id="2wu2WWh1ak" role="3clFbG">
                 <ref role="37wK5l" node="2wu2WWgluL" resolve="logMessageSent" />
+                <node concept="1rXfSq" id="4ZWwHkUPI1L" role="37wK5m">
+                  <ref role="37wK5l" node="3B7hgPa34Zu" resolve="getAuthor" />
+                  <node concept="37vLTw" id="4ZWwHkUPI1M" role="37wK5m">
+                    <ref role="3cqZAo" node="5p1VBoMhtom" resolve="session" />
+                  </node>
+                </node>
                 <node concept="1eOMI4" id="2wu2WWh2iE" role="37wK5m">
                   <node concept="10QFUN" id="2wu2WWh2iB" role="1eOMHV">
                     <node concept="3uibUv" id="2wu2WWh2iG" role="10QFUM">
