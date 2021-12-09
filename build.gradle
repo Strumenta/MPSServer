@@ -118,13 +118,6 @@ task resolveMps(type: Copy) {
 	}
 }
 
-task debugresolve {
-    doLast {
-        println("debugresolve: started")
-        println(configurations.mpsArtifacts.getClass())
-    }
-}
-
 task resolveMpsArtifacts(type: Copy) {
 	from {
 		configurations.mpsArtifacts.resolve().collect { zipTree(it) }
