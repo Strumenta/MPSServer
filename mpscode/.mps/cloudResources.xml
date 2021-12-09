@@ -6,5 +6,10 @@
         <option value="https://dsl-modelix.siginet.lu/" />
       </list>
     </option>
+    <option name="transientModules">
+      <list>
+        <option value="https://dsl-modelix.siginet.lu/mynewrepo#modulefoo" />
+      </list>
+    </option>
   </component>
 </project>
