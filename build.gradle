@@ -56,7 +56,12 @@ repositories {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
     maven {
-        url 'https://storage.googleapis.com/mavenrepo_strumenta_bucket/content/'
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/modelix/modelix")
+        credentials {
+            username = project.findProperty("github.user")
+            password = project.findProperty("github.token")
+        }
     }
 }
 
