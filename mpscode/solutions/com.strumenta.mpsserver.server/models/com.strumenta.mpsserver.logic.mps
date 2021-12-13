@@ -23017,6 +23017,20 @@
     <node concept="3clFb_" id="4aUgzo0GAiv" role="jymVt">
       <property role="TrG5h" value="onClose" />
       <node concept="3clFbS" id="4aUgzo0GAiy" role="3clF47">
+        <node concept="abc8K" id="5YOsgQxxr4E" role="3cqZAp">
+          <node concept="Xl_RD" id="5YOsgQxxxfN" role="abp_N">
+            <property role="Xl_RC" value="Someone is closing the session: statusCode=" />
+          </node>
+          <node concept="37vLTw" id="5YOsgQxyyTg" role="abp_N">
+            <ref role="3cqZAo" node="4aUgzo0GOiW" resolve="statusCode" />
+          </node>
+          <node concept="Xl_RD" id="5YOsgQxzb_E" role="abp_N">
+            <property role="Xl_RC" value=", reason: " />
+          </node>
+          <node concept="37vLTw" id="5YOsgQxztqk" role="abp_N">
+            <ref role="3cqZAo" node="4aUgzo0GP5J" resolve="reason" />
+          </node>
+        </node>
         <node concept="3cpWs8" id="319mNSQ5PJR" role="3cqZAp">
           <node concept="3cpWsn" id="319mNSQ5PJX" role="3cpWs9">
             <property role="TrG5h" value="cbs" />
