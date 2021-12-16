@@ -1,4 +1,4 @@
 ext.mpsVersion = '2020.3.3'
-ext.modelixVersion = '0.0.67'
+ext.modelixVersion = '0.0.75'
 ext.mpsExtensionsVersion = '2020.3.2092.d53a335'
-ext.mpsServerVersion = '2020.3-29'
+ext.mpsServerVersion = '2020.3-30'
