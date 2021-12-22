@@ -39,6 +39,7 @@ configurations {
 	ant_lib
 	libs
 	distribution
+    apps
 }
 
 dependencies {
@@ -47,6 +48,7 @@ dependencies {
     modelixArtifacts "org.modelix:mps-model-plugin:$modelixVersion"
     modelixArtifacts "org.modelix:build-scripts:$modelixVersion"
     mpsArtifacts "de.itemis.mps:extensions:$mpsExtensionsVersion"
+    apps "org.modelix:model-server-fatjar:$modelixVersion"
     libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
 }
 
@@ -130,6 +132,13 @@ task resolveModelixArtifacts(type: Copy) {
         configurations.modelixArtifacts.resolve().collect { zipTree(it) }
     }
     into new File(modelixDir, "plugins")
+}
+
+task resolveApps(type: Copy) {
+    from {
+        configurations.apps.singleFile
+    }
+    into new File(rootDir, "apps")
 }
 
 task resolveLibs(type: Sync) {
@@ -226,4 +235,3 @@ task runLauncher(dependsOn: [buildLauncher, justRunLauncher, buildModelixExtensi
 apply from: 'package.gradle'
 apply from: 'tests.gradle'
 apply from: 'publication.gradle'
-apply from: 'modelix.gradle'
