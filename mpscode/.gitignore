@@ -9,3 +9,4 @@ build-modelix.xml
 build-build.xml
 build-core.xml
 build-core.xml
+.mps-caches
