@@ -5,14 +5,26 @@ import de.itemis.mps.gradle.RunAntScript
 
 buildscript {
     repositories {
-        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
-        mavenCentral()
-        mavenLocal()
-        jcenter()
+    	mavenLocal()
+		mavenCentral()
+		maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+		maven { url 'https://plugins.gradle.org/m2/' }
+        maven {
+            name = "Modelix GitHubPackages"
+            url = uri("https://maven.pkg.github.com/modelix/modelix")
+            if (project.findProperty("mpsserver.github.user") != null && project.findProperty("mpsserver.github.token") != null) {
+                credentials {
+                    username = project.findProperty("mpsserver.github.user").toString()
+                    password = project.findProperty("mpsserver.github.token").toString()
+                }
+            } else {
+            	throw new RuntimeException("no credentials set")
+            }
+        }           
     }
 
     dependencies {
-        classpath 'de.itemis.mps:mps-gradle-plugin:1.0.85.03fbeda'
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.3.206.7322ef0'
     }
 }
 
@@ -30,6 +42,17 @@ group "com.strumenta.mpsserver"
 description = "MpsServer"
 project.archivesBaseName = "mpsserver"
 version = ext.mpsServerVersion
+
+def getGithubCredentials() {
+    if (project.hasProperty("mpsserver.github.user") && project.hasProperty("mpsserver.github.token")) {
+        return new Tuple(project.findProperty("mpsserver.github.user").toString(), project.findProperty("mpsserver.github.token").toString())
+    } else {
+        logger.error("Please specify your github username (gpr.user) and access token (gpr.key) in ~/.gradle/gradle.properties")
+        return null
+    }
+}
+
+ext.githubCredentials = getGithubCredentials()
 
 configurations {
 	mps
@@ -58,13 +81,17 @@ repositories {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
     maven {
-        name = "GitHubPackages"
+        name = "Modelix GitHubPackages"
         url = uri("https://maven.pkg.github.com/modelix/modelix")
-        credentials {
-            username = project.findProperty("github.user")
-            password = project.findProperty("github.token")
+        if (project.findProperty("mpsserver.github.user") != null && project.findProperty("mpsserver.github.token") != null) {
+            credentials {
+                username = project.findProperty("mpsserver.github.user").toString()
+                password = project.findProperty("mpsserver.github.token").toString()
+            }
+        } else {
+        	throw new RuntimeException("no credentials set")
         }
-    }
+    }  
 }
 
 if (!hasProperty("jdk_home")) {
