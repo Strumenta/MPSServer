@@ -201,6 +201,12 @@
       <node concept="m$_yC" id="6mL1JKjI4NU" role="m$_yJ">
         <ref role="m$_y1" to="indb:7gF2HTviNPW" resolve="org.modelix.model" />
       </node>
+      <node concept="m$_yC" id="4ES4R5C1OP" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:2OJNL7ElZsF" resolve="de.q60.mps.collections.libs" />
+      </node>
+      <node concept="m$_yC" id="4ES4R5C1OF" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:5U8hsWC762L" resolve="org.modelix.model.api" />
+      </node>
       <node concept="m$_yC" id="4uvDsSym29g" role="m$_yJ">
         <ref role="m$_y1" to="90a9:4iIKqJTZ5I8" resolve="de.q60.shadowmodels" />
       </node>
@@ -226,23 +232,6 @@
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="6mL1JKjG$LQ" role="1HemKq">
-            <node concept="398BVA" id="6mL1JKjG$LR" role="3LXTmr">
-              <ref role="398BVh" node="6mL1JKjG$Mt" resolve="project.home" />
-              <node concept="2Ry0Ak" id="6mL1JKjG$LS" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="6mL1JKjG$LT" role="2Ry0An">
-                  <property role="2Ry0Am" value="com.strumenta.mpsserver.launcher" />
-                  <node concept="2Ry0Ak" id="6mL1JKjG$LU" role="2Ry0An">
-                    <property role="2Ry0Am" value="models" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3qWCbU" id="6mL1JKjG$LV" role="3LXTna">
-              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-            </node>
-          </node>
           <node concept="3LXTmp" id="6mL1JKjG$Nh" role="1HemKq">
             <node concept="398BVA" id="6mL1JKjG$N5" role="3LXTmr">
               <ref role="398BVh" node="6mL1JKjG$Mt" resolve="project.home" />
@@ -265,11 +254,6 @@
           <node concept="3bR9La" id="6mL1JKjG$M5" role="1SiIV1">
             <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="24gg:4JnP3TV$EDw" resolve="com.strumenta.mpsserver.extensionkit" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="6mL1JKjG$N3" role="3bR37C">
-          <node concept="3bR9La" id="6mL1JKjG$N4" role="1SiIV1">
-            <ref role="3bR37D" to="24gg:2p2ql82MkU0" resolve="com.strumenta.mpsserver.deps" />
           </node>
         </node>
         <node concept="1SiIV0" id="6mL1JKjI4Nv" role="3bR37C">
@@ -731,6 +715,12 @@
     <node concept="_l39y" id="2p2ql82Ml_X" role="10PD9s" />
     <node concept="_awnq" id="2p2ql82Ml$W" role="1hWBAP">
       <ref role="30Vec$" node="2p2ql82Ml_o" resolve="com.strumenta.mpsserver.launcher" />
+      <node concept="24YFd4" id="4ES4R5C1P2" role="5id3f">
+        <ref role="24YFd5" to="90a9:2OJNL7ElZsF" resolve="de.q60.mps.collections.libs" />
+      </node>
+      <node concept="24YFd4" id="4ES4R5C1OZ" role="5id3f">
+        <ref role="24YFd5" to="90a9:5U8hsWC762L" resolve="org.modelix.model.api" />
+      </node>
       <node concept="24YFd4" id="5reNyvT4fvA" role="5id3f">
         <ref role="24YFd5" node="6mL1JKjG$Ls" resolve="mpsserver.modelix.plugin" />
       </node>

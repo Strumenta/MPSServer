@@ -25,6 +25,8 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         response = json.loads(await websocket.recv())
+        if "modules" not in response:
+            raise Exception(f"The message received has not the shape expected {response.to_json()}")
         modules_name = [m["name"] for m in response["modules"]]
         return modules_name
 

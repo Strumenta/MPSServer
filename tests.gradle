@@ -78,7 +78,7 @@ task checkLanguageTests() {
     tasks.findByName('justCheckLanguageTests').mustRunAfter 'runLanguageTests'
 }
 
-task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild]) {
+task prepareFunctionalTests(dependsOn:[packageExtensionKit, packageBuild, resolveApps]) {
     doLast {
         def extensionkitDir = new File(mpscode, 'build/artifacts/mpsserver-extensionkit')
         def buildPluginDir = new File(mpscode, 'build/artifacts/mpsserver-build')

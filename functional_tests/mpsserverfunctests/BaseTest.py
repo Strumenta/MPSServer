@@ -32,7 +32,7 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("Waiting for server to be up...")
+        print("Waiting for MPSServer to be up...")
         if not cls.try_to_connect():
             raise Exception("Initialization failed")
 

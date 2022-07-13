@@ -1170,6 +1170,9 @@
     </node>
     <node concept="m$_wf" id="2p2ql82Ml$Z" role="3989C9">
       <property role="m$_wk" value="mpsserver.launcher.plugin" />
+      <node concept="m$_yC" id="5douuuW2nYg" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4O0hKJpjIV3" resolve="jetbrains.mps.ide.devkit" />
+      </node>
       <node concept="m$_yC" id="4JnP3TV$NV_" role="m$_yJ">
         <ref role="m$_y1" node="1Y19Fp43fxb" resolve="mpsserver.core.plugin" />
       </node>

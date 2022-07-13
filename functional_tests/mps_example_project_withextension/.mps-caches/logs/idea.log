@@ -1,0 +1,69 @@
+2022-07-13 09:18:30,815 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-07-13 09:18:30,930 [    115]   WARN - jetbrains.mps.tool.environment.PlatformPlugins - Could not detect id for plugin at /Users/federico/repos/MPSServer/functional_tests/mps_example_project_withextension/artifacts/mps/lib/mps-workbench.jar 
+2022-07-13 09:18:30,934 [    119]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-07-13 09:18:30,939 [    124]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-07-13 09:18:30,961 [    146]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-07-13 09:18:30,961 [    146]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-07-13 09:18:30,965 [    150]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 131 libraries 
+2022-07-13 09:18:31,693 [    878]   WARN - jetbrains.mps.persistence.DefaultModelRoot - Models have not been found within the Path [/Users/federico/repos/MPSServer/functional_tests/mps_example_project_withextension/artifacts/mpsserver.extensionkit.plugin/languages/mpsserver.extensionkit.group/com.strumenta.mpsserver.deps-src.jar!/module/models] 
+2022-07-13 09:18:33,138 [   2323]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-07-13 09:18:34,087 [   3272]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.944 s 
+2022-07-13 09:18:34,123 [   3308]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:34,479 [   3664]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-07-13 09:18:34,480 [   3665]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-07-13 09:18:34,484 [   3669]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-07-13 09:18:34,484 [   3669]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-07-13 09:18:34,484 [   3669]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp4959202770953088231' is opened 
+2022-07-13 09:18:34,551 [   3736]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.054 s 
+2022-07-13 09:18:34,580 [   3765]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:36,668 [   5853]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.034 s 
+2022-07-13 09:18:36,690 [   5875]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:46,760 [  15945]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.002 s 
+2022-07-13 09:18:46,761 [  15946]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:48,237 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-07-13 09:18:48,375 [    138]   WARN - jetbrains.mps.tool.environment.PlatformPlugins - Could not detect id for plugin at /Users/federico/repos/MPSServer/functional_tests/mps_example_project_withextension/artifacts/mps/lib/mps-workbench.jar 
+2022-07-13 09:18:48,380 [    143]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-07-13 09:18:48,387 [    150]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-07-13 09:18:48,413 [    176]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-07-13 09:18:48,413 [    176]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-07-13 09:18:48,418 [    181]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 169 libraries 
+2022-07-13 09:18:49,210 [    973]   WARN - jetbrains.mps.persistence.DefaultModelRoot - Models have not been found within the Path [/Users/federico/repos/MPSServer/functional_tests/mps_example_project_withextension/artifacts/mpsserver.extensionkit.plugin/languages/mpsserver.extensionkit.group/com.strumenta.mpsserver.deps-src.jar!/module/models] 
+2022-07-13 09:18:50,723 [   2486]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-07-13 09:18:52,228 [   3991]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1.500 s 
+2022-07-13 09:18:52,259 [   4022]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:52,631 [   4394]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-07-13 09:18:52,633 [   4396]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-07-13 09:18:52,637 [   4400]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-07-13 09:18:52,638 [   4401]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-07-13 09:18:52,638 [   4401]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp2305146259451942241' is opened 
+2022-07-13 09:18:52,736 [   4499]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.055 s 
+2022-07-13 09:18:52,755 [   4518]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:52,758 [   4521]   WARN - jetbrains.mps.smodel.language.LanguageRegistry - Missing language runtime class for module ProtocolLanguage (make failed?); returning null 
+2022-07-13 09:18:55,634 [   7397]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:55,635 [   7398]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:55,636 [   7399]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:55,779 [   7542]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:55,803 [   7566]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:55,826 [   7589]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-07-13 09:18:56,115 [   7878]   INFO - jetbrains.mps.make.ModuleMaker - Cycle #1: [[ProtocolLanguage]] 
+2022-07-13 09:18:56,153 [   7916]   INFO - jetbrains.mps.make.ModuleMaker - Compiler in use: JavacTool 
+2022-07-13 09:18:56,922 [   8685]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.028 s 
+2022-07-13 09:18:56,939 [   8702]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:56,943 [   8706]   WARN - jetbrains.mps.smodel.language.LanguageRegistry - No language with id 53e645ec-88f8-4ef4-b3c7-e9d92b8c4eff to unload 
+2022-07-13 09:18:56,952 [   8715]   INFO - jetbrains.mps.classloading.ClassLoaderManager - Reloaded 2 module(s) in 0.058 s 
+2022-07-13 09:18:57,171 [   8934]   INFO - jetbrains.mps.make.ModuleMaker - Cycle #1: [[ProtocolLanguage#01]] 
+2022-07-13 09:18:57,171 [   8934]   INFO - jetbrains.mps.make.ModuleMaker - Compiler in use: JavacTool 
+2022-07-13 09:18:57,281 [   9044]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.034 s 
+2022-07-13 09:18:57,301 [   9064]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:57,305 [   9068]   INFO - jetbrains.mps.classloading.ClassLoaderManager - Reloaded 1 module(s) in 0.059 s 
+2022-07-13 09:18:57,346 [   9109]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.034 s 
+2022-07-13 09:18:57,362 [   9125]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:58,176 [   9939]   INFO - jetbrains.mps.make.ModuleMaker - Cycle #1: [[ProtocolLanguage.sandbox]] 
+2022-07-13 09:18:58,177 [   9940]   INFO - jetbrains.mps.make.ModuleMaker - Compiler in use: JavacTool 
+2022-07-13 09:18:58,292 [  10055]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.035 s 
+2022-07-13 09:18:58,310 [  10073]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:18:58,313 [  10076]   INFO - jetbrains.mps.classloading.ClassLoaderManager - Reloaded 1 module(s) in 0.056 s 
+2022-07-13 09:18:58,343 [  10106]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.026 s 
+2022-07-13 09:18:58,360 [  10123]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-07-13 09:19:08,431 [  20194]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0.002 s 
+2022-07-13 09:19:08,432 [  20195]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
