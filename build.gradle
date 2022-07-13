@@ -39,6 +39,7 @@ configurations {
 	ant_lib
 	libs
 	distribution
+	apps
 }
 
 dependencies {
@@ -48,13 +49,20 @@ dependencies {
     modelixArtifacts "org.modelix:build-scripts:$modelixVersion"
     mpsArtifacts "de.itemis.mps:extensions:$mpsExtensionsVersion"
     libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
+    apps "org.modelix:model-server-fatjar:$modelixVersion"
 }
 
 repositories {	
+	mavenLocal()
 	mavenCentral()
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
+	
+	
+			maven {
+            url = uri("https://artifacts.itemis.cloud/repository/maven-mps/")
+        }
 }
 
 if (!hasProperty("jdk_home")) {
@@ -218,4 +226,3 @@ task runLauncher(dependsOn: [buildLauncher, justRunLauncher, buildModelixExtensi
 apply from: 'package.gradle'
 apply from: 'tests.gradle'
 apply from: 'publication.gradle'
-apply from: 'modelix.gradle'
