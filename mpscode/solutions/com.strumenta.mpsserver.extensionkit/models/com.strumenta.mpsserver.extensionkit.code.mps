@@ -522,6 +522,7 @@
         <node concept="17QB3L" id="3B7hgPa725b" role="1tU5fm" />
       </node>
     </node>
+    <node concept="3Tm1VV" id="6Hz$xA6zDuL" role="1B3o_S" />
     <node concept="3clFb_" id="3BcrcTDcAVr" role="jymVt">
       <property role="TrG5h" value="getLockingManager" />
       <node concept="3Tm1VV" id="3BcrcTDcAVu" role="1B3o_S" />
@@ -530,7 +531,6 @@
         <ref role="3uigEE" node="3BcrcTDcBbg" resolve="ILockingManager" />
       </node>
     </node>
-    <node concept="3Tm1VV" id="6Hz$xA6zDuL" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="6_QtqtnpJ9z">
     <property role="TrG5h" value="Message" />

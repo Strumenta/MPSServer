@@ -26,6 +26,7 @@
       </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -106,6 +107,19 @@
     <ref role="1XX52x" to="va66:2yBD7rQcfRD" resolve="BooleanType" />
     <node concept="PMmxH" id="2yBD7rQgqAV" role="2wV5jI">
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4ZWwHkUXUR9">
+    <ref role="1XX52x" to="va66:Xo7proojPD" resolve="Addition" />
+    <node concept="3EZMnI" id="4ZWwHkUXURg" role="2wV5jI">
+      <node concept="3F0A7n" id="4ZWwHkUXURq" role="3EZMnx">
+        <property role="1O74Pk" value="true" />
+        <ref role="1NtTu8" to="va66:4ZWwHkUXUQX" resolve="value1" />
+      </node>
+      <node concept="2iRfu4" id="4ZWwHkUXURj" role="2iSdaV" />
+      <node concept="3F0A7n" id="4ZWwHkUXURw" role="3EZMnx">
+        <ref role="1NtTu8" to="va66:4ZWwHkUXUQX" resolve="value1" />
+      </node>
     </node>
   </node>
 </model>

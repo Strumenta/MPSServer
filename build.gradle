@@ -12,7 +12,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'de.itemis.mps:mps-gradle-plugin:1.0.85.03fbeda'
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.3.206.7322ef0'
     }
 }
 
@@ -39,7 +39,7 @@ configurations {
 	ant_lib
 	libs
 	distribution
-	apps
+    apps
 }
 
 dependencies {
@@ -48,8 +48,8 @@ dependencies {
     modelixArtifacts "org.modelix:mps-model-plugin:$modelixVersion"
     modelixArtifacts "org.modelix:build-scripts:$modelixVersion"
     mpsArtifacts "de.itemis.mps:extensions:$mpsExtensionsVersion"
-    libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
     apps "org.modelix:model-server-fatjar:$modelixVersion"
+    libs 'com.beijunyi:parallelgit-filesystem:2.0.0'
 }
 
 repositories {	
@@ -58,8 +58,8 @@ repositories {
 	maven {
 		url 'https://projects.itemis.de/nexus/content/groups/OS/'
 	}
-	
-	
+
+
 			maven {
             url = uri("https://artifacts.itemis.cloud/repository/maven-mps/")
         }
@@ -130,6 +130,13 @@ task resolveModelixArtifacts(type: Copy) {
         configurations.modelixArtifacts.resolve().collect { zipTree(it) }
     }
     into new File(modelixDir, "plugins")
+}
+
+task resolveApps(type: Copy) {
+    from {
+        configurations.apps.singleFile
+    }
+    into new File(rootDir, "apps")
 }
 
 task resolveLibs(type: Sync) {
