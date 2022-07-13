@@ -67,13 +67,13 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
             uuid = response["blockUUID"]
             await websocket.send(
                 json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("GetIntentionsBlockAnswer", response["type"])
             self.assertEqual(
                 [
@@ -100,7 +100,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
             uuid = response["blockUUID"]
             await websocket.send(
@@ -109,7 +109,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
             await websocket.send(
                 json.dumps({"type": "GetIntentionsBlock", "blockUUID": uuid})
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("GetIntentionsBlockAnswer", response["type"])
             self.assertEqual(False, response["result"]["success"])
             await websocket.close()
@@ -130,7 +130,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response["type"])
             uuid = response["blockUUID"]
             await websocket.send(
@@ -157,7 +157,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
             self.assertEqual("req-a-123", response["id"])
             uuid = response["result"]["blockUUID"]
@@ -166,7 +166,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                             "params": {"blockUUID": uuid},
                             "id": "req-a-124"})
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("GetIntentionsBlockAnswer", response["result"]["type"])
             self.assertEqual(
                 [
@@ -197,7 +197,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response['result']["type"])
             uuid = response['result']["blockUUID"]
             await websocket.send(
@@ -206,7 +206,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
             await websocket.send(
                 json.dumps({"method": "GetIntentionsBlock", "params": {"blockUUID": uuid}})
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("GetIntentionsBlockAnswer", response["result"]["type"])
             self.assertEqual(False, response["result"]["result"]["success"])
             await websocket.close()
@@ -229,7 +229,7 @@ class IntentionsWsTestCase(BaseAsyncTest):
                     }
                 )
             )
-            response = json.loads(await websocket.recv())
+            response = await self._get_response(websocket)
             self.assertEqual("CreateIntentionsBlockAnswer", response["result"]["type"])
             uuid = response["result"]["blockUUID"]
             await websocket.send(

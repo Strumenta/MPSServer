@@ -24,9 +24,9 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
         if "modules" not in response:
-            raise Exception(f"The message received has not the shape expected {response.to_json()}")
+            raise Exception(f"The message received has not the shape expected {response}")
         modules_name = [m["name"] for m in response["modules"]]
         return modules_name
 
@@ -38,7 +38,7 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
         modules_name = [m["name"] for m in response["result"]["modules"]]
         return modules_name
 
@@ -57,7 +57,7 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         print("sent req_id %s" % req_id)
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
         print(response)
         self.assertEqual(req_id, response['requestId'])
         self.assertEqual(True, response['success'])
@@ -80,7 +80,8 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         print("sent req_id %s" % req_id)
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
+        print("_checkout_module_jsonrpc")
         print(response)
         self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response['result']['success'])
@@ -97,7 +98,7 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         print("sent req_id %s" % req_id)
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
         print(response)
         self.assertEqual(req_id, response['requestId'])
         self.assertEqual(True, response['success'])
@@ -114,7 +115,7 @@ class ExtensionsTestCase(BaseAsyncTest):
             )
         )
         print("sent req_id %s" % req_id)
-        response = json.loads(await websocket.recv())
+        response = await self._get_response(websocket)
         print(response)
         self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response["result"]['success'])
