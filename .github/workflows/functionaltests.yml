@@ -26,14 +26,14 @@ jobs:
           mkdir -p ~/.cache/pypoetry/virtualenvs
           poetry env use python
           poetry install                        
-      - name: prepareFunctionalTests
+      - name: Prepare Functional Tests
         run: |
           ./gradlew prepareFunctionalTests
       - name: buildProtocolLanguage
         run: |
           cd functional_tests
           ../gradlew buildProtocolLanguage
-      - name: Install through Poetry
+      - name: Execute functional tests
         run: |
           cd functional_tests
           source $HOME/.poetry/env
