@@ -325,8 +325,13 @@
           </node>
           <node concept="22lmx$" id="3pfWNm6rWIz" role="3clFbw">
             <node concept="17R0WA" id="6Jg9HT9UXqw" role="3uHU7B">
-              <node concept="37vLTw" id="6Jg9HT9UXqy" role="3uHU7B">
-                <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+              <node concept="2OqwBi" id="65iinc_z3pB" role="3uHU7B">
+                <node concept="37vLTw" id="6Jg9HT9UXqy" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+                </node>
+                <node concept="liA8E" id="65iinc_z4bM" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                </node>
               </node>
               <node concept="Xl_RD" id="6Jg9HT9UXqx" role="3uHU7w">
                 <property role="Xl_RC" value="enabled" />
@@ -336,8 +341,13 @@
               <node concept="Xl_RD" id="3pfWNm6rWNl" role="3uHU7w">
                 <property role="Xl_RC" value="true" />
               </node>
-              <node concept="37vLTw" id="3pfWNm6rWNm" role="3uHU7B">
-                <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+              <node concept="2OqwBi" id="65iinc_z4zE" role="3uHU7B">
+                <node concept="37vLTw" id="3pfWNm6rWNm" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+                </node>
+                <node concept="liA8E" id="65iinc_z5bk" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                </node>
               </node>
             </node>
           </node>
