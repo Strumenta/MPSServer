@@ -6,8 +6,12 @@ java -jar apps/model-server-fatjar-2021.1.116.jar -inmemory -dumpin functional_t
 MODEL_SERVER_PID=$!
 
 cd functional_tests
-poetry run python -m unittest discover mpsserverfunctests -p '*Tests.py'
+timeout 1000 poetry run python -m unittest discover mpsserverfunctests -p '*Tests.py'
 RESULT=$?
 kill -9 $MPS_SERVER_PID
 kill -9 $MODEL_SERVER_PID
+if [ $RESULT -eq 124 ]
+then
+echo 'Process Timed Out!'
+fi
 exit $RESULT
