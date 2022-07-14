@@ -12,7 +12,7 @@ MODEL_SERVER_PID=$!
 echo "[Execute functional tests : Modelix server started]"
 
 cd functional_tests
-timeout 700 poetry run python -m unittest -v discover mpsserverfunctests -p '*Tests.py'
+timeout 700 poetry run python -m unittest discover mpsserverfunctests -p '*Tests.py' -v
 RESULT=$?
 echo "[Execute functional tests : Tests executed]"
 
