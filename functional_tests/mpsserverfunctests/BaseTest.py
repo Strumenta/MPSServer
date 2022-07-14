@@ -22,8 +22,8 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
             if 'result' in response and 'type' in response['result'] and response['result']['type'] == 'KeepAlive':
                 return await self._get_response(websocket)
             return response
-        except:
-            raise Exception("Could not obtain answer")
+        except Exception as e:
+            raise Exception("Could not obtain answer") from e
 
     @classmethod
     def try_to_connect(cls, attempts_left=100):

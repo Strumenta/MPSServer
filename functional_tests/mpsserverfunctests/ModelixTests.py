@@ -77,7 +77,6 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
         self.assertEqual(False, 'error' in response)
         self.assertEqual(req_id, response['id'])
@@ -94,9 +93,7 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        #print(response)
         self.assertEqual(req_id, response['requestId'])
         self.assertEqual(True, response['success'])
         self.assertEqual('DoneAnswerMessage', response['type'])
@@ -111,9 +108,7 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        #print(response)
         self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response["result"]['success'])
         self.assertEqual('DoneAnswerMessage', response["result"]['type'])
