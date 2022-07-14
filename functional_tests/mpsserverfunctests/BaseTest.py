@@ -15,12 +15,15 @@ MODEL_SERVER_URL = "http://localhost:7777"
 class BaseAsyncTest(aiounittest.AsyncTestCase):
 
     async def _get_response(self, websocket):
-        response = json.loads(await websocket.recv())
-        if 'type' in response and response['type'] == 'KeepAlive':
-            return await self._get_response(websocket)
-        if 'result' in response and 'type' in response['result'] and response['result']['type'] == 'KeepAlive':
-            return await self._get_response(websocket)
-        return response
+        try:
+            response = json.loads(await websocket.recv())
+            if 'type' in response and response['type'] == 'KeepAlive':
+                return await self._get_response(websocket)
+            if 'result' in response and 'type' in response['result'] and response['result']['type'] == 'KeepAlive':
+                return await self._get_response(websocket)
+            return response
+        except:
+            raise Exception("Could not obtain answer")
 
     @classmethod
     def try_to_connect(cls, attempts_left=100):

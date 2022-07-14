@@ -56,9 +56,7 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        print(response)
         self.assertEqual(req_id, response['requestId'])
         self.assertEqual(True, response['success'])
         self.assertEqual('DoneAnswerMessage', response['type'])
@@ -79,10 +77,9 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        print("sent req_id %s" % req_id)
+        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        print("_checkout_module_jsonrpc")
-        print(response)
+        self.assertEqual(False, 'error' in response)
         self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response['result']['success'])
         self.assertEqual('DoneAnswerMessage', response['result']['type'])
@@ -97,9 +94,9 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        print("sent req_id %s" % req_id)
+        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        print(response)
+        #print(response)
         self.assertEqual(req_id, response['requestId'])
         self.assertEqual(True, response['success'])
         self.assertEqual('DoneAnswerMessage', response['type'])
@@ -114,9 +111,9 @@ class ExtensionsTestCase(BaseAsyncTest):
                 }
             )
         )
-        print("sent req_id %s" % req_id)
+        #print("sent req_id %s" % req_id)
         response = await self._get_response(websocket)
-        print(response)
+        #print(response)
         self.assertEqual(req_id, response['id'])
         self.assertEqual(True, response["result"]['success'])
         self.assertEqual('DoneAnswerMessage', response["result"]['type'])
@@ -131,7 +128,7 @@ class ExtensionsTestCase(BaseAsyncTest):
 
             # 2. Check out the module
             await self._checkout_module_custom(websocket, module_name="com.strumenta.mpsserver.javaexample",
-                                               repository_id="testrepo1", version_id="3901584326462014052")
+                                               repository_id="testrepo2", version_id="3901584326462014588")
 
             # 3. Check the module is in the list of modules
             modules_names = await self._get_modules_names_custom(websocket)
@@ -159,7 +156,7 @@ class ExtensionsTestCase(BaseAsyncTest):
 
             # 2. Check out the module
             await self._checkout_module_jsonrpc(websocket, module_name="com.strumenta.mpsserver.javaexample",
-                                                repository_id="testrepo1", version_id="3901584326462014052")
+                                                repository_id="testrepo2", version_id="3901584326462014588")
 
             # 3. Check the module is in the list of modules
             modules_names = await self._get_modules_names_jsonrpc(websocket)
