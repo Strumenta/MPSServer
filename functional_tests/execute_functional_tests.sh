@@ -12,12 +12,12 @@ MODEL_SERVER_PID=$!
 echo "[Execute functional tests : Modelix server started]"
 
 cd functional_tests
-timeout 1000 poetry run python -m unittest discover mpsserverfunctests -p '*Tests.py'
+timeout 700 poetry run python -m unittest -v discover mpsserverfunctests -p '*Tests.py'
 RESULT=$?
 echo "[Execute functional tests : Tests executed]"
 
-kill -9 $MPS_SERVER_PID
-kill -9 $MODEL_SERVER_PID
+kill -9 $MPS_SERVER_PID || echo "MPSServer killing failed"
+kill -9 $MODEL_SERVER_PID || echo "Modelix Model Server killing failed"
 if [ $RESULT -eq 124 ]
 then
 echo 'Process Timed Out!'
