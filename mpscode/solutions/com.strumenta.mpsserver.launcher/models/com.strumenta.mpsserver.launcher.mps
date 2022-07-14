@@ -122,6 +122,9 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
+        <child id="1079359253376" name="expression" index="1eOMHV" />
+      </concept>
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -323,30 +326,40 @@
               </node>
             </node>
           </node>
-          <node concept="22lmx$" id="3pfWNm6rWIz" role="3clFbw">
-            <node concept="17R0WA" id="6Jg9HT9UXqw" role="3uHU7B">
-              <node concept="2OqwBi" id="65iinc_z3pB" role="3uHU7B">
-                <node concept="37vLTw" id="6Jg9HT9UXqy" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
-                </node>
-                <node concept="liA8E" id="65iinc_z4bM" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
-                </node>
-              </node>
-              <node concept="Xl_RD" id="6Jg9HT9UXqx" role="3uHU7w">
-                <property role="Xl_RC" value="enabled" />
+          <node concept="1Wc70l" id="65iinc_DCUD" role="3clFbw">
+            <node concept="3y3z36" id="65iinc_DE5l" role="3uHU7B">
+              <node concept="10Nm6u" id="65iinc_DEGD" role="3uHU7w" />
+              <node concept="37vLTw" id="65iinc_DDsj" role="3uHU7B">
+                <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
               </node>
             </node>
-            <node concept="17R0WA" id="3pfWNm6rWNk" role="3uHU7w">
-              <node concept="Xl_RD" id="3pfWNm6rWNl" role="3uHU7w">
-                <property role="Xl_RC" value="true" />
-              </node>
-              <node concept="2OqwBi" id="65iinc_z4zE" role="3uHU7B">
-                <node concept="37vLTw" id="3pfWNm6rWNm" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+            <node concept="1eOMI4" id="65iinc_DFg1" role="3uHU7w">
+              <node concept="22lmx$" id="3pfWNm6rWIz" role="1eOMHV">
+                <node concept="17R0WA" id="6Jg9HT9UXqw" role="3uHU7B">
+                  <node concept="2OqwBi" id="65iinc_z3pB" role="3uHU7B">
+                    <node concept="37vLTw" id="6Jg9HT9UXqy" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+                    </node>
+                    <node concept="liA8E" id="65iinc_z4bM" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="6Jg9HT9UXqx" role="3uHU7w">
+                    <property role="Xl_RC" value="enabled" />
+                  </node>
                 </node>
-                <node concept="liA8E" id="65iinc_z5bk" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                <node concept="17R0WA" id="3pfWNm6rWNk" role="3uHU7w">
+                  <node concept="Xl_RD" id="3pfWNm6rWNl" role="3uHU7w">
+                    <property role="Xl_RC" value="true" />
+                  </node>
+                  <node concept="2OqwBi" id="65iinc_z4zE" role="3uHU7B">
+                    <node concept="37vLTw" id="3pfWNm6rWNm" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6Jg9HT9UXq6" resolve="enableExtraLogging" />
+                    </node>
+                    <node concept="liA8E" id="65iinc_z5bk" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
