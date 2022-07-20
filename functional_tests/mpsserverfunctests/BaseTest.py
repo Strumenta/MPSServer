@@ -4,6 +4,7 @@ import aiounittest as aiounittest
 import requests
 import time
 import json
+import logging
 
 PORT = 7994
 BASE_URL = "http://localhost:%d" % PORT
@@ -27,17 +28,18 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
 
     @classmethod
     def try_to_connect(cls, attempts_left=65):
+        log = cls.getLogger()
         try:
             r = requests.get(BASE_URL)
             if r.status_code == 200:
-                print(f"{cls.classSignaturePrefix()} [connected to MPSServer]")
+                log.debug(f"{cls.classSignaturePrefix()} [connected to MPSServer]")
                 return True
             else:
                 print("status code: %d" % r.status_code)
                 return False
         except Exception:
             if attempts_left > 0:
-                print(f"  {cls.classSignaturePrefix()} attempts left: %d" % attempts_left)
+                log.debug(f"  {cls.classSignaturePrefix()} attempts left: %d" % attempts_left)
                 time.sleep(5)
                 return cls.try_to_connect(attempts_left - 1)
             else:
@@ -45,29 +47,39 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
 
     @classmethod
     def classSignaturePrefix(cls):
-        return f"(test class {cls.__class__.__name__})"
+        return f"(test class {cls.__name__})"
+
+    @classmethod
+    def getLogger(cls):
+        return logging.getLogger(cls.__name__)
 
     @classmethod
     def setUpClass(cls):
-        print(f"{cls.classSignaturePrefix()} Waiting for MPSServer to be up...")
+        log = cls.getLogger()
+        log.debug(f"{cls.classSignaturePrefix()} Waiting for MPSServer to be up...")
         if not cls.try_to_connect():
             raise Exception("Initialization failed")
 
 
 class BaseTest(unittest.TestCase):
     @classmethod
+    def getLogger(cls):
+        return logging.getLogger(cls.__name__)
+
+    @classmethod
     def try_to_connect(cls, attempts_left=65):
+        log = cls.getLogger()
         try:
             r = requests.get(BASE_URL)
             if r.status_code == 200:
-                print(f"{cls.classSignaturePrefix()} [connected to MPSServer]")
+                log.debug(f"{cls.classSignaturePrefix()} [connected to MPSServer]")
                 return True
             else:
-                print("status code: %d" % r.status_code)
+                log.debug("status code: %d" % r.status_code)
                 return False
         except Exception:
             if attempts_left > 0:
-                print(f"  {cls.classSignaturePrefix()} attemps left: %d" % attempts_left)
+                log.debug(f"  {cls.classSignaturePrefix()} attempts left: %d" % attempts_left)
                 time.sleep(5)
                 return cls.try_to_connect(attempts_left - 1)
             else:
@@ -75,10 +87,11 @@ class BaseTest(unittest.TestCase):
 
     @classmethod
     def classSignaturePrefix(cls):
-        return f"(test class {cls.__class__.__name__})"
+        return f"(test class {cls.__name__})"
 
     @classmethod
     def setUpClass(cls):
-        print(f"{cls.classSignaturePrefix()} Waiting for server to be up...")
+        log = cls.getLogger()
+        log.debug(f"{cls.classSignaturePrefix()} Waiting for server to be up...")
         if not cls.try_to_connect():
             raise Exception("Initialization failed")

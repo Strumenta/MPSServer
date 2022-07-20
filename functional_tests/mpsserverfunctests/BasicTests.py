@@ -1,6 +1,7 @@
 import unittest
 import requests
 import time
+import logging
 
 from BaseTest import BaseTest, BASE_URL
 
@@ -144,5 +145,6 @@ if __name__ == "__main__":
     import os
     import sys
 
+    logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
     sys.path.append(os.getcwd())
     unittest.main()

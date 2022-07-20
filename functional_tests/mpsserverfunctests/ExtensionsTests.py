@@ -2,6 +2,7 @@ import unittest
 
 import requests
 from BaseTest import BaseAsyncTest, BASE_URL
+import logging
 
 
 class ExtensionsTestCase(BaseAsyncTest):
@@ -39,5 +40,6 @@ if __name__ == "__main__":
     import os
     import sys
 
+    logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
     sys.path.append(os.getcwd())
     unittest.main()

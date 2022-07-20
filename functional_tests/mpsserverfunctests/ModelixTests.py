@@ -4,6 +4,8 @@ import time
 import unittest
 import uuid
 import websockets
+import logging
+
 
 from BaseTest import BaseAsyncTest, BASE_WS_URL_CUSTOM, BASE_WS_URL_JSONRPC, MODEL_SERVER_URL
 
@@ -174,5 +176,6 @@ if __name__ == "__main__":
     import os
     import sys
 
+    logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
     sys.path.append(os.getcwd())
     unittest.main()

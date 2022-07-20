@@ -6,6 +6,7 @@ import unittest
 import requests
 import websockets
 from BaseTest import BaseTest, BASE_URL, BASE_WS_URL_CUSTOM, BASE_WS_URL_JSONRPC, BaseAsyncTest
+import logging
 
 
 class IntentionsHttpTestCase(BaseTest):
@@ -244,5 +245,6 @@ if __name__ == "__main__":
     import os
     import sys
 
+    logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
     sys.path.append(os.getcwd())
     unittest.main()
