@@ -8,7 +8,7 @@ import websockets
 from BaseTest import BaseAsyncTest, BASE_WS_URL_CUSTOM, BASE_WS_URL_JSONRPC, MODEL_SERVER_URL
 
 
-class ExtensionsTestCase(BaseAsyncTest):
+class ModelixTestCase(BaseAsyncTest):
     @classmethod
     def setUpClass(cls):
         BaseAsyncTest.setUpClass()
