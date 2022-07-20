@@ -26,28 +26,33 @@ class BaseAsyncTest(aiounittest.AsyncTestCase):
             raise Exception("Could not obtain answer") from e
 
     @classmethod
-    def try_to_connect(cls, attempts_left=100):
+    def try_to_connect(cls, attempts_left=65):
         try:
             r = requests.get(BASE_URL)
             if r.status_code == 200:
-                print("[connected to MPSServer]")
+                print(f"{cls.classSignaturePrefix()} [connected to MPSServer]")
                 return True
             else:
                 print("status code: %d" % r.status_code)
                 return False
         except Exception:
             if attempts_left > 0:
-                print("  attemps left: %d" % attempts_left)
+                print(f"  {cls.classSignaturePrefix()} attempts left: %d" % attempts_left)
                 time.sleep(5)
                 return cls.try_to_connect(attempts_left - 1)
             else:
                 raise Exception("Too many attempts, giving up")
 
     @classmethod
+    def classSignaturePrefix(cls):
+        return f"(test class {cls.__class__.__name__})"
+
+    @classmethod
     def setUpClass(cls):
-        print("Waiting for MPSServer to be up...")
+        print(f"{cls.classSignaturePrefix()} Waiting for MPSServer to be up...")
         if not cls.try_to_connect():
             raise Exception("Initialization failed")
+        print(f"{cls.classSignaturePrefix()} Connected")
 
 
 class BaseTest(unittest.TestCase):
