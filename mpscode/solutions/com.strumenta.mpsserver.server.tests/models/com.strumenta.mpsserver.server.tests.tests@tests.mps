@@ -2,12 +2,12 @@
 <model ref="r:086a4983-b245-40f9-a1ab-f4ca8b2b0f03(com.strumenta.mpsserver.server.tests.tests@tests)">
   <persistence version="9" />
   <languages>
-    <use id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test" version="5" />
+    <use id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test" version="6" />
     <use id="f61473f9-130f-42f6-b98d-6c438812c2f6" name="jetbrains.mps.baseLanguage.unitTest" version="1" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="1" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
     <use id="96ad5b8f-04fe-4e16-a7d6-0e014b8726e4" name="com.strumenta.businessorg" version="0" />
@@ -55,6 +55,7 @@
       </concept>
       <concept id="1225467090849" name="jetbrains.mps.lang.test.structure.ProjectExpression" flags="nn" index="1jxXqW" />
       <concept id="1216913645126" name="jetbrains.mps.lang.test.structure.NodesTestCase" flags="lg" index="1lH9Xt">
+        <property id="2616911529524314943" name="accessMode" index="3DII0k" />
         <child id="1217501822150" name="nodesToCheck" index="1SKRRt" />
         <child id="1217501895093" name="testMethods" index="1SL9yI" />
       </concept>
@@ -390,6 +391,7 @@
   </registry>
   <node concept="1lH9Xt" id="4XQ2p$w2674">
     <property role="TrG5h" value="DataExposerTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="4XQ2p$w279M" role="1SL9yI">
       <property role="TrG5h" value="getModulesListWithUUID" />
       <node concept="3cqZAl" id="4XQ2p$w279N" role="3clF45" />
@@ -2978,6 +2980,7 @@
   </node>
   <node concept="1lH9Xt" id="Fhwl$azNhY">
     <property role="TrG5h" value="DataExposerWithCustomRepoTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="Fhwl$azYFd" role="1SL9yI">
       <property role="TrG5h" value="modulesListEmpty" />
       <node concept="3cqZAl" id="Fhwl$azYFe" role="3clF45" />
@@ -3538,6 +3541,7 @@
   </node>
   <node concept="1lH9Xt" id="bXFpGBmBVJ">
     <property role="TrG5h" value="CheckingErrors" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="bXFpGBmBW5" role="1SL9yI">
       <property role="TrG5h" value="calculatingTypeOnBuiltModel" />
       <node concept="3cqZAl" id="bXFpGBmBW6" role="3clF45" />
@@ -5592,6 +5596,7 @@
   </node>
   <node concept="1lH9Xt" id="6DSZY3wLHpO">
     <property role="TrG5h" value="IntentionIntegrationsTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1qefOq" id="6DSZY3wLJ0v" role="1SKRRt">
       <node concept="1sDjY4" id="6DSZY3wLJ7f" role="1qenE9">
         <property role="TrG5h" value="MyOrganization" />
@@ -6173,6 +6178,7 @@
   </node>
   <node concept="1lH9Xt" id="2R9WLW3Zxpk">
     <property role="TrG5h" value="ServerControllerTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="2R9WLW3Zxpl" role="1SL9yI">
       <property role="TrG5h" value="getModulesListWithUUID" />
       <node concept="3cqZAl" id="2R9WLW3Zxpm" role="3clF45" />
@@ -6343,6 +6349,7 @@
   </node>
   <node concept="1lH9Xt" id="5CDZnbmlVW$">
     <property role="TrG5h" value="SerializationTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="5CDZnbmlVW_" role="1SL9yI">
       <property role="TrG5h" value="serializationAndUnserializationOfRegularNodeIDInfo" />
       <node concept="3cqZAl" id="5CDZnbmlVWA" role="3clF45" />
@@ -8385,6 +8392,7 @@
   </node>
   <node concept="1lH9Xt" id="4NnQddZ_idV">
     <property role="TrG5h" value="ModulesRoutesTest" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
     <node concept="1LZb2c" id="4NnQddZ_kON" role="1SL9yI">
       <property role="TrG5h" value="serializeLanguageInfo" />
       <node concept="3cqZAl" id="4NnQddZ_kOO" role="3clF45" />
@@ -8453,12 +8461,17 @@
           </node>
         </node>
         <node concept="RRSsy" id="5shB1pJccEz" role="3cqZAp">
-          <node concept="2OqwBi" id="5shB1pJccE$" role="RRSoy">
-            <node concept="37vLTw" id="5shB1pJccE_" role="2Oq$k0">
-              <ref role="3cqZAo" node="4NnQddZ_yqW" resolve="root" />
+          <node concept="2OqwBi" id="4sWconkrb7M" role="RRSoy">
+            <node concept="2OqwBi" id="5shB1pJccE$" role="2Oq$k0">
+              <node concept="37vLTw" id="5shB1pJccE_" role="2Oq$k0">
+                <ref role="3cqZAo" node="4NnQddZ_yqW" resolve="root" />
+              </node>
+              <node concept="liA8E" id="5shB1pJccEA" role="2OqNvi">
+                <ref role="37wK5l" to="wy2b:~JsonObject.keySet()" resolve="keySet" />
+              </node>
             </node>
-            <node concept="liA8E" id="5shB1pJccEA" role="2OqNvi">
-              <ref role="37wK5l" to="wy2b:~JsonObject.keySet()" resolve="keySet" />
+            <node concept="liA8E" id="4sWconkrelm" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~Object.toString()" resolve="toString" />
             </node>
           </node>
         </node>

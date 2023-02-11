@@ -3,11 +3,11 @@
   <persistence version="9" />
   <attribute name="doNotGenerate" value="false" />
   <languages>
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="9" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="1" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
@@ -83,9 +83,9 @@
     <import index="5zyv" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.concurrent(JDK/)" />
     <import index="i9so" ref="r:9e5578e0-37f0-4c9b-a301-771bcb453678(jetbrains.mps.make.script)" />
     <import index="et5u" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.messages(MPS.Core/)" />
-    <import index="pdwk" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.core.aspects.constraints.rules.kinds(MPS.Core/)" />
     <import index="zf81" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.net(JDK/)" />
     <import index="i8bi" ref="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" />
+    <import index="pdwk" ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee/java:jetbrains.mps.core.aspects.constraints.rules.kinds(jetbrains.mps.lang.constraints.rules.runtime/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" implicit="true" />
     <import index="tpek" ref="r:00000000-0000-4000-0000-011c895902c0(jetbrains.mps.baseLanguage.behavior)" implicit="true" />
@@ -510,6 +510,7 @@
       <concept id="1143226024141" name="jetbrains.mps.lang.smodel.structure.SModelType" flags="in" index="H_c77" />
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS" />
+      <concept id="8329979535468945057" name="jetbrains.mps.lang.smodel.structure.Node_PresentationOperation" flags="ng" index="2Iv5rx" />
       <concept id="1145404486709" name="jetbrains.mps.lang.smodel.structure.SemanticDowncastExpression" flags="nn" index="2JrnkZ">
         <child id="1145404616321" name="leftExpression" index="2JrQYb" />
       </concept>
@@ -12035,7 +12036,7 @@
                       <ref role="3cqZAo" node="5CDZnbmhlnh" resolve="casted" />
                     </node>
                     <node concept="liA8E" id="5CDZnbmhoXG" role="2OqNvi">
-                      <ref role="37wK5l" to="i290:~JavaPackageModelId.toString()" resolve="toString" />
+                      <ref role="37wK5l" to="i290:~PackageModelId.toString()" resolve="toString" />
                     </node>
                   </node>
                   <node concept="2OqwBi" id="5CDZnbmhm_E" role="37vLTJ">
@@ -13057,8 +13058,11 @@
           <node concept="1rXfSq" id="3pqysXhSoAn" role="3clFbG">
             <ref role="37wK5l" node="3pqysXhRAAb" resolve="log" />
             <node concept="3cpWs3" id="3pqysXhSwXw" role="37wK5m">
-              <node concept="37vLTw" id="3pqysXhSxet" role="3uHU7w">
-                <ref role="3cqZAo" node="3pqysXh5vaz" resolve="node" />
+              <node concept="2OqwBi" id="6LtPju8OI6V" role="3uHU7w">
+                <node concept="37vLTw" id="3pqysXhSxet" role="2Oq$k0">
+                  <ref role="3cqZAo" node="3pqysXh5vaz" resolve="node" />
+                </node>
+                <node concept="2Iv5rx" id="6LtPju8OI6W" role="2OqNvi" />
               </node>
               <node concept="Xl_RD" id="3pqysXhSoAo" role="3uHU7B">
                 <property role="Xl_RC" value="DataExposer, overrideNodeHelpoverrideNodeHelper " />
@@ -13411,8 +13415,11 @@
                         <node concept="1rXfSq" id="1B3M9ZkwmpV" role="3clFbG">
                           <ref role="37wK5l" node="3pqysXhRAAb" resolve="log" />
                           <node concept="3cpWs3" id="1B3M9ZkwmDa" role="37wK5m">
-                            <node concept="37vLTw" id="1B3M9ZkwnA5" role="3uHU7w">
-                              <ref role="3cqZAo" node="3pqysXhey9x" resolve="child" />
+                            <node concept="2OqwBi" id="6LtPju8OI85" role="3uHU7w">
+                              <node concept="37vLTw" id="1B3M9ZkwnA5" role="2Oq$k0">
+                                <ref role="3cqZAo" node="3pqysXhey9x" resolve="child" />
+                              </node>
+                              <node concept="2Iv5rx" id="6LtPju8OI86" role="2OqNvi" />
                             </node>
                             <node concept="Xl_RD" id="1B3M9Zkwmy_" role="3uHU7B">
                               <property role="Xl_RC" value="adding to removed children to place later: " />
@@ -23351,8 +23358,11 @@
             <node concept="Xl_RD" id="5shB1pJd1Nm" role="3uHU7B">
               <property role="Xl_RC" value="triggerErrorsCheck, root " />
             </node>
-            <node concept="37vLTw" id="5shB1pJd1Nn" role="3uHU7w">
-              <ref role="3cqZAo" node="2j5iOBR5DH4" resolve="root" />
+            <node concept="2OqwBi" id="6LtPju8OIqZ" role="3uHU7w">
+              <node concept="37vLTw" id="5shB1pJd1Nn" role="2Oq$k0">
+                <ref role="3cqZAo" node="2j5iOBR5DH4" resolve="root" />
+              </node>
+              <node concept="2Iv5rx" id="6LtPju8OIr0" role="2OqNvi" />
             </node>
           </node>
         </node>
@@ -30533,8 +30543,11 @@
                           <node concept="1pGfFk" id="4SXjM9bdmWl" role="2ShVmc">
                             <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.String)" resolve="RuntimeException" />
                             <node concept="3cpWs3" id="4SXjM9bdnTo" role="37wK5m">
-                              <node concept="37vLTw" id="4SXjM9bdoza" role="3uHU7w">
-                                <ref role="3cqZAo" node="4SXjM9bbPDY" resolve="siblingSNode" />
+                              <node concept="2OqwBi" id="6LtPju8OIuq" role="3uHU7w">
+                                <node concept="37vLTw" id="4SXjM9bdoza" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="4SXjM9bbPDY" resolve="siblingSNode" />
+                                </node>
+                                <node concept="2Iv5rx" id="6LtPju8OIur" role="2OqNvi" />
                               </node>
                               <node concept="Xl_RD" id="4SXjM9bdnn$" role="3uHU7B">
                                 <property role="Xl_RC" value="No containment link for node " />
@@ -31547,8 +31560,8 @@
                                   <node concept="2OqwBi" id="1nQik02sAa2" role="2Oq$k0">
                                     <node concept="2OqwBi" id="1nQik02szkJ" role="2Oq$k0">
                                       <node concept="2ShNRf" id="1nQik02s6Ky" role="2Oq$k0">
-                                        <node concept="1pGfFk" id="1nQik02syF_" role="2ShVmc">
-                                          <ref role="37wK5l" to="pdwk:~ContainmentContext$Builder.&lt;init&gt;()" resolve="ContainmentContext.Builder" />
+                                        <node concept="1pGfFk" id="6LtPju8TtPj" role="2ShVmc">
+                                          <ref role="37wK5l" to="pdwk:~ContainmentContext$Builder.&lt;init&gt;()" resolve="Builder" />
                                         </node>
                                       </node>
                                       <node concept="liA8E" id="1nQik02s$Tw" role="2OqNvi">
@@ -31584,10 +31597,10 @@
                               <node concept="10P_77" id="1nQik02BY3w" role="1tU5fm" />
                               <node concept="1Wc70l" id="1nQik02C0xF" role="33vP2m">
                                 <node concept="2OqwBi" id="1nQik02BZt1" role="3uHU7B">
-                                  <node concept="2YIFZM" id="1nQik02BZt2" role="2Oq$k0">
+                                  <node concept="2YIFZM" id="6LtPju90jkc" role="2Oq$k0">
                                     <ref role="37wK5l" to="ykok:~ConstraintsCanBeFacade.checkCanBeParent(jetbrains.mps.core.aspects.constraints.rules.kinds.ContainmentContext)" resolve="checkCanBeParent" />
                                     <ref role="1Pybhc" to="ykok:~ConstraintsCanBeFacade" resolve="ConstraintsCanBeFacade" />
-                                    <node concept="37vLTw" id="1nQik02BZt3" role="37wK5m">
+                                    <node concept="37vLTw" id="6LtPju90jkd" role="37wK5m">
                                       <ref role="3cqZAo" node="1nQik02s5EN" resolve="cc" />
                                     </node>
                                   </node>
@@ -31596,10 +31609,10 @@
                                   </node>
                                 </node>
                                 <node concept="2OqwBi" id="1nQik02C190" role="3uHU7w">
-                                  <node concept="2YIFZM" id="1nQik02C191" role="2Oq$k0">
+                                  <node concept="2YIFZM" id="6LtPju90pYZ" role="2Oq$k0">
                                     <ref role="37wK5l" to="ykok:~ConstraintsCanBeFacade.checkCanBeChild(jetbrains.mps.core.aspects.constraints.rules.kinds.ContainmentContext)" resolve="checkCanBeChild" />
                                     <ref role="1Pybhc" to="ykok:~ConstraintsCanBeFacade" resolve="ConstraintsCanBeFacade" />
-                                    <node concept="37vLTw" id="1nQik02C192" role="37wK5m">
+                                    <node concept="37vLTw" id="6LtPju90pZ0" role="37wK5m">
                                       <ref role="3cqZAo" node="1nQik02s5EN" resolve="cc" />
                                     </node>
                                   </node>
@@ -31633,8 +31646,8 @@
                                         <node concept="2OqwBi" id="1nQik02yfwF" role="2Oq$k0">
                                           <node concept="2OqwBi" id="1nQik02ybIK" role="2Oq$k0">
                                             <node concept="2ShNRf" id="1nQik02y90t" role="2Oq$k0">
-                                              <node concept="1pGfFk" id="1nQik02yb25" role="2ShVmc">
-                                                <ref role="37wK5l" to="pdwk:~CanBeAncestorContext$Builder.&lt;init&gt;()" resolve="CanBeAncestorContext.Builder" />
+                                              <node concept="1pGfFk" id="6LtPju8TtPh" role="2ShVmc">
+                                                <ref role="37wK5l" to="pdwk:~CanBeAncestorContext$Builder.&lt;init&gt;()" resolve="Builder" />
                                               </node>
                                             </node>
                                             <node concept="liA8E" id="1nQik02ycDC" role="2OqNvi">
@@ -31675,10 +31688,10 @@
                                 <node concept="37vLTI" id="1nQik02C6Xj" role="3clFbG">
                                   <node concept="1Wc70l" id="1nQik02C8ng" role="37vLTx">
                                     <node concept="2OqwBi" id="20EFtfecMf4" role="3uHU7w">
-                                      <node concept="2YIFZM" id="1nQik02C95r" role="2Oq$k0">
+                                      <node concept="2YIFZM" id="6LtPju8ZX2A" role="2Oq$k0">
                                         <ref role="37wK5l" to="ykok:~ConstraintsCanBeFacade.checkCanBeAncestor(jetbrains.mps.core.aspects.constraints.rules.kinds.CanBeAncestorContext)" resolve="checkCanBeAncestor" />
                                         <ref role="1Pybhc" to="ykok:~ConstraintsCanBeFacade" resolve="ConstraintsCanBeFacade" />
-                                        <node concept="37vLTw" id="1nQik02C9aD" role="37wK5m">
+                                        <node concept="37vLTw" id="6LtPju8ZX2B" role="37wK5m">
                                           <ref role="3cqZAo" node="1nQik02y7sN" resolve="ac" />
                                         </node>
                                       </node>

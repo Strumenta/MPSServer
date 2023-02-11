@@ -2,7 +2,7 @@
 <model ref="r:2697a449-4920-4946-9b1f-f151aebb9bc6(com.strumenta.mpsserver.protocol.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="2" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
@@ -148,6 +148,7 @@
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
         <reference id="1145383142433" name="elementConcept" index="2I9WkF" />
       </concept>
+      <concept id="8329979535468945057" name="jetbrains.mps.lang.smodel.structure.Node_PresentationOperation" flags="ng" index="2Iv5rx" />
       <concept id="1145567426890" name="jetbrains.mps.lang.smodel.structure.SNodeListCreator" flags="nn" index="2T8Vx0">
         <child id="1145567471833" name="createdType" index="2T96Bj" />
       </concept>
@@ -584,8 +585,11 @@
                 <node concept="Xl_RD" id="5shB1pJd1Lw" role="3uHU7B">
                   <property role="Xl_RC" value="addRelevantClasses adding class " />
                 </node>
-                <node concept="37vLTw" id="5shB1pJd1Lx" role="3uHU7w">
-                  <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                <node concept="2OqwBi" id="6LtPju8OGNU" role="3uHU7w">
+                  <node concept="37vLTw" id="5shB1pJd1Lx" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                  </node>
+                  <node concept="2Iv5rx" id="6LtPju8OGNV" role="2OqNvi" />
                 </node>
               </node>
             </node>
@@ -655,8 +659,11 @@
                               <node concept="Xl_RD" id="5shB1pJdKGz" role="3uHU7B">
                                 <property role="Xl_RC" value="addRelevantClasses for class " />
                               </node>
-                              <node concept="37vLTw" id="5shB1pJdKG_" role="3uHU7w">
-                                <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                              <node concept="2OqwBi" id="6LtPju8OGU6" role="3uHU7w">
+                                <node concept="37vLTw" id="5shB1pJdKG_" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                                </node>
+                                <node concept="2Iv5rx" id="6LtPju8OGU7" role="2OqNvi" />
                               </node>
                             </node>
                             <node concept="Xl_RD" id="5shB1pJdKGB" role="3uHU7w">
@@ -835,8 +842,11 @@
                   <node concept="Xl_RD" id="5shB1pJd1L$" role="3uHU7B">
                     <property role="Xl_RC" value="addRelevantClasses skipping class " />
                   </node>
-                  <node concept="37vLTw" id="5shB1pJd1L_" role="3uHU7w">
-                    <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                  <node concept="2OqwBi" id="6LtPju8OGUg" role="3uHU7w">
+                    <node concept="37vLTw" id="5shB1pJd1L_" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1B9Rp3N1S2h" resolve="clazz" />
+                    </node>
+                    <node concept="2Iv5rx" id="6LtPju8OGUh" role="2OqNvi" />
                   </node>
                 </node>
               </node>
@@ -940,8 +950,11 @@
                               <node concept="Xl_RD" id="5shB1pJdKGF" role="3uHU7B">
                                 <property role="Xl_RC" value="addRelevantClassesFromType: considering param " />
                               </node>
-                              <node concept="37vLTw" id="5shB1pJdKGH" role="3uHU7w">
-                                <ref role="3cqZAo" node="eoLignTL8J" resolve="it" />
+                              <node concept="2OqwBi" id="6LtPju8OGW0" role="3uHU7w">
+                                <node concept="37vLTw" id="5shB1pJdKGH" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="eoLignTL8J" resolve="it" />
+                                </node>
+                                <node concept="2Iv5rx" id="6LtPju8OGW1" role="2OqNvi" />
                               </node>
                             </node>
                             <node concept="Xl_RD" id="5shB1pJdKGJ" role="3uHU7w">
@@ -1005,23 +1018,26 @@
                     <node concept="Xl_RD" id="5shB1pJd1LC" role="3uHU7B">
                       <property role="Xl_RC" value="addRelevantClassesFromType: adding class " />
                     </node>
-                    <node concept="1PxgMI" id="5shB1pJd1LD" role="3uHU7w">
-                      <node concept="chp4Y" id="5shB1pJd1LE" role="3oSUPX">
-                        <ref role="cht4Q" to="tpee:fz12cDA" resolve="ClassConcept" />
-                      </node>
-                      <node concept="2OqwBi" id="5shB1pJd1LF" role="1m5AlR">
-                        <node concept="1PxgMI" id="5shB1pJd1LG" role="2Oq$k0">
-                          <node concept="chp4Y" id="5shB1pJd1LH" role="3oSUPX">
-                            <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                    <node concept="2OqwBi" id="6LtPju8OGXF" role="3uHU7w">
+                      <node concept="1PxgMI" id="5shB1pJd1LD" role="2Oq$k0">
+                        <node concept="chp4Y" id="5shB1pJd1LE" role="3oSUPX">
+                          <ref role="cht4Q" to="tpee:fz12cDA" resolve="ClassConcept" />
+                        </node>
+                        <node concept="2OqwBi" id="5shB1pJd1LF" role="1m5AlR">
+                          <node concept="1PxgMI" id="5shB1pJd1LG" role="2Oq$k0">
+                            <node concept="chp4Y" id="5shB1pJd1LH" role="3oSUPX">
+                              <ref role="cht4Q" to="tpee:g7uibYu" resolve="ClassifierType" />
+                            </node>
+                            <node concept="37vLTw" id="5shB1pJd1LI" role="1m5AlR">
+                              <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                            </node>
                           </node>
-                          <node concept="37vLTw" id="5shB1pJd1LI" role="1m5AlR">
-                            <ref role="3cqZAo" node="1B9Rp3N1S3n" resolve="type" />
+                          <node concept="3TrEf2" id="5shB1pJd1LJ" role="2OqNvi">
+                            <ref role="3Tt5mk" to="tpee:g7uigIF" resolve="classifier" />
                           </node>
                         </node>
-                        <node concept="3TrEf2" id="5shB1pJd1LJ" role="2OqNvi">
-                          <ref role="3Tt5mk" to="tpee:g7uigIF" resolve="classifier" />
-                        </node>
                       </node>
+                      <node concept="2Iv5rx" id="6LtPju8OGXG" role="2OqNvi" />
                     </node>
                   </node>
                 </node>
