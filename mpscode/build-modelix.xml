@@ -51,9 +51,15 @@
   
   <path id="path.mps.ant.path">
     <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
-    <pathelement location="${artifacts.mps}/lib/jdom.jar" />
-    <pathelement location="${artifacts.mps}/lib/log4j.jar" />
+    <fileset dir="${artifacts.mps}/lib">
+      <include name="util.jar" />
+      <include name="3rd-party-rt.jar" />
+    </fileset>
   </path>
+  
+  <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
+  
+  <generator-settings id="m2m-0" strictMode="false" parallelThreads="8" inplaceTransform="true" warnWrongChild="true" createStaticRefs="true" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}" />
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}/mpsserver.modelix.plugin" />
@@ -69,6 +75,8 @@
         <depends>jetbrains.mps.vcs</depends>
         <depends>jetbrains.mps.ide.httpsupport</depends>
         <depends>org.modelix.model</depends>
+        <depends>de.q60.mps.collections.libs</depends>
+        <depends>org.modelix.model.api</depends>
         <depends>de.q60.shadowmodels</depends>
         
         <extensions defaultExtensionNs="com.intellij">
@@ -76,6 +84,32 @@
         </extensions>
       </idea-plugin>
     </echoxml>
+    <mkdir dir="${build.layout}/mpsserver.modelix.plugin/lib" />
+    <mkdir dir="${build.tmp}/default/mpsserver.modelix.plugin.jar" />
+    <mkdir dir="${build.tmp}/default/mpsserver.modelix.plugin.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/mpsserver.modelix.plugin.jar/META-INF/plugin.xml">
+      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>mpsserver.modelix.plugin</id>
+        <name>mpsserver.modelix.plugin</name>
+        <version>${mpsserver.version}</version>
+        <depends>mpsserver.core.plugin</depends>
+        <depends>jetbrains.mps.core</depends>
+        <depends>jetbrains.mps.build</depends>
+        <depends>jetbrains.mps.vcs</depends>
+        <depends>jetbrains.mps.ide.httpsupport</depends>
+        <depends>org.modelix.model</depends>
+        <depends>de.q60.mps.collections.libs</depends>
+        <depends>org.modelix.model.api</depends>
+        <depends>de.q60.shadowmodels</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <jar destfile="${build.layout}/mpsserver.modelix.plugin/lib/mpsserver.modelix.plugin.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/default/mpsserver.modelix.plugin.jar" />
+    </jar>
     <mkdir dir="${build.layout}/mpsserver.modelix.plugin/languages" />
     <mkdir dir="${build.layout}/mpsserver.modelix.plugin/languages/MPSServerModelix" />
     <mkdir dir="${build.tmp}/default/com.strumenta.mpsserver.modelix.jar" />
@@ -91,7 +125,6 @@
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="cl" />
           <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
-          <module ref="48e3d84c-0510-4776-ac01-301d43fa8646(com.strumenta.mpsserver.deps)" kind="cl" />
           <module ref="5b9b211c-9338-4880-881e-9982edcce804(com.strumenta.mpsserver.extensionkit)" kind="cl" />
           <module ref="bf983e15-b4da-4ef2-8e0a-5041eab7ff32(com.strumenta.mpsserver.server)" kind="cl" />
           <module ref="cc99dce1-49f3-4392-8dbf-e22ca47bd0af(org.modelix.model.api)" kind="cl" />
@@ -158,9 +191,12 @@
   
   <target name="generate" depends="declare-mps-tasks, fetchDependencies">
     <echo message="generating" />
-    <generate strictMode="false" parallelMode="true" parallelThreads="8" useInplaceTransform="true" hideWarnings="false" createStaticRefs="true" fork="true" targetJavaVersion="1.8" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}" logLevel="${mps.ant.log}">
-      <plugin path="${artifacts.de.itemis.mps.extensions}/de.60.mps.libs" />
+    <generate fork="true" targetJavaVersion="1.8" logLevel="${mps.ant.log}">      
+      <settings refid="m2m-0" />
+      <plugin path="${artifacts.de.itemis.mps.extensions}/com.mbeddr.mpsutil.modellisteners" />
+      <plugin path="${artifacts.de.itemis.mps.extensions}/de.q60.mps.collections.libs" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/de.q60.shadowmodels" />
+      <plugin path="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/mps-apache-commons" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api" />
       <plugin path="${artifacts.mpsserver-core}/mpsserver.core.plugin" />
@@ -168,8 +204,10 @@
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
       <plugin path="${artifacts.mps}/plugins/mps-httpsupport" />
+      <plugin path="${artifacts.mps}/plugins/mps-kotlin" />
       <plugin path="${artifacts.mps}/plugins/mps-make" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${artifacts.mps}/plugins/mps-trove" />
       <plugin path="${artifacts.org.modelix}/plugins/org.modelix.common" />
       <plugin path="${artifacts.org.modelix}/plugins/org.modelix.model" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
@@ -191,7 +229,9 @@
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.runtime.jar" />
+      <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguageInternal.jar" />
+      <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editing.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editor.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editorlang.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
@@ -238,7 +278,6 @@
       <library file="${artifacts.mps}/languages/make/jetbrains.mps.smodel.resources.jar" />
       <library file="${artifacts.mps}/languages/mps-stubs.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.search.jar" />
-      <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.platform.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.refactoring.platform.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.ui.jar" />
@@ -276,9 +315,7 @@
     </generate>
   </target>
   
-  <target name="declare-mps-tasks">
-    <taskdef resource="jetbrains/mps/build/ant/antlib.xml" classpathref="path.mps.ant.path" />
-  </target>
+  <target name="declare-mps-tasks" />
   
   <target name="makeDependents" />
   
@@ -311,23 +348,22 @@
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/log4j.jar" />
-        <fileset file="${artifacts.mps}/lib/jdom.jar" />
-        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
+        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
+        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
         <fileset file="${artifacts.mpsserver-core}/mpsserver.core.plugin/languages/mpsserver.core.group/com.strumenta.mpsserver.deps.jar" />
         <fileset file="${artifacts.mpsserver-core}/mpsserver.core.plugin/languages/mpsserver.core.group/com.strumenta.mpsserver.extensionkit.jar" />
         <fileset file="${artifacts.mpsserver-core}/mpsserver.core.plugin/languages/mpsserver.core.group/com.strumenta.mpsserver.server.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.org.modelix}/plugins/org.modelix.common/languages/org.modelix.common/org.modelix.lib.jar" />
-        <fileset file="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/languages/group.model-api/org.modelix.model.api.jar" />
         <fileset file="${artifacts.org.modelix}/plugins/org.modelix.model/languages/org.modelix.model/org.modelix.model.client.jar" />
         <fileset file="${artifacts.org.modelix}/plugins/org.modelix.model/languages/org.modelix.model/org.modelix.model.mpsplugin.jar" />
         <fileset file="${artifacts.mpsserver-core}/mpsserver.core.plugin/libs/mpsserver-dependencies-0.1-SNAPSHOT.jar" />
@@ -350,14 +386,14 @@
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.common/lib" includes="reflectasm-1.11.6.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.common/lib" includes="trove4j-3.0.3.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.common/lib" includes="commons-codec-1.10.jar" />
-        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="model-api-metadata.jar" />
-        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="model-api-metadata-sources.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="model-api-jvm.jar" />
-        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="model-api-js.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlin-stdlib.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlin-stdlib-jdk8.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlin-stdlib-jdk7.jar" />
         <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlin-stdlib-common.jar" />
+        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlin-logging-jvm.jar" />
+        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlinx-serialization-core-jvm.jar" />
+        <fileset dir="${artifacts.de.itemis.mps.extensions}/org.modelix.model.api/lib" includes="kotlinx-serialization-json-jvm.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="aopalliance-repackaged.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="checker-qual.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="commons-collections4.jar" />
@@ -373,7 +409,6 @@
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jakarta.inject.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jakarta.validation-api.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jakarta.ws.rs-api.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="javassist-GA.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="javax.activation-api.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jaxb-api.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jersey-client.jar" />
@@ -384,15 +419,47 @@
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jersey-server.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="json.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="jsr305.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="listenablefuture-empty-to-avoid-conflict-with-guava.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="model-client-js.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="model-client-jvm.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="model-client-metadata-sources.jar" />
-        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="model-client-metadata.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="osgi-resource-locator.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="trove4j.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="vavr-match.jar" />
         <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="vavr.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="commons-codec.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="commons-logging.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="google-http-client-gson.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="google-http-client.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="google-oauth-client-java6.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="google-oauth-client-jetty.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="google-oauth-client.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="grpc-context.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="gson.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="httpclient.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="httpcore.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="kotlinx-collections-immutable-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="kotlinx-coroutines-core-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="kotlinx-coroutines-jdk8.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="kotlinx-coroutines-slf4j.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-client-auth-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-client-cio-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-client-content-negotiation-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-client-core-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-events-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-http-cio-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-http-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-io-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-network-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-network-tls-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-serialization-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-serialization-kotlinx-json-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-serialization-kotlinx-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-utils-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-websocket-serialization-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="ktor-websockets-jvm.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="opencensus-api.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="opencensus-contrib-http-util.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="guava.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="javassist.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="listenablefuture.jar" />
+        <fileset dir="${artifacts.org.modelix}/plugins/org.modelix.model/lib" includes="model-client-jvm.jar" />
       </classpath>
     </javac>
   </target>
