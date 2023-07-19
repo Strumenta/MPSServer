@@ -2,14 +2,14 @@
 <project version="4">
   <component name="CloudResources">
     <option name="modelServers">
-      <list>
+      <set>
         <option value="https://dsl-modelix.siginet.lu/" />
-      </list>
+      </set>
     </option>
     <option name="transientModules">
-      <list>
+      <set>
         <option value="https://dsl-modelix.siginet.lu/mynewrepo#modulefoo" />
-      </list>
+      </set>
     </option>
   </component>
 </project>
