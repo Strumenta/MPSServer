@@ -348,6 +348,8 @@ signing {
     sign publishing.publications.mpsServerExtensionKit
     sign publishing.publications.mpsServerBuild
     sign publishing.publications.mpsServerModelix
+
+    //useGpgCmd()
 }
 
 tasks.withType(Sign) {
